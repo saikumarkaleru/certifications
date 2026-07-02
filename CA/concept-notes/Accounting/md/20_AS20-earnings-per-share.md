@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 20 — AS 20 — Earnings Per Share
 
 ## 1. The Problem
@@ -13,6 +15,8 @@ There is a second, subtler problem. Profit is a moving target relative to the sh
 So the problem AS 20 solves is: **How do we express a company's performance as a single, honest, comparable "per share" number — one that (a) reflects only what belongs to the ordinary equity owner, (b) uses a fair count of shares even when the count changed mid-year, and (c) warns the owner about future dilution from instruments that haven't converted yet?**
 
 That number is **Earnings Per Share (EPS)**. It is arguably the single most-quoted figure in all of financial reporting — it drives the Price-to-Earnings (P/E) ratio, analyst models, and management bonus schemes. AS 20 exists to make sure everybody computes it the *same* way, so that "EPS of Rs. 4.21" means the same thing in every annual report.
+
+**Why a *standard* and not just a formula?** Because every input is contestable. Which profit — before or after extraordinary items? Which dividend — declared or accrued? Which share count — closing, opening, or average? Over how many periods should a bonus be spread? Left to management discretion, EPS would become a marketing number, not an accounting one. A CEO whose bonus keys off EPS has every incentive to pick the flattering interpretation. AS 20 removes the discretion by fixing each input, which is precisely what makes cross-company and cross-year comparison meaningful. Comparability, not mere computation, is the standard's real product.
 
 ## 2. The Core Idea (analogy)
 
@@ -32,6 +36,24 @@ Now, three real-life complications, each of which maps onto an AS 20 rule:
 
 Hold this picture. Every rule below is just a careful working-out of "profit that's truly ours ÷ a fair count of us, plus a warning about who might join."
 
+One more nuance the analogy captures, which examiners test: **not every coupon-holder actually makes your slice smaller.** A coupon-holder who, to join, must *bring* a large pizza of his own (a convertible instrument that carries high earnings per potential share) would actually *enlarge* each slice by joining. Warning the diners that "your slice will shrink" when it would in fact grow is a lie dressed as prudence. So the host only counts coupon-holders whose arrival genuinely shrinks the slice — the **anti-dilution rule**, developed in full in Part 4.2.
+
+```mermaid
+graph TD
+    A["Net profit after tax"] --> B["Less preference dividend and redemption premium"]
+    B --> C["Basic EPS numerator"]
+    C --> D["Divide by weighted average equity shares"]
+    D --> E["Basic EPS"]
+    C --> F["Add back after-tax interest on convertibles and pref dividend"]
+    F --> G["Diluted EPS numerator"]
+    D2["Weighted average shares plus dilutive potential shares"] --> H["Diluted EPS"]
+    G --> H
+    E --> I["Present both on face of P and L with equal prominence"]
+    H --> I
+```
+
+*The two EPS figures share a family tree — Diluted is Basic with the numerator and denominator each nudged for potential shares*
+
 ## 3. Why It's Built This Way
 
 Before the mechanics, internalise the four design decisions that generate almost every rule in AS 20. If you understand these, you can *derive* the standard rather than memorise it.
@@ -46,15 +68,21 @@ Before the mechanics, internalise the four design decisions that generate almost
 
 Everything that follows is bookkeeping in service of these four ideas.
 
+**A unifying test — "did real resources enter the business?"** Almost every timing question in AS 20 collapses to this single query. If the share count changed *because cash or an asset came in* (cash issue, rights cash element, shares for acquisition, conversion of a debenture), the new shares join **from the date the resource arrives** and are **time-weighted**. If the share count changed but *no resource entered* (bonus, split, consolidation, the discount element of a rights issue), the change is treated as if it had **always existed** and is pushed **retrospectively** across every period presented. Carry this one question into the exam hall and you will rarely misclassify a transaction.
+
 ## 4. Full Technical Content (Recognition · Measurement · Presentation · Disclosure)
 
 AS 20 applies to enterprises whose equity shares or potential equity shares are **listed** (or in the process of listing). Other enterprises that *choose* to disclose EPS must also comply with AS 20 so the figure is standardised. (Separately, Schedule III to the Companies Act requires EPS to be disclosed in the notes for every company — so in practice you compute AS 20 EPS for companies too.)
+
+**Scope precision the exam tests.** For listed / to-be-listed enterprises, presenting **both Basic and Diluted EPS is mandatory**. For an unlisted enterprise, AS 20 does not *force* EPS on the face of the statement, but *if* it chooses to present EPS, it must follow AS 20 in full (it cannot present a home-made EPS). When a company presents **consolidated** financial statements, AS 20 EPS is computed on **consolidated** figures; when it also presents **standalone** statements, a separate standalone EPS is shown. You do not present a single blended figure. A parent presenting both must therefore disclose two sets of EPS.
 
 Key definitions to fix vocabulary:
 
 - **Equity share**: an ownership share subordinate to all other classes (the residual claimant).
 - **Potential equity share**: a financial instrument or contract that *may* entitle its holder to equity shares — e.g. convertible debentures, convertible preference shares, share warrants, options, and shares issuable on satisfaction of conditions.
 - **Dilution**: a *reduction* in EPS (or an *increase* in loss per share) assuming conversion of potential equity shares.
+- **Anti-dilution**: an *increase* in EPS (or a *reduction* in loss per share) on assumed conversion — such instruments are excluded.
+- **Options / warrants**: contracts giving the holder the right to *buy* equity shares at a set price. (Contrast: convertibles give a right to *swap* an existing instrument for shares — no fresh cash on conversion.)
 
 ### 4.1 Basic EPS
 
@@ -68,7 +96,9 @@ Two rules on preference dividend, and here's the *why*:
 - **Cumulative preference shares:** deduct the dividend for the current period **whether or not it has been declared/provided**. Reason: a cumulative preference dividend is an *unavoidable* prior claim — even if unpaid this year it becomes arrears the equity holder must clear before ever seeing a rupee. So it is not really the equity holder's money regardless of declaration.
 - **Non-cumulative preference shares:** deduct only if the dividend is **declared/provided** for the period. Reason: if not declared, it lapses forever and the amount *is* available to equity — so there's nothing to strip out.
 
-Also deduct, as a preference-type charge, any **premium payable on redemption of preference shares** or **excess of consideration paid over carrying amount on buy-back of preference shares** (it is a distribution to preference holders in substance).
+**Only the *current period's* cumulative dividend — not arrears.** A subtle trap: for cumulative preference shares you deduct only the dividend *for the current year*. Arrears of earlier years are **not** deducted again this year — they were already deducted from equity earnings in those earlier years when they accrued. Deducting them twice would understate this year's EPS. Conversely, if in a later year the company clears past arrears *by declaration*, you do **not** re-deduct them; only the current year's entitlement leaves the numerator each year.
+
+Also deduct, as a preference-type charge, any **premium payable on redemption of preference shares** or **excess of consideration paid over carrying amount on buy-back of preference shares** (it is a distribution to preference holders in substance). By symmetry, a **gain** on buy-back of preference shares at a discount (consideration paid *below* carrying amount) is *added* to the numerator — a rarely-tested but logically necessary mirror.
 
 **(M) Measurement of the denominator — the weighted average number of equity shares.**
 Weight each block of shares by the **fraction of the period it was outstanding**. A share is included from the date consideration is receivable, which usually means:
@@ -80,11 +110,20 @@ Weight each block of shares by the **fraction of the period it was outstanding**
 | Shares issued on conversion of a debt instrument | Date of conversion |
 | Shares issued for goods/services or on acquisition | Date the goods/asset is recognised / acquisition date |
 | Shares issued in lieu of interest or principal | Date interest ceases to accrue |
+| Shares issued as consideration in an amalgamation (purchase) | Date of acquisition |
+| Shares issued in an amalgamation in the nature of merger (pooling) | As if the combined entity existed from the beginning |
+| Partly paid equity shares | To the extent entitled to dividends, treated as a fraction of a fully paid share |
 | Bonus issue / share split / consolidation | Treated as if outstanding from the **start of the earliest period presented** (retrospective) |
 
 Buy-backs and cancellations are subtracted on a time-weighted basis from the date they occur (they *reduce* the average from that date onward).
 
+**Partly paid shares — the fraction rule.** Where equity shares are issued but not fully called/paid, and they carry the right to participate in dividends *only in proportion to the amount paid*, they enter the weighted average as a **fraction of a fully paid share** equal to the paid-up ratio. Example: 10,000 shares paid up to 50% that rank for dividend in that proportion count as 5,000 fully paid equivalents. But if the partly paid shares rank for dividend *equally* with fully paid shares (unusual, but possible per the terms of issue), they count as full shares. Read the dividend-entitlement clause, not merely the paid-up amount.
+
+**Contingently issuable shares.** Shares issuable only on satisfaction of a condition (e.g. "issue 20,000 shares if profit exceeds Rs. X") are included in **Basic EPS only from the date all conditions are met** — i.e. when issue is no longer contingent. Until then they are *potential* equity shares tested for Diluted EPS. Mere passage of time is not a "condition" that defers inclusion.
+
 **Bonus and split — retrospective, no time-weighting (from Design decision 3).** A bonus issue, a share split, or a consolidation changes the number of shares *without a corresponding change in resources*. So AS 20 requires you to adjust the number of shares outstanding **as if the event had occurred at the beginning of the earliest period reported** — and to restate the prior period's EPS accordingly for comparability. There is no time-weighting: the bonus shares are deemed to have always existed.
+
+**A share consolidation (reverse split) is the mirror image.** If 10 shares of Rs. 1 become 1 share of Rs. 10, the count *falls* with no resources leaving. Treat it retrospectively too — divide historical share counts by the consolidation ratio and restate prior EPS *upward*. Watch for the combined case where a consolidation happens *together with* a special dividend or cash return; only the pure re-denomination is retrospective, any resource movement is dated.
 
 **Rights issue — the hybrid, handled by the theoretical ex-rights factor.** A rights issue is the awkward middle case: it brings in *cash* (like a fresh issue) but usually at a price *below* fair value (like a partial bonus, because the discount is a gift to existing holders). AS 20 splits it into these two components using the **adjustment factor**:
 
@@ -101,6 +140,24 @@ $$\text{TERP} = \frac{\text{Fair value of all shares before rights} + \text{Tota
 
 So a rights issue = a small bonus (retrospective, via the factor) + a cash issue (time-weighted from the rights date). We will see this split cleanly in Worked Example 3.
 
+**Which "fair value" and which "shares before"?** The fair value is the **closing (cum-rights) market price on the last day the shares trade *with* the rights entitlement** — not an average, not the issue price. "Shares before" is the count *just before* the rights, and "total amount received" is rights shares × rights price. A frequent slip is to use the rights *issue* price as the fair value; the whole point is that they differ, and their difference is the bonus element.
+
+```mermaid
+graph TD
+    A["Change in number of equity shares"] --> B{"Did new resources enter the business"}
+    B -->|"Yes cash or asset in"| C["Time-weight from the date resource arrives"]
+    B -->|"No pure re-slicing"| D["Retrospective from start of earliest period and restate prior EPS"]
+    B -->|"Partly - rights below fair value"| E["Split into two"]
+    E --> F["Bonus element via factor - retrospective"]
+    E --> G["Cash element - time-weighted from rights date"]
+    C --> H["Weighted average shares"]
+    D --> H
+    F --> H
+    G --> H
+```
+
+*One decision tree resolves every denominator question — ask whether resources entered*
+
 ### 4.2 Diluted EPS
 
 $$\text{Diluted EPS} = \frac{\text{Adjusted net profit attributable to equity holders}}{\text{Weighted average shares} + \text{Weighted average dilutive potential equity shares}}$$
@@ -110,13 +167,19 @@ $$\text{Diluted EPS} = \frac{\text{Adjusted net profit attributable to equity ho
 - **Add back** dividends on convertible preference shares that were deducted in Basic EPS, because on conversion those become equity and the preference dividend ceases.
 - Adjust for any other consequential change in income/expense (e.g. employee-profit-share or interest that keys off those instruments), net of tax.
 
-**(M) Adjust the denominator** by adding the weighted average number of shares that *would* be issued on conversion, assumed converted at the **beginning of the period** (or date of issue of the instrument, if later).
+**Watch the second-order numerator effects.** If interest on a convertible debenture is added back, and that interest was itself the *base* for some other expense or income (for instance, a bonus/commission computed as a percentage of profit, or capitalised interest), the knock-on change must also be adjusted, net of tax. The principle: adjust the numerator for **every** income/expense change that assumed conversion would trigger, so numerator and denominator are internally consistent.
+
+**(M) Adjust the denominator** by adding the weighted average number of shares that *would* be issued on conversion, assumed converted at the **beginning of the period** (or date of issue of the instrument, if later). If a convertible is *itself issued mid-year*, its potential shares are time-weighted from the issue date — you never assume shares existed before the instrument that would create them did.
 
 **Options and warrants — the treasury stock method.** For options/warrants that are "in the money" (exercise price below the average market price), only the shares issued *for no consideration* are dilutive. The logic: the option-holder pays the exercise price in cash; the company is assumed to use that cash to buy back shares at the average market price. The *net* new shares — those issued free — are the dilutive element:
 
 $$\text{Incremental shares} = \text{Options} - \frac{\text{Options} \times \text{Exercise price}}{\text{Average market price}} = \text{Options} \times \frac{\text{Market} - \text{Exercise}}{\text{Market}}$$
 
 These incremental shares carry **no earnings and no numerator adjustment** — so their incremental EPS is Rs. 0, which makes options *always dilutive* whenever they are in the money (and ignored when out of the money).
+
+**Why the *average* market price, and why the treasury stock method at all?** The average is used because the option could be exercised at any point during the period, so the period's average is the fair single proxy for "the price at which the company could have bought shares back." The treasury-stock fiction (assume the exercise cash buys back shares at market) captures the true economic dilution: an option is dilutive only to the extent it lets the holder acquire shares *below* what the market would charge. The gap between exercise price and market price is the free lunch, and the free shares are exactly that gap monetised. If exercise = market, there is no free lunch and zero dilution.
+
+**Employee stock options with unrecognised service cost.** Where options were granted to employees and a portion of the fair value of services is yet to be recognised (unamortised), that unrecognised amount is treated as part of the assumed proceeds (added to the exercise price) in the treasury-stock buy-back computation. This *reduces* the dilutive effect. Flag the exact treatment to **verify against current ICAI material**, as the interaction of AS 20 with the Guidance Note on employee share-based payments is examinable but detail-sensitive.
 
 **(R) The anti-dilution rule — the heart of Diluted EPS (from Design decision 4).** A potential equity share is included **only if it is dilutive** — i.e. only if its conversion *decreases* EPS from continuing operations (or increases loss per share). To apply this correctly when several instruments exist, you must **sequence** them:
 
@@ -126,6 +189,10 @@ These incremental shares carry **no earnings and no numerator adjustment** — s
 4. The moment an instrument's incremental EPS **exceeds** the current running diluted EPS, that instrument (and every remaining one, since they're even less dilutive) is **anti-dilutive** — exclude it.
 
 The control figure ("net profit from continuing ordinary operations") is what you test dilution against; discontinued/extraordinary components do not flip the dilution decision. Sequencing matters because an instrument that looks anti-dilutive against Basic EPS might be dilutive against an already-lowered running figure, and vice versa — you must add most-dilutive-first to find the *lowest possible* EPS, which is the honest worst case.
+
+**Why "continuing ordinary operations" is the control figure.** A company could have a huge one-off extraordinary gain that lifts total net profit far above its recurring earnings. If you tested dilution against that inflated total, a genuinely dilutive convertible might wrongly appear anti-dilutive (because the inflated total EPS is high). Using recurring profit from continuing operations as the *yardstick* prevents a transient gain from masking real dilution. The EPS you finally *present* still uses total net profit less preference dividend; the continuing-operations figure is used *only to decide the dilution question*.
+
+**Loss years — everything is anti-dilutive.** When the company has a net loss (loss per share), *adding* potential shares would spread the loss over more shares and thus *reduce* the loss per share — an *anti-dilutive* effect. Therefore, in a loss period, **all potential equity shares are anti-dilutive and excluded**, and Diluted EPS equals Basic EPS (both negative). Students routinely "dilute" a loss and lose marks; dilution can only make results *worse*, and a smaller loss is *better*.
 
 ### 4.3 Presentation & Disclosure (overview — detailed in Part 6)
 
@@ -178,6 +245,36 @@ Restated EPS 2024-25 = 18,00,000 ÷ 9,00,000 = **Rs. 2.00** (down from the origi
 
 **Why this matters:** without restatement, the report would show EPS falling from Rs. 3.00 to Rs. 2.50 — implying deteriorating performance. But per-share earnings *actually rose* (from a restated Rs. 2.00 to Rs. 2.50, +25%). The bonus merely re-sliced the pizza; restatement reveals the true improvement.
 
+### Example 2A — Bonus *plus* a mid-year cash issue (the classic combined trap)
+
+Examiners love to bury a bonus *after* a cash issue so you must decide what the bonus applies to.
+
+**Facts (Sirius Ltd, FY 2025-26):**
+- Equity shares on 1 April 2025: 4,00,000
+- 1 July 2025: issued 2,00,000 shares for cash (fair value, no bonus element)
+- 1 December 2025: **bonus issue of 1 for every 3 held**
+- Net profit attributable to equity: Rs. 16,50,000
+
+**Key insight — the bonus attaches to *all shares already outstanding at the bonus date*, including the July cash shares, and is pushed back to the *start of the year for the shares that existed then* and to the *cash-issue date for the cash shares*.** In practice: compute the time-weighting first *without* the bonus, then multiply the whole weighted average by the bonus factor (because the bonus is retrospective for every block relative to its own start date).
+
+Bonus shares = (4,00,000 + 2,00,000) ÷ 3 = 2,00,000. Bonus factor = 8,00,000 ÷ 6,00,000 = **4/3**.
+
+**Weighted average, pre-bonus blocks (grossed up by 4/3):**
+
+| Period | Months | Pre-bonus shares | × 4/3 | Weight (× months/12) |
+|---|---|---|---|---|
+| 1 Apr – 30 Jun | 3 | 4,00,000 | 5,33,333 | 5,33,333 × 3/12 = 1,33,333 |
+| 1 Jul – 31 Mar | 9 | 6,00,000 | 8,00,000 | 8,00,000 × 9/12 = 6,00,000 |
+| **Total** | | | | **7,33,333** |
+
+Weighted average = **7,33,333 shares**.
+
+*Cross-check (incremental):* [4,00,000 × 12/12 + 2,00,000 × 9/12] × 4/3 = [4,00,000 + 1,50,000] × 4/3 = 5,50,000 × 4/3 = **7,33,333**. ✓
+
+**Basic EPS** = 16,50,000 ÷ 7,33,333 = **Rs. 2.25**.
+
+*Trap avoided:* the bonus factor multiplies the *entire* weighted average (both blocks), because a bonus is deemed to have existed from the beginning of each block's own life — it does **not** get its own time-fraction from 1 December.
+
 ### Example 3 — Rights issue with the theoretical ex-rights factor
 
 **Facts (Nova Ltd):**
@@ -210,6 +307,8 @@ Restated EPS 2024-25 = 4.00 × (23/25) = 4.00 × 0.92 = **Rs. 3.68**.
 *Check via shares:* restated shares = 2,00,000 × 25/23 = 2,17,391; restated EPS = 8,00,000 ÷ 2,17,391 = **Rs. 3.68**. ✓
 
 Notice how the rights issue behaves as a **hybrid**: the bonus element (the 25/23 gross-up) is retrospective and hits the prior year, while the pure cash element (the extra 50,000 shares) is time-weighted from 1 January only.
+
+**Examiner tweak — what if the rights price *equalled* fair value (Rs. 25)?** Then TERP = (2,00,000 × 25 + 50,000 × 25) ÷ 2,50,000 = Rs. 25, the factor = 25/25 = **1**, there is *no bonus element*, and the rights issue is treated as an **ordinary cash issue**: 2,00,000 × 9/12 + 2,50,000 × 3/12 = 1,50,000 + 62,500 = 2,12,500 shares, and *no restatement of 2024-25*. Always compute TERP first; a factor of 1 is your signal that the "rights" is just a cash issue in disguise.
 
 ### Example 4 — Diluted EPS with convertible debentures and stock options (with anti-dilution sequencing)
 
@@ -252,6 +351,39 @@ Each addition lowers the running EPS, so both are dilutive.
 
 **Step 4 — The anti-dilution safeguard (illustration).** Suppose Orion *also* had 10% convertible preference shares of Rs. 5,00,000 convertible into 10,000 equity shares. Preference dividend saved on conversion = Rs. 50,000; incremental EPS = 50,000 ÷ 10,000 = **Rs. 5.00**. Since Rs. 5.00 is *greater than* the running diluted EPS of Rs. 1.71, converting these would *raise* EPS — they are **anti-dilutive** and must be **excluded** from Diluted EPS. Including them (giving 12,18,000 ÷ 6,95,000 = Rs. 1.75) would understate dilution and *flatter* the company — precisely what the anti-dilution rule forbids.
 
+### Example 4A — Sequencing that actually flips a decision (why order matters)
+
+The Example 4 preference shares were anti-dilutive against *any* running figure. Here is a case where the **order of addition changes the verdict** — the reason AS 20 insists on ranking.
+
+**Facts (Lyra Ltd, FY 2025-26):**
+- Net profit attributable to equity: **Rs. 24,00,000**; weighted average shares **8,00,000** → Basic EPS **Rs. 3.00**.
+- Instrument A — options: 2,00,000 in-the-money options adding **1,00,000** free shares; numerator effect Rs. 0 → incremental EPS **Rs. 0.00**.
+- Instrument B — 10% convertible preference of Rs. 40,00,000, convertible into **2,00,000** shares; dividend saved Rs. 4,00,000 → incremental EPS = 4,00,000 ÷ 2,00,000 = **Rs. 2.00**.
+- Instrument C — 9% convertible debentures of Rs. 50,00,000 converting into **1,00,000** shares; interest after 30% tax = 50,00,000 × 9% × 0.70 = 3,15,000 → incremental EPS = 3,15,000 ÷ 1,00,000 = **Rs. 3.15**.
+
+**Rank (smallest incremental EPS first):** A (0.00) → B (2.00) → C (3.15).
+
+| Stage | Numerator (Rs.) | Denominator | Running EPS | Verdict |
+|---|---|---|---|---|
+| Basic | 24,00,000 | 8,00,000 | 3.0000 | — |
+| + A options | 24,00,000 | 9,00,000 | 2.6667 | dilutive → keep |
+| + B pref | 28,00,000 | 11,00,000 | 2.5455 | dilutive (2.67 → 2.55) → keep |
+| + C debentures | 31,15,000 | 12,00,000 | 2.5958 | **anti-dilutive** (2.55 → 2.60 rises) → exclude C |
+
+**Diluted EPS = 28,00,000 ÷ 11,00,000 = Rs. 2.55.**
+
+**The lesson:** instrument C has incremental EPS Rs. 3.15, which is *above* Basic EPS Rs. 3.00 — so tested naively against Basic it "looks" anti-dilutive and you might drop it and stop. But its incremental EPS (3.15) must be compared to the **running** figure (2.55), against which it is *clearly* anti-dilutive — consistent here, but the discipline of ranking-then-running is what guarantees you find the *lowest* possible EPS. Had C's incremental EPS been, say, Rs. 2.40 (below the 2.55 running figure but above the 2.67 intermediate figure), only the correct sequence would have caught that it is dilutive. Always rank ascending, add one at a time, and stop at the first instrument that raises the running EPS.
+
+### Example 4B — Diluted loss per share (dilution cannot help a loss)
+
+**Facts (Draco Ltd, FY 2025-26):**
+- Net **loss** attributable to equity: **Rs. (6,00,000)**; weighted average shares **4,00,000** → Basic loss per share = **Rs. (1.50)**.
+- 10% convertible debentures of Rs. 10,00,000 converting into 1,00,000 shares; after-tax interest add-back Rs. 70,000.
+
+**Naive (wrong) dilution:** numerator = (6,00,000) + 70,000 add-back = (5,30,000); denominator = 5,00,000 → (5,30,000)/5,00,000 = **Rs. (1.06)**. This is a *smaller* loss per share than (1.50), i.e. the "dilution" *improved* the figure — impossible for a genuine dilution.
+
+**Correct treatment:** because including the debentures *reduces* the loss per share, they are **anti-dilutive in a loss year and excluded**. **Diluted loss per share = Basic loss per share = Rs. (1.50).** Present both as negative. Rule to carry: *in any loss period, potential equity shares are anti-dilutive; Diluted EPS equals Basic EPS.*
+
 ## 6. Presentation & Disclosure Formats
 
 **On the face of the Statement of Profit and Loss** (with equal prominence, both years):
@@ -293,54 +425,72 @@ Both Basic and Diluted are shown even if one is negative and even if the two are
 **Additional presentation rules to remember:**
 - If the number of shares changes due to a bonus, split, consolidation or the bonus-element of a rights issue **after the balance sheet date but before the financial statements are approved**, EPS for all periods presented is computed on the *new* number of shares (the event is treated as if it happened at the start). Disclose this fact.
 - Where an enterprise presents EPS for each class of equity share with different rights, present each separately.
+- **Only bonus-type post-year-end events trigger this restatement.** A post-year-end *cash* or *fair-value* issue does **not** cause you to restate EPS for the periods presented (no bonus element, no retrospective effect); it is merely an AS 4 disclosure of a non-adjusting event. The restatement rule is reserved for changes with *no resource inflow* — bonus, split, consolidation, rights bonus-element.
+- **Disclosure of instruments that could dilute in future but were anti-dilutive this year** is good practice: the reader should know potential shares exist even though they did not affect this year's Diluted EPS.
+
+**Illustrative denominator reconciliation with a rights issue (Nova Ltd, Example 3) — showing the two components separately, which examiners award marks for:**
+
+| | Shares |
+|---|---|
+| Pre-rights shares, time-weighted (2,00,000 × 9/12) | 1,50,000 |
+| Uplift for bonus element in rights (× 25/23 on the pre-rights block) | 13,043 |
+| Post-rights shares, time-weighted (2,50,000 × 3/12) | 62,500 |
+| Weighted average shares (Basic) | **2,25,543** |
 
 ## 7. Connections
 
 - **AS 5 (Prior Period & Changes / Extraordinary items):** Net profit *including* extraordinary items and tax is the starting numerator. Although Indian AS 20 tests dilution against profit from *continuing ordinary operations*, the EPS presented uses total net profit less preference dividend.
-- **AS 4 (Events after the Balance Sheet Date):** the post-year-end bonus/split/rights rule above is an AS 20-specific adjusting treatment for share counts.
-- **AS 25 (Interim Financial Reporting):** requires Basic and Diluted EPS in interim statements too, using the same principles.
-- **AS 26 (Intangibles) / AS 14 (Amalgamations):** shares issued as purchase consideration in an acquisition enter the weighted average from the **acquisition date** — links to how consideration is dated.
+- **AS 4 (Events after the Balance Sheet Date):** the post-year-end bonus/split/rights rule above is an AS 20-specific adjusting treatment for share counts. Contrast with a post-year-end *cash* issue, which is a non-adjusting AS 4 disclosure only.
+- **AS 25 (Interim Financial Reporting):** requires Basic and Diluted EPS in interim statements too, using the same principles. Note: interim-period EPS figures are **not** simply added up to the annual EPS — the annual EPS is computed afresh on the full-year weighted average, so the sum of four quarters' EPS need not equal the annual EPS.
+- **AS 26 (Intangibles) / AS 14 (Amalgamations):** shares issued as purchase consideration in an acquisition enter the weighted average from the **acquisition date** — links to how consideration is dated. In an amalgamation in the nature of *merger* (pooling), shares are treated as outstanding from the *beginning* of the earliest period.
 - **Companies Act, 2013 — Schedule III & buy-back (Sec. 68) / bonus (Sec. 63):** the buy-back and bonus mechanics that *change* the share count are governed there; AS 20 tells you how those changes flow into EPS. Premium on redemption of preference shares (Sec. 55) is treated as a preference charge in the numerator.
-- **Financial Management (P/E ratio, valuation):** EPS is the denominator-input to the P/E multiple and to dividend-payout and earnings-yield analysis — the same figure you compute here is consumed directly in valuation.
-- **Ind AS 33** is the converged equivalent; its principles mirror AS 20 closely, so this chapter transfers almost intact if you later study Ind AS.
+- **Financial Management (P/E ratio, valuation):** EPS is the denominator-input to the P/E multiple and to dividend-payout and earnings-yield analysis — the same figure you compute here is consumed directly in valuation. Diluted EPS feeds a more conservative (higher) implied P/E.
+- **Ind AS 33** is the converged equivalent; its principles mirror AS 20 closely, so this chapter transfers almost intact if you later study Ind AS. A key convergence nuance: Ind AS 33 explicitly requires the dilution test against "profit from continuing operations" and has fuller guidance on contracts settleable in shares or cash — *verify against current ICAI Ind AS material* if the paper is at that level.
 
 ## 8. Traps & Examiner Tricks
 
 1. **Cumulative vs non-cumulative preference dividend.** Examiners love to say "dividend not declared." If cumulative → still deduct. If non-cumulative and not declared → do **not** deduct. Reversing this is the single most common error.
-2. **Bonus/split are NOT time-weighted.** Students instinctively apply the "months outstanding" fraction to bonus shares — wrong. Bonus shares are deemed outstanding from the *start of the earliest period presented*. Only cash issues and buy-backs are time-weighted.
-3. **Forgetting to restate the comparative** after a bonus or the bonus-element of a rights issue. The prior year's EPS must be recomputed; leaving it at the originally reported figure loses marks.
-4. **Rights issue at fair value.** If the rights price *equals* fair value, there is **no bonus element** — the adjustment factor is 1, and you simply time-weight it as an ordinary cash issue. Don't force a TERP factor where none exists.
-5. **Options out of the money.** If exercise price ≥ average market price, the option is **anti-dilutive** and is ignored entirely — do not run the treasury method. Also note: it's the **average** market price over the period, not the closing price.
-6. **Wrong anti-dilution sequencing.** Adding a *less* dilutive instrument before a *more* dilutive one can wrongly classify a dilutive instrument as anti-dilutive. Always rank by incremental EPS, smallest first (options at Rs. 0 nearly always go first).
-7. **Testing dilution against Basic EPS instead of the running figure.** An instrument must be tested against the *running* diluted EPS after adding all more-dilutive instruments, not against Basic EPS.
-8. **Numerator add-back for debentures must be net of tax.** Forgetting the (1 − tax rate) factor inflates Diluted EPS. Convertible *preference* dividends, by contrast, are added back *without* a tax adjustment (dividends are post-tax appropriations).
-9. **Loss per share.** When there's a loss, potential shares that would *reduce* the loss per share are anti-dilutive and excluded — dilution *increases* a loss, it doesn't shrink it. Present the loss per share with a minus sign for both Basic and Diluted.
-10. **Buy-back reduces the weighted average from the buy-back date**, not from the year start — a mirror-image of a mid-year cash issue.
-11. **Premium on redemption / buy-back of preference shares** must be deducted from the numerator like a preference dividend — easy to miss.
+2. **Only the current year's cumulative dividend is deducted** — not the arrears of prior years (already deducted when they accrued). Deducting arrears again double-counts.
+3. **Bonus/split are NOT time-weighted.** Students instinctively apply the "months outstanding" fraction to bonus shares — wrong. Bonus shares are deemed outstanding from the *start of the earliest period presented*. Only cash issues and buy-backs are time-weighted.
+4. **The bonus factor multiplies the *whole* weighted average**, including any mid-year cash-issued shares outstanding at the bonus date (Example 2A). It does not get its own time-fraction.
+5. **Forgetting to restate the comparative** after a bonus or the bonus-element of a rights issue. The prior year's EPS must be recomputed; leaving it at the originally reported figure loses marks.
+6. **Rights issue at fair value.** If the rights price *equals* fair value, there is **no bonus element** — the adjustment factor is 1, and you simply time-weight it as an ordinary cash issue. Don't force a TERP factor where none exists.
+7. **Using the wrong "fair value" for TERP.** It is the **cum-rights market price** immediately before the rights, not the rights issue price and not an average. Confusing the two collapses the whole computation.
+8. **Options out of the money.** If exercise price ≥ average market price, the option is **anti-dilutive** and is ignored entirely — do not run the treasury method. Also note: it's the **average** market price over the period, not the closing price.
+9. **Wrong anti-dilution sequencing.** Adding a *less* dilutive instrument before a *more* dilutive one can wrongly classify a dilutive instrument as anti-dilutive. Always rank by incremental EPS, smallest first (options at Rs. 0 nearly always go first).
+10. **Testing dilution against Basic EPS instead of the running figure.** An instrument must be tested against the *running* diluted EPS after adding all more-dilutive instruments, not against Basic EPS.
+11. **Numerator add-back for debentures must be net of tax.** Forgetting the (1 − tax rate) factor inflates Diluted EPS. Convertible *preference* dividends, by contrast, are added back *without* a tax adjustment (dividends are post-tax appropriations).
+12. **Loss per share.** When there's a loss, potential shares that would *reduce* the loss per share are anti-dilutive and excluded — dilution *increases* a loss, it doesn't shrink it. In a loss year Diluted EPS = Basic EPS. Present the loss with a minus sign for both.
+13. **Buy-back reduces the weighted average from the buy-back date**, not from the year start — a mirror-image of a mid-year cash issue.
+14. **Premium on redemption / buy-back of preference shares** must be deducted from the numerator like a preference dividend — easy to miss.
+15. **A mid-year-issued convertible** contributes potential shares only from its *issue date* (time-weighted), never from the start of the year.
+16. **Contingently issuable shares** enter *Basic* EPS only once the condition is met; before that they belong to the *Diluted* test. Do not put them in Basic on the strength of "they'll probably be issued."
+17. **Partly paid shares** count as a *fraction* of a full share equal to their dividend-participation ratio — not as full shares and not as zero.
 
 ## 9. First-Principles Recap
 
 - EPS exists because owners buy *shares*, not whole companies; absolute profit hides how big each owner's slice is. EPS = profit per unit of ownership, making performance comparable across companies and years.
-- The numerator is *equity* profit: net profit after tax **minus** preference dividend (and any preference redemption premium) — because the residual belongs only to equity holders.
+- A *standard* (not just a formula) is needed because every input — which profit, which dividend, which share count, over which periods — is contestable; fixing them is what makes EPS comparable and un-gameable.
+- The numerator is *equity* profit: net profit after tax **minus** preference dividend (and any preference redemption premium) — because the residual belongs only to equity holders. For cumulative preference, deduct the current year regardless of declaration; for non-cumulative, only if declared.
 - The denominator is *time-fair*: shares are weighted by the fraction of the period they existed, because a share present for two months earned for only two months.
-- Changes in share count that bring **new resources** (cash issues, buy-backs) are time-weighted from their date; changes that bring **no resources** (bonus, split) are pushed retrospectively to the start of all periods presented — otherwise a purely cosmetic re-slicing would fake a change in performance.
-- A rights issue is a **hybrid**: the below-market discount is a bonus element (retrospective, via the factor Fair value ÷ TERP) and the balance is a cash issue (time-weighted from the rights date).
+- The single organising question is **"did new resources enter?"** Changes bringing **new resources** (cash issues, buy-backs) are time-weighted from their date; changes bringing **no resources** (bonus, split, consolidation) are pushed retrospectively to the start of all periods presented — otherwise a purely cosmetic re-slicing would fake a change in performance.
+- A rights issue is a **hybrid**: the below-market discount is a bonus element (retrospective, via the factor Fair value ÷ TERP) and the balance is a cash issue (time-weighted from the rights date). Factor = 1 means it is pure cash.
 - Diluted EPS is a **worst-case warning**: it assumes convertibles/options become shares, adjusting the numerator (add back after-tax interest, and preference dividend) and the denominator (add potential shares).
-- Options dilute via the **treasury stock method** — only the "free" shares (those beyond what the exercise proceeds could buy back at market) count, at zero incremental earnings.
-- The **anti-dilution rule** is non-negotiable: include a potential equity share only if it *lowers* EPS; sequence instruments most-dilutive-first so the reported Diluted EPS is the lowest, most honest figure.
+- Options dilute via the **treasury stock method** — only the "free" shares (those beyond what the exercise proceeds could buy back at market) count, at zero incremental earnings; the *average* market price is used.
+- The **anti-dilution rule** is non-negotiable: include a potential equity share only if it *lowers* EPS; sequence instruments most-dilutive-first (test against the *running* figure, not Basic) so the reported Diluted EPS is the lowest, most honest figure. In a loss year, everything is anti-dilutive and Diluted = Basic.
 - Both Basic and Diluted EPS are presented with equal prominence, for every period, even when negative or equal, with full numerator/denominator reconciliations disclosed.
 
 ## 10. Quick-Revision Sheet
 
 **Basic EPS** = (Net profit after tax − Preference dividend) ÷ Weighted average equity shares.
 
-**Preference dividend:** cumulative → deduct always; non-cumulative → deduct only if declared. Also deduct redemption/buy-back premium.
+**Preference dividend:** cumulative → deduct current year always; non-cumulative → deduct only if declared. Deduct only the *current* year (not arrears). Also deduct redemption/buy-back premium.
 
-**Weighted average:** time-weight cash issues (from cash-due date) and buy-backs (from buy-back date). Bonus/split → retrospective, from start of earliest period, no time-weighting → restate prior EPS.
+**Weighted average:** time-weight cash issues (from cash-due date) and buy-backs (from buy-back date). Bonus/split/consolidation → retrospective, from start of earliest period, no time-weighting → restate prior EPS. Partly paid → fraction = dividend-participation ratio. Contingent shares → Basic only when condition met.
 
 **Rights issue factor:**
-- TERP = (FV of shares before + proceeds from rights) ÷ shares after.
-- Adjustment factor = FV before ÷ TERP (> 1).
+- TERP = (FV of shares before + proceeds from rights) ÷ shares after. (FV = cum-rights market price.)
+- Adjustment factor = FV before ÷ TERP (≥ 1; = 1 means no bonus element → treat as pure cash issue).
 - Pre-rights shares × factor × time-fraction; post-rights shares × time-fraction. Restate prior EPS = old EPS ÷ factor.
 
 **Diluted EPS** = (Basic numerator + after-tax interest on convert. debentures + preference dividend on convert. pref) ÷ (Basic shares + dilutive potential shares).
@@ -349,8 +499,8 @@ Both Basic and Diluted are shown even if one is negative and even if the two are
 
 **Convertible incremental EPS** = after-tax numerator effect ÷ shares on conversion.
 
-**Anti-dilution:** rank by incremental EPS (smallest first); add one series at a time; keep only while running EPS falls; stop when incremental EPS ≥ running EPS.
+**Anti-dilution:** rank by incremental EPS (smallest first); add one series at a time; test against the *running* EPS; keep only while running EPS falls; stop when incremental EPS ≥ running EPS. **Loss year → all potential shares anti-dilutive → Diluted = Basic.**
 
-**Presentation:** Basic and Diluted on the face of P&L, equal prominence, all periods, even if negative or equal; disclose face value, numerator reconciliation to net profit, and denominator reconciliation.
+**Presentation:** Basic and Diluted on the face of P&L, equal prominence, all periods, even if negative or equal; disclose face value, numerator reconciliation to net profit, and denominator reconciliation. Post-year-end bonus/split/rights-bonus → restate all periods; post-year-end cash issue → AS 4 disclosure only, no restatement.
 
-**Worked anchors:** Basic (Ex.1) = 7,50,000 ÷ 1,17,000 = **Rs. 6.41**; Bonus restatement (Ex.2) 3.00 → **2.00** restated, current **2.50**; Rights (Ex.3) TERP **23**, factor **25/23**, EPS **4.21**, prior restated **3.68**; Diluted (Ex.4) **11,68,000 ÷ 6,85,000 = Rs. 1.71**, with the 10% pref (incremental EPS Rs. 5.00 > 1.71) excluded as anti-dilutive.
+**Worked anchors:** Basic (Ex.1) = 7,50,000 ÷ 1,17,000 = **Rs. 6.41**; Bonus+cash (Ex.2A) WA **7,33,333**, EPS **2.25**; Bonus restatement (Ex.2) 3.00 → **2.00** restated, current **2.50**; Rights (Ex.3) TERP **23**, factor **25/23**, EPS **4.21**, prior restated **3.68**; Diluted (Ex.4) **11,68,000 ÷ 6,85,000 = Rs. 1.71**, with the 10% pref (incremental EPS Rs. 5.00 > 1.71) excluded as anti-dilutive; Sequencing flip (Ex.4A) Diluted **2.55**, debentures excluded; Loss year (Ex.4B) Diluted = Basic = **Rs. (1.50)**.

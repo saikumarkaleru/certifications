@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 30 — Financial Statements of Companies (Schedule III)
 
 ## 1. The Problem
@@ -14,6 +16,8 @@ If every company invented its own layout, three things break:
 
 So the law steps in and says: *there will be one prescribed skeleton, and every company will hang its numbers on that skeleton.* That skeleton is **Schedule III to the Companies Act, 2013**. This chapter is about understanding *why* the skeleton has the exact bones it has, and then how to actually take a raw trial balance and drape a real company's figures over it — correctly, completely, and in a way that would pass an exam and an audit.
 
+A subtler layer of the same problem, which the exam probes constantly: standardising the *shape* of the statement is not enough. Two further leaks must be plugged. First, **once profit is measured, who is allowed to take money out of the company, and how much?** Managers might vote themselves lavish pay; owners might strip out cash as dividend and leave creditors exposed. Second, **the "profit" on the face of the P&L is an accounting number, but the law needs a differently-defined profit for those withdrawal decisions** — because accounting profit can be inflated by capital gains or distorted by items the law does not want managers rewarded on. So Schedule III presentation is only Act One; Sections 197, 198 and 123 (remuneration and dividend) are Act Two, and the exam tests the join between them.
+
 ## 2. The Core Idea (Analogy)
 
 Think of Schedule III as a **standardised shipping manifest**.
@@ -21,6 +25,8 @@ Think of Schedule III as a **standardised shipping manifest**.
 When cargo crosses international borders, every container is accompanied by a manifest with fixed columns in a fixed order: contents, weight, origin, destination, hazard class. A customs officer in Mumbai, Rotterdam, and Singapore can each read the *same form* and instantly find the *same fact* in the *same box*. Nobody has to learn a new form at each port. The manifest does not tell the shipper *what* to ship — that is the business's choice — it only tells them *how to describe* what they shipped so that any reader anywhere can decode it.
 
 Schedule III is exactly this manifest for a company's financial position. It does not tell the company how much to earn or what assets to buy. It tells the company: *whatever your facts are, describe them in this order, under these headings, with this split between "will settle within a year" and "will settle later."* The genius of the manifest is the **current vs non-current split** — it is the customs officer's single most important sorting rule, because it answers the question every reader cares about most: *what is coming and going in the near term versus locked up for the long haul?*
+
+Extend the analogy to the two governance provisions. The **manifest** describes the cargo; but a port also enforces **how much of the cargo the crew may keep for themselves (wages) and how much the owner may unload for personal sale (dividend) before the ship is safe to sail on**. Section 197 is the wage cap on the crew; Section 123 is the rule that the owner cannot strip the hold below a safe ballast (reserves and depreciation must stay aboard). The manifest and these two rules are separate mechanisms serving the same distant-trust problem: a reader must be able to see both *what is there* and *that it was not quietly siphoned off*.
 
 Keep this analogy in your head for the whole chapter. Every time a rule feels arbitrary, ask: *what would a customs officer at a distant port need, in a fixed box, to trust this cargo without a phone call?*
 
@@ -35,6 +41,12 @@ Schedule III did not fall from the sky. Its structure is the answer to a sequenc
 **Why must the Notes carry so much?** Schedule III keeps the face of the Balance Sheet and P&L short — a handful of line items — and pushes all the detail into **Notes to Accounts**. This is deliberate. The face gives the customs officer the headline; the notes are the detailed packing list inside. A reader who only wants the big picture reads the face; a reader who wants to verify reads the notes. This separation of *summary* from *detail* is the second structural genius after the current/non-current split.
 
 **Why does an Accounting Standard override Schedule III?** Schedule III itself contains a "General Instruction" stating that if a disclosure requirement of the **Companies Act or an Accounting Standard** is different from Schedule III, the Act/AS prevails, and Schedule III's requirements are *in addition*. The logic: Schedule III is a presentation template, but the *substance* of recognition and measurement lives in the Accounting Standards. Form must yield to substance. This is why, for example, AS 3 (Cash Flow) and AS 18 (Related Party) disclosures sit alongside Schedule III without conflict.
+
+**Why three Divisions of Schedule III?** The same presentation logic must serve companies on different accounting regimes, so Schedule III is split into **Division I** (companies following notified **Accounting Standards** — the CA Intermediate syllabus), **Division II** (companies following **Ind AS**), and **Division III** (**NBFCs following Ind AS**). They share the current/non-current DNA but differ in headings — e.g. Division II replaces "Reserves and Surplus" with "Other Equity" and shows a separate **Statement of Changes in Equity**, while Division III orders the Balance Sheet by **liquidity** rather than current/non-current because a finance company's whole business *is* current/non-current assets. Knowing that these Divisions exist prevents you from importing an Ind AS heading (like "Other Equity") into a Division I answer.
+
+**Why a "true and fair view" clause on top of a rigid format?** A prescribed format could, in a freak case, still mislead. So Section 129 layers a **substance-over-form override**: the statements must give a true and fair view, and where the prescribed format would defeat that, additional disclosure is required. The format is the floor of disclosure, never the ceiling. This is the philosophical anchor for every "disclose in notes" rule in the chapter.
+
+**Why define profit twice — once for accounting and once for withdrawals (Section 198)?** Because the two profits answer different questions. Accounting profit answers "how did the business perform?" It legitimately includes capital gains, revaluation effects, and one-off items. But the question "how much may managers be paid?" and "how much may be distributed?" needs a **sustainable, operating, distributable** profit — otherwise a company could sell a building at a huge capital gain and reward managers on a one-time windfall, or pay dividends out of paper revaluation surpluses that never generated cash. Section 198 therefore *strips out capital-nature profits and re-adds items* so the percentage caps bite on a defensible base. The double definition is not bureaucratic duplication; it is the law refusing to let a distributable decision ride on a non-distributable number.
 
 With the "why" established, we now install the actual bones.
 
@@ -53,6 +65,12 @@ Under **Section 2(40) of the Companies Act, 2013**, "financial statements" inclu
 **Section 129** requires financial statements to give a **true and fair view**, comply with the notified Accounting Standards, and be in the **form provided in Schedule III**. For CA Intermediate (AS regime, non-Ind-AS companies) the relevant part is **Division I of Schedule III**.
 
 **Section 128** requires books of account to be kept on an accrual basis and the double-entry system. **Section 130/131** deal with re-opening and voluntary revision — out of scope here but worth knowing they exist.
+
+**Finer distinctions the exam probes here:**
+
+- A **small company** [Sec 2(85)] is a private company below both a paid-up capital and a turnover threshold (thresholds have been revised more than once — **verify current limits against the latest ICAI material / AY**). The exam point is *why* it is exempt from the Cash Flow Statement: its readership is small and close, so the distant-reader rationale weakens, and the compliance cost would outweigh the benefit. A **holding, subsidiary, Section 8 (charitable), or company governed by a special Act is never a small company** regardless of size.
+- **"Financial year"** under Section 2(41) must end on **31 March** for every company (with narrow exceptions for holding/subsidiaries of foreign entities, allowed by the Tribunal). This is why exam Balance Sheets are dated 31 March.
+- A **Statement of Changes in Equity (SOCE)** does **not** exist as a separate statement under Division I. If an exam answer in the AS regime shows a SOCE, it is wrong; the equivalent movement is captured inside the **Reserves and Surplus** note. Reserve this concept for Ind AS (Division II).
 
 ### 4.2 The operating cycle — the master key
 
@@ -91,6 +109,10 @@ flowchart TD
     F -->|"No"| G["NON-CURRENT"]
 ```
 *Figure 1 — The single decision tree that classifies every asset and liability; satisfying any one branch makes the item current.*
+
+**Why the operating-cycle branch matters even when it seems redundant.** For a business with a long production cycle — a distillery ageing whisky for four years, a shipbuilder, a real-estate developer — inventory that will take three years to sell is **still a current asset**, because it is realised *within the normal operating cycle* even though that cycle exceeds 12 months. This is the classic examiner tweak: "raw material expected to be consumed after 18 months, but the company's operating cycle is 24 months — classify it." Answer: **current asset**, because branch 1 (operating cycle) is satisfied; you never even reach the 12-month branch. The 12-month test is only a *fallback* for items outside the operating cycle. Reverse the trap: a debt due in 15 months for a company with a 3-month operating cycle is **non-current** — none of the four branches is met.
+
+**Symmetry point for liabilities.** Trade payables arising in the operating cycle are **current even if not due within 12 months** (branch 1). But a **refinanced** long-term loan is non-current only if the company has an *unconditional right* to defer at the reporting date; a refinancing agreement signed *after* the year end does not help — the right must exist *on* the Balance Sheet date. A loan repayable on demand (breach of covenant giving the lender an immediate call) is **current**, because the borrower has no unconditional right to defer.
 
 ### 4.3 Structure of the Balance Sheet (Division I)
 
@@ -147,6 +169,11 @@ flowchart TD
 ```
 *Figure 2 — The two grand divisions and their four/two major heads; the two grand totals must reconcile.*
 
+**Two positions that sit "between" equity and liabilities and are heavily tested:**
+
+- **Share Application Money Pending Allotment** gets its *own line* between Shareholders' Funds and Non-Current Liabilities. Why a separate line and not capital? Because at the reporting date the shares are *not yet allotted* — the money is neither fully "owners' capital" nor an ordinary liability. The nuance: money **that can be allotted** (company has enough authorised capital, the issue is not going to be refunded) sits here as quasi-equity; any portion that **must be refunded** (over-subscription, or authorised capital insufficient) is a **current liability**, not this line. Examiners split one figure across the two.
+- **Money received against share warrants** sits inside Shareholders' Funds as item (c). A warrant holder has paid for the *right* to subscribe later; the money is non-refundable consideration towards future equity, so it is grouped with owners' funds, not liabilities.
+
 ### 4.4 Contents of key heads (the detail you must know)
 
 **Share Capital note** must disclose, for each class:
@@ -161,6 +188,8 @@ flowchart TD
 
 **Reserves and Surplus** — classified as: Capital Reserve; Capital Redemption Reserve; Securities Premium; Debenture Redemption Reserve; Revaluation Reserve; Share Options Outstanding; Other Reserves (specify nature); and **Surplus** i.e. the balance in the Statement of Profit and Loss (showing allocations and appropriations such as dividend, transfer to reserves). A **debit balance of Surplus** (accumulated losses) is shown as a **negative figure under this head**, even if it makes Reserves and Surplus negative.
 
+*Distinguish the three "capital" reserves the exam confuses:* **Capital Reserve** arises from capital profits (e.g. profit on reissue of forfeited shares, profit prior to incorporation); **Capital Redemption Reserve (CRR)** is created by law when preference shares are redeemed or shares are bought back out of profits (equal to the nominal value redeemed); **Securities Premium** is the excess over par received on a share/debenture issue. Only CRR and Securities Premium have *statutorily restricted* uses; Capital Reserve is generally not available for dividend either. **Revaluation Reserve** can never be used for dividend and is not a free reserve.
+
 **Long-term Borrowings** — bonds/debentures, term loans (from banks / others), deferred payment liabilities, deposits, loans from related parties, long-term maturities of finance lease obligations. Must state **secured vs unsecured**, nature of security, terms of redemption/repayment, and **period and amount of any continuing default** in repayment of principal or interest as on the Balance Sheet date.
 
 **Trade Payables / Trade Receivables** — a payable/receivable is "trade" only if it arises from the **purchase/sale of goods or services in the normal course of business**. Amounts due on any other account (e.g. sale of a fixed asset) are **not** trade and go under "Other" heads.
@@ -170,6 +199,16 @@ flowchart TD
 **Cash and Cash Equivalents** — balances with banks; cheques/drafts on hand; cash on hand; others. Earmarked balances (e.g. unpaid dividend), balances held as **margin money or security** against borrowings, and **bank deposits with more than 12 months maturity** must each be disclosed separately.
 
 **A critical current-vs-non-current carve-out:** the **current maturities of long-term debt** (the portion of a term loan repayable within 12 months) are shown under **Other Current Liabilities**, NOT under Short-term Borrowings and NOT under Long-term Borrowings. This trips up most students.
+
+**Further finer placements the examiner tests one item at a time:**
+
+- **Deferred Tax Liability / Asset (net)** appears **only under non-current** — there is no "current deferred tax." DTL and DTA of the *same* entity are shown **net**, and you disclose the net figure on the appropriate side. A company shows *either* a net DTA *or* a net DTL, never both.
+- **Long-term Provisions** (e.g. provision for gratuity, warranty beyond 12 months) vs **Short-term Provisions** (provision for tax, proposed portion of employee benefits due within a year). The *same* liability (gratuity) can split across both heads by timing.
+- **Interest accrued and due** on borrowings → Other Current Liabilities (it is payable now); **interest accrued but not due** → also Other Current Liabilities. Both leave the borrowing line and sit as current — a common tweak.
+- **Unpaid dividend, unpaid matured deposits/debentures, application money refundable** → Other Current Liabilities.
+- **Provision for doubtful debts** is *not* a Balance Sheet liability head — it is netted against Trade Receivables in that note.
+- **Capital advances** (advances paid for acquiring fixed assets) are **Long-term Loans and Advances (non-current)**, never Inventories or current — because they will crystallise into a non-current asset.
+- **Loose tools, stores and spares, packing material, loose stock** → **Inventories** (current), regardless of how long they last, because they are consumed in operations.
 
 ### 4.5 Structure of the Statement of Profit and Loss
 
@@ -195,7 +234,14 @@ The P&L is strictly vertical and arrives at profit through a fixed sequence:
 
 Note the **"Changes in inventories"** line: it is computed as **Opening stock − Closing stock** of finished goods/WIP/stock-in-trade. A positive figure (stock fell) is an expense; a negative figure (stock rose) reduces expense. There is **no separate "opening stock" and "closing stock"** the way a proprietor's Trading Account shows them — Schedule III nets them into one line.
 
-**Revenue from Operations** for a company **other than a finance company** = sale of products + sale of services + other operating revenues, **less** excise duty (historically). Broken up in the notes.
+**Careful sub-distinctions inside expenses (frequently mis-slotted):**
+
+- **Cost of materials consumed** applies to a *manufacturer* = Opening raw material + Purchases of raw material − Closing raw material. **Purchases of stock-in-trade** applies to a *trader* who buys finished goods for resale. A pure trader has *no* "materials consumed" line; a pure manufacturer's resale purchases are nil. Mixed businesses show both.
+- **Changes in inventories** covers only **finished goods, WIP and stock-in-trade** — *not raw materials* (raw-material movement is already inside "materials consumed"). Putting raw-material stock movement into "Changes in inventories" double-counts. This is a precision trap.
+- **Finance costs** = interest expense, other borrowing costs, and net loss on foreign-currency borrowings to the extent treated as interest. Note: **interest on income tax** and **bank charges** are *not* finance costs — bank charges go to Other Expenses.
+- **Exceptional items** are ordinary-activity items of unusual size/incidence (e.g. a large one-off write-down); **extraordinary items** are outside ordinary activities (now a shrinking category). They are shown *separately* on the face, not buried in Other Expenses, precisely so the distant reader can strip them out to judge sustainable profit — the same logic that drives Section 198.
+
+**Revenue from Operations** for a company **other than a finance company** = sale of products + sale of services + other operating revenues, **less** excise duty (historically). Broken up in the notes. For a **finance company**, revenue from operations = interest + other financial-services income — its "operations" *are* financial, so the face heading differs.
 
 **Additional information required in notes to P&L** includes: value of imports on CIF basis (raw materials, components, capital goods); expenditure in foreign currency; earnings in foreign exchange; **auditor's remuneration** (as auditor, for taxation, for company law matters, for other services, reimbursements); and consumption of imported vs indigenous raw materials/stores with percentages.
 
@@ -217,6 +263,8 @@ Once profit is computed, two governance questions arise, and both are examinable
 
 If profits are **inadequate or there is a loss**, remuneration may be paid per the limits in **Schedule V** (based on effective capital) — otherwise it requires shareholder approval. (Post the 2018 amendment, remuneration exceeding these limits requires only a **special resolution** of shareholders, not Central Government approval.)
 
+*Scope points the exam hides:* the 11%/5% caps apply to **public companies**; a **private company is not bound by Section 197 limits** and may pay any remuneration authorised by its articles. **Sitting fees** paid to directors for attending meetings are **outside** the 11% ceiling (Section 197(5)), subject to a per-meeting cap prescribed by rules. The **11%** is a *ceiling that itself can be crossed by special resolution*; the *individual* 5%/10%/1%/3% figures are the sub-limits within (or, when crossed, alongside) it.
+
 **Net profit under Section 198** is a specially computed figure — it is *not* simply the P&L profit. The mechanics (know the direction of each adjustment):
 
 - **Start** with profit as per P&L, then
@@ -226,6 +274,19 @@ If profits are **inadequate or there is a loss**, remuneration may be paid per t
 - **Do NOT deduct**: income tax, voluntary compensation/damages, capital losses, and — importantly — **the managerial remuneration itself is not deducted before applying the percentage** (the percentage is applied on profit *before* charging such remuneration).
 
 A frequently-tested subtlety: **profit on sale of a fixed asset** is included in Section 198 profit only to the extent of the **write-back of depreciation / up to original cost**; any excess over original cost (a genuine capital profit) is **excluded**.
+
+**A compact Section 198 template (memorise the direction of each line):**
+
+| | ₹ |
+|---|---|
+| Net profit as per Statement of Profit and Loss | X |
+| **Add back** if already debited: managerial remuneration; provision for tax (not allowed as deduction); voluntary compensation; capital losses; loss on sale of undertaking; scientific research capital expenditure; depreciation in excess of Schedule II | + |
+| **Less** if already credited but to be excluded: capital profits; profit on sale of fixed assets **above original cost**; premium on shares/debentures; profit on forfeiture; profit on sale of undertaking/investments (capital) | − |
+| **Add** if not yet credited but includible; **Less** allowable items not yet charged (e.g. Schedule II depreciation, bad debts) | ± |
+| **= Net profit u/s 198** | **XX** |
+| Apply 11% / 5% etc. on XX | |
+
+The single most common error is deducting the managerial remuneration *before* computing the base — the base is *before* remuneration, so if the P&L profit was struck *after* charging remuneration, you must **add it back** first.
 
 **(b) Out of what can dividend be paid? (Divisible profits)**
 
@@ -239,6 +300,8 @@ Key guardrails under **Section 123**:
 - A company **may** (voluntarily — it is no longer mandatory since 2014) transfer a percentage of profits to reserves before dividend.
 - Dividend out of **past reserves** in a year of inadequate profit is governed by the **Companies (Declaration and Payment of Dividend) Rules** — the rate cannot exceed the **average of the last three years' rates**, the amount drawn cannot exceed **1/10th (10%) of paid-up capital plus free reserves**, and the balance of reserves after withdrawal must not fall below **15% of paid-up share capital**.
 - **Unpaid/unclaimed dividend** must be transferred to a **separate Unpaid Dividend Account within 7 days** after the 30-day payment window; amounts unclaimed for **7 years** go to the **Investor Education and Protection Fund (IEPF)**.
+
+*Two further guardrails often set as MCQ traps:* (i) before declaring dividend out of reserves in a lean year, the **amount so drawn must first be used to set off the current year's loss**; and (ii) a company that has **defaulted** on repayment of deposits, debentures or their interest **cannot declare dividend** until the default is made good. A company can pay **interim dividend** out of the current period's surplus (and, if there is a loss for the elapsed period, the interim rate cannot exceed the average of the last three years' rates).
 
 ### 4.7 The workflow: from trial balance to Schedule III statements
 
@@ -254,6 +317,24 @@ flowchart LR
 *Figure 3 — The preparation pipeline; every adjustment has a dual effect that must land in two places.*
 
 The discipline that avoids errors: **every adjustment hits two places** (a P&L effect and a Balance Sheet effect, or two Balance Sheet effects). Closing stock appears once as a deduction in "Changes in inventories" (P&L) and once as Inventories (current asset). Outstanding salary appears once as an expense addition and once as "Other Current Liabilities." Miss one leg and the grand totals will not reconcile — which is precisely the built-in check.
+
+**A reusable adjustment map (both legs) for the most common exam adjustments:**
+
+| Adjustment | Leg 1 (P&L) | Leg 2 (Balance Sheet) |
+|---|---|---|
+| Closing stock | reduces expense (Changes in inventories) | Inventories (CA) |
+| Depreciation | Depreciation expense | reduces PPE / adds Accumulated Depreciation |
+| Outstanding expense | adds to the expense | Other Current Liabilities |
+| Prepaid expense | reduces the expense | Other Current Assets |
+| Accrued income | adds to income | Other Current Assets |
+| Income received in advance | reduces income | Other Current Liabilities |
+| Bad debts written off | Other Expenses | reduces Trade Receivables |
+| Increase in provision for doubtful debts | Other Expenses | reduces Trade Receivables (netted) |
+| Interest accrued but not paid on loan | Finance cost | Other Current Liabilities |
+| Provision for tax | Tax expense (below PBT) | Short-term Provisions |
+| Proposed dividend (revised AS 4) | **no P&L / no provision** | **note disclosure only** |
+
+If a candidate simply walks this table adjustment by adjustment, both legs are guaranteed to land and the sheet balances by construction.
 
 ## 5. Worked Examples
 
@@ -275,8 +356,14 @@ Classify each into its Schedule III main head and sub-head, and mark current (C)
 | Prepaid insurance | Current Assets → Other Current Assets | C |
 | Advance to supplier for raw material | Current Assets → Short-term Loans and Advances | C |
 | Debit balance of Statement of P&L | Reserves and Surplus (shown as negative Surplus) | — |
+| Capital advance for new machinery | Non-Current Assets → Long-term Loans and Advances | NC |
+| Interest accrued but not due on debentures | Current Liabilities → Other Current Liabilities | C |
+| Deferred Tax Liability (net) | Non-Current Liabilities → Deferred Tax Liabilities (Net) | NC |
+| Provision for gratuity payable after 12 months | Non-Current Liabilities → Long-term Provisions | NC |
+| Public deposits maturing in 8 months | Current Liabilities → Other Current Liabilities (current maturities) | C |
+| Share application money to be refunded (over-subscription) | Current Liabilities → Other Current Liabilities | C |
 
-**Teaching point:** the term-loan instalment and the debentures come from the *same* kind of borrowing, yet split across current and non-current. That split is the whole point of Schedule III — it answers "what must I pay within a year?"
+**Teaching point:** the term-loan instalment and the debentures come from the *same* kind of borrowing, yet split across current and non-current. That split is the whole point of Schedule III — it answers "what must I pay within a year?" Note also that a **capital advance** for machinery is *non-current* even though "advance" sounds short-term — it follows the nature of the asset it will become.
 
 ### Example 2 — Building a simple Balance Sheet from adjusted balances
 
@@ -470,9 +557,85 @@ Proposed dividend (8% × 15,00,000 = 1,20,000) is **not** deducted here — unde
 
 **Teaching point — the self-check is the whole discipline.** When your two totals do not agree in the exam hall, run this drill: (1) verify each note total, (2) confirm the *same* profit flows into Surplus, (3) confirm every adjustment's *second leg* is on the sheet, (4) if it still fails, a source figure is mis-stated. Never plug the difference into "Suspense" in a company Balance Sheet.
 
+**What if the examiner tweaks Example 3?** Common variations and the one line that changes:
+- *"Debentures are redeemable in 2027 (within 12 months of year end)."* Then the ₹5,00,000 leaves Long-term Borrowings and becomes **Other Current Liabilities (current maturities)**; Long-term Borrowings falls to ₹2,00,000 (bank loan only). Totals unchanged.
+- *"Transfer ₹50,000 to General Reserve."* Surplus falls to ₹4,90,500 and General Reserve rises to ₹2,50,000 — Reserves and Surplus total (and both grand totals) are **unchanged**, because the appropriation is a *movement within the same head*. This is a favourite because a careless student changes only one leg and unbalances the sheet.
+- *"Tax already includes deferred tax of ₹30,000."* Split the tax line into current 1,30,000 + deferred 30,000 in the P&L; put a **Deferred Tax Liability (net) 30,000 under Non-Current Liabilities**, and the current-tax provision (net of advance tax if set-off is stated) under Short-term Provisions. Grand totals rise by 30,000 on both sides.
+
+### Example 4 — Section 198 net profit and Section 197 managerial remuneration
+
+**Straturn Ltd** (a public company) shows a Net Profit as per the Statement of Profit and Loss of **₹42,00,000** for the year, after debiting/crediting the following:
+
+Debited to P&L (already reducing the ₹42,00,000):
+- Managing Director's remuneration ₹6,00,000
+- Provision for income tax ₹9,00,000
+- Depreciation charged in books ₹5,00,000 (depreciation as per Schedule II works out to ₹4,20,000)
+- Compensation paid voluntarily (not under any legal obligation) ₹1,00,000
+- Loss on sale of investments (capital loss) ₹80,000
+
+Credited to P&L (already increasing the ₹42,00,000):
+- Profit on sale of a machine ₹1,50,000 (original cost ₹5,00,000; WDV ₹3,00,000; sold for ₹4,50,000)
+- Profit on sale of a long-term investment (capital profit) ₹60,000
+- Subsidy from government (revenue nature) ₹2,00,000
+
+**Required:** Compute net profit under Section 198 and the maximum remuneration payable to the sole Managing Director (5% limit).
+
+---
+
+**Step 1 — Understand the machine profit split.** The machine cost ₹5,00,000, WDV was ₹3,00,000, sold for ₹4,50,000. Book profit = 4,50,000 − 3,00,000 = ₹1,50,000. Under Section 198, profit on sale of a fixed asset is includible **only up to original cost**. Sale price ₹4,50,000 is *below* original cost ₹5,00,000, so the **entire ₹1,50,000 is a write-back of depreciation and is fully includible** — nothing to exclude here. (If it had sold for ₹5,60,000, the ₹60,000 above cost would be excluded.)
+
+**Step 2 — Build the Section 198 statement.**
+
+| | ₹ | ₹ |
+|---|---|---|
+| Net profit as per Statement of P&L | | 42,00,000 |
+| **Add back (items debited that Section 198 disallows):** | | |
+| Managing Director's remuneration (base is before remuneration) | 6,00,000 | |
+| Provision for income tax (not deductible u/s 198) | 9,00,000 | |
+| Voluntary compensation (not a legal obligation) | 1,00,000 | |
+| Capital loss on sale of investments | 80,000 | |
+| Excess depreciation charged over Schedule II (5,00,000 − 4,20,000) | 80,000 | 17,60,000 |
+| | | **59,60,000** |
+| **Less (items credited that Section 198 excludes):** | | |
+| Capital profit on sale of long-term investment | 60,000 | |
+| Profit on sale of machine above original cost | Nil | 60,000 |
+| **Net profit under Section 198** | | **59,00,000** |
+
+*Notes on direction:* the government subsidy of ₹2,00,000 is **revenue** in nature, so it stays in — no adjustment. The machine profit stays in fully (Step 1). Depreciation allowed under Section 198 is the Schedule II figure ₹4,20,000; since books charged ₹5,00,000, the **excess ₹80,000 is added back** (Section 198 only allows Schedule II depreciation).
+
+**Step 3 — Apply the Section 197 limit.** Sole Managing Director ⇒ ceiling **5% of ₹59,00,000 = ₹2,95,000**.
+
+**Step 4 — Compare with actual.** The company actually paid the MD ₹6,00,000, but the maximum permissible without a special resolution is **₹2,95,000**. The **excess ₹3,05,000** is either recovered/refunded or regularised by a **special resolution** of shareholders (post-2018, no Central Government approval needed). If profits had instead been *inadequate*, the ceiling would come from **Schedule V** (based on effective capital), not the 5% rule.
+
+**Self-check:** the base ₹59,00,000 is deliberately *before* charging the MD's remuneration — that is why we added ₹6,00,000 back. Applying 5% to a post-remuneration profit is the classic wrong answer.
+
+### Example 5 — Dividend out of reserves in a year of inadequate profit (Section 123 Rules)
+
+**Cobalt Ltd** has paid-up equity share capital of **₹50,00,000** and free reserves of **₹30,00,000** at the start of the year. Its profit this year is only **₹1,20,000** — inadequate to sustain its usual dividend. The Board wishes to draw on reserves to pay a dividend. Dividend rates declared in the last three years were **12%, 10% and 8%**. Determine the maximum dividend the company may declare out of accumulated reserves under the Companies (Declaration and Payment of Dividend) Rules.
+
+---
+
+Apply the three statutory ceilings; the **lowest** governs.
+
+**Ceiling 1 — Rate cap (average of last three years' rates):**
+Average rate = (12% + 10% + 8%) ÷ 3 = **10%**.
+Maximum dividend by rate = 10% × paid-up capital ₹50,00,000 = **₹5,00,000**.
+
+**Ceiling 2 — Amount drawn from reserves cannot exceed 1/10th (10%) of (paid-up capital + free reserves):**
+= 10% × (50,00,000 + 30,00,000) = 10% × 80,00,000 = **₹8,00,000** is the maximum *withdrawal* from reserves.
+Since current profit is ₹1,20,000, the withdrawal needed to fund a ₹5,00,000 dividend = 5,00,000 − 1,20,000 = **₹3,80,000**, which is within the ₹8,00,000 cap. (Constraint satisfied.)
+
+**Ceiling 3 — Residual reserves after withdrawal must not fall below 15% of paid-up capital:**
+Minimum reserves to retain = 15% × 50,00,000 = **₹7,50,000**.
+Reserves after withdrawing ₹3,80,000 = 30,00,000 − 3,80,000 = **₹26,20,000** ≥ ₹7,50,000. (Constraint satisfied.)
+
+**Conclusion.** All three tests are met at a dividend of **₹5,00,000** (10% of capital), funded by current profit ₹1,20,000 + reserve withdrawal ₹3,80,000. The **binding constraint is Ceiling 1 (the rate cap)** — it caps the dividend at ₹5,00,000 even though the withdrawal and residual-reserve rules would each permit more.
+
+**What if the examiner tweaks it?** Suppose free reserves were only ₹10,00,000 (not ₹30,00,000). Then Ceiling 2 withdrawal cap = 10% × (50,00,000 + 10,00,000) = ₹6,00,000 (still enough for the ₹3,80,000 draw), **but** Ceiling 3 now requires residual ≥ ₹7,50,000, and reserves after a ₹3,80,000 draw = 10,00,000 − 3,80,000 = ₹6,20,000, which is **below ₹7,50,000 — fails**. The maximum permissible withdrawal then = 10,00,000 − 7,50,000 = **₹2,50,000**, so the maximum dividend = current profit 1,20,000 + 2,50,000 = **₹3,70,000** (a rate of 7.4%). Here **Ceiling 3 becomes binding**. The lesson: always test all three and let the smallest win; which one binds depends on the reserve cushion.
+
 ## 6. Presentation & Disclosure Formats
 
-**Rounding-off (Schedule III General Instruction):** where turnover is **less than ₹100 crore**, figures may be rounded to the nearest **hundreds, thousands, lakhs or millions**; where turnover is **₹100 crore or more**, to the nearest **lakhs, millions or crores**. The **same unit** must be used throughout.
+**Rounding-off (Schedule III General Instruction):** where turnover is **less than ₹100 crore**, figures may be rounded to the nearest **hundreds, thousands, lakhs or millions**; where turnover is **₹100 crore or more**, to the nearest **lakhs, millions or crores**. The **same unit** must be used throughout. *(These are the thresholds after the 2019 amendment substituting "turnover" for the older "total income" trigger — verify against the latest ICAI material / AY.)*
 
 **Comparatives:** every line item must show the **corresponding figure for the immediately preceding reporting period**, including in the notes. A new Schedule III addition requires that if a company changes the presentation, the previous year is reclassified with an explanation.
 
@@ -502,6 +665,10 @@ Note 2 — Reserves and Surplus                As at 31.03.26   As at 31.03.25
 - **Auditor's remuneration** split by service.
 - **Related party disclosures** (AS 18), **segment disclosures** (AS 17), **leases** (AS 19), **EPS** (AS 20) — driven by the respective Accounting Standard but presented within these financial statements.
 
+**Newer Schedule III disclosure additions worth flagging** (introduced by the March 2021 amendment — *verify applicability to your AY / ICAI syllabus cut-off*): ageing schedules for **Trade Receivables, Trade Payables, Capital Work-in-Progress and Intangible Assets under Development**; disclosure of **promoter shareholding and its changes**; details of **loans to related parties**; **title deeds of immovable property not held in the company's name**; and ratios such as **current ratio, debt-equity, return on equity** with explanations for variances above a threshold. The exam emphasis in the AS/Intermediate stream stays on the classic disclosures above, but knowing these exist prevents surprise in objective questions.
+
+**The face-vs-notes rule restated as a test you can apply:** anything the distant reader needs as a *headline number to make the two sides reconcile* goes on the **face** (a single figure per line item); everything that is *breakup, movement, or narrative* goes in the **notes**. Contingent liabilities, being amounts *not* recognised (they never enter the two totals), can only live in notes — putting them on the face would corrupt the reconciliation.
+
 ## 7. Connections
 
 Schedule III is the terminal where almost every other Advanced Accounting topic arrives:
@@ -514,6 +681,8 @@ Schedule III is the terminal where almost every other Advanced Accounting topic 
 - **Bonus issue** and **rights issue** change Share Capital and Securities Premium and require the 5-year disclosure in the Share Capital note.
 - **Section 198 net profit** links the P&L to **managerial remuneration** and to **divisible profits / dividend** decisions.
 - **Amalgamation and internal reconstruction** ultimately present the merged entity's position in this very format.
+- **AS 22 (Deferred Tax)** produces the DTL/DTA (net) line — always non-current — and splits the tax line in the P&L into current and deferred.
+- **AS 5** governs how **exceptional and extraordinary items** and prior-period items are surfaced separately on the P&L face, protecting the sustainable-profit reading.
 
 ```mermaid
 flowchart LR
@@ -526,6 +695,18 @@ flowchart LR
     SF --> DIV["Sec 123 Dividend / Divisible Profits"]
 ```
 *Figure 4 — Schedule III as the convergence point of standards and provisions, and the launchpad for remuneration and dividend decisions.*
+
+```mermaid
+flowchart TD
+    PL["Profit as per Statement of P and L"] --> ADJ["Section 198 adjustments"]
+    ADJ --> A1["Add back remuneration and tax and excess depreciation and capital losses"]
+    ADJ --> A2["Exclude capital profits and premium and profit on asset above cost"]
+    A1 --> NP["Net profit under Section 198"]
+    A2 --> NP
+    NP --> R197["Section 197 remuneration ceiling 11 percent overall"]
+    NP --> BASE["Base for reasonableness of dividend policy"]
+```
+*Figure 5 — How the accounting profit is transformed into the Section 198 base before the remuneration percentages bite.*
 
 ## 8. Traps & Examiner Tricks
 
@@ -542,38 +723,49 @@ flowchart LR
 11. **Securities Premium** can only be used for the purposes in **Section 52** (bonus shares, writing off preliminary expenses / share issue expenses, premium on redemption of debentures/preference shares, buy-back). It is **not a free reserve** available for dividend.
 12. **Rounding:** using two different units in the same set of statements is a presentation error; the threshold turns on turnover (₹100 crore).
 13. **Same profit both sides:** the number added to Surplus on the Balance Sheet must be exactly the "Profit for the period" on the P&L. A mismatch is the number-one cause of a non-balancing sheet.
+14. **Long production cycle:** inventory realisable *after* 12 months but *within* the operating cycle is **current** — do not mechanically apply the 12-month test first; the operating-cycle branch is checked first.
+15. **Changes in inventories** covers only finished goods / WIP / stock-in-trade — **never raw materials** (raw-material movement is inside "cost of materials consumed"). Slotting raw-material stock here double-counts.
+16. **Appropriation within Reserves and Surplus** (transfer to General Reserve) does **not** change the Reserves and Surplus total or the grand totals — a candidate who changes only one leg unbalances the sheet.
+17. **Capital advance for a fixed asset** is **Long-term Loans and Advances (non-current)**, not a current advance — it follows the asset it will become.
+18. **Section 197 applies to public companies;** a **private company** is not bound by the 11% ceiling. Also, **sitting fees are outside** the 11% cap.
+19. **Depreciation for Section 198** is the **Schedule II** amount, not the books figure — add back any excess book depreciation, deduct any shortfall.
+20. **Dividend out of reserves — three ceilings, lowest binds.** Do not stop at the rate cap; also test the 10%-of-(capital+free-reserves) withdrawal cap and the 15%-of-capital residual-reserve floor. The binding constraint shifts with the size of the reserve cushion.
+21. **Share application money:** the refundable portion is a **current liability**, only the allottable portion sits on the "Share Application Money Pending Allotment" line — one figure can split across both.
+22. **Interest accrued (due or not due)** on a long-term loan is a **current liability (Other Current Liabilities)**, even though the loan principal is non-current.
 
 ## 9. First-Principles Recap
 
 Strip everything away and rebuild it from the single problem: *thousands of distant readers must extract the same facts from every company with no ability to ask questions.* From that one constraint, the entire chapter follows by necessity:
 
 - Because readers are distant and many → a **prescribed, uniform format** (Schedule III) so the same fact lives in the same box everywhere.
-- Because the deepest question is *timing of cash* → a **current vs non-current** split governed by the **operating cycle / 12-month** test.
-- Because a headline and the fine print serve different readers → a **short face** plus **detailed Notes**.
-- Because substance beats form → **Accounting Standards and the Act override** the template where they differ.
+- Because the deepest question is *timing of cash* → a **current vs non-current** split governed by the **operating cycle / 12-month** test, with the operating-cycle branch checked *first*.
+- Because a headline and the fine print serve different readers → a **short face** plus **detailed Notes**, with unrecognised items (contingencies) confined to notes so the two totals stay clean.
+- Because substance beats form → **Accounting Standards and the Act override** the template where they differ, and a **true and fair view** sits above the format as a floor of disclosure.
+- Because different regimes exist → **three Divisions** (AS / Ind AS / NBFC Ind AS) share the same DNA but differ in headings; Division I is the AS-regime template you draft in.
 - Because managers and owners draw money out of the company → **Section 197** caps remuneration (on **Section 198** profit) and **Section 123** governs the **divisible profit** available for dividend, with reserves and depreciation as gatekeepers.
+- Because a distributable decision must not ride on a non-distributable number → **Section 198 redefines profit**, stripping out capital gains and adding back remuneration and tax, so the percentage caps bite on a sustainable base.
 - Because every transaction has two effects → the statements **self-check**: the two grand totals must reconcile, and the profit must be identical on both statements.
 
 If you remember only the constraint and the two-legged self-check, you can reconstruct every rule rather than recall it.
 
 ## 10. Quick-Revision Sheet
 
-**Statements (Sec 2(40)):** Balance Sheet + Statement of P&L + Cash Flow (except OPC/small/dormant) + notes. True and fair view (Sec 129), Schedule III Division I form (AS regime).
+**Statements (Sec 2(40)):** Balance Sheet + Statement of P&L + Cash Flow (except OPC/small/dormant/startup private) + notes. True and fair view (Sec 129), Schedule III **Division I** form (AS regime). FY ends 31 March. SOCE is Ind AS only.
 
 **Balance Sheet order — Equity & Liabilities:** Shareholders' Funds (Share Capital; Reserves & Surplus; Warrants) → Share Application Money Pending Allotment → Non-Current Liabilities (Long-term Borrowings; DTL net; Other LT Liab; LT Provisions) → Current Liabilities (Short-term Borrowings; Trade Payables; Other Current Liab; Short-term Provisions).
 
 **Balance Sheet order — Assets:** Non-Current (PPE & Intangibles incl. CWIP; Non-Current Investments; DTA net; LT Loans & Advances; Other NCA) → Current (Current Investments; Inventories; Trade Receivables; Cash & Cash Equivalents; ST Loans & Advances; Other CA).
 
-**Current test (any one):** within operating cycle / held for trading / due within 12 months / cash equivalent (assets) or no unconditional right to defer 12 months (liabilities). Operating cycle unknown → **12 months**.
+**Current test (any one):** within operating cycle / held for trading / due within 12 months / cash equivalent (assets) or no unconditional right to defer 12 months (liabilities). Operating cycle unknown → **12 months**. Operating-cycle branch is tested **first** — long-cycle inventory realisable after 12 months is still current.
 
-**P&L sequence:** Revenue from Operations + Other Income = Total Income; less Expenses (Materials consumed; Purchases; **Changes in inventories = Opening − Closing**; Employee benefits; Finance costs; Depreciation; Other) = PBT before exceptional/extraordinary; ± exceptional/extraordinary → PBT; less tax (current + deferred) → Profit for the period; then EPS.
+**P&L sequence:** Revenue from Operations + Other Income = Total Income; less Expenses (Materials consumed; Purchases of stock-in-trade; **Changes in inventories = Opening − Closing**, FG/WIP/stock-in-trade only; Employee benefits; Finance costs; Depreciation; Other) = PBT before exceptional/extraordinary; ± exceptional/extraordinary → PBT; less tax (current + deferred) → Profit for the period; then EPS.
 
-**Key placements:** current maturities of LT debt → **Other Current Liabilities**; calls-in-arrears → deduct from capital; calls-in-advance → OCL; accumulated loss → negative Surplus; loose tools → Inventories; unclaimed dividend → OCL; bank OD → Short-term Borrowings.
+**Key placements:** current maturities of LT debt → **Other Current Liabilities**; calls-in-arrears → deduct from capital; calls-in-advance → OCL; accumulated loss → negative Surplus; loose tools/stores/spares → Inventories; capital advance → LT Loans & Advances (NC); unclaimed dividend & interest accrued → OCL; bank OD → Short-term Borrowings; DTL/DTA → non-current, shown net.
 
-**Managerial remuneration (Sec 197, public co.):** overall **11%**; one MD/WTD **5%**; more than one **10%**; other directors **1%** (with MD) / **3%** (without). On **Section 198** profit (exclude capital profits; add back remuneration itself; profit on sale of asset only up to original cost). Excess → **special resolution**; inadequate profit → **Schedule V**.
+**Managerial remuneration (Sec 197, public co.):** overall **11%**; one MD/WTD **5%**; more than one **10%**; other directors **1%** (with MD) / **3%** (without). On **Section 198** profit (exclude capital profits; add back remuneration itself, income tax, excess book depreciation, capital losses, voluntary compensation; profit on sale of asset only up to original cost; depreciation allowed = Schedule II). Excess → **special resolution**; inadequate profit → **Schedule V**. Sitting fees are outside the cap; private companies not bound.
 
-**Dividend (Sec 123):** out of current profit (after depreciation) / accumulated reserves / govt money. Inadequate-profit dividend from reserves: rate ≤ 3-yr average; draw ≤ **10% of paid-up + free reserves**; residual reserve ≥ **15% of paid-up capital**. Unpaid dividend → separate account in **7 days**; unclaimed **7 years** → **IEPF**. Proposed dividend → **disclose only** (AS 4).
+**Dividend (Sec 123):** out of current profit (after depreciation) / accumulated reserves / govt money. Inadequate-profit dividend from reserves — test all three, lowest binds: rate ≤ **3-yr average**; draw ≤ **10% of (paid-up + free reserves)**; residual reserve ≥ **15% of paid-up capital**; set off current loss first; no dividend if in default on deposits/debentures. Unpaid dividend → separate account in **7 days**; unclaimed **7 years** → **IEPF**. Proposed dividend → **disclose only** (AS 4).
 
-**Disclosures to never forget:** contingent liabilities & commitments; shareholders holding >5%; 5-year history of bonus/other-than-cash/buy-back shares; receivables > 6 months; default in loan repayment; auditor's remuneration; CIF imports and foreign currency dealings; rounding-off (₹100 crore threshold); comparatives for every line.
+**Disclosures to never forget:** contingent liabilities & commitments (notes only); shareholders holding >5%; 5-year history of bonus/other-than-cash/buy-back shares; receivables > 6 months; default in loan repayment; auditor's remuneration; CIF imports and foreign currency dealings; rounding-off (₹100 crore turnover threshold); comparatives for every line; (newer) ageing schedules, promoter holding, key ratios — *verify AY*.
 
-**Golden self-check:** the profit added to Surplus (Balance Sheet) = Profit for the period (P&L); every adjustment has two legs; the two grand totals **must** be equal — no Suspense in a company Balance Sheet.
+**Golden self-check:** the profit added to Surplus (Balance Sheet) = Profit for the period (P&L); every adjustment has two legs; appropriations move *within* a head and never change the total; the two grand totals **must** be equal — no Suspense in a company Balance Sheet.

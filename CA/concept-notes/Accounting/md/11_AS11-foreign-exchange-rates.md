@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 11 — AS 11: The Effects of Changes in Foreign Exchange Rates
 
 ## 1. The Problem — the real business situation that created the need
@@ -11,6 +13,8 @@ Here is where the trouble starts. Money owed in euros does not sit still in Rupe
 Three different Rupee numbers — ₹90,00,000, ₹93,00,000, ₹94,00,000 — for **one unchanging foreign-currency obligation of €100,000**. Which one is "true"? At what rate do we record the steel? At what rate do we show the payable on the balance sheet date? And that extra ₹4,00,000 Bharat Motors ended up paying — is it part of the cost of the steel? Interest? A loss? Where does it go?
 
 This is not a rare corner case. Every importer, exporter, foreign borrower, company with an overseas branch or subsidiary, and anyone holding foreign currency, foreign receivables, or foreign loans faces it. Multiply Bharat Motors' single transaction by thousands of transactions across hundreds of companies and you see the scale of the problem: **foreign-currency amounts must be expressed in Rupees to be put into a Rupee balance sheet, but the exchange rate keeps changing, so the same foreign amount maps to different Rupee amounts at different dates.** Without a rule, every company would translate at whatever rate flattered its profit. AS 11 exists to impose one disciplined, economically honest way of doing this translation — and, crucially, of deciding where the gains and losses from rate changes belong.
+
+**Why not just wait until settlement and forget about year-ends?** A tempting "simplification" a student might propose is: don't bother re-translating at the balance sheet date, just record the difference when you actually pay. The problem is that a balance sheet dated 31 March that shows a €100,000 creditor at the old ₹90 rate is *lying* about Bharat Motors' present financial position — the company genuinely owes ₹93,00,000 worth of Rupees on that date, and a lender or investor reading the balance sheet deserves to know that. Accrual accounting is about reflecting economic events **when they occur**, and an exchange rate move is an economic event. That single insight — that a rate movement is real news even before cash changes hands — is what forces the year-end restatement rule and defeats the "wait for settlement" shortcut.
 
 ## 2. The Core Idea — the single underlying principle
 
@@ -28,6 +32,24 @@ That single distinction — *is this item a live foreign-currency claim (monetar
 
 The second half of the core idea answers "where does the gain/loss go?" The general answer is beautifully simple: **exchange differences on monetary items go straight to the Profit & Loss account** in the period they arise. The rate moved, your real position changed, so recognize it now.
 
+There is a subtle third dimension that the exam loves to test: **the *test* for monetary vs non-monetary is about the *form of settlement*, not the *type of asset*.** Ask "will this be settled in a fixed number of currency units?" A right to receive a *thing* (goods, a machine, a service) is non-monetary even if you already paid cash for it; a right to receive *money* is monetary. This is why an advance paid to a supplier (you will get a machine) is non-monetary, but a loan given (you will get money back) is monetary — even though both started as an outflow of cash. Feel this and half the trap questions collapse.
+
+Here is the whole standard on one decision spine:
+
+```mermaid
+flowchart TD
+    A["Foreign-currency item on the books"] --> B{"Will it be settled in a fixed or determinable number of money units"}
+    B -->|"Yes - a right to receive or pay money"| C["MONETARY - water"]
+    B -->|"No - a right to or obligation of goods services or ownership"| D["NON-MONETARY - ice"]
+    C --> E["Re-translate at CLOSING rate every balance sheet date"]
+    D --> F{"Carried at historical cost or fair value"}
+    F -->|"Historical cost"| G["Keep at transaction-date rate - never re-translate"]
+    F -->|"Fair value"| H["Use rate on the date fair value was determined"]
+    E --> I["Exchange difference to P&L"]
+    G --> J["No exchange difference arises"]
+```
+*Figure 1 — the master decision tree; every AS 11 number flows from the top question*
+
 ## 3. Why it's built this way — the logic behind each rule
 
 Let us reason our way into each design choice, because that is the only way to never forget them.
@@ -40,11 +62,17 @@ Let us reason our way into each design choice, because that is the only way to n
 
 **Why send exchange differences to P&L immediately (the general rule)?** Because the change has already happened and it is real. When your dollar receivable is worth more Rupees today, that gain is economically yours *now* — there is no reason to defer it. Accrual accounting recognizes changes when they occur, not only when cash moves. Deferring genuine exchange gains/losses would let companies smooth or hide their real currency exposure. So AS 11 says: recognize them in the period they arise, in P&L. This applies at **each** stage — at the balance sheet date (unrealized) and at settlement (realized). The standard deliberately does not wait for settlement, because a rate change is a real event even before you pay.
 
+**Why doesn't the "prudence" concept let us defer gains but book losses?** A sharp student might argue conservatism should let Bharat Motors book exchange *losses* immediately but defer exchange *gains* until realized. AS 11 deliberately rejects this asymmetry for monetary items. The reason is measurement, not prudence: a monetary item's *current-rate value is its most faithful measurement*, and a genuine gain is as real as a genuine loss. Systematically deferring gains while booking losses would understate assets and mislead. Symmetry here is the honest choice. (Contrast: the *net investment* in a non-integral operation *is* deferred — but for a different reason, explained below, not out of conservatism.)
+
 **Why do forward contracts need special handling?** Because a company that has locked in a future rate has *removed* its uncertainty. If Bharat Motors, on the day of import, books a forward contract to buy €100,000 at ₹91 in 90 days, then its real Rupee cost is fixed at ₹91,00,000 no matter what the spot rate does. The accounting should reflect that the ₹1,00,000 difference (forward ₹91 vs spot ₹90) is a known, financing-like cost to be spread over the 90 days — not a surprise. The rules for forwards exist to match this economic certainty.
+
+**Why is the forward premium a financing cost, spread over time?** Because it *is* one, economically. A forward rate above spot means the market is charging you for the privilege of paying later in a currency the market expects to strengthen; interest-rate parity (from FM/SFM) tells us this premium approximately equals the interest-rate differential between the two currencies over the contract period. An interest-like cost that accrues with the passage of time belongs *spread across time*, not dumped in one instant — exactly like prepaid interest. That is why AS 11 amortises it over the contract life rather than expensing it all at inception.
 
 **Why distinguish integral from non-integral foreign operations?** Because a foreign branch/subsidiary can relate to the parent in two completely different economic ways, and honesty demands different treatment:
 - An **integral** operation is really just an extension of the parent's own business done abroad — a dependent limb. Its cash flows *are* the parent's cash flows in another currency. So its exchange exposure is the parent's exposure, and it is translated *as if the parent had done those transactions itself* (monetary/non-monetary split, differences to P&L).
-- A **non-independent... no — a non-integral** operation is a self-contained foreign business that earns and spends in its own local currency, accumulates its own profits, and only sends dividends home. The parent's real exposure here is limited to its **net investment** in that operation. Re-translating each internal item to P&L would be misleading noise. So we translate the whole thing at closing rate and park the difference in a reserve — until the parent actually disposes of the investment and the gain/loss becomes real.
+- A **non-integral** operation is a self-contained foreign business that earns and spends in its own local currency, accumulates its own profits, and only sends dividends home. The parent's real exposure here is limited to its **net investment** in that operation. Re-translating each internal item to P&L would be misleading noise. So we translate the whole thing at closing rate and park the difference in a reserve — until the parent actually disposes of the investment and the gain/loss becomes real.
+
+**Why does the non-integral difference sit in a reserve instead of P&L?** Because it is *unrealized and does not yet affect the parent's cash*. The parent's only exposure to a self-standing subsidiary is the value of its net investment, which it will realize only on selling or winding up the subsidiary. Until then, running every year's translation swing through P&L would inject volatility that has no bearing on the parent's actual, available-to-distribute profit. Parking it in the Foreign Currency Translation Reserve, and recycling it to P&L only on disposal, matches recognition to the moment the gain/loss becomes real — the same accrual logic, applied to a longer-horizon event.
 
 Every rule below is a consequence of these few principles.
 
@@ -52,7 +80,7 @@ Every rule below is a consequence of these few principles.
 
 ### 4.1 Scope and key definitions (the vocabulary you must own)
 
-AS 11 applies to (a) accounting for **transactions in foreign currencies**, and (b) **translating the financial statements of foreign operations** (branches, subsidiaries, associates, JVs). It also covers forward exchange contracts. It does **not** deal with hedge accounting for items other than forward contracts, nor with restating financial statements for inflation, nor (directly) with foreign-currency borrowing costs — those interact with AS 16.
+AS 11 applies to (a) accounting for **transactions in foreign currencies**, and (b) **translating the financial statements of foreign operations** (branches, subsidiaries, associates, JVs). It also covers forward exchange contracts. It does **not** deal with hedge accounting for items other than forward contracts, nor with restating financial statements for inflation, nor (directly) with foreign-currency borrowing costs — those interact with AS 16. It also does **not** deal with the *presentation* in a cash flow statement of cash flows arising from foreign-currency transactions (that is AS 3's job), nor with the translation of the financial statements of an enterprise from its reporting currency into another currency for the convenience of users (a "convenience translation").
 
 Definitions you must be able to state precisely:
 
@@ -61,6 +89,7 @@ Definitions you must be able to state precisely:
 | **Reporting currency** | The currency in which financial statements are presented (₹ for an Indian company). | The target unit of all translation. |
 | **Foreign currency** | A currency other than the reporting currency. | The source unit being translated. |
 | **Exchange rate** | Ratio for exchange of two currencies. | The conversion factor. |
+| **Exchange difference** | The difference resulting from reporting the same number of foreign currency units in the reporting currency at **different** exchange rates. | The gain/loss that AS 11 must place. |
 | **Monetary items** | Money held, and assets/liabilities to be **received or paid in fixed or determinable amounts of money**. | These are re-translated at current rates ("water"). |
 | **Non-monetary items** | Assets and liabilities **other than** monetary items. | These stay at historical rate ("ice"). |
 | **Closing rate** | The exchange rate at the balance sheet date. | Used to re-measure monetary items and to translate non-integral operations. |
@@ -69,6 +98,8 @@ Definitions you must be able to state precisely:
 | **Integral foreign operation** | A foreign operation whose activities are an **integral part** of the reporting enterprise. | Translated using the parent's own rules. |
 | **Non-integral foreign operation** | A foreign operation that is **not** integral — it operates with a degree of autonomy. | Translated at closing rate; difference to reserve. |
 | **Net investment in a non-integral operation** | The reporting enterprise's share in the **net assets** of that operation. | Defines the parent's true exposure. |
+
+**A monetary long-term receivable/payable that is part of net investment.** One fine definitional point examiners occasionally reach for: an intra-group monetary item (say, a long-term loan from parent to a non-integral subsidiary) for which **settlement is neither planned nor likely to occur in the foreseeable future** is, in substance, part of the parent's **net investment** in that operation. Exchange differences on such an item, in the *consolidated* financial statements, are accumulated in the **FCTR** rather than P&L — because it behaves like equity in the subsidiary, not like a real debt. In the *separate* statements of either entity, though, it remains an ordinary monetary item with differences to P&L. Flag this as an advanced point and cite it only if the question sets up a "loan not intended to be repaid" fact pattern.
 
 **The monetary vs non-monetary test — the single most examined judgment.** Ask: *"Is this item a right to receive, or an obligation to pay, a fixed or determinable number of currency units?"* If yes → monetary. If it is a thing or a right whose amount is not a fixed sum of money → non-monetary.
 
@@ -79,15 +110,19 @@ Definitions you must be able to state precisely:
 | Loans given / taken, deposits | Monetary | Fixed determinable money. |
 | Provision to be settled in cash (e.g. cash bonus) | Monetary | Fixed money obligation. |
 | Investments held in redeemable preference shares / debentures | Monetary | Fixed redemption amount. |
+| Trade receivable that is doubtful / provided for | Still Monetary | The gross claim is money; provisioning is a separate AS 4/valuation issue, not a change of category. |
 | Inventory | Non-monetary | A physical asset; amount not a fixed sum of money. |
 | PPE (land, building, plant) | Non-monetary | Physical asset at historical cost. |
 | Intangibles, goodwill | Non-monetary | Not a claim to fixed money. |
 | Equity investments (shares held) | Non-monetary | Ownership, not a fixed money claim. |
 | Advances paid for goods/services / prepaid expenses | Non-monetary | You will receive goods/services, not money back. |
 | Advances received against goods to be supplied | Non-monetary | You will discharge by delivering goods, not money. |
+| Deferred tax, warranty provision settled by repair | Non-monetary | Not a fixed money claim (repair = goods/services). |
 | Share capital, securities premium | Non-monetary | Not a money claim. |
 
 Note the subtle traps in the table: a **prepaid expense** and an **advance to a supplier for goods** are non-monetary (you get value/goods, not money), whereas a **loan** is monetary (you get money back). This exact distinction is a favourite exam trick.
+
+**Two-tier test for "fixed or determinable".** The word "determinable" matters. An amount can be monetary even if not yet a single fixed number, provided it is *determinable in money terms* — e.g. a payable linked to a price index that will be settled in cash is monetary (it will be a determinable sum of money). But an obligation to deliver a fixed *quantity of goods* whose money value floats is non-monetary. The pivot is always: *settled in money, or settled in goods/services/ownership?*
 
 ### 4.2 RECOGNITION — the three moments in a foreign-currency transaction's life
 
@@ -96,6 +131,8 @@ Every foreign-currency monetary transaction passes through up to three accountin
 **(a) Initial recognition (transaction date).** Record the foreign-currency amount in Rupees by applying the **exchange rate at the date of the transaction** (the spot rate) to the foreign amount. For practicality, an **average rate** for a week or month may be used if it doesn't fluctuate significantly. This is where both monetary and non-monetary items get their first Rupee value.
 
 > Steel purchase: €100,000 × ₹90 = ₹90,00,000. Record steel (asset) and creditor (liability) at ₹90,00,000.
+
+*What is "the transaction date"?* It is the date the transaction first qualifies for recognition under the relevant standard — for a credit purchase, the date the risks and rewards / control of the goods pass, not the invoice date or payment date if these differ. For a sale, the date revenue is recognised. Examiners test this by giving a shipment date, an invoice date, and a customs-clearance date and seeing if you pick the recognition date.
 
 **(b) Reporting at each subsequent balance sheet date.** Now the monetary/non-monetary split governs:
 
@@ -109,6 +146,8 @@ Every foreign-currency monetary transaction passes through up to three accountin
 
 > On 5 April, pay at ₹94: €100,000 × ₹94 = ₹94,00,000 handed over, against a creditor carried at ₹93,00,000.
 
+**A frequent structural confusion — "recorded rate" vs "previously reported rate".** At the *first* balance sheet date after a transaction, the exchange difference is measured against the **initial recording rate**. At a *second* balance sheet date, it is measured against the **rate used at the previous balance sheet date** (not the original transaction rate). And at settlement, against the **last-carried rate** (the most recent balance sheet rate, or the initial rate if no year-end intervened). Get the baseline wrong and every subsequent number is wrong. The safe habit: always compute the closing Rupee value freshly (foreign amount × rate) and take the difference from *whatever the item is currently sitting at in the ledger*.
+
 ### 4.3 MEASUREMENT — how the exchange differences are computed and where they go
 
 **The general recognition rule for exchange differences:** exchange differences arising on the **settlement** of monetary items **or** on **reporting** an enterprise's monetary items at rates different from those at which they were initially recorded (or reported in previous statements) are recognised as **income or expense in the Profit & Loss account** in the period in which they arise.
@@ -120,7 +159,9 @@ Trace Bharat Motors' ₹4,00,000 total swing:
 
 **The important exception — AS 11 does NOT push exchange gains/losses into asset cost.** Under AS 11 (the ICAI standard for non-Ind AS entities), exchange differences on a monetary item that funded an asset are **not** capitalised into that asset; they go to P&L. (This is a key contrast with the older AS 11 pre-2004 "capitalise into fixed asset cost" idea, which was removed.)
 
-**Paragraph 46 / 46A relief (know it exists, and flag it).** Because large rupee depreciation created huge P&L hits on foreign loans, the Government/ICAI provided an *optional* relief through paragraphs 46 and 46A of AS 11 (via the Companies (Accounting Standards) Rules): a company **may** opt to (i) add/deduct exchange differences on **long-term foreign-currency monetary items** relating to acquisition of a **depreciable capital asset** to the **cost of that asset** (and depreciate over its life), and (ii) accumulate other long-term monetary item exchange differences in a "**Foreign Currency Monetary Item Translation Difference Account (FCMITDA)**" and amortise over the life of the item (but not beyond 31 March 2020). This is an *option*, applied consistently. For the exam, state that the default treatment is P&L, and that para 46A permits this alternative for eligible long-term items — **confirm the exact current applicability and cut-off dates in the latest ICAI study material**, as this relief was time-bound.
+**Paragraph 46 / 46A relief (know it exists, and flag it).** Because large rupee depreciation created huge P&L hits on foreign loans, the Government/ICAI provided an *optional* relief through paragraphs 46 and 46A of AS 11 (via the Companies (Accounting Standards) Rules): a company **may** opt to (i) add/deduct exchange differences on **long-term foreign-currency monetary items** relating to acquisition of a **depreciable capital asset** to the **cost of that asset** (and depreciate over its life), and (ii) accumulate other long-term monetary item exchange differences in a "**Foreign Currency Monetary Item Translation Difference Account (FCMITDA)**" and amortise over the life of the item (but not beyond 31 March 2020). This is an *option*, applied consistently. For the exam, state that the default treatment is P&L, and that para 46A permits this alternative for eligible long-term items — **confirm the exact current applicability and cut-off dates in the latest ICAI study material**, as this relief was time-bound. Note two conditions the examiner may test: "long-term" means a term of **twelve months or more** at the date of origination, and the option once chosen must be applied to **all** such long-term items **consistently** — you cannot cherry-pick loan by loan.
+
+**Rounding and multiple transactions.** When many similar transactions occur through a period (e.g. daily export sales), applying the exact spot rate to each is impractical, so an **average rate** approximating the actual rates is permitted — *unless* rates fluctuate significantly, in which case using an average for the period is **inappropriate** and you must use actual (or narrower-period) rates. The examiner signals this by mentioning "the exchange rate fluctuated sharply during the year" — a cue that the average-rate shortcut is *not* available.
 
 ### 4.4 Forward exchange contracts
 
@@ -136,9 +177,28 @@ A forward contract fixes today the rate at which you will buy/sell foreign curre
 > Premium = (91 − 90) × 100,000 = ₹1,00,000, amortised over 3 months (≈ ₹33,333/month) to P&L as expense.
 > The underlying creditor (monetary) is still re-translated at spot at each balance sheet date, and its exchange difference goes to P&L too — but because the forward exists, the net P&L impact of spot movement on creditor is broadly offset by the opposite spot movement on the forward.
 
+**Premium is amortised on a *time* basis, straddling the year-end if necessary.** If a 6-month forward is taken on 1 January with a year-end of 31 March, three months of premium fall in year 1 and three months in year 2. This straddle is a favourite twist: candidates amortise the full premium in the first year. Always allocate premium **pro-rata to the number of months in each accounting period**.
+
+**Discount (forward rate below spot).** If the forward rate is *below* the spot at inception (a forward discount), the same mechanism runs in reverse: it is **income** amortised over the contract life, reducing expense. Do not assume a forward always produces a premium expense — read the numbers.
+
 **(b) Forward contracts for trading/speculation, OR to hedge a firm commitment / highly probable forecast transaction.** No underlying recognised item; the contract is a bet or a hedge of something not yet on the books. Here:
 - **No premium/discount amortisation.**
 - The contract is **marked to market**: gain/loss = foreign amount × (forward rate available at reporting date for the remaining maturity − contract rate). Recognised in **P&L**. (For firm-commitment/forecast hedges, ICAI guidance/AS 30 principles may apply; **for AS 11 exam purposes, speculative forwards are marked to market with gains and losses to P&L, and premium/discount is not separately amortised**.)
+
+**The measurement subtlety in mark-to-market.** For a speculative forward you compare the **contracted forward rate** against the **forward rate now quoted for the same maturity date**, *not* against today's spot. This is because a speculative position is closed by taking an offsetting forward, so its value is a forward-to-forward comparison. Students routinely (wrongly) mark a speculative forward against the current spot — losing marks.
+
+```mermaid
+flowchart TD
+    A["Forward exchange contract"] --> B{"Purpose of the contract"}
+    B -->|"Cover an existing recognised asset or liability"| C["Hedge of recognised item"]
+    B -->|"Speculation or hedge of a firm commitment or forecast"| D["Speculative or forecast hedge"]
+    C --> E["Premium equals forward minus spot at inception - amortise over contract life"]
+    C --> F["Spot movement on contract to P&L each period"]
+    C --> G["Cancellation or renewal gain or loss to P&L"]
+    D --> H["No premium amortisation"]
+    D --> I["Mark to market - contract rate vs current forward rate for remaining maturity - to P&L"]
+```
+*Figure 2 — the two forward-contract regimes and their distinct measurement rules*
 
 ### 4.5 Foreign operations — integral vs non-integral
 
@@ -148,14 +208,16 @@ When a parent consolidates or incorporates a foreign branch/subsidiary, it must 
 - Its day-to-day activities are carried out with **autonomy** from the parent.
 - It has its own local **financing**, sales, costs, and accumulates cash locally.
 - The parent's cash flows are **insulated** from the operation's day-to-day activities (parent only affected by dividends/net investment).
+- Its **sales prices** are determined more by local competition/regulation than by day-to-day exchange-rate movements passed through from the parent.
+- There is an **active local market** for the operation's products.
 
-If these are absent — the operation is a mere conduit, buying/selling on the parent's behalf, financed by the parent, with cash flows directly affecting the parent — it is **integral**.
+If these are absent — the operation is a mere conduit, buying/selling on the parent's behalf, financed by the parent, with cash flows directly affecting the parent — it is **integral**. Classic *integral* examples: a foreign sales depot that only resells goods shipped by the parent and remits proceeds; a purchasing office abroad buying raw material for the parent. Classic *non-integral*: a manufacturing subsidiary that sources, produces, sells and finances locally, remitting only dividends.
 
 **Translating an INTEGRAL foreign operation** (treat its items *as if* they were the parent's own foreign-currency transactions):
 - **Monetary items** → **closing rate**.
 - **Non-monetary items at historical cost** → **transaction-date (historical) rate**.
 - **Non-monetary items at fair value** → rate when fair value was determined.
-- **Income and expenses** → transaction-date rates (average rate as approximation).
+- **Income and expenses** → transaction-date rates (average rate as approximation). *But* depreciation of a fixed asset is translated at the **same historical rate as the asset** it relates to, and cost of goods sold linked to opening/purchased inventory uses the rate applicable to that inventory — not a blanket average.
 - **Exchange differences** → **P&L**.
 
 **Translating a NON-INTEGRAL foreign operation** (translate the whole entity, preserving its local relationships):
@@ -163,10 +225,26 @@ If these are absent — the operation is a mere conduit, buying/selling on the p
 - **Income and expense items** → rates at the **dates of transactions** (average rate is a practical approximation).
 - The resulting net **exchange difference** → **accumulated in a separate component of equity ("Foreign Currency Translation Reserve", FCTR)**; it is **NOT taken to P&L** while the investment is held.
 - On **disposal** of the non-integral operation, the accumulated FCTR relating to it is **transferred to P&L** and recognised as part of the gain/loss on disposal (the deferred amount finally becomes real).
+- **Goodwill and fair-value adjustments** arising on acquisition of a non-integral operation are treated as **assets of that operation** and therefore also translated at the **closing rate** — a subtle point that changes the goodwill figure each year.
 
 **Change in classification.** If an operation changes from integral to non-integral (or vice versa), apply the new method **prospectively from the date of change**. When it becomes non-integral, exchange differences on non-monetary items *at the date of change* are accumulated in FCTR; when it becomes integral, the translated amounts at the date of change become the new historical-cost carrying amounts (and the FCTR is *not* reversed to P&L until disposal).
 
 Notice the deep logic: for a non-integral operation everything moves at closing rate so that the **local-currency relationships (ratios, structure) are preserved** in Rupee terms, and the parent's exposure — its net investment — is the only thing whose fluctuation is captured, sensibly parked in reserve until realized.
+
+```mermaid
+flowchart TD
+    A["Foreign operation to translate"] --> B{"Autonomous or a conduit"}
+    B -->|"Local currency financing sales autonomy"| C["NON-INTEGRAL"]
+    B -->|"Extension of parent - cash flows hit parent directly"| D["INTEGRAL"]
+    C --> E["All assets and liabilities at closing rate"]
+    C --> F["Income and expenses at transaction or average rate"]
+    C --> G["Net difference to FCTR in equity"]
+    G --> H["Recycled to P&L only on disposal"]
+    D --> I["Monetary at closing - non-monetary at historical rate"]
+    D --> J["Income and expenses at transaction or average rate"]
+    D --> K["Exchange differences straight to P&L"]
+```
+*Figure 3 — the two foreign-operation regimes drive completely different translated numbers*
 
 ### 4.6 The core journal entries
 
@@ -207,6 +285,18 @@ Foreign Currency Translation Reserve A/c ... Dr / Cr  XX
     (balancing figure after translating assets & liabilities
      at closing rate and P&L at average rate)
 ```
+On disposal of a non-integral operation — recycle the reserve:
+```
+Foreign Currency Translation Reserve A/c ... Dr   XX   (if credit balance)
+    To Profit on Disposal / P&L A/c              XX
+(the accumulated FCTR relating to that operation is transferred to P&L)
+```
+Para 46A option — exchange difference on long-term loan funding a depreciable asset:
+```
+Fixed Asset A/c ... Dr    XX
+    To Foreign Currency Loan A/c   XX
+(exchange loss added to asset cost instead of P&L; then depreciated)
+```
 
 ## 5. Worked Examples
 
@@ -239,6 +329,8 @@ Vega Ltd pays a **non-refundable advance of USD 20,000 on 10 Mar 2025** (rate �
 
 **Key insight:** because the advance was non-monetary and settled by delivery, the machine's cost blends the ₹83 rate (advance) and ₹85 rate (balance). No exchange gain/loss ever hits P&L here — there was never a live monetary exposure that outlived a balance-sheet date. Contrast with a *loan* of USD 20,000, which would be monetary and re-translated at ₹84 at year-end.
 
+**Examiner tweak — "refundable" advance.** If the advance were **refundable in cash** (e.g. a returnable deposit, or the order is cancellable with money back), it becomes a **monetary** item: at 31 Mar it would be re-translated to 20,000 × 84 = ₹16,80,000, booking a **₹20,000 exchange loss** to P&L. One word in the question ("refundable") flips the entire treatment. Read advances carefully: *settled in goods = non-monetary; refundable in money = monetary.*
+
 ### Example 3 (medium-hard) — Forward contract on an existing payable
 
 On **1 Jan 2025**, Orbit Ltd buys raw material from a UK supplier for **GBP 100,000** on 3-month credit. Spot ₹105/£. Same day it enters a **3-month forward to buy GBP 100,000 at ₹107**. Year-end 31 Mar 2025 (contract maturity) spot ₹109. The forward is to cover an existing liability (not speculative).
@@ -250,6 +342,8 @@ On **1 Jan 2025**, Orbit Ltd buys raw material from a UK supplier for **GBP 100,
 **Step 3 — Forward contract exchange difference.** The forward's spot-driven gain: spot moved ₹105 → ₹109 = ₹4 gain per £ on 100,000 = **₹4,00,000 gain** on the forward, to P&L.
 
 **Step 4 — Net effect.** Creditor loss ₹4,00,000 is offset by forward gain ₹4,00,000 → net zero from spot movement, leaving only the **₹2,00,000 premium** as the true cost of certainty. Effective Rupee cost of the material = ₹1,05,00,000 + ₹2,00,000 = **₹1,07,00,000 = 100,000 × ₹107**, exactly the forward rate. The accounting has faithfully reproduced the economics: Orbit locked in ₹107, and that is what it "paid" in substance.
+
+**Examiner tweak — the year-end falls *before* maturity.** Suppose instead the forward is 6 months (matures 30 Jun) with a 31 Mar year-end. Then at 31 Mar only **3 of 6 months** of the ₹2,00,000 premium are amortised → **₹1,00,000 premium expense** in FY 2024-25, the remaining ₹1,00,000 in FY 2025-26. The creditor and forward are still restated to the **31 Mar spot** with their full ₹4,00,000 loss/gain offsetting. The premium — not the spot swing — is what straddles the year-end. This time-apportionment of premium is where most marks are won or lost.
 
 ### Example 4 (exam-hard) — Non-integral foreign subsidiary translation
 
@@ -269,7 +363,7 @@ Indus Ltd (₹) owns a **non-integral** US subsidiary. Simplified subsidiary bal
 
 **Step 1 — Recognize the method.** Non-integral → translate **all assets and all liabilities at closing rate** (note: even fixed assets and inventory go at closing rate, unlike the integral method). Equity/share capital is carried at the rate on the date of acquisition; retained earnings at the rates when earned (average as approximation).
 
-**Step 2 — Compute the balancing difference.** Assets ₹2,52,00,000 − liabilities (creditors) ₹50,40,000 = net assets in ₹ = **₹2,01,60,000**. Equity translated = share capital ₹1,17,00,000 + retained earnings ₹72,00,000 = ₹1,89,00,000. 
+**Step 2 — Compute the balancing difference.** Assets ₹2,52,00,000 − liabilities (creditors) ₹50,40,000 = net assets in ₹ = **₹2,01,60,000**. Equity translated = share capital ₹1,17,00,000 + retained earnings ₹72,00,000 = ₹1,89,00,000.
 
 Foreign Currency Translation Reserve (balancing figure) = ₹2,01,60,000 − ₹1,89,00,000 = **₹12,60,000 (credit — a translation gain)**.
 
@@ -277,11 +371,46 @@ Foreign Currency Translation Reserve (balancing figure) = ₹2,01,60,000 − ₹
 
 **Insight:** because assets and liabilities all move at closing rate, the subsidiary's internal structure (its ratios) is preserved in Rupee terms; the only "new" number is the translation reserve, which captures the change in Indus Ltd's net investment — precisely the exposure the parent actually bears.
 
+**Examiner tweak — same numbers, but "integral" instead.** If the same subsidiary were **integral**, fixed assets (200,000 × historical rate, say ₹78 = ₹1,56,00,000) and inventory (50,000 × the rate when purchased, say ₹80 = ₹40,00,000) would use *historical* rates, only the monetary items (debtors, cash, creditors) would use the closing ₹84, and the resulting exchange difference would go to **P&L, not FCTR**. The Rupee net-assets figure — and hence reported profit — would differ, and there would be **no translation reserve**. This is the single most instructive comparison in the chapter: same facts, opposite mechanics, driven entirely by classification.
+
+### Example 5 (exam-hard) — Two-year monetary loan with a gain then a loss
+
+Meridian Ltd borrows **USD 1,000,000** on **1 Oct 2024** to fund working capital (not a depreciable asset; para 46A not invoked). Rates: draw-down ₹83.0; 31 Mar 2025 (year-end 1) ₹82.0; 31 Mar 2026 (year-end 2) ₹86.5; the loan is still outstanding. Track the exchange differences.
+
+**Step 1 — Classify.** A foreign-currency loan is a **monetary liability** → re-translate at every closing date; differences to P&L.
+
+**Step 2 — Initial recognition (1 Oct 2024, ₹83).**
+Loan = 1,000,000 × 83 = **₹8,30,00,000**.
+
+**Step 3 — Year-end 1 (31 Mar 2025, ₹82).**
+Loan now = 1,000,000 × 82 = ₹8,20,00,000. The liability *fell* by ₹10,00,000 (rupee strengthened) → **exchange gain ₹10,00,000 to P&L of FY 2024-25.** The loan is now carried at ₹8,20,00,000.
+
+**Step 4 — Year-end 2 (31 Mar 2026, ₹86.5).**
+Loan now = 1,000,000 × 86.5 = ₹8,65,00,000. Measured against the *previously reported* ₹8,20,00,000, it rose by ₹45,00,000 → **exchange loss ₹45,00,000 to P&L of FY 2025-26.**
+
+**Sanity check:** cumulative movement from origination = ₹8,65,00,000 − ₹8,30,00,000 = ₹35,00,000 net loss. Split recognised: +₹10,00,000 gain (Y1) then −₹45,00,000 loss (Y2) = −₹35,00,000 net. Consistent. **Trap defused:** the Y2 loss is measured against the ₹82 *prior-year-end* baseline, not the ₹83 origination rate — using ₹83 would wrongly give a ₹35,00,000 loss all in Y2 and hide the Y1 gain. Always re-baseline to the last reported figure.
+
+**Examiner tweak — para 46A route.** Had this loan financed a **depreciable machine** and the company had *opted* for para 46A, the ₹45,00,000 loss would be **added to the machine's cost** (and the ₹10,00,000 Y1 gain deducted) rather than hitting P&L, then depreciated over the machine's remaining life. Flag it as optional, long-term-only, and consistently applied — and verify the current cut-off in ICAI material.
+
+### Example 6 (medium) — Export receivable with a favourable then adverse swing
+
+Kalinga Exports (₹) sells goods to a Canadian buyer for **CAD 200,000** on **5 Mar 2025**, spot ₹61. Year-end 31 Mar 2025 ₹62.5. Money received 20 Apr 2025 ₹60.
+
+**Step 1 — Classify.** A trade receivable = **monetary asset** → re-translate at closing.
+
+**Step 2 — Initial recognition (5 Mar, ₹61).** Sale and debtor = 200,000 × 61 = **₹1,22,00,000** (revenue fixed at this rate — revenue is never re-translated; only the *debtor* is).
+
+**Step 3 — Year-end (31 Mar, ₹62.5).** Debtor = 200,000 × 62.5 = ₹1,25,00,000, up ₹3,00,000 → **exchange gain ₹3,00,000 to P&L of FY 2024-25.** Debtor now carried at ₹1,25,00,000.
+
+**Step 4 — Receipt (20 Apr, ₹60).** Cash received = 200,000 × 60 = ₹1,20,00,000 against a debtor of ₹1,25,00,000 → **exchange loss ₹5,00,000 to P&L of FY 2025-26.**
+
+**Sanity check:** actual cash ₹1,20,00,000 vs revenue-date value ₹1,22,00,000 = ₹2,00,000 net loss overall; recognised as +₹3,00,000 (Y1) − ₹5,00,000 (Y2) = −₹2,00,000. Consistent. **Trap defused:** revenue stays at ₹1,22,00,000 (the sale-date rate) — a common error is to restate *sales* to the closing rate. Only the monetary *receivable* moves; the income statement's revenue line is frozen at the transaction rate.
+
 ## 6. Presentation & Disclosure formats
 
-**In the Profit & Loss statement:** net exchange differences taken to P&L are typically shown within *other income* (net gain) or under *other expenses* (net loss). Under Schedule III, they appear grouped and disclosed by note.
+**In the Profit & Loss statement:** net exchange differences taken to P&L are typically shown within *other income* (net gain) or under *other expenses* (net loss). Under Schedule III, they appear grouped and disclosed by note. Note that exchange differences regarded as an **adjustment to interest cost** under AS 16 are presented within **finance costs**, not netted into other income — the presentation follows the *nature* of the difference.
 
-**In the Balance Sheet / equity:** the **Foreign Currency Translation Reserve** (for non-integral operations) is shown as a **separate component of Reserves and Surplus** (Other Equity). Any **FCMITDA** balance (if para 46A option used) is shown separately and amortised.
+**In the Balance Sheet / equity:** the **Foreign Currency Translation Reserve** (for non-integral operations) is shown as a **separate component of Reserves and Surplus** (Other Equity). Any **FCMITDA** balance (if para 46A option used) is shown separately and amortised. Under Schedule III a **debit (negative) FCMITDA** is presented on the assets side / as a negative reserve as appropriate — flag the exact placement to current Schedule III wording.
 
 **Mandatory disclosures under AS 11:**
 1. The **amount of exchange differences included in net profit or loss** for the period.
@@ -297,35 +426,43 @@ Illustrative note wording: *"Exchange differences arising on settlement / restat
 
 - **AS 2 (Inventories):** inventory is non-monetary, recorded at the transaction-date rate. But AS 2's **lower of cost or NRV** still applies — and if NRV is in foreign currency, translate NRV at closing rate before comparing. AS 11 fixes the cost; AS 2 may still write it down.
 - **AS 10 (PPE):** fixed assets are non-monetary, carried at historical-rate cost. Exchange differences do **not** normally enter PPE cost under AS 11 (contrast the optional para 46A capitalisation for long-term monetary items funding depreciable assets).
-- **AS 16 (Borrowing Costs):** exchange differences on foreign-currency borrowings are treated as borrowing cost **to the extent they are a regarded as an adjustment to interest cost**; the rest is an AS 11 exchange difference. The two standards must be read together for foreign loans.
+- **AS 16 (Borrowing Costs):** exchange differences on foreign-currency borrowings are treated as borrowing cost **to the extent they are regarded as an adjustment to interest cost**; the rest is an AS 11 exchange difference. The "adjustment to interest cost" cap is typically the difference between interest that *would have been* payable on an equivalent local-currency borrowing and the actual foreign-currency interest — the two standards must be read together for foreign loans.
 - **AS 13 / Investments:** equity investments are non-monetary (historical rate); investments in the nature of fixed-return instruments (redeemable) may be monetary.
-- **AS 21 / 23 / 27 (Consolidation):** the integral/non-integral translation feeds directly into consolidated financial statements of subsidiaries, associates and JVs. FCTR arises on consolidation.
-- **AS 29 (Provisions):** a foreign-currency provision settled in cash is monetary; re-translate at closing rate.
-- **Ind AS 21** (contrast): uses a **functional currency** approach and the concept of items re-measured through OCI; AS 11 uses reporting currency and the integral/non-integral split. Know the difference if the paper contrasts them.
-- **Other CA subjects:** *FM/SFM* — forward contracts, currency hedging, interest-rate parity explain *why* the forward premium equals the interest differential; *Taxation* — Section 43A of the Income-tax Act deals with exchange differences on assets acquired from abroad, and can differ from AS 11 treatment (a reconciling item); *Audit* — verifying year-end translation and disclosure.
+- **AS 21 / 23 / 27 (Consolidation):** the integral/non-integral translation feeds directly into consolidated financial statements of subsidiaries, associates and JVs. FCTR arises on consolidation; goodwill on a non-integral operation is itself re-translated at closing rate.
+- **AS 4 (Contingencies / events after B/S date):** a *significant* change in exchange rates *after* the balance sheet date is a **non-adjusting event** — you do **not** restate the year-end monetary items to the post-year-end rate; you *disclose* it. Examiners test whether you (wrongly) use a rate quoted after the reporting date.
+- **AS 29 (Provisions):** a foreign-currency provision settled in cash is monetary; re-translate at closing rate. A provision settled by delivering goods/services (e.g. warranty repairs) is non-monetary.
+- **Ind AS 21** (contrast): uses a **functional currency** approach (not reporting/integral-non-integral), re-measures via a **"functional currency of the foreign operation"** model, routes translation of a foreign operation through **OCI**, and has no integral/non-integral distinction — a non-integral-like translation is the default and there is no capitalisation option like para 46A. Know the difference if the paper contrasts them.
+- **Other CA subjects:** *FM/SFM* — forward contracts, currency hedging, interest-rate parity explain *why* the forward premium equals the interest differential; *Taxation* — Section 43A of the Income-tax Act deals with exchange differences on assets acquired from abroad on a **cash/payment basis** (differing from AS 11's accrual restatement, creating a book-tax reconciling item and deferred tax); *Audit* — verifying year-end translation, rate sources, and disclosure.
 
 ## 8. Traps & Examiner Tricks
 
 1. **Re-translating non-monetary items.** The number one error: re-translating inventory, PPE, advances, or prepaid expenses at closing rate. They stay at historical rate. Always classify *first*.
-2. **Advance paid/received treated as monetary.** An advance to a supplier for goods, or an advance received against goods to be supplied, is **non-monetary** (settled by goods, not money). Examiners love slipping this in beside a genuine payable.
+2. **Advance paid/received treated as monetary.** An advance to a supplier for goods, or an advance received against goods to be supplied, is **non-monetary** (settled by goods, not money). Examiners love slipping this in beside a genuine payable — and flipping it with the word "refundable" to make it monetary.
 3. **Forgetting the year-end restatement for monetary items.** Some students only book the difference at settlement. AS 11 requires recognition at **each** balance sheet date too — the unrealized difference goes to P&L now, not deferred to payment.
-4. **Sending non-integral translation differences to P&L.** They go to the **FCTR in equity**, not P&L — until disposal. Conversely, sending integral operation differences to reserve is wrong; those go to P&L.
-5. **Premium vs exchange difference on forwards.** Premium/discount = (forward − spot at inception), **amortised over the contract life**. The exchange difference = movement in **spot**, to P&L. Mixing these up, or amortising a speculative forward's premium, loses marks.
-6. **Speculative vs hedging forward.** A speculative forward (or one hedging a firm commitment) is **marked to market** with no premium amortisation. A forward covering an existing recognised asset/liability uses the premium-amortisation method. Read the question to see which.
-7. **Using the wrong rate for the underlying.** Initial recognition uses **transaction-date spot**, not the forward rate; the forward is accounted separately.
-8. **Fair-valued non-monetary items.** If an item is carried at fair value, translate the fair value at the rate on the date **the fair value was determined**, not the original transaction date and not closing rate.
-9. **Integral vs non-integral misclassification.** Watch the indicators: local financing + local currency sales/costs + autonomy = non-integral; a dependent conduit financed by the parent = integral. The classification changes *every* translated number.
-10. **Disposal of non-integral operation.** On disposal, the accumulated FCTR is recycled to P&L. Forgetting this understates the disposal gain/loss.
-11. **Para 46A time limits.** If the question invokes the capitalisation option, remember it is optional, for long-term items, and time-bound — do not apply it as the default. **Confirm current applicability in ICAI material.**
+4. **Wrong baseline in a second year.** In year 2, measure the exchange difference against the **prior year-end rate**, not the original transaction rate (see Example 5). Using the origination rate double-counts and hides the year-1 difference.
+5. **Restating revenue or purchases to closing rate.** Only *monetary balances* move at closing rate. The **income statement** amounts (sales, purchases) stay frozen at the transaction-date rate (see Example 6). Restating them is a classic slip.
+6. **Sending non-integral translation differences to P&L.** They go to the **FCTR in equity**, not P&L — until disposal. Conversely, sending integral operation differences to reserve is wrong; those go to P&L.
+7. **Premium vs exchange difference on forwards.** Premium/discount = (forward − spot at inception), **amortised over the contract life**. The exchange difference = movement in **spot**, to P&L. Mixing these up, or amortising a speculative forward's premium, loses marks.
+8. **Premium not time-apportioned across the year-end.** When a forward straddles the reporting date, split the premium **pro-rata to months in each period** (see Example 3 tweak). Booking the whole premium in year 1 is a frequent error.
+9. **Speculative vs hedging forward.** A speculative forward (or one hedging a firm commitment) is **marked to market** with no premium amortisation, and marked against the **current forward rate for the remaining maturity**, not spot. A forward covering an existing recognised asset/liability uses the premium-amortisation method. Read the question to see which.
+10. **Using the wrong rate for the underlying.** Initial recognition uses **transaction-date spot**, not the forward rate; the forward is accounted separately.
+11. **Fair-valued non-monetary items.** If an item is carried at fair value, translate the fair value at the rate on the date **the fair value was determined**, not the original transaction date and not closing rate.
+12. **Integral vs non-integral misclassification.** Watch the indicators: local financing + local currency sales/costs + autonomy = non-integral; a dependent conduit financed by the parent = integral. The classification changes *every* translated number.
+13. **Disposal of non-integral operation.** On disposal, the accumulated FCTR is recycled to P&L. Forgetting this understates the disposal gain/loss.
+14. **Using a post-balance-sheet rate.** A rate movement *after* the reporting date is a non-adjusting event (AS 4) — do not restate year-end monetary items to it. Use the closing rate *as at* the balance sheet date.
+15. **Average rate where rates fluctuated sharply.** If the question flags significant rate volatility, the average-rate approximation is **not permitted** — use actual/narrower-period rates.
+16. **Para 46A time limits and conditions.** If the question invokes the capitalisation option, remember it is optional, for **long-term** (12 months plus) items, applied **consistently to all** such items, and time-bound — do not apply it as the default. **Confirm current applicability in ICAI material.**
 
 ## 9. First-Principles Recap
 
 - A balance sheet must be in one currency, so foreign amounts must be **translated** — the rate you use depends on what kind of item it is.
 - **Monetary = live money claims (water)** → re-measure at **current/closing rate** because their real Rupee value truly changes. **Non-monetary = settled historical costs (ice)** → keep at **historical rate** because a rate change doesn't alter what you paid.
-- A foreign transaction has up to **three moments**: initial (transaction rate), each balance-sheet date (closing rate for monetary), settlement (settlement rate).
-- **Exchange differences on monetary items → P&L, in the period they arise** — both unrealized (year-end) and realized (settlement), because the economic change is real *now*.
+- The test is *form of settlement*: settled in a fixed sum of **money** = monetary; settled in **goods/services/ownership** = non-monetary. This is why an advance for goods is non-monetary but a loan is monetary.
+- A foreign transaction has up to **three moments**: initial (transaction rate), each balance-sheet date (closing rate for monetary), settlement (settlement rate). In later years, re-baseline to the **previously reported** amount, not the origination amount.
+- **Exchange differences on monetary items → P&L, in the period they arise** — both unrealized (year-end) and realized (settlement), because the economic change is real *now*; and symmetrically for gains and losses (no prudence-based deferral of gains).
+- Only *monetary balances* move; the *income statement* lines (revenue, purchases) stay at their transaction rate.
 - Non-monetary items generate **no** exchange difference (unless carried at fair value, then use the fair-value-date rate).
-- A **forward contract** splits into an amortised **premium/discount** (known cost of certainty) and a **spot-driven exchange difference** (to P&L); speculative/firm-commitment forwards are **marked to market**.
+- A **forward contract** splits into an amortised **premium/discount** (known cost of certainty, time-apportioned across periods) and a **spot-driven exchange difference** (to P&L); speculative/firm-commitment forwards are **marked to market** against the current forward rate.
 - **Integral** foreign operation = extension of the parent → translate with the parent's monetary/non-monetary rules, differences to **P&L**.
 - **Non-integral** foreign operation = autonomous business → translate **everything at closing rate**, differences to **FCTR in equity**, recycled to P&L only on **disposal** — because the parent's real exposure is just its **net investment**.
 - Classification (monetary/non-monetary; integral/non-integral) is the decision that drives every number — do it *before* touching a calculator.
@@ -341,19 +478,22 @@ Illustrative note wording: *"Exchange differences arising on settlement / restat
 | Monetary item on settlement | Settlement-date rate |
 | Non-monetary at historical cost | **Historical (transaction) rate — no re-translation** |
 | Non-monetary at fair value | Rate on date fair value determined |
+| Revenue / purchases (income statement) | **Transaction-date rate — never restated** |
 | Integral operation | As parent (monetary→closing, non-monetary→historical); diff → **P&L** |
 | Non-integral operation | **All A & L → closing**; income/exp → avg; diff → **FCTR (equity)** |
 
 **Where the difference goes:** Monetary items & integral ops → **P&L**. Non-integral ops → **FCTR (equity)**, recycled to **P&L on disposal**.
 
-**Monetary (re-translate):** cash, bank, debtors, creditors, loans, deposits, redeemable investments, cash-settled provisions.
-**Non-monetary (freeze):** inventory, PPE, intangibles, goodwill, equity investments, prepaid expenses, advances for goods (paid or received), share capital.
+**Monetary (re-translate):** cash, bank, debtors, creditors, loans, deposits, redeemable investments, cash-settled provisions, refundable advances.
+**Non-monetary (freeze):** inventory, PPE, intangibles, goodwill, equity investments, prepaid expenses, advances for goods (paid or received), warranty-by-repair provisions, share capital.
+
+**Three moments / re-baselining:** initial (txn rate) → each year-end (closing, diff vs *last reported*) → settlement (settlement rate, diff vs *last reported*). Never re-baseline to origination in later years.
 
 **Forward contract (hedge of recognised item):**
-- Premium/discount = (forward rate − spot at inception) × amount → **amortise over contract life**.
+- Premium/discount = (forward rate − spot at inception) × amount → **amortise over contract life, time-apportioned across year-ends**.
 - Exchange diff = change in **spot** × amount → **P&L**.
 - Cancellation/renewal profit/loss → **P&L**.
-**Forward (speculative / firm-commitment hedge):** mark to market → **P&L**; no premium amortisation.
+**Forward (speculative / firm-commitment hedge):** mark to market (contract rate vs current forward rate for remaining maturity) → **P&L**; no premium amortisation.
 
 **Key journal (monetary loss at year-end):**
 ```
@@ -363,4 +503,6 @@ Forex Loss A/c ... Dr    (closing − recorded)
 
 **Core disclosures:** exchange diff in P&L; FCTR reconciliation (opening→closing); reason if reporting currency ≠ domicile currency; nature/reason/impact of change in integral↔non-integral classification.
 
-**Flag to confirm in ICAI material:** para 46/46A optional capitalisation of exchange differences on long-term foreign-currency monetary items (into depreciable asset cost / FCMITDA) — optional, time-bound; verify current applicability and cut-off.
+**Cross-standard reminders:** AS 16 (exchange diff as interest-cost adjustment → finance cost); AS 4 (post-B/S rate change = non-adjusting, disclose only); AS 2 (NRV of inventory in foreign currency at closing rate); Section 43A tax (cash-basis, book-tax difference).
+
+**Flag to confirm in ICAI material:** para 46/46A optional capitalisation of exchange differences on long-term foreign-currency monetary items (into depreciable asset cost / FCMITDA) — optional, time-bound, 12-months-plus, applied consistently; verify current applicability and cut-off.

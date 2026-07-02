@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 09 — AS 9: Revenue Recognition
 
 ## 1. The Problem
@@ -14,7 +16,14 @@ Every one of these is the **same underlying disease**: *revenue is an event that
 - **Deflate profits** by delaying income you have earned (conservative to a fault) — equally misleading.
 - **Manipulate at will** — if there were no rule, every company would pick the timing that flatters this year's bonus.
 
-Because "when do I recognise revenue?" sits at the very top of the profit and loss account, an error here poisons *everything below it* — profit, tax, EPS, dividends, ratios. This is why revenue recognition is the single most important, most examined, and most abused area in accounting. **AS 9 exists to impose one disciplined, consistent answer to "when?" — so that profit means the same thing across companies and across years.**
+Because "when do I recognise revenue?" sits at the very top of the profit and loss account, an error here poisons *everything below it* — profit, tax, EPS, dividends, ratios. A ₹1 rupee overstatement of revenue is a ₹1 overstatement of profit before tax, which cascades into wrong tax, wrong retained earnings, wrong net worth, and wrong every ratio built on those numbers. This is why revenue recognition is the single most important, most examined, and most abused area in accounting. **AS 9 exists to impose one disciplined, consistent answer to "when?" — so that profit means the same thing across companies and across years.**
+
+**Why "recognition" is a bigger word than it looks.** Recognition means *formally recording an item in the books and carrying it into the financial statements*. It is different from three cousins that the exam deliberately conflates with it:
+- **Occurrence** — the economic event happening in the real world (goods dispatched).
+- **Measurement** — attaching a rupee figure to it.
+- **Realisation** — the actual conversion into cash.
+
+AS 9 governs *recognition* and its interaction with *measurement*; it deliberately breaks the link between recognition and realisation (that is the whole point of accrual). Keeping these four words separate in your head is what lets you answer the tricky cross-year problems cleanly.
 
 ## 2. The Core Idea
 
@@ -33,6 +42,27 @@ But finishing the work is not enough. Two gatekeepers stand at the door:
 
 So the full core idea is a three-lock door: **Performance done + Amount measurable + Collection reasonably certain → recognise.** Fail any lock, and revenue waits.
 
+**A useful mental split — the "what" vs the "when".** AS 9 answers two separate questions and it helps to keep them apart:
+- *What is revenue?* (the **measurement/scope** question) → gross charges to customers in the ordinary course, excluding third-party collections and the principal's share.
+- *When is it revenue?* (the **recognition/timing** question) → at performance, subject to the two gates.
+
+Most exam problems are secretly one of these two questions in disguise. A "gross vs net / discount / GST" problem is a *what* problem. A "which year / postpone / provide" problem is a *when* problem. Diagnose which one you're facing first and half the work is done.
+
+*Figure 2.1 — the three-lock door and the earning timeline*
+
+```mermaid
+flowchart LR
+    A["Order placed - a promise"] --> B["Performance - risks and rewards transferred"]
+    B --> C["Cash received - settlement"]
+    B --> D{"Amount measurable?"}
+    D -->|No| P1["Postpone - wait till determinable"]
+    D -->|Yes| E{"Collection reasonably certain?"}
+    E -->|No - doubt at inception| P2["Postpone revenue"]
+    E -->|Yes| R["Recognise revenue now"]
+```
+
+*The recognition point sits at B, not A and not C; both gates D and E must pass before revenue is booked.*
+
 ## 3. Why It's Built This Way
 
 Let's justify each design choice by asking *what breaks without it*.
@@ -46,17 +76,24 @@ That's the cash basis, and it destroys *matching*. A company that sells ₹1 cro
 **Why "significant risks and rewards" rather than "legal title"?**
 Because legal ownership can lag or lead the economic reality. Substance over form. Consider goods sent on **sale-or-return** basis: legal title may pass on dispatch, but the customer can send them back, so the *risk* hasn't really moved — you shouldn't book revenue yet. Conversely, goods may be delivered and used by the buyer while a financing arrangement keeps legal title with the seller — economically it's a sale. AS 9 tracks the *economic* handover (risk + reward), not the paperwork.
 
+*What exactly are the "risks" and the "rewards"?* Unbundling the phrase earns marks. The **rewards** of ownership are the right to enjoy the economic benefits — to use the goods, to resell them and keep the profit, to enjoy price appreciation. The **risks** are the flip side — the danger of physical loss/damage, obsolescence, price fall, and the risk that the goods prove unsaleable. The seller is deemed to have performed only when the *significant* portion of *both* has passed to the buyer. "Significant" is a judgement of degree: retaining a *trivial* risk (e.g., a routine warranty) does **not** block recognition; retaining a *substantial* risk (e.g., the buyer can walk away, or the seller guarantees resale) does.
+
 **Why the measurability gate?**
-Because you cannot record a number you cannot reliably determine. If a sale is made but the final price is subject to an unresolved dispute — say the buyer contests quality — booking a figure you might have to reverse would inject fiction into the accounts. Better to wait until the number is knowable.
+Because you cannot record a number you cannot reliably determine. If a sale is made but the final price is subject to an unresolved dispute — say the buyer contests quality — booking a figure you might have to reverse would inject fiction into the accounts. Better to wait until the number is knowable. Note the asymmetry the exam exploits: measurement uncertainty postpones recognition *of the affected amount only*. If ₹9,00,000 of a ₹10,00,000 sale is certain and ₹1,00,000 is genuinely disputed, you recognise the ₹9,00,000 and postpone the ₹1,00,000 — you do not throw out the whole sale.
 
 **Why the collectability gate — and why is this special?**
 Here's the subtle part. Ordinarily, a doubtful debt is handled *below* the revenue line — you recognise the full sale, then create a provision for doubtful debts as an expense. But AS 9 says: if **at the very time of the sale** there is *significant uncertainty* about collection, you should **postpone recognition altogether**. Why the difference? Because if collection is doubtful *from the outset*, the "revenue" was never really earned in an economic sense — you've handed goods to someone who probably won't pay, which is closer to a donation than a sale. The distinction the exam loves: *uncertainty existing at the time of sale → postpone revenue; uncertainty arising later → recognise revenue, then provide for the bad debt as a separate charge.*
+
+*The deeper "why" behind the fork.* The two treatments protect two different things. Postponing at inception protects the **income statement from fiction** — it stops you from ever recording income that had no realistic prospect of being earned. Providing later protects the **matching principle and the audit trail** — the sale genuinely happened and was properly income of its period, so we leave that period's revenue intact and record the subsequent deterioration as an event of the *later* period. Reversing the original revenue would mis-state *two* years instead of correctly stating both.
 
 **Why treat interest, royalties, and dividends separately from goods and services?**
 Because their "earning" doesn't happen at a single handover point. Interest is compensation for the *use of money over time* — so it accrues *proportionately as time passes*. A royalty is compensation for the *use of an asset* (a patent, a brand) — so it accrues *as the asset is used*, per the agreement. A dividend is a share of someone else's profit — you have no claim until *they declare it*, so recognition waits for the **right to receive** to be established. Each rule mirrors the economic nature of the income.
 
 **Why does AS 9 hand construction contracts over to AS 7?**
 Because a four-year contract can't sensibly wait until completion to show any profit — that would make the P&L lumpy and meaningless. Long-term contracts need *percentage-of-completion* accounting, which is a specialised regime. AS 9 draws its boundary and says "construction contracts: not my department — see AS 7." Understanding this boundary is a favourite exam theme (Section 7).
+
+**Why is revenue a *gross* number and not a net one?**
+Because the top line is meant to tell the reader the *scale of the enterprise's activity with its customers*, not its margin. Netting cost against revenue would hide turnover and destroy comparability (two firms with identical sales but different cost structures would show different "revenue"). Hence revenue = gross charges to customers. The only things stripped out are amounts that were *never the enterprise's to begin with* — taxes collected for the government and sums collected on behalf of a principal — because those never represented the enterprise's own activity.
 
 ## 4. Full Technical Content (the RMPD lens)
 
@@ -76,7 +113,13 @@ AS 9 deals with recognition of revenue arising in the ordinary course of busines
 
 **Key definition — Revenue** is the *gross inflow of cash, receivables or other consideration* arising in the ordinary course of business from the sale of goods, rendering of services, and use of enterprise resources by others yielding interest, royalties and dividends. Crucially, revenue is measured by the **charges made to customers/clients** — it is a *gross* concept at the top line.
 
+**Revenue vs Gain vs Income — the vocabulary trap.** *Income* is the umbrella term; it splits into **revenue** (arising in the *ordinary course* of business — the recurring operating activity) and **gains** (other items that meet the definition of income but need not arise in the ordinary course — e.g., profit on sale of a fixed asset, a foreign-exchange gain, an insurance claim windfall). AS 9 governs only *revenue*. A question that asks you to compute "revenue" and slips in a ₹2,00,000 profit on sale of machinery is testing whether you know that gain is **not** AS 9 revenue — exclude it from the revenue figure.
+
+**"Ordinary course of business" is enterprise-specific.** The same item can be revenue for one firm and a gain for another. Interest is *Other Income* (a gain-like item) for a manufacturer but *Revenue from Operations* for a bank/NBFC. Sale of a car is revenue for a car dealer but a gain (profit on disposal of a fixed asset) for a bakery. Always read the nature of the *enterprise*.
+
 **Amounts collected on behalf of third parties are NOT revenue.** GST, sales tax, and similar taxes collected are collected *for the government*, not earned by the enterprise, so they are excluded from revenue. Likewise, in an **agency relationship**, the *commission* is the agent's revenue — not the gross amount collected for the principal. This is the "gross vs net" distinction the examiner tests: a travel agent booking a ₹50,000 ticket for a ₹2,000 commission has revenue of ₹2,000, not ₹50,000.
+
+**Excise duty — the classic exception to the "taxes are excluded" rule.** Historically ICAI treated **excise duty** differently from sales tax/GST: because excise is a duty on *manufacture* (a liability that attaches to the enterprise's own production, incurred whether or not the goods are sold), it was regarded as forming part of the cost/turnover and was **included** in gross revenue and then shown as a deduction, rather than netted out like sales tax. Under GST this distinction has largely fallen away for most goods, but the *principle* still gets examined: a tax that is the **enterprise's own liability on its activity** behaves differently from a tax **merely collected from the customer for the government**. Verify the current ICAI treatment / assessment-year position before quoting excise mechanics in an answer.
 
 ### 4.1 RECOGNITION
 
@@ -98,6 +141,14 @@ The pivotal phrase is *significant risks and rewards of ownership*. Some concret
 | **Consignment** (goods sent to agent) | No — still consignor's risk | Only when agent sells to third party |
 | Goods sold with seller retaining title only as **security for payment** | Yes — economic risk passed | Yes, on delivery |
 | Delivery delayed at buyer's request (buyer takes title, seller holds goods) — **"bill and hold"** | Yes, if buyer accepts billing | On billing, provided goods are ready and identified |
+| **Special order** goods still being manufactured to buyer's spec | No — not yet performed | On delivery/completion, not on order |
+| Goods delivered with a **right of return** but returns are *estimable* (normal retail) | Yes — recognise, provide for expected returns | On delivery, net of expected returns |
+| **F.O.B. shipping** — risk passes when goods cross the ship's rail | Yes, at that point | When goods are shipped/dispatched per terms |
+
+**Two special goods situations worth spelling out:**
+
+- **Warranties.** A routine warranty is only an *incidental* retained risk, so it does **not** delay recognition — recognise the sale in full and create a **provision for warranty** (an estimated liability, per AS 29) as a matching expense. Recognition is delayed *only* if the "warranty" is so extensive that the seller has in substance retained the significant risks (e.g., a guaranteed buy-back or free replacement of the whole unit on demand).
+- **Instalment / deferred-payment sales.** Where the sale price includes a financing element (payment spread over time), the *cash-sale-equivalent* price is recognised as revenue **at the point of sale**, and the excess (interest component) is recognised **as it accrues over time** on a time-proportion basis. Do not book the interest portion up front as sales revenue.
 
 #### (B) Rendering of Services
 
@@ -108,6 +159,10 @@ Two permitted methods, depending on the nature of the service:
 
 In *both* cases, the two gates still apply: recognise only when there is **no significant uncertainty about measurement and collection**. Note this is a genuine difference from AS 7: AS 9's service method does **not** book profit on a loss-making basis the way percentage-of-completion mandates immediate loss recognition — AS 9 focuses on recognising *revenue* as earned.
 
+**How is "proportion of completion" measured?** By reference to the *performance of the acts*. Where a service consists of an **indeterminate number of similar acts over a period** (e.g., a year-long helpline, a subscription), revenue is recognised on a **straight-line basis over the period** unless some other method better reflects the pattern of performance. Where one **specific act is much more significant** than the others, recognition is deferred until that significant act is executed. So "proportionate" does not always mean "equal monthly slices" — it means *in step with how the earning actually occurs*.
+
+**Advance fees and "unearned revenue".** A three-year maintenance plan collected up front is **not** all earned on day one — receiving cash is not performance. The unperformed portion sits as a **liability ("income received in advance" / "unearned revenue")** and is released to the P&L as the service is rendered. This directly answers the software-firm question from Section 1: earn it over the three years, not on day one.
+
 #### (C) Interest, Royalties, Dividends (use of enterprise resources by others)
 
 Recognise (again, only when no significant uncertainty and collectability is reasonable):
@@ -116,11 +171,19 @@ Recognise (again, only when no significant uncertainty and collectability is rea
 - **Royalties** — on an **accrual basis in accordance with the terms of the relevant agreement** (e.g., per unit sold, per copy printed). Recognise as the underlying activity that triggers the royalty occurs.
 - **Dividends** — when the **owner's right to receive payment is established**, i.e., when the dividend is *declared* by the paying company (in AS terms, when the right to receive is established).
 
+**A subtlety on interest — "amount outstanding".** Time-proportion is applied to the *balance actually outstanding* during each sub-period, not blindly to the original principal. If a loan is partly repaid mid-year, interest accrues on the reduced balance thereafter. This is why the phrase is "amount outstanding **and** the rate applicable" — both can change through the year.
+
+**A subtlety on dividends — interim vs final, and pre-acquisition.** Recognition is on establishment of the **right to receive**: an *interim* dividend is recognised when the board **declares** it; a *final* dividend when it is **approved by members** in the AGM (the point at which the right crystallises). Separately, note the *pre-acquisition dividend* rule from investment accounting: a dividend out of profits earned *before* the shares were acquired is **not income** — it is a recovery of cost and reduces the carrying amount of the investment. AS 9 recognition (right established) and the pre/post-acquisition split work together, and the exam sometimes stacks them.
+
 ### 4.2 MEASUREMENT
 
 - Revenue is measured at the **charges made to customers/clients** for goods supplied or services rendered — i.e., the **consideration**, net of trade discounts and rebates, and **excluding amounts collected on behalf of third parties** (taxes) and, for agents, excluding the principal's share.
 - **Trade discounts** are deducted from revenue (they reduce the price charged). **Cash discounts** are *not* deducted from revenue — they are a financing/collection cost recorded separately.
 - Where consideration is **not determinable within reasonable limits**, recognition is postponed until it becomes determinable.
+
+**Why trade and cash discount are treated oppositely — the first-principles test.** A **trade discount** is a reduction in the *price itself*; the customer is never charged the gross amount, so the gross was never revenue — deduct it. A **cash discount** is a *reward for early payment*; the customer *was* charged the full price (that full price is the revenue) and then given an incentive to settle quickly. It is a cost of collecting cash faster — a financing expense — so it sits below the revenue line and never touches it. The one-line test: *does the concession depend on the timing of payment?* If yes → cash discount → don't touch revenue. If no → trade discount → reduce revenue.
+
+**Non-cash consideration and barter.** Where goods/services are exchanged for *dissimilar* goods/services, the transaction has commercial substance and revenue is measured at the **fair value of the consideration received (or given, if more reliably measurable)**. Where *similar* goods are swapped (e.g., two dealers exchanging identical stock to serve different locations), **no revenue** is recognised — nothing has really been earned, only a rearrangement of inventory.
 
 ### 4.3 The overriding gate — Effect of Uncertainties
 
@@ -131,6 +194,24 @@ This is the heart of the standard and the exam's happy hunting ground:
 - **Uncertainty about collection arising AFTER revenue was already recognised** → do **NOT** reverse or postpone the revenue. Instead make a **separate provision for the doubtful/uncollectable amount as an expense**, not an adjustment of the revenue originally recorded.
 
 Memorise the fork: *uncertainty at inception → no revenue; uncertainty later → revenue stands, provide for bad debt.*
+
+*Figure 4.1 — the uncertainty decision tree*
+
+```mermaid
+flowchart TD
+    S["Sale or service performed"] --> Q1{"Is the amount reliably measurable?"}
+    Q1 -->|No| A["Postpone the affected amount till determinable"]
+    Q1 -->|Yes| Q2{"When did collection doubt arise?"}
+    Q2 -->|Doubt existed at inception| B["Postpone revenue - do not recognise yet"]
+    Q2 -->|No doubt at inception| C["Recognise revenue in full"]
+    C --> Q3{"Did doubt arise later?"}
+    Q3 -->|Yes| D["Keep revenue - book separate provision as expense"]
+    Q3 -->|No| E["Revenue stands - no adjustment"]
+```
+
+*The pivotal branch is Q2 — the timing of the doubt, not its size, decides whether revenue is postponed or provided against.*
+
+**Escalation, price-review and "claims" clauses.** If a sale price is subject to a *price escalation* clause, government price fixation, or a *pending claim* whose outcome is uncertain, the **uncertain portion** fails the measurability gate and is postponed until it crystallises — but the **certain base amount** is recognised now. Do not let a disputed add-on hold back the undisputed core.
 
 ### 4.4 DISCLOSURE
 
@@ -164,6 +245,28 @@ Dividend Receivable         A/c   Dr.
 Bad Debts / Provision for Doubtful Debts   A/c   Dr.
     To Sundry Debtors / Provision A/c
 (Being provision for a debt that became doubtful after sale was recorded)
+```
+
+**Advance/subscription received before performance (unearned revenue):**
+```
+Bank                        A/c   Dr.
+    To Income Received in Advance A/c
+(Being fee received up front; not yet earned)
+
+Income Received in Advance  A/c   Dr.
+    To Service Revenue A/c
+(Being portion earned as service is rendered during the period)
+```
+
+**Postponement at inception (doubtful collection) — memorandum, no revenue booked:**
+```
+No revenue entry is passed. Goods leave stores but sale is not
+recognised; the item remains as inventory / a memorandum record
+until collection becomes reasonably certain, at which point:
+
+Debtors                     A/c   Dr.
+    To Sales A/c
+(Being revenue recognised now that collection is reasonably certain)
 ```
 
 ## 5. Worked Examples
@@ -242,6 +345,39 @@ How much income is recognised in FY 2025-26?
 
 *Total income recognised in FY 2025-26 = 45,000 + 4,00,000 + 40,000 = ₹4,85,000.* Each stream is recognised by the logic of *how it is earned*: time, usage, and right-to-receive respectively.
 
+### Example 6 (hard) — Bill-and-hold, instalment financing, and a warranty
+
+*Facts.* Vertex Ltd, closing 31 March 2026, reports three items:
+1. On 25 March it sold ₹12,00,000 of goods to a buyer who, being short of warehouse space, asked Vertex to **hold and deliver in April** ("bill and hold"). The buyer accepted the invoice, the goods are separately identified, packed and ready, and payment terms are unchanged.
+2. On 1 October 2025 it sold a machine on **instalments**: cash price ₹10,00,000, but under the deferred plan the buyer pays ₹12,40,000 in equal instalments over 24 months, the ₹2,40,000 excess being interest.
+3. It sold ₹6,00,000 of appliances carrying a **standard 1-year repair warranty**; past experience shows warranty costs run about 3% of sales.
+
+Compute the revenue and any related expense/provision recognised in FY 2025-26.
+
+*Reasoning.*
+1. **Bill and hold** — the delay is at the *buyer's* request, the buyer has accepted billing, and the goods are ready and identified, so significant risks and rewards have effectively passed. Recognise the full **₹12,00,000** now. (Had Vertex delayed for its *own* convenience, or the goods not been ready, recognition would wait.)
+2. **Instalment sale** — split the price. The **cash-equivalent ₹10,00,000** is sales revenue recognised at the point of sale (Oct). The **₹2,40,000 interest** is *not* sales revenue; it is recognised on a **time-proportion** basis over the 24 months. From 1 Oct 2025 to 31 Mar 2026 = 6 months of 24 ⇒ interest income = 2,40,000 × 6/24 = **₹60,000**.
+   - *Revenue from operations from this item = ₹10,00,000; Other income (interest) = ₹60,000.*
+3. **Warranty** — a routine warranty is an incidental retained risk, so recognise the **full ₹6,00,000** sale now and set up a **provision for warranty** as a matching expense: 3% × 6,00,000 = ₹18,000 charged to P&L. Revenue is *not* reduced.
+
+*Conclusion.* Sales revenue = 12,00,000 + 10,00,000 + 6,00,000 = **₹28,00,000**; plus interest income **₹60,000** (Other Income); with a warranty expense/provision of **₹18,000**. The traps: (a) not recognising the bill-and-hold sale, (b) booking the whole ₹12,40,000 or the interest up front as sales, and (c) deferring the warranted sale instead of providing for warranty cost.
+
+### Example 7 (exam-hard) — The mixed trap: agency, disputed claim, similar-goods swap, pre-acquisition dividend
+
+*Facts.* Stellar Ltd, closing 31 March 2026, presents the following. Decide the revenue/income impact of each, with reasons.
+1. Acting as a **booking agent**, it collected ₹40,00,000 of ticket money from customers on behalf of an airline, earning a **5% commission**.
+2. It raised a bill of ₹15,00,000 on a government body of which **₹3,00,000 is a price-escalation claim** the government is still contesting; the base ₹12,00,000 is undisputed and the goods were delivered.
+3. It exchanged ₹2,00,000 (cost) of its standard steel bars with another dealer for **identical steel bars** to save transport, invoicing each other ₹2,50,000.
+4. It received a ₹1,50,000 dividend from Comet Ltd; the entire dividend was declared **out of profits Comet earned before** Stellar bought the shares (a pre-acquisition dividend).
+
+*Reasoning.*
+1. **Agency** — only the **commission** is Stellar's revenue: 5% × 40,00,000 = **₹2,00,000**. The ₹40,00,000 is collected for the principal (airline) and is *not* Stellar's revenue. Booking the gross ₹40,00,000 is the classic gross-vs-net blunder.
+2. **Disputed escalation** — the undisputed **₹12,00,000** passes both gates (delivered, measurable, collectable) → recognise now. The **₹3,00,000** fails measurability (outcome uncertain, still contested) → **postpone** until it crystallises, and **disclose** the postponement. Revenue = ₹12,00,000, not ₹15,00,000 and not nil.
+3. **Similar-goods swap** — exchange of *similar* goods generates **no revenue**; it is merely a rearrangement of inventory. Recognise **nil**, ignore the ₹2,50,000 notional invoices.
+4. **Pre-acquisition dividend** — a dividend out of *pre-acquisition* profits is **not income**; it is treated as a **recovery of cost** of the investment, reducing the carrying amount. Recognise **nil** as income.
+
+*Conclusion.* Total AS 9 revenue/income from these four items = **₹2,00,000 (commission) + ₹12,00,000 (undisputed sale) = ₹14,00,000**; nothing from items 3 and 4. This single question stacks four separate traps — agency gross/net, the measurability split on a disputed claim, the similar-goods no-revenue rule, and the pre-acquisition dividend rule — which is exactly how a full-mark AS 9 practical is built.
+
 ## 6. Presentation & Disclosure Formats
 
 **On the face of the Statement of Profit and Loss** (Schedule III), revenue appears at the very top as **"Revenue from Operations"**, followed by **"Other Income"**. Interest and dividend income of a non-financial enterprise typically sit in *Other Income*, while for a financing enterprise interest is part of *Revenue from Operations*. Note that revenue is shown **net of GST** (GST is not revenue) but is a **gross** figure otherwise (before deducting cost of goods sold).
@@ -259,6 +395,8 @@ How much income is recognised in FY 2025-26?
 - The **method used to determine stage of completion** for service transactions.
 - **Circumstances in which revenue recognition has been postponed** owing to significant uncertainties (the mandatory AS 9 disclosure) — e.g., *"Revenue of ₹___ on the sale to XYZ has been postponed pending resolution of uncertainty over collectability."*
 
+**What AS 9 does NOT require you to disclose.** It does *not* require a breakdown of revenue by product line, geography, or customer — those are the province of AS 17 (Segment Reporting) and AS 18 (Related Party). Keep AS 9 disclosure narrow: the *policy*, the *stage-of-completion method*, and the *postponement circumstances*. Over-claiming AS 9 disclosure requirements in a theory answer loses marks.
+
 ## 7. Connections
 
 | Links to | How it connects |
@@ -266,37 +404,48 @@ How much income is recognised in FY 2025-26?
 | **AS 7 – Construction Contracts** | The mirror-image standard. AS 9 explicitly *excludes* construction contracts. AS 7 uses **percentage-of-completion**, forces **immediate recognition of expected losses**, and recognises revenue by stage of completion — because a multi-year contract can't wait until completion. AS 9's completed-service method, by contrast, may defer all revenue to the end. Examiners love a compare-and-contrast. |
 | **AS 1 – Disclosure of Accounting Policies** | Revenue recognition is a *fundamental accounting policy* disclosed under AS 1; **accrual** is a fundamental assumption underpinning AS 9. |
 | **AS 4 – Events After Balance Sheet Date** | If a debtor becomes insolvent *after* the balance sheet date but the condition existed on that date, it is an *adjusting event* — interacts with the "uncertainty arising later" provision. |
+| **AS 29 – Provisions** | The other half of the warranty and expected-return treatments: recognise the sale in full under AS 9, then set up the estimated liability under AS 29. |
 | **AS 12 – Government Grants** | Grants are excluded from AS 9 revenue and handled separately. |
+| **AS 13 – Investments** | The pre-acquisition dividend rule (dividend out of pre-acquisition profits reduces the cost of the investment) sits here and interacts with AS 9's "right to receive" dividend recognition. |
+| **AS 11 – Forex** | Exchange gains are *gains*, not AS 9 revenue; but a foreign-currency receivable arising from a recognised sale is then re-measured under AS 11. |
 | **AS 10 / depreciation, AS 2 Inventory** | Goods held on sale-or-return or consignment remain the seller's **inventory** (AS 2) until revenue is recognised — recognition timing directly affects closing stock. |
 | **Ind AS 115** | The modern converged standard replaces AS 9/AS 7 with a **five-step model** (identify contract → performance obligations → transaction price → allocate → recognise on satisfaction of obligation). Know that AS 9 is the *risk-and-reward* model, Ind AS 115 the *control-transfer, performance-obligation* model. |
-| **Taxation** | Since revenue sits atop the P&L, its timing drives **taxable profit** and advance-tax. Aggressive early recognition inflates tax; ICDS-IV mirrors much of AS 9 for tax purposes. |
+| **Taxation / ICDS** | Since revenue sits atop the P&L, its timing drives **taxable profit** and advance-tax. Aggressive early recognition inflates tax; **ICDS-IV (Revenue Recognition)** mirrors much of AS 9 for tax purposes but differs in places (e.g., it does not permit postponement of interest/royalty for collection uncertainty the same way) — verify current ICDS-IV text before quoting differences. |
 | **Audit & ethics** | Revenue is the #1 fraud-risk area (SA 240 presumes fraud risk in revenue). Understanding AS 9 is essential to auditing cut-off. |
 
 ## 8. Traps & Examiner Tricks
 
 1. **The uncertainty fork (the #1 trap).** *At inception* → postpone revenue. *After recognition* → keep revenue, create a provision. Questions are worded to disguise *when* the doubt arose — read for the timing, not the amount.
 2. **Cash discount vs trade discount.** Trade discount is **deducted** from revenue; cash discount is **not** (it's a separate expense). Reversing these loses easy marks.
-3. **GST / taxes in revenue.** Amounts collected for third parties (GST, sales tax) are **excluded** from revenue. Watch for questions that quote a GST-inclusive figure.
+3. **GST / taxes in revenue.** Amounts collected for third parties (GST, sales tax) are **excluded** from revenue. Watch for questions that quote a GST-inclusive figure. (Excise, historically the enterprise's own manufacturing duty, was treated differently — verify current position.)
 4. **Agent vs principal (gross vs net).** An agent recognises only its **commission**, not the gross amount collected for the principal. Travel agents, commission agents, consignees.
 5. **Order date ≠ recognition date.** Recognition follows **transfer of risks and rewards** (usually delivery), not the order and not the payment. Cross-year-end problems bait you into booking in the wrong year.
 6. **Consignment and sale-or-return.** Goods still belong to the sender until the agent sells / the buyer accepts. No revenue on dispatch; goods stay in the sender's inventory.
 7. **Service method mismatch.** A single indivisible service uses **completed contract**; a multi-act service uses **proportionate completion**. Don't book 70% of a single-report engagement.
-8. **Dividend timing.** Recognise on **declaration** (right established) — not on the earlier balance sheet date and not on receipt. A dividend declared *after* year-end belongs to the next year.
-9. **Interest is time-proportion, always.** Even if interest is received only at maturity, accrue the portion earned by year-end.
+8. **Dividend timing.** Recognise on **declaration** (right established) — not on the earlier balance sheet date and not on receipt. A dividend declared *after* year-end belongs to the next year. Beware the **pre-acquisition** twist — that reduces investment cost, it is not income.
+9. **Interest is time-proportion, always.** Even if interest is received only at maturity, accrue the portion earned by year-end — and apply the rate to the **balance outstanding**, not blindly to the original principal.
 10. **AS 7 confusion.** If the question is a *construction contract*, AS 9 does **not** apply — switch to percentage-of-completion and immediate loss recognition. Spotting the boundary is itself a mark.
 11. **"Bill and hold."** Delivery delayed at the *buyer's* request can still be recognised if the buyer accepts billing and goods are identified and ready — but not if the delay is at the *seller's* convenience.
 12. **Installation obligation.** If installation is a *significant* part of the contract and not yet done, revenue waits; if installation is minor/incidental, recognise on delivery.
+13. **Partial measurability.** A disputed add-on (price escalation, quality claim) postpones **only the uncertain slice** — recognise the undisputed base now. Don't withhold the whole invoice.
+14. **Instalment/deferred-payment sale.** Split it: the **cash-price** is sales revenue at the point of sale; the **interest** portion accrues over time. Never book the whole inflated instalment total as sales up front.
+15. **Warranty ≠ deferral.** A routine warranty does not delay the sale — recognise fully and provide for warranty cost (AS 29). Deferral only if the "warranty" is so heavy it means risks never really passed.
+16. **Similar-goods swap = no revenue.** Exchanging similar goods (same nature/value) generates no revenue; only exchanges of *dissimilar* goods do, at fair value.
+17. **Gain masquerading as revenue.** Profit on sale of a fixed asset, forex gains, insurance windfalls are **gains, not AS 9 revenue** — exclude them when asked for "revenue," even though they are income.
+18. **Advance receipt is not earning.** Fees/subscriptions collected up front sit as *unearned revenue* (a liability) and are earned over the service period — cash in the door is never the recognition trigger.
 
 ## 9. First-Principles Recap
 
 - Revenue is earned at the **performance moment** — between the promise (order) and the settlement (cash). AS 9 anchors income there, on the **accrual** basis, not the cash basis.
-- The master test for **goods** is transfer of **significant risks and rewards of ownership** — economic substance over legal title.
-- **Services** are recognised either **proportionately** (multi-act) or on **completion** (single act) — mirroring how the service is actually delivered.
-- **Interest = time** (time-proportion), **royalty = usage** (per agreement), **dividend = right to receive** (on declaration). Each rule follows the nature of the income.
-- Two gates guard every recognition: **measurability** (know the amount) and **collectability** (reasonably certain of the cash).
+- Recognition is distinct from occurrence, measurement and realisation — AS 9 deliberately severs recognition from *cash realisation*.
+- The master test for **goods** is transfer of **significant risks and rewards of ownership** — economic substance over legal title. "Significant" is a matter of degree: trivial retained risk (warranty) doesn't block recognition; substantial retained risk (return rights, buy-back) does.
+- **Services** are recognised either **proportionately** (multi-act) or on **completion** (single act) — mirroring how the service is actually delivered; advance receipts sit as unearned revenue.
+- **Interest = time** (time-proportion on the balance outstanding), **royalty = usage** (per agreement), **dividend = right to receive** (on declaration). Each rule follows the nature of the income.
+- Two gates guard every recognition: **measurability** (know the amount) and **collectability** (reasonably certain of the cash); measurement uncertainty can postpone just the *uncertain slice*.
 - The decisive fork: **uncertainty at inception → postpone revenue**; **uncertainty later → keep revenue, provide separately** for the bad debt.
-- Revenue is a **gross** figure of charges to customers, but **excludes third-party collections** (GST) and, for agents, the principal's share; **trade** discounts reduce it, **cash** discounts don't.
-- **Disclose** the recognition policy and any circumstances where recognition was **postponed** for significant uncertainties.
+- Revenue is a **gross** figure of charges to customers, but **excludes third-party collections** (GST) and, for agents, the principal's share; **trade** discounts reduce it, **cash** discounts don't; instalment sales split into cash-price (sales) + interest (over time).
+- Revenue ≠ gain: profit on fixed-asset disposal, forex, insurance windfalls are gains, outside AS 9.
+- **Disclose** the recognition policy, the stage-of-completion method, and any circumstances where recognition was **postponed** for significant uncertainties — and nothing more.
 - **Construction contracts belong to AS 7**, not AS 9 — different (percentage-of-completion) logic for a reason.
 
 ## 10. Quick-Revision Sheet
@@ -317,14 +466,16 @@ How much income is recognised in FY 2025-26?
 **Uncertainty fork:**
 - At **inception** → **postpone** revenue.
 - **After** recognition → **keep** revenue; book **separate provision/bad debt** expense.
-- Amount not **determinable** → postpone till determinable.
+- Amount not **determinable** → postpone till determinable (only the uncertain slice).
 
-**Measurement:** Revenue = charges to customers, **net of trade discount**, **excluding GST/third-party collections**; **cash discount NOT deducted** (separate expense). Agent → only **commission**.
+**Measurement:** Revenue = charges to customers, **net of trade discount**, **excluding GST/third-party collections**; **cash discount NOT deducted** (separate expense). Agent → only **commission**. Instalment sale → **cash-price = sales**, **interest = over time**. Barter of *similar* goods → **no revenue**; *dissimilar* → fair value.
 
-**Not revenue / out of scope:** Construction contracts (AS 7), hire-purchase/lease, government grants (AS 12), insurance contracts, gains on fixed-asset disposal / forex.
+**Not revenue / out of scope:** Construction contracts (AS 7), hire-purchase/lease, government grants (AS 12), insurance contracts, gains on fixed-asset disposal / forex. Revenue ≠ gain.
 
-**Disclosure:** Recognition **policy** + **stage-of-completion method** + **circumstances of postponement**.
+**Disclosure:** Recognition **policy** + **stage-of-completion method** + **circumstances of postponement** (and nothing broader).
 
-**No-revenue-on-dispatch checklist:** Consignment, sale-or-return (pending acceptance/return period), significant pending installation, doubtful collection at inception.
+**No-revenue-on-dispatch checklist:** Consignment, sale-or-return (pending acceptance/return period), significant pending installation, doubtful collection at inception, special-order goods not yet completed.
 
-**One-line memory hooks:** Goods = *risk & reward*; Services = *proportion or completion*; Interest = *time*; Royalty = *use*; Dividend = *declared*; Doubt-at-start = *postpone*; Doubt-later = *provide*.
+**Recognise-in-full-but-provide checklist:** Routine warranty (provide AS 29), estimable sales returns (recognise net of expected returns), collection doubt arising *after* a valid sale (provide for bad debt).
+
+**One-line memory hooks:** Goods = *risk & reward*; Services = *proportion or completion*; Interest = *time*; Royalty = *use*; Dividend = *declared*; Doubt-at-start = *postpone*; Doubt-later = *provide*; Trade-discount = *cut revenue*; Cash-discount = *expense*; Agent = *commission only*; Instalment = *split cash and interest*; Similar swap = *no revenue*; Gain ≠ revenue.

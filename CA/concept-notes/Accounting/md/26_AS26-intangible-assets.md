@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 26 — AS 26: Intangible Assets
 
 ## 1. The Problem
@@ -12,6 +14,10 @@ None of these things can be dropped on your foot. There is no factory shed, no m
 
 If accountants were free to answer these however they liked, two abuses would follow instantly. **Abuse A: profit inflation.** A loss-making firm capitalises all its advertising as "Brand ₹200 cr," turning a loss into a profit and parking the spend on the balance sheet forever. **Abuse B: fictitious net worth.** A company "values" its own reputation at ₹500 cr, books it as an asset, and props up a hollow balance sheet to fool lenders.
 
+There is a subtler, third failure the standard also guards against — **Abuse C: inconsistency.** Two identical pharma firms, one expensing all R&D and one capitalising it, would report wildly different profits and net worth for the *same underlying reality*. Comparability across firms — and across years for the *same* firm — collapses. AS 26 forces one disciplined answer so that a rupee of "intangible asset" means the same thing on every balance sheet.
+
+Why does this matter more for intangibles than for anything else on the balance sheet? Because the intangible is where **the accounting choice, not the economic reality, drives the reported number.** Inventory has a physical count; debtors have a ledger of invoices; even a building has a title deed. An internally-built brand has none of these anchors — only management's assertion. AS 26 exists to replace assertion with rules.
+
 AS 26 exists to answer these three questions **conservatively and consistently**, so that an intangible on the balance sheet means something real, and the temptation to inflate profits or net worth is closed off.
 
 ## 2. The Core Idea (analogy)
@@ -23,6 +29,8 @@ Think of AS 26 as a **strict immigration officer at the balance-sheet border**. 
 **Stage 2 — Even if you qualify, can I trust your paperwork (recognition)?** Two more tests: it is **probable** the benefits will actually flow, AND your **cost can be measured reliably**. Only then do you get a residence permit — a place on the balance sheet.
 
 The genius — and the strictness — is in *how* the officer treats home-grown travellers. If you *bought* the traveller (separate acquisition, or as part of a business you acquired), your cost paperwork is trustworthy — an arm's-length price was paid. But if you *grew the traveller yourself in your backyard* (internally generated goodwill, brands, mastheads), the officer says: "Your cost is hopelessly mixed up with running your whole business, and I can't tell you apart from your general reputation. Denied. Expense it." That single suspicion — *you can't reliably separate the cost of a self-grown intangible from the cost of running the business* — is the engine behind AS 26's most famous prohibitions.
+
+Push the analogy one step further, because two exam-critical ideas hide inside it. First, the officer stamps the passport **only on the day the paperwork becomes clean** — not retroactively. That is why internally generated development cost is capitalised *from the date all six criteria are first met, and never a rupee earlier*; the traveller's earlier journey is gone. Second, the residence permit is **not permanent** — it must be *renewed and revalued annually through amortisation and impairment*, and once the officer has expelled a traveller (expensed the spend), that individual can **never** re-apply. "Once expensed, always expensed" is the officer refusing to re-admit anyone he has already deported. Hold both ideas — *no backdating in, no re-entry after exit* — and half the standard's traps disappear.
 
 ## 3. Why It's Built This Way
 
@@ -38,7 +46,17 @@ Every seemingly arbitrary rule in AS 26 is a defence against one of the two abus
 
 - **Why cap useful life and force amortisation?** An intangible that "never expires" is where profit-parking hides. AS 26 uses a **rebuttable presumption that useful life does not exceed 10 years** — forcing the cost back through the P&L on a disciplined schedule, and forcing management to justify any longer life with evidence and annual review.
 
-Notice the through-line: **reliability of cost + probability of benefit**, enforced with **prudence**. That is the whole philosophy.
+Now go deeper — because the exam rewards students who can explain *why the line sits exactly where it does.*
+
+- **Why is "probable" the threshold, not "certain" or "possible"?** If the bar were *certainty*, almost nothing intangible would ever qualify — the future is never certain. If the bar were *possibility*, every wild research punt would qualify and the balance sheet would fill with dreams. "Probable" (more likely than not) is the calibrated midpoint: it demands real evidence but does not demand a crystal ball. Crucially, AS 26 tells you to weigh **external evidence** more heavily than management's own optimism — because the whole point is to defeat self-serving assertion.
+
+- **Why "reliably measurable cost" and not "reliably measurable value"?** Because *value* is exactly what management can inflate — you can always argue your brand is "worth" more. *Cost* is anchored to actual transactions and traceable spend. By making cost (not value) the recognition and measurement basis, AS 26 removes the single most abusable lever. This is also why the **cost model is the only model** allowed (§4.6): revaluing to "market value" would smuggle value back in through the side door.
+
+- **Why does prudence bias every doubtful case toward expense rather than capitalisation?** Because the two abuses (profit inflation, fictitious net worth) both work by *wrongly capitalising*. There is no symmetric abuse from *wrongly expensing* — expensing understates, and understatement does not deceive lenders or inflate managers' bonuses. So the standard deliberately makes its errors fall on the safe side. That asymmetry *is* prudence, and it is why "when in doubt, expense" is the correct default answer to almost every ambiguous exam scenario.
+
+- **Why zero residual value by default (§4.7)?** Because an intangible, unlike a machine, usually has *no scrap*. A patent at the end of its life is worthless — there is no second-hand market for an expired legal right, and no metal to melt down. Assuming a residual value would understate amortisation and park cost on the balance sheet — Abuse A again. So the default is nil, rebutted only by a *committed buyer* or a *genuine active market*.
+
+Notice the through-line: **reliability of cost + probability of benefit**, enforced with **prudence**. That is the whole philosophy. Every rule you are about to learn is one of these three principles wearing a different costume.
 
 ## 4. Full Technical Content (RMPD Lens)
 
@@ -54,6 +72,12 @@ AS 26 applies to *all* intangible assets **except** those covered by other stand
 
 Key phrase: *non-monetary* (excludes cash and receivables) and *without physical substance*. When an asset has **both** tangible and intangible elements (e.g., software), judge by which element is **more significant**. Operating-system software essential to a computer's functioning is treated as *part of the hardware* (AS 10). Application software is generally an intangible (AS 26).
 
+**Finer scope distinctions the exam tests:**
+- **Computer software — the four-way split.** (i) OS software *integral* to hardware → part of PPE (AS 10). (ii) *Purchased* application software → intangible (AS 26). (iii) *Internally developed* application software → AS 26, subject to the research/development divide. (iv) Software developed *for sale* in the ordinary course of business → inventory (AS 2), not AS 26. Same word "software," four different homes — examiners love this.
+- **Website development costs.** Treated like internally generated software under AS 26 logic: planning is research (expense); infrastructure and content development that meets the six criteria can be capitalised; ongoing content updates are usually expensed. Purely advertising/promotional websites → expense.
+- **"Held for use," not "held for sale."** The definition demands the asset be held *for use* (production, rental, administration). A patent a company holds to *trade* is inventory, not an intangible asset. The intention behind holding decides the standard.
+- **Non-monetary matters.** A prepaid expense or a receivable is monetary (a right to a fixed/determinable number of rupees) and is *not* an intangible asset even though it has no physical substance.
+
 ### 4.1 The three definitional tests (Stage 1)
 
 An item is an intangible asset only if it is:
@@ -64,6 +88,12 @@ An item is an intangible asset only if it is:
 | **Control** | Entity can obtain future benefits AND restrict others' access, usually via legal rights | Skilled staff (can resign), customer loyalty, market share — no legal control |
 | **Future economic benefits** | Revenue from sale/use, or cost savings | Purely speculative research with no demonstrable benefit |
 
+**Drilling into each test — the distinctions examiners exploit:**
+
+- **Identifiability has TWO independent gates; passing EITHER is enough.** (1) *Separability* — can be sold, transferred, licensed, rented, or exchanged *on its own or with a related contract*. (2) *Contractual/legal rights* — even if you can't sell it separately, if it springs from a legal right it is identifiable. A licence you cannot resell but which grants a legal right is *still* identifiable via gate (2). Students who think identifiability requires separability get the licence cases wrong.
+- **Control usually needs a legal right — but not always.** The standard says legal enforceability is the *usual* evidence of control, not the *only* possible evidence. However, for the classic exam distractors (trained workforce, customer relationships without contracts, market share, customer loyalty), AS 26 explicitly says the entity has *insufficient control*, so they are **not** intangible assets. Technical/market knowledge *can* be controlled if protected by legal rights (copyright, restraint-of-trade agreement, or a duty of confidentiality on employees).
+- **Future benefit includes cost savings, not just revenue.** A patented process that halves electricity consumption produces *cost savings* — that is a future economic benefit even though it earns no direct revenue. Don't equate "benefit" with "sales."
+
 ### 4.2 Recognition (Stage 2)
 
 Recognise an intangible asset **if, and only if**:
@@ -72,17 +102,21 @@ Recognise an intangible asset **if, and only if**:
 
 Management assesses probability using **reasonable and supportable assumptions** over the asset's useful life, giving greater weight to external evidence.
 
+**Two-stage gate — don't collapse it.** Stage 1 (definition: Identifiable + Control + Future benefit) and Stage 2 (recognition: Probable + Reliable cost) are *separate hurdles*. An item can pass Stage 1 (it genuinely is an intangible asset by nature) yet fail Stage 2 (cost can't be measured reliably, e.g., an acquired intangible whose fair value is not determinable) — in which case it is **not** put on the balance sheet as a separate asset. The commonest error is treating "it's an intangible asset" as automatically meaning "recognise it." It doesn't.
+
 ### 4.3 Measurement at recognition — initial cost
 
 Measure initially at **cost**. Cost depends on how the asset was obtained.
 
 **(a) Separate acquisition (purchased).** Cost = purchase price + import duties + non-refundable taxes + **directly attributable** expenditure to prepare it for use (e.g., professional fees, testing). Trade discounts and rebates are deducted. **Excluded**: general administration/overheads, costs after the asset is capable of operating, initial operating losses.
 
-**(b) Acquisition as part of an amalgamation (AS 14).** An intangible of the acquired entity is recognised at **fair value** if it meets the recognition criteria; if fair value can't be measured reliably, it is subsumed into **goodwill**.
+*Deferred payment edge case:* if payment is deferred beyond normal credit terms, cost is the **cash price equivalent**; the difference between that and total payments is treated as **interest expense** over the credit period (unless capitalised under AS 16). Booking the full inflated instalment total as cost is a trap.
+
+**(b) Acquisition as part of an amalgamation (AS 14).** An intangible of the acquired entity is recognised at **fair value** if it meets the recognition criteria; if fair value can't be measured reliably, it is subsumed into **goodwill**. The logic: in a business acquisition an intangible that was *unrecognised internally-generated* in the seller's books (e.g., the seller's own brand) *can now be recognised by the buyer* at fair value — because the buyer paid a verifiable arm's-length price. The prohibition on internally generated brands binds the *creator*, not the *purchaser*.
 
 **(c) Acquisition by government grant** (e.g., landing rights, licences given free/nominal). May be recorded at a nominal value or at acquisition cost (per AS 12 treatment) plus directly attributable expenditure.
 
-**(d) Exchange of assets.** Cost = **fair value** of the asset given up (like AS 10 barter logic).
+**(d) Exchange of assets.** Cost = **fair value** of the asset given up (like AS 10 barter logic). If the fair value of the asset *received* is more clearly evident, that may be used; where fair value is not reliably measurable, cost is the carrying amount of the asset given up.
 
 **(e) Internally generated intangible assets.** The hard case — covered next.
 
@@ -111,19 +145,27 @@ For all other internally generated intangibles, split the generation into two ph
 
 If even one fails → expense it. If all six are met → capitalise development cost **from the date all conditions are first met** (prospectively).
 
-**Cost of an internally generated intangible** = sum of expenditure from the date the six criteria are met until it is ready for intended use: materials and services consumed; salaries/wages of personnel directly engaged; directly attributable overheads (e.g., depreciation of equipment used, amortisation of patents used); reasonable allocation of costs to bring it to condition for use. **Excludes**: selling/administrative/general overheads, identified inefficiencies and initial operating losses, and training costs.
+**"If you cannot separate research from development, treat it ALL as research."** Where a project's expenditure cannot be split into a research phase and a development phase, AS 26 forces the *conservative* answer — treat the whole thing as research and expense it. This is prudence hard-wired into the phase rule.
+
+**Cost of an internally generated intangible** = sum of expenditure from the date the six criteria are met until it is ready for intended use: materials and services consumed; salaries/wages of personnel directly engaged; directly attributable overheads (e.g., depreciation of equipment used, amortisation of patents used); reasonable allocation of costs to bring it to condition for use; and borrowing costs where AS 16 capitalisation criteria are met. **Excludes**: selling/administrative/general overheads (unless directly attributable to preparing the asset for use), identified inefficiencies and initial operating losses incurred before the asset performs to plan, and training costs of staff to operate the asset.
 
 **Critical prudence rule — no reinstatement.** Expenditure on an intangible item that was **initially expensed** (because criteria weren't yet met, or it was research) **CANNOT later be capitalised** — even if the criteria are subsequently satisfied. Once expensed, always expensed for that spend.
+
+**A precise mental model of the timeline.** Picture a single horizontal line for a project. The **six-criteria date** is a vertical cut. Everything *left* of the cut (research + pre-criteria development) is expensed and gone forever. Everything *right* of the cut, up to "ready for use," is capitalised. This means the *same activity* (say, prototype testing) can be partly expensed and partly capitalised depending on which side of the cut it falls. Always find the cut first, then classify spend by date, then by nature.
 
 ### 4.5 Subsequent expenditure
 
 Add subsequent expenditure to the carrying amount **only if** it is probable it will enable the asset to generate benefits **in excess of its originally assessed standard of performance**, and it can be measured and attributed reliably. Otherwise expense it. (For most intangibles, subsequent expenditure rarely meets this and is expensed.)
 
+Why so strict? Because the *nature* of intangibles makes it usually impossible to tell whether later spend *enhances* the asset or merely *maintains* the business as a whole — the same separability problem that killed internally generated brands. So the default is expense; capitalisation of subsequent spend is the rare exception, not the rule. Contrast AS 10, where subsequent enhancement of a machine is far more routinely capitalised because the physical improvement is visible and attributable.
+
 ### 4.6 Measurement after recognition — the cost model only
 
-AS 26 permits **only the cost model**: 
+AS 26 permits **only the cost model**:
 **Carrying amount = Cost − Accumulated amortisation − Accumulated impairment losses.**
 (Unlike Ind AS 38, AS 26 does **not** allow a revaluation model.)
+
+This single-model rule is the direct enforcement of "measure cost, never value" from §3. Once you allow upward revaluation, management can inflate net worth by asserting a market price — the exact abuse the standard exists to stop.
 
 ### 4.7 Amortisation and useful life
 
@@ -134,7 +176,9 @@ AS 26 permits **only the cost model**:
 - The presumption can be **rebutted** (life > 10 years) only with **persuasive evidence** (e.g., a legal right for a longer definite period). If rebutted, the enterprise must (i) amortise over the longer best-estimate life, (ii) estimate the recoverable amount **at least annually** to test for impairment, and (iii) disclose the reasons.
 - Where a **legal right** governs (e.g., a licence for 15 years), useful life shall **not exceed** the legal-right period, but may be **shorter** if the entity expects to use it for less. If the right is **renewable** and renewal is virtually certain, the renewal period is included.
 
-**Amortisation method.** Reflect the pattern of benefit consumption; if the pattern cannot be determined reliably, use the **straight-line method (SLM)**. Amortisation is charged to the P&L (unless another standard permits inclusion in the carrying amount of another asset). Amortisation **begins when the asset is available for use.**
+**The interplay of the two ceilings — a common exam knot.** Useful life is capped by BOTH (i) the best economic estimate and (ii) the legal-right period, and separately anchored by (iii) the 10-year rebuttable presumption. Work them together: take the *lower* of economic life and legal-right life; then ask whether that figure exceeds 10 years — if so, you must have persuasive evidence and you trigger the annual impairment test. Example: a 6-year licence renewable and renewal virtually certain for another 6 → legal life 12 years; if economic life is also ~12, you amortise over 12 but owe the annual impairment test and disclosure because 12 > 10.
+
+**Amortisation method.** Reflect the pattern of benefit consumption; if the pattern cannot be determined reliably, use the **straight-line method (SLM)**. Amortisation is charged to the P&L (unless another standard permits inclusion in the carrying amount of another asset, e.g., amortisation of a patent used to build another intangible or inventory). Amortisation **begins when the asset is available for use.**
 
 **Review.** The amortisation **period** and **method** must be reviewed **at least at each financial year-end**. If the expected useful life is significantly different from previous estimates, change the period; if the expected pattern of benefits has changed, change the method. Both are changes in **accounting estimates** (AS 5) — accounted for **prospectively**, adjusting the amortisation charge for the current and future periods.
 
@@ -148,9 +192,13 @@ An intangible's carrying amount may exceed what it can actually recover. At each
 
 This annual test is the safety-valve for the two riskiest categories.
 
+**Reversal of impairment.** Unlike goodwill impairment under some frameworks, an impairment loss on an ordinary intangible **can be reversed** under AS 28 if the recoverable amount recovers due to a *change in estimates* used to measure it — but the reversal is capped so the new carrying amount does not exceed what it would have been (net of amortisation) had no impairment ever been recognised. You do not restore the asset above its "would-have-been" depreciated cost. This ceiling is a frequent second-part-of-question trap.
+
 ### 4.9 Retirements and disposals
 
 **Derecognise** an intangible on disposal or when **no future economic benefits** are expected from its use/disposal. Gain/loss = **net disposal proceeds − carrying amount**, recognised as **income or expense in the P&L** (not as revenue).
+
+An intangible **retired from active use and held for disposal** is carried at the *lower* of carrying amount and net realisable value, and is still tested for impairment — it is not simply frozen at book value.
 
 ### 4.10 Quick decision logic
 
@@ -171,6 +219,28 @@ flowchart TD
     H -->|Yes| E
 ```
 *Every path that fails a reliability or probability test lands in "Expense in P&L" — that is AS 26's default bias.*
+
+### 4.11 The life-cycle of a recognised intangible
+
+Once an asset is on the balance sheet, a second machine takes over — measurement over time. Keeping the two machines separate (recognition vs subsequent life) prevents most computational errors.
+
+```mermaid
+flowchart TD
+    A["Intangible recognised at cost"] --> B["Amortise from date available for use"]
+    B --> C["Residual value presumed nil unless committed buyer or active market"]
+    B --> D["Method equals pattern of benefits else SLM"]
+    B --> E["Life capped by lower of economic life and legal right"]
+    E --> F["Life over 10 years needs persuasive evidence"]
+    F --> G["Mandatory annual impairment test under AS 28"]
+    B --> H["Review life and method each year end"]
+    H --> I["Change is prospective under AS 5"]
+    A --> J["Not yet available for use"]
+    J --> G
+    B --> K["Indication of impairment? Test recoverable amount"]
+    K --> L["Write down excess to P&L"]
+    L --> M["Amortise revised carrying amount over remaining life"]
+```
+*The subsequent-life machine runs every year end: amortise, then review estimates, then test impairment where required.*
 
 ## 5. Worked Examples
 
@@ -199,6 +269,10 @@ Nova Ltd buys a 10-year software licence. Details:
 | **Capitalised cost** | **48,50,000** | |
 
 **Answer:** Capitalise **₹48,50,000**. Amortise over useful life ≤ legal right of 10 years, SLM, residual value nil → **₹4,85,000 per year**.
+
+**Examiner tweak A — deferred payment.** Suppose Nova pays not now but in two years, and the cash price today for the licence portion would have been ₹42,00,000 instead of ₹45,00,000. Then cost = cash price equivalent ₹42,00,000 + levy ₹2,00,000 + consultant ₹1,50,000 = **₹45,50,000**; the ₹3,00,000 excess of nominal over cash price is **interest expense** spread over the two years. Booking ₹48,50,000 would overstate the asset.
+
+**Examiner tweak B — bundled hardware.** If the ₹50,00,000 also embedded a server essential to run the software, the *server* is PPE (AS 10) and only the software portion is the AS 26 intangible. Split by relative fair values; do not dump the whole invoice into "Intangible."
 
 ### Example 2 — Research vs development (exam-standard): when does capitalisation start?
 
@@ -234,6 +308,8 @@ On **1 October**, all six development criteria (technical feasibility, intention
 **Reconciliation:** Total spend = 30 + 18 + 4 + 3 + 1.5 + 5 = ₹61,50,000 = Capitalised ₹22,00,000 + Expensed ₹39,50,000. ✔
 
 **Trap check:** If the examiner adds "research spend of the first half was ₹30,00,000, later the project succeeded — can we now capitalise it?" — **NO.** Expenditure once recognised as expense (research, or pre-criteria) can never be reinstated as an asset.
+
+**Examiner tweak — the mid-period criteria date.** Suppose the ₹18,00,000 prototype spend was actually incurred *evenly* Aug–Dec (5 months), but criteria were met only on 1 Oct. Then only the Oct–Dec portion (3 of 5 months) is capitalisable: 18,00,000 × 3/5 = **₹10,80,000**; the Aug–Sep portion ₹7,20,000 is *pre-criteria* and expensed. The *same activity* splits across the six-criteria cut. This is the single most common way the examiner separates the strong candidates.
 
 ### Example 3 — Amortisation, change in estimate, and impairment (hard, reconciling)
 
@@ -279,6 +355,47 @@ Profit & Loss A/c          Dr  24,00,000
 ```
 **Reconciliation:** Cost 60,00,000 − total charges to 31 Mar 2025 (18 + 14 + 10 = 42,00,000) = 18,00,000 = carrying amount. ✔
 
+**Examiner tweak — order matters.** If a careless student *tested impairment first* on the ₹42,00,000 carrying amount (against recoverable ₹18,00,000), they would book an impairment of ₹24,00,000 and skip the year's amortisation — wrong. AS 26/AS 28 sequence is **amortise the year first, then test the reduced carrying amount for impairment.** The final carrying amount ₹18,00,000 happens to coincide here, but the split between "amortisation ₹14,00,000" and "impairment ₹10,00,000" is what the marks are for, and it changes the P&L classification.
+
+### Example 4 — Internally generated brand and acquired brand (concept trap)
+
+Vector Ltd spent ₹80,00,000 over five years advertising and promoting its own house brand "ZenX," which market surveys now value at ₹3,00,00,000. In the same year Vector *acquired* the small firm Delta, paying ₹1,20,00,000, of which ₹25,00,000 is the fair value of Delta's established brand "DeltaPro" (reliably measurable) and the rest is identifiable net assets ₹85,00,000.
+
+**ZenX (internally generated brand):**
+- The ₹80,00,000 spend is expensed as incurred — advertising and brand-building cost cannot be distinguished from the cost of developing the business as a whole.
+- The ₹3,00,00,000 "market value" is a **red herring** — internally generated brands are **never** recognised, whatever the survey says. Carrying amount of ZenX on the balance sheet = **NIL**.
+
+**DeltaPro (acquired brand):**
+- Acquired as part of an amalgamation, fair value ₹25,00,000 reliably measurable, meets recognition criteria → **recognise as an intangible asset at ₹25,00,000** and amortise (life ≤ 10 years presumption unless rebutted).
+
+**Goodwill on acquisition:**
+- Consideration ₹1,20,00,000 − (identifiable net assets ₹85,00,000 + recognised brand ₹25,00,000) = **₹10,00,000 goodwill** (purchased → recognised, unlike internally generated goodwill).
+
+| Item | Recognise? | Amount (₹) |
+|------|-----------|-----------:|
+| ZenX internally generated brand | No | Nil |
+| ZenX advertising spend | Expensed | 80,00,000 expensed |
+| DeltaPro acquired brand | Yes | 25,00,000 |
+| Purchased goodwill on Delta | Yes | 10,00,000 |
+
+**The lesson:** *the identical asset type (a brand) is treated oppositely depending on who created it.* Self-grown → never; purchased → yes at price paid. This asymmetry is the single most tested concept in AS 26 theory questions.
+
+### Example 5 — Rebutting the 10-year presumption and the annual impairment test (exam-hard theory + numbers)
+
+Sfirmus Ltd acquires a broadcasting licence on 1 April 2024 for ₹90,00,000. The licence runs **15 years** and is renewable **indefinitely** at negligible cost; Sirmus has renewed similar licences before and intends to renew. Regulatory and technological conditions are stable, and management has persuasive evidence supporting a useful life of **15 years**.
+
+**Step 1 — Can the 10-year presumption be rebutted?** Yes. A definite legal right of 15 years plus persuasive evidence rebuts the presumption. Amortise over **15 years**, not 10.
+
+**Step 2 — Annual amortisation.** 90,00,000 / 15 = **₹6,00,000 per year** (SLM, residual nil — no committed buyer, no active market for the residual).
+
+**Step 3 — Mandatory consequences of rebuttal.** Because life (15) > 10 years, Sirmus must (i) estimate recoverable amount **at least annually** and test for impairment even absent any indicator, and (ii) **disclose the reasons** the presumption was rebutted and the factors that played a significant role in determining useful life.
+
+**Step 4 — What if renewal were NOT virtually certain?** Then the renewal period cannot be added; useful life is capped at the current legal right (15 years here, already the case) — but if the *initial* right were, say, 8 years with uncertain renewal, useful life ≤ 8 years and the presumption need not even be rebutted.
+
+**Examiner tweak — "amortise over 10 years maximum."** A tempting wrong answer is to cap at 10 years "because that's the AS 26 limit." The 10 years is a *rebuttable presumption*, not a ceiling. With persuasive evidence you use the longer life — and accept the annual-impairment-test burden that comes with it. Stating "maximum 10 years, full stop" loses marks.
+
+**Reconciliation check:** Over 15 years, 15 × ₹6,00,000 = ₹90,00,000 = cost. ✔ (assuming no impairment write-down along the way).
+
 ## 6. Presentation & Disclosure
 
 ### Balance sheet presentation
@@ -297,7 +414,10 @@ Distinguish **internally generated** from **others**, and disclose:
 - Description, carrying amount and remaining amortisation period of any **individually material** intangible.
 - Existence and carrying amounts of intangibles whose **title is restricted** or that are **pledged as security**.
 - Amount of **commitments** for the acquisition of intangibles.
+- Amount of intangibles acquired by **government grant** and initially recognised at fair value (if any).
 - **Aggregate R&D expenditure** recognised as an **expense** during the period.
+
+**Why the "internally generated vs others" split is mandatory.** The whole standard turns on the distinction between what you *bought* (trustworthy cost) and what you *grew* (suspect). Forcing that split into the face of the disclosures lets a reader see instantly how much of a firm's intangible base is arm's-length priced versus self-asserted development cost — the exact information needed to judge Abuse A and Abuse B. Disclosure is where the standard's philosophy becomes visible to the investor.
 
 ```mermaid
 flowchart LR
@@ -312,12 +432,14 @@ flowchart LR
 
 ## 7. Connections
 
-- **AS 28 (Impairment of Assets):** AS 26 hands off the "is the carrying amount recoverable?" question to AS 28. The mandatory annual test for not-yet-ready and >10-year-life intangibles is the tightest coupling between the two.
-- **AS 10 (Property, Plant & Equipment):** Same cost-building philosophy (directly attributable cost in, general overheads out). The tangible/intangible split for combined items (software vs hardware) is decided by which element dominates.
+- **AS 28 (Impairment of Assets):** AS 26 hands off the "is the carrying amount recoverable?" question to AS 28. The mandatory annual test for not-yet-ready and >10-year-life intangibles is the tightest coupling between the two. AS 28 also governs the *capped reversal* of an intangible's impairment.
+- **AS 10 (Property, Plant & Equipment):** Same cost-building philosophy (directly attributable cost in, general overheads out). The tangible/intangible split for combined items (software vs hardware) is decided by which element dominates. Key contrast: AS 10 allows a *revaluation model*; AS 26 does not.
+- **AS 16 (Borrowing Costs):** Interest on funds borrowed to develop a *qualifying* internally generated intangible can be capitalised into its cost during the development/construction period — same logic as for a qualifying tangible asset.
 - **AS 14 (Amalgamations) & AS 21 (Consolidation):** Goodwill arising there is *purchased* — recognised — unlike internally generated goodwill which AS 26 forbids. Fair value of acquired intangibles gets recognised; the unmeasurable residue becomes goodwill.
 - **AS 5 (Net Profit/Prior Period/Changes in Estimates):** Revisions to useful life, amortisation method and residual value are **changes in estimate — prospective**, never restatement.
-- **AS 2 (Inventories):** Intangibles held for sale in ordinary course are inventory, not AS 26.
+- **AS 2 (Inventories):** Intangibles held for sale in ordinary course are inventory, not AS 26. Software built to sell is AS 2; software built to use is AS 26.
 - **AS 12 (Government Grants):** Intangibles obtained via grant (licences, quotas) borrow AS 12 measurement.
+- **AS 9 (Revenue):** A disposal gain on an intangible is **not** revenue — it is netted (proceeds − carrying amount) and shown as other income/expense. AS 26 explicitly keeps it out of the revenue line.
 - **Ind AS 38 contrast:** Ind AS 38 permits a **revaluation model** (active market) and treats intangibles with **indefinite** useful lives (no amortisation, only annual impairment). **AS 26 allows neither** — cost model only, and the 10-year rebuttable presumption governs. This is a classic "state the difference" exam point.
 
 ## 8. Traps & Examiner Tricks
@@ -333,18 +455,26 @@ flowchart LR
 9. **No revaluation model under AS 26.** If a question offers to "revalue the patent upward to market," that's Ind AS 38 thinking — reject it under Indian AS.
 10. **Impairment and amortisation both hit FY of change.** In multi-event problems, amortise for the year *first* (on revised life), *then* test impairment on the reduced carrying amount — order matters for the final number.
 11. **Gain/loss on disposal is not "revenue."** It is other income/expense — netting proceeds against carrying amount.
+12. **The six-criteria date can split a single activity.** Spend on the *same task* (e.g., prototype testing) is capitalised only for the portion incurred *after* all six criteria are met; the pre-criteria portion is expensed. Watch for evenly-spread costs straddling the criteria date.
+13. **Purchased vs internally generated is decided by WHO created it, not what it is.** A brand is forbidden if self-grown but recognised if bought in an amalgamation. Don't apply the prohibition to acquired intangibles.
+14. **"Cannot separate research from development" → treat ALL as research.** The conservative default; don't try to guess a split.
+15. **Deferred-payment cost = cash price equivalent.** If payment terms exceed normal credit, don't capitalise the inflated nominal total; the excess is interest.
+16. **Definition failure ≠ recognition failure.** An item may *be* an intangible asset (Stage 1) yet still fail recognition (Stage 2, unreliable cost) — then it isn't booked separately. Keep the two gates distinct.
+17. **Subsequent expenditure is usually expensed.** Capitalising later spend requires benefits *in excess of the original standard of performance* — rare for intangibles. Don't reflexively add later spend to the asset.
+18. **Impairment reversal is capped.** On recovery, you cannot write the asset back above its depreciated historical cost (what carrying amount would have been with no impairment). Don't over-reverse.
 
 ## 9. First-Principles Recap
 
 - Intangibles are hard because benefit is **uncertain** and cost is **hard to isolate**; AS 26 answers with **prudence + reliability**.
-- An item is an intangible asset only if **Identifiable + Controlled + Future benefit**; recognise only if **probable benefit + cost reliably measurable**.
-- **Purchased** intangibles pass the reliability test (an arm's-length price exists); **self-grown** goodwill/brands/mastheads/customer lists **never** get recognised because their cost can't be separated from the business.
+- An item is an intangible asset only if **Identifiable + Controlled + Future benefit**; recognise only if **probable benefit + cost reliably measurable**. The two gates are separate.
+- The standard measures **cost, never value** — which is why the cost model is the only model and revaluation is banned.
+- **Purchased** intangibles pass the reliability test (an arm's-length price exists); **self-grown** goodwill/brands/mastheads/customer lists **never** get recognised because their cost can't be separated from the business. The test is *who created it*, not *what it is*.
 - **Research is expensed** (you can't yet prove benefit); **development is capitalised only when all six criteria are met**, and only from that date forward.
 - **Once expensed, never reinstated** — the anti-abuse keystone.
 - Measure after recognition at **cost less amortisation less impairment** — **no revaluation** under AS 26.
-- **Residual value is presumed zero**; amortise systematically (SLM if pattern unknown) over useful life with a **rebuttable 10-year presumption**.
+- **Residual value is presumed zero**; amortise systematically (SLM if pattern unknown) over useful life — capped by the *lower* of economic life and legal right — with a **rebuttable 10-year presumption**.
 - Review **period and method annually**; changes are **prospective** (AS 5).
-- The riskiest intangibles (not-yet-ready, life > 10 years) get a **mandatory annual impairment test** under **AS 28**.
+- The riskiest intangibles (not-yet-ready, life > 10 years) get a **mandatory annual impairment test** under **AS 28**; any impairment reversal is capped at depreciated historical cost.
 - Every doubtful case defaults to **expense** — that bias *is* the standard.
 
 ## 10. Quick-Revision Sheet
@@ -352,23 +482,29 @@ flowchart LR
 | Topic | Rule |
 |-------|------|
 | Definition | Identifiable, non-monetary, no physical substance, held for use |
-| Stage 1 tests | Identifiability • Control • Future economic benefit |
+| Two gates | Stage 1 definition (Identifiable • Control • Future benefit) then Stage 2 recognition |
+| Stage 1 tests | Identifiability (separable OR legal right) • Control • Future economic benefit |
 | Recognition | Probable benefit **AND** cost reliably measurable |
+| Software homes | OS integral → AS 10; purchased/developed app → AS 26; built for sale → AS 2 |
 | Initial measurement | **Cost** (purchase price + duties + directly attributable); exclude admin OH, training, advertising, initial losses, refundable taxes |
+| Deferred payment | Cost = cash price equivalent; excess = interest |
 | Amalgamation | At **fair value** if criteria met; else subsumed in goodwill |
 | Exchange | Fair value of asset given up |
 | Internally generated goodwill | **Never** recognise |
-| Internally generated brands/mastheads/titles/customer lists | **Never** recognise |
+| Internally generated brands/mastheads/titles/customer lists | **Never** recognise (but purchased versions **are** recognised) |
 | Research phase | **Expense** always |
 | Development phase | Capitalise only if **all 6** criteria met (feasibility, intention, ability, market/use, resources, reliable cost), from that date |
+| Can't split R from D | Treat all as **research** (expense) |
 | Reinstatement | Once expensed → **never** capitalise later |
+| Subsequent expenditure | Capitalise only if benefits exceed original standard of performance; else expense |
 | Subsequent measurement | Cost − accumulated amortisation − accumulated impairment (**cost model only, no revaluation**) |
 | Residual value | Presumed **NIL** (exceptions: committed buyer / active market) |
-| Useful life | Rebuttable presumption **≤ 10 years**; capped by legal right; include renewal if virtually certain |
+| Useful life | Rebuttable presumption **≤ 10 years**; capped by lower of economic life & legal right; include renewal if virtually certain |
 | Method | Pattern of benefits; if unknown → **SLM** |
 | Amortisation starts | When asset is **available for use** |
 | Review of life/method | **At least each year-end**; change = **prospective (AS 5)** |
 | Mandatory annual impairment test | If (a) not yet available for use, or (b) life > 10 years — per **AS 28** |
+| Impairment reversal | Allowed but capped at depreciated historical cost |
 | Disposal | Derecognise; gain/loss = proceeds − carrying amount → P&L (not revenue) |
-| Disclosure highlights | Life/rate, method, gross & accumulated amounts, reconciliation, reasons if > 10 yrs, aggregate R&D expensed |
+| Disclosure highlights | Internally generated vs others; life/rate, method, gross & accumulated amounts, reconciliation, reasons if > 10 yrs, aggregate R&D expensed |
 | Ind AS 38 contrast | Ind AS allows revaluation + indefinite life; AS 26 does **not** |

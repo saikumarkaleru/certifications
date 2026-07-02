@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 13 — AS 13: Accounting for Investments
 
 ## 1. The Problem
@@ -14,6 +16,8 @@ Three answers compete:
 
 That last instinct is the whole of AS 13. The standard's core insight: **the right measurement depends on your holding intention, because intention determines whether a price change is real news or noise.** A second problem AS 13 solves: what exactly is "cost" when you buy an investment cum-interest, or when a bonus issue drops free shares into your lap and dilutes your average? And a third: when you sell, how do you compute the profit, and what if you only sell part of the holding?
 
+There is also a fourth, quieter problem the standard settles that beginners miss: **the P&L is the *only* place price changes are allowed to land.** AS 13 is a pre-OCI, historical-cost standard. There is no "revaluation reserve" or "other comprehensive income" route for investments the way there is for Ind AS 109. Every write-down, every write-back, every disposal gain hits the Statement of Profit and Loss directly. Internalising that single routing rule prevents half the presentation mistakes students make — you never park an investment loss in a reserve under AS 13.
+
 AS 13 is one of the most *reasoned* standards in the syllabus. Almost nothing in it is arbitrary. Let's build it from the ground up.
 
 ## 2. The Core Idea (analogy)
@@ -25,6 +29,21 @@ Think of two people who own gold.
 **The grandmother** buys gold coins for her granddaughter's wedding fifteen years away. Daily gold prices are irrelevant to her — a dip this year will almost certainly recover before the wedding. She keeps the coins at what she paid and ignores the ticker. *But* — if the coin turns out to be fake, or gold is permanently demonetised as a store of value (a permanent, structural impairment), she must face reality and write it down. Her rule: **cost, less any provision for a diminution that is permanent, not just a passing dip.**
 
 Same asset, gold. Two completely different accounting treatments — driven entirely by **holding horizon and intention**. The jeweller is a *current investment*; the grandmother is a *long-term investment*. That single split — and the two measurement rules that flow from it — is 70% of AS 13. Everything else (cost of purchase, cum-interest, bonus, disposal, reclassification) is detail hanging off this frame.
+
+One more character sharpens the picture: **the pawnbroker who deals gold as his trade.** He is neither jeweller-investor nor grandmother-saver — gold *is his business's stock*. His gold never enters AS 13 at all; it is **inventory under AS 2** (lower of cost and net realisable value). Notice AS 2's rule ("lower of cost and NRV") looks almost identical to the current-investment rule ("lower of cost and fair value") — both are prudence in action — yet they live in different standards because the *reason for holding* differs. The moment you can place any holding into one of these three drawers — trading stock (AS 2), short-term investment (AS 13 current), long-term investment (AS 13 long-term) — you have already done most of the thinking.
+
+*Same brick building, different accounting by intention — the AS 13 gold analogy extended*
+
+```mermaid
+flowchart TD
+    A["An asset you hold"] --> B{"Do you hold it to earn income or appreciation"}
+    B -->|"No it is what you trade"| C["Inventory under AS 2 - lower of cost and NRV"]
+    B -->|"No you use it in operations"| D["PP and E under AS 10 - depreciate"]
+    B -->|"Yes for income or gain"| E["Investment under AS 13"]
+    E --> F{"Readily realisable AND intended for 12 months or less"}
+    F -->|"Both yes"| G["Current investment - lower of cost and fair value"]
+    F -->|"Otherwise"| H["Long-term investment - cost less permanent diminution"]
+```
 
 ## 3. Why It's Built This Way
 
@@ -38,6 +57,10 @@ Notice the asymmetry that runs through the whole standard: **losses that are lik
 
 Why measure long-term at cost and not fair value like Ind AS 109 / IFRS 9 would? Because AS 13 is a **cost-based, prudence-first** framework built for reliability and for protecting creditors/dividend capacity, not for fair-value relevance. Ind AS later swung towards fair value with gains routed through OCI — but for your CA Inter AS paper, the world is cost-based, and that choice is *why* the long-term rule looks conservative.
 
+**Why "lower of cost and fair value" and not just "fair value" for current investments — the deeper reason.** A trading-desk reader cares about realisable cash, so you might expect symmetric fair-value (mark up *and* down). AS 13 refuses the up-mark for two structural reasons. First, **realisation convention** — Indian GAAP recognises income only when it is realised or reasonably certain; an unsold quoted share's rise is neither. Second, **capital maintenance / dividend law** — if unrealised gains hit P&L, they inflate distributable profit, and a company could pay a dividend out of a paper gain that reverses next week, returning capital to shareholders at creditors' expense. "Lower of cost and FV" is therefore not laziness; it is the exact point where relevance (mark down likely losses) and prudence (don't book unrealised gains) are balanced. Ind AS 109 tolerates the up-mark only because it simultaneously *ring-fences* those gains in OCI or restricts their distributability — machinery AS 13 does not have.
+
+**Why the "other-than-temporary" test and not a bright-line percentage?** ICAI deliberately avoids "provide if the fall exceeds X%." A 40% fall in a fundamentally sound cyclical stock during a market crash may be pure noise; a 15% fall in a company that has lost its only customer may be permanent. A mechanical threshold would force wrong answers in both directions. So the standard uses a **judgement test backed by indicators** (continuing investee losses, restricted distributions, sustained non-recovery, falling asset backing). The cost of this design is that it is examinable *as judgement* — the examiner gives you facts and asks you to conclude "temporary" or "other-than-temporary," and both the conclusion and the reasoning earn marks.
+
 ## 4. Full Technical Content (Recognition · Measurement · Presentation · Disclosure)
 
 ### 4.0 Scope — what AS 13 does and doesn't cover
@@ -49,6 +72,8 @@ AS 13 deals with accounting for investments and their disclosure. It **does not*
 - **Shares/debentures held as stock-in-trade** — these are inventory, not investments, so AS 2 governs them (a share-broker's trading stock).
 
 That last carve-out matters: an asset is an "investment" under AS 13 only if held to earn income/appreciation, **not** if it's the thing you trade as your business.
+
+**Read the scope as "AS 13 measures the *asset*, AS 9 measures the *income it throws off*."** This division is the most examined connection in the chapter. When a problem gives you a cum-interest bond, AS 13 tells you the *cost* of the bond and AS 9 tells you *how much interest* to recognise and when. Students who blur the two either capitalise interest into the asset (overstating the investment) or expense acquisition brokerage (understating it). Keep the two ledgers — Investment A/c and Interest A/c — mentally separate from the first line of every problem.
 
 ### 4.1 Recognition — the two classes
 
@@ -63,6 +88,14 @@ Two mutually exclusive buckets:
 
 Two independent conditions must **both** be satisfied for "current": (a) *by nature* readily realisable, and (b) *by intention* held for not more than one year. A blue-chip share you intend to hold for 10 years is readily realisable but **not** current — because intention fails. An unlisted subsidiary's shares held for 3 months are intended short-term but arguably not readily realisable. Intention is king.
 
+**Finer distinctions the exam probes:**
+
+- **"Readily realisable" is about the *market*, not the *holder*.** It asks whether an active, liquid market exists so the asset can be sold quickly at a determinable price — quoted equity, government securities, liquid mutual-fund units qualify; shares of a private company generally do not.
+- **"Intended to be held ≤ 12 months" is measured from the *reporting date*, not perpetually from acquisition.** A bond originally bought as long-term becomes current in the period in which its remaining intended holding drops to a year or less *and* management decides to realise it — which is exactly what triggers a reclassification (4.4).
+- **The classification is made at each balance-sheet date, not frozen at purchase.** Intention is re-assessed every year; a change flips the bucket and forces a transfer at the lower value.
+- **"Long-term" is the residual, not a positive category.** The standard never lists what a long-term investment *is*; it is simply "an investment other than a current investment." So when in doubt, if either currentness-condition fails, the holding is long-term by default.
+- **Trade investments** (shares held to further business relationships, e.g. a stake in a key supplier) are a *sub-species of long-term investments*, disclosed separately in some formats but measured by the same long-term rule.
+
 ### 4.2 Measurement — cost of an investment (at acquisition)
 
 **Cost = purchase price + directly attributable acquisition charges.**
@@ -73,7 +106,7 @@ Three special situations change what "cost" is:
 
 **(a) Acquired by issue of shares/other securities.** Cost = **fair value of the securities issued** (which is their issue price, i.e. market/agreed value), not necessarily face value.
 
-**(b) Acquired in exchange for another asset.** Cost = **fair value of the asset given up**; if that isn't clearly determinable, use the **fair value of the investment acquired**. (Whichever is more clearly evident.)
+**(b) Acquired in exchange for another asset.** Cost = **fair value of the asset given up**; if that isn't clearly determinable, use the **fair value of the investment acquired**. (Whichever is more clearly evident.) The gain or loss on the asset given up (its fair value minus its own carrying amount) is recognised in P&L at the same time — the exchange is treated as a disposal of the old asset plus an acquisition of the new investment, not a cost-neutral swap.
 
 **(c) Cum-interest / cum-dividend purchase (the interest-embedded price problem).** When you buy an interest-bearing security *between* two interest dates, the quoted price often already includes the interest that has accrued since the last coupon. That accrued interest is **not** part of your investment's cost — it's a pre-paid recovery of interest that the seller earned and you'll collect at the next coupon. So:
 
@@ -85,11 +118,30 @@ Same logic for **cum-dividend**: if you buy shares cum-dividend (price includes 
 
 **Ex-interest** purchase: the price excludes accrued interest, so you *additionally* pay accrued interest separately — that separate amount is interest, the quoted price is the cost.
 
+**A cleaner mental model for cum vs ex.** In *both* cases the total cash you part with is the same for the same economics — the label only tells you *how the total splits* between "cost of security" and "accrued interest." Cum-interest: the accrued interest is *buried inside* the quoted price, so you *subtract* it out to reach cost. Ex-interest: the accrued interest is *added on top* of the quoted price, so the quoted price *is* the cost and the add-on is interest. Get this split wrong and both your asset value and your interest income are wrong — a double error the examiner loves.
+
+*How the accrued-interest slice moves through the cum-interest lifecycle*
+
+```mermaid
+flowchart LR
+    A["Cum-interest price paid"] --> B["Accrued interest to last coupon - seller's slice"]
+    A --> C["True cost of the security"]
+    B --> D["Debit Interest Receivable"]
+    C --> E["Debit Investment A/c plus brokerage"]
+    D --> F["Next coupon received"]
+    F --> G["Recovers seller slice - not income"]
+    F --> H["Balance is your interest income for period held"]
+```
+
 **(d) Right shares and bonus shares — the dilution problem.**
 
 - **Bonus shares** cost you **nothing** (they're free, issued out of the company's reserves). So you add the *number* of shares but add **Rs. 0** to cost. Effect: your **average cost per share falls** — the same total cost is now spread over more shares. This is the classic exam trick for per-share cost after a subsequent partial sale.
 - **Right shares** subscribed: added to cost at the **price actually paid** for them.
 - **Right entitlement renounced (sold) rather than taken up:** the sale proceeds of the right are **capital receipt, not income**, and are generally credited to the P&L (as profit on sale of rights) — *however*, where the rights are sold **before the shares are acquired** in circumstances that the offer of rights results in reduction of the "cum-right" value of the original shares, the proceeds may need to be applied to reduce the carrying cost of the original holding. For CA Inter, the safe default the ICAI uses: **sale proceeds of rights renounced → credited to Profit & Loss**, unless the question specifically says the original investment was bought cum-right and the market value ex-right has fallen, in which case adjust cost. Flag and follow the question's framing.
+
+**Why bonus shares dilute but don't destroy value — the first-principles point.** A bonus issue is a book entry inside the investee: it moves rupees from reserves to share capital and hands you more paper. Your *proportionate ownership is unchanged* and the company is no richer, so the market price per share typically falls in proportion (a 1:1 bonus roughly halves the price). Your total wealth is untouched; only the *unit* has been subdivided. That is exactly why accounting adds quantity but adds zero cost — anything else would fabricate value out of a mere subdivision. The same logic explains why you must re-spread the *original* total cost over the *new larger* count before costing any later sale.
+
+**Why a rights renunciation can behave two ways.** A right is itself a valuable, tradeable thing — the right to buy shares below market. If you sell it, you have realised value. The question is *where that value came from*. Normally it is a windfall on top of an intact holding, so it is a P&L gain. But if the very existence of the rights offer has *drained value out of your existing shares* (the shares go "ex-rights" and drop), then part of what you sold was really a piece of your original investment's value leaking out — so the proceeds should reduce the carrying cost of the original holding instead of being booked as profit. ICAI's default in Inter problems is P&L; deviate only on an explicit cum-right-with-value-fall cue.
 
 ### 4.3 Measurement — carrying amount at each balance-sheet date
 
@@ -98,6 +150,8 @@ Same logic for **cum-dividend**: if you buy shares cum-dividend (price includes 
 - *Fair value* = amount for which an asset could be exchanged between knowledgeable, willing parties in an arm's-length transaction. For quoted investments, **fair value = market value** (or net realisable value).
 - The comparison can be made **investment-by-investment**, or **by category** of investments (e.g. all equity together, all bonds together) — but **not** on a total portfolio basis in a way that offsets a fall in one against a rise in another indiscriminately. The prudent, commonly-examined approach is **individual (scrip-by-scrip)** lower-of-cost-and-fair-value, which prevents a gain on Share A from masking a loss on Share B.
 - The **reduction to fair value** (and any subsequent **increase back up to, but not above, cost**) is taken to the **Profit & Loss Statement**. Because it's "lower of cost and FV", the carrying value can rise on recovery but is **capped at original cost** — you never book unrealised gain above cost.
+
+**Why scrip-wise (or at most category-wise) and never whole-portfolio.** The whole point of the lower-of rule is prudence — surface likely losses. Whole-portfolio netting defeats that: a Rs. 50,000 unrealised gain on Share A would silently absorb a Rs. 50,000 unrealised loss on Share B, so no write-down appears and the loss is hidden behind a gain you are not even allowed to book. Scrip-wise application forces each loser to be written down while each winner stays capped at cost — the asymmetry is preserved. Category-wise is a permitted, slightly less granular middle ground; whole-portfolio offset is not.
 
 **Long-term investments: at COST, less provision for OTHER-THAN-TEMPORARY (permanent) diminution.**
 
@@ -108,6 +162,10 @@ Same logic for **cum-dividend**: if you buy shares cum-dividend (price includes 
 - **Reversal:** if the reasons for the reduction **cease to exist** (value recovers and the impairment was other-than-temporary but has genuinely reversed), the provision written down earlier may be **written back**, re-crediting P&L — again capped so carrying amount doesn't exceed original cost.
 
 Put crudely: current investments react to *every* fall (down to FV); long-term investments react only to *permanent* falls. That's the entire measurement story.
+
+**A subtle asymmetry within the long-term rule.** For a long-term investment you provide only for the *permanent* part. If a long-term holding has fallen and part of the fall is judged temporary and part permanent, you provide only the permanent slice — you do **not** write it all the way down to current market value the way you would a current investment. Conversely, on reversal you write back only to the extent the *permanent* reason has genuinely ceased, and never above original cost. The market price is *evidence* about permanence, not the *target* carrying amount.
+
+**"May be" versus "shall be" — a wording trap.** The reduction for an other-than-temporary decline is *required* (you *shall* provide once you conclude the decline is permanent). The *write-back* on reversal is *permitted* language ("may be reversed") but in practice, once the reason has demonstrably ceased, carrying a needless provision understates assets, so the reversal is made — capped at cost. Read the standard's mandatory-vs-permissive verbs carefully; examiners test whether you know provisioning for a permanent fall is not optional.
 
 ### 4.4 Reclassification (transfer between categories)
 
@@ -121,6 +179,23 @@ Intentions change. A long-term holding you now plan to sell within months become
 
 The unifying principle: **transfer at the lower value so that any embedded loss is recognised now and no unrealised gain is created by the mere act of reclassifying.**
 
+**Why the two directions use different "lower-of" pairs.** The pair always compares *cost* against *whatever measure the destination bucket cares about*, and picks the lower. A long-term investment's own carrying figure already embeds any permanent provision, so LT→Current compares cost with that carrying amount. A current investment's relevant measure is fair value, so Current→LT compares cost with fair value. In each case, if the "market-ish" figure is below cost, you transfer at that lower figure and the embedded loss lands in P&L; if it is above cost, you transfer at cost and the would-be gain is suppressed. Same anti-gaming logic, two mechanically different comparisons.
+
+**The tempting trap the rule blocks.** Imagine a company sitting on a long-term investment that has *risen* to Rs. 12 lakh against a Rs. 10 lakh cost. If reclassification let it move at fair value, the firm could flip it to "current," book a Rs. 2 lakh unrealised gain, and inflate profit without selling anything. The "lower of cost and carrying amount / fair value" rule caps the transfer at cost, killing the manufactured gain. Reclassification is a valuation *checkpoint*, never a value-*creation* event.
+
+*The lower-value rule on reclassification — losses surface, gains are suppressed*
+
+```mermaid
+flowchart TD
+    A["Change of intention"] --> B{"Which direction"}
+    B -->|"Long-term to Current"| C["Transfer at lower of cost and carrying amount"]
+    B -->|"Current to Long-term"| D["Transfer at lower of cost and fair value"]
+    C --> E{"Is that lower figure below cost"}
+    D --> E
+    E -->|"Yes"| F["Embedded loss charged to P and L now"]
+    E -->|"No transfer at cost"| G["No gain recognised"]
+```
+
 ### 4.5 Disposal (sale) of an investment
 
 On disposal, **profit/loss = net sale proceeds − carrying amount.** This difference goes to the **Profit & Loss Statement**.
@@ -129,12 +204,21 @@ On disposal, **profit/loss = net sale proceeds − carrying amount.** This diffe
 - If only **part** of a holding is sold, you need a **cost per unit** to determine the carrying amount of the portion sold. AS 13 permits **average carrying amount** (weighted average) — this is where bonus shares, right shares and cum/ex-interest cost adjustments all feed in. Compute the *average cost per share of the whole holding after all adjustments*, then multiply by units sold.
 - If an investment's carrying amount was **different from cost** (e.g. a current investment written down to FV), the profit/loss on sale is computed against the **carrying amount**, and any earlier reduction already charged to P&L is effectively "reversed" through the gain/loss on sale — don't double count.
 
+**Which cost formula, and why weighted average dominates in exams.** The standard permits an averaging basis; the ICAI's investment-account problems almost always use **weighted-average cost**, because bonus and rights layers make a clean FIFO lot-tracking awkward and because the investment ledger already carries a single running "amount" column. Unless a problem explicitly imposes FIFO, apply weighted average: after every bonus/rights adjustment, recompute the average cost per unit, and cost any sale at that current average. A reliable self-check: the *average cost of the units retained after a sale must equal the average cost immediately before the sale* (bonus/rights aside), because a partial sale removes units at the average and cannot shift the average of what remains.
+
+**Disposal when the holding was previously written down.** Suppose a current investment cost Rs. 1,00,000, was written down to fair value Rs. 85,000 last year (Rs. 15,000 already charged to P&L), and now sells for Rs. 92,000 net. Profit on sale = 92,000 − **85,000 (carrying amount)** = Rs. 7,000, *not* 92,000 − 1,00,000. The earlier Rs. 15,000 loss and this year's Rs. 7,000 gain are both correct in their own years; measuring the disposal against carrying amount (not original cost) prevents double-counting the write-down.
+
 ### 4.6 Investment Property
 
 An **investment property** = an investment in **land or buildings** that are **not intended to be occupied substantially for use by, or in the operations of, the investing enterprise** (i.e. not owner-occupied, not used in your own business).
 
 - Under AS 13, an investment property is accounted for as a **long-term investment** → carried at **cost**, subject to provision for **other-than-temporary** diminution (i.e. it does **not** follow AS 10/PP&E depreciation-and-revaluation the way owner-occupied property does, though cost of any building may still be considered; the standard's treatment is the long-term-investment treatment).
 - Contrast: property used in your own operations is **PP&E under AS 10**, depreciated. The distinguishing line is **use/occupation**, exactly like the gold analogy — same brick building, different accounting by intention.
+
+**The examinable boundary cases:**
+- **A building partly owner-occupied and partly let out.** If the portions can be sold (or leased) *separately*, split them — the let-out portion is investment property, the used portion is PP&E. If they cannot be separated and only an *insignificant* portion is held to earn rent, treat the whole as owner-occupied PP&E. The "significant portion" judgement is what makes it examinable.
+- **Property held for undecided future use** (neither committed to own-use nor to letting) is generally treated as investment property until intention crystallises, because it is not currently occupied in operations.
+- **Do not depreciate an AS 13 investment property.** This is the single sharpest AS 13-vs-Ind AS 40 contrast: under AS 13 it sits at cost (less permanent diminution) with *no systematic depreciation charge*, whereas Ind AS 40 would carry it at cost-with-depreciation or fair value. Applying AS 10 depreciation to an AS 13 investment property is a classic wrong answer.
 
 ### 4.7 Carrying amounts — summary table
 
@@ -243,6 +327,54 @@ Rule (Current → Long-term): transfer at **lower of cost (5,00,000) and fair va
 
 *Lesson: "lower value on transfer" is the anti-gaming device — every reclassification recognises embedded losses and forbids embedded gains.*
 
+### Example 5 — Cum-dividend purchase and pre- vs post-acquisition dividend
+
+On **1 September 2025**, M Ltd buys 4,000 equity shares of N Ltd (long-term) at a **cum-dividend price of Rs. 78 per share**, brokerage 1%. On 20 August 2025 (before purchase) N Ltd had **declared a dividend of Rs. 6 per share** for the year ended 31 March 2025, which M Ltd receives on 15 October 2025. On 10 April 2026 N Ltd declares a further dividend of Rs. 5 per share for the year ended 31 March 2026.
+
+**Step 1 — strip the declared dividend out of the cum-dividend cost.** The Rs. 6 relates to a period *before* M Ltd owned the shares — it is a **pre-acquisition dividend**, a recovery of capital, not income.
+- Cum-dividend price = 4,000 × 78 = Rs. 3,12,000.
+- Dividend embedded = 4,000 × 6 = Rs. 24,000.
+- Ex-dividend cost of shares = 3,12,000 − 24,000 = Rs. 2,88,000.
+
+**Step 2 — add brokerage** (1% of cum price transacted, ICAI convention) = 1% × 3,12,000 = Rs. 3,120, capitalised.
+- **Cost of investment = 2,88,000 + 3,120 = Rs. 2,91,120.**
+
+**Step 3 — receipt of the Rs. 24,000 dividend on 15 Oct 2025.** Because it is pre-acquisition, credit it against the **investment cost**, not to income:
+- Cost after dividend received = 2,91,120 − 24,000 = **Rs. 2,67,120.**
+- (Some presentations leave cost at ex-dividend Rs. 2,88,000 and never route the dividend through cost again — the key is that the Rs. 24,000 is *not* income and is *not* double-counted. Either way, income from this dividend = **nil**.)
+
+**Step 4 — the 10 April 2026 dividend of Rs. 5** relates to the year ended 31 March 2026, a period during which M Ltd *held* the shares → **post-acquisition dividend = income** under AS 9, recognised when the right to receive is established (declaration).
+- Dividend income = 4,000 × 5 = **Rs. 20,000** to P&L (in the year the right is established).
+
+*Lesson: the cum-dividend split mirrors the cum-interest split — carve the pre-acquisition slice out of cost as a capital recovery, and only post-acquisition distributions are income. Reconcile: total cash out at purchase = 3,12,000 + 3,120 = 3,15,120 = cost 2,91,120 + pre-acq dividend receivable 24,000 ✓.*
+
+### Example 6 — Current investment write-down and reversal (scrip-wise), then partial sale
+
+R Ltd holds three **current** investments at 31 March 2026:
+
+| Scrip | Cost (Rs.) | Fair value 31-Mar-26 (Rs.) |
+|---|---|---|
+| Alpha | 2,00,000 | 1,70,000 |
+| Beta | 1,50,000 | 1,80,000 |
+| Gamma | 1,00,000 | 90,000 |
+
+**Step 1 — carrying amount, scrip-wise lower of cost and FV:**
+- Alpha: lower(2,00,000, 1,70,000) = **1,70,000** (write down 30,000).
+- Beta: lower(1,50,000, 1,80,000) = **1,50,000** (gain of 30,000 **ignored** — capped at cost).
+- Gamma: lower(1,00,000, 90,000) = **90,000** (write down 10,000).
+- **Total carrying = 1,70,000 + 1,50,000 + 90,000 = Rs. 4,10,000.** Charge to P&L = 30,000 + 10,000 = **Rs. 40,000.**
+
+**Trap check:** whole-portfolio approach would net Beta's Rs. 30,000 gain against the Rs. 40,000 of losses and show only a Rs. 10,000 write-down (or carry at total cost 4,50,000 vs total FV 4,40,000 = write down only 10,000). That is **wrong** — it hides Alpha's and Gamma's losses behind Beta's forbidden gain. Scrip-wise gives the prudent Rs. 40,000.
+
+**Step 2 — one year later (31 March 2027), Alpha recovers.** Its fair value rises to Rs. 2,20,000; cost is still Rs. 2,00,000; last year's carrying = Rs. 1,70,000.
+- New carrying = lower(cost 2,00,000, FV 2,20,000) = **Rs. 2,00,000.**
+- Write-back to P&L = 2,00,000 − 1,70,000 = **Rs. 30,000** (reversing last year's write-down). The extra Rs. 20,000 that FV exceeds cost is **not** recognised — carrying is capped at original cost.
+
+**Step 3 — R Ltd sells all of Gamma on 5 April 2027 for Rs. 96,000 net.** Gamma's carrying amount was Rs. 90,000.
+- Profit on sale = 96,000 − **90,000 (carrying)** = **Rs. 6,000** to P&L (not 96,000 − 1,00,000; the Rs. 10,000 write-down was already charged last year — no double count).
+
+*Lesson: three separate mechanics in one problem — (i) scrip-wise lower-of on the way down, (ii) reversal capped at cost on the way up, (iii) disposal measured against carrying amount, not original cost.*
+
 ## 6. Presentation & Disclosure Formats
 
 **Balance sheet classification (Schedule III):** investments appear as **Non-current investments** (long-term) and **Current investments**, each split into quoted and unquoted, with aggregate market value of quoted investments shown.
@@ -254,6 +386,8 @@ Rule (Current → Long-term): transfer at **lower of cost (5,00,000) and fair va
 4. **Aggregate amount of quoted and unquoted investments**, and the **aggregate market value of quoted investments** (so the reader can see the gap between carried cost and market for long-term quoted holdings).
 5. **Significant restrictions** on the right of ownership, realisability of investments, or the remittance of income and proceeds of disposal.
 6. Any **other disclosures** required by the relevant statute.
+
+**Why disclosure 4 (market value of quoted investments) is the pressure-release valve.** Long-term quoted investments sit at cost, so a reader cannot see how far market value has drifted below (or above) that cost when the drift is judged *temporary* and no provision is made. Disclosure 4 forces the market value into the notes anyway — the balance sheet stays prudent (cost), but the reader is not kept in the dark about a large unrecognised gap. This is the standard's way of reconciling reliability (cost on the face) with relevance (market in the notes).
 
 **Illustrative note format:**
 
@@ -270,6 +404,19 @@ Carrying amount                              XXX            XXX
 Aggregate market value of quoted investments XXX            XXX
 ```
 
+**Investment Account (ledger) format — the exam's workhorse.** Numerical AS 13 problems are usually solved in a three-money-column investment account, which keeps the *capital* column (cost) and the *income* column (interest/dividend) side by side so the two never contaminate each other:
+
+```
+                    Investment in 12% Bonds Account
+Date   Particulars      Nominal  Interest  Cost || Date  Particulars   Nominal  Interest  Cost
+                        (Face)   (Income)  (Cap)||
+--------------------------------------------------||-----------------------------------------------
+       To Bank          5,00,000  5,000  5,15,590|| By Bank (coupon)      —      30,000     —
+       (purchase)                                || By Bank (sale) ...
+       To P&L (accrued)     —     ...      —     || By Balance c/d   ...    ...      ...
+```
+The **Nominal** column tracks face value (drives interest computation), the **Interest** column isolates accrued/received interest (feeds P&L via AS 9), and the **Cost** column is the AS 13 carrying amount. Cum-interest, ex-interest, bonus (Nominal up, Cost unchanged), rights (both up) and disposal all post cleanly across these three columns — and the closing Cost balance is what appears on the balance sheet.
+
 ## 7. Connections
 
 - **AS 9 (Revenue Recognition):** AS 13 explicitly *doesn't* cover *when* interest/dividend/rent is recognised — AS 9 does. Dividend income is recognised when the **right to receive is established**; interest on a **time-proportion** basis. Pre-acquisition dividends reduce cost (capital recovery); post-acquisition dividends are income — a direct link to the cum-dividend cost rule.
@@ -277,6 +424,8 @@ Aggregate market value of quoted investments XXX            XXX
 - **AS 10 (Property, Plant & Equipment):** owner-occupied property = PP&E (depreciated). Investment property (not owner-occupied) = long-term investment under AS 13. The fork is *use*.
 - **AS 28 (Impairment):** long-term investments' "other-than-temporary diminution" is AS 13's own impairment mechanism; AS 28 governs impairment of most *other* assets. Don't apply AS 28's value-in-use recoverable-amount machinery to AS 13 investments.
 - **AS 21/23/27 (Consolidation, Associates, JVs):** investments in subsidiaries/associates/JVs are still shown at cost under AS 13 in the **separate** financial statements, but consolidated/equity-accounted in group accounts. Disclosure of dividends from subsidiaries separately (point 3 above) links here.
+- **AS 11 (Foreign Exchange):** a foreign-currency investment classified as long-term (a non-monetary item carried at cost) is translated at the **exchange rate on the date of transaction** and *not* restated at the closing rate — so exchange fluctuations do not touch its carrying amount, reinforcing the cost model. A monetary investment (e.g. a foreign-currency bond receivable stream) follows AS 11's closing-rate restatement instead. Knowing which investments are monetary vs non-monetary is where AS 13 and AS 11 intersect.
+- **AS 4 (Events after the Balance Sheet Date):** a decline in an investment's value *after* the year-end can be an adjusting event if it provides evidence of a condition that *existed at* the balance-sheet date (helping judge whether a diminution was other-than-temporary). A pure post-year-end market crash is usually non-adjusting. This is how AS 4 feeds the "temporary vs permanent" judgement.
 - **Ind AS 109 / Ind AS 40:** the fair-value-through-P&L/OCI world and separate Investment Property standard — the *contrast* that explains why AS 13 looks conservative.
 - **Company law / dividend rules:** because AS 13 won't let unrealised gains hit P&L, distributable profits stay prudent — a creditor-protection linkage.
 
@@ -293,6 +442,11 @@ Aggregate market value of quoted investments XXX            XXX
 9. **Portfolio netting for current investments.** Don't offset a gain on one scrip against a loss on another to avoid a write-down. Prudent approach is scrip-by-scrip (or category), not whole-portfolio offset.
 10. **Investment property depreciated like PP&E.** Under AS 13 it's a long-term investment (cost less permanent diminution), not AS 10 depreciation. (This is a known AS 13 vs Ind AS 40 contrast trap.)
 11. **Writing back beyond cost.** Any reversal of a write-down (current recovery or long-term reason ceasing) is capped at **original cost** — never book above cost.
+12. **Measuring disposal profit against original cost after a prior write-down.** Once a current investment has been written down to FV, disposal profit is measured against the **carrying amount**, not original cost — otherwise you double-count the earlier loss. (See Example 6, Step 3.)
+13. **Brokerage on the *net/ex* figure instead of the transacted price.** Acquisition brokerage is a percentage of the *price actually transacted* (typically the cum/quoted price), then capitalised — students sometimes compute it on the ex-interest cost and understate cost. Follow the question's stated base; the ICAI convention is the transacted price.
+14. **Forgetting to recompute the average after *each* corporate action.** Bonus, then rights, then sale must be processed **in date order**, recomputing the running average after each event. Applying a sale against a pre-bonus average (or a pre-rights average) gives the wrong disposal profit.
+15. **Treating a foreign long-term investment's exchange movement as a value change.** A non-monetary foreign investment stays at the transaction-date rate (AS 11) — do not restate it at closing rate and do not confuse the FX effect with an AS 13 diminution.
+16. **Confusing "declared but not received" timing for dividends.** Post-acquisition dividend income is recognised when the **right to receive is established** (usually declaration), under AS 9 — not when cash arrives. Only the *pre- vs post-acquisition* character decides income vs cost-reduction, not the receipt date.
 
 ## 9. First-Principles Recap
 
@@ -303,8 +457,9 @@ Aggregate market value of quoted investments XXX            XXX
 - **Cost = price + brokerage + duties**; and it must **exclude accrued interest** (cum-interest) and **pre-acquisition dividends** (cum-dividend), which are capital/interest recoveries, not asset cost.
 - **Bonus shares are free** (lower the average), **rights** add cost at the price paid, **renounced rights** usually give a P&L gain — the fully-adjusted **average cost** governs any partial disposal.
 - **Reclassify at the lower value** so embedded losses surface and embedded gains can't.
-- **Disposal profit = net proceeds − carrying amount**, to P&L.
-- **Investment property** = non-owner-occupied land/buildings, treated as a **long-term investment**.
+- **Disposal profit = net proceeds − carrying amount**, to P&L — measured against carrying amount, never against a stale original cost after a write-down.
+- **Investment property** = non-owner-occupied land/buildings, treated as a **long-term investment** (cost, no depreciation).
+- **Asset vs income are two ledgers:** AS 13 values the asset; AS 9 recognises the income it throws off; keep the Investment and Interest/Dividend accounts separate.
 - The spine throughout is **prudence/asymmetry**: recognise probable losses now, gains only on realisation.
 
 ## 10. Quick-Revision Sheet
@@ -312,24 +467,28 @@ Aggregate market value of quoted investments XXX            XXX
 | Item | Rule |
 |---|---|
 | **Definition** | Asset held for income (dividend/interest/rent) or capital appreciation; not stock-in-trade, not owner-occupied property |
-| **Current investment** | Readily realisable **and** intended to hold ≤ 12 months |
-| **Long-term investment** | Everything else (default) |
+| **Current investment** | Readily realisable **and** intended to hold ≤ 12 months (both conditions) |
+| **Long-term investment** | Everything else (residual/default) |
+| **Reassessed** | Classification re-tested at **each** balance-sheet date, not frozen at purchase |
 | **Cost** | Price + brokerage + fees + duties |
+| **Acquired by securities issued** | Cost = fair value of securities issued |
+| **Acquired by asset exchange** | Cost = FV of asset given up (else FV of investment acquired); gain/loss on old asset to P&L |
 | **Cum-interest buy** | Cost = cum price − accrued interest to last coupon; accrued → Interest A/c |
+| **Ex-interest buy** | Quoted price = cost; accrued interest paid *on top* → Interest A/c |
 | **Cum-dividend buy** | Pre-acquisition dividend received → reduce cost (not income) |
-| **By securities issued** | Cost = fair value of securities issued |
-| **By asset exchange** | Cost = FV of asset given up (else FV of investment acquired) |
 | **Bonus shares** | Add quantity, add Rs. 0 → average cost falls |
 | **Rights subscribed** | Add at price paid |
 | **Rights renounced (sold)** | Proceeds → P&L (default); reduce cost only if cum-right value falls |
-| **Current — year-end** | **Lower of cost and fair value** (scrip-wise); changes → P&L; cap at cost |
+| **Current — year-end** | **Lower of cost and fair value** (scrip-wise, never whole-portfolio net); changes → P&L; cap at cost |
 | **Long-term — year-end** | **Cost**, less provision for **other-than-temporary** diminution → P&L; temporary falls ignored |
+| **Reversal cap** | Never write back above **original cost** |
 | **LT → Current transfer** | **Lower of cost and carrying amount** |
 | **Current → LT transfer** | **Lower of cost and fair value** |
 | **Disposal** | Profit/loss = **net proceeds − carrying amount** → P&L; use **average** cost for partial sale |
-| **Investment property** | Non-owner-occupied land/building → treat as **long-term investment** (cost less permanent diminution) |
-| **Reversal cap** | Never write back above **original cost** |
-| **Key disclosures** | Policy; classification; income (interest/div/rent, current vs LT, subsidiary div separately); disposal P&L; aggregate quoted/unquoted; market value of quoted; restrictions |
+| **Partial sale after prior write-down** | Measure against **carrying amount**, not original cost |
+| **Investment property** | Non-owner-occupied land/building → **long-term investment** (cost, **no depreciation**) |
+| **Foreign long-term investment** | Non-monetary → transaction-date rate (AS 11); no closing-rate restatement |
+| **Key disclosures** | Policy; classification; income (interest/div/rent, current vs LT, subsidiary div separately); disposal P&L; aggregate quoted/unquoted; **market value of quoted**; restrictions |
 | **Golden thread** | Prudence — losses (if likely real) now, gains only on realisation |
 
-*If unsure of any exact numeric threshold or a specific rights-renunciation treatment in a given problem, teach the principle and confirm the current position in the latest ICAI study material — but the classification-drives-measurement logic above is the durable core of AS 13.*
+*If unsure of any exact numeric threshold or a specific rights-renunciation treatment in a given problem, teach the principle and confirm the current position in the latest ICAI study material / applicable AY — but the classification-drives-measurement logic above is the durable core of AS 13.*

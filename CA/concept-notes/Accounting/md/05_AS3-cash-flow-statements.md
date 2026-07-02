@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 05 — AS 3 — Cash Flow Statements
 
 ## 1. The Problem
@@ -14,7 +16,16 @@ Look at what the standard statements actually tell you:
 
 So here is the concrete danger: **a company can be highly profitable and still go bankrupt** because it runs out of cash. This happens constantly — the classic "profitable but insolvent" trap. Profit is an *opinion* (it depends on estimates like depreciation, provisions, and revenue-recognition judgments). Cash is a *fact* — the bank balance either moved or it didn't. Creditors, bankers, and investors ultimately get repaid in cash, not in accrued profit.
 
+**Why does profit systematically diverge from cash? Four structural wedges.** Understanding these upfront tells you exactly what the cash flow statement must "undo":
+
+1. **Timing of recognition vs collection.** Revenue is booked on dispatch; cash arrives weeks later. Every rupee locked in a debtor is profit that hasn't become cash.
+2. **Non-cash charges.** Depreciation, amortisation, provisions, and write-offs reduce profit without any cash leaving. They are accounting expressions of value consumed, not cash paid.
+3. **Capital vs revenue split.** Buying a machine is a huge cash outflow but touches the P&L only slowly, as depreciation. So a heavy-investing year can be cash-poor yet profitable.
+4. **Financing that never touches the P&L.** Raising equity, repaying loans, and paying dividends move enormous cash but appear nowhere in profit. A company can "spend" its whole year's profit repaying debt and the P&L will not whisper a word.
+
 The users of accounts therefore need a third statement that answers precisely: *Where did the cash come from, and where did it go?* That statement is the **Cash Flow Statement**, governed in India by **AS 3**.
+
+**Who exactly reads it, and for what?** Bankers test debt-servicing capacity (can operating cash cover interest and instalments?). Investors gauge *quality of earnings* (is reported profit backed by real cash, or is it "paper profit" trapped in receivables?). Rating agencies model default risk. Management uses it for treasury planning and dividend decisions. Each of these users needs the *cash* truth, and none of them can extract it from the P&L or Balance Sheet alone — which is the entire justification for a separate standard.
 
 ## 2. The Core Idea
 
@@ -32,11 +43,30 @@ Why split it three ways? Because a bank reading your accounts wants to know one 
 
 The analogy that unlocks the whole chapter: **your salary account.** Operating flows are your salary in and your living expenses out. Investing flows are buying a car or selling old gold. Financing flows are taking a personal loan or repaying your EMI. If your salary (operating) covers your life without dipping into loans (financing) or selling assets (investing), you are financially sound. A company is judged the same way.
 
+**Reading the *signs* of the three engines together — the diagnostic grid.** The examiner's "interpretation" sub-questions test whether you can read the *pattern*, not just compute numbers. A healthy mature company shows **+ operating, − investing, − financing** (core business funds growth *and* returns capital to providers). A young growth company shows **+ operating, − investing, + financing** (business earns cash but still raises capital to expand faster). A distressed company shows **− operating, + investing, + financing** (business is *bleeding* cash and plugs the hole by selling assets and borrowing) — the classic red flag. Memorise the danger signature: *negative operating cash flow propped up by asset sales and fresh debt.*
+
+```mermaid
+flowchart TD
+    A["Net profit reported"] --> B{"Did cash actually move?"}
+    B -->|"No cash effect"| C["Remove it - depreciation provisions non-cash gains"]
+    B -->|"Cash moved but belongs elsewhere"| D["Relocate it - interest gains on disposal"]
+    B -->|"Cash moved from core trade"| E["Keep in Operating"]
+    C --> F["Operating cash flow"]
+    D --> G["Investing or Financing"]
+    E --> F
+    F --> H["Reconcile to change in Balance Sheet cash"]
+    G --> H
+```
+
+*The whole chapter in one flow — every rule below is an answer to "did cash move and where does it belong".*
+
 ## 3. Why It's Built This Way
 
 Every design choice in AS 3 exists to solve a specific weakness of the accrual accounts. Let's earn each rule before stating it.
 
 **Why "cash AND cash equivalents", not just cash?** If we tracked only notes-and-coins-and-bank-balance, a company could hide manipulation by parking cash in a 30-day treasury bill on 31 March — it would look like an "investment" and vanish from cash. That's absurd; a 30-day T-bill is *cash in all but name*. So AS 3 widens the pool to **cash equivalents**: short-term, highly liquid investments *readily convertible* into known amounts of cash and subject to *insignificant risk* of change in value. The practical test: original maturity of **three months or less** from the date of acquisition, and held to *meet short-term commitments* rather than for investment. This stops the game-playing while keeping the definition tight.
+
+**Why "three months from acquisition" and not "three months to year-end"?** Because the intent is fixed *when you buy* the instrument. A 5-year bond purchased with 2 months left to maturity *is* a cash equivalent (you bought a near-cash instrument); a 5-year bond originally bought years ago is *not* a cash equivalent in its final three months, because you originally acquired it as an investment. The classification is anchored to the acquirer's intent and the instrument's *original* term, which prevents reclassifying long-term investments into "cash" just to flatter liquidity near year-end.
 
 **Why is the operating engine reported first, and why does it matter most?** Because it's the only self-sustaining source. You can only sell your factory once; you can only raise so much equity before shareholders revolt. But a good operating cash flow renews itself every year. Placing it first, and forcing companies to show it separately, lets a reader immediately test the quality of reported profit: if profit is ₹40 lakh but operating cash is ₹2 lakh, the profit is "soft" — locked up in receivables and inventory.
 
@@ -45,6 +75,10 @@ Every design choice in AS 3 exists to solve a specific weakness of the accrual a
 **Why does the whole statement have to reconcile to the change in the Balance Sheet's cash line?** Because that's the integrity check that makes the statement trustworthy. The closing cash of the statement *must* equal opening cash plus the three net flows, and *must* tie to the Balance Sheet. If it doesn't, you've missed a transaction. This self-checking property is exactly what makes cash flow analysis so hard to fake — unlike profit, it can't drift.
 
 **Why exclude non-cash transactions entirely?** If you buy a building by issuing shares to the seller, no cash moved. Showing it as a ₹1 crore investing outflow and a ₹1 crore financing inflow would *invent* cash movements that never happened, defeating the entire purpose. So AS 3 says: non-cash transactions are excluded from the statement and disclosed separately in the notes (so the reader still learns about them).
+
+**Why report gross rather than net (mostly)?** A company that borrows ₹1 crore and repays ₹90 lakh in the same year has been far more *active* — and carries far more refinancing risk — than one that borrowed ₹10 lakh net. Netting to a single ₹10 lakh figure would hide that churn. Gross reporting preserves information about the *scale* of financing and investing activity, which is exactly what a lender assessing rollover risk needs to see. The narrow exceptions (quick turnover, large amounts, short maturities) exist only where the gross figures would be voluminous and uninformative — e.g., a bank's daily customer deposit churn.
+
+**Why does the classification of interest and dividends depend on the *nature* of the enterprise?** Because "operating" means *principal revenue-producing activity*, and that differs by business model. For a bank, lending and borrowing money literally *is* the trade, so interest is operating. For a manufacturer, borrowing merely *funds* the factory — it is financing. The standard refuses a one-size rule because doing so would misdescribe one of the two business types. This principle — *classify by what the activity means to this specific enterprise* — is the deep idea the examiner keeps probing.
 
 Hold these "why"s in mind — every technical rule below is just one of these principles made precise.
 
@@ -56,9 +90,13 @@ We'll walk through **R**ecognition (what belongs in the statement), **M**easurem
 
 **Cash** = cash on hand + demand deposits (balances you can withdraw on demand).
 
-**Cash equivalents** = short-term, highly liquid investments that are (a) *readily convertible* to known amounts of cash and (b) subject to *insignificant risk* of value change. Rule of thumb: **maturity ≤ 3 months** from acquisition. Equity investments are normally excluded (their value fluctuates). Bank overdrafts *repayable on demand* that form an integral part of cash management are treated as *negative cash equivalents* (netted against cash), not as financing.
+**Cash equivalents** = short-term, highly liquid investments that are (a) *readily convertible* to known amounts of cash and (b) subject to *insignificant risk* of value change. Rule of thumb: **maturity ≤ 3 months** from acquisition. Equity investments are normally excluded (their value fluctuates) — *except* redeemable preference shares acquired shortly before their redemption date, which can qualify because the redemption amount and date are known. Bank overdrafts *repayable on demand* that form an integral part of cash management are treated as *negative cash equivalents* (netted against cash), not as financing.
+
+**A finer distinction on overdrafts.** Only overdrafts that fluctuate between positive and negative and are *integral to cash management* net against cash. A term loan or a drawn-down cash-credit facility that stays perpetually overdrawn is a *financing* liability, and movements in it are financing flows — not cash equivalents. The test is behaviour (does it swing in and out like a current account?) plus intent (is it used to manage day-to-day liquidity?), not merely the label "overdraft".
 
 **Cash flows** = inflows and outflows of cash and cash equivalents. Note the crucial exclusion: **movements *between* cash and cash equivalents are NOT cash flows** — moving ₹10 lakh from your current account into a 60-day T-bill is just rearranging the same pool. Recognising it would double-count.
+
+**Restricted cash.** Balances the entity holds but *cannot freely use* — e.g., margin money against a guarantee, unclaimed dividend accounts, escrow balances, or cash in a country with exchange controls — are still cash for the statement but must be *disclosed* with commentary, because a reader might otherwise overestimate available liquidity. Note the subtlety: they remain within the cash pool (they are still the entity's cash), the disclosure simply warns the reader they are not deployable.
 
 ### 4.2 The three activities (Presentation logic)
 
@@ -69,6 +107,14 @@ We'll walk through **R**ecognition (what belongs in the statement), **M**easurem
 | **Financing** | Changes in **size/composition of owners' capital and borrowings** | "Did this change who funds the business?" | Issue/buy-back of shares, share premium, raising/repaying loans & debentures, dividends *paid*, interest *paid* |
 
 **Operating is the residual bucket** — anything not clearly investing or financing falls here. That's deliberate: it captures the messy day-to-day reality of trading.
+
+**Boundary cases worth memorising.** These sit *right on* the activity borders and are exactly where examiners plant marks:
+
+- **Trade advances and operating loans** (e.g., advance to a supplier for goods) → **operating**. But a **loan given to a third party as an investment of surplus** → **investing**. Same word "loan", different activity, decided by purpose.
+- **Cash received on sale of goods held as inventory** → operating; **cash on sale of a fixed asset** → investing. The asset's *classification in the books* decides.
+- **A property developer** whose stock-in-trade is buildings: buying and selling those buildings is **operating**, not investing, because property *is* its core inventory. Contrast a manufacturer selling its office building → investing.
+- **Insurance proceeds**: on loss of inventory → operating; on loss of a fixed asset → investing; the nature of the destroyed asset governs.
+- **Interest capitalised** into the cost of a qualifying asset (AS 16) is part of the *investing* outflow when the asset is paid for, not a separate financing line.
 
 ### 4.3 Two methods for Operating cash flow (Measurement)
 
@@ -115,7 +161,22 @@ Adjustments for WORKING CAPITAL:
 
 3. **Working-capital changes (the timing bridge).** This is the heart of "profit ≠ cash". A credit sale raises profit *and* raises debtors, but no cash arrived — so an **increase in receivables is subtracted**. Buying inventory ties up cash — an **increase in inventory is subtracted**. Buying on credit *delays* a payment — an **increase in payables is added** (cash conserved). The mnemonic that flows from logic, not rote: *increase in a current asset uses cash (subtract); increase in a current liability provides cash (add)* — and reverse for decreases.
 
+**A subtle working-capital trap: not every current-asset movement is operating.** Only *operating* working-capital items adjust the operating section. Watch for contaminants hiding in "current assets/liabilities":
+
+- **Interest accrued but not due** on borrowings sits in current liabilities but relates to *financing* — exclude from working-capital adjustment and handle via the interest line.
+- **Advance tax / TDS receivable** relates to tax, folded into the tax-paid computation, not treated as an ordinary receivable movement.
+- **Proposed/unpaid dividend** and **capital creditors** (amounts owed for fixed assets bought on credit) are *not* operating payables — they belong to financing and investing respectively. Including capital creditors in the trade-payables movement is a classic silent error.
+- **Provision for doubtful debts**: adjust receivables at *gross* and add back the provision as a non-cash charge, or work with net receivables consistently — pick one and stay consistent, or the cash figure double-counts the provision.
+
 **Why is the indirect method more common in practice?** Two reasons. First, **data availability** — it's built entirely from figures already in the P&L and the comparative Balance Sheet, no new ledger analysis needed. Second, and more importantly for analysis, it **explicitly reconciles profit to operating cash**, so a reader can *see* why the ₹40 lakh profit became only ₹2 lakh of cash. The direct method gives cleaner information for forecasting but requires digging through cash records, so most companies (and most exam problems) use indirect. AS 3 *encourages* the direct method but permits both.
+
+**Converting between the two methods (a favourite twist).** If a question gives you the indirect build-up and asks for the direct presentation of a single line, derive it algebraically:
+
+- **Cash received from customers** = Sales (or revenue) + Opening debtors − Closing debtors (− bad debts written off, + any decrease in advance from customers). It is the debtors account solved for the cash side.
+- **Cash paid to suppliers** = Cost of goods sold + Increase in inventory + Decrease in creditors (= Purchases − increase in creditors, where Purchases = COGS + closing stock − opening stock).
+- **Cash paid to employees/for expenses** = Expense per P&L + Decrease in outstanding expense − non-cash portion.
+
+These identities are just the ledger accounts of debtors, creditors, and expense payables read from the cash column — reconstructing them is the same skill as Section 4.5.
 
 ### 4.4 Special items — the tricky classifications
 
@@ -132,13 +193,17 @@ These are the examiner's favourite battleground. Reason through each.
 
 *Why?* For a bank, lending and borrowing money *is* the core trade — interest is operating revenue/cost. For a manufacturer, borrowing is how it *funds* itself (financing) and lending/investing surplus cash is *investing*. Dividend **paid** is *always* financing — it's a return to the providers of capital, never a trading cost. Whichever classification is chosen, it must be **applied consistently** and each item disclosed separately.
 
-**Income tax.** Cash paid for taxes is classified as **operating** *unless* it can be *specifically identified* with an investing or financing transaction (e.g., capital gains tax on selling a building could attach to investing). The default and exam-safe answer: **operating**, shown as a single line, and **disclosed separately**. Compute tax *paid* by working the provision account (see worked example).
+**A nuance the tables hide:** even for a non-financial enterprise, interest *paid* that has been **capitalised** into a qualifying asset is not a financing outflow of the operating build-up — it forms part of the asset's cost and hence the investing outflow. Only interest *expensed* in the P&L is added back in operating and shown as a financing outflow. Watch for a question that capitalises borrowing costs under AS 16.
 
-**Extraordinary items.** Cash flows from extraordinary items (e.g., insurance claim on a fire loss, litigation settlement) are classified as operating, investing, or financing *as appropriate to their nature*, and **disclosed separately**. The reader must see them because they won't recur.
+**Income tax.** Cash paid for taxes is classified as **operating** *unless* it can be *specifically identified* with an investing or financing transaction (e.g., capital gains tax on selling a building could attach to investing). The default and exam-safe answer: **operating**, shown as a single line, and **disclosed separately**. Compute tax *paid* by working the provision account (see worked example). If both **advance tax paid** and a **provision** exist, reconstruct with the advance-tax/TDS asset on the debit side and the provision on the credit side to isolate the actual cash outflow; a net-off shortcut misfires when a refund is received.
 
-**Foreign-currency cash flows.** Record at the **exchange rate on the date of the cash flow** (or a weighted-average approximation). *Unrealised* gains/losses from restating foreign-currency cash balances at year-end are **not cash flows** — but they are reported *separately* to reconcile opening and closing cash.
+**Extraordinary items.** Cash flows from extraordinary items (e.g., insurance claim on a fire loss, litigation settlement) are classified as operating, investing, or financing *as appropriate to their nature*, and **disclosed separately**. The reader must see them because they won't recur. (Note: post-AS-5 revision the P&L no longer shows a separate "extraordinary items" head, but AS 3 retains the *disclosure* requirement so the reader can identify non-recurring cash flows — mention this if a question probes AS 3 vs AS 5.)
+
+**Foreign-currency cash flows.** Record at the **exchange rate on the date of the cash flow** (or a weighted-average approximation). *Unrealised* gains/losses from restating foreign-currency cash balances at year-end are **not cash flows** — but they are reported *separately* to reconcile opening and closing cash. The classic mechanic: if you hold $ cash and the rupee weakens, your rupee cash balance rises with no cash movement; that revaluation is shown as a separate reconciling line ("effect of exchange rate changes on cash held") *after* the three activities, so A+B+C plus this line equals the change in reported cash.
 
 **Non-cash transactions (exclude, then disclose).** Acquiring an asset by issuing shares or by finance lease, converting debentures into equity, issuing bonus shares — **no cash moves**, so they are excluded from the statement and **disclosed by way of note**. Bonus issue and conversion are pure book entries; leaving them out keeps the statement honest.
+
+**Acquisitions and disposals of business units.** The aggregate cash paid or received for acquiring or disposing of a subsidiary or business unit is presented **net of cash and cash equivalents acquired/disposed**, as a single line in **investing**, with disclosure of the total consideration, the portion in cash, and the assets/liabilities acquired. This prevents the double-counting that would arise from bringing in the acquiree's own cash as if it were an operating inflow.
 
 **Gross vs net reporting.** Generally report investing and financing flows **gross** (show ₹1 crore borrowed and ₹40 lakh repaid separately, not ₹60 lakh net) — netting hides the scale of activity. Netting is allowed only in narrow cases (e.g., items with quick turnover, large amounts, short maturities — like customer deposits in a bank).
 
@@ -153,6 +218,29 @@ This is the exam's core skill. The method is mechanical once you see it as **exp
 5. **Sum the three activities**; the net must equal *closing cash − opening cash*. If it doesn't, an item is misclassified or missing.
 
 That last reconciliation is your built-in answer-checker — worth its weight in marks.
+
+**The universal ledger-reconstruction templates.** Almost every "hard" AS 3 problem reduces to reading one figure off a T-account. Learn these four skeletons and you can crack any twist:
+
+```
+Provision for Tax A/c              Fixed Assets (at cost) A/c
+Dr: Tax PAID (bal fig)             Dr: Opening bal, Additions (bal fig)
+    Closing bal c/d                Cr: Cost of asset sold, Closing bal c/d
+Cr: Opening bal b/d, P&L charge
+
+Accumulated Depreciation A/c       Reserves / Surplus (P&L) A/c
+Dr: Dep on asset sold,             Dr: Dividend paid, Transfer to reserve,
+    Closing bal c/d                    Closing bal c/d
+Cr: Opening bal b/d,               Cr: Opening bal b/d,
+    Dep charge for year (bal fig)      Profit for the year (bal fig)
+```
+
+**Where each reconstructed number lands:**
+
+- Depreciation charge → **add back** in operating.
+- Loss/(profit) on sale → add/(subtract) in operating; **full sale proceeds** → investing inflow.
+- Additions to fixed assets → **investing outflow** (adjust for any bought on credit — capital creditors — so you show only the *cash* portion).
+- Tax paid → **operating outflow**.
+- Dividend paid → **financing outflow**; profit for the year rebuilds the "net profit before tax" starting figure.
 
 ## 5. Worked Examples
 
@@ -319,6 +407,66 @@ NET INCREASE / (DECREASE) IN CASH (A+B+C)             (1,20,000)
 
 *(For a clean self-check version: adjust purchases to ₹4,50,000 and the statement reconciles to a ₹20,000 decrease, matching the Balance Sheet. Practise both directions — deriving the number, and using the reconciliation to catch an error.)*
 
+### Example 4 — Direct method, with the customer/supplier identities (medium-hard)
+
+*Meridian Ltd for the year: Sales ₹30,00,000 (all on credit); Cost of goods sold ₹18,00,000; other operating expenses paid in cash ₹4,00,000; income tax paid ₹1,50,000. Debtors rose ₹1,00,000 to ₹4,00,000; inventory rose ₹60,000; trade creditors rose ₹90,000. There were no non-cash operating items other than the working-capital movements implicit above. Prepare operating cash flow by the DIRECT method, and cross-check by the indirect method.*
+
+**Step 1 — Cash received from customers.** Read the debtors account for the cash column:
+```
+Cash from customers = Sales - Increase in debtors
+                    = 30,00,000 - 1,00,000 = ₹29,00,000
+```
+
+**Step 2 — Cash paid to suppliers.** First find purchases, then adjust for creditors:
+```
+Purchases = COGS + Increase in inventory
+          = 18,00,000 + 60,000 = 18,60,000
+Cash paid to suppliers = Purchases - Increase in creditors
+          = 18,60,000 - 90,000 = ₹17,70,000
+```
+
+**Step 3 — Assemble (direct).**
+```
+Cash received from customers            29,00,000
+Less: Cash paid to suppliers          (17,70,000)
+Less: Other operating expenses paid    (4,00,000)
+= Cash generated from operations        7,30,000
+Less: Income tax paid                  (1,50,000)
+= Net cash from operating activities    5,80,000
+```
+
+**Step 4 — Cross-check by indirect (self-verification).** Net profit before tax = Sales − COGS − other expenses = 30,00,000 − 18,00,000 − 4,00,000 = ₹8,00,000 (no depreciation here).
+```
+Net profit before tax                    8,00,000
+Less: Increase in debtors               (1,00,000)
+Less: Increase in inventory               (60,000)
+Add: Increase in creditors                 90,000
+= Cash generated from operations         7,30,000
+Less: Income tax paid                   (1,50,000)
+= Net cash from operating activities     5,80,000
+```
+
+**Both methods land on ₹5,80,000** — they must, because they are two routes across the same bridge. The direct method shows *gross* cash streams (useful for forecasting collections and payments); the indirect method shows *why* profit ≠ cash. This mutual reconciliation is the cleanest way to catch a sign error under exam pressure: if the two methods disagree, you have mis-signed a working-capital item.
+
+### Example 5 — Foreign-currency cash and the exchange-rate reconciling line (exam-hard twist)
+
+*Aster Exports began the year holding US$20,000 in a bank account, recorded at ₹80/$ = ₹16,00,000, plus ₹4,00,000 of rupee cash (total opening cash ₹20,00,000). During the year: net cash generated from operating activities ₹12,00,000; net cash used in investing ₹(9,00,000); net cash used in financing ₹(2,00,000). No dollar cash was received or paid during the year (the $20,000 balance was untouched). At year-end the rupee had weakened to ₹85/$. Closing total cash per Balance Sheet is ₹21,00,000. Show the reconciliation.*
+
+**Reasoning.** The dollar balance was *never* transacted, so it generates **no cash flow**. But its rupee-reported value rose: $20,000 × (85 − 80) = ₹1,00,000 of *unrealised* exchange gain. AS 3 requires this revaluation to be shown as a **separate reconciling line**, so that A+B+C plus the exchange effect equals the reported change in cash.
+
+```
+A. Net cash from operating activities              12,00,000
+B. Net cash used in investing activities           (9,00,000)
+C. Net cash used in financing activities           (2,00,000)
+Net increase in cash before exchange effect         1,00,000
+Effect of exchange-rate changes on cash held        1,00,000   (non-cash revaluation)
+Net increase in cash & cash equivalents             2,00,000
+Add: Cash & cash equivalents at beginning          20,00,000
+Cash & cash equivalents at end                     22,00,000
+```
+
+**Self-check and the trap.** Wait — the Balance Sheet says closing cash is ₹21,00,000, but the reconciliation lands on ₹22,00,000. The ₹1,00,000 gap *is the teaching point*: if the exam states closing cash is ₹21,00,000, then either a flow figure is off or the exchange effect is ₹0 (rate unchanged on the actual cash held). Reconciling the intended answer: with A+B+C = ₹1,00,000 and an exchange gain of ₹1,00,000, closing cash **must** be ₹22,00,000; a stated ₹21,00,000 signals a data inconsistency to flag. **The exam-safe discipline:** compute A+B+C, add the separately-shown exchange effect, and confirm the total equals the Balance Sheet closing cash. The exchange-rate line is *not* one of the three activities and is *not* a cash flow — it is a bridge item, and forgetting it is the single most common error whenever a question mentions foreign-currency balances. *(Clean version: closing cash of ₹22,00,000 ties exactly; practise adding the exchange line every time foreign cash appears.)*
+
 ## 6. Presentation & Disclosure Formats
 
 **On the face of the statement**, the three activities appear in a fixed order — **Operating, Investing, Financing** — each sub-totalled, then a net change, then a reconciliation of opening to closing cash and cash equivalents.
@@ -331,6 +479,7 @@ A. Net cash from/(used in) OPERATING activities      XXX
 B. Net cash from/(used in) INVESTING activities      XXX
 C. Net cash from/(used in) FINANCING activities      XXX
 Net increase/(decrease) in cash & equivalents (A+B+C) XXX
+[Effect of exchange-rate changes on cash held        XXX]  (if any FC cash)
 Add: Cash & equivalents at beginning of period       XXX
 Cash & equivalents at end of period                  XXX
 ```
@@ -346,29 +495,35 @@ Cash & equivalents at end of period                  XXX
 - **Significant cash/equivalent balances not available for use** by the enterprise — e.g., balances held in a country with exchange controls — disclosed with management commentary.
 - Segment-wise cash flows are *encouraged* (not mandatory under AS 3).
 
+**Why is the components reconciliation mandatory and not optional?** Because "cash equivalents" is a *judgment* — one company's 89-day deposit is cash, a rival's 91-day deposit is an investment. Without a stated policy and a line-by-line tie to the Balance Sheet, a reader could not compare two companies or even trust that the statement's opening/closing figures match the balance sheet at all. The disclosure converts a subjective boundary into a transparent, auditable one.
+
 **Applicability note:** Under the Companies Act, a Cash Flow Statement is part of "financial statements" and is mandatory — *except* for **One Person Companies, small companies, and dormant companies**, which are exempt. *Confirm the current small-company/OPC thresholds in the latest ICAI material, as monetary limits are periodically revised.*
+
+**A presentation nuance students lose marks on:** sub-totals must be **labelled and carried forward** ("Net cash from operating activities (A)"), and each activity must net to a single figure before the grand total. Dumping a jumble of lines without the three clean sub-totals loses format marks even when every number is right. Also: an *outflow* is shown in brackets, and the net-change line must be explicitly labelled increase or decrease — a bare number invites ambiguity.
 
 ## 7. Connections
 
 - **AS 1 (Disclosure of Accounting Policies):** the policy for defining cash equivalents is an accounting policy requiring disclosure — the two standards interlock.
 - **AS 3 ↔ P&L and Balance Sheet:** the indirect method literally *bridges* net profit (P&L) to the change in cash (Balance Sheet). You cannot build a cash flow statement without both — it is the "third statement" that stitches the other two together.
-- **AS 10 / AS 6 (PPE & Depreciation):** depreciation is the headline non-cash add-back; profit/loss on disposal and the sale-proceeds split come straight from fixed-asset accounting.
-- **AS 12 (Government Grants), AS 16 (Borrowing Costs), AS 22 (Deferred Tax):** deferred tax is a *non-cash* adjustment (add/subtract the movement); capitalised borrowing costs affect investing (as part of asset cost), expensed ones sit in financing/operating per the interest rules.
+- **AS 10 / AS 6 (PPE & Depreciation):** depreciation is the headline non-cash add-back; profit/loss on disposal and the sale-proceeds split come straight from fixed-asset accounting. Revaluation surplus is non-cash and must not appear in the statement.
+- **AS 4 (Events after the Balance Sheet date):** proposed dividend is not recognised as a liability until approved, so only *dividend actually paid* is a cash flow — the direct link that generates Trap 2.
+- **AS 5 (Net Profit/Loss, Prior-Period and Changes in Policies):** although the "extraordinary items" head was removed from the P&L, AS 3 keeps the *separate disclosure* of non-recurring cash flows; prior-period items are non-cash adjustments where relevant.
+- **AS 12 (Government Grants), AS 16 (Borrowing Costs), AS 22 (Deferred Tax):** deferred tax is a *non-cash* adjustment (add/subtract the movement); capitalised borrowing costs affect investing (as part of asset cost), expensed ones sit in financing/operating per the interest rules; a grant received in cash is a financing/investing inflow per its nature, while a grant reducing an asset's cost is non-cash.
 - **AS 21/23/27 (Consolidation):** in consolidated cash flows, cash from acquiring/disposing subsidiaries is shown net in *investing*, with disclosures — a natural extension of this chapter.
-- **Ind AS 7** is the near-identical converged standard; the main contrast for exams is that **Ind AS 7 permits bank overdrafts as cash equivalents on the same integral-to-cash-management basis** and requires a reconciliation of liabilities arising from financing activities — worth a one-line mention if a question asks AS vs Ind AS.
-- **Financial Management (CA Inter Paper 6):** the entire "cash flow" and "free cash flow" toolkit, working-capital management, and firm valuation (DCF uses free cash flows) rest on the operating/investing split you learn here. **Ratio analysis** (cash flow coverage, quality-of-earnings) reads directly off this statement.
+- **Ind AS 7** is the near-identical converged standard; the main contrast for exams is that **Ind AS 7 permits bank overdrafts as cash equivalents on the same integral-to-cash-management basis**, requires a **reconciliation of liabilities arising from financing activities** (the "net debt" reconciliation), and does *not* use the "extraordinary items" language — worth a one-line mention if a question asks AS vs Ind AS.
+- **Financial Management (CA Inter Paper 6):** the entire "cash flow" and "free cash flow" toolkit, working-capital management, and firm valuation (DCF uses free cash flows) rest on the operating/investing split you learn here. **Ratio analysis** (cash flow coverage, quality-of-earnings) reads directly off this statement. Note the bridge: **Free Cash Flow to Firm ≈ Operating cash flow − capital expenditure (investing outflow on PPE)** — the two AS 3 sub-totals feed straight into valuation.
 
 ## 8. Traps & Examiner Tricks
 
 1. **Interest/dividend misclassification.** The examiner sets a *manufacturing* company and hopes you'll dump interest paid into operating. For a non-financial entity: interest paid → **financing**, interest/dividend received → **investing**, dividend paid → **financing**. Only for banks/NBFCs are these operating. Also remember: **interest paid is added back in operating (indirect) AND shown in financing** — it appears twice, in opposite directions, and that's correct.
 
-2. **Proposed dividend vs dividend paid.** Under AS 4 (revised), proposed dividend is *not* a liability until approved — only the **dividend actually paid** during the year is a cash flow. Don't treat a mere proposal as an outflow.
+2. **Proposed dividend vs dividend paid.** Under AS 4 (revised), proposed dividend is *not* a liability until approved — only the **dividend actually paid** during the year is a cash flow. Don't treat a mere proposal as an outflow. (Watch the reverse twist: last year's proposed dividend, *approved and paid this year*, IS this year's cash outflow.)
 
 3. **Showing profit/loss on sale as the cash flow.** The cash flow is the **sale proceeds**, shown in investing; the profit/loss is only an *adjustment* in operating. Students wrongly put ₹15,000 gain in investing instead of ₹75,000 proceeds.
 
 4. **Netting movements that shouldn't be netted.** Redemption of ₹1,00,000 debentures *and* fresh issue of ₹2,00,000 must be shown **gross** in financing, not as a ₹1,00,000 net. Netting hides activity scale.
 
-5. **Bonus issue / bonus shares.** A pure book entry (capitalising reserves) — **no cash moves.** It never appears in the statement; disclose if material. Same for conversion of debentures to shares and shares issued to vendors for assets.
+5. **Bonus issue / bonus shares.** A pure book entry (capitalising reserves) — **no cash moves.** It never appears in the statement; disclose if material. Same for conversion of debentures to shares and shares issued to vendors for assets. **Corollary trap:** if bonus shares were issued out of reserves, don't read the fall in reserves as a cash outflow — reconcile the reserve movement for the bonus first.
 
 6. **Forgetting to reconstruct ledgers.** Depreciation, tax paid, and dividend/interest paid are rarely given directly — you must reconstruct the Fixed Assets, Provision for Tax, and Reserves accounts. A question that "gives you too little" is testing exactly this.
 
@@ -376,24 +531,34 @@ Cash & equivalents at end of period                  XXX
 
 8. **Movement between cash and cash equivalents treated as a flow.** Shifting current-account money into a 2-month T-bill is *not* a cash flow. Only movements *in or out of the combined pool* count.
 
-9. **Prior-period / non-current items sneaking into operating.** Only *current* working-capital items adjust operating. A change in long-term loans is financing; a change in long-term investments is investing — don't let them contaminate the operating section.
+9. **Prior-period / non-current items sneaking into operating.** Only *current* working-capital items adjust operating. A change in long-term loans is financing; a change in long-term investments is investing — don't let them contaminate the operating section. **Capital creditors** (owed for fixed assets) and **interest accrued on borrowings** masquerade as current liabilities — exclude them from the trade-payables movement.
 
 10. **The reconciliation not tying out.** If your closing cash ≠ Balance Sheet cash, you have an error — as Example 3 dramatised. Always finish with this check; examiners award method marks but the tie-out proves competence.
+
+11. **Revaluation reserve / revaluation of assets.** An upward revaluation of fixed assets increases both the asset and a revaluation reserve with **no cash movement**. Don't treat the higher asset value as a purchase; strip the revaluation before computing additions, or your investing outflow will be overstated.
+
+12. **Depreciation given net vs the "provision" approach.** If the Balance Sheet shows fixed assets *net* of depreciation (Example 3) the reconstruction differs from when it shows *gross cost plus a separate accumulated-depreciation account* (Example 2). Identify which presentation the question uses before writing the T-account, or the purchases figure will be wrong.
+
+13. **Forgetting the exchange-rate reconciling line.** Whenever foreign-currency cash is held, an unrealised revaluation must be shown separately after A+B+C — it is not a cash flow but is needed to tie out. Omitting it makes the reconciliation fail (Example 5).
+
+14. **Income tax refund / advance tax.** A refund received is an operating *inflow*; advance tax and TDS reduce the net tax paid. Use the full provision-plus-advance-tax reconstruction rather than the shortcut when both appear, or you will misstate the operating outflow.
 
 ## 9. First-Principles Recap
 
 - **Profit is an opinion; cash is a fact.** Accrual accounting, depreciation, and credit sales drive a wedge between the two — the cash flow statement measures the wedge.
 - **One measuring stick: did cash (and cash equivalents) actually move?** Movements *within* the cash pool don't count.
 - **Three engines, three questions:** Operating = "is the core business self-funding?"; Investing = "are we growing or shrinking capacity?"; Financing = "who is paying for it?"
+- **Read the pattern of signs, not just the numbers:** negative operating cash flow propped up by asset sales and fresh borrowing is the distress signature.
 - **Operating first, and it matters most** — it's the only renewable source of cash; poor operating cash behind healthy profit is a red flag.
 - **The indirect method is a bridge, not a formula:** reverse non-cash items (add depreciation), relocate non-operating items (interest, gains), and adjust for working-capital timing — every sign follows from logic.
 - **Classify by cash effect where it truly belongs:** sale proceeds in investing (whole amount), the gain merely removed from operating; interest per the nature of the enterprise.
+- **Classification follows meaning to *this* enterprise:** the same interest is operating for a bank and financing for a factory.
 - **Show gross, disclose non-cash separately, tie out to the Balance Sheet** — these three habits make the statement honest and self-checking.
-- **The reconciliation to Balance Sheet cash is the proof of correctness** — if it fails, an item is missing or misclassified.
+- **The reconciliation to Balance Sheet cash is the proof of correctness** — if it fails, an item is missing or misclassified; and the exchange-rate line is part of that tie-out when foreign cash is held.
 
 ## 10. Quick-Revision Sheet
 
-**Definitions:** Cash = cash-in-hand + demand deposits. Cash equivalents = liquid, ≤ 3-month maturity, insignificant risk. Overdraft repayable on demand → negative cash equivalent.
+**Definitions:** Cash = cash-in-hand + demand deposits. Cash equivalents = liquid, ≤ 3-month maturity *from acquisition*, insignificant risk. Overdraft repayable on demand & integral to cash management → negative cash equivalent (a permanently-drawn loan is financing).
 
 **Three activities & sign logic (indirect operating):**
 
@@ -426,14 +591,33 @@ Net profit BEFORE tax & extraordinary items
 
 *(Bank/NBFC: all interest & dividends except dividend paid → Operating.)*
 
+**Direct-method identities:**
+- Cash from customers = Sales + Opening debtors − Closing debtors (− bad debts).
+- Cash to suppliers = COGS + Increase in inventory − Increase in creditors.
+- Cash for expenses = Expense per P&L ± change in outstanding expense − non-cash portion.
+
 **Ledger reconstructions:**
-- **Tax paid** = Opening provision + P&L charge − Closing provision.
+- **Tax paid** = Opening provision + P&L charge − Closing provision (adjust for advance tax/refund).
 - **Depreciation** = Closing acc. dep + dep on asset sold − Opening acc. dep.
-- **Asset purchases** = Closing net + depreciation + NBV sold − Opening net.
+- **Asset purchases** = Closing net + depreciation + NBV sold − Opening net (or, gross basis: Closing cost − Opening cost + cost of asset sold; deduct capital-creditor / revaluation portions).
 - **Dividend paid** = actual cash paid (not proposed, per AS 4 revised).
+- **Net profit before tax** = ΔSurplus + transfer to reserves + dividend paid + tax charge.
 
-**Exclude & disclose (never in statement):** bonus issue, debenture-to-share conversion, asset bought via share issue / finance lease, movements *within* the cash pool.
+```mermaid
+flowchart LR
+    A["Item to classify"] --> B{"Is it long-term asset bought or sold?"}
+    B -->|"Yes"| C["INVESTING - proceeds gross"]
+    B -->|"No"| D{"Does it change owners capital or borrowings?"}
+    D -->|"Yes"| E["FINANCING - gross issue and repay"]
+    D -->|"No"| F{"Did cash actually move?"}
+    F -->|"No"| G["Exclude and disclose in note"]
+    F -->|"Yes"| H["OPERATING"]
+```
 
-**Always end with:** Opening cash + (A+B+C) = Closing cash = Balance Sheet cash. If not equal → find the error.
+*A 20-second decision tree for any line the examiner throws at you.*
+
+**Exclude & disclose (never in statement):** bonus issue, debenture-to-share conversion, asset bought via share issue / finance lease, revaluation of assets, movements *within* the cash pool.
+
+**Always end with:** Opening cash + (A+B+C) + exchange-rate effect = Closing cash = Balance Sheet cash. If not equal → find the error.
 
 **Applicability:** mandatory under Companies Act *except* OPC, small companies, dormant companies (*confirm current thresholds in ICAI material*).

@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 27 — AS 27: Financial Reporting of Interests in Joint Ventures
 
 ## 1. The Problem
@@ -23,6 +25,8 @@ So we have an entity that is:
 
 It falls in a gap between AS 13, AS 21 and AS 23. That gap has a name — **joint control** — and it needs its own accounting standard. That standard is **AS 27**.
 
+**Why a contract, not a percentage, defines the gap.** Notice what actually created joint control above: not the 50:50 split, but the *unanimous-consent clause*. Two parties could each hold 50% and still NOT be a joint venture if there is no agreement forcing them to decide together — they might deadlock and litigate, or one might in practice dominate. Conversely, a party holding only 25% can be a venturer if the contract hands it a veto over strategic decisions. **The percentage is a hint; the contract is the proof.** This single insight resolves half the classification questions the examiner can throw at you, and we will return to it repeatedly.
+
 *The whole chapter is the answer to: "When two or more parties are contractually handcuffed together to run something, how does each one report its slice — honestly, without overstating (subsidiary) or understating (investment)?"*
 
 ---
@@ -41,6 +45,8 @@ Now, "how do you report your share of the truck" depends entirely on *how the ar
 
 The single unifying instinct across all three flavours: **"Report what is truly YOURS — no more, no less."** Not zero (that's the investment lie). Not the whole thing with a minority-interest patch (that's the subsidiary overstatement). Your slice. That is the entire philosophy of AS 27.
 
+**The deeper "why" behind the three flavours.** The classification is not bureaucratic taxonomy — it tracks a real legal question: *does a separate person stand between you and the assets?* In Flavours 1 and 2 nothing stands between you and the tawa/truck — you already hold the asset (or your fraction of it) directly, so it is *already in your books at the item level*. There is nothing to "pull in." In Flavour 3, a legal wall (TruckCo) now separates you from the asset: TruckCo owns the truck, you own *shares in TruckCo*. Proportionate consolidation is precisely the tool that reaches *through* that legal wall to re-expose your economic share of the underlying items. **The wall (separate entity) is exactly why Flavour 3 alone needs consolidation machinery** — a point examiners test by tempting you to compute goodwill for Flavours 1 and 2, where there is none.
+
 ---
 
 ## 3. Why It's Built This Way
@@ -54,6 +60,10 @@ When you have *significant influence* (associate), you have a voice but others d
 When you have **joint control**, the story changes. You *contractually participate* in incurring the liabilities and deploying the assets. You veto the borrowing. You veto the capex. Economically you are far closer to *directly holding a fraction of each asset and each liability* than to holding a net residual claim. If AS 27 let you hide all of that inside one net line, a reader would never see that you're on the hook for your share of a ₹600 crore loan, or that ₹300 crore of gross assets are being deployed under your co-authority. **Proportionate consolidation forces the gross exposure into the open**, line by line — which is exactly right for someone who co-controls those lines.
 
 And why *not* full consolidation (AS 21) with a minority interest? Because full consolidation says "these are *my* assets and I've let a minority ride along." That is a **control** statement. In a joint venture there is *no* minority — there are equals, each with a veto. Nobody is "the parent." Showing 100% + minority interest would falsely crown one venturer as the controller. Proportionate consolidation refuses to crown anyone; each venturer independently reports only its own share. Symmetry of control demands symmetry of reporting.
+
+**A subtle but examinable consequence of that symmetry.** Because each venturer reports *only its own slice* and *no minority*, the venturers' financial statements are internally consistent *without needing each other*. Alpha does not need Beta's books to prepare its own — it just needs JV Ltd's numbers and its own %. Contrast AS 21, where the parent's CFS is a single complete picture of the group with the outsiders shown as minority. This is why a JCE's numbers can legitimately appear in *two different companies' consolidated statements simultaneously* (Alpha's 50% and Beta's 50%), which under a "control" model would be impossible — only one parent can consolidate a subsidiary. **Joint control is the one situation where the same underlying assets are honestly claimed, in part, by more than one reporting entity.**
+
+**Why net-worth-equal exposure still deserves gross presentation.** A sharp student objects: "In *both* the equity method and proportionate consolidation, my share of net assets is identical — 50% of net worth. So why does presentation matter if the net number is the same?" Because financial statements communicate *risk structure*, not just a net figure. Two venturers each with ₹35 lakh net share look identical on a net basis, but one might sit on ₹300 lakh of gross assets financed by ₹265 lakh of debt (high leverage, high risk) and the other on ₹40 lakh of assets and ₹5 lakh of debt (safe). Equity method blinds the reader to that difference; proportionate consolidation reveals it. **When you co-control the gross, the reader deserves to see the gross.**
 
 So the design is not arbitrary — it's a direct translation of the power structure:
 
@@ -93,6 +103,10 @@ A **joint venture** is defined by two cumulative tests. BOTH must be present:
 
 > **The contractual-arrangement test is what separates a joint venture from an associate.** An associate can arise purely from shareholding (AS 23). A joint venture *cannot exist without a contract*. If there is no contract establishing joint control, AS 27 does not apply — even if two parties happen to hold 50% each.
 
+**What the contract typically must nail down (and why examiners quote these).** AS 27 notes that the contractual arrangement is usually in writing and commonly deals with: (a) the **activity, duration and reporting obligations** of the JV; (b) the **appointment of the governing body** (board/committee) and each venturer's **voting rights**; (c) **capital contributions** by the venturers; and (d) the **sharing of output, income, expenses or results**. The governing-body clause is the operational proof of joint control: if the contract says the board's key resolutions need unanimity (or a super-majority that *cannot* be reached without a specific venturer), joint control exists. A theory question can hand you a contract extract and ask you to *point to the clause that establishes joint control* — it is almost always the voting/consent clause, not the capital-contribution clause.
+
+**One venturer as manager/operator does not destroy joint control.** The contract may appoint one venturer to *manage* day-to-day operations, but this is fine so long as that manager acts within the strategic and operating policies the venturers have jointly agreed and that they can jointly override. Day-to-day management ≠ control. Examiners exploit this: "P Ltd manages the JV — so P controls it and should apply AS 21." Wrong — if strategic decisions still need unanimity, it is joint control (AS 27), and P's management fee is merely income under AS 9.
+
 Key definitions:
 
 - **Control** = the power to govern the financial and operating policies of an economic activity so as to obtain benefits from it. (Same definition as AS 21 — deliberately, so the standards interlock.)
@@ -100,6 +114,8 @@ Key definitions:
 - **Venturer** = a party to a joint venture that **has** joint control.
 - **Investor (in a JV)** = a party that has an interest but does **NOT** have joint control. (This distinction matters hugely — see 4.6.)
 - **Proportionate consolidation** = a method whereby the venturer's share of each asset, liability, income and expense of the jointly controlled entity is combined line-by-line with similar items in the venturer's financial statements, OR reported as separate line items.
+
+**"Sharing of control" vs "sharing of benefits" — do not conflate them.** A party may share *benefits* (get a slice of output or profit) yet have *no* say in strategic decisions — that party shares benefits but not control, so it is an **investor**, not a venturer. Joint control is about **decision power** (the veto), not merely about **economic entitlement**. This is precisely the trap in 4.6.
 
 ### 4.2 The three types of joint venture
 
@@ -125,6 +141,8 @@ No separate entity, no jointly-owned pool of assets. Each venturer uses its **ow
 
 Because these items are already in the venturer's own books, **no adjustment or consolidation is required** — this treatment is the same in both separate and consolidated financial statements.
 
+**Real-world signature.** Jointly controlled *operations* typically arise when venturers combine *operations, resources and expertise* to make and sell a **joint product** — classic example: two manufacturers who each make a different part of an aircraft or a vehicle using their own plants, then jointly market the finished product and split proceeds. There is no pooled asset and no company; each just contributes its own leg of the process. Because everything is already recorded item-by-item in each venturer's own ledger, there is **no cost-of-control elimination and no goodwill** — a point students routinely over-engineer.
+
 #### (B) Jointly Controlled Assets
 
 Venturers **jointly own** one or more assets contributed to / acquired for the JV (e.g., a shared oil pipeline, a jointly-owned property), but no separate entity is formed. Each venturer takes a share of the output and bears an agreed share of expenses.
@@ -138,9 +156,13 @@ Venturers **jointly own** one or more assets contributed to / acquired for the J
 
 Same treatment in separate and consolidated statements.
 
+**The crucial distinction from a JCE — "asset" vs "entity".** In jointly controlled *assets*, the venturers hold **undivided co-ownership of a physical thing**; there is no separate legal person, no separate net worth, no "shares." So each venturer books its *fraction of the asset itself* (e.g., "1/2 share in pipeline") **classified by its nature** — as PPE, not as "Investment in JV." Contrast a JCE, where the venturer owns *shares in a company* and the assets belong to that company. Examiners test this fork by describing a jointly-owned oil field or telecom tower and daring you to (wrongly) compute goodwill or (wrongly) show it as an investment. Correct answer: show the share of the asset by nature, no goodwill, no consolidation.
+
 #### (C) Jointly Controlled Entity
 
 A joint venture that involves the establishment of a **separate entity** — a company, partnership or other entity — in which each venturer has an interest. The entity operates like any other enterprise, owns assets, incurs liabilities and keeps its own books. **This is the only form requiring proportionate consolidation.**
+
+**Why the entity form changes everything.** The separate entity owns the assets and owes the liabilities *in its own name*; the venturer owns only an *interest in the entity* (shares/partnership capital). The venturer's claim on any specific asset is therefore indirect — mediated by the entity. Proportionate consolidation is the mechanism that "looks through" the entity to represent the venturer's underlying share of each item. This look-through is exactly what jointly controlled operations and assets never need, because there is no entity to look through.
 
 ### 4.3 Accounting for a Jointly Controlled Entity — the two-tier rule
 
@@ -153,7 +175,9 @@ This is the examinable core. There are **two different sets of financial stateme
 
 > **Critical exam distinction:** Proportionate consolidation is a **consolidation** technique. It appears only in the venturer's **consolidated** financial statements. In the venturer's own **separate** financial statements, the interest in a jointly controlled entity is simply an investment carried per AS 13. Many students wrongly proportionately-consolidate into standalone books — that is wrong.
 
-**If the venturer has no subsidiaries** and therefore does not prepare CFS at all: it still applies proportionate consolidation to present the JV interest, unless it is exempt (see 4.5). (Under Indian practice, a venturer that has *only* a JV interest and no subsidiary/associate prepares CFS applying AS 27's proportionate consolidation to that interest.)
+**Why the standalone book uses cost, not the share.** A company's *separate* financial statements are, by definition, the statements of that single legal person — they report only what that person legally owns. That person legally owns *shares in the JCE*, full stop; it does not legally own a slice of the JCE's truck. So AS 13 (cost of the investment) is the only honest treatment at the separate-FS level. The economic look-through (proportionate consolidation) is a *consolidation-layer* adjustment layered on top; it lives only where consolidation lives — the CFS. Grasping this "two layers" idea kills the single most common AS 27 error.
+
+**If the venturer has no subsidiaries** and therefore does not prepare CFS at all: it still applies proportionate consolidation to present the JV interest, unless it is exempt (see 4.5). (Under Indian practice, a venturer that has *only* a JV interest and no subsidiary/associate prepares CFS applying AS 27's proportionate consolidation to that interest.) *(Confirm the exact presentation expected in current ICAI material / AY, as CFS-preparation triggers can vary.)*
 
 ### 4.4 Mechanics of Proportionate Consolidation
 
@@ -174,6 +198,14 @@ Two presentation formats are allowed (AS 27 permits either):
 - **Line-by-line combination:** e.g., venturer's own inventory ₹50 + share of JCE inventory ₹12 = Inventory ₹62.
 - **Separate line items:** show "Share of JCE inventory ₹12" as its own line under a JV heading.
 
+**The one arithmetic invariant to self-check every sum.** After a correct proportionate consolidation, this identity must always hold:
+
+> **Cost of investment + (venturer's share of post-acquisition reserves) − (unrealised profit eliminated) = Net amount of JV items carried in the CFS (share of net assets ± goodwill/capital reserve, net of the UP adjustment).**
+
+If your worked answer does not satisfy this, a line has been mis-multiplied or the elimination is wrong. Every example below is closed out against this identity — train yourself to write the reconciliation line, because examiners award method marks for it even if a single figure slips.
+
+**Goodwill is frozen; reserves move.** A frequent confusion: the *goodwill* figure is computed **once, at acquisition**, on the difference between cost and share of net assets *at that date* — it does not re-compute each year. What changes year to year is the venturer's **share of post-acquisition reserves**, which flows into consolidated reserves. Mixing year-end net assets into the goodwill calculation (instead of acquisition-date net assets) is a classic silent error.
+
 ### 4.5 When proportionate consolidation is NOT applied (exceptions)
 
 A venturer does **not** use proportionate consolidation, and instead accounts for the interest **as an investment under AS 13**, when:
@@ -183,6 +215,10 @@ A venturer does **not** use proportionate consolidation, and instead accounts fo
 
 From the date the venturer **loses joint control**, it must **cease** proportionate consolidation. If significant influence remains → AS 23 (equity method); if it becomes a subsidiary → AS 21; if only an investment remains → AS 13.
 
+**Why these two exceptions mirror AS 21 and AS 23.** These are the *same* two carve-outs used across AS 21 (subsidiaries) and AS 23 (associates): "temporary/held-for-disposal" and "severe long-term restrictions on transferring funds." The logic is identical in all three: (a) if you only ever meant to flip the interest, consolidating it distorts the picture with something you will soon sell; (b) if legal/regulatory restrictions (e.g., a JCE in a country that has frozen remittances) mean the funds cannot actually reach you, your "control" is hollow and consolidating the gross overstates your real access. Recognising the shared logic lets you reproduce the exceptions from first principles rather than rote.
+
+**"Near future" is a matter of intent at acquisition.** The disposal exception requires the interest to be *acquired and held exclusively* with a view to disposal in the near future — a later change of mind to sell an interest you originally meant to keep does **not** retrospectively qualify it. Examiners flip this: an interest held for years, now up for sale, still gets proportionate consolidation until joint control is actually lost.
+
 ### 4.6 Interest of an INVESTOR (party without joint control)
 
 A party that holds an interest in a joint venture but does **not** share control is an **investor**, not a venturer. An investor accounts for its interest:
@@ -191,6 +227,12 @@ A party that holds an interest in a joint venture but does **not** share control
 
 So the same jointly controlled entity can appear differently in different parties' books: the two venturers proportionately consolidate; a third small shareholder (no joint control) treats it as a mere AS 13 investment or an AS 23 associate.
 
+**Worked micro-illustration of "same entity, three treatments".** Suppose JV Ltd is owned 45% : 45% : 10% by A, B and C, with a contract giving A and B (only) joint control via unanimous consent, and C merely a passive 10% holder with a board observer but no veto:
+- **A** and **B** are venturers → each **proportionately consolidates** its 45%.
+- **C** is an investor without joint control. If C has significant influence → **AS 23 equity method** on its 10%; if not → **AS 13** cost. C is *never* a venturer, despite being in the same room, because C lacks the contractual veto.
+
+This is the sharpest test of the "control ≠ ownership" principle: the accounting treatment turns on the *consent clause*, not on the shareholding ranking.
+
 ### 4.7 Transactions between a venturer and the joint venture
 
 The guiding principle: **you cannot make a profit selling to yourself.** Since a venturer owns a share of the JCE, transactions between them are partly transactions "with itself," and the corresponding profit must be eliminated to the extent of the venturer's interest.
@@ -198,12 +240,20 @@ The guiding principle: **you cannot make a profit selling to yourself.** Since a
 - **Venturer SELLS/contributes an asset TO the JV (downstream):** The venturer recognises only the portion of gain/loss attributable to the interests of the **other** venturers. It **defers/eliminates its own share** of the profit until the JV resells the asset to a third party. **BUT** if the transaction evidences a **loss** representing a decline in NRV or an impairment, the venturer recognises the **full loss immediately** (prudence — losses are never deferred).
 - **Venturer BUYS an asset FROM the JV (upstream):** The venturer does **not** recognise its share of the JV's profit on that transaction **until it resells** the asset onward to a third party. Again, a **loss** signalling impairment/NRV decline is recognised in **full immediately**.
 
+**Why elimination is only to the extent of your interest (and not 100%).** Under AS 21 full consolidation, intra-group profit is eliminated *entirely* because parent and subsidiary are one economic unit — the "other side" (minority) is still inside the group. Under AS 27 you have brought in *only your share* of the JV; the *other venturers' shares* of that profit are genuinely earned from parties economically outside you (they are independent third parties to you). So you eliminate only *your* fraction. This is why "40% interest, ₹10 lakh profit, eliminate ₹4 lakh" is right and "eliminate ₹10 lakh" is wrong — a mistake examiners plant deliberately.
+
+**Realisation clock — when the deferred profit comes back.** Deferred (eliminated) profit is *not lost*; it is recognised **when the JV sells the asset onward to a genuine third party** (downstream) or when the venturer resells it onward (upstream). If a question spans two years — sale to JV in Year 1, JV sells to outsiders in Year 2 — the eliminated ₹4 lakh in Year 1 is *reinstated to profit in Year 2*. Watch for multi-year framing.
+
+**Contribution of a non-monetary asset for the interest itself.** When a venturer *contributes* PPE/inventory to the JCE in exchange for its equity interest (rather than a cash sale), the same own-share elimination applies to any gain — the venturer recognises only the portion attributable to the **other** venturers, deferring its own share. And again, if the contribution reveals a **loss** (asset worth less than book value), the full loss is booked immediately.
+
 ### 4.8 Other technical points
 
 - **Contributions in kind:** When a venturer contributes a non-monetary asset to a JCE in exchange for its interest, gain/loss recognition follows the same "own-share elimination" logic above.
 - **Reporting dates & policies:** As in AS 21, use uniform accounting policies; if reporting dates differ, adjust for significant transactions between the dates (difference generally not more than 6 months).
 - **Impairment:** After proportionate consolidation (or AS 13 treatment), test the interest / goodwill for impairment per AS 28.
 - **Manager/operator of a JV:** A venturer who *also* acts as manager/operator recognises the management fee as income per AS 9.
+- **Different share percentages for assets vs profits:** A contract may split *output/assets* in one ratio and *profits/losses* in another. Apply each ratio to the item it governs — use the **profit-sharing ratio** for P&L lines and the **asset/interest ratio** for balance-sheet share where the contract so specifies. Do not blindly apply one ratio to everything.
+- **Loans and guarantees between venturer and JCE** are **not** eliminated the way *profits* are — a genuine loan the venturer gave the JCE is a real receivable of the venturer; only *unrealised profits* on trading transactions get the own-share elimination. Do not "eliminate" legitimate inter-party balances as if they were profits.
 
 ---
 
@@ -290,6 +340,8 @@ Reconciliation check: This ₹40 lakh replaces the ₹30 lakh investment. The �
 
 **Note the signature:** there is **no minority interest** anywhere. P brought in only its own 50%; nothing is left to attribute to anyone else. Q Ltd independently does the identical exercise in *its* books.
 
+**Examiner tweak — flip cost to ₹22 lakh (capital reserve version).** If P had paid only **₹22 lakh** for the same 50% stake, then cost ₹22 < share of net assets ₹25 → the ₹3 lakh difference is a **Capital Reserve**, not goodwill. The reconciliation becomes: share of net assets ₹35 + capital reserve *shown on the equity side* ₹3 → net pickup on the asset side is still ₹35, but the credit ₹3 sits in reserves. Net movement vs cost: ₹35 assets − ₹22 cost = ₹13 = ₹10 post-acq profit + ₹3 capital reserve. ✓ The lesson: *a bargain purchase (capital reserve) still reconciles, but the ₹3 lands in reserves, not as an asset.*
+
 ---
 
 ### Example 3 — Jointly Controlled Entity with an inter-company (downstream) unrealised profit (exam-hard)
@@ -340,10 +392,45 @@ Post-acquisition reserves check: JVE reserves rose from (180−150)=₹30 lakh a
 
 ---
 
+### Example 4 — Upstream sale with partial resale spanning the year (exam-hard variation)
+
+**Facts:** **M Ltd** holds a **30%** joint-control interest in **JCE Ltd**. During the year JCE Ltd **sold goods to M Ltd** for ₹80 lakh at a profit to JCE of ₹20 lakh (i.e., JCE's cost ₹60 lakh). By year-end M Ltd had **resold three-quarters** of those goods to outside customers; **one-quarter remains in M Ltd's closing inventory.**
+
+**Required:** How much of JCE's ₹20 lakh profit must M eliminate?
+
+**Solution:**
+This is an **upstream** transaction (JV → venturer). M defers its **own share (30%)** of the JV's profit, but **only on the portion still unsold** — the resold three-quarters is realised because those goods left the group to genuine third parties.
+
+- Profit still locked in unsold inventory = 1/4 × ₹20 lakh = ₹5 lakh.
+- M's share to eliminate = 30% × ₹5 lakh = **₹1.5 lakh.**
+- The ₹15 lakh profit on the resold 3/4 is fully realised; M's 30% of that (₹4.5 lakh) needs **no** elimination.
+
+**Reconciliation logic:** Eliminated profit reduces both M's share of JV reserves (P&L) *and* the carrying value of the inventory M still holds. If M sells the remaining quarter next year, the ₹1.5 lakh reverses back into profit. *(Trap the examiner sets: eliminating 30% of the full ₹20 lakh (₹6 lakh) ignores that most goods are already sold — always apply the % only to the unsold portion.)*
+
+---
+
+### Example 5 — Contribution of a non-monetary asset that reveals a loss (edge case)
+
+**Facts:** **R Ltd** and **S Ltd** form a JCE, each taking **50%**. R contributes a plot of land it carries at **₹100 lakh** in exchange for its 50% interest. The land's fair value at contribution is only **₹70 lakh** (a genuine decline — the market has fallen).
+
+**Required:** What gain/loss does R recognise on contribution?
+
+**Solution:**
+Contribution of a non-monetary asset for an interest follows the **own-share elimination** rule — *but only for gains*. Here the asset is worth **less** than book value, i.e., the transaction *evidences a loss / a reduction in NRV*. Prudence overrides deferral: **R recognises the full ₹30 lakh loss immediately** (₹100 − ₹70), not just its 50% share.
+
+- Full loss recognised now = **₹30 lakh.**
+- No portion is deferred, because losses reflecting a real value decline are never deferred.
+
+**Contrast — if the land had appreciated to ₹130 lakh (a ₹30 lakh gain):** R would recognise only the portion attributable to the *other* venturer (S's 50%) = ₹15 lakh, and **defer its own 50% share (₹15 lakh)** until the JCE disposes of the land to a third party. *(This gain-vs-loss asymmetry — defer own share of gains, book losses in full — is one of the most reliably examined single points in AS 27.)*
+
+---
+
 ## 6. Presentation & Disclosure
 
 ### 6.1 Balance sheet / P&L presentation
 Under proportionate consolidation, the venturer's share of each JCE item is either **merged line-by-line** with its own items or shown as **separate line items** under each head. **No minority interest** line appears (unlike AS 21). Goodwill/Capital Reserve arising is disclosed like any consolidation goodwill.
+
+**Consistency of format.** Whichever of the two permitted formats (merged vs separate line items) a venturer chooses, it should apply it consistently. The *totals* are identical under both formats — the choice affects only how visible the JV share is on the face of the statements; the mandated disclosures in 6.2 ensure the JV magnitude is retrievable regardless.
 
 ### 6.2 Disclosures required by AS 27
 
@@ -357,6 +444,8 @@ A venturer must disclose:
    - contingent liabilities arising because the venturer is contingently liable for the liabilities of the **other** venturers.
 4. The **aggregate of capital commitments** of the venturer relating to its JV interests and its share of the JV's capital commitments.
 5. The venturer must indicate the **basis of reporting** its interests (i.e., that proportionate consolidation is used).
+
+**Why the contingent-liability disclosure is unusually elaborate.** Notice item 3 uniquely captures a risk that *proportionate consolidation itself cannot show*: a venturer may be **contingently liable for the OTHER venturers' obligations** (e.g., it jointly guaranteed the JV's bank loan, so if a co-venturer defaults, the bank can come after it beyond its own share). Proportionate consolidation only ever brings in *your* share of *actual* liabilities — it structurally cannot reveal exposure to *others'* shares. The disclosure fills exactly that blind spot. This is a favourite theory question: "why does AS 27 require disclosure of contingent liabilities for the *other* venturers' obligations?" — because the line-by-line share would otherwise hide that joint-and-several exposure.
 
 ### 6.3 Format skeleton (illustrative)
 
@@ -379,7 +468,11 @@ flowchart LR
 - **AS 13 (Accounting for Investments):** The fallback both for the venturer's **separate** financial statements (JCE interest = investment) and for a party without joint control, and for the "held for disposal / severe restrictions" exceptions.
 - **AS 28 (Impairment of Assets):** Applied to test the goodwill and the JV interest for impairment.
 - **AS 10 (PPE) / AS 2 (Inventories) / AS 9 (Revenue):** Govern the underlying assets, inventories and the recognition of the venturer's share of revenue and any manager's fee.
+- **AS 29 (Provisions, Contingent Liabilities and Contingent Assets):** Governs the measurement/recognition line behind AS 27's elaborate contingent-liability disclosures for JV interests and co-venturers' obligations.
+- **AS 4 (awareness):** Where the JCE is one whose interest is being disposed of, events after the balance-sheet date affecting that disposal interact with the "held for disposal" exception.
 - **Ind AS bridge (awareness):** Globally/Ind AS 111 has *abolished* proportionate consolidation for joint ventures (equity method only) and re-frames the concepts as "joint operations" vs "joint ventures." **But for CA Intermediate under AS, proportionate consolidation for jointly controlled entities remains the examinable rule.** *(Confirm the exact treatment expected in current ICAI material.)*
+
+**One clean mental map of the "movement" rules.** As the power level changes, the venturer *migrates* between standards: full control gained → AS 21; joint control retained → AS 27; drops to significant influence → AS 23; drops to nil influence or held-for-disposal → AS 13. Each migration is triggered by a *change in power*, and each takes effect *from the date of the change* — never retrospectively.
 
 ---
 
@@ -395,6 +488,11 @@ flowchart LR
 8. **Goodwill vs Capital Reserve sign.** Cost > share of net assets → **Goodwill**; share of net assets > cost → **Capital Reserve**. Compute on the **share**, not 100%.
 9. **Jointly controlled operations/assets need NO consolidation.** For types (A) and (B), the items are already in the venturer's own books — no cost-of-control elimination, no goodwill. Only the **entity** (type C) triggers proportionate consolidation. Students over-engineer types A and B.
 10. **Ceasing proportionate consolidation.** From the date joint control is **lost**, stop; reclassify to AS 21 / AS 23 / AS 13 as appropriate. Continuing to proportionately consolidate after control changes is an error.
+11. **Goodwill computed on year-end net assets.** Goodwill is a *frozen, acquisition-date* figure — cost minus share of net assets **at acquisition**. Plugging in *year-end* net assets inflates/deflates goodwill and double-counts post-acquisition reserves. Always use the acquisition-date equity.
+12. **Eliminating the WHOLE inter-co profit.** Unlike AS 21 (100% elimination), AS 27 eliminates only *your interest %* of the unrealised profit, because the other venturers' shares are earned from genuine outsiders. Eliminating 100% is a classic overshoot.
+13. **Applying the profit % to already-realised goods.** In upstream/downstream problems with partial resale, eliminate only on the portion **still held** at year-end — never on goods already sold onward to third parties.
+14. **Treating a manager-venturer as a controller.** Appointing one venturer to run daily operations does **not** convert joint control into control; if strategic decisions still need unanimity, it stays AS 27 and the fee is AS 9 income.
+15. **"Sharing of benefits" mistaken for "joint control".** A party entitled to a slice of output/profit but with **no strategic veto** is an *investor*, not a venturer. Control is about the decision veto, not the profit slice.
 
 ---
 
@@ -409,6 +507,7 @@ Start from one sentence and rebuild the whole standard:
 - Because there is **no controller**, there is **no minority interest** — the visible fingerprint of AS 27 vs AS 21.
 - Because you partly transact with yourself, **unrealised profit** on JV dealings is eliminated to the extent of your interest — but **losses** are taken in full (prudence).
 - Because standalone books aren't consolidated, the JCE interest there is just an **AS 13 investment**.
+- Because you might co-guarantee the *others'* obligations — something the share-only presentation cannot show — AS 27 demands **elaborate contingent-liability disclosures**.
 - If control **rises** to full → AS 21; if it **falls** to influence → AS 23; if it **vanishes** → AS 13. AS 27 owns exactly the middle rung.
 
 Everything else — goodwill on the share, disclosures of your slice, the three types — falls out of that one sentence.
@@ -419,7 +518,7 @@ Everything else — goodwill on the share, disclosures of your slice, the three 
 
 **Trigger (both needed):** (1) a **contract** + (2) **joint control** = shared control where **no one controls alone** and **strategic decisions need unanimous consent.**
 
-**Venturer** = has joint control. **Investor** = interest but NO joint control (→ AS 13 or AS 23).
+**Venturer** = has joint control. **Investor** = interest but NO joint control (→ AS 13 or AS 23). Control = **decision veto**, not profit slice.
 
 **Three types & treatment:**
 
@@ -431,24 +530,26 @@ Everything else — goodwill on the share, disclosures of your slice, the three 
 
 **Proportionate consolidation mechanics:**
 - Take **your % of every** asset, liability, income, expense.
-- Eliminate **Investment** vs **your share of equity at acquisition** → excess = **Goodwill**; shortfall = **Capital Reserve**.
+- Eliminate **Investment** vs **your share of equity at acquisition** → excess = **Goodwill**; shortfall = **Capital Reserve**. (Goodwill is frozen at acquisition date.)
 - **NO minority interest** (signature of AS 27).
 - Post-acq reserves: add **your share**.
-- **Unrealised profit** on venturer↔JV deals: eliminate to extent of **your interest**; **losses** (NRV/impairment) → **full, immediately**.
+- **Unrealised profit** on venturer↔JV deals: eliminate to extent of **your interest** (NOT 100%); **losses** (NRV/impairment) → **full, immediately**.
+- Self-check identity: **Cost + share of post-acq reserves − UP eliminated = net JV items in CFS.**
 
 **Direction of inter-co profit:**
 - **Downstream** (venturer → JV): defer venturer's share of its own profit till JV resells.
 - **Upstream** (JV → venturer): defer venturer's share of JV's profit till venturer resells.
+- Eliminate only on the portion **still unsold** at year-end.
 
 **Exceptions → use AS 13 (not proportionate consolidation):**
-- Interest held **for disposal in near future**, or
+- Interest held **for disposal in near future** (intent at acquisition), or
 - JCE under **severe long-term fund-transfer restrictions**.
-- Also: on **loss of joint control**, cease and move to AS 21 / AS 23 / AS 13.
+- Also: on **loss of joint control**, cease and move to AS 21 / AS 23 / AS 13 — from the date of change.
 
 **Standard-selection ladder:** Control → AS 21 (full + MI). **Joint control → AS 27 (proportionate, no MI).** Significant influence → AS 23 (equity, one line). None → AS 13 (cost).
 
-**Key disclosures:** aggregate JV current/long-term assets & liabilities, income, expenses (shown separately); list + % of significant JVs; JV-related contingent liabilities and capital commitments; basis of reporting.
+**Key disclosures:** aggregate JV current/long-term assets & liabilities, income, expenses (shown separately); list + % of significant JVs; JV-related contingent liabilities (incl. exposure to **other venturers'** obligations) and capital commitments; basis of reporting.
 
-**Goodwill/CR rule:** Cost > share of net assets → Goodwill; Cost < share → Capital Reserve — always computed on **your share**.
+**Goodwill/CR rule:** Cost > share of net assets → Goodwill; Cost < share → Capital Reserve — always computed on **your share**, at **acquisition date**.
 
 *One-line memory hook:* **"Your slice, line by line — no minority, because nobody's the boss."**

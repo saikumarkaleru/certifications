@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 29 — AS 29: Provisions, Contingent Liabilities & Contingent Assets
 
 ## 1. The Problem
@@ -26,6 +28,8 @@ Here is the deeper problem. Two opposite temptations pull at every accountant fa
 
 That is this chapter.
 
+**A fourth silent question the standard also answers: what is NOT a provision at all?** Half of AS 29's exam value is negative — knowing what falls *outside* it. A "provision for depreciation" or "provision for doubtful debts" is an *asset valuation adjustment*, not a liability, so AS 29 never touches it. An accrual for goods received but not yet invoiced is a liability of only *slightly* uncertain amount — it is a **creditor/accrual**, not an AS 29 provision, because there is *little* estimation. AS 29 provisions are the narrow band where a **genuine liability** exists but the amount or timing needs a **substantial** estimate. Keep this frame: liability yes/no first, then certain/uncertain, then *how* uncertain. Most wrong answers come from misplacing an item at the very first fork.
+
 ---
 
 ## 2. The Core Idea (Analogy)
@@ -53,6 +57,17 @@ Now the crucial asymmetry, which is the soul of prudence: **the traffic light is
 
 The analogy that locks it in: **AS 29 is a pessimist's accountant.** It leans forward to catch every foreseeable loss, and leans back, arms crossed, refusing to believe in any gain until the cheque has practically cleared. Prudence = *anticipate losses, never anticipate profits* — and AS 29 is that maxim turned into a rulebook with numeric thresholds.
 
+**Two dials, not one — the deeper picture.** The traffic-light dial (probability) is only the *first* dial. There is a hidden *second* dial: **does a present obligation even exist?** A single-word swap in a question — from "the outflow is possible" to "it is unclear whether an obligation exists" — moves you to a *different* branch of the tree even though both feel like "amber". The four vocabulary words the examiner rotates map onto the probability dial like this:
+
+| Word | Rough probability | Outflow item → | Inflow item → |
+|---|---|---|---|
+| **Remote** | < ~5–10% | Ignore (no note) | Ignore |
+| **Possible** | not probable, but not remote | Contingent liability (disclose) | Ignore |
+| **Probable** | > 50% ("more likely than not") | Provision (record) | Contingent asset (disclose in Board report) |
+| **Virtually certain** | ~100% | (already an ordinary liability) | Recognise the asset |
+
+Read that table left-to-right for a loss and right-to-left for a gain and you have *the entire recognition logic of AS 29 on one line each*. The exam is almost always testing whether you can place the examiner's chosen adjective on the correct rung of this ladder.
+
 ---
 
 ## 3. Why It's Built This Way
@@ -73,6 +88,12 @@ This is pure prudence and the anti-symmetry is deliberate. Recognising a hoped-f
 
 **Why measure at "best estimate" and discount long-dated ones?**
 Because a made-up round number invites manipulation, and ₹1 crore payable in 5 years is genuinely worth less today than ₹1 crore payable tomorrow. Best-estimate measurement (Part 4) ties the number to evidence, and discounting (where the effect is material) ties it to economic reality.
+
+**Why insist a provision be *used only* for its original purpose?**
+Because the alternative silently launders errors. Suppose you over-provided ₹10 lakh for warranties and, separately, incurred a ₹6 lakh legal loss you never provided for. If you were allowed to charge the legal loss *against the warranty provision*, two lies would cancel on the face of the accounts: the warranty over-provision would never be exposed, and the unprovided legal loss would never hit the P&L as its own line. **Ring-fencing each provision to its own event forces every mis-estimate into daylight** — the excess warranty provision must be *reversed* (visibly), and the legal loss must be *expensed* (visibly). This is why AS 29's "use only for original purpose" rule is really an anti-concealment rule.
+
+**Why does a "reliable estimate" almost never fail as a gate?**
+AS 29 states that except in *extremely rare* cases an entity can determine a range of possible outcomes and so make an estimate reliable enough to use. The gate exists as a theoretical safety valve — if truly no reliable estimate is possible, the item drops to a *contingent liability* (disclose) rather than a provision. But examiners rarely let you escape a provision by claiming "can't estimate"; if history or a range exists, you must estimate. Treat "cannot be reliably measured" as a red flag that you may be *dodging* a provision you should book.
 
 So every rule in AS 29 traces back to one design goal: **let real losses through, keep fake losses and fake gains out, and warn about the in-between.** The mechanics in Part 4 are just this philosophy made operational.
 
@@ -98,6 +119,12 @@ Two definitional subtleties that examiners love:
 
 - A **provision is a liability** (it sits on the balance sheet, it hits profit). A **contingent liability is NOT a liability** in the accounting sense — it is *never* recognised; it only lives in the notes. Do not confuse "provision" (recorded) with "contingent liability" (disclosed).
 - The word "obligation" covers **legal** obligations (contract, statute, law) *and* **constructive** obligations. A **constructive obligation** arises where, by an established pattern of past practice or published policy, the entity has created a **valid expectation in others** that it will discharge the obligation (e.g., a retailer with a well-known "full refund, no questions" policy even where not legally bound).
+
+**A third subtlety — the two limbs of "contingent liability" are genuinely different animals.** Limb (a) is a *possible* obligation — we are not even sure the obligation exists. Limb (b) is a *present* obligation we *are* sure exists but which we still cannot book, because the outflow is not probable **or** we cannot measure it. Both end up in the same place (a note), but the reasoning differs, and the examiner can ask you *which* limb applies. A pending lawsuit where you'll probably win = limb (a) (possible obligation). A confirmed guarantee you've given for a subsidiary's loan, where default is possible but not probable = limb (b) (present obligation, outflow not probable).
+
+**Scope exclusions — what AS 29 does NOT govern.** AS 29 does not apply to provisions/liabilities covered by *other* standards or by their own contractual measurement, including: financial instruments carried at fair value; executory contracts (contracts where *neither* party has performed, or both have performed equally) unless the contract is *onerous*; items covered by another AS (e.g., taxes on income — AS 22; retirement benefits — AS 15; construction-contract foreseeable losses — AS 7; leases — the leases standard). Knowing the scope-out list prevents you from mis-applying AS 29 to, say, a deferred-tax or gratuity provision.
+
+**Executory contract — a key negative concept.** An executory contract is one under which obligations are *equally unperformed* on both sides (you've ordered goods; supplier hasn't delivered; you haven't paid). AS 29 says: **no provision for an ordinary executory contract** — because you'd get value for value. It becomes provisionable *only* when it turns **onerous** (see 4.2). This is the doctrinal root of "no provision for future purchases / future operating costs".
 
 ### 4.1 RECOGNITION — the three-part gate for a Provision
 
@@ -129,6 +156,8 @@ flowchart TD
 - You can *avoid* a future cost by changing your future actions → **no obligation** → no provision. Example: expected costs of re-training staff to comply with a *new* law next year — you could (in theory) restructure to avoid it; it's a future operating cost, not a present obligation.
 - You are *committed by a past act* → obligation exists. Example: you already sold the warranted car; you cannot now un-sell it, so the warranty obligation is present.
 
+**The subtle case of "obligation only if the law is enacted".** A common exam twist: at year-end a *draft* law will require fitting smoke filters to your factory, but it is **only virtually certain to be enacted** *after* year-end. Test: is there a **present** obligation at the balance-sheet date? For the *fitting cost* — **no**, because you can avoid it by selling/closing the factory; it is future conduct. For a *fine for operating without the filter* — you'd only be obligated once you've operated *after* the law is in force, so again no present obligation at year-end. Result: **no provision** either way; at most a contingent-liability narrative if enactment is likely. The lesson: a *new law* by itself rarely creates a *present* obligation for future compliance costs — the obligating event is your *own future operation*, which you can still avoid.
+
 **Present obligation vs possible obligation.** Where it is unclear whether a present obligation exists, you take account of all evidence (including experts). If, on balance, a present obligation **probably** exists at the reporting date → provide. If it only **possibly** exists → contingent liability.
 
 ### 4.2 Specific recognition rules AS 29 spells out
@@ -143,7 +172,14 @@ These are the classic exam scenarios. Reason through each:
 | **Warranties** | Provision **required** (past sale = obligating event; outflow probable across the population; estimable from history). | Classic provision. |
 | **Reimbursements** (e.g., insurance / indemnity you expect to recover) | Recognise the reimbursement as a **separate asset ONLY when virtually certain** it will be received; the asset must **not exceed** the provision. In the P&L, expense may be presented **net** of the reimbursement. | Prudence: the recovery is a contingent asset until virtually certain; you can't net a hoped-for recovery against a real liability. |
 | **Repairs/maintenance of own assets, future refurbishment** | **No provision** (unless a legal/constructive obligation to a third party exists). | You could sell the asset instead of refurbishing — no present obligation to anyone. |
+| **Decommissioning / site restoration** (legal duty to dismantle & restore) | Provision **required**, at **present value**; the cost is **capitalised into the asset** (AS 10) and the discount **unwinds** as finance cost. | Past act of building/operating creates the legal obligation; long-dated so discount. |
+| **Refunds under a stated policy** (published "money-back" guarantee) | Provision **required** — the published policy creates a **constructive** obligation even without legal compulsion. | Valid expectation raised in customers. |
+| **Guarantee given for a third party's borrowing** | Usually a **contingent liability** (disclose) while default is only possible; becomes a **provision** if the third party's default becomes probable. | Obligation is present but outflow not probable → limb (b). |
 | **Contingent asset** | **Never recognised.** Disclosed (in the *approving authority's report / Board report*, not typically the notes) **only if inflow is probable**. When inflow becomes **virtually certain**, it ceases to be contingent and the **asset is recognised**. | Anti-symmetry / prudence. |
+
+**Onerous contract — the measurement rule spelt out.** A contract is onerous when the *unavoidable* costs of meeting the obligations under it **exceed** the economic benefits expected to be received. The provision is the **lower of** (a) the cost of *fulfilling* the contract and (b) any *compensation/penalty* arising from *failing* to fulfil it — because a rational entity would choose the cheaper escape route, and that "least net cost of exit" is the true unavoidable burden. Before recognising a separate onerous-contract provision, any **impairment loss on assets dedicated to that contract** is recognised first (you don't double-count).
+
+*Mini-illustration:* Meridian has a non-cancellable lease on a vacated showroom: 3 years left at ₹5,00,000/year = ₹15,00,000 to fulfil. It can sub-let for ₹2,00,000/year (₹6,00,000), or buy out the lease today for a ₹9,00,000 penalty. Net cost to fulfil = 15,00,000 − 6,00,000 = ₹9,00,000; penalty to exit = ₹9,00,000. Least net cost = **₹9,00,000** → provide that (discount if material). If instead the buy-out were ₹7,00,000, you'd provide **₹7,00,000** (cheaper to exit).
 
 ### 4.3 MEASUREMENT — how much to provide
 
@@ -155,13 +191,18 @@ How to arrive at the best estimate:
    *E.g., if 75% of goods need no repair, 20% need minor repair (₹1,000), 5% need major (₹4,000): expected cost per unit = 0.75×0 + 0.20×1,000 + 0.05×4,000 = ₹400 per unit.*
 2. **Single obligation (one lawsuit, one dispute)** → the best estimate is generally the **individual most likely outcome**, but adjust for other possible outcomes if they're materially higher/lower. (You don't take "expected value" of a single event the way you would a population; but if outcomes cluster above/below the most likely one, lean that way.)
 
+**The single-obligation nuance examiners exploit.** "Most likely outcome" is the *starting* point, not an unbreakable rule. If the most likely outcome is ₹0 (probably win) but there is a *material* chance of a large loss, the best estimate is *not* automatically ₹0 — but note that if losing is only *possible* (not probable), the whole item fails the recognition gate and becomes a *contingent liability* instead. Conversely, if there are several possible loss amounts *all* of which would occur *if* you lose (say the court will award somewhere between ₹20L and ₹40L), and losing is probable, lean toward the amount that best reflects the range — often a mid or most-likely figure — not merely the smallest. Read whether the uncertainty is about *whether* you pay (→ probability gate) or *how much* you pay given that you pay (→ estimate within the provision).
+
 Further measurement rules:
 
 - **Risks and uncertainties** must be taken into account to reach the best estimate — but prudence does **not** justify creating **excessive** provisions or deliberately overstating liabilities.
-- **Future events** that may affect the amount (e.g., expected technological change reducing future clean-up cost) are reflected **where there is sufficient objective evidence** they will occur.
+- **Future events** that may affect the amount (e.g., expected technological change reducing future clean-up cost) are reflected **where there is sufficient objective evidence** they will occur. But *anticipated new legislation* is reflected only when **virtually certain to be enacted** (a high bar, because political processes are uncertain).
 - **Do NOT** take **expected disposal gains on assets** into account when measuring a provision, even if the disposal is closely linked to the event giving rise to the provision (that gain is recognised separately when the disposal occurs).
 - **Discounting:** where the effect of the time value of money is **material**, the provision is the **present value** of the expenditures expected to settle the obligation. Use a **pre-tax discount rate** reflecting current market assessments of the time value of money and risks specific to the liability (risks already adjusted in cash flows are not double-counted). Long-dated obligations (decommissioning, long-tail claims) are the typical candidates.
+- **Gross, before tax.** Provisions are measured **before tax**; the tax consequences (and any deferred tax) are dealt with under AS 22, not here. Do not net a tax effect into the provision.
 - **Reimbursements** — as above: separate asset only if virtually certain, capped at the provision amount.
+
+**Best estimate — who decides?** The estimate is management's judgement, *supplemented* by experience of similar transactions and, where necessary, reports from independent experts (lawyers, engineers). Evidence includes **events after the balance-sheet date** that shed light on conditions existing at year-end (links to AS 4 adjusting events).
 
 **Review and reversal (a recognition-timing rule that bites every year):**
 - Provisions must be **reviewed at each balance-sheet date** and **adjusted** to reflect the current best estimate.
@@ -179,6 +220,7 @@ Further measurement rules:
 | Provision no longer needed (reversal) | **Dr** Provision / **Cr** Expense or Other Income (write-back) |
 | Reimbursement virtually certain | **Dr** Reimbursement Receivable (asset, ≤ provision) / **Cr** Expense (or Other Income) |
 | Unwinding of discount (each year) | **Dr** Finance Cost / **Cr** Provision |
+| Decommissioning provision capitalised | **Dr** Asset / PPE / **Cr** Provision (then depreciate the asset, unwind the provision) |
 | Contingent liability | **NO ENTRY** — note disclosure only |
 | Contingent asset (virtually certain) | **Dr** Asset / **Cr** Income — now it's a real asset, not contingent |
 
@@ -207,6 +249,18 @@ flowchart TD
 ```
 *Items migrate between buckets as probability changes — a contingent liability can graduate into a provision; a contingent asset into a real asset.*
 
+### 4.6 Provision vs Accrual vs Reserve — the three-way confusion
+
+Exam scripts routinely blur these. Pin them down:
+
+| Concept | What it is | Estimation | On which side | AS 29? |
+|---|---|---|---|---|
+| **Provision** | A liability of *uncertain timing or amount* | **Substantial** estimation | Liability (charge against profit) | **Yes** |
+| **Accrual / liability** | A liability where amount is known or only *slightly* estimated (e.g., wages payable, invoice awaited) | Little/none | Liability (charge against profit) | No (ordinary liability) |
+| **Reserve** | An **appropriation of profit** (retained for a purpose), NOT a liability | N/A | Equity / reserves | No |
+
+The load-bearing distinction: a **provision is a charge against profit** (it reduces profit whether or not profits exist), whereas a **reserve is an appropriation of profit** (you can only appropriate what you've earned). A "provision" that is really discretionary earnings-retention is a *reserve* mislabelled — and a reserve dressed as a provision is a classic secret-reserve manipulation AS 29 is designed to stop.
+
 ---
 
 ## 5. Worked Examples
@@ -233,6 +287,8 @@ Dr Warranty Expense ₹1,60,00,000
 
 **Reconciliation check.** ₹200 + ₹200 = ₹400; ×40,000 = ₹1.60 cr. ✓ In FY 2026-27, if actual repair spend is ₹1.45 cr, you Dr Provision ₹1.45 cr / Cr Bank ₹1.45 cr, leaving ₹0.15 cr; reassess the tail and reverse any genuine excess to P&L.
 
+**Examiner tweak — "what if the warranty is 2 years and it's the first year"?** The population estimate already spans the *full* 2-year warranty life per car sold this year, so you provide the whole expected cost now (past event = the sale). You do **not** split it "half this year, half next" — the obligating event (sale) has fully occurred. If, however, the question gives *separate* failure rates for year-1 vs year-2 of cover, sum both into the single provision recognised at the sale date.
+
 ---
 
 ### Example 2 — The lawsuit vs the counter-claim (medium; provision vs contingent liability vs contingent asset in one shot)
@@ -255,6 +311,8 @@ Dr Legal Claims Expense ₹30,00,000
    Cr Provision for Legal Claim ₹30,00,000
 
 **Why not net the ₹20 lakh counter-claim against the ₹30 lakh provision?** Because gains and losses aren't offset, and a contingent asset (even at 80%) cannot be recognised. If Meridian *wins* the counter-claim next year and it becomes virtually certain, *then* it books a ₹20 lakh asset. The provision for (a) stays gross at ₹30 lakh. **Reconciliation:** accounts show a ₹30 lakh liability and ₹30 lakh expense; the notes carry ₹10 lakh (b) and the ₹20 lakh probable inflow (c). Nothing double-counted. ✓
+
+**Examiner tweak — "what if item (b) becomes probable after year-end but before the accounts are approved"?** If a *court verdict or new evidence after 31 March* shows the obligation *existed at* 31 March and loss is now probable, that is an **adjusting event (AS 4)** — you must convert (b) from a contingent-liability note into a **provision** in the 2025-26 accounts. If instead a *new* event *after* year-end causes the loss (a fresh incident in April), it's **non-adjusting** — disclose only. The trigger word is *when did the condition arise* — at or before year-end (adjust) versus after (don't).
 
 ---
 
@@ -305,6 +363,72 @@ Provision at 31 Mar 2027 = 58,80,426 + 4,70,434 = **₹63,50,860.**
 At the end of Year 5 the provision is exactly ₹80,00,000, the actual restoration is carried out, and:
 Dr Provision ₹80,00,000 / Cr Bank ₹80,00,000 (± any variance to P&L). The insurance recovery of ₹20,00,000 is collected against the receivable. **Everything reconciles to the real cash outflow.** ✓
 
+**Examiner tweak — the estimate changes mid-life.** Suppose on 31 Mar 2027 environmental engineers revise the *future* restoration cost from ₹80,00,000 to ₹90,00,000. You **re-measure** the provision to the PV of the *new* estimate over the *remaining* 3 years: 90,00,000 / 1.08^3 = 90,00,000 / 1.259712 = ₹71,44,718. The provision jumps from ₹63,50,860 to ₹71,44,718 — an increase of ₹7,93,858. Because the provision was **capitalised into the asset**, the change in estimate is **added to the asset's carrying amount** (and depreciated over remaining life), *not* dumped straight to P&L. (Only the *unwinding* portion goes to finance cost; the *estimate change* rides with the asset.) This is the AS 10 / AS 29 interface and a favourite trap.
+
+---
+
+### Example 4 — Restructuring provision (exam-hard; separating provisionable from non-provisionable costs)
+
+**Facts.** On 15 March 2026 Meridian's Board approves closing its Pune plant. On **28 March 2026** it publicly announces the closure and writes to affected staff and customers (valid expectation raised before year-end). Estimated costs to be incurred in 2026-27:
+- Statutory redundancy/severance to retrenched Pune staff: ₹90,00,000
+- Lease termination penalty on the Pune premises: ₹25,00,000
+- **Retraining and relocating** staff who will *continue* in the Nagpur plant: ₹40,00,000
+- **Marketing** to build the new consolidated brand: ₹15,00,000
+- Expected **operating losses** of the Pune plant for April–June 2026 until final shutdown: ₹20,00,000
+- New IT system for the merged operations: ₹30,00,000
+
+What provision at 31 March 2026?
+
+**Step 1 — Is there an obligation?** Board decision alone (15 Mar) = **not enough**. But the **public announcement + letters (28 Mar)** raised a valid expectation → **constructive obligation exists at 31 Mar 2026.** So a restructuring provision *is* required.
+
+**Step 2 — Include only DIRECT costs necessarily entailed by the restructuring AND not associated with ongoing activities.**
+
+| Cost | Provide? | Reason |
+|---|---|---|
+| Severance ₹90,00,000 | **Yes** | Direct, unavoidable consequence of the closure |
+| Lease termination penalty ₹25,00,000 | **Yes** | Direct cost of exiting |
+| Retraining/relocating *continuing* staff ₹40,00,000 | **No** | Relates to *ongoing/future* activities |
+| Marketing ₹15,00,000 | **No** | Ongoing activity / future benefit |
+| Future operating losses ₹20,00,000 | **No** | Future operating losses are never provided |
+| New IT system ₹30,00,000 | **No** | Investment in future conduct |
+
+**Step 3 — Provision** = 90,00,000 + 25,00,000 = **₹1,15,00,000.**
+Dr Restructuring Expense ₹1,15,00,000 / Cr Restructuring Provision ₹1,15,00,000.
+
+**Reconciliation of logic.** Total costs floated = ₹2,20,00,000; provisionable = only ₹1,15,00,000 (52%). The ₹1,05,00,000 excluded is either future operating cost or investment in *continuing* operations, which the entity could still avoid — hence no present obligation. ✓
+
+**Examiner tweak — "what if the announcement happened on 5 April 2026 instead of 28 March"?** Then **no constructive obligation existed at 31 March 2026** — only a Board decision, which the entity could still reverse. Result: **no provision** in 2025-26; disclose as a **non-adjusting event after the balance-sheet date (AS 4)** if material. The single date change flips the entire answer — always check *when the valid expectation was raised* relative to year-end.
+
+---
+
+### Example 5 — Provision movement table + reversal (medium; the disclosure mechanics as a numerical)
+
+**Facts.** Meridian's Warranty Provision:
+- Opening balance 1 Apr 2025: ₹1,20,00,000
+- Additional provision for FY26 sales: ₹1,60,00,000 (from Example 1)
+- Actual warranty spend during FY26 (against pre-existing and current claims): ₹1,30,00,000
+- On review at 31 Mar 2026, ₹15,00,000 of the *old* provision relates to models now proven reliable — no longer probable any outflow. No discounting.
+
+**Build the movement table (this is the AS 29 disclosure):**
+
+| Warranty Provision movement | ₹ |
+|---|---:|
+| Opening (1 Apr 2025) | 1,20,00,000 |
+| Add: additional provision made | 1,60,00,000 |
+| Less: amounts used (actual spend) | (1,30,00,000) |
+| Less: unused amounts reversed | (15,00,000) |
+| **Closing (31 Mar 2026)** | **1,35,00,000** |
+
+**Journal entries during the year:**
+- Additional provision: Dr Warranty Expense 1,60,00,000 / Cr Provision 1,60,00,000
+- Spend: Dr Provision 1,30,00,000 / Cr Bank 1,30,00,000
+- Reversal: Dr Provision 15,00,000 / Cr Warranty Expense (or Other Income) 15,00,000
+
+**Reconciliation.** 1,20,00,000 + 1,60,00,000 − 1,30,00,000 − 15,00,000 = **₹1,35,00,000.** ✓
+Net P&L charge for warranties this year = 1,60,00,000 additional − 15,00,000 reversal = **₹1,45,00,000** expense. The reversal correctly *reduces* the current-year charge and exposes the earlier over-provision — exactly the transparency the "review each year" rule enforces.
+
+**Examiner tweak — "can the ₹15,00,000 excess be used to absorb an unrelated ₹15,00,000 legal claim that arose this year"?** **No.** A warranty provision is used *only* for warranty expenditure. The excess must be **reversed** through the warranty line, and the legal claim (if it meets the gate) gets **its own** provision and expense. Netting them would hide both the over-provision and the new loss.
+
 ---
 
 ## 6. Presentation & Disclosure Formats
@@ -343,15 +467,19 @@ Where a provision and a contingent liability arise from the *same* set of circum
 ### 6.5 Rare "seriously prejudicial" exemption
 In **extremely rare** cases, disclosing some/all information about a dispute could **seriously prejudice** the entity's position in the litigation. Then it need not disclose the detail, but **must disclose the general nature of the dispute, the fact that the information has not been disclosed, and the reason why.**
 
+### 6.6 The disclosure asymmetry, on one line
+Notice the deliberate mirror of prudence *inside the disclosure rules themselves*: a **loss** must be disclosed once it is merely **possible** (non-remote), but a **gain** need not be disclosed until it is **probable** — a full rung higher. Same asymmetry as recognition, one notch lower on the ladder. If you can recite "possible loss = disclose; probable gain = disclose; virtually-certain gain = recognise", you have Part 6 in nine words.
+
 ---
 
 ## 7. Connections
 
-- **AS 4 — Contingencies and Events Occurring After the Balance Sheet Date.** Historically AS 4 covered "contingencies"; when AS 29 came in, those provisions of AS 4 were **withdrawn** and moved here. AS 4 now deals mainly with *adjusting vs non-adjusting events after the balance-sheet date* — which interacts with AS 29: a post-year-end court verdict may be an *adjusting event* giving evidence that a present obligation existed at year-end, converting a contingent liability into a provision.
-- **AS 10 — Property, Plant & Equipment.** Decommissioning/restoration provisions are **capitalised into the cost of the asset** (Example 3), then depreciated. AS 29 measures the liability; AS 10 houses the asset side.
+- **AS 4 — Contingencies and Events Occurring After the Balance Sheet Date.** Historically AS 4 covered "contingencies"; when AS 29 came in, those provisions of AS 4 were **withdrawn** and moved here. AS 4 now deals mainly with *adjusting vs non-adjusting events after the balance-sheet date* — which interacts with AS 29: a post-year-end court verdict may be an *adjusting event* giving evidence that a present obligation existed at year-end, converting a contingent liability into a provision (see Example 2 tweak). Also note the AS 4 exception: **proposed dividends** are *not* provided for at year-end (declared after) — a reminder that not every expected outflow is an AS 29 provision.
+- **AS 10 — Property, Plant & Equipment.** Decommissioning/restoration provisions are **capitalised into the cost of the asset** (Example 3), then depreciated. AS 29 measures the liability; AS 10 houses the asset side, and **changes in the estimate** ride with the asset, not straight to P&L (Example 3 tweak).
 - **AS 16 — Borrowing Costs.** The **unwinding of the discount** on a provision is a finance cost — conceptually a borrowing cost of carrying the liability.
-- **AS 28 — Impairment of Assets.** "Future operating losses" are *not* provided for; instead they signal you should test the related assets for **impairment** under AS 28. The two standards patrol adjacent borders.
+- **AS 28 — Impairment of Assets.** "Future operating losses" are *not* provided for; instead they signal you should test the related assets for **impairment** under AS 28. The two standards patrol adjacent borders. For an onerous contract, impair dedicated assets *first*, then provide the residual.
 - **AS 7 / AS 9.** Onerous *construction* contracts and expected losses interact with AS 7 (foreseeable losses recognised immediately) and revenue timing under AS 9.
+- **AS 22 — Taxes on Income.** Provisions are measured **pre-tax**; the tax effect of the underlying item is a separate AS 22 matter. Don't fold a tax adjustment into an AS 29 provision.
 - **Ind AS 37** is the converged version. Broadly similar; key differences to flag for the exam: Ind AS 37 uses "**more likely than not**" identically, but its **restructuring and constructive-obligation** guidance is more elaborate, and Ind AS mandates discounting more assertively. AS 29 is the ICAI (Indian GAAP) standard you're examined on here.
 - **Schedule III, Companies Act 2013** governs the current/non-current split and the face presentation of provisions and contingent liabilities ("Contingent liabilities and commitments" note).
 
@@ -363,7 +491,7 @@ In **extremely rare** cases, disclosing some/all information about a dispute cou
 
 2. **Future operating losses — the perennial trap.** A company expecting to lose ₹X next year wants to provide now. **No.** No past obligating event. Answer: no provision; consider impairment (AS 28).
 
-3. **Board decision to restructure ≠ obligation.** A Board *resolving* to close a plant creates **no** provision. Only a **detailed plan + announcement/valid expectation** before year-end creates a constructive obligation. And even then, provide only for **direct** restructuring costs — **not** retraining, relocation of *continuing* staff, or future operating losses.
+3. **Board decision to restructure ≠ obligation.** A Board *resolving* to close a plant creates **no** provision. Only a **detailed plan + announcement/valid expectation** before year-end creates a constructive obligation. And even then, provide only for **direct** restructuring costs — **not** retraining, relocation of *continuing* staff, or future operating losses. (Example 4.)
 
 4. **Netting the reimbursement into the provision on the balance sheet.** The insurance recovery is a **separate asset** (only if virtually certain, capped at the provision). Students wrongly show the provision *net*. Balance sheet = gross; P&L *may* be net.
 
@@ -375,7 +503,7 @@ In **extremely rare** cases, disclosing some/all information about a dispute cou
 
 8. **Forgetting to discount / forgetting to unwind.** Long-dated provisions must be at **present value** when material, and the discount **unwinds** each year as a finance cost. Examiners award the unwinding marks separately.
 
-9. **Using a provision for the wrong expenditure.** A provision raised for warranty claims cannot be raided to absorb, say, a legal settlement. Each provision is used **only** for its original purpose — otherwise an over-provision is hidden.
+9. **Using a provision for the wrong expenditure.** A provision raised for warranty claims cannot be raided to absorb, say, a legal settlement. Each provision is used **only** for its original purpose — otherwise an over-provision is hidden. (Example 5 tweak.)
 
 10. **"Probable" mislabelled.** AS 29 defines probable as **more likely than not (> 50%)**. Some students import a higher "highly probable" bar. Keep it at 50%+.
 
@@ -383,19 +511,32 @@ In **extremely rare** cases, disclosing some/all information about a dispute cou
 
 12. **Constructive obligation ignored.** A published "we always refund" policy can create an obligation even with **no legal** duty. Don't insist on a contract.
 
+13. **New law = automatic provision.** A *draft* or *expected* law does **not** create a present obligation for future compliance costs — the obligating event is usually your *own future operation*, which you can avoid. Provide only when the obligation (e.g., a fine for past conduct) already bites, and reflect anticipated legislation in *measurement* only when **virtually certain to be enacted**. (See 4.1.)
+
+14. **Executory contract treated as onerous.** An ordinary purchase order or lease at market terms is executory → **no provision**. It becomes provisionable **only** when *onerous* (unavoidable cost > benefit). Don't provide for every unfavourable-looking commitment.
+
+15. **Change in a capitalised provision's estimate dumped to P&L.** For a *decommissioning* provision capitalised into an asset, a later change in the *future cost* estimate adjusts the **asset's carrying amount**, not P&L (only the unwinding hits finance cost). (Example 3 tweak.)
+
+16. **Provision vs reserve.** A "provision" that is really a discretionary appropriation of profit is a **reserve** (equity), and vice-versa. A provision is a *charge* against profit (made regardless of profits); a reserve is an *appropriation* (only out of profits). Mislabelling one as the other is a secret-reserve red flag.
+
+17. **Disclosing a contingent asset in the notes to accounts.** Probable contingent assets are disclosed in the **approving authority's / Board's report**, not (typically) the notes to the financial statements. Small placement point, easy mark.
+
+18. **Provision measured net of tax.** Provisions are **pre-tax**. Do not build in a tax saving.
+
 ---
 
 ## 9. First-Principles Recap
 
 - Accounting for uncertain obligations must have **boundaries**: unbounded prudence builds secret reserves (fraud); unbounded optimism hides real losses (fraud). AS 29 draws the line.
-- The whole standard runs on **one dial — probability of outflow** — sliced into **remote (ignore) / possible (disclose) / probable (record)**.
+- The whole standard runs on **one dial — probability of outflow** — sliced into **remote (ignore) / possible (disclose) / probable (record)**, with a *second* dial (does a present obligation even exist?) sitting behind it.
 - A **provision** is recognised only when **all three** gates open: **present obligation from a past event + probable outflow (>50%) + reliable estimate.** Miss any one → contingent liability or nothing.
-- The **"no realistic alternative / past event"** gate is what blocks provisions for **future** operating losses, planned refurbishments, and mere Board intentions — you can only provide for burdens you already carry.
+- The **"no realistic alternative / past event"** gate is what blocks provisions for **future** operating losses, planned refurbishments, mere Board intentions, ordinary executory contracts, and future compliance with not-yet-binding laws — you can only provide for burdens you already carry.
 - A **contingent liability is never recorded** — it lives in the notes (unless remote). It can **graduate** into a provision when it becomes probable and measurable.
 - **Prudence is asymmetric on purpose:** losses are anticipated (provide when probable); gains are not (a **contingent asset** is never recognised, disclosed only if **probable**, and recognised only when **virtually certain**).
-- **Measurement = best estimate:** *expected value* for large populations (warranties), *most likely outcome* for single obligations; discount to **present value** when time value is material and **unwind** the discount as finance cost.
+- **Measurement = best estimate:** *expected value* for large populations (warranties), *most likely outcome* for single obligations; discount to **present value** when time value is material and **unwind** the discount as finance cost; measure **pre-tax**; ignore expected asset-disposal gains.
 - **Reimbursements** are a separate asset (only if **virtually certain**, capped at the provision); never net them into the provision on the balance sheet.
-- **Review every year:** adjust to current best estimate; **reverse** if outflow is no longer probable; **use** each provision **only** for its original purpose.
+- **Review every year:** adjust to current best estimate; **reverse** if outflow is no longer probable; **use** each provision **only** for its original purpose — the anti-concealment rule.
+- **Provision ≠ accrual ≠ reserve:** a provision is a *charge* against profit for an *uncertain* liability; an accrual is a near-certain liability; a reserve is an *appropriation* of profit (equity).
 - Disclosure is the honest middle ground — a **movement table** for provisions, a **narrative + estimate** for contingent liabilities, and **Board-report disclosure** for probable contingent assets.
 
 ---
@@ -417,27 +558,34 @@ In **extremely rare** cases, disclosing some/all information about a dispute cou
 - Probable → **Disclose** (Board's report)
 - Possible/remote → **Nothing**
 
+**THRESHOLD LADDER (memorise):** Remote < Possible < **Probable (>50%)** < **Virtually certain (~100%)**.
+Loss: disclose at *possible*, record at *probable*. Gain: disclose at *probable*, record at *virtually certain*. (Gain is always one rung stricter.)
+
 **MEASUREMENT:**
 - Large population → **Expected value** (probability-weighted)
 - Single obligation → **Most likely outcome**
 - Material time value → **Present value** (pre-tax rate); **unwind** each year → Finance cost
-- Ignore expected asset-disposal gains; don't create excessive provisions
+- Measure **pre-tax**; ignore expected asset-disposal gains; don't create excessive provisions
 
 **REIMBURSEMENT:** separate asset only if **virtually certain**, capped at provision; P&L may be net, B/S is gross.
 
-**NO PROVISION FOR:** future operating losses; repairs/refurbishment of own assets; mere Board decision to restructure; depreciation/doubtful debts (outside AS 29).
-**RESTRUCTURING PROVISION:** needs detailed plan **+** announcement/valid expectation before year-end; only **direct** costs (not retraining/relocation of continuing staff, not future operating losses).
+**NO PROVISION FOR:** future operating losses; repairs/refurbishment of own assets; mere Board decision to restructure; ordinary executory contracts; future compliance with not-yet-binding law; depreciation/doubtful debts (outside AS 29).
+**PROVISION REQUIRED FOR:** warranties; onerous contracts (lower of fulfil vs exit cost); decommissioning/restoration (at PV, capitalised); refunds under a published policy; announced restructuring (direct costs only).
+**RESTRUCTURING PROVISION:** needs detailed plan **+** announcement/valid expectation before year-end; only **direct** costs (not retraining/relocation of continuing staff, not marketing, not new systems, not future operating losses).
+
+**PROVISION vs ACCRUAL vs RESERVE:** provision = uncertain liability, charge against profit (AS 29); accrual = near-certain liability; reserve = appropriation of profit (equity, not AS 29).
 
 **KEY ENTRIES:**
 - Create: Dr Expense / Cr Provision
 - Spend: Dr Provision / Cr Bank
 - Reverse: Dr Provision / Cr Income
 - Unwind: Dr Finance Cost / Cr Provision
+- Decommissioning capitalised: Dr Asset / Cr Provision
 - Reimbursement: Dr Receivable / Cr Expense (≤ provision)
 - Contingent liability: **no entry**; Contingent asset (virtually certain): Dr Asset / Cr Income
 
-**REVIEW each balance-sheet date:** adjust to best estimate; reverse if no longer probable; use only for original purpose.
+**REVIEW each balance-sheet date:** adjust to best estimate; reverse if no longer probable; use only for original purpose. Change in a *capitalised* provision's estimate → adjust the **asset**, not P&L.
 
 **DISCLOSURE:** Provision → movement table (open + additions + unwinding − used − reversed = close) + nature/timing/uncertainties. Contingent liability → nature + estimate + uncertainties + reimbursement (skip if remote). Contingent asset → Board report if probable. Rare "seriously prejudicial" carve-out → disclose general nature + fact/reason for non-disclosure.
 
-**THRESHOLD WORDS:** Remote < Possible < **Probable (>50%)** < **Virtually certain (~100%)**.
+**AS 4 LINK:** post-year-end evidence of a condition existing at year-end = **adjusting event** → can convert a contingent liability into a provision.

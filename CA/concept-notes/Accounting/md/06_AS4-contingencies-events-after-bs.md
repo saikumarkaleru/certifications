@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 06 — AS 4: Contingencies & Events After the Balance Sheet Date
 
 ## 1. The Problem — the real business situation that created the need
@@ -16,6 +18,8 @@ Here is the tension. The financial statements are **dated 31 March 2026** and th
 **Which of these June facts should change the 31 March numbers, and which should merely be mentioned?** And separately: some obligations on 31 March were not certain at all — a lawsuit not yet decided, a guarantee you gave a subsidiary. These are **contingencies** — things that *might* become liabilities depending on a future event. How do you report a maybe-liability?
 
 AS 4 exists to answer exactly these two questions. It is a small standard, but it governs a moment every company faces every single year — the moment between "year-end" and "signature."
+
+**Why this even needs a *standard*.** Left to instinct, two managers would answer differently: an optimist would ignore the April insolvency ("it happened in the new year"), a pessimist would write down the burnt warehouse to zero. Both would produce a balance sheet that no longer means the same thing across companies. Accounting standards exist to make the number on the page *comparable* — so that "trade receivables ₹76,00,000" means the same disciplined thing whether it appears in Meridian's accounts or a rival's. AS 4 is the rule that keeps the post-year-end window from becoming a place where each company invents its own truth.
 
 ## 2. The Core Idea — the single underlying principle, plain language + analogy
 
@@ -38,6 +42,23 @@ So the entire test reduces to one question about every post-year-end event:
 
 Contingencies are the same idea seen from the other side: on 31 March a condition already existed (a pending lawsuit, a guarantee), but its *outcome* depends on a future event. So you ask — how likely, and can I measure it?
 
+**A sharper way to phrase the test.** Weak students ask *"when did the event happen?"* — and get trapped, because every post-year-end event by definition *happens* after year-end. Strong students ask *"when did the underlying condition arise?"* The **event** (the insolvency filing, the court judgment, the auction sale) is always in April–June; that tells you nothing. What matters is whether the **condition** the event reveals (the debtor's ruined finances, the pre-existing obligation, the low realisable value) was already true on 31 March. Separate the *event* from the *condition* it evidences, and the whole chapter becomes mechanical.
+
+*Figure 2.1 — the one decision the whole standard turns on*
+
+```mermaid
+flowchart TD
+    A["Event occurs between year-end and approval date"] --> B{"Does it evidence a CONDITION that already existed on the balance sheet date"}
+    B -->|"Yes"| C["Adjusting event -- change the recognised amounts"]
+    B -->|"No -- new condition of the new year"| D{"Does the event destroy the going concern assumption"}
+    D -->|"Yes"| E["Going concern override -- restate the whole basis"]
+    D -->|"No"| F{"Is the event material"}
+    F -->|"Yes"| G["Disclose nature plus financial effect in notes or Board Report"]
+    F -->|"No"| H["Ignore -- no adjustment and no disclosure"]
+```
+
+*Every question in this chapter is a walk down this single tree.*
+
 ## 3. Why it's built this way — the logic behind each rule; what breaks without it
 
 Let's pressure-test the principle so you understand *why* it must be this way.
@@ -48,11 +69,17 @@ Let's pressure-test the principle so you understand *why* it must be this way.
 
 So the adjusting/non-adjusting split is not an arbitrary rule — it is **forced** by the demand that the balance sheet be true *as at its own date.* Break it either way and you publish a falsehood.
 
+**The deeper reason: matching and periodicity.** Beneath the "true as at its date" idea sits the **periodicity assumption** — we chop a continuous business into discrete years so we can report. Once you accept periodicity, every gain and loss has a *home year* determined by *when its cause arose*, not when the paperwork lands. The fire's cause (the ignition) is a May event, so its loss belongs to FY 26-27; forcing it into FY 25-26 would mismatch the loss against the wrong year's revenues. The debtor's ruin is a February/March event, so its loss belongs to FY 25-26. Adjusting vs non-adjusting is nothing more than **putting each loss in its correct home year.**
+
 **But there's a crucial exception — and it too follows from logic, not rote.** What if the May fire is so devastating that the company can no longer continue as a going concern? Now the problem is different. The *entire basis* of preparing the accounts — the assumption that the business will keep operating and its assets are worth their operating values — has collapsed. You cannot present a "business as usual" balance sheet for an entity that is about to die. So **any post-balance-sheet event that undermines the going concern assumption forces you to adjust** — not because the event relates to 31 March conditions, but because the *foundation on which the whole statement rests* is gone. Truth demands you tell the reader the company is no longer a going concern.
+
+**Why does going concern override periodicity?** Because going concern is not one line item — it is the *measurement convention* under which *every* asset is valued. Fixed assets sit at cost less depreciation only because we assume they'll be used, not sold in a hurry. Inventory sits at cost only because we assume orderly sale. Once the enterprise will wind up, *all* of those valuations are wrong simultaneously. So this isn't really "adjusting one event into the old year" — it's admitting the whole statement was built on a now-false premise and rebuilding it. That is why it trumps the ordinary rule.
 
 **Why disclose non-adjusting events at all, if you don't adjust?** Because a reader making decisions in June deserves to know that the ₹2 crore warehouse is gone. The *numbers* stay as at 31 March (that's honest), but a *note* warns the reader that the picture has changed materially since. This respects both truths: the balance-sheet-date truth (numbers) and the reader's need for current information (disclosure).
 
 **Why treat contingencies with a "probability" lens?** A contingency is a condition existing on 31 March whose outcome is *uncertain*. If you booked every possible lawsuit as a liability, balance sheets would be swamped with speculative losses and become useless (and you'd be violating prudence in reverse — creating hidden reserves). If you ignored all of them, real looming losses would be hidden. So the standard grades them by likelihood: if a loss is *probable and measurable*, it has effectively crystallised enough to be a real liability — book it. If it's only *possible*, warn the reader in a note. If it's *remote*, ignore it. This is just prudence applied with proportion.
+
+**Why the asymmetry — losses recognised, gains not?** The same prudence that says "don't overstate assets" says "don't overstate income." A probable *loss* is booked because failing to would flatter the accounts; a probable *gain* is **not** booked because booking it would flatter the accounts. Conservatism is deliberately one-sided: it would rather understate than overstate net worth. This is why a "we'll probably win the lawsuit" line never produces income, but a "we'll probably lose" line does produce an expense.
 
 Now, the historical wrinkle you **must** know for the exam: contingencies were *originally* inside AS 4. When **AS 29 (Provisions, Contingent Liabilities and Contingent Assets)** was issued, it took over the entire subject of contingencies. So today, **the "contingencies" portions of AS 4 stand withdrawn and are dealt with by AS 29.** AS 4 now effectively governs only **events occurring after the balance sheet date** — plus one contingency-related survivor: the requirement to adjust assets and liabilities for events after the balance sheet date that provide evidence about *conditions* existing at year-end. We'll map this handover precisely in Section 4 and Section 7.
 
@@ -76,6 +103,10 @@ AS 4 deals with the treatment in financial statements of **(a) contingencies** a
 **Two dates that anchor everything:**
 1. **Balance sheet date** — e.g. 31 March 2026 (the date the photo is dated).
 2. **Date of approval** — e.g. 12 June 2026 (the date the Board signs off; the window closes here). Events *after* approval are **outside** AS 4's scope entirely.
+
+**Fine distinction — "approval" vs "adoption".** The window closes at **Board approval** of the accounts (when the Board signs the financial statements), *not* at their later **adoption by shareholders at the AGM**. A common exam stem gives you a Board-approval date *and* an AGM date to see whether you pick the right one. Rule: the AS 4 window is **balance sheet date → Board approval date.** The AGM is irrelevant to the window (it matters only for the *dividend* recognition, Section 4.5).
+
+**Both directions count.** The definition says events "favourable *and* unfavourable." Students instinctively hunt for losses, but a favourable event (e.g. a post-year-end court win confirming the *amount* of a receivable that was doubtful at year-end, or the recovery of an asset previously written off) is equally within scope. Adjusting works both ways: it can *increase* an asset or *reduce* a liability where the evidence relates to a year-end condition.
 
 ### 4.2 The two types of events (the heart of AS 4)
 
@@ -103,6 +134,12 @@ Classic examples:
 
 **The discipline test** you apply to every event: *"Was the condition already present on the balance sheet date, or did it arise afterwards?"* Present already → adjust. Arose after → disclose.
 
+**Two grey-zone principles the examiner exploits:**
+
+*(i) Same fact pattern, opposite treatment, depending on trigger date.* "Debtor became insolvent" is adjusting or non-adjusting purely on whether the debtor's collapse pre-dated year-end. The words are identical; only the timeline differs. Whenever a stem is silent on *when* the debtor's finances deteriorated, that silence is the whole question — state your assumption explicitly and answer conditionally.
+
+*(ii) Falling market values of investments are generally NON-adjusting.* A slump in share prices *after* year-end reflects new-year market conditions, not a year-end condition — so it is not adjusted (for a company carrying long-term investments at cost, a *temporary* decline isn't recognised anyway). **But** if the post-year-end fall is *evidence* that a decline already existing at year-end was **other than temporary** (a permanent diminution under AS 13), that is an adjusting event. So "share price fell after year-end" defaults to non-adjusting *unless* it reveals a permanent, pre-existing impairment.
+
 ### 4.3 The going concern override
 
 There is one situation where a **non-adjusting-type** event *must nevertheless be adjusted*: when an event after the balance sheet date indicates that the **going concern assumption is no longer appropriate** for the whole enterprise (or a material part of it). 
@@ -110,6 +147,14 @@ There is one situation where a **non-adjusting-type** event *must nevertheless b
 *Recognition rule:* If going concern is destroyed, **change the fundamental basis** of accounting — restate assets at realisable values, reclassify, and do NOT prepare on a going concern basis. This overrides the "don't adjust new events" rule because the very foundation of the statements is affected.
 
 Example: A catastrophic post-year-end event (loss of the entire business, collapse of the sole customer/market) means the company will wind up. Even though the event is "new," you cannot present going-concern accounts.
+
+**What "change the basis" actually means in the answer sheet:**
+1. Restate fixed assets and other long-term assets from carrying amount to **net realisable / break-up value**.
+2. **Reclassify** non-current items as current (nothing is "long-term" for an entity about to wind up).
+3. **Provide** for costs that will crystallise on winding up (retrenchment/redundancy, penalty on early lease termination, warranty run-off, legal and liquidation costs).
+4. **Disclose prominently** that the accounts are prepared on a non-going-concern (realisable/break-up) basis, the reasons, and the effect.
+
+**Scope nuance:** the standard also covers where going concern fails for a *material part* of the enterprise (e.g. one dominant division shuts). You don't necessarily abandon going concern for the whole entity — you adjust for the part whose basis has changed. Read whether the stem kills the *whole* company or a *segment*.
 
 ### 4.4 Statutory / regulatory events — the "dividend and similar" adjustment rule
 
@@ -129,9 +174,15 @@ This is the single most tested point in the chapter, and the rule **changed**, s
 
 *Why the change makes sense:* A liability exists only when there's a **present obligation** arising from a past event. On 31 March, the shareholders have not declared anything — the company can still change or withhold the dividend at the AGM. There is no obligation to transfer resources. Recognising a provision would violate the very definition of a liability. So the amended standard correctly reclassifies it as a disclosure.
 
+**The interim-dividend contrast (examiner's favourite trap-within-a-trap).** An **interim dividend** *declared by the Board during the year* (or before year-end) is different — the Board has the power to declare it and, once declared, it *is* a present obligation. So an interim dividend already declared and paid/payable at year-end **is recognised** in that year. The "disclose, don't provide" rule applies to the **final/proposed dividend recommended after year-end**, not to interim dividends the Board already declared. Read carefully which one the stem gives you.
+
+**Dividend on the *books* the other way — dividend income receivable.** Symmetrically, if the reporting company is a *shareholder* in another company, a dividend that the investee's Board *recommends* after year-end is likewise **not** income of the current year for the investor (no right to receive until declared at the investee's AGM). Don't accrue dividend income for a dividend merely proposed by the payer after year-end.
+
 ### 4.6 Events after approval / after issue
 
 Events occurring **after** the date of approval are **outside AS 4.** If information about *material* events comes to light after approval but before issue, the auditors and management deal with it under auditing standards and company law — not AS 4. The AS 4 window is strictly **balance sheet date → approval date.**
+
+**Practical corollary for problems:** always read the stem for *two* dates and place each event on the timeline. An event dated *after* the Board-approval date — even a catastrophic one — gets **no** AS 4 treatment in these accounts; it becomes a *next-year* event. Examiners plant an event a few days after approval precisely to see if you police the window's closing edge.
 
 ### 4.7 Contingencies — the AS 4 remnant and the AS 29 handover
 
@@ -141,6 +192,19 @@ Because the exam syllabus still links AS 4 to contingencies, here is the precise
 - What **survives in AS 4** is the linkage: *events after the balance sheet date that provide evidence about the amount of a contingency (a condition existing at year-end) are adjusting events* — e.g., a court decision after year-end on a suit pending at year-end confirms the amount of a present obligation, so you adjust.
 
 We treat AS 29 fully in its own chapter; here, just hold the boundary line.
+
+*Figure 4.1 — where each item now lives*
+
+```mermaid
+flowchart TD
+    A["Uncertain or post-year-end matter"] --> B{"Is the outcome uncertain depending on a future event"}
+    B -->|"Yes -- it is a contingency"| C["Governed by AS 29 -- provision if probable and measurable else disclose or ignore"]
+    B -->|"No -- a definite event happened after year-end"| D["Governed by AS 4 -- adjusting or non-adjusting"]
+    C --> E["Exception -- a post-year-end event fixing the amount of a year-end obligation stays an AS 4 adjusting event"]
+    D --> E
+```
+
+*The interlock lives at the litigation-settlement example -- AS 29 decides whether an obligation exists at year-end while AS 4 uses the after-date judgment to fix its amount.*
 
 ## 5. Worked Examples
 
@@ -230,6 +294,67 @@ Then, because of **Item 6**, the going concern basis fails: Vega must **restate 
 
 *Note on Item 3 vs Item 6 together:* absent Item 6, the fire is a pure note. But since going concern has independently collapsed, the whole balance sheet is restated anyway.
 
+### Example 4 (Exam-hard) — The timeline stress test: events on both edges of the window
+
+*Nimbus Ltd. has year-end 31 March 2026. The Board approves the accounts on **15 June 2026**. The AGM is scheduled for **10 August 2026**. Draft profit ₹28,00,000. Decide treatment.*
+
+1. **8 April 2026** — a customer owing ₹2,00,000, in liquidation since January 2026, confirmed to pay nil.
+2. **1 June 2026** — a warehouse fire destroys uninsured goods worth ₹5,00,000; Nimbus continues normally.
+3. **20 June 2026** — Nimbus loses a labour tribunal case (dispute pending since 2025) and must pay ₹3,00,000.
+4. **5 July 2026** — a debtor owing ₹1,50,000, solvent at year-end, becomes insolvent.
+
+**Reasoning against the timeline.** The AS 4 window is **31 Mar 2026 → 15 Jun 2026 (Board approval)**. The August AGM is a decoy — it does *not* extend the window.
+
+- **Item 1 (8 Apr):** inside window; condition (customer insolvent since January) existed at year-end → **adjusting.** Write off ₹2,00,000. Profit falls to ₹26,00,000.
+- **Item 2 (1 Jun):** inside window; new-year condition, going concern intact → **non-adjusting.** Disclose ₹5,00,000; no profit effect.
+- **Item 3 (20 Jun):** **outside** the window (after 15 Jun approval), *even though* it confirms a year-end obligation. AS 4 does **not** apply — it is a next-year event; no adjustment to FY 25-26. *(Had it fallen on or before 15 Jun it would have been an adjusting provision of ₹3,00,000.)*
+- **Item 4 (5 Jul):** outside the window **and** a new condition anyway → no AS 4 treatment for FY 25-26.
+
+**Adjusted profit:** ₹50 lakh? No — start ₹28,00,000, only Item 1 bites: **₹26,00,000.** Disclosure note for Item 2 only.
+
+*Self-check:* only events (a) inside the window **and** (b) evidencing a year-end condition change the numbers. Item 3 is the sting — a textbook adjusting *type* that fails purely on timing. Item 4 fails on *both* tests. This is why you plot every date before touching a rupee.
+
+### Example 5 (Medium-hard) — Inventory NRV, a rebate, and a permanent investment fall
+
+*Corvid Ltd., year-end 31 March 2026, approval 30 June 2026. Resolve each with amounts.*
+
+1. Finished goods costing **₹10,00,000** were on hand at 31 March. Between April and June, ₹6,00,000 (cost) of them were sold for ₹4,20,000 due to a market glut that already existed at year-end; the remaining ₹4,00,000 (cost) are expected to fetch only ₹3,10,000.
+2. On **12 May 2026**, a supplier granted a **volume rebate of ₹80,000** relating to purchases *made during FY 2025-26*.
+3. Long-term investment in listed shares carried at cost **₹5,00,000**. Market value was ₹4,90,000 on 31 March and fell to ₹2,00,000 by June because the investee's fraud (existing but undisclosed at year-end) surfaced in May — a permanent diminution.
+
+**Reasoning and amounts.**
+
+**Item 1 — Adjusting (AS 2 via AS 4).** The glut existed at year-end, so the post-year-end sales/estimates are *evidence of NRV at 31 March.* Write inventory down to lower of cost or NRV:
+- Sold lot: NRV ₹4,20,000 vs cost ₹6,00,000 → write-down **₹1,80,000.**
+- Held lot: NRV ₹3,10,000 vs cost ₹4,00,000 → write-down **₹90,000.**
+- Total inventory write-down = **₹2,70,000**; inventory carried at ₹4,20,000 + ₹3,10,000 = **₹7,30,000** (vs ₹10,00,000 cost).
+
+**Item 2 — Adjusting.** The rebate relates to FY 25-26 purchases — a condition/entitlement that existed at year-end; its confirmation in May fixes the amount. Reduce purchase cost / recognise ₹80,000 (income or COGS reduction) in FY 25-26.
+
+**Item 3 — Adjusting (permanent diminution, AS 13 lens).** Ordinarily a post-year-end market fall is *non-adjusting.* But here the fall reveals a diminution that is **other than temporary** and rooted in a condition (the fraud) *existing at year-end.* Provide for the permanent diminution: write investment down from ₹5,00,000 toward realisable value → recognise the impairment (e.g. to ₹2,00,000, a **₹3,00,000** charge — quantum per management's best estimate; *verify the exact realisable figure the question gives*).
+
+**Net effect on FY 25-26 profit:** −₹2,70,000 (inventory) + ₹80,000 (rebate) − ₹3,00,000 (investment) = **−₹4,90,000** against draft profit.
+
+*Trap defused:* Item 3 is the discriminator — a market fall is *usually* non-adjusting, but "permanent diminution rooted in a year-end condition" flips it to adjusting. If the June fall had been an ordinary market swing with no year-end cause, it would have been a mere disclosure (or nothing, for a long-term investment carried at cost).
+
+### Example 6 (Concept) — Contingent gain temptation and a guarantee
+
+*Wren Ltd., year-end 31 March 2026, approval 20 June 2026.*
+
+1. Wren is suing a competitor for patent infringement; on **1 June 2026** its lawyers opine Wren will **probably win ₹15,00,000** in damages.
+2. Wren gave a **guarantee** for a subsidiary's ₹20,00,000 loan; at year-end the subsidiary is healthy and repaying on time.
+3. On **5 May 2026**, the subsidiary in (2) defaulted because of a **new April crisis**, and the bank has invoked Wren's guarantee for ₹20,00,000.
+
+**Reasoning.**
+
+**Item 1 — do NOT recognise.** A *probable gain* is still a **contingent asset** — never booked (prudence, asymmetry). Even "probably win" is not enough; recognition needs realisation to be **virtually certain**, which a mere favourable legal opinion is not. At most, disclose. No income in FY 25-26.
+
+**Item 2 — contingent liability, disclose only.** At year-end the guarantee is a possible obligation whose crystallisation depends on a future default; the subsidiary is healthy, so outflow is not probable → **AS 29 contingent liability, disclosed by way of note**, not provided.
+
+**Item 3 — non-adjusting (and going concern for the sub, not Wren).** The default's cause is an **April crisis** — a *new* condition after year-end. So the guarantee's invocation is a **non-adjusting event** for FY 25-26 (the year-end condition was "healthy subsidiary"). Disclose the ₹20,00,000 potential outflow prominently as a material non-adjusting event; the expense hits FY 26-27. *(Had the subsidiary already been failing at 31 March, invocation would instead be adjusting — provide.)*
+
+*Trap defused:* Students book Item 1 as income (wrong — contingent gains are never recognised) and adjust Item 3 into FY 25-26 (wrong — the triggering condition arose in April). Both errors come from ignoring *when the condition arose* and *the loss/gain asymmetry.*
+
 ## 6. Presentation & Disclosure formats
 
 **Where AS 4 items appear:**
@@ -251,15 +376,20 @@ Then, because of **Item 6**, the going concern basis fails: Vega must **restate 
 
 **Going concern disclosure:** where the going concern assumption is inappropriate, the fact, the basis on which the statements have been prepared (e.g., realisable/break-up values), and the reasons are disclosed prominently.
 
+**The "estimate cannot be made" escape valve — used honestly.** AS 4 deliberately lets you disclose *nature* plus a statement that an estimate can't be made. This is not a licence to be vague when you *can* estimate. If a fire destroyed goods whose carrying value you know, "financial effect ≈ ₹9,00,000" is expected; "cannot be estimated" would be a wrong answer. Reserve the escape valve for genuinely unquantifiable events (e.g. reputational fallout of a recall).
+
+**Format discipline for answers.** In a subjective question, present each item as: *(i) classify* (adjusting / non-adjusting / outside window / contingency), *(ii) one-line reason* (condition existed at year-end? going concern? present obligation?), *(iii) treatment + amount* (adjust ₹__ / disclose / nothing). Markers award the *reason*, not just the label — a right label with no reason is a partial answer.
+
 ## 7. Connections — links across AS, chapters, and subjects
 
 - **AS 29 (Provisions, Contingent Liabilities & Contingent Assets):** the **direct successor** for all "contingency" content once in AS 4. Master the handover: *outcome uncertain and depends on future events* → AS 29. But *an after-year-end event confirming the amount of a year-end obligation* → AS 4 adjusting event. They interlock at the litigation-settlement example.
 - **AS 2 (Valuation of Inventories):** the "inventory sold below cost after year-end" example is an AS 4 adjusting event that operationalises AS 2's **cost or NRV, whichever is lower** — the after-date sale is evidence of NRV at year-end.
+- **AS 13 (Accounting for Investments):** a post-year-end fall that reveals a **permanent (other than temporary) diminution** rooted in a year-end condition is an AS 4 adjusting event operationalising AS 13; an ordinary temporary market swing after year-end is non-adjusting (Example 5, Item 3).
 - **AS 9 (Revenue Recognition) & bad debts:** debtor insolvency after year-end links to receivable measurement.
-- **AS 5 (Net Profit/Loss, Prior Period Items, Changes in Accounting Policies):** a fraud/error discovered after year-end (AS 4 adjusting) may involve prior-period considerations under AS 5.
+- **AS 5 (Net Profit/Loss, Prior Period Items, Changes in Accounting Policies):** a fraud/error discovered after year-end (AS 4 adjusting) may involve prior-period considerations under AS 5. Distinguish carefully: AS 4 adjusts the *current* year's draft accounts for a year-end condition; AS 5 governs a *prior-period item* once that prior year is already closed and reported.
 - **AS 10 (PP&E):** post-year-end final determination of an asset's purchase/sale price is an adjusting event affecting the carrying amount.
-- **Companies Act, 2013 & auditing:** the "approval by Board" date, Directors' Report disclosures, dividend declaration mechanics (AGM approval), and **SA 560 "Subsequent Events"** in *Auditing* are the twin of AS 4 — auditors test exactly this window. The dividend rule ties to the Act's dividend provisions.
-- **Ind AS contrast:** **Ind AS 10 "Events after the Reporting Period"** mirrors AS 4 almost exactly (adjusting vs non-adjusting), and *also* treats proposed dividend as **non-adjusting/disclosure only** — so the amended AS 4 and Ind AS 10 now agree. Under Ind AS, contingencies live in **Ind AS 37.**
+- **Companies Act, 2013 & auditing:** the "approval by Board" date, Directors' Report disclosures, dividend declaration mechanics (AGM approval), and **SA 560 "Subsequent Events"** in *Auditing* are the twin of AS 4 — auditors test exactly this window. SA 560 even distinguishes events up to the audit report date from facts discovered *after* — mirroring AS 4's window edge. The dividend rule ties to the Act's dividend provisions.
+- **Ind AS contrast:** **Ind AS 10 "Events after the Reporting Period"** mirrors AS 4 almost exactly (adjusting vs non-adjusting), and *also* treats proposed dividend as **non-adjusting/disclosure only** — so the amended AS 4 and Ind AS 10 now agree. Under Ind AS, contingencies live in **Ind AS 37.** One nuance to flag: Ind AS 10 formally defines the "date of authorisation for issue," conceptually the same window-closing date as AS 4's approval date.
 
 ## 8. Traps & Examiner Tricks
 
@@ -267,27 +397,33 @@ Then, because of **Item 6**, the going concern basis fails: Vega must **restate 
 2. **Two near-identical debtor cases** (like Example 2): one solvent-then-collapsed (NA), one already-collapsed (A). The examiner wants you to treat both the same. The discriminator is the **timing of the condition.**
 3. **Proposed dividend — old vs new.** The classic trap. Under **current AS 4, do NOT provide; disclose.** If the question predates the amendment or explicitly instructs provisioning, follow it — but always state the *reason* (no present obligation at year-end). Writing "provide for proposed dividend" as a reflex loses marks now.
 4. **Missing the going concern override.** A catastrophic new event is presented as "just a note," but if it kills going concern, you must **change the whole basis of preparation.** Students who mechanically apply "new event → non-adjusting" walk into this.
-5. **Events after the approval date.** If the event occurs *after* the Board approves the accounts, AS 4 **does not apply.** Watch the two dates in the question stem.
-6. **Contingent gains.** Never recognise a contingent gain/asset (prudence). Only disclose when realisation is **virtually/reasonably certain** (AS 29). Examiners plant a "we expect to win a lawsuit" line to tempt you into booking income.
+5. **Events after the approval date.** If the event occurs *after* the Board approves the accounts, AS 4 **does not apply.** Watch the two dates in the question stem — and don't be fooled by a *later AGM date* that tries to look like the window's edge (Example 4).
+6. **Contingent gains.** Never recognise a contingent gain/asset (prudence). Only disclose when realisation is **virtually/reasonably certain** (AS 29). Examiners plant a "we expect to win a lawsuit" line to tempt you into booking income (Example 6, Item 1) — even "probably win" is not enough.
 7. **Confusing "disclose" with "adjust."** Non-adjusting ≠ ignore. Material non-adjusting events **must be disclosed** with nature + financial effect (or a statement that it can't be estimated). Omitting disclosure is also wrong.
 8. **Tax assessments.** An assessment finalised after year-end for a **prior/current** year is generally **adjusting** (obligation already existed) *if accepted*; if genuinely disputed with intent to appeal, it may be a **contingent liability** (AS 29) — read the facts.
 9. **Materiality filter.** Only **material** non-adjusting events need disclosure. Trivial post-year-end events are ignored — but adjusting events are adjusted regardless (subject to materiality of the statements).
+10. **Interim vs proposed dividend.** An **interim dividend already declared by the Board** is a real obligation and is recognised; only the **final/proposed dividend recommended after year-end** gets the "disclose, don't provide" treatment. Swapping the two loses marks (Section 4.5).
+11. **Falling investment values.** Default is **non-adjusting** (new-year market condition). It flips to **adjusting** only if the fall evidences a **permanent diminution rooted in a year-end condition** (Example 5, Item 3). Don't reflexively adjust every price drop.
+12. **"Approval" vs "adoption/issue."** The window closes at **Board approval**, not shareholder adoption at the AGM and not the date of issue/filing. A stem offering all three dates is testing exactly this (Example 4).
+13. **Going concern for a part vs the whole.** If only a material *segment* loses going concern, you restate *that part's* basis — you don't necessarily abandon going concern for the entire entity. Read the scope of the collapse.
 
 ## 9. First-Principles Recap
 
 - The balance sheet must be **true as at its date**; later information only **sharpens** that truth, it doesn't rewrite history.
-- The window that matters is **balance sheet date → date of approval by the Board.** Outside it, AS 4 is silent.
+- The window that matters is **balance sheet date → date of approval by the Board** — *not* the AGM and *not* the issue date.
 - **One test** decides everything: *did the condition already exist at year-end?* Yes → **adjust** (adjusting event). No → **don't adjust; disclose if material** (non-adjusting event).
-- **Adjusting** = new evidence of an old condition (debtor already impaired, inventory NRV, court confirming a pending suit, fraud/error, final price of pre-year-end deals).
-- **Non-adjusting** = a new condition of the new year (fire/flood after year-end, market value changes, fresh litigation, business bought/sold after year-end).
-- The **going concern override**: any post-year-end event that destroys going concern **forces adjustment of the whole basis** — because the foundation of the statements is gone.
-- **Proposed dividend (current AS 4): NOT a liability at year-end** (no present obligation) → **disclose in notes**, recognise when shareholders approve.
+- Separate the **event** (always after year-end) from the **condition** it evidences (the thing that decides the treatment).
+- **Adjusting** = new evidence of an old condition (debtor already impaired, inventory NRV, court confirming a pending suit, permanent investment diminution, tax finalised, rebate on old purchases, fraud/error, final price of pre-year-end deals).
+- **Non-adjusting** = a new condition of the new year (fire/flood after year-end, ordinary market value changes, fresh litigation, business bought/sold after year-end, guarantee invoked due to a new default).
+- The **going concern override**: any post-year-end event that destroys going concern **forces adjustment of the whole basis** — because the foundation of the statements is gone. Losses/gains have a *home year* (periodicity); going concern override is the one case where the *measurement basis itself* changes.
+- **Proposed dividend (current AS 4): NOT a liability at year-end** (no present obligation) → **disclose in notes**, recognise when shareholders approve. Interim dividend already declared *is* recognised.
+- **Prudence asymmetry:** probable losses are recognised; probable gains are not.
 - **Contingencies migrated to AS 29**; AS 4 keeps only the "adjust for evidence of year-end conditions" link. Contingent losses: provide if probable + measurable, else disclose; contingent gains: never recognise.
 - Disclosure of material non-adjusting events = **nature + estimated financial effect** (or a statement it can't be estimated).
 
 ## 10. Quick-Revision Sheet
 
-**Two anchor dates:** Balance sheet date → Date of approval (Board). Events outside this window: not AS 4.
+**Two anchor dates:** Balance sheet date → Date of approval (Board). Events outside this window: not AS 4. (AGM / issue date are decoys.)
 
 | Situation | Condition existed at year-end? | Treatment |
 |---|---|---|
@@ -295,10 +431,16 @@ Then, because of **Item 6**, the going concern basis fails: Vega must **restate 
 | Debtor solvent at year-end, collapses later | No | Non-adjusting → disclose |
 | Inventory sold below cost after year-end | Yes (NRV) | **Adjust** (write down, AS 2) |
 | Fire/flood destroying assets after year-end | No | Non-adjusting → disclose |
-| Pending suit decided after year-end | Yes (present obligation) | **Adjust** (provide) |
+| Pending suit decided after year-end (within window) | Yes (present obligation) | **Adjust** (provide) |
+| Pending suit decided *after approval date* | (outside window) | No AS 4 treatment — next year |
 | Fresh suit filed after year-end | No | Non-adjusting → disclose |
+| Ordinary fall in investment market value after year-end | No | Non-adjusting (or nil for LT-at-cost) |
+| Permanent diminution rooted in year-end condition | Yes | **Adjust** (AS 13) |
+| Tax assessment (prior/current yr) finalised & accepted | Yes | **Adjust** (provide) |
 | Fraud/error discovered | Yes | **Adjust** |
-| Proposed dividend for the year | No obligation at year-end | **Do NOT provide → disclose (notes)** |
+| Proposed/final dividend for the year | No obligation at year-end | **Do NOT provide → disclose (notes)** |
+| Interim dividend already declared by Board | Yes (obligation) | **Recognise** |
+| Contingent gain / "we'll probably win" | — | **Never recognise**; disclose only if virtually certain |
 | Event destroying going concern | (override) | **Adjust whole basis; non-going-concern** |
 
 **Adjusting-event journal (debtor written off):**
@@ -318,6 +460,8 @@ Bad Debts A/c           Dr.
 **Non-adjusting disclosure must state:** (1) nature of event; (2) estimate of financial effect, OR that no estimate can be made.
 
 **Contingencies handover:** Contingencies → **AS 29**. Provide contingent loss if **probable + reliably estimable**; else disclose (possible) or ignore (remote). **Never recognise contingent gains.**
+
+**Answer structure (per item):** classify → one-line reason (condition at year-end? / going concern? / present obligation?) → treatment + amount. The *reason* earns the marks.
 
 **Ind AS map:** Events → Ind AS 10 (same logic, dividend also non-adjusting); Contingencies → Ind AS 37.
 

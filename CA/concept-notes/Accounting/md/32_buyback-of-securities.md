@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 32 — Buyback of Securities
 
 ## 1. The Problem
@@ -18,6 +20,13 @@ Worse, buyback is a **price-manipulation weapon**. A company flush with informat
 
 The problem, therefore, is a two-sided one: *give companies a legitimate route to return surplus capital and cancel shares, without letting them (a) hollow out the creditor cushion or (b) manipulate their own price.* Chapter 32 is the accounting-and-law answer to exactly that tension.
 
+**Why not just pay a bigger dividend?** Because dividend and buyback are *not* substitutes at the fine grain, and the exam expects you to know the difference at the level of the balance sheet:
+
+- A **dividend** is paid out of *distributable profits only* and leaves **share capital untouched** — the number of shares and the paid-up capital are exactly the same the day after. No CRR arises. It is a recurring signal (a cut is punished).
+- A **buyback** *cancels* shares, *reduces* paid-up capital, and therefore triggers the CRR machinery to protect creditors. It is a one-time, discretionary, capital-side event.
+
+Because a buyback touches the *structural* capital and a dividend does not, the law wraps buyback in fences that dividends never face (25% ceilings, the 2:1 test, mandatory cancellation). If you ever find yourself passing a "CRR" entry for a dividend, you have confused the two — a classic conceptual slip.
+
 ---
 
 ## 2. The Core Idea (analogy)
@@ -33,6 +42,13 @@ The CRR is the single most important idea in this chapter. It is capital's *ghos
 > One-line mental model: **Buyback out of free reserves = converting distributable profit into permanent capital (CRR) equal to the nominal value cancelled, so the creditor cushion never shrinks.**
 
 Everything else — the 25% ceiling, the 2:1 debt-equity test, the sources, the entries — is just plumbing around this one idea.
+
+**Sharpen the analogy for the two funding routes.** Picture the wall being torn down as ₹X of face value.
+
+- If you tear it down using **profits** (free reserves), the wall got shorter *by real amount* — so you must rebuild ₹X of CRR to restore the height. Cushion preserved.
+- If you tear it down but first **built a brand-new brick wall of fresh capital** (a fresh issue of ₹Y face), then ₹Y of the height was already restored by *actual new money from new owners*. You only need CRR for the *un-replaced* stub, ₹(X − Y). Building CRR for the full ₹X would mean two walls where one was demolished — double-counting the cushion and needlessly freezing profit.
+
+This is the entire reason the master formula subtracts fresh-issue face value. It is not a quirk to memorize; it is "don't double-count the cushion."
 
 ---
 
@@ -50,10 +66,16 @@ Fix: A *quantum ceiling*. You cannot buy back more than **25% of paid-up capital
 Fix: A *leverage ceiling*. **After** the buyback, total debt must not exceed **twice** the (equity capital + free reserves). If returning capital would push you past 2:1 gearing, you cannot do the full buyback. This directly protects creditors from having their safety margin thinned by a post-buyback capital structure.
 
 **Fear 4 — Price manipulation and serial buybacks.**
-Fix: procedural fences — authorisation in the articles, a special resolution (or board resolution for small buybacks), a **cooling-off gap of one year** between two buybacks, completion within **one year** of authorisation, and a **12-month bar on fresh issue** of the same kind of shares after a buyback (so you can't buy low and re-issue high in a churn).
+Fix: procedural fences — authorisation in the articles, a special resolution (or board resolution for small buybacks), a **cooling-off gap of one year** between two buybacks, completion within **one year** of authorisation, and a **6-month bar on fresh issue** of the same kind of shares after a buyback (so you can't buy low and re-issue high in a churn).
 
 **Fear 5 — Companies buy back but never actually cancel the shares (hiding them as treasury stock to resell later and manipulate).**
 Fix: Indian law forbids treasury stock. **Bought-back shares must be physically destroyed within 7 days** of completion. There is no "shares held in treasury" line on an Indian balance sheet — the shares cease to exist.
+
+**Fear 6 — A company already stiffing one set of stakeholders (depositors, debenture-holders, term lenders) hands cash to owners instead of curing the default.**
+Fix: A *conduct gate*. A company that has **defaulted** on repayment of deposits, interest thereon, redemption of debentures or preference shares, payment of dividend to any shareholder, or repayment of any term loan cannot buy back **while the default subsists**. The moment the default is *made good*, the bar lifts (older material spoke of a 3-year wait; the current Act lifts the bar once the default is remedied — *verify the exact wording in your current ICAI module / AY*). The logic is simple: you may not prefer owners over the creditors you are already failing.
+
+**Fear 7 — Governance is bypassed: management buys back without owner consent, or buys from insiders on off-market terms.**
+Fix: *whose money, whose decision*. Anything beyond a small board-route buyback needs a **special resolution** (75% of members) — the owners themselves must sanction shrinking their own company. And the buyback must be from existing holders **proportionately**, through the open market, or from odd-lot / ESOP holders — never a hand-picked private deal that lets insiders cash out on favourable terms.
 
 Notice the beautiful symmetry: every fence maps to one specific fear. Nothing is arbitrary. Once you can regenerate the fence from the fear, you never have to memorize a list.
 
@@ -63,10 +85,12 @@ flowchart TD
     A --> C["Fear total drain of capital"]
     A --> D["Fear post-buyback over-leverage"]
     A --> E["Fear price manipulation and churn"]
+    A --> F["Fear owners bypassed or insiders favoured"]
     B --> B2["Fix create CRR equal to nominal value"]
     C --> C2["Fix max 25 percent quantum ceiling"]
     D --> D2["Fix post-buyback debt-equity max 2 to 1"]
     E --> E2["Fix special resolution plus one year gaps plus mandatory cancellation"]
+    F --> F2["Fix special resolution and proportionate or open market route"]
 ```
 *Each legal condition on buyback is the minimum fence against one specific way creditors or the market could be harmed.*
 
@@ -80,6 +104,13 @@ Buyback of a company's own shares/securities is governed by **Section 68, 69 and
 
 A company may buy back its **own shares or other specified securities** (Section 68). "Specified securities" includes employees' stock option or other securities as notified. In practice exam problems are almost always **equity shares** (occasionally preference shares).
 
+**The three routes of *acquiring* the shares** (relevant for law/theory MCQs, and for how the price behaves in a problem):
+1. **From existing shareholders on a proportionate basis** (a tender offer — every holder can sell a slice, so no one is favoured).
+2. **From the open market** (on-market purchase — SEBI-regulated for listed companies).
+3. **From employees** who received shares under ESOP or sweat equity.
+
+Whatever the route, the *accounting* is identical: capital at face out, premium absorbed by reserves, CRR built, cash paid. The route only affects the price and the fairness safeguards, not the journal entries.
+
 ### 4.2 The three permitted SOURCES of buyback (Sec. 68(1))
 
 Buyback may be financed **only** out of:
@@ -91,6 +122,21 @@ Buyback may be financed **only** out of:
 | (c) | **Proceeds of a FRESH ISSUE** of shares or other specified securities | BUT — you may **not** buy back one *kind* of security out of the proceeds of a fresh issue of the **same kind** of security. (Otherwise buyback becomes a meaningless round-trip.) |
 
 Key negative rule: **buyback cannot be financed out of borrowed funds.** Debt cannot be used to return equity — that would defeat the whole creditor-protection logic.
+
+**What counts as a "free reserve" — the finer distinctions the exam probes.** A reserve is "free" only if it is *available for distribution as dividend*. Sort every reserve you meet into the right bucket:
+
+| Reserve | Free reserve? | Can fund buyback / premium? | Can fund CRR? |
+|---|---|---|---|
+| General Reserve | Yes | Yes | Yes |
+| Surplus in Statement of P&L (credit) | Yes | Yes | Yes |
+| Securities Premium | Treated as free for the 25% *test*, but is a *statutory* reserve | Can pay the *premium on buyback* only | **No** |
+| Capital Redemption Reserve (existing) | No | **No** — only for bonus | No |
+| Revaluation Reserve | No (unrealised) | **No** | **No** |
+| Capital Reserve (e.g. profit on reissue of forfeited shares, capital profits) | No | **No** | **No** |
+| Debenture Redemption Reserve (until debentures redeemed) | No (earmarked) | **No** while earmarked | No |
+| Dividend Equalisation Reserve | Yes (it is an appropriation of free profit) | Yes | Yes |
+
+The single most examined line here: **Securities Premium and Capital Reserve are NOT usable to *create* CRR**, even though Securities Premium *can* pay the premium on buyback. Keep "paying the premium" and "creating the CRR" as two separate jobs with two separate eligible-source lists.
 
 ### 4.3 The CRR requirement (Sec. 69) — the heart of the chapter
 
@@ -108,6 +154,10 @@ $$\text{CRR} = \text{Nominal value of shares bought back} - \text{Nominal value 
 CRR may be used **only** for issuing **fully paid bonus shares** (like Securities Premium's most restricted use). It is, for all practical purposes, permanent capital.
 
 Sources that may **fund the CRR transfer**: free reserves only (general reserve, P&L surplus). **Securities premium and capital reserves cannot be used to create the CRR.** (Securities premium can pay the *premium on buyback*, but the *CRR = face value transfer* must come from free reserves.)
+
+**A subtle boundary — the fresh issue must be *for the buyback*.** The offset in the formula only applies to a fresh issue that *funds* the buyback and is roughly contemporaneous with it. A fresh issue made years earlier for an unrelated purpose does not reduce today's CRR. In exam problems the offset applies whenever the problem *says* "to finance the buyback, the company issues…"; otherwise, CRR = full face value bought back.
+
+**Does the fresh issue have to be equity?** No. It can be *any* shares or specified securities *other than the same kind being bought back*. So an equity buyback can be part-financed by a fresh issue of **preference shares** or debentures-with-a-share-element, and that fresh issue's face value still offsets CRR (because it too rebuilds permanent capital). What is barred is financing an equity buyback out of a *fresh equity* issue — the pointless round-trip.
 
 ### 4.4 The QUANTUM limits — how much can be bought back (Sec. 68(2))
 
@@ -137,19 +187,30 @@ $$\text{Max buyback outflow allowed by 2:1} = (\text{Owned funds before buyback}
 
 where **owned funds = paid-up capital + free reserves** (including securities premium, per ICAI).
 
+**Why the outflow reduces owned funds by the *full* price, not just the face value.** A buyback of price ₹P per share (face ₹F) reduces owned funds by exactly ₹P, and here is the clean proof that reconciles the whole entry set:
+
+- Capital falls by ₹F (face cancelled).
+- Reserves fall by the premium ₹(P − F) (absorbed on buyback).
+- The CRR transfer is *internal* to owned funds (free reserves → CRR), so it nets to zero within owned funds.
+
+Total fall in owned funds = F + (P − F) + 0 = **P**, the whole cash paid. That is why in test (C) you subtract the *entire* buyback outflow from pre-buyback owned funds — a point students get wrong by subtracting only face value.
+
+**Board-route sub-limit.** When the buyback is done by *board resolution alone* (no special resolution), the ceiling in test (A) tightens from 25% to **10% of (paid-up equity capital + free reserves)**, and only **one** such buyback is allowed per year. The 2:1 test and the destruction/CRR rules apply identically.
+
 **(D) Authorisation & procedural conditions (Sec. 68(2), 68(3)–(8)):**
 - Buyback must be **authorised by the Articles of Association**.
 - A **special resolution** in general meeting is required. *Exception:* the **Board of Directors** alone may authorise a buyback of up to **10% of paid-up equity capital + free reserves** (a "board-route" small buyback), and only **one such board-route buyback per year**.
 - **A gap of at least one year** must separate two buybacks (measured from the date of closure of the preceding buyback).
 - Buyback must be **completed within one year** from the date of the special/board resolution.
 - The company must file a declaration of solvency (Form SH-9) and, after completion, a return (Form SH-11).
-- **No buyback** if the company has **defaulted** in repayment of deposits, interest, redemption of debentures/preference shares, or repayment of term loans (unless the default is remedied and 3 years have passed).
+- **No buyback** if the company has **defaulted** in repayment of deposits, interest, redemption of debentures/preference shares, or repayment of term loans (the bar lifts once the default is remedied — *verify the exact "cooling" period in your current ICAI material / AY*).
 
 ### 4.5 Post-buyback restrictions (Sec. 68(7)–(8), 69)
 
 - **Extinguish and physically destroy** the bought-back shares within **7 days** of completion. (No treasury stock in India.)
-- **No fresh issue** of the same kind of shares (except bonus, or discharge of existing obligations like conversion of warrants, ESOPs, sweat equity, preference shares/debentures into equity) within **6 months** — *ICAI/Act text; older material said 6 months, confirm the current period in your ICAI module (the Act specifies 6 months under Sec. 68(8))*.
+- **No fresh issue** of the same kind of shares (except bonus, or discharge of existing obligations like conversion of warrants, ESOPs, sweat equity, preference shares/debentures into equity) within **6 months** (Sec. 68(8)).
 - CRR to be maintained and shown in the balance sheet; usable only for bonus.
+- Once a buyback is completed, a **cooling-off of one year** must pass before the next buyback.
 
 ### 4.6 The journal entries (the mechanical core)
 
@@ -208,6 +269,18 @@ flowchart LR
 ```
 *The five-step buyback machine — fresh issue in, liability created, premium absorbed, CRR built, cash out.*
 
+**Order matters — and here is why.** Write off the premium (Step 3) *before* transferring CRR (Step 4) only for tidiness; the two draw on overlapping reserves, so if free reserves are tight you must make sure the *same* rupee of general reserve is not used twice. Always tabulate a running reserve balance (as in the reconciliations below) so you never over-draw. If the problem gives *insufficient free reserves* to cover both the premium balance and the full CRR, the buyback is **scaled down** or **disallowed** — never "borrow" from securities premium or capital reserve to plug the CRR gap.
+
+### 4.6A Choosing which reserve to debit — the priority ladder
+
+When several free reserves exist, examiners award marks for debiting them in a defensible order. Use this ladder:
+
+1. **Premium on buyback:** Securities Premium **first** (its restricted capacity is best spent here), then General Reserve, then P&L surplus.
+2. **CRR transfer:** General Reserve first, then P&L surplus (both are equally "free"; either is acceptable, but keep it consistent and show the trail). **Never** Securities Premium / Capital Reserve.
+3. If a **Dividend Equalisation Reserve** or similar free reserve exists, it ranks with General Reserve.
+
+There is no single "legally mandated" order among the *free* reserves for the CRR transfer — but you must (a) exhaust Securities Premium on the *premium* first, and (b) keep CRR strictly out of Securities Premium. State your assumption in one line and the examiner cannot fault you.
+
 ### 4.7 Contrast with Redemption of Preference Shares (Chapter 31)
 
 The two topics share the CRR engine, so examiners test them together. Hold the differences firmly:
@@ -226,6 +299,15 @@ The two topics share the CRR engine, so examiners test them together. Hold the d
 | Fresh issue same kind allowed? | Yes (often funds the redemption) | Cannot buy back same kind out of fresh issue of same kind |
 
 The engine is identical (Capital out → CRR in, less any fresh issue). The **fences (25% and 2:1)** exist only for buyback, because preference redemption is a *pre-agreed* return of a *fixed, temporary* class of capital, whereas buyback is a *discretionary raid* on *permanent equity* — far more dangerous to creditors, hence more fences.
+
+### 4.8 The combined problem — when both happen in one question
+
+Because both topics hit the *same* free reserves and *both* build CRR, examiners love a paper where a company **redeems preference shares AND buys back equity** in the same year. Rules for surviving it:
+
+- **CRR is cumulative.** CRR from redemption + CRR from buyback both land in the *same* CRR account. Add them.
+- **Free reserves are a shared pool.** The premium on redemption, the premium on buyback, and *both* CRR transfers all draw from the *one* stock of general reserve / P&L. Run a single running balance for the whole problem, not two separate ones. If the pool runs dry, the *second* action is the one that gets scaled back or disallowed.
+- **The 25% and 2:1 tests apply only to the buyback leg**, but they are computed on the capital-and-reserves figures *as they stand when the buyback happens* — so if the preference redemption happens first, use the post-redemption reserves for the buyback's tests.
+- Watch the *order* the question implies. "First redeem, then buy back" and "first buy back, then redeem" can give different limit-test results because owned funds change in between.
 
 ---
 
@@ -439,6 +521,136 @@ Post-buyback owned funds = 28,85,000 + (0 + 13,25,000 + 4,00,000 + 1,15,000) = 2
 
 ---
 
+### Example 4 — When the 2:1 leverage test is the BINDING one (the reversed trap)
+
+Example 3 let test (A) bite. Examiners flip it so the *debt* test bites — a company with heavy borrowings and modest reserves.
+
+**Facts.** Anchor Ltd:
+
+| Equity & Liabilities | ₹ |
+|---|---|
+| Equity share capital (₹10 each) | 40,00,000 |
+| Free reserves (General Reserve + P&L) | 24,00,000 |
+| Secured + unsecured loans (total debt) | 1,10,00,000 |
+
+Buyback proposed at **₹20 per share** (face ₹10). No fresh issue. Find the maximum permissible buyback.
+
+**Test (A) — 25% of capital + free reserves.**
+Owned funds before = 40,00,000 + 24,00,000 = ₹64,00,000. 25% = **₹16,00,000** (value).
+
+**Test (B) — 25% of paid-up equity.**
+25% × 40,00,000 = ₹10,00,000 face = **1,00,000 shares** → at ₹20 that is ₹20,00,000 of value (count is the binding form).
+
+**Test (C) — 2:1 leverage (AFTER buyback).**
+Min owned funds required after buyback = Debt ÷ 2 = 1,10,00,000 ÷ 2 = **₹55,00,000.**
+Max reduction in owned funds = 64,00,000 − 55,00,000 = **₹9,00,000.**
+So the maximum *cash outflow* allowed by the debt test = **₹9,00,000.**
+
+**Pick the lowest.**
+
+| Test | Ceiling (value) |
+|---|---|
+| (A) | ₹16,00,000 |
+| (B) | 1,00,000 shares (= ₹20,00,000 value) |
+| (C) | **₹9,00,000** ← binding |
+
+Test (C) bites. Max outflow = ₹9,00,000 → shares = 9,00,000 ÷ 20 = **45,000 shares.**
+Check (B): 45,000 ≤ 1,00,000 ✓. Check (A): ₹9,00,000 ≤ ₹16,00,000 ✓.
+
+**Verification of the 2:1 ratio after buyback.**
+Outflow ₹9,00,000: face cancelled = 45,000 × 10 = ₹4,50,000; premium = 45,000 × 10 = ₹4,50,000.
+CRR = face = ₹4,50,000 (internal; nets to zero within owned funds).
+Owned funds after = 64,00,000 − 9,00,000 = ₹55,00,000. Debt = ₹1,10,00,000.
+Ratio = 1,10,00,000 / 55,00,000 = **exactly 2.00 : 1 ✓** (at the ceiling, as expected).
+
+**Lesson.** When a company is highly geared, do not even bother running to full 25% — the debt test caps you far lower. Always compute all three and *pick the smallest value*. The examiner plants a large ₹16,00,000 headline (test A) to tempt you into over-buying.
+
+*Entries follow the standard five-step template; premium ₹4,50,000 is absorbed by free reserves (no securities premium here), and CRR ₹4,50,000 is transferred from free reserves. Reserve check: free reserves 24,00,000 − 4,50,000 (premium) − 4,50,000 (CRR) = ₹15,00,000 closing; capital 40,00,000 − 4,50,000 = ₹35,50,000; CRR ₹4,50,000. Owned funds = 35,50,000 + 15,00,000 + 4,50,000 = ₹55,00,000 ✓.*
+
+---
+
+### Example 5 — Combined: preference redemption AND equity buyback in one year (Chapter 31 + 32)
+
+**Facts.** Vega Ltd:
+
+| Equity & Liabilities | ₹ |
+|---|---|
+| Equity share capital (₹10 each) | 25,00,000 |
+| 10% Redeemable Preference share capital (₹100 each) | 5,00,000 |
+| Securities Premium | 2,00,000 |
+| General Reserve | 15,00,000 |
+| Profit & Loss (surplus) | 6,00,000 |
+
+Events in the year, in order:
+1. Redeem **all** preference shares at a **premium of 10%** (i.e., ₹110 each). No fresh issue for this.
+2. Then buy back **50,000 equity shares at ₹18** (face ₹10). No fresh issue.
+
+Assume adequate cash. Pass entries and reconcile.
+
+**Part 1 — Preference redemption (Sec. 55).**
+Face redeemed = ₹5,00,000. Premium on redemption = 10% × 5,00,000 = ₹50,000.
+CRR for redemption = **face value redeemed = ₹5,00,000** (no fresh issue).
+Premium on redemption written off: Securities Premium first (₹2,00,000 available → use it fully? we also need SP later — but redemption comes first in sequence, so use it now), then free reserves.
+
+*Redemption entries:*
+
+| Particulars | Dr (₹) | Cr (₹) |
+|---|---|---|
+| Preference Share Capital A/c | 5,00,000 | |
+| Premium on Redemption A/c | 50,000 | |
+|   To Preference Shareholders A/c | | 5,50,000 |
+| Securities Premium A/c | 50,000 | |
+|   To Premium on Redemption A/c | | 50,000 |
+| General Reserve A/c | 5,00,000 | |
+|   To Capital Redemption Reserve A/c | | 5,00,000 |
+| Preference Shareholders A/c | 5,50,000 | |
+|   To Bank A/c | | 5,50,000 |
+
+Running reserves after Part 1: Securities Premium 2,00,000 − 50,000 = **₹1,50,000**; General Reserve 15,00,000 − 5,00,000 = **₹10,00,000**; P&L **₹6,00,000**; CRR **₹5,00,000**.
+
+**Part 2 — Equity buyback: run the limit tests on POST-redemption figures.**
+Capital + free reserves now = Equity 25,00,000 + (SP 1,50,000 + GR 10,00,000 + P&L 6,00,000) = 25,00,000 + 17,50,000 = **₹42,50,000.**
+(Preference capital is gone; CRR is *not* a free reserve, so it is excluded from the free-reserve part but note the 25% "capital + free reserves" test uses *paid-up capital + free reserves* — CRR is neither, so it stays out.)
+
+- Test (A): 25% × 42,50,000 = **₹10,62,500** (value).
+- Test (B): 25% × 25,00,000 = ₹6,25,000 face = **62,500 shares.**
+- Proposed: 50,000 shares × ₹18 = **₹9,00,000.** Check A: 9,00,000 ≤ 10,62,500 ✓. Check B: 50,000 ≤ 62,500 ✓. (No debt given, so 2:1 not binding.)
+
+Buyback is within limits. Face bought = 50,000 × 10 = ₹5,00,000. Premium = 50,000 × 8 = ₹4,00,000.
+CRR for buyback = **face = ₹5,00,000.**
+Premium absorbed: Securities Premium first (₹1,50,000 left), then free reserves (₹2,50,000).
+
+*Buyback entries:*
+
+| Particulars | Dr (₹) | Cr (₹) |
+|---|---|---|
+| Equity Share Capital A/c | 5,00,000 | |
+| Premium on Buyback A/c | 4,00,000 | |
+|   To Equity Shareholders A/c | | 9,00,000 |
+| Securities Premium A/c | 1,50,000 | |
+| General Reserve A/c | 2,50,000 | |
+|   To Premium on Buyback A/c | | 4,00,000 |
+| General Reserve A/c | 5,00,000 | |
+|   To Capital Redemption Reserve A/c | | 5,00,000 |
+| Equity Shareholders A/c | 9,00,000 | |
+|   To Bank A/c | | 9,00,000 |
+
+**Full reconciliation.**
+
+| Reserve | Opening | Pref redemption | Equity buyback | Closing |
+|---|---|---|---|---|
+| Securities Premium | 2,00,000 | (50,000) | (1,50,000) | 0 |
+| General Reserve | 15,00,000 | (5,00,000 CRR) | (2,50,000 prem + 5,00,000 CRR) | 2,50,000 |
+| Profit & Loss | 6,00,000 | — | — | 6,00,000 |
+| CRR | 0 | +5,00,000 | +5,00,000 | 10,00,000 |
+
+Capital: Preference 5,00,000 → 0; Equity 25,00,000 → 20,00,000.
+**Cushion check.** Capital extinguished = 5,00,000 (pref) + 5,00,000 (equity face) = ₹10,00,000. CRR created = ₹10,00,000. **Brick-for-brick preserved — exactly as the shared engine promises.** Total cash out = 5,50,000 + 9,00,000 = ₹14,50,000, matching the two premiums (₹50,000 + ₹4,00,000) plus the ₹10,00,000 face returned. Every figure ties.
+
+**The killer subtlety here:** if you had run the buyback's 25% test on the *pre-redemption* reserves, you would have used the wrong (higher) securities premium and free-reserve figures and possibly over-bought. Sequence changes the base — always test each action on the balance sheet *as it stands at that moment*.
+
+---
+
 ## 6. Presentation & Disclosure
 
 **Balance Sheet (Schedule III, Companies Act 2013).** CRR appears under **Reserves and Surplus** within Shareholders' Funds:
@@ -461,6 +673,17 @@ Equity and Liabilities
 - Compliance with Section 68 conditions; special resolution details; completion within one year.
 - **Form SH-11 (return of buyback)** filed with the Registrar, with a **compliance certificate (Form SH-15)** signed by two directors including the managing director, if any.
 
+**The buyback forms — a quick map (theory MCQ bait):**
+
+| Form | Purpose | When |
+|---|---|---|
+| SH-8 | Letter of offer / declaration by the Board | Before making the offer |
+| SH-9 | Declaration of solvency (directors affirm the company can pay its debts for one year) | Before buyback, filed with Registrar/SEBI |
+| SH-11 | Return of buyback | After completion |
+| SH-15 | Compliance certificate (two directors incl. MD) | Annexed to SH-11 |
+
+*Do not confuse SH-8/9 (before) with SH-11/15 (after). A common one-mark trap.*
+
 **Board vs Special Resolution route disclosure:**
 
 | Route | Ceiling | Approval | Frequency |
@@ -468,15 +691,22 @@ Equity and Liabilities
 | Board resolution | ≤ 10% of paid-up equity + free reserves | Board only | Once per year |
 | Special resolution | ≤ 25% of paid-up capital + free reserves | Members (75%) | Subject to 1-year gap |
 
+**Effect on other ratios / statements (link the accounting to reporting):**
+- **EPS** rises (fewer shares) — but the *EPS in the year of buyback* is computed on the weighted-average shares, so the boost is partial in the buyback year and full thereafter.
+- **Cash Flow Statement:** the buyback outflow (face + premium) is a **financing activity** outflow; a fresh issue made to fund it is a **financing inflow**. They do *not* net silently — show both.
+- **Net worth** falls by the cash paid out; the CRR transfer is internal and does not change net worth.
+
 ---
 
 ## 7. Connections
 
-- **Chapter 31 (Redemption of Preference Shares)** — shares the *identical* CRR engine (Capital → CRR, less fresh issue). Master both together; examiners combine them, sometimes redeeming preference shares *and* buying back equity in one problem, both hitting the same free reserves.
+- **Chapter 31 (Redemption of Preference Shares)** — shares the *identical* CRR engine (Capital → CRR, less fresh issue). Master both together; examiners combine them, sometimes redeeming preference shares *and* buying back equity in one problem, both hitting the same free reserves (see Example 5).
 - **Bonus Issue** — CRR's *only* permitted use is issuing fully paid bonus shares. Buyback shrinks capital; a later bonus can re-expand it *from* the very CRR the buyback created. Beautiful closed loop.
 - **Securities Premium (Sec. 52)** — the premium-on-buyback write-off is the mirror of premium *on issue*; Sec. 52 restricts securities premium's uses, and paying buyback premium is one of the permitted applications.
 - **Debentures / Financial leverage** — the 2:1 test connects buyback directly to the debt-side of the balance sheet you study in company-accounts and financial-management. A buyback is a *deliberate leverage-increasing* move (equity down, debt constant → gearing up), which is exactly why the 2:1 fence exists.
 - **EPS & valuation (MBA-Finance link)** — buyback reduces the share count, raising EPS and (if bought below intrinsic value) increasing per-share intrinsic value. This is the *finance rationale* the accounting entries serve.
+- **Cash Flow Statement (AS 3)** — buyback and fresh issue are both financing-activity lines; combined problems test whether you can trace the net cash movement.
+- **Internal Reconstruction / Capital Reduction (Sec. 66)** — another way capital legally shrinks, but that route needs *Tribunal* approval and is for writing off *losses*, not returning surplus. Contrast: buyback returns cash to solvent owners; capital reduction usually cancels unpaid-up or lost capital. Don't conflate the two.
 
 ---
 
@@ -493,6 +723,12 @@ Equity and Liabilities
 9. **Premium write-off order.** Securities Premium **first**, then free reserves. Reversing the order wastes securities premium's restricted capacity and misstates closing reserves.
 10. **Using capital reserve / revaluation reserve.** Not free reserves — cannot fund buyback, premium, or CRR. Only genuinely distributable reserves qualify.
 11. **Number of shares must be a whole number.** After computing the ₹ ceiling, dividing by price may give a fraction — round *down* to stay within the limit.
+12. **Subtracting only face value in the 2:1 test.** The buyback reduces owned funds by the **full price** (face + premium), because the premium is absorbed by reserves. Subtracting only the face value overstates post-buyback owned funds and lets you "pass" a ratio you actually fail.
+13. **Wrong base after a prior corporate action.** If a fresh issue, bonus, or preference redemption happens *before* the buyback, the 25% and 2:1 tests must use the *updated* capital-and-reserve figures. Using opening figures is a silent error that snowballs.
+14. **CRR treated as a free reserve for the *next* action.** CRR is capital-like — it is **not** part of "free reserves" for a later dividend, buyback test, or premium write-off. Only its permitted use (bonus) touches it.
+15. **Applying the 25% / 2:1 tests to a *preference redemption*.** Those fences are buyback-only. A preference redemption under Sec. 55 has no quantum or gearing ceiling — importing them is a conceptual error.
+16. **Board-route ceiling mixed up.** Board-alone buyback is capped at **10%** (not 25%) of paid-up equity + free reserves, once a year. Watch for a question that quietly says "the Board resolved" (no special resolution) — then the ceiling is 10%.
+17. **Ignoring the solvency / default gate.** If the problem states the company defaulted on deposits/debentures/loans and the default *subsists*, the buyback is barred outright regardless of reserves — write that as your answer.
 
 ---
 
@@ -502,11 +738,26 @@ Start from one sentence: **permanent share capital is the creditor's cushion, an
 
 - To stop the cushion shrinking → replace cancelled **face value** with **CRR** (capital's ghost). To the extent a **fresh issue** already rebuilds capital, no CRR is needed → *CRR = face bought − face freshly issued.*
 - To stop total drainage → **25% ceilings** (value on capital+reserves; count on paid-up equity) leave ≥75% intact each year.
-- To stop post-buyback over-leverage → **debt ≤ 2 × owned funds after buyback.**
-- To stop manipulation/churn → special resolution, AoA authority, 1-year gaps, mandatory destruction, no fresh same-kind issue for a period, no buyback from borrowed funds.
+- To stop post-buyback over-leverage → **debt ≤ 2 × owned funds after buyback**, where the outflow that reduces owned funds is the *full price*, not just face.
+- To stop manipulation/churn → special resolution, AoA authority, 1-year gaps, mandatory destruction, no fresh same-kind issue for 6 months, no buyback from borrowed funds.
+- To stop stakeholder abuse → no buyback while a default subsists; proportionate/open-market route; owners' special resolution for anything beyond the 10% board route.
 - The accounting is one machine: (optional fresh issue) → create buyback liability (capital at face + premium) → write premium off securities-premium-then-free-reserves → transfer CRR from free reserves → pay cash.
 
 If you can regenerate each fence from its fear, and run the five-step machine, you can solve any buyback problem — the "rules" are just the fears made precise.
+
+```mermaid
+flowchart TD
+    A["Compute all three ceilings A B and C"] --> B["Pick the LOWEST as the binding limit"]
+    B --> C["Was any fresh issue made for the buyback"]
+    C -->|Yes| D["CRR equals face bought minus face freshly issued"]
+    C -->|No| E["CRR equals full face bought"]
+    D --> F["Absorb premium Securities Premium first then free reserves"]
+    E --> F
+    F --> G["Transfer CRR from free reserves only never Securities Premium"]
+    G --> H["Pay cash and destroy shares within 7 days"]
+    H --> I["Reconcile capital down equals CRR up cushion preserved"]
+```
+*The decision path from limit tests to a reconciled set of entries — CRR sizing branches on whether a fresh issue was raised.*
 
 ---
 
@@ -521,11 +772,15 @@ If you can regenerate each fence from its fear, and run the five-step machine, y
 |---|---|---|
 | (A) 25% capital+reserves | 25% × (paid-up capital + free reserves) | ₹ value of buyback |
 | (B) 25% of equity | 25% × paid-up **equity** capital | face value / count of equity shares |
-| (C) Debt-equity 2:1 | Debt ≤ 2 × (owned funds AFTER buyback) → max payout = owned funds − Debt/2 | ₹ value |
+| (C) Debt-equity 2:1 | Debt ≤ 2 × (owned funds AFTER buyback) → max payout = owned funds − Debt/2 | ₹ value (subtract full price, not just face) |
+
+*Board-route buyback: ceiling drops to 10% of (paid-up equity + free reserves), once a year.*
 
 **CRR (Sec. 69):** = **Nominal value bought back − Nominal value of fresh issue.** Source = **free reserves only**. Use = **bonus shares only**.
 
 **Premium on buyback:** written off **Securities Premium first, then free reserves.**
+
+**Free-reserve eligibility:** General Reserve, P&L surplus, Dividend Equalisation Reserve = yes. Securities Premium = pays *premium* only, never CRR. Capital Reserve, Revaluation Reserve, existing CRR, earmarked DRR = **no**.
 
 **Five-step entries:**
 1. Bank Dr / Capital Cr, Sec. Premium Cr *(fresh issue, if any)*
@@ -534,8 +789,10 @@ If you can regenerate each fence from its fear, and run the five-step machine, y
 4. Free Reserves Dr / CRR Cr *(= face − fresh face)*
 5. Equity Shareholders Dr / Bank Cr
 
-**Procedural fences:** AoA authority; special resolution (or board ≤10%, once/year); 1-year gap between buybacks; complete within 1 year; no fresh same-kind issue for 6 months; destroy shares within 7 days; no buyback if in default (deposits/debentures/loans) unremedied.
+**Procedural fences:** AoA authority; special resolution (or board ≤10%, once/year); 1-year gap between buybacks; complete within 1 year; no fresh same-kind issue for 6 months; destroy shares within 7 days; no buyback if in default (deposits/debentures/loans) while unremedied.
+
+**Forms:** SH-8 (letter of offer), SH-9 (solvency, before), SH-11 (return, after), SH-15 (compliance cert, after).
 
 **vs Preference Redemption (Sec. 55):** same CRR engine; but pref redemption has **no** 25% or 2:1 test, and is a pre-agreed return of temporary capital. Buyback = discretionary raid on permanent equity → more fences.
 
-**Golden checks:** CRR on *face*, not price. Securities premium can pay premium but *not* fund CRR. 2:1 tested *after*. Round shares *down*. No treasury stock in India.
+**Golden checks:** CRR on *face*, not price. Securities premium can pay premium but *not* fund CRR. 2:1 tested *after*, subtract *full price*. Round shares *down*. No treasury stock in India. Test on the balance sheet *as it stands at each step*. Capital-down must equal CRR-up (net of fresh issue) — if it doesn't, you slipped.

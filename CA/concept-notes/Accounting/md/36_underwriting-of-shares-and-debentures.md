@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 36 — Underwriting of Shares & Debentures
 
 ## 1. The Problem
@@ -18,6 +20,8 @@ Now flip it around. There exist financial institutions, banks, and broking firms
 
 **Underwriting** is the market's answer to this mismatch: a contract that moves the demand risk from the company (who cannot bear it) to a specialist (who can). This chapter is about how that contract works, how you compute exactly who owes how many shares when the public under-applies, and the accounting and legal rules wrapped around it.
 
+**Why this is an *accounting* chapter and not just a finance story.** Once the underwriter is forced to take up shares, real journal entries follow — capital is credited, premium is credited, commission is debited and written off, cash is settled net. The exam tests two linked skills: (a) the *arithmetic* of splitting the shortfall fairly (the liability table), and (b) the *bookkeeping* of the consequences (entries, commission, presentation). Master both; questions almost always ask for both in the same problem.
+
 ---
 
 ## 2. The Core Idea — An Insurance Policy on Your Own Share Issue
@@ -37,11 +41,15 @@ The analogy is exact, and it explains almost everything that follows:
 | Payout | Underwriter **takes up the unsold shares** |
 | Sum insured | The number of shares each underwriter **guarantees** |
 | Co-insurance (several insurers share one big risk) | **Multiple underwriters**, each guaranteeing a portion |
+| Re-insurance (insurer offloads part of its risk) | **Sub-underwriting** |
+| Deductible / self-insured retention | The **un-underwritten portion** the company keeps (partial underwriting) |
 
 Two consequences fall straight out of the analogy, and you should hold them in your head for the whole chapter:
 
 - **Just like insurance premium, the commission is paid whether or not there is a claim.** If the issue is fully subscribed and the underwriter takes up *nothing*, they still keep their commission. That is what they were paid for — bearing the risk, not necessarily absorbing shares. Students who feel this is "unfair" have simply not understood that they were selling a *guarantee*, and a guarantee has value even when it is never called upon.
 - **Just like co-insurance, when there are several underwriters we must fairly split the shortfall** in proportion to what each one guaranteed — but adjusted for the business each one actually *brought in*. That fairness computation (the "gross liability method") is the mathematical heart of the chapter.
+
+**One more consequence, easy to miss.** In insurance, the premium is a cost of *protecting* an asset you already own, so it is an expense. In underwriting the "premium" is a cost of *creating* capital, so it is **not** a routine expense — it is a capital-raising cost, which is exactly why it is written off against Securities Premium rather than the P&L (Section 4.7 and Section 6). Keep the analogy, but respect where it breaks.
 
 ---
 
@@ -57,7 +65,9 @@ Before we hit the mechanics, let's derive *why* the machinery has the shape it d
 
 **Design pressure 4 — Some applications cannot be attributed to anyone, so we need a default rule.** A person who walks into a bank branch and applies directly, with no underwriter's stamp on the form, benefited the whole issue but no particular underwriter. These *unmarked* applications must be shared out — and there are two philosophies for doing so (share by gross guarantee vs. share by remaining guarantee). The chapter will show both.
 
-Everything in Section 4 is a consequence of these four pressures. Keep asking, as we go: *which pressure does this rule serve?*
+**Design pressure 5 — The market must be able to trust the guarantee.** A guarantee is only as good as the guarantor's ability to pay. This is why SEBI restricts underwriting to registered intermediaries with adequate net worth, why directors must state in the prospectus that the underwriters have sufficient resources, and why the agreement is filed with the ROC. The whole edifice fails if the underwriter cannot honour the call — so the law front-loads solvency checks. (This is the reasoning behind Section 4.11 and the "underwriter default" edge case in Section 4.13.)
+
+Everything in Section 4 is a consequence of these design pressures. Keep asking, as we go: *which pressure does this rule serve?*
 
 ---
 
@@ -72,6 +82,12 @@ Everything in Section 4 is a consequence of these four pressures. Keep asking, a
 **Sub-underwriting** — The underwriter, like a re-insurer, may pass on part of its risk to sub-underwriters. The company usually has no privity with sub-underwriters; that is a back-to-back arrangement between the main underwriter and its sub-underwriters. (Exam problems occasionally mention it but rarely compute it.)
 
 **Underwriting commission** — The fee (premium) paid by the company to the underwriter for the guarantee, computed as a percentage of the **issue price** of the shares/debentures underwritten. Payable whether or not the underwriter is called upon to take up shares.
+
+**Devolvement** — The event of shares/debentures "devolving" (falling) on the underwriter — i.e., the underwriter being *called upon* to take up the shortfall. "Devolvement" is the noun for what happens when the insurance claim is triggered.
+
+**Gross liability** — The number of shares an underwriter guaranteed, before any credits. The starting row of the master table.
+
+**Net liability** — The final number of shares an underwriter must actually take up after crediting marked, unmarked, firm shares and any surplus adjustment.
 
 ### 4.2 The three sub-problems and their terms
 
@@ -88,6 +104,19 @@ When the issue closes, applications arrive. To settle who owes what, we classify
 **Complete vs Partial underwriting:**
 - *Complete* — the **entire** issue is underwritten (possibly split among several underwriters). Any part not underwritten by named underwriters is deemed underwritten by the company itself ("the company is the underwriter for the balance").
 - *Partial* — only a portion is underwritten; the **company itself bears the risk** on the un-underwritten portion, i.e., the company is treated as an underwriter for that slice.
+
+```mermaid
+flowchart TD
+    A["Every application form received"] --> B{"Does it carry an underwriter stamp or code?"}
+    B -->|"Yes"| C["Marked application - credit to that underwriter"]
+    B -->|"No"| D["Unmarked application - shared among all"]
+    A --> E{"Did an underwriter promise to buy shares outright regardless of public?"}
+    E -->|"Yes"| F["Firm underwriting - convention decides who is credited"]
+    C --> G["Feeds the gross liability table"]
+    D --> G
+    F --> G
+```
+*Figure 0 — How each incoming application is classified before the liability table is built.*
 
 ### 4.3 The master computation — the Gross Liability Method
 
@@ -111,9 +140,15 @@ If both sides don't tie, you have an error. This is non-negotiable — the exami
 
 **The unmarked-applications rule for shortfall (important nuance):** Marked applications include those brought by the underwriters. In many problems, *total marked applications + unmarked applications = total applications received from public*. The shares still to be found = shares issued − total applications from public. That total shortfall is what the underwriters collectively absorb; the table just *allocates* it fairly.
 
+**A subtle but exam-critical ordering point.** Steps 2 and 3 can be *combined* into a single "less: total applications credited" row only when there is no surplus. The moment one underwriter over-delivers, you *must* keep marked and unmarked separate and process the surplus (Step 5) before firm underwriting (Step 6) — otherwise the surplus of the over-performer gets silently applied against firm shares, which is wrong. Order matters: **marked → unmarked → surplus adjustment → firm**.
+
 ### 4.4 Handling surplus (Step 5) — the logic
 
 An underwriter whose marked applications alone exceed its gross liability has *over-delivered*. It should not be forced to take shares; instead, its **surplus reduces others' burden**. But by how much for each? By the ratio of the *remaining* underwriters' gross liabilities — because that surplus is a windfall that should relieve the still-liable parties in proportion to *their* exposure. (One subtlety: strictly, some texts redistribute in the ratio of the remaining underwriters' *net* balances; ICAI's standard treatment uses gross liability ratio excluding the surplus party. Follow the gross-liability-ratio convention unless the question states otherwise — **flagged as a known area of textbook variation**.)
+
+**A second-round surplus can appear — watch for it.** After you redistribute one underwriter's surplus, a *second* underwriter can be pushed into surplus (this happens when two underwriters both over-sold). If, after Step 5, any column has turned negative, you must repeat the redistribution among the *still-positive* underwriters only. Keep iterating until no column is negative. The reconciliation total is invariant throughout, so it is your guardrail on each round.
+
+**Why not just cap the surplus underwriter at zero and stop?** Because the algebraic total of the balance row always equals the true overall shortfall. If you zeroed the negative column *without* pushing that relief onto the others, your columns would no longer sum to the shortfall — you would have manufactured shares out of thin air. The redistribution is not a courtesy to the over-performer; it is forced by conservation of the total.
 
 ### 4.5 The two conventions for UNMARKED + FIRM underwriting
 
@@ -128,6 +163,8 @@ Two treatments exist. Read the question's wording; if silent, state your assumpt
 - This gives the "benefit" of firm underwriting to everyone.
 
 **ICAI default (most common in exams):** unless the problem says "firm underwriting benefit to be given to individual underwriter," treat firm underwriting like the underwriter's *own marked* application (Convention A) — i.e., subtract each underwriter's firm shares from its own liability at the end, but **also add firm shares back when computing "total applications for allocating the plain shortfall."** Watch the exact wording. We demonstrate both in the worked examples.
+
+**A third phrasing you may meet — "firm underwriting shares treated as part of marked applications from the very start."** Some questions fold firm shares into the marked row directly (rather than deducting them at Step 6). The net liability is identical to Convention A; only the presentation moves. Do not panic if a suggested answer looks different from yours — check whether it merged firm into marked earlier. If the *net liabilities* and the *total taken up* agree, the answer is the same.
 
 ### 4.6 Underwriting commission — the legal caps
 
@@ -147,6 +184,8 @@ The commission is the premium. The law (design pressure 2) caps it.
 | **Shares** | **5%** of the **issue price** of the shares, **or** the rate authorised by the Articles, **whichever is less** |
 | **Debentures** | **2.5%** of the **issue price** of the debentures, or the Articles' rate, whichever is less |
 
+**Reading "whichever is less" correctly — a favourite trap.** The cap is *min(statutory rate, Articles' rate)*. If the Articles authorise **3%** on shares, you may pay only 3%, not 5% — the statutory 5% is a ceiling, not an entitlement. Conversely, if the Articles authorise **7%**, you are still stuck at 5% — the Articles cannot override the statute. The rate you use is always the **lower** of the two. Example 5 drills this.
+
 **Key computation rules for commission:**
 - Commission is computed on the **issue price** (including premium), *not* face value, of the **shares underwritten** — meaning the shares comprised in the underwriting agreement, **whether or not** the underwriter had to take them up.
 - **No commission is payable on shares/debentures NOT offered to the public** (e.g., promoters' quota, reserved firm allotments to the underwriter itself where SEBI so restricts). SEBI ICDR generally disallows commission on the portion the underwriter subscribes as a firm/reserved allotment or that is otherwise not offered to the public.
@@ -154,6 +193,29 @@ The commission is the premium. The law (design pressure 2) caps it.
 
 > **Formula:** Commission = Number of shares underwritten × Issue price per share × Rate%
 > (Rate = min[Articles' rate, 5% for shares / 2.5% for debentures])
+
+### 4.6a Underwriting commission vs brokerage — do not confuse them
+
+Students routinely mix these two. They are different payments for different services.
+
+| | **Underwriting commission** | **Brokerage** |
+|---|---|---|
+| Paid for | Bearing the **risk** of under-subscription (a guarantee) | The **service of procuring** subscriptions |
+| Earned even if fully subscribed? | **Yes** — it is a guarantee fee | **No** — paid only on shares actually placed through the broker |
+| Nature | Insurance-type premium | Selling commission / placement fee |
+| Statutory cap | 5% shares / 2.5% debentures (Sec 40(6), Rule 13) | Governed by the company's agreement; no identical statutory cap in the 2013 Act — **verify current ICAI material / SEBI ICDR for the applicable limit** |
+
+A person can be **both** underwriter and broker on the same issue and earn *both* payments — one for the guarantee, one for shares actually brought in. In accounting terms both are capital-raising costs and both may be written off against Securities Premium.
+
+### 4.6b Types of underwriting arrangement — the taxonomy
+
+Beyond complete/partial, questions test these labels:
+
+- **Pure / plain underwriting** — the underwriter takes up only the *shortfall* if the public under-subscribes; nothing if fully subscribed. The default meaning of "underwriting."
+- **Firm underwriting** — an outright commitment to buy a fixed lot regardless of public response (Section 4.2), layered on top of pure underwriting.
+- **Sub-underwriting** — a main underwriter re-insuring part of its risk with sub-underwriters (Section 4.1). The company has no privity; the main underwriter pays the sub-underwriters out of its own commission (often called *overriding commission* retained by the main underwriter).
+- **Syndicate underwriting** — several underwriters band together (a syndicate) to underwrite a very large issue jointly. Mechanically this is just multiple underwriters sharing gross liability in an agreed ratio.
+- **Joint underwriting** — the issuer directly appoints several underwriters, each for a defined portion (the ordinary multi-underwriter case in this chapter).
 
 ### 4.7 Journal entries
 
@@ -191,6 +253,19 @@ Underwriting Commission A/c               Dr.
     To Bank A/c   (or To Underwriters A/c then Bank)
 ```
 
+**Which way does the cash flow?** Compare (shares taken up × issue price) against (commission due):
+- If **shares money > commission** (the usual devolvement case), the underwriter still owes net cash — *Bank Dr., To Underwriters* — the company **receives** money.
+- If **commission > shares money** (large guarantee, tiny shortfall, or issue fully subscribed), the company **pays** the underwriter net cash — *Underwriters Dr., To Bank*. Do not blindly copy entry (c); check the direction each time.
+
+**Commission paid in fully-paid shares (Section 40(6) permits it).** If commission is discharged by issuing shares rather than cash, the settlement entry becomes:
+
+```
+Underwriters A/c                          Dr.   (commission amount)
+    To Share Capital A/c                             (face value of commission shares)
+    To Securities Premium A/c                        (premium, if issued above par)
+(Being commission discharged by allotment of fully paid shares)
+```
+
 **Nature of the commission account:** Underwriting Commission is a **cost of raising capital**. It is *not* a revenue expense of the year. Under Schedule III it is typically written off against **Securities Premium** (Section 52 permits using the premium for writing off "commission paid on issue of shares/debentures") or shown as a "miscellaneous expenditure to the extent not written off" (older treatment). Modern practice: adjust against Securities Premium Account under Section 52(2)(c).
 
 ```
@@ -198,6 +273,8 @@ Securities Premium A/c                    Dr.
     To Underwriting Commission A/c
 (Being underwriting commission written off against securities premium)
 ```
+
+**What if there is no Securities Premium (issue at par)?** Then you cannot use Section 52. The commission is charged to the **Statement of Profit and Loss** (or carried as miscellaneous expenditure to the extent not written off, under the older practice). The write-off destination depends on whether a premium exists — do not mechanically credit Securities Premium in a par issue where the balance is nil.
 
 ### 4.8 The decision flow
 
@@ -218,6 +295,36 @@ flowchart TD
     K --> L["Reconcile - marked plus unmarked plus firm plus net liability equals N"]
 ```
 *Figure 1 — The full decision path from issue close to each underwriter's net liability.*
+
+### 4.9 When the whole issue is FULLY subscribed — the no-liability rule
+
+A conceptually vital edge case the examiner uses to catch rote learners.
+
+**The rule:** underwriting liability is tested at the level of the **whole issue**, not underwriter-by-underwriter. If the *aggregate* subscription (public applications, marked plus unmarked, plus firm) equals or exceeds the shares issued, then **no underwriter has any liability at all** — even if one particular underwriter's own marked applications fell short of its own gross liability. There is simply no shortfall to devolve.
+
+**Why:** the underwriter guaranteed *subscription of the issue*, not that *their own investors* would show up. If enough investors showed up in total (through anyone), the guarantee was never called. The commission is still fully payable — the guarantee had value even though it was not invoked.
+
+**The exception — "underwriting on the basis of marked applications only."** A few agreements (and a few exam problems) specify that each underwriter's liability is settled *purely on its own marked applications*, ignoring unmarked and others' surpluses. Under this basis an underwriter can be liable for its individual shortfall even when the whole issue is oversubscribed. This is unusual — use it **only** when the question explicitly says so. Default to the whole-issue rule.
+
+### 4.10 Minimum subscription, devolvement and the SEBI context
+
+Underwriting does not exist in a vacuum — it is the tool that *guarantees* the minimum subscription the law demands.
+
+- **Minimum subscription (Companies Act, Sec 39):** a company cannot allot shares to the public unless it has received applications for the minimum subscription stated in the prospectus and the application money (at least 5% of nominal value, or as SEBI prescribes) has been received. If not, all money is refunded.
+- **SEBI ICDR — 90% rule:** for a public issue, if the company does not receive **minimum subscription of 90% of the offer** (through the offer document), it must refund the application money. Underwriting is what lets a company promise the market that this 90% floor will be met — the underwriter's guarantee plugs the gap. *(Verify the exact current percentage and the refund timeline against current ICAI / SEBI ICDR material — SEBI thresholds are periodically revised.)*
+- **Devolvement** is the mechanism that delivers on that promise: when the public falls short, the shortfall *devolves* on the underwriters, who subscribe it, and the 90% floor is thereby met.
+- **Green Shoe Option (over-allotment):** the *opposite* problem — a mechanism to stabilise price when an issue is *over*-subscribed, by allotting extra shares. It is related to issue mechanics but is **not** underwriting. Do not confuse the two. *(Green Shoe details — verify current ICAI material / SEBI ICDR for scope and limits.)*
+
+### 4.11 Eligibility and solvency of the underwriter
+
+Flowing from design pressure 5: only a **SEBI-registered** intermediary (merchant banker / underwriter) may underwrite a public issue, and the directors must state in the prospectus their opinion that the underwriters have **sufficient resources** to discharge their obligations. The agreement is filed with the ROC. These are not accounting rules but they are examinable one-liners in theory questions, and they explain *why* the guarantee is trustworthy enough to substitute for real demand.
+
+### 4.12 What if an underwriter defaults on the call?
+
+Once devolvement is computed, the underwriter is a **debtor** for the shares taken up (net of commission). If the underwriter fails to pay:
+- The amount remains recoverable as a **debt** — the company may sue on the contract; the underwriter cannot walk away because the agreement is firm (design pressure 1).
+- The shares are *not* automatically forfeited the way a defaulting ordinary allottee's would be, because the liability is contractual, not merely a call on partly-paid shares — though if shares were allotted and calls remain unpaid, the ordinary forfeiture machinery can also apply.
+- In the books, until settled, the balance sits in **Underwriters A/c** (an asset — sundry debtor). *(Detailed accounting for underwriter default is rarely asked at Intermediate level — verify scope against current ICAI study material.)*
 
 ---
 
@@ -299,44 +406,17 @@ Notice **C is negative (−20,000)** — C's marked applications (60,000) exceed
 
 C's surplus has grown to **26,000** (over-subscribed even after taking its share of unmarked).
 
-**Step 4/5 — Redistribute C's surplus** to A and B in the ratio of *their* gross liabilities (5:3), because C cannot take negative shares:
+**Step 4/5 — Redistribute C's surplus** to A and B in the ratio of *their* gross liabilities (5:3), because C cannot take negative shares. The algebraic total of the balance row is invariant — it equals the true shortfall of 50,000 — so relieving C by moving its −26,000 onto A and B must *reduce* A and B (they are being relieved by C's over-selling), keeping the total at 50,000:
 
-- A: 26,000 × 5/8 = 16,250
-- B: 26,000 × 3/8 = 9,750
+- A relief: 26,000 × 5/8 = 16,250 → A: 45,000 − 16,250 = **28,750**
+- B relief: 26,000 × 3/8 = 9,750 → B: 31,000 − 9,750 = **21,250**
+- C → **0**
 
-| | A | B | C | Total |
-|---|---|---|---|---|
-| Balance b/f | 45,000 | 31,000 | (26,000) | 50,000 |
-| Add C's surplus | 16,250 | 9,750 | (26,000) | 0 |
-| **Net liability** | **61,250** | **40,750** | **0** | **1,02,000** |
+Check: 28,750 + 21,250 + 0 = **50,000** ✓ (still equals the shortfall). C brought in extra subscribers, so everyone else's burden falls — exactly what "over-delivered" should mean.
 
-Wait — let me check: 61,250 + 40,750 = **1,02,000**, but the shortfall is only 50,000. That is wrong. Let me recompute — surplus is *added* to A and B's liability (they take C's unsold burden), but I must add, and the total must equal the shortfall of 50,000. The error: when we "add C's surplus," C's own column should go to 0, and the *total* stays 50,000. Let me redo Step 4 correctly.
+> **Sign discipline (the classic disaster).** The single most common wreck in this problem is to *add* C's 26,000 to A and B, giving 61,250 + 40,750 = 1,02,000 — which cannot be right, because the total shortfall is only 50,000. The tell is the reconciliation: if your redistributed total no longer equals the original shortfall, you added where you should have subtracted. The balance-row total is conserved; use it as a live check on every surplus move.
 
-Balances before redistribution: A 45,000; B 31,000; C (26,000). Total = 45,000 + 31,000 − 26,000 = **50,000** ✓ (equals shortfall).
-
-Redistributing C's −26,000 means A and B *absorb* it — but absorbing a surplus **reduces** nothing; C is negative meaning C would otherwise "receive" shares. The correct mechanic: set C to 0 and spread the 26,000 onto A and B, which **increases** A and B. But then total = 50,000 + 26,000... no.
-
-Let me think cleanly. The three balances sum to the true shortfall, 50,000. C's balance is −26,000, which is meaningless (you can't take negative shares). We zero out C and **reallocate C's −26,000 across A and B**, i.e., A and B each take *more*. New total must still be 50,000 because we are only *moving* the negative, not deleting it:
-
-- A: 45,000 + (26,000 × 5/8) = 45,000 + 16,250 = 61,250
-- B: 31,000 + (26,000 × 3/8) = 31,000 + 9,750 = 40,750
-- C: 0
-- Total = 61,250 + 40,750 + 0 = **1,02,000** ❌
-
-The sum jumped to 1,02,000 because I *added* 26,000 instead of it netting. The flaw: adding C's negative should **subtract** from the pool, not add. Reallocating a −26,000 means A and B receive −? No. Let me use signed arithmetic strictly.
-
-Moving C's balance to zero: we transfer +26,000 out of C (bringing C from −26,000 to 0) and that same +26,000 must be **added to A and B** to keep the algebraic total unchanged. Total was 50,000; if I add 26,000 to A+B and add 26,000 to C (to zero it from −26,000), total changes by +26,000+26,000. That's the bug — I'm double counting.
-
-Correct principle: **the algebraic total is invariant.** Total = 50,000. Zeroing C changes C by +26,000, so to keep total at 50,000, A+B combined must change by **−26,000**. So A and B's liabilities *decrease*:
-
-- A: 45,000 − 16,250 = 28,750
-- B: 31,000 − 9,750 = 21,250
-- C: 0
-- Total = 28,750 + 21,250 + 0 = **50,000** ✓✓
-
-**That** is the reconciliation. C over-delivered, so A and B's burdens *fall*. This makes intuitive sense: C brought in extra subscribers, relieving everyone.
-
-**Final table (corrected):**
+**Final table:**
 
 | | A | B | C | Total |
 |---|---|---|---|---|
@@ -428,7 +508,7 @@ No underwriter is negative — **no surplus to redistribute.** Good.
 | R | 38,000 | 10,000 | **48,000** |
 | Co. | 44,000 | 0 | **44,000** |
 
-**Commission** (on shares *underwritten* at 5% of issue price ₹12). The company earns **no** commission on its own 50,000 (you cannot pay yourself commission), and no commission on firm shares that are not offered to the public? — In the standard treatment commission is on the amount underwritten by each *external* underwriter:
+**Commission** (on shares *underwritten* at 5% of issue price ₹12). The company earns **no** commission on its own 50,000 (you cannot pay yourself commission):
 
 - P: 2,00,000 × ₹12 × 5% = ₹1,20,000
 - Q: 1,50,000 × ₹12 × 5% = ₹90,000
@@ -481,11 +561,101 @@ Then each still separately subscribes its own firm shares (P 20,000 etc.). **Rec
 
 ---
 
+### Example 5 — Debentures: 2.5% cap, Articles rate binding lower, and "total applications given" phrasing
+
+**Problem.** Narmada Ltd. issues **4,00,000 12% Debentures of ₹100 each at par**, underwritten by **X and Y in the ratio 3 : 1.** The company's **Articles authorise underwriting commission up to 2%** on debentures. The total applications received from the public were **3,40,000 debentures**, of which **marked applications** were X 1,80,000 and Y 40,000; the remainder were unmarked. There is no firm underwriting. Compute each underwriter's net liability and the commission payable.
+
+**Step 0 — Derive unmarked (the phrasing trap).** The question gives *total* applications and *marked* separately; unmarked is the plug:
+Unmarked = Total 3,40,000 − Marked (1,80,000 + 40,000 = 2,20,000) = **1,20,000.**
+Overall shortfall = 4,00,000 − 3,40,000 = **60,000** debentures.
+
+**Step 1 — Gross liability** in 3:1 of 4,00,000:
+
+| | X (3) | Y (1) | Total |
+|---|---|---|---|
+| Gross liability | 3,00,000 | 1,00,000 | 4,00,000 |
+
+**Step 2 — Less marked:**
+
+| | X | Y | Total |
+|---|---|---|---|
+| Gross liability | 3,00,000 | 1,00,000 | 4,00,000 |
+| Less marked | 1,80,000 | 40,000 | 2,20,000 |
+| Balance | 1,20,000 | 60,000 | 1,80,000 |
+
+**Step 3 — Less unmarked (1,20,000) in 3:1:**
+- X: 1,20,000 × 3/4 = 90,000
+- Y: 1,20,000 × 1/4 = 30,000
+
+| | X | Y | Total |
+|---|---|---|---|
+| Balance b/f | 1,20,000 | 60,000 | 1,80,000 |
+| Less unmarked | 90,000 | 30,000 | 1,20,000 |
+| **Net liability** | **30,000** | **30,000** | **60,000** |
+
+No surplus (no negatives). **Reconcile:** Marked 2,20,000 + Unmarked 1,20,000 + Net liability 60,000 = **4,00,000** ✓. Net liability 60,000 also equals the overall shortfall ✓✓.
+
+**Commission — the cap trap.** Statutory maximum for debentures is **2.5%**, but the Articles authorise only **2%**. Use the **lower** = 2%. Base = issue price = face value ₹100 (at par), on debentures *underwritten* (not taken up):
+- X: 3,00,000 × ₹100 × 2% = **₹6,00,000**
+- Y: 1,00,000 × ₹100 × 2% = **₹2,00,000**
+- **Total commission = ₹8,00,000**
+
+*(Had we carelessly used 2.5%, we would have overstated commission by ₹1,00,000 — the "whichever is less" clause makes the Articles' 2% binding.)*
+
+**Devolvement entry for X** (30,000 debentures of ₹100 at par):
+```
+Underwriter X A/c                 Dr.   30,00,000
+    To 12% Debentures A/c                  30,00,000
+(30,000 debentures taken up by X on devolvement)
+```
+Commission is credited to X (₹6,00,000) and the net is settled through Bank. Note the credit is to **Debentures A/c**, not Share Capital — otherwise the mechanics are identical to shares.
+
+---
+
+### Example 6 — The "fully subscribed in aggregate" trap: does an under-marked underwriter still owe?
+
+**Problem.** Tapti Ltd. issues **1,00,000** equity shares of ₹10 at par, underwritten equally by **L and M (1 : 1).** Marked applications: L 65,000; M 25,000. Unmarked: 12,000. Is either underwriter liable?
+
+**Reasoning first.** Total applications = 65,000 + 25,000 + 12,000 = **1,02,000 > 1,00,000.** The issue is **over-subscribed in aggregate.** By the whole-issue rule (Section 4.9), the guarantee was never called: enough investors showed up in total. **Neither L nor M has any liability**, even though M's own marked applications (25,000) fell well short of M's gross liability (50,000).
+
+**Prove it with the table** (a negative total confirms no shortfall):
+
+| | L | M | Total |
+|---|---|---|---|
+| Gross liability | 50,000 | 50,000 | 1,00,000 |
+| Less marked | 65,000 | 25,000 | 90,000 |
+| Less unmarked (1:1) | 6,000 | 6,000 | 12,000 |
+| Balance | (21,000) | 19,000 | (2,000) |
+
+The **total balance is (2,000)** — i.e., a surplus of 2,000 for the whole issue (the 2,000 over-subscription). Since the aggregate is negative, there is **no net liability on anyone**; L's surplus fully absorbs M's shortfall and 2,000 is left over (the excess public demand). Net liability of both = **NIL**. Commission is still fully payable on 50,000 each — the guarantee had value even though unused.
+
+**The examiner's twist:** if the same question said *"underwriters are liable on the basis of their marked applications only"* (the Section 4.9 exception), then M would owe its individual shortfall regardless of the aggregate. Watch the wording — it flips the answer from NIL to a real liability for M.
+
+---
+
+### Example 7 — Commission cap binding on the issue *price*, plus write-off with insufficient premium
+
+**Problem.** Bhima Ltd. issues **2,00,000** equity shares of ₹10 each at a premium of ₹1 (issue price ₹11), fully underwritten by **G** at the commission rate authorised by the Articles, which is **6%**. Compute the commission and show its write-off, given the Securities Premium balance available is only ₹1,50,000.
+
+**Commission rate — cap binds.** Articles say 6% but the statutory ceiling for shares is **5%**. Use the **lower = 5%.** Base = issue price ₹11 on shares underwritten (2,00,000):
+Commission = 2,00,000 × ₹11 × 5% = **₹1,10,000.**
+
+*(Using the Articles' 6% would give ₹1,32,000 — wrong; the statute caps at 5%.)*
+
+**Write-off — premium is insufficient.** Securities Premium available = ₹1,50,000, which *does* cover ₹1,10,000, so the entire commission can be written off against premium:
+```
+Securities Premium A/c            Dr.   1,10,000
+    To Underwriting Commission A/c        1,10,000
+```
+**Variation — what if premium available were only ₹70,000?** Then only ₹70,000 can be written off against Securities Premium; the remaining ₹40,000 must go to the **Statement of Profit and Loss** (or be carried as miscellaneous expenditure not written off, under the older practice). The write-off destination is *capped by the premium actually available* — a favourite "gotcha" when the premium on this very issue is small.
+
+---
+
 ## 6. Presentation & Disclosure
 
 **In the financial statements (Schedule III, Companies Act 2013):**
 
-- **Underwriting commission** is not shown as a P&L expense in the ordinary course; it is a cost of raising capital. Preferred treatment: **written off against the Securities Premium Account** under Section 52(2)(c) (which expressly permits using the premium for "writing off the commission paid or discount allowed on any issue of shares or debentures of the company"). If not so adjusted, it appears as **"Other Non-Current Assets → Miscellaneous expenditure to the extent not written off"** (older practice, now discouraged).
+- **Underwriting commission** is not shown as a P&L expense in the ordinary course; it is a cost of raising capital. Preferred treatment: **written off against the Securities Premium Account** under Section 52(2)(c) (which expressly permits using the premium for "writing off the commission paid or discount allowed on any issue of shares or debentures of the company"). If not so adjusted, it appears as **"Other Non-Current Assets → Miscellaneous expenditure to the extent not written off"** (older practice, now discouraged). Where no premium exists, it is charged to the **Statement of Profit and Loss.**
 - **Shares taken up by underwriters** simply become part of **Share Capital** (Equity) on the Balance Sheet — there is nothing special about a share once allotted; the identity of the applicant is irrelevant to presentation.
 - Any **securities premium** received on underwriter shares is credited to **Securities Premium** under Equity → Reserves & Surplus.
 
@@ -528,13 +698,13 @@ flowchart LR
 
 4. **The surplus of an over-performing underwriter REDUCES others' liability — you SUBTRACT, not add.** Watch the sign (the whole drama of Example 2). Always verify: after redistribution, total net liability must still equal the original shortfall.
 
-5. **Marked vs unmarked — read carefully whether "total applications" already includes marked.** Sometimes the question gives total applications and marked separately; unmarked = total − marked. Sometimes it gives all three. Don't double count.
+5. **Marked vs unmarked — read carefully whether "total applications" already includes marked.** Sometimes the question gives total applications and marked separately; unmarked = total − marked (Example 5). Sometimes it gives all three. Don't double count.
 
 6. **Firm underwriting convention (A vs B) changes the numbers.** If the question says "benefit of firm underwriting to individual underwriter," use Convention A (treat like own marked). If "benefit to all," use Convention B (pool with unmarked). If silent, state your assumption — ICAI usually means Convention A.
 
 7. **Firm shares are ALWAYS taken up by the underwriter**, in addition to net liability. Don't forget to add them back when reporting "total shares subscribed by each underwriter."
 
-8. **Redistribution ratio for surplus = gross liability ratio of the REMAINING underwriters** (exclude the surplus party). A frequent slip is redistributing including the surplus underwriter.
+8. **Redistribution ratio for surplus = gross liability ratio of the REMAINING underwriters** (exclude the surplus party). A frequent slip is redistributing including the surplus underwriter. And if a *second* underwriter turns negative after the first redistribution, repeat the process (Section 4.4).
 
 9. **"Fully underwritten" vs "partly."** If partly underwritten, remember to insert the **company as an underwriter** for the balance in the gross-liability table, or your totals won't reconcile.
 
@@ -542,15 +712,25 @@ flowchart LR
 
 11. **Number of shares, not rupees, in the liability table.** Convert to rupees only for commission and journal entries. Mixing units mid-table is a classic self-inflicted wound.
 
+12. **"Whichever is less" on the commission rate.** Use *min(statutory cap, Articles' rate)*. Articles below the cap bind you down (Example 5: 2% not 2.5%); Articles above the cap do not lift you up (Example 7: 5% not 6%).
+
+13. **Fully subscribed in aggregate ⇒ no liability on anyone** — even an underwriter whose own marking fell short (Example 6). The exception is the rare "liable on marked applications only" clause. Read the wording.
+
+14. **Cash direction on settlement can reverse.** If commission exceeds the value of shares devolving, the company *pays* the underwriter (Bank credited), not the reverse. Do not assume the company always receives cash.
+
+15. **Write-off is capped by the Securities Premium actually available.** With no/low premium (par issues or small premiums), the excess commission hits the Statement of P&L, not the premium account (Example 7 variation).
+
+16. **Brokerage ≠ underwriting commission.** They can both be paid to the same party for different services; don't merge them, and don't apply the 5%/2.5% underwriting cap to brokerage (Section 4.6a).
+
 ---
 
 ## 9. First-Principles Recap
 
 Start from the single fact that a company cannot control whether the public subscribes its issue, yet has already committed the money. That risk must go *somewhere*. It goes to a specialist — the underwriter — who, being close to the market and able to hold unsold stock, can bear it. That transfer is a **contract of guarantee**, priced like **insurance**: a commission paid *whether or not* the guarantee is called.
 
-When multiple underwriters co-insure, fairness demands that the residual shortfall land on whoever *under-sold their portion*. To measure selling performance we **mark** applications to the underwriter who produced them. Applications nobody produced (**unmarked**) are shared in proportion to each underwriter's guarantee (gross liability). An underwriter who over-sold shows a **surplus**, which mathematically *relieves* the others (subtract, in the remaining parties' gross-liability ratio). **Firm underwriting** is a separate, unconditional purchase layered on top, credited either to the individual (Convention A) or shared (Convention B).
+When multiple underwriters co-insure, fairness demands that the residual shortfall land on whoever *under-sold their portion*. To measure selling performance we **mark** applications to the underwriter who produced them. Applications nobody produced (**unmarked**) are shared in proportion to each underwriter's guarantee (gross liability). An underwriter who over-sold shows a **surplus**, which mathematically *relieves* the others (subtract, in the remaining parties' gross-liability ratio; repeat if a second party turns negative). **Firm underwriting** is a separate, unconditional purchase layered on top, credited either to the individual (Convention A) or shared (Convention B). And if the issue is subscribed *in aggregate*, the guarantee was never called — nobody owes shares, though everyone keeps their commission.
 
-The law caps the premium — **5% for shares, 2.5% for debentures**, computed on **issue price of shares underwritten** — to stop a desperate company from paying away the very capital it raises (Section 40(6), Rule 13). The commission is a cost of raising capital, written off against **Securities Premium** (Section 52). Every problem closes with one invariant: **Marked + Unmarked + Firm + Net liability = Shares issued.** If that holds, you are right; if not, you have a sign or ratio error. Nothing here needs memorising — it all falls out of "move the risk to who can bear it, and split the leftover fairly by effort."
+The law caps the premium — **5% for shares, 2.5% for debentures**, at the *lower* of the statutory rate and the Articles' rate, computed on **issue price of shares underwritten** — to stop a desperate company from paying away the very capital it raises (Section 40(6), Rule 13). The commission is a cost of raising capital, written off against **Securities Premium** (Section 52) to the extent it exists, else charged to P&L. Every problem closes with one invariant: **Marked + Unmarked + Firm + Net liability = Shares issued.** If that holds, you are right; if not, you have a sign or ratio error. Nothing here needs memorising — it all falls out of "move the risk to who can bear it, and split the leftover fairly by effort."
 
 ---
 
@@ -565,7 +745,9 @@ The law caps the premium — **5% for shares, 2.5% for debentures**, computed on
 | Debentures | 2.5% (or Articles' rate, lower) | Issue price of debentures underwritten |
 
 - Commission on shares **underwritten**, NOT taken up. On issue price, NOT face value. None on company's own / not-offered-to-public portion.
-- Payable in cash or fully-paid shares/debentures. Written off vs Securities Premium (Sec 52(2)(c)).
+- Rate = **min(statutory cap, Articles' rate)**. Payable in cash or fully-paid shares/debentures.
+- Write off vs Securities Premium (Sec 52(2)(c)) **to the extent available**; excess / par issues → Statement of P&L.
+- **Brokerage** is a separate payment (for procuring subscriptions); not the same as underwriting commission.
 
 **Conditions to pay commission:** authorised by Articles; within cap; disclosed in prospectus; agreement filed with ROC; number underwritten disclosed.
 
@@ -574,9 +756,14 @@ The law caps the premium — **5% for shares, 2.5% for debentures**, computed on
 2. − Marked applications (own).
 3. − Unmarked applications (gross-liability ratio).
 4. = Balance. If any negative → **surplus**.
-5. Surplus of over-performer → subtract from others in *their* gross-liability ratio; surplus party → 0.
+5. Surplus of over-performer → subtract from others in *their* gross-liability ratio; surplus party → 0; repeat if another turns negative.
 6. − Firm underwriting (Convention A: own; Convention B: pool with unmarked).
 7. = **Net liability.** Then **+ own firm shares = total taken up.**
+
+**Special cases:**
+- Fully subscribed in aggregate → **no liability on anyone** (unless "on marked applications only"). Commission still fully payable.
+- Debentures → identical table, credit **Debentures A/c**, cap 2.5%.
+- Settlement cash direction: if commission > shares value, company **pays** the underwriter.
 
 **Golden reconciliation:** Marked + Unmarked + Firm + Net liability = Shares issued.
 
@@ -589,13 +776,13 @@ Underwriter A/c        Dr. (shares × issue price)
 Underwriting Commission A/c   Dr.
     To Underwriter A/c
 
-Bank A/c   Dr. (net)
+Bank A/c   Dr. (net)        [or Underwriter Dr., To Bank if commission > shares value]
     To Underwriter A/c
 
 Securities Premium A/c   Dr.
-    To Underwriting Commission A/c   (write-off)
+    To Underwriting Commission A/c   (write-off, to extent premium available)
 ```
 
 **Conventions:** firm underwriting benefit to individual = treat like marked (A); to all = pool with unmarked (B). If silent, assume A and state it.
 
-**Top traps:** commission on underwritten-not-taken; on issue price; surplus SUBTRACTS from others; add company as underwriter if partial; reconcile at the end; work in shares not rupees.
+**Top traps:** commission on underwritten-not-taken; on issue price; rate = lower of cap/Articles; surplus SUBTRACTS from others; add company as underwriter if partial; aggregate over-subscription ⇒ nil liability; reconcile at the end; work in shares not rupees.

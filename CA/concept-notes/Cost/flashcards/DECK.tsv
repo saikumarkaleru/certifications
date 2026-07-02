@@ -1,0 +1,100 @@
+What distinguishes cost accounting from financial accounting?	Financial accounting reports external stewardship (P&L, B/S) per GAAP; cost accounting is internal — it ascertains, controls and reduces cost per unit/job to aid pricing and decisions.
+Why is cost classified by 'behaviour' (fixed/variable) rather than just by nature?	Because decisions turn on how cost reacts to volume — only variable cost changes with output, so behaviour drives marginal analysis, break-even and pricing, which nature-wise grouping cannot reveal.
+Define 'cost object' vs 'cost centre'.	Cost object = anything for which cost is separately measured (product, job, service). Cost centre = a location/person/equipment where cost is accumulated for control.
+Why treat 'cost unit' as the measuring rod?	It expresses cost per unit of output (per tonne, per km, per patient-day) so different periods and firms become comparable — an absolute total tells you nothing about efficiency.
+What is a 'sunk cost' and why is it irrelevant to decisions?	A cost already incurred and unrecoverable; since no future action can change it, it must be ignored — only future differential cash flows matter for decisions.
+What is 'opportunity cost' and why include it though no cash moves?	The benefit foregone from the next-best alternative use of a resource; ignoring it overstates the attractiveness of the chosen option in scarce-resource decisions.
+Prime Cost formula	Prime Cost = Direct Material + Direct Labour + Direct Expenses.
+Works/Factory Cost formula	Works Cost = Prime Cost + Factory Overheads + Opening WIP − Closing WIP.
+Cost of Production formula	Cost of Production = Works Cost + Office & Administration Overheads.
+Cost of Goods Sold formula	COGS = Cost of Production + Opening FG − Closing FG.
+Cost of Sales / Total Cost formula	Cost of Sales = COGS + Selling & Distribution Overheads. Sales = Cost of Sales + Profit.
+Why are finished-goods stocks valued at Cost of Production, not Cost of Sales?	Selling & distribution overheads relate only to units actually sold; unsold stock has not incurred them, so loading them would overstate closing stock and defer no real cost.
+Economic Order Quantity (EOQ) formula	EOQ = √(2 × A × O ÷ C), where A = annual demand, O = ordering cost per order, C = carrying cost per unit p.a.
+Why does EOQ minimise total inventory cost?	At EOQ, annual ordering cost equals annual carrying cost; total cost is flat at that point, so trading one for the other yields no saving.
+Re-order Level formula	ROL = Maximum usage × Maximum lead time. (Or = Safety stock + Average usage × Average lead time.)
+Maximum Stock Level formula	Max Level = ROL + ROQ − (Minimum usage × Minimum lead time).
+Minimum Stock Level formula	Min Level = ROL − (Average usage × Average lead time). It is the buffer/safety stock.
+What is the purpose of ABC analysis of inventory?	Selective control — 'A' items (few, high value) get tight control; 'C' items (many, low value) get loose control. Effort follows value, not count.
+Why does FIFO overstate profit in a period of rising prices?	It charges older (cheaper) material to production, leaving newer (dearer) stock on the balance sheet — low cost against current revenue inflates profit and closing stock.
+Why does LIFO better match cost to revenue in inflation (though disallowed in India)?	It charges latest (current) prices to production, aligning cost with current selling prices; but AS-2 prohibits it because closing stock gets understated at old prices.
+Which inventory valuation methods does AS-2 permit?	FIFO and Weighted Average Cost. LIFO and base-stock are not allowed.
+Stock Turnover Ratio and its meaning	= Cost of materials consumed ÷ Average stock. High ratio = fast-moving, efficient; low = slow-moving/obsolete stock tying up capital.
+How is normal material loss treated in cost?	Absorbed by good units — cost of normal loss is spread over good output, raising per-unit cost, since it is an unavoidable part of the process.
+How is abnormal material loss treated?	Charged to Costing P&L at full cost (valued like good units), not to production — it must not distort the true cost of good units.
+Labour Turnover — Separation method	LTO% = Separations during period ÷ Average number of workers × 100.
+Labour Turnover — Replacement method	LTO% = Replacements ÷ Average number of workers × 100. (New posts from expansion are excluded.)
+Labour Turnover — Flux method	LTO% = (Separations + Accessions) ÷ Average number of workers × 100 — total labour mobility.
+Why distinguish preventive vs replacement costs of labour turnover?	Preventive cost is spent to keep workers (welfare, good pay); replacement cost arises after they leave (recruit, train, spoilage). Managing the trade-off minimises total turnover cost.
+How is idle time cost treated — normal vs abnormal?	Normal idle time cost is absorbed in production (inflating labour rate); abnormal idle time (strike, breakdown) is charged to Costing P&L.
+How is overtime premium treated when due to a specific customer's rush order?	Charged directly to that job. If due to general pressure, treated as overhead; if abnormal, charged to Costing P&L.
+Halsey premium plan — worker's earnings	Earnings = (Hours worked × Rate) + 50% × (Time saved × Rate). Worker gets half the saving; employer keeps half.
+Rowan premium plan — worker's earnings	Earnings = (Hours worked × Rate) + (Time saved ÷ Time allowed) × Hours worked × Rate.
+Why does Rowan protect against over-speeding better than Halsey?	Rowan bonus is a fraction of time saved; beyond 50% time saved the bonus proportion falls, so it discourages reckless speed and rate-cutting that quality suffers from.
+What is 'overhead absorption' and why is it needed?	Charging indirect cost to cost units via a rate, because overheads cannot be traced directly — without absorption, product cost would exclude a real cost of doing business.
+Overhead Absorption Rate formula	OAR = Budgeted (or actual) overheads ÷ Budgeted (or actual) base (labour hours, machine hours, units).
+Why is a machine-hour rate preferred in a mechanised shop?	Overheads there are driven by machine running (power, depreciation, repairs), so machine hours reflect true consumption better than labour hours.
+Under-absorption of overhead — what and why treated how?	Actual overhead > absorbed. If due to normal causes/estimation error → supplementary rate or carried to P&L; if abnormal → straight to Costing P&L.
+Over-absorption of overhead treatment	Absorbed > actual; credited via supplementary rate to units/stock, or transferred to Costing P&L if small/normal.
+Reapportionment of service-centre cost — why 'repeated distribution'?	Service centres serve each other (canteen serves maintenance and vice versa); repeated distribution or simultaneous-equation method captures this reciprocal service accurately.
+Blanket vs departmental overhead rate — when is blanket wrong?	A single plant-wide rate distorts cost when departments have differing overhead intensity or products pass unevenly through them; departmental rates give truer product cost.
+Core idea of Activity Based Costing (ABC)	Costs are driven by activities, not volume alone; assign overheads to activities, then to products via cost drivers — giving accurate cost for low-volume, complex products.
+Why does traditional volume-based costing under-cost low-volume complex products?	It spreads overhead on volume measures (labour/machine hrs), so high-volume simple products subsidise the disproportionate setup/handling overheads that complex products truly cause.
+Define 'cost driver' in ABC	The factor that causes the cost of an activity to change (e.g. number of setups, number of orders, inspection hours) — the basis for charging activity cost to products.
+What is a 'cost pool' in ABC?	The total cost accumulated for a single activity (e.g. all setup costs), later divided by its cost driver to get an activity rate.
+Job costing — when is it used?	When work is done to specific customer order, each job unique and identifiable (printing, repairs, construction of a special item). Cost is collected per job.
+Batch costing — cost per unit formula	Cost per unit = Total batch cost ÷ Number of units in batch. Used where identical items are made in batches (pharma, bakery, components).
+Economic Batch Quantity (EBQ) formula	EBQ = √(2 × D × S ÷ C), where D = annual demand, S = setup cost per batch, C = carrying cost per unit p.a.
+Contract costing — why used for large, long-duration jobs?	Each contract is a big cost unit spanning periods and often site-based; costs are booked contract-wise, and profit is recognised prudently as work progresses.
+Rule for profit on incomplete contracts less than 25% complete	Take no profit to P&L — too little certainty; provide full for foreseeable loss (prudence).
+Notional profit transfer when contract is 25% to less than 50% complete	Transfer = ⅓ × Notional Profit × (Cash received ÷ Work certified).
+Notional profit transfer when 50% or more complete (but not near done)	Transfer = ⅔ × Notional Profit × (Cash received ÷ Work certified).
+Why multiply retained profit by (Cash received ÷ Work certified)?	To defer profit on work certified but not yet paid for — cash not received is not yet realised, so prudence withholds that portion of profit.
+Work-in-Progress shown in contract account	WIP = (Work certified + Work uncertified) − Reserve profit − Cash received... shown net of advances on the balance sheet.
+Process costing — when appropriate?	Continuous mass production through sequential processes with homogeneous output (chemicals, cement, sugar); cost is averaged over units, not traced to individual items.
+Equivalent Units concept and why needed	Partly-finished units expressed as equivalent whole units by degree of completion, so cost can be spread fairly between finished output and closing WIP.
+Normal loss in process — valuation and treatment	Expected loss; its cost is borne by good units. If it has scrap value, scrap credit reduces process cost. No entry to abnormal accounts.
+Abnormal loss valuation	Valued at full cost per equivalent good unit (= Total cost − scrap of normal loss, ÷ expected good units); charged to Costing P&L, credited with any scrap value.
+Abnormal gain — how it arises and is treated	When actual loss is less than normal loss; valued like good units, debited to process a/c and credited to Costing P&L (net of scrap forgone on the reduced normal loss).
+FIFO vs Weighted Average in process costing — key difference	FIFO keeps opening WIP cost separate and completes it first; Weighted Average merges opening WIP cost with current cost and averages over all equivalent units.
+Joint products vs by-products — the distinction	Joint products have comparable, significant sales value and are the main aim; by-products are incidental, low-value outputs from the same process.
+Why apportion joint cost, and by which common bases?	Joint cost is incurred before split-off and cannot be traced; apportioned by physical units, sales value at split-off, or net realisable value to value stock and measure profit.
+Net Realisable Value method for joint-cost apportionment	NRV = Final sales value − further processing cost − selling cost; joint cost split in NRV ratio. Best when products need unequal further processing.
+Common treatment of by-product income	Credited to the main process (reducing joint cost) or to Costing P&L as other income; net-realisable value of by-product is deducted from joint cost.
+Service (operating) costing — what and unit examples	Costing of services not products; composite cost units — passenger-km (transport), patient-day (hospital), kWh (power), room-day (hotel).
+Why use composite cost units in transport?	A single dimension misleads — cost depends on both distance and load, so tonne-km or passenger-km captures the real service delivered.
+Marginal cost — definition	The additional variable cost of producing one more unit; = Direct material + direct labour + direct expenses + variable overhead.
+Contribution formula and why it matters more than profit for decisions	Contribution = Sales − Variable Cost = Fixed Cost + Profit. It measures what each unit adds toward covering fixed cost and profit — the basis for short-run decisions.
+Profit/Volume (P/V) Ratio formula	P/V Ratio = Contribution ÷ Sales × 100 = Change in profit ÷ Change in sales × 100.
+Break-Even Point (units) formula	BEP (units) = Fixed Cost ÷ Contribution per unit.
+Break-Even Point (value) formula	BEP (₹) = Fixed Cost ÷ P/V Ratio.
+Margin of Safety formula and meaning	MOS = Actual sales − BEP sales = Profit ÷ P/V Ratio. It is the cushion before the firm makes a loss; higher MOS = lower risk.
+Required-sales-for-target-profit formula	Sales = (Fixed Cost + Target Profit) ÷ P/V Ratio.
+Why does marginal costing exclude fixed cost from product cost?	Fixed cost is period cost, unchanged by one more unit; loading it distorts incremental decisions like special orders, make-or-buy and product-mix.
+Absorption vs Marginal costing — why profit differs between them	They treat fixed factory overhead differently: absorption carries it in stock, marginal expenses it fully; so when stock rises, absorption shows higher profit, and vice versa.
+Key-factor (limiting-factor) decision rule	Maximise contribution per unit of the limiting factor (scarce machine hour, material kg), not contribution per unit — the scarce resource, not output, caps profit.
+Make-or-buy decision rule	Compare marginal cost to make against buy price; make if marginal (relevant) cost of making is lower, provided freed capacity has no better use.
+Special order acceptance rule	Accept if selling price exceeds marginal cost and it adds contribution, provided regular sales and normal market price are not spoiled and spare capacity exists.
+Budget vs Forecast — the difference	A forecast predicts what may happen; a budget is a committed plan of what should happen, with authority and responsibility for achieving it.
+Why is a flexible budget more useful for control than a fixed budget?	It recasts budgeted cost to the actual activity level, so variances compare like with like — a fixed budget wrongly blames volume changes on the manager.
+Zero-Based Budgeting core principle	Every activity is justified from a zero base each cycle, not incremented from last year — it forces re-examination and cuts inherited waste.
+Cash budget purpose	To forecast timing of cash inflows/outflows so shortfalls are arranged and surpluses invested — profit is not cash, and solvency depends on liquidity.
+Principal (key) budget factor — why identified first?	It is the constraint that limits all activity (usually sales); every other budget must be built around it, so it is fixed before the rest.
+Standard costing — what is a 'standard cost'?	A pre-determined cost of material, labour and overhead per unit under efficient conditions — the benchmark against which actual cost is measured.
+Why compute variances (management by exception)?	To highlight only significant deviations from standard so managers focus attention where control is needed, rather than reviewing every figure.
+Material Cost Variance formula	MCV = (Std qty for actual output × Std price) − (Actual qty × Actual price).
+Material Price Variance formula	MPV = Actual quantity × (Std price − Actual price).
+Material Usage Variance formula	MUV = Std price × (Std qty for actual output − Actual qty).
+Material Mix Variance formula	MMV = Std price × (Revised std qty − Actual qty), where revised std qty rebalances actual total input to standard proportions.
+Material Yield Variance formula	MYV = Std price × (Std qty for actual output − Revised std qty).
+Labour Rate Variance formula	LRV = Actual hours paid × (Std rate − Actual rate).
+Labour Efficiency Variance formula	LEV = Std rate × (Std hours for actual output − Actual hours worked).
+Labour Idle Time Variance formula	Idle Time Variance = Idle hours × Std rate (always adverse).
+Variable Overhead Efficiency Variance formula	= Std variable OH rate per hour × (Std hours for actual output − Actual hours).
+Fixed Overhead Volume Variance — what it signals	= Absorbed FOH − Budgeted FOH; it captures under/over-utilisation of capacity (only in absorption costing, since fixed cost is volume-independent in reality).
+Sales Value Variance formula	= Actual sales value − Budgeted sales value; split into price and volume variances.
+Reconciliation statement (cost vs financial accounts) — why needed?	Because items like notional charges, pure-financial income/expense and different stock valuations appear in only one set; reconciliation proves both are internally consistent.
+Integrated vs Non-integrated accounting — key difference	Integrated: one set of books merges cost and financial records (no reconciliation needed). Non-integrated: separate cost ledger with a control account, needing periodic reconciliation.
+Cost Ledger Control Account purpose (non-integrated system)	It makes the cost ledger self-balancing by recording the contra of all items whose double entry lies in financial books — completing double entry within the cost ledger.
+Escalation clause in contract costing — why included?	It lets the contractor recover cost increases in material/labour/rates over a long contract, protecting margin against inflation the fixed price could not foresee.
+Why is depreciation on idle assets excluded from cost?	Cost reflects resources consumed in production; an idle asset consumes nothing productively, so charging its depreciation would overstate the cost of goods actually made.

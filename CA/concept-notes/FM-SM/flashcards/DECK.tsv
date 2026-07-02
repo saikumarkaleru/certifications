@@ -1,0 +1,100 @@
+Why does Financial Management aim to maximise shareholder wealth rather than profit?	Profit ignores timing, risk and cash reality; wealth (market value of equity) captures time value, risk and long-run cash flows — profit can be inflated yet destroy value.
+Why is Wealth Maximisation superior to Profit Maximisation as the goal of FM?	It uses cash flows (not accounting profit), accounts for time value of money and risk, and reflects the true owner benefit — share price.
+What are the three key decisions of Financial Management?	Investment (capital budgeting), Financing (capital structure), and Dividend decision — each affects value and risk.
+Why does time value of money exist even without inflation?	A rupee today can be invested to earn a return, so it is worth more than the same rupee later — opportunity cost of waiting.
+Why do we discount future cash flows instead of adding them directly?	Future rupees are not comparable to present rupees; discounting converts them to a common time-point so value is measured correctly.
+What is the Future Value formula for a single sum?	FV = PV x (1 + r)^n — compounding a present sum forward at rate r for n periods.
+What is the Present Value formula for a single sum?	PV = FV / (1 + r)^n — discounting a future sum back at rate r.
+Why is an annuity due worth more than an ordinary annuity of the same amount?	Cash flows arrive one period earlier, so each is discounted for one less period — PV(due) = PV(ordinary) x (1 + r).
+What is the PV of a perpetuity?	PV = Cash flow / r — a constant flow forever, value equals flow divided by discount rate.
+What is the PV of a growing perpetuity?	PV = C1 / (r - g), valid only when r > g — used in the Gordon dividend model.
+Why must r be greater than g in the growing perpetuity formula?	If g >= r the series does not converge; value would be infinite/negative, which is meaningless.
+What does NPV represent and what is the decision rule?	NPV = PV of inflows - PV of outflows; accept if NPV > 0 because the project adds value above the required return.
+Why is NPV theoretically the best capital budgeting technique?	It uses all cash flows, time value, correct discount rate, and gives value added in absolute rupee terms — directly linked to wealth maximisation.
+What is IRR and its accept/reject rule?	IRR is the rate where NPV = 0; accept if IRR > cost of capital (hurdle rate).
+Why can IRR mislead for mutually exclusive projects?	It ignores scale and assumes reinvestment at IRR; NPV (reinvestment at cost of capital) is more reliable — prefer NPV on conflict.
+Why can a project have multiple IRRs?	Non-conventional cash flows (more than one sign change) produce more than one root — use NPV or MIRR instead.
+What does the Profitability Index (PI) measure and its rule?	PI = PV of inflows / initial investment; accept if PI > 1 — useful to rank projects under capital rationing.
+What is the Payback Period and its main weakness?	Time to recover the initial outlay; weakness — ignores time value and all cash flows after payback.
+How does Discounted Payback improve on simple payback?	It uses discounted cash flows so time value is respected, but it still ignores flows beyond the payback point.
+Why do we add back depreciation when computing project cash flows?	Depreciation is a non-cash expense; it was deducted for tax but does not leave the firm — cash flow = PAT + depreciation.
+What is the depreciation tax shield?	Depreciation x tax rate — the tax saved because depreciation is deductible, a real cash inflow even though non-cash.
+Why are sunk costs excluded from capital budgeting?	They are already incurred and unaffected by the decision; only incremental future cash flows are relevant.
+Why must opportunity cost be included in project evaluation?	Using a resource in this project forgoes its next-best cash benefit; that lost benefit is a real economic cost.
+Why is interest expense excluded from project operating cash flows?	Financing cost is captured in the discount rate (WACC); including it in cash flows double-counts the cost of capital.
+What is the Cost of Capital and why is it the discount rate?	It is the minimum return investors require; a project must beat it to add value, so it is the hurdle for discounting.
+What is the formula for cost of equity under the Dividend Growth (Gordon) model?	Ke = (D1 / P0) + g — dividend yield plus growth rate.
+What is the cost of equity under CAPM?	Ke = Rf + beta x (Rm - Rf) — risk-free rate plus beta times market risk premium.
+Why is the cost of debt taken after tax?	Interest is tax-deductible, so the effective cost = I x (1 - t); the tax shield lowers the real burden.
+What is WACC and why weight by market value?	WACC = weighted average of component costs; market-value weights reflect the current opportunity cost investors face, unlike book values.
+Why is retained earnings not a free source of capital?	Shareholders forgo dividends they could reinvest; its cost equals the cost of equity (often minus flotation) — an opportunity cost.
+What is Financial Leverage and what does it measure?	% change in EPS / % change in EBIT (= EBIT / (EBIT - I - Pref/(1-t))); sensitivity of EPS to EBIT from fixed financial costs.
+What is Operating Leverage and what does it measure?	% change in EBIT / % change in sales (= Contribution / EBIT); sensitivity of EBIT to sales from fixed operating costs.
+What is Combined Leverage and what does it capture?	DCL = DOL x DFL = Contribution / (EBIT - I); total sensitivity of EPS to a change in sales — overall business + financial risk.
+Why does high financial leverage raise risk to equity holders?	Fixed interest must be paid regardless of EBIT; in bad years EPS falls faster and insolvency risk rises.
+What is the indifference point in EBIT-EPS analysis?	The EBIT level where EPS is equal under two financing plans; above it debt gives higher EPS, below it equity is safer.
+What does the Net Income (NI) approach say about capital structure?	More debt (cheaper) lowers WACC and raises firm value continuously — an optimal structure is 100% debt (unrealistic assumption).
+What does the Net Operating Income (NOI) approach say?	WACC and firm value are constant regardless of leverage; cheaper debt is exactly offset by rising cost of equity — no optimal structure.
+What is the core conclusion of Modigliani-Miller without taxes?	Capital structure is irrelevant; firm value depends on operating earnings and risk, not on how it is financed (arbitrage enforces this).
+How does MM change when corporate taxes are introduced?	Value of levered firm = value of unlevered + (tax rate x debt); the interest tax shield makes debt add value.
+What is the Traditional approach to capital structure?	A moderate use of debt lowers WACC to a minimum and maximises value; beyond an optimal point, rising risk raises WACC again.
+Why does Trade-off theory say firms do not use 100% debt despite tax shields?	Rising bankruptcy and financial-distress costs eventually offset tax benefits; the optimum balances tax shield against distress cost.
+What does Pecking Order theory predict about financing choice?	Firms prefer internal funds first, then debt, then equity last — driven by information asymmetry and signalling costs.
+What is Working Capital and the two concepts of it?	Capital for day-to-day operations; Gross WC = total current assets, Net WC = current assets - current liabilities.
+Why does an aggressive working capital policy raise both risk and return?	It uses more short-term (cheaper) finance and low liquidity — lower cost boosts return but raises liquidity/refinancing risk.
+What is the Operating Cycle?	Time from buying raw material to collecting cash from sales = inventory period + debtors period - creditors period.
+Why does a longer operating cycle increase working capital needs?	More cash is tied up in inventory and receivables for longer before cash returns, so more funding is required.
+What is the formula for the Cash (Net Operating) Cycle?	Inventory days + Receivables days - Payables days — the net time cash is locked in operations.
+What does the Economic Order Quantity (EOQ) minimise?	Total inventory cost = ordering cost + carrying cost; EOQ is the order size where these two are balanced/minimised.
+What is the EOQ formula?	EOQ = square root of (2 x annual demand x order cost / carrying cost per unit) — the cost-minimising order quantity.
+Why does ordering more per order lower ordering cost but raise carrying cost?	Fewer orders cut ordering expense, but larger average stock raises storage/capital carrying cost — EOQ trades them off.
+What is the purpose of a Cash Budget?	To forecast cash inflows/outflows so the firm can plan for surpluses (invest) and shortfalls (arrange finance) in advance.
+What do the Baumol and Miller-Orr models optimise?	Optimal cash balance — Baumol assumes steady cash use; Miller-Orr sets upper/lower control limits for uncertain cash flows.
+Why offer a cash discount for early payment of receivables?	To speed collection and cut the debtors period; accept only if discount cost < benefit of reduced investment and bad debts.
+What is Factoring of receivables?	Selling debtors to a factor for immediate cash (minus fee); transfers collection and sometimes credit risk (non-recourse).
+Why value closing stock at lower of cost or NRV?	Prudence — never carry an asset above realisable cash; recognise a probable loss now but never an unrealised gain.
+What does a high Current Ratio potentially signal negatively?	Excess idle current assets — overstocking or slow collection — hurting profitability despite strong liquidity.
+Why is the Quick (Acid-test) Ratio stricter than the Current Ratio?	It excludes inventory (least liquid current asset), testing ability to pay short-term dues from near-cash assets only.
+What does Return on Equity (ROE) measure?	PAT available to equity / shareholders' funds — profit generated per rupee of owners' capital.
+How does DuPont analysis decompose ROE?	ROE = Net Profit Margin x Asset Turnover x Equity Multiplier — profitability, efficiency and leverage drivers.
+What does the Debt-Equity ratio indicate?	Financial leverage/solvency — proportion of debt to equity; higher means more fixed obligations and risk.
+What does Interest Coverage Ratio measure?	EBIT / Interest — how many times operating profit covers interest; higher means safer debt servicing.
+Why can two firms with equal profit have very different ROE?	Different leverage and asset efficiency; the equity multiplier and turnover reshape how profit translates to owner return.
+What is the Walter model's core idea on dividends?	When r > Ke retain all (growth firm, payout 0); when r < Ke pay all out; when r = Ke payout is irrelevant.
+What is the Gordon model's bird-in-hand argument?	Investors prefer certain current dividends to uncertain future gains; higher payout can raise value when r < Ke.
+Why is MM dividend irrelevance true under perfect markets?	Investors can create homemade dividends by selling shares; with no taxes/costs, payout policy cannot change wealth.
+Why is a bonus issue not a source of cash for the firm?	It capitalises reserves into shares; no cash enters — shareholders get more shares of the same total value.
+What is Business Risk versus Financial Risk?	Business risk arises from operations (sales/cost variability, operating leverage); financial risk arises from using fixed-cost debt.
+Why does diversification reduce risk in a portfolio?	Imperfectly correlated assets' movements partly offset; unsystematic risk is diversified away, lowering total variability.
+What is systematic (market) risk and can it be diversified?	Risk from economy-wide factors (interest, inflation, recession); it is non-diversifiable and measured by beta.
+What does beta measure in CAPM?	Sensitivity of a security's return to market return; beta > 1 more volatile than market, < 1 less volatile.
+What is the Security Market Line (SML)?	The CAPM line plotting required return against beta; assets above it are underpriced, below it overpriced.
+Why does the Strategic Management process start with vision and mission?	They set the long-term direction and purpose, giving a reference point against which all strategies and goals are judged.
+What is the difference between Vision and Mission?	Vision is the aspirational future state (where we want to be); Mission is the present purpose and reason the firm exists.
+What are the components of a SWOT analysis?	Strengths and Weaknesses (internal) plus Opportunities and Threats (external) — matches internal capability to external environment.
+What is the purpose of PESTLE analysis?	Scan the macro-environment — Political, Economic, Social, Technological, Legal, Environmental factors that shape opportunities and threats.
+What are Porter's Five Forces?	Threat of new entrants, bargaining power of buyers, power of suppliers, threat of substitutes, and rivalry among competitors.
+Why do Porter's Five Forces determine industry profitability?	They set the intensity of competition and who captures value; strong forces squeeze margins, weak forces allow high profits.
+What are Porter's three Generic Strategies?	Cost Leadership, Differentiation, and Focus (cost-focus or differentiation-focus on a narrow segment).
+Why is being 'stuck in the middle' dangerous per Porter?	A firm neither lowest-cost nor clearly differentiated has no competitive edge and loses to focused rivals on both sides.
+What does Porter's Value Chain analyse?	Primary and support activities that create value; managing linkages and margins builds competitive advantage.
+What are the primary activities in Porter's Value Chain?	Inbound logistics, Operations, Outbound logistics, Marketing & Sales, and Service.
+What are the support activities in Porter's Value Chain?	Firm infrastructure, HR management, Technology development, and Procurement.
+What does the BCG Growth-Share Matrix classify?	Business units by market growth and relative market share: Stars, Cash Cows, Question Marks, and Dogs.
+What is the recommended strategy for a BCG 'Cash Cow'?	Harvest — low growth, high share; milk steady cash to fund Stars and Question Marks with minimal investment.
+What should a firm do with a BCG 'Question Mark'?	Selectively invest to build share into a Star, or divest if it cannot gain position — it consumes cash with uncertain payoff.
+What are the four strategies in Ansoff's Product-Market Matrix?	Market Penetration, Market Development, Product Development, and Diversification.
+Which Ansoff strategy carries the highest risk and why?	Diversification — new product in a new market means the firm lacks both product and market experience.
+What is the difference between Related and Unrelated diversification?	Related shares synergies (technology, market, channels); unrelated (conglomerate) enters wholly different businesses to spread risk.
+What is the GE Nine-Cell (McKinsey) Matrix?	Positions units on industry attractiveness vs business strength (3x3) to decide invest/grow, selectivity, or harvest/divest.
+What is the difference between Strategy Formulation and Implementation?	Formulation is deciding what to do (analysis, choice); implementation is doing it — allocating resources, structure, and execution.
+What are the three levels of strategy in an organisation?	Corporate (which businesses), Business (how to compete in each), and Functional (operational support for the strategy).
+Why must structure follow strategy (Chandler)?	The chosen strategy dictates the coordination and resources needed; the organisational structure must be designed to deliver it.
+What is Strategic Control?	Monitoring and adjusting strategy as it unfolds using premise, implementation, surveillance and special-alert control.
+What is a Core Competence (Prahalad and Hamel)?	A unique capability that provides customer value, is hard to imitate, and gives access to many markets — basis of advantage.
+What does Turnaround strategy address?	Reversing a declining business — cost cutting, asset reduction, revenue generation and focus to restore viability.
+What is the difference between Expansion and Retrenchment strategy?	Expansion grows scope/scale (new products/markets); retrenchment reduces it (divest, liquidate, turnaround) to cut losses.
+What is a Strategic Business Unit (SBU)?	A self-contained division with its own market, competitors and profit responsibility, managed as a distinct planning unit.
+Why is competitive advantage sustainable only if hard to imitate?	If rivals can copy it cheaply, the advantage and its extra profit erode quickly; barriers/uniqueness make it durable.
+What does a Balanced Scorecard measure beyond finance?	Financial, Customer, Internal Business Process, and Learning & Growth perspectives — linking strategy to operational metrics.
+Why does strategic management emphasise the external environment?	Firms are open systems; survival depends on adapting to opportunities and threats they do not control, not just internal strengths.
