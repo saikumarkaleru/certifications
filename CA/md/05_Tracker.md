@@ -1,12 +1,20 @@
 # CA Progress Tracker
 
+## Registration details (from ICAI payment receipt)
+- **Applicant name:** Kaleru Saikumar
+- **Applicant No:** APP4443982
+- **Course:** ITDE-App — Intermediate (Direct Entry)
+- **Registered / paid:** 02 Jul 2026 · ₹18,200 · Category OBC · Zone South
+- **Receipt No:** 731197494344
+- **➡ Study clock started 02 Jul 2026 → exam-eligible ~02 Mar 2027 → target attempt May 2027**
+
 ## Milestones
 
 | Milestone | Target | Actual date | Status |
 |---|---|---|---|
-| SSP account created | Jul 2026 | | ☐ |
-| Intermediate (Direct Entry) registered | Jul–Aug 2026 | | ☐ |
-| **8-month eligibility date** (reg date + 8 mo) | | | ☐ |
+| SSP account created | Jul 2026 | 02 Jul 2026 | ☑ |
+| Intermediate (Direct Entry) registered | Jul–Aug 2026 | **02 Jul 2026** | ☑ |
+| **8-month eligibility date** (reg date + 8 mo) | — | **~02 Mar 2027** | ☐ |
 | ICITSS (ITT + Orientation) completed | during study period | | ☐ |
 | Inter exam form submitted | per ICAI window | | ☐ |
 | **Intermediate Group 1 cleared** | ~May 2027 | | ☐ |
