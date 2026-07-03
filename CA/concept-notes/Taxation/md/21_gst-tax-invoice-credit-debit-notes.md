@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 21 — Tax Invoice, Credit & Debit Notes
 
 > **Rates / thresholds / amendments flag:** This chapter teaches the *logic and mechanism* of documentation under Sections 31–34 of the CGST Act, 2017 read with Rules 46–55A of the CGST Rules, 2017. The framework is permanent. But the **e-invoicing turnover threshold (currently ₹5 crore aggregate turnover), the QR-code rules, the HSN-digit requirements, and the exact time limits** are amended frequently by notification. **Verify current thresholds and any latest amendments in ICAI material for your attempt.** The *why* below does not change.
@@ -22,7 +24,9 @@ Recall the promise of GST from the very first GST chapter: tax only on *value ad
 
 **Problem 5 — Paper invoices can be faked, back-dated, and double-used.** The rise of *fake-invoice rackets* (invoices with no underlying supply, used to pass on bogus ITC) is the biggest fraud in GST history. The structural fix is **e-invoicing** — reporting the invoice to a government portal *before* it is used, getting it authenticated with a unique number, so a fake can't enter the credit chain undetected.
 
-So the whole chapter is one idea in five costumes: **the credit chain is only as trustworthy as the documents that feed it.** Every rule below is protecting that chain.
+**Problem 6 — Someone must always accompany goods on the road.** Even a perfectly legitimate movement of goods can be a fraud vector: goods can be moved, sold off the books, and the same invoice re-used for a second consignment. So the law insists that *whenever goods physically move*, a document travels with them — an invoice, a bill of supply, or a delivery challan — and above a value threshold, an **e-way bill** ties that document to the specific vehicle and route. Documentation is not just about credit; it is about making physical movement *observable*.
+
+So the whole chapter is one idea in **six** costumes: **the credit chain (and the goods chain) is only as trustworthy as the documents that feed it.** Every rule below is protecting that chain.
 
 ---
 
@@ -39,6 +43,8 @@ Three load-bearing ideas organise the chapter:
 3. **Never erase — always link and reverse.** Post-supply corrections flow through credit/debit notes that carry the *original invoice reference*, so the trail stays intact and the tax adjustment is symmetric on both sides.
 
 Everything else is detail hanging off these three hooks.
+
+**A fourth, quieter idea worth naming:** *the document is not the tax — but it fixes the tax.* GST liability arises from the **time of supply** (Chapter 17), which is a legal event, not a piece of paper. Yet because the *earliest* of the time-of-supply triggers is very often "date of invoice," the document you issue (and *when*) usually *becomes* the tax point. This is why a documentation chapter secretly controls *timing* — and why examiners fuse invoice-timing questions with time-of-supply questions. Keep this seam in mind throughout.
 
 ---
 
@@ -57,11 +63,14 @@ Before a single section, internalise the design choices. Every rule below is one
 | Credit note reduces output tax | Over-billing / returns / discounts must be undone without deleting the invoice (Problem 4) | Sec 34(1)/(2) — supplier-issued, with reversal condition |
 | Debit note increases output tax | Under-billing must be topped up, linked to the original | Sec 34(3)/(4) — supplier-issued |
 | E-invoice pre-authentication (IRN + QR) | Fake invoices poison the credit chain (Problem 5) | Rule 48(4) + notified threshold |
+| Consecutive serial + unique-per-FY numbering | Duplicate/re-used invoices must be detectable | Rule 46(b) — ≤16 chars, alphanumerics/"-"/"/" only |
 
 Two elegant points to carry through the chapter:
 
-- **The invoice is issued by the *supplier*, always — including credit and debit notes.** A recipient never issues a GST credit/debit note that adjusts tax. This surprises accountants used to commercial practice, and examiners love it (see Traps).
+- **The invoice is issued by the *supplier*, always — including credit and debit notes.** A recipient never issues a GST credit/debit note that adjusts tax. This surprises accountants used to commercial practice, and examiners love it (see Traps). The **only** exception where the *recipient* issues an invoice is the **self-invoice under RCM from an unregistered supplier** (Sec 31(3)(f)) — and even there the recipient is standing in the supplier's shoes because the real supplier legally *cannot* issue one.
 - **GST separates the *tax point* from the *document*, but ties them tightly.** The *time of supply* (Chapter 17) often *is* the invoice date — so getting the invoice timing wrong shifts the whole tax liability into the wrong month. Documentation is not paperwork bureaucracy; it *is* the timing mechanism.
+
+**A first-principles test you can apply to any new situation the examiner invents:** ask three questions in order — (1) *Is there a supply at all, or just money/movement?* (decides invoice vs voucher vs challan); (2) *Is that supply taxable in this supplier's hands?* (decides tax invoice vs bill of supply); (3) *Who is legally obliged to charge — the supplier or, under RCM, the recipient?* (decides forward invoice vs self-invoice). Nearly every "which document?" question collapses once you run this three-question filter.
 
 ---
 
@@ -75,7 +84,7 @@ Two elegant points to carry through the chapter:
 - **removal** of goods, where supply involves *movement*; or
 - **delivery / making available** to the recipient, where there is *no movement*.
 
-*Why:* goods have a clean physical trigger (removal). Pinning the invoice to removal means the invoice date and the movement date coincide, so the e-way bill, the transporter's documents, and the tax point all line up and can be cross-matched.
+*Why:* goods have a clean physical trigger (removal). Pinning the invoice to removal means the invoice date and the movement date coincide, so the e-way bill, the transporter's documents, and the tax point all line up and can be cross-matched. "Removal" is defined (Sec 2(96)) as dispatch by the supplier *or* collection by the recipient — so if the buyer's truck collects ex-works, the invoice must be ready *then*, not when goods reach the buyer.
 
 **Time limit — SERVICES — Sec 31(2) + Rule 47:** invoice must be issued **within 30 days** of the *supply of service* (**45 days** for banking companies, insurers, and NBFCs).
 
@@ -84,9 +93,11 @@ Two elegant points to carry through the chapter:
 **Continuous supply of goods (Sec 31(4)):** invoice on or before each *statement of account / payment*.
 **Continuous supply of services (Sec 31(5)):** invoice by the *due date of payment* if ascertainable from the contract; else *before/at receipt of payment*; if payment is linked to completion of an event, *on or before that event*.
 
-*Why:* a 12-month AMC or an electricity connection has no single "supply" moment — the trigger is the contractual billing/payment milestone, so the invoice tracks the milestone.
+*Why:* a 12-month AMC or an electricity connection has no single "supply" moment — the trigger is the contractual billing/payment milestone, so the invoice tracks the milestone. Note the precise definition of **continuous supply** (Sec 2(32)/(33)): supply provided *continuously or on recurrent basis under a contract* for a period **exceeding 3 months** with **periodic payment obligations**. A one-off 2-month contract is *not* continuous supply — examiners test the 3-month gate.
 
-**Goods sent on approval / sale-or-return (Sec 31(7)):** invoice **before or at the time of supply**, or **within 6 months** of removal, whichever is earlier. *Why:* the "supply" only crystallises when the recipient approves; the 6-month outer cap stops indefinite deferral.
+**Cessation of a continuous supply of service before completion (Sec 31(6)):** where the supply *stops* under a contract *before* it is completed, the invoice must be issued **at the time the supply ceases**, and only to the extent of the supply made before cessation. *Why:* the contract's milestone schedule has been aborted; the tax point must crystallise at the break-point so the value already supplied is captured and not lost.
+
+**Goods sent on approval / sale-or-return (Sec 31(7)):** invoice **before or at the time of supply**, or **within 6 months** of removal, whichever is earlier. *Why:* the "supply" only crystallises when the recipient approves; the 6-month outer cap stops indefinite deferral. If the recipient neither approves nor returns within 6 months, the law *deems* a supply on the day the 6 months expire, and the invoice becomes due then even without approval.
 
 **Contents — Rule 46 (the 16 particulars).** A tax invoice must contain (learn these as *what a matcher and an auditor need*, not as a list):
 
@@ -111,6 +122,8 @@ Two elegant points to carry through the chapter:
 
 **Memory hook — "WHO, WHAT, HOW-MUCH, WHERE, SIGNED":** *Who* (supplier + recipient GSTIN), *What* (HSN + description + quantity), *How-much* (taxable value + rate + tax), *Where* (place of supply), *Signed*. Every particular falls under one of these five — because a matcher needs exactly these to reconcile A's outward with B's inward.
 
+**Two more particulars often forgotten (post-2020 amendments):** where e-invoicing applies, the invoice must additionally carry the **QR code embedding the IRN**; and an invoice must state whether tax is payable on reverse charge. For exports/SEZ supplies, the invoice must carry the endorsement **"SUPPLY MEANT FOR EXPORT/SEZ ON PAYMENT OF IGST"** or **"...UNDER BOND/LUT WITHOUT PAYMENT OF IGST"** as applicable (Rule 46). *Why:* the endorsement tells the department which refund route (IGST-paid vs LUT) the exporter has chosen, so the refund can be matched.
+
 **Manner of issue — Rule 48:**
 - **Goods → triplicate:** Original for **Recipient**, Duplicate for **Transporter**, Triplicate for **Supplier**.
 - **Services → duplicate:** Original for **Recipient**, Duplicate for **Supplier**.
@@ -118,9 +131,11 @@ Two elegant points to carry through the chapter:
 
 **HSN digit requirement (Rule 46 read with notification):** turnover-linked — broadly, aggregate turnover **up to ₹5 crore → 4 digits**, **above ₹5 crore → 6 digits** for B2B (B2C relaxations exist). *Verify current slabs for your attempt.*
 
-**Relaxations — small value (Rule 46 proviso):** for supplies **< ₹200** to an unregistered recipient who doesn't need an invoice, the supplier may issue a **consolidated tax invoice** at day-end. *Why:* a tea-stall can't invoice every ₹10 cup; there's no ITC at stake so the audit-trail value is negligible.
+**Relaxations — small value (Rule 46 proviso):** for supplies **< ₹200** to an unregistered recipient who doesn't need an invoice, the supplier may issue a **consolidated tax invoice** at day-end. *Why:* a tea-stall can't invoice every ₹10 cup; there's no ITC at stake so the audit-trail value is negligible. Note the two cumulative conditions — recipient is **unregistered** *and* **does not require** the invoice; if either fails, a full invoice is due.
 
-**Revised invoice (Sec 31(3)(a) + Rule 53):** between the *effective date of registration* and the *date the certificate is granted*, a newly-registered person may issue **revised invoices** for supplies already made. *Why:* registration takes effect from an earlier date than the certificate arrives; the person supplied *before* they had a GSTIN to print, so the law lets them regularise those supplies (and pass on ITC).
+**Revised invoice (Sec 31(3)(a) + Rule 53):** between the *effective date of registration* and the *date the certificate is granted*, a newly-registered person may issue **revised invoices** for supplies already made. *Why:* registration takes effect from an earlier date than the certificate arrives; the person supplied *before* they had a GSTIN to print, so the law lets them regularise those supplies (and pass on ITC). A **consolidated revised invoice** may be issued for all such supplies to *unregistered* recipients (State-wise), but a *separate* revised invoice is needed for each *registered* recipient (they each need their own document for ITC). The revised invoice must carry the words **"Revised Invoice"** and cross-reference the original.
+
+**Documents that need NOT be issued in some cases:** a registered person **need not issue a tax invoice if the value is < ₹200** (subject to the two conditions above); and specific classes (e.g., a passenger transport supplier, or a supplier of admission to a multiplex) may issue a **ticket** in lieu of an invoice, and an insurer / bank / financial institution may issue a **consolidated statement** and need not serially number invoices. *Why:* these sectors deal in mass, low-ITC, retail transactions where strict invoicing adds cost without protecting the chain.
 
 ### 4.2 Bill of Supply — Sec 31(3)(c) + Rule 49
 
@@ -132,14 +147,25 @@ Issued **instead of** a tax invoice by:
 
 > A registered person supplying **both taxable and exempt** goods may issue a single **"invoice-cum-bill of supply"** to an unregistered recipient (Rule 46A).
 
+**Edge case — a supplier who is *partly* under composition:** the composition legend and the bill of supply apply to *all* the supplies of a composition dealer, because a composition dealer cannot collect tax on *any* outward supply. Contrast a *normal* dealer who happens to sell some exempt goods — for that dealer only the *exempt* line uses a bill of supply (or the combined invoice-cum-bill of supply of Rule 46A), while taxable lines still need a tax invoice.
+
 ### 4.3 Receipt, Refund, and Payment Vouchers — Sec 31(3)(d)–(g)
 
 These plug the gap between *money* and *supply*.
 
 - **Receipt voucher — Sec 31(3)(d) + Rule 50:** issued when a registered person **receives an advance** for a supply. *Why:* for *services*, receipt of advance is a time-of-supply trigger, so tax may be due before the invoice — the receipt voucher documents that advance and its tax. (For *goods*, advance no longer triggers tax for most suppliers, but the voucher framework remains.) If the rate/place isn't known when the advance is received, treat rate as **18%** and supply as **inter-State** — sensible fallbacks so tax is still collected.
-- **Refund voucher — Sec 31(3)(e) + Rule 51:** if the advance was received (receipt voucher issued) but **no supply happens and no invoice is issued**, and the money is refunded, issue a refund voucher. *Why:* it closes the loop and supports the refund of the tax paid on the advance.
-- **Payment voucher — Sec 31(3)(g) + Rule 52:** a recipient liable under **reverse charge (RCM)** issues this **when making payment** to the supplier. *Why:* documents the RCM payment leg.
-- **Self-invoice — Sec 31(3)(f):** where a registered person receives goods/services from an **unregistered supplier under RCM**, the *recipient* issues an invoice **to himself** (the supplier can't, having no GSTIN). *Why:* the recipient owes the tax and needs a document to (a) discharge it and (b) later claim ITC on it — no self-invoice, no proof.
+- **Refund voucher — Sec 31(3)(e) + Rule 51:** if the advance was received (receipt voucher issued) but **no supply happens and no invoice is issued**, and the money is refunded, issue a refund voucher. *Why:* it closes the loop and supports the refund of the tax paid on the advance. Crucial sequencing point: a refund voucher is correct **only when no invoice was ever issued**. If the supply *had* been invoiced and is *later* cancelled/returned, the instrument is a **credit note**, not a refund voucher — because a credit note reverses an invoice, while a refund voucher reverses a receipt voucher.
+- **Payment voucher — Sec 31(3)(g) + Rule 52:** a recipient liable under **reverse charge (RCM)** issues this **when making payment** to the supplier. *Why:* documents the RCM payment leg. Note this is issued for RCM *whether or not* the supplier is registered — the payment voucher records the recipient's payment to the supplier, distinct from the self-invoice (which is needed only when the supplier is *unregistered*).
+- **Self-invoice — Sec 31(3)(f):** where a registered person receives goods/services from an **unregistered supplier under RCM**, the *recipient* issues an invoice **to himself** (the supplier can't, having no GSTIN). *Why:* the recipient owes the tax and needs a document to (a) discharge it and (b) later claim ITC on it — no self-invoice, no proof. A **consolidated self-invoice** may be issued at month-end for RCM supplies received from unregistered persons during the month (a compliance relief), except that for certain notified categories a per-transaction invoice may be required — *verify current position*.
+
+**The RCM documentation matrix — the point students blur:**
+
+| Supplier's status | Self-invoice (31(3)(f))? | Payment voucher (31(3)(g))? |
+|---|---|---|
+| **Unregistered**, RCM applies | **Yes** — recipient issues | **Yes** |
+| **Registered**, RCM applies | **No** — supplier's own invoice exists | **Yes** |
+
+*Why:* the self-invoice fills a *documentary vacuum* (no supplier invoice exists), whereas the payment voucher documents the *payment leg* and is always needed under RCM.
 
 ### 4.4 Delivery Challan — Rule 55
 
@@ -150,6 +176,10 @@ Used when goods move but there is **no supply / invoice yet**:
 - other notified cases (e.g., goods for exhibition, semi-knocked-down consignments).
 
 Issued in **triplicate** (Original-consignee, Duplicate-transporter, Triplicate-consignor). *Why it exists:* the e-way-bill/matching system assumes documents accompany moving goods (Problem 2). When there's genuinely no invoice to issue, the challan is the stand-in so movement stays documented and legal.
+
+**Two exam-relevant sub-cases under Rule 55:**
+- **Transportation in semi-knocked-down (SKD/CKD) form or in batches (Rule 55(5)):** where goods move in *lots* (e.g., a large machine dispatched over several trucks), the supplier issues the **complete invoice before the first consignment**, a **delivery challan for each subsequent consignment** (referencing the invoice), and each vehicle carries a copy of the challan plus a *certified copy* of the invoice; the **original invoice** travels with the **last** consignment. *Why:* one supply, many vehicles — the invoice fixes the tax once, the challans keep each truck legal.
+- **Movement for reasons *other than* supply where value is known:** the challan carries the same content as an invoice minus the tax, and if the movement later becomes a supply, a tax invoice is issued at that point (e.g., approval goods that get approved).
 
 ### 4.5 Credit Notes and Debit Notes — Section 34 (the correction engine)
 
@@ -165,18 +195,22 @@ This is the heavily-examined heart of the chapter. Anchor on the **direction of 
 
 > **The crucial condition (Sec 34(2)):** the supplier may reduce output tax **only if the recipient has correspondingly reduced his ITC.** *Why:* this is the symmetry rule that protects the treasury. If A reduces output tax by ₹1,800 but B keeps the ₹1,800 credit, the government loses ₹1,800. So the reduction is only allowed when the mirror reversal happens on B's side. This is enforced through the return system (the credit note is declared in GSTR-1, flows to B's GSTR-2B, and B must reverse).
 
-**Time limit to *declare* a credit note (Sec 34(2)):** by the **30th November** following the end of the financial year of the supply, **or** the date of filing the relevant **annual return**, **whichever is earlier**. *Why:* after this date the year is effectively closed for adjustments; allowing later reductions would let suppliers reopen settled tax periods.
+**A subtler layer — when the tax burden has been passed on to a person who cannot reverse ITC:** if the recipient is an *unregistered* consumer, or a person who *cannot* take ITC (e.g., an exempt-supply-only business), the supplier can still reduce output tax on a genuine return/deficiency **provided the incidence of tax has not been passed on to any other person** — i.e., the supplier proves *unjust enrichment* does not arise. This is the same anti-windfall principle that governs refunds: you cannot get money back for a tax you have already recovered from your customer.
+
+**Time limit to *declare* a credit note (Sec 34(2)):** by the **30th November** following the end of the financial year of the supply, **or** the date of filing the relevant **annual return**, **whichever is earlier**. *Why:* after this date the year is effectively closed for adjustments; allowing later reductions would let suppliers reopen settled tax periods. **Careful reading:** this deadline governs the *reduction of output tax*. A supplier can still *issue* a credit note commercially after the deadline — it simply carries **no GST reduction**. The date "30 November" attaches to the FY of the **original supply**, not the FY of the return/discount event.
 
 **Debit Note — Sec 34(3)/(4) — issued by the SUPPLIER when the original invoice UNDER-stated the tax.** Triggers: taxable value or tax charged was **less** than actual (under-billing / wrong lower rate / extra supply).
 
-**Effect:** it *increases* output tax liability. **No time limit** to issue a debit note (you can always pay *more* tax — the treasury never objects to extra collection). *Note for ITC:* the recipient's time limit to claim ITC on a debit note runs from the **debit note's own date/financial year** (per the Sec 16(4) amendment), not the original invoice's — a favourable, tested point.
+**Effect:** it *increases* output tax liability. **No time limit** to issue a debit note (you can always pay *more* tax — the treasury never objects to extra collection). *Note for ITC:* the recipient's time limit to claim ITC on a debit note runs from the **debit note's own date/financial year** (per the Sec 16(4) amendment w.e.f. 01.01.2021), not the original invoice's — a favourable, tested point.
+
+**A definitional trap worth its own line:** under GST a **"debit note" includes a supplementary invoice** (Sec 34 explanation). So if the examiner says "the supplier raised a *supplementary invoice* for the shortfall," that is legally a **debit note** and carries the debit-note consequences — do not treat it as a fresh original invoice.
 
 **Two structural rules students miss:**
 - **Both notes are always issued by the supplier.** A "credit note" the buyer sends back is a commercial document with *no GST effect*. (Trap.)
 - **A GST credit/debit note need not be one-per-invoice.** Since 2019, a supplier may issue **one consolidated credit/debit note against multiple invoices** in a financial year — no need to link to a single original invoice number. *Why:* eases compliance for volume discounts spanning many invoices.
 - **Financial / commercial credit notes (no GST):** if a *post-supply discount* does **not** meet Sec 15(3)(b) (e.g., it wasn't agreed before supply, or ITC wasn't reversed), the supplier can still issue a **commercial credit note** — but **cannot reduce output tax**, and the recipient need not reverse ITC. Only the *taxable-value* leg is settled commercially. (Heavily tested — see Example 3.)
 
-**Contents (Rule 53):** a credit/debit note must show the supplier's details, a consecutive serial number, date, the **corresponding tax-invoice number(s)** (or the reason if consolidated), the taxable value, and the tax adjusted.
+**Contents (Rule 53):** a credit/debit note must show the supplier's details, a consecutive serial number, date, the **corresponding tax-invoice number(s)** (or the reason if consolidated), the taxable value, and the tax adjusted. It must carry the words **"Credit Note"** or **"Debit Note"** clearly — a document that merely adjusts value without this legend and without the tax leg is a *commercial* note, not a Sec 34 note.
 
 ### 4.6 E-invoicing — Rule 48(4) (the anti-fraud authentication layer)
 
@@ -189,6 +223,11 @@ Only then is it a **legally valid tax invoice**. An invoice required to be e-inv
 
 **Exempt from e-invoicing regardless of turnover:** SEZ *units* (not developers), insurers, banks/NBFCs, GTAs, passenger-transport suppliers, suppliers of admission to cinema/multiplex, and government departments/local authorities. **B2C invoices are outside e-invoicing** (but large taxpayers must display a **dynamic QR code** on B2C invoices).
 
+**Finer points the exam is beginning to test:**
+- The threshold looks at **aggregate turnover in *any* preceding financial year** from 2017-18 onward — so a business that once crossed ₹5 crore and has since shrunk *still* must e-invoice; the obligation, once triggered by a past year, does not switch off just because current turnover fell.
+- E-invoicing applies to **credit and debit notes** too, not just invoices — the correction documents must also be authenticated so they can't be forged to inflate ITC reversals or fake extra credit.
+- The **dynamic QR code on B2C** is a *different* requirement from e-invoicing: it lets the *customer* pay digitally and lets the department verify, but it does **not** generate an IRN. Do not conflate "e-invoice QR (contains IRN, B2B)" with "dynamic QR (B2C payment)."
+
 ```mermaid
 flowchart LR
     A["Supplier generates invoice in own system in INV-01 JSON schema"] --> B["Upload JSON to Invoice Registration Portal IRP"]
@@ -200,6 +239,16 @@ flowchart LR
     F --> H["Recipient can claim ITC only on IRN-carrying invoice"]
 ```
 *Figure 1 — the e-invoicing flow: authentication happens BEFORE the invoice enters the credit chain, so fakes are blocked at the door.*
+
+### 4.7 Where the document meets the road — the invoice–time-of-supply–e-way-bill triangle
+
+The three systems are designed to *cross-check* each other, and understanding the triangle prevents most "which date?" errors.
+
+- **Invoice fixes the tax point.** Because "date of invoice" is usually the *earliest* time-of-supply trigger for goods (Sec 12) and services (Sec 13), issuing the invoice *fixes the month* in which output tax falls due.
+- **E-way bill fixes the movement.** For goods movement above the value threshold, an e-way bill links the invoice/challan to a specific vehicle and validity window. A mismatch between invoice value and e-way bill value is a red flag on the road.
+- **The transporter's copy closes the loop.** The triplicate/challan copy that travels with the goods is what an officer physically inspects — it must reconcile with both the invoice on the portal and the e-way bill.
+
+The design intent: an officer at a check-post, a matcher at the GSTN server, and an auditor months later must all be able to reconstruct the *same* transaction from independent copies. The moment the three stop reconciling, fraud becomes visible. This is why the *timing* rules (Sec 31) are not clerical — they keep the three clocks synchronised.
 
 ---
 
@@ -231,6 +280,8 @@ flowchart LR
 3. **Time-limit check:** the supply is in FY 2025-26. S must **declare** the credit note by **30 November 2026** or the date of filing the annual return for FY 2025-26, whichever is earlier. 20 June 2025 is well within limits.
 
 **Reconcile.** Treasury is neutral: ₹7,200 less collected from S, ₹7,200 less credited to R. The symmetry rule made the reduction safe.
+
+**Examiner tweak — what if the return happens on 15 December 2026?** The supply is still FY 2025-26, so the deadline (30 Nov 2026 / annual return date) has **passed**. S can still *physically* take back the goods and issue a **commercial credit note** for ₹40,000, but S **cannot reduce output tax by ₹7,200** — that ₹7,200 is now a cost S bears. R, correspondingly, is **not** compelled to reverse ITC via the return system. Same facts, one date changed, opposite tax outcome — the classic "which side of 30 November?" trap.
 
 ### Example 3 — Post-supply discount: GST credit note vs commercial credit note
 
@@ -269,6 +320,39 @@ flowchart LR
 | Buyer returns goods | Credit note (by supplier) | 34(1) |
 | Supplier under-charged tax | Debit note (by supplier) | 34(3) |
 
+### Example 6 — Advance for a service, then partial supply, then cancellation (voucher chain)
+
+**Facts.** On **3 April**, consultancy firm F receives an advance of **₹1,18,000** (₹1,00,000 + ₹18,000 GST @18%) from client K for a project. F issues a receipt voucher and pays GST on the advance in April's return. In **May**, F completes and invoices **half** the project (₹50,000 + ₹9,000). In **June**, the rest of the project is **cancelled** and F **refunds ₹59,000** (₹50,000 + ₹9,000) to K.
+
+**Solve — document by document.**
+1. **April — advance received:** issue **Receipt voucher** (Sec 31(3)(d)); GST of ₹18,000 is payable on the advance (receipt of advance is a time-of-supply trigger for services).
+2. **May — half supplied and invoiced:** issue **Tax invoice** for ₹50,000 + ₹9,000. The ₹9,000 GST here is *adjusted against* the ₹18,000 already paid on the advance (the advance is now being consumed). Net April-tax carried against future supply = ₹9,000.
+3. **June — balance cancelled, no invoice for it:** the balance ₹50,000 was **advanced but never invoiced**, so the correct instrument is a **Refund voucher** (Sec 31(3)(e)) for ₹59,000, and F reclaims/adjusts the ₹9,000 GST paid on that portion of the advance.
+
+**Reconcile.** GST accounted for = ₹9,000 (on the half actually supplied) — matches 18% of ₹50,000 supplied. The other ₹9,000 was paid on advance then reversed via the refund voucher route. **Trap avoided:** the June leg is a *refund voucher*, **not** a credit note, because that portion was **never invoiced**. Had F invoiced the whole ₹1,00,000 in May and then cancelled half, the June instrument would instead be a **credit note**.
+
+### Example 7 — Sale-or-return goods crossing the 6-month cap
+
+**Facts.** On **1 January 2025**, dealer M sends goods worth ₹5,00,000 to prospective buyer N on **approval basis (sale-or-return)** under a delivery challan. N is silent — neither approving nor returning.
+
+**Solve.**
+- Under Sec 31(7), the invoice is due at the **earlier of** (a) time N approves the supply, or (b) **6 months from removal = 1 July 2025**.
+- N never approves, so on **1 July 2025** a supply is **deemed**; M must issue a **tax invoice** dated on/before 1 July 2025 and pay GST, even though N hasn't formally accepted.
+- During the interim movement (1 Jan), the goods travelled on a **delivery challan** (no supply yet), which is exactly why 4.4 lists approval-basis movement.
+
+**Reconcile.** The challan documented movement without supply; the 6-month cap forced crystallisation so the tax point could not be deferred indefinitely. If N had approved on, say, 10 March 2025, the invoice would have been due **on/before 10 March** (approval < 6 months, so the earlier event governs).
+
+### Example 8 — SKD despatch of one machine over three trucks
+
+**Facts.** Supplier T sells a single fabrication machine (taxable value ₹30,00,000 + IGST ₹5,40,000) to buyer U. Because of size, it is dismantled and moved in **three truck-loads** on 4, 5 and 6 September.
+
+**Solve (Rule 55(5)).**
+- **Before the first truck (4 Sep):** T issues the **complete tax invoice** for ₹30,00,000 + ₹5,40,000. The tax point and the full value are fixed *once*.
+- **Trucks 1 and 2:** each carries a **delivery challan** (referencing the invoice) plus a **certified copy** of the invoice.
+- **Truck 3 (last consignment):** carries the **original tax invoice** along with its delivery challan.
+
+**Reconcile.** One supply → one tax charge → one invoice; three movements → three challans keeping each truck legal. **Trap avoided:** students wrongly issue three separate invoices (tripling the apparent value) — Rule 55(5) exists precisely to prevent that.
+
 ---
 
 ## 6. Format / Summary
@@ -300,6 +384,19 @@ flowchart LR
 ```
 *Figure 3 — the correction engine: direction of error picks the note; the symmetry condition and time limit gate the credit note.*
 
+```mermaid
+flowchart TD
+    A["Goods are about to move"] --> B{"Is the movement itself a supply?"}
+    B -->|"Yes taxable supply"| C["Tax invoice travels - triplicate copies"]
+    B -->|"No - job work stock transfer approval quantity unknown"| D["Delivery challan travels - Rule 55"]
+    C --> E{"Consignment value over e-way-bill threshold"}
+    D --> E
+    E -->|"Yes"| F["Generate e-way bill linking document to vehicle"]
+    E -->|"No"| G["Document alone accompanies goods"]
+    F --> H["Officer reconciles invoice or challan with e-way bill and portal"]
+```
+*Figure 4 — the goods-on-the-road view: whatever the document, something must travel with moving goods so the movement stays observable.*
+
 **One-line summaries table:**
 
 | Document | Issued by | When | Shows tax? | Section |
@@ -313,6 +410,7 @@ flowchart LR
 | Delivery challan | Consignor | Movement w/o supply | No | Rule 55 |
 | Credit note | Supplier | Over-billed / return / discount | Reduces | 34(1) |
 | Debit note | Supplier | Under-billed | Increases | 34(3) |
+| Revised invoice | Newly-registered supplier | Pre-registration supplies, after RC granted | Yes | 31(3)(a) + Rule 53 |
 
 ---
 
@@ -320,10 +418,11 @@ flowchart LR
 
 - **← Chapter 17 (Time of Supply):** the invoice date is usually *the* time-of-supply trigger. Wrong invoice timing → wrong tax month. This chapter *implements* the timing rules you learned there.
 - **← Chapter 18 (Value of Supply):** the "taxable value" printed on the invoice is the Sec 15 value; the Sec 15(3)(b) discount conditions decide whether a credit note can reduce tax (Example 3).
-- **→ Chapter on ITC (Sec 16):** condition #1 for ITC is *possession of a tax invoice / debit note*. A missing, defective, or non-IRN invoice = **no ITC**. This chapter is the *precondition* for that one.
+- **→ Chapter on ITC (Sec 16):** condition #1 for ITC is *possession of a tax invoice / debit note*. A missing, defective, or non-IRN invoice = **no ITC**. This chapter is the *precondition* for that one. The debit-note ITC clock (Sec 16(4), from the debit note's own FY) also lives here.
 - **→ Returns (GSTR-1 / GSTR-3B / GSTR-2B):** invoices and credit/debit notes are *declared* in GSTR-1, flow to the recipient's GSTR-2B, and drive the matching that enforces Sec 34(2) symmetry.
-- **→ E-way bill:** the invoice/challan value and the transporter's copy feed the e-way-bill system for goods in movement.
-- **↔ Reverse charge (Chapter 15):** self-invoice and payment voucher are the documentary machinery of RCM.
+- **→ E-way bill:** the invoice/challan value and the transporter's copy feed the e-way-bill system for goods in movement (Figure 4).
+- **↔ Reverse charge (Chapter 15):** self-invoice and payment voucher are the documentary machinery of RCM; the self-invoice/payment-voucher matrix in 4.3 keys off the supplier's registration status.
+- **↔ Refunds / unjust enrichment:** a credit-note reduction for supplies to non-ITC recipients is gated by the same "tax not passed on" test that governs refund claims.
 
 ---
 
@@ -332,7 +431,7 @@ flowchart LR
 1. **"The buyer issued a credit note."** *No.* Under GST, **only the supplier** issues credit/debit notes that adjust tax. A buyer's document has no GST effect.
 2. **Credit note = automatic tax reduction.** *No.* Output tax reduces **only if** the recipient reverses matching ITC (Sec 34(2)) **and** it's declared by the 30 Nov / annual-return deadline. Miss either → no reduction (commercial credit note only).
 3. **Debit note has a time limit.** *No issue-limit* — you can always pay more tax. (But the *recipient's ITC* time limit under Sec 16(4) now runs from the **debit note's** date, not the original invoice's — favourable, and tested.)
-4. **Invoice date = delivery date for goods.** *No.* It's **removal** date (or making-available if no movement), not delivery.
+4. **Invoice date = delivery date for goods.** *No.* It's **removal** date (or making-available if no movement), not delivery. And "removal" includes *collection by the recipient* — an ex-works buyer's truck triggers the invoice.
 5. **Confusing 30 vs 45 days for services.** 30 days generally; **45 days** only for banking companies, insurers, NBFCs.
 6. **Composition/exempt dealer issues a tax invoice.** *No* — **bill of supply**, showing no tax; composition dealer adds the "not eligible to collect tax" legend.
 7. **Post-supply discount always reduces GST.** *Only if* pre-agreed and linked to invoices per Sec 15(3)(b) *and* ITC reversed. Otherwise it's a commercial credit note — supplier eats the GST.
@@ -340,6 +439,11 @@ flowchart LR
 9. **A single credit note must map to a single invoice.** *No* — since 2019, one **consolidated** credit/debit note can cover many invoices.
 10. **Triplicate vs duplicate mix-up.** Goods → **triplicate** (extra copy for the transporter); services → **duplicate**.
 11. **Small-value ₹200 relaxation only if** recipient is unregistered *and* doesn't demand an invoice; then a *consolidated* invoice at day-end is allowed.
+12. **Refund voucher vs credit note.** If the amount was received as an **advance and never invoiced**, cancellation → **refund voucher**. If it was **invoiced** and then reversed → **credit note**. (Example 6.)
+13. **Self-invoice for *every* RCM.** *No* — self-invoice only when the supplier is **unregistered**; a payment voucher is needed for **all** RCM. (Matrix in 4.3.)
+14. **"Supplementary invoice" is a fresh invoice.** *No* — a supplementary invoice for a shortfall **is** a **debit note** in GST law and carries debit-note consequences.
+15. **E-invoice turnover switches off when turnover falls.** *No* — once **any** past FY from 2017-18 crossed the threshold, the obligation stays; and the **dynamic B2C QR** is a separate requirement that does *not* create an IRN.
+16. **Multiple trucks = multiple invoices (SKD).** *No* — one invoice before the first consignment, delivery challans for the rest, original invoice with the last truck (Rule 55(5), Example 8).
 
 ---
 
@@ -350,11 +454,12 @@ Start from the one fact and rebuild the chapter without memorising:
 1. GST runs on **seamless ITC**; a recipient's credit is only as real as the supplier's documented, matchable liability. → the **tax invoice** must exist, in a standard format, with a unique serial, issued by the supplier.
 2. The invoice's *contents* are just "everything a matcher and an auditor need to reconcile A's outward with B's inward" → the 16 particulars.
 3. The invoice's *timing* tracks the underlying trigger: goods have physical **removal** (invoice by then); services are continuous, so a **30/45-day** window.
-4. When the event **isn't** a taxable supply, forcing a tax invoice would assert a false tax → a **family of substitute documents** (bill of supply, vouchers, self-invoice, delivery challan), each matched to its truth.
-5. When the invoice turns out **wrong after the fact**, you can't erase it (both sides already reference it) → a **linked correcting note** issued by the supplier: **credit note** (over-charged, reduce) or **debit note** (under-charged, increase). Reduction is gated by **symmetry** (recipient reverses ITC) and a **deadline**, because those protect the treasury.
+4. When the event **isn't** a taxable supply, forcing a tax invoice would assert a false tax → a **family of substitute documents** (bill of supply, vouchers, self-invoice, delivery challan), each matched to its truth. Run the three-question filter — *supply or not? / taxable or not? / who charges?* — and the right document falls out.
+5. When the invoice turns out **wrong after the fact**, you can't erase it (both sides already reference it) → a **linked correcting note** issued by the supplier: **credit note** (over-charged, reduce) or **debit note** (under-charged, increase). Reduction is gated by **symmetry** (recipient reverses ITC), a **deadline** (30 Nov / annual return), and **no unjust enrichment**, because those protect the treasury.
 6. Because fake invoices can poison the whole chain, high-turnover B2B invoices are **pre-authenticated** (IRN + QR) before they can be used → **e-invoicing**.
+7. Because moving goods are a fraud vector, *something* must always travel with them → invoice/bill of supply/delivery challan, and above a value threshold an **e-way bill** binding document to vehicle.
 
-Everything is downstream of "protect the credit chain."
+Everything is downstream of "protect the credit chain — and the goods chain."
 
 ---
 
@@ -365,29 +470,31 @@ Everything is downstream of "protect the credit chain."
 **TIME LIMITS (issue):**
 - Goods: **before/at removal** (or making-available). Sec 31(1)
 - Services: **within 30 days** (banks/NBFC/insurer **45**). Sec 31(2) + Rule 47
+- Continuous supply goods: on/before each statement/payment (31(4)); services: due date of payment / receipt / event (31(5)); cessation: at cessation (31(6)).
 - Sale-or-return: earlier of supply or **6 months** from removal. 31(7)
 
 **COPIES:** Goods → **triplicate** (Recipient/Transporter/Supplier). Services → **duplicate** (Recipient/Supplier).
 
-**16 PARTICULARS hook:** WHO (both GSTINs) · WHAT (HSN + desc + qty) · HOW-MUCH (taxable value + rate + tax, each head) · WHERE (place of supply) · SIGNED. Plus serial no. + date + RCM flag.
+**16 PARTICULARS hook:** WHO (both GSTINs) · WHAT (HSN + desc + qty) · HOW-MUCH (taxable value + rate + tax, each head) · WHERE (place of supply) · SIGNED. Plus serial no. + date + RCM flag. Export/SEZ → endorsement; e-invoice → QR with IRN.
 
-**DOCUMENT PICKER:**
+**DOCUMENT PICKER (three-question filter — supply? taxable? who charges?):**
 - Taxable supply → **Tax invoice**
 - Composition / exempt → **Bill of supply** (no tax)
-- Advance received → **Receipt voucher**; refunded → **Refund voucher**
-- RCM from unregistered → **Self-invoice + Payment voucher**
-- Movement w/o supply (job-work, transfer) → **Delivery challan** (Rule 55)
+- Advance received → **Receipt voucher**; refunded (never invoiced) → **Refund voucher**
+- RCM: always **Payment voucher**; **+ Self-invoice** only if supplier **unregistered**
+- Movement w/o supply (job-work, transfer, approval) → **Delivery challan** (Rule 55)
+- SKD/lots → invoice before 1st consignment + challans for rest (Rule 55(5))
 
 **CREDIT NOTE (Sec 34(1)/(2)) — by SUPPLIER, invoice was TOO HIGH** (return / deficiency / over-billing / Sec 15(3)(b) discount):
-- Reduces output tax **only if recipient reverses ITC**.
+- Reduces output tax **only if recipient reverses ITC** and no unjust enrichment.
 - Declare by **30 Nov** following FY **or** annual return date, **whichever earlier**.
 
-**DEBIT NOTE (Sec 34(3)) — by SUPPLIER, invoice was TOO LOW:** increases output tax; **no time limit** to issue. Recipient's ITC clock runs from the **debit note's** FY.
+**DEBIT NOTE (Sec 34(3)) — by SUPPLIER, invoice was TOO LOW:** increases output tax; **no time limit** to issue. Includes **supplementary invoice**. Recipient's ITC clock runs from the **debit note's** FY.
 
-**COMMERCIAL credit note:** if Sec 15(3)(b) not met → no GST reduction, no ITC reversal.
+**COMMERCIAL credit note:** if Sec 15(3)(b) not met or deadline passed → no GST reduction, no ITC reversal.
 
-**E-INVOICING (Rule 48(4)):** turnover > **₹5 cr** (verify), B2B + exports + credit/debit notes. Own-system JSON → IRP → **IRN + QR**. No IRN where required → **not a valid invoice → no ITC**. B2C excluded (but dynamic QR for large taxpayers). Exempt: banks, NBFCs, insurers, GTAs, passenger transport, cinema, SEZ *units*, govt.
+**E-INVOICING (Rule 48(4)):** turnover > **₹5 cr** (verify) in **any** FY from 2017-18, B2B + exports + credit/debit notes. Own-system JSON → IRP → **IRN + QR**. No IRN where required → **not a valid invoice → no ITC**. B2C excluded (but dynamic QR for large taxpayers — no IRN). Exempt: banks, NBFCs, insurers, GTAs, passenger transport, cinema, SEZ *units*, govt.
 
-**GOLDEN RULE:** Supplier issues everything (including credit/debit notes). Never erase — always **link and reverse symmetrically**.
+**GOLDEN RULE:** Supplier issues everything (including credit/debit notes; sole exception = RCM self-invoice from unregistered supplier). Never erase — always **link and reverse symmetrically**.
 
 > **Reminder:** confirm the **e-invoicing threshold, HSN-digit slabs, service invoice window, and any 2025-26 amendments** against current ICAI study material for your exam attempt.

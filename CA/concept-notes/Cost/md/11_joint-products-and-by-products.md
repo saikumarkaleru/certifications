@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 11 — Joint Products & By-Products
 
 ## 1. The Problem — One Furnace, Many Children
@@ -6,7 +8,7 @@ Every costing technique you have met so far rests on a quiet assumption: that a 
 
 Now meet a class of industries where that assumption simply collapses.
 
-Feed a barrel of **crude oil** into a refinery and heat it. Out of the *same* distillation column, at the *same* moment, from the *same* input, come petrol, diesel, kerosene, naphtha, lubricating oil and bitumen. Crush an **oilseed** and you get edible oil *and* oil-cake. Slaughter a **carcass** in a meat plant and you get prime cuts, offal, hide, bone and fat. Refine **sugar** and you get crystal sugar *and* molasses *and* bagasse. Smelt an **ore** and you recover copper *and* silver *and* gold from one furnace.
+Feed a barrel of **crude oil** into a refinery and heat it. Out of the *same* distillation column, at the *same* moment, from the *same* input, come petrol, diesel, kerosene, naphtha, lubricating oil and bitumen. Crush an **oilseed** and you get edible oil *and* oil-cake. Slaughter a **carcass** in a meat plant and you get prime cuts, offal, hide, bone and fat. Refine **sugar** and you get crystal sugar *and* molasses *and* bagasse. Smelt an **ore** and you recover copper *and* silver *and* gold from one furnace. Process **milk** and you get cream, butter, skimmed milk and casein.
 
 Here is the killer question. The refinery spends ₹2,00,000 heating one batch of crude. How much of that ₹2,00,000 belongs to the **diesel**, and how much to the **petrol**?
 
@@ -15,6 +17,8 @@ There is no honest answer. You cannot say "the diesel used more heat" because th
 This is the **joint cost apportionment problem**, and it is the reason this chapter exists. We must find a *defensible* way to split a cost that is, by its nature, unsplittable — and we must know that whatever we do is a convention, not a truth. Worse, some of the products that emerge are trivial in value (the bagasse, the offal, the oil-cake), and lumping them in with the main products distorts everything. Those minor products — **by-products** — need their own treatment.
 
 And lurking behind all of it is a decision trap: once petrol emerges, should the firm *sell it now* or *process it further* into a higher-grade fuel? Get the relevant-cost logic wrong here and you will happily destroy profit while congratulating yourself.
+
+**A second, subtler reason the chapter matters — inventory valuation.** These same apportioned figures do not stay inside cost accounts; they become the **cost of closing stock** of each joint product on the balance sheet. So an "arbitrary" split is not merely academic — it shifts reported profit between periods by changing how much cost sits in unsold inventory. That is why AS 2 / Ind AS 2 explicitly address joint-product allocation (see §7). A costing convention chosen for internal decisions ends up touching the audited financial statements, which is precisely why examiners take it seriously.
 
 ---
 
@@ -42,7 +46,9 @@ flowchart LR
 
 *Figure 1 — The split-off point is the fault line: everything to its left is joint and must be shared by a rule; everything to its right is separable and belongs to one product.*
 
-The **analogy that unlocks the popular method**: how would you fairly split the two-hour gas bill between soup, stew and broth? By *weight*? But a kilo of clear soup is worth far less than a kilo of rich stew — splitting by weight would dump most of the cost on the cheap, watery product and make it look unprofitable while the valuable stew looks like a goldmine. That is absurd. The fairer instinct is to split cost in proportion to what each bowl is *worth* — its ability to *bear* cost. That single instinct is the seed of the **Net Realisable Value method**, and it is why NRV dominates real practice.
+**A word on vocabulary — "apportion" vs "allocate".** In strict cost-accounting language, *allocation* means charging a whole cost to one cost object because it belongs wholly to it (traceable), while *apportionment* means *splitting* a shared cost across several objects on some equitable base. Joint cost, being untraceable, is **apportioned**, never allocated. Separable cost, being traceable, is **allocated** (charged directly). Examiners occasionally use the words loosely, but if a one-mark question asks "can joint cost be allocated?", the technically correct answer is *no — it can only be apportioned on a convention.*
+
+**The analogy that unlocks the popular method**: how would you fairly split the two-hour gas bill between soup, stew and broth? By *weight*? But a kilo of clear soup is worth far less than a kilo of rich stew — splitting by weight would dump most of the cost on the cheap, watery product and make it look unprofitable while the valuable stew looks like a goldmine. That is absurd. The fairer instinct is to split cost in proportion to what each bowl is *worth* — its ability to *bear* cost. That single instinct is the seed of the **Net Realisable Value method**, and it is why NRV dominates real practice.
 
 ---
 
@@ -56,7 +62,9 @@ There are only two possible bases for sharing a joint cost:
 
 **(b) Share by value** — market realisation, or net realisable value. The logic: a joint cost is a *common* cost, and the classic accounting principle for sharing common costs is **"the beneficiary who gains most should bear most."** A product that fetches ₹500/kg is extracting far more benefit from the shared process than one fetching ₹5/kg; let it carry proportionately more cost. This is the **cost-bearing-ability** principle. Its beauty: it prevents any product from *automatically* showing a loss or profit merely because of the apportionment convention. Its cost: you need selling prices, and if products need further processing you must strip that out (hence *net* realisable value).
 
-ICAI examiners lean on value-based methods precisely because joint-product decisions (which to push, whether to process further) must never be corrupted by an arbitrary weight-based split. But they still test physical units, and the elegant **constant gross-margin** method, so you must master all three. The map:
+**The deeper "why" — why value-based methods refuse to create phantom profits.** Consider what happens under a *pure market-value* split. Because you apportion cost in the exact ratio of value, every product ends up with the *same* ratio of cost-to-value — i.e., the *same* gross-margin percentage. No product can look like a star or a dog *purely because of the split*. Contrast the physical method, which is blind to price and therefore routinely manufactures fake winners and losers. So the choice between the two bases is really a choice between "let the arithmetic of weight decide who is profitable" (dangerous) and "refuse to let the split itself decide profitability" (safe). Examiners phrase this as *"value-based apportionment does not distort the relative profitability of joint products."* Learn that sentence.
+
+ICAI examiners lean on value-based methods precisely because joint-product decisions (which to push, whether to process further) must never be corrupted by an arbitrary weight-based split. But they still test physical units, the **weighted / survey** variant, and the elegant **constant gross-margin** method, so you must master all of them. The map:
 
 ```mermaid
 flowchart TD
@@ -83,6 +91,19 @@ flowchart TD
 - **Joint cost**: total cost incurred up to the split-off point.
 - **Separable / subsequent / further-processing cost**: cost incurred on an individual product *after* split-off.
 
+**The four-way discrimination the examiner loves — product vs by-product vs scrap vs waste.** These are ranked by value, and mixing them up is a classic slip:
+
+| Term | Value | Arises | Treatment |
+|---|---|---|---|
+| **Joint / main product** | High, significant | Deliberately, main aim | Bears apportioned joint cost |
+| **By-product** | Minor but *saleable* | Incidentally | Net realisation *credited to* joint cost; no joint cost pushed onto it |
+| **Scrap** | Small, *residual* material value | Incidentally in a process | Net realisation credited to the specific job/process; recorded, sold as-is |
+| **Waste** | *Nil or negative* (may cost to dispose) | Loss/shrinkage | No value; disposal cost *added* to process cost |
+
+The subtle exam point: **scrap and by-product are treated almost identically** (both credited back), but a by-product usually has a distinct identity and may itself need further processing, whereas scrap is residual material (offcuts, filings). **Waste** is the odd one out — it can carry a *negative* value because you may pay to dispose of it, and that disposal cost is *added* to the joint cost, raising the burden on the main products.
+
+**Why proportions being "uncontrollable" matters.** Joint products emerge in a **fixed, technologically-determined ratio** — a refiner cannot choose to make "only petrol." This is what separates joint products from co-products (controllable mix) and is the reason you cannot manage the mix by simply making more of the profitable one. It also explains why the *further-processing* decision is the only real lever management has over a single joint product: you cannot change *how much* of it you get, only *what you do with it after* it appears.
+
 ### 4.2 Method 1 — Physical Units (Average Unit Cost) Method
 
 Apportion joint cost in the ratio of the **physical quantity** (kg, litres, units) of each product at the split-off point.
@@ -94,6 +115,19 @@ $$\text{Joint cost to a product} = \text{Cost per unit} \times \text{Units of th
 - **Why it exists**: objective, needs no prices, ideal when products are physically similar and similarly priced.
 - **The "why" of its weakness**: it silently assumes every kilo is equally valuable — false whenever prices differ. It can throw up products that "make a loss" purely because of the split.
 - **Caution — consistent units**: if products come out in different units (litres vs kg vs cubic metres) you must convert to a *common* unit first, else the ratio is meaningless.
+- **Caution — output vs input, and normal loss.** Apportion on the **output at split-off**, not on the input fed in. If the process suffers a normal loss (evaporation, trimming), the lost units simply disappear from the denominator — they are *not* a product and get no cost; their cost is automatically absorbed by the good output (exactly as in ordinary process costing). Watch for questions that quote input quantity to bait you into using the wrong denominator.
+
+### 4.2a Method 1(b) — Weighted / Survey / Points Method (the refined physical method)
+
+Pure physical units treats every kilo as equal. But sometimes products differ in *some measurable technical attribute* — richness, purity, difficulty of production, calorific value — even though a market price is unavailable or unreliable. The **survey method** (also *weighted average* or *points* method) fixes a **weight factor** (points) for each product reflecting that attribute, then apportions on **weighted units = physical units × weight factor**.
+
+$$\text{Weighted units of a product} = \text{Physical output} \times \text{Weight (points) factor}$$
+
+$$\text{Joint cost to a product} = \text{Total joint cost} \times \frac{\text{Its weighted units}}{\text{Total weighted units}}$$
+
+- **Why it exists**: it keeps the objectivity of a physical basis (no market prices needed) but corrects for the fact that a kilo of one product genuinely embodies more of the process's effort/value than a kilo of another. It is the honest middle ground when value data are missing but the products are clearly *not* homogeneous.
+- **Where the weights come from**: engineering/technical survey, historical prices, or management judgement — hence "survey" method. The exam will *give* you the points; you just apply them.
+- **Trap**: do not also multiply by physical units a second time, and do not forget that the *rate* is now "per weighted unit," not per physical unit.
 
 ### 4.3 Method 2 — Market Value at Split-Off Point
 
@@ -101,6 +135,7 @@ Apportion joint cost in the ratio of the **sales value of each product at the sp
 
 - **Why it exists**: applies cost-bearing ability directly using the price the product would fetch the instant it is born. Theoretically the *cleanest* value method because it uses the value *created by the joint process alone*, uncontaminated by later processing.
 - **When you can use it**: only when a market price *exists at split-off*. Often it doesn't — petrol has no meaningful "half-refined" market — which is exactly why NRV was invented.
+- **Weighting subtlety**: use the *sales value* (quantity × price), not the price alone. Two products at the same price per unit but different volumes must be weighted by their total split-off value, not treated equally.
 
 ### 4.4 Method 3 — Net Realisable Value (NRV) Method — the workhorse
 
@@ -116,6 +151,8 @@ Then apportion joint cost in the ratio of NRVs.
 3. **It isolates the joint process's own contribution** — by subtracting separable costs, it credits each product only with the value the *joint* stage created, which is what the joint cost should be shared against.
 4. **It keeps the further-processing decision honest** — because separable costs are removed before apportionment, they remain visible as *incremental* costs for the "process further?" decision rather than being buried.
 
+**The exam's favourite tweak — should profit be stripped out too?** Some questions ask you to apportion on **"NRV after deducting an estimated profit margin"** (sometimes called *net realisable value after profit* or the *reverse cost* variant). Standard NRV apportionment does **not** deduct notional profit — it deducts only separable and selling costs. Deducting profit is a feature of the *by-product reverse-cost* method (see §4.6), not of joint-product NRV. If a joint-product question says "apportion on NRV," do **not** deduct profit; if it says "apportion on the basis of cost, working back a normal margin," then you do. Read the instruction literally.
+
 ### 4.5 Method 4 — Constant (Uniform) Gross-Margin Percentage Method
 
 The idea: since all products spring from one process, force *every* product to show the *same* gross-margin percentage on sales. Work backwards to find the joint cost that achieves this.
@@ -127,22 +164,40 @@ Steps:
 4. **Joint cost of each product = its total cost − its own separable cost.**
 
 - **Why it exists**: it embodies the view that no product is inherently "more profitable" than another when they share an unavoidable common origin — profitability differences would be an accident of the sharing rule, so eliminate them.
-- **The catch to watch**: because it forces uniform margins, a product with *heavy* separable cost can be pushed to a *very low* or even **negative** joint-cost allocation. That is mathematically correct and reconciles, but shocks students. Do not "fix" it.
+- **The catch to watch**: because it forces uniform margins, a product with *heavy* separable cost can be pushed to a *very low* or even **negative** joint-cost allocation. That is mathematically correct and reconciles, but shocks students. Do not "fix" it. (Worked in Example 6.)
+- **Why NRV and constant-margin diverge**: NRV equalises the *cost-to-value ratio at split-off*; constant-margin equalises the *cost-to-value ratio on final sales*. They coincide only when all products have zero (or proportionally identical) separable cost. Whenever separable costs differ in proportion to value, the two methods give different splits — both perfectly valid.
 
 ### 4.6 By-Product Accounting — two philosophies
 
 By-products are minor, so the accounting aim is *simplicity*, not precision. Two families:
 
 **(A) Non-cost / Sales-value methods** — treat by-product realisation as a *reduction of cost* or as *income*, without apportioning any joint cost *to* the by-product.
-- **(i) Other income**: net sales of by-product credited to Costing P&L as miscellaneous income. Crudest; used when value is truly negligible and erratic.
-- **(ii) Credit to process (net realisable value method for by-products)**: **Net** realisation of the by-product (its sales *less* its own selling and further-processing costs) is *deducted from the joint cost* of the main product before apportioning to the joint products. **This is the most common and examiner-preferred treatment.** Logic: the by-product's sale effectively *recovers* part of the joint cost, so the main products should bear only the *net* joint cost.
+- **(i) Other income**: net sales of by-product credited to Costing P&L as miscellaneous income. Crudest; used when value is truly negligible and erratic. Note the consequence — because nothing is credited to the *process*, the main product's cost per unit is *unaffected* by the by-product; only the final profit rises.
+- **(ii) Credit to process (net realisable value method for by-products)**: **Net** realisation of the by-product (its sales *less* its own selling and further-processing costs) is *deducted from the joint cost* of the main product before apportioning to the joint products. **This is the most common and examiner-preferred treatment.** Logic: the by-product's sale effectively *recovers* part of the joint cost, so the main products should bear only the *net* joint cost. This *does* lower the main product's cost per unit — the key difference from the "other income" method.
 
 **(B) Cost methods** — actually assign a cost *to* the by-product:
 - **(i) Opportunity / replacement cost method**: used when the by-product is *not sold* but *consumed internally* (e.g., fed back as fuel or raw material). Value it at the price the firm would otherwise have *paid to buy* it, and credit the main process with that saving.
 - **(ii) Standard cost method**: charge the by-product out at a pre-set standard cost; any difference stays in the main product. Used for control where by-product volumes are steady.
-- **(iii) Reverse-cost / working-back method**: start from the by-product's ultimate sale value and subtract *estimated profit, selling costs and post-split processing costs* to arrive back at a notional share of joint cost to remove from the main product. Used when the by-product has appreciable, stable value and you want a defensible joint-cost credit.
+- **(iii) Reverse-cost / working-back method**: start from the by-product's ultimate sale value and subtract *estimated profit, selling costs and post-split processing costs* to arrive back at a notional share of joint cost to remove from the main product. Used when the by-product has appreciable, stable value and you want a defensible joint-cost credit. (Worked in Example 5.)
 
 **The controlling rule**: for by-products you almost never apportion joint cost *forward onto* them; you use their realisation to *claw back* joint cost *off* the main products.
+
+Which by-product method to pick? The examiner usually forces the choice with a phrase. Use this map:
+
+```mermaid
+flowchart TD
+    BP["By-product emerges"] --> V{"Is the by-product sold or used internally"}
+    V -->|"Used internally as fuel or input"| OPP["Opportunity or replacement cost - credit the saving to the process"]
+    V -->|"Sold externally"| VAL{"Is its value negligible and erratic"}
+    VAL -->|"Yes truly trivial"| OI["Other income - credit to Costing P and L"]
+    VAL -->|"No it is appreciable and steady"| NET{"Does the question want a profit margin worked back"}
+    NET -->|"No just net it off"| NRVc["Net realisation credited to joint cost - the default"]
+    NET -->|"Yes work back a normal profit"| REV["Reverse cost method - deduct profit selling and processing"]
+```
+
+*Figure 4 — Selecting a by-product treatment. The default for a saleable by-product is to credit net realisation to joint cost; the wording of the question shifts you to the other methods.*
+
+**By-product that needs further processing — do not forget the "net".** If the by-product itself must be processed after split-off before sale, its own separable cost is deducted in arriving at *net* realisation. The credit to the main process is *net* of that separable cost, never gross. This is the single most common by-product slip after forgetting selling cost.
 
 ### 4.7 The Further-Processing Decision — relevant costs only
 
@@ -165,6 +220,12 @@ flowchart TD
 ```
 
 *Figure 3 — The further-processing decision tree. Apportioned joint cost never enters the diamond; only incremental revenue versus incremental cost decides.*
+
+**Two refinements the examiner tests:**
+
+1. **Avoidable separable fixed cost.** Sometimes further processing needs a *dedicated* fixed cost (a machine, a supervisor) that exists *only if* you process further. That fixed cost **is** relevant here, because it is *avoidable* by choosing to sell at split-off. Include it. Only the *joint* fixed cost (incurred regardless) is sunk. Distinguish "sunk joint fixed cost" (ignore) from "avoidable separable fixed cost caused by the decision" (count).
+
+2. **Lost split-off sales as opportunity cost.** Selling value at split-off is the *opportunity forgone* by processing further. That is already captured by using "incremental revenue = new price − split-off price." If a question quotes only the final price, remember to *subtract* the split-off value the product would have fetched; skipping this is a subtle way to overstate the benefit of further processing.
 
 ---
 
@@ -354,6 +415,140 @@ Overall profit = 3,77,000 − 2,30,000 = **₹1,47,000**, which exactly equals t
 
 *(Sanity note: had we wrongly let the apportioned joint cost drive the further-processing decision, we might have "sold P at split-off because its cost looked high," forgoing the genuine ₹20,000 gain. The reconciliation confirms the incremental logic was right.)*
 
+**"What if the examiner tweaks it?" — the split-off market-value trap on P.** Notice we apportioned on the split-off value ₹40 for P *even though we ultimately sell P at ₹50 after processing*. That is correct: the market-value-**at-split-off** method uses the value *created by the joint process only*. A tempting error is to apportion on the *final* ₹50 — but that would credit the joint stage with value that the *separate* upgrading step created. If instead the question said "apportion on NRV," you would use P's NRV = final sales 2,50,000 − separable 30,000 = 2,20,000 for P, and for Q (sold at split-off, no separable cost) NRV = 1,20,000 — a *different* split. Always match the basis to the exact instruction.
+
+---
+
+### Example 4 (Medium) — Weighted / Survey (Points) Method, plus a closing-stock tweak
+
+A refining process costs **₹1,20,000** and yields three grades from one batch. No reliable split-off market price exists, but the works engineer certifies the following technical "point" weights reflecting relative richness:
+
+| Product | Output (kg) | Point (weight) factor |
+|---|---|---|
+| A | 1,000 | 3 |
+| B | 2,000 | 2 |
+| C | 3,000 | 1 |
+
+**(a) Apportion the joint cost by the survey method. (b) A naïve manager apportions by plain physical weight — show how misleading that is. (c) If 200 kg of A remain unsold, value the closing stock of A.**
+
+**(a) Survey method.** Weighted units = output × points:
+
+| Product | Output × Points | Weighted units |
+|---|---|---|
+| A | 1,000 × 3 | 3,000 |
+| B | 2,000 × 2 | 4,000 |
+| C | 3,000 × 1 | 3,000 |
+| **Total** | | **10,000** |
+
+Rate = ₹1,20,000 ÷ 10,000 weighted units = **₹12 per weighted unit**.
+
+| Product | Weighted units | × ₹12 | Joint cost (₹) | Cost per kg (₹) |
+|---|---|---|---|---|
+| A | 3,000 | 12 | 36,000 | 36.00 |
+| B | 4,000 | 12 | 48,000 | 24.00 |
+| C | 3,000 | 12 | 36,000 | 12.00 |
+| **Total** | **10,000** | | **1,20,000** | |
+
+**Reconciliation**: 36,000 + 48,000 + 36,000 = **₹1,20,000**. ✔ Note the cost per kg falls with the point weight (A ₹36, C ₹12) — richer grades rightly carry more cost.
+
+**(b) Plain physical-weight method (the naïve split).** Rate = 1,20,000 ÷ 6,000 kg = ₹20/kg → A 20,000, B 40,000, C 60,000. This gives *every* grade the same ₹20/kg regardless of richness, over-costing the cheap bulk grade C (₹60,000 vs ₹36,000) and under-costing the rich grade A. If A and C had very different selling prices, C would be shown at a fat loss purely because of the split. The survey method corrects this without needing a market price.
+
+**(c) Closing-stock valuation of A.** Cost per kg of A under the survey method = ₹36. Closing stock of A = 200 kg × ₹36 = **₹7,200**. This is the figure that flows into inventory in the financial statements — the apportionment convention you chose has *directly* set the balance-sheet value of A's stock (and hence period profit). Had you used the naïve ₹20/kg, closing stock would have been ₹4,000 — a ₹3,200 profit swing from the *method alone*, which is exactly why AS 2 insists the basis be *rational and consistent*.
+
+---
+
+### Example 5 (Exam-Hard) — By-product by the Reverse-Cost (Working-Back) Method
+
+A process costs **₹3,00,000** up to split-off, producing a main product **M** and a by-product **N**. From the batch, **N** = 2,000 units. N is *not* sold as it emerges — it needs further processing costing **₹10,000**, then incurs selling expenses of **₹5,000**, and finally sells at **₹20/unit**. Company policy is that the by-product should be shown to earn a **normal profit of 25% on its selling price**. Main product M: 10,000 units, sold at ₹40/unit, no separable cost.
+
+**Required:** (i) find, by the reverse-cost method, the joint cost to be credited to M on account of N; (ii) prepare the process/by-product statement and prove N earns exactly its target margin; (iii) compute M's cost per unit and profit.
+
+**Step (i) — Work backwards from N's sale value to its notional joint-cost share.**
+
+| Reverse-cost build-up for N | ₹ |
+|---|---|
+| Sales value of N (2,000 × 20) | 40,000 |
+| Less: desired profit @ 25% of sales (40,000 × 25%) | 10,000 |
+| Less: selling expenses | 5,000 |
+| Less: further-processing cost | 10,000 |
+| **= Share of joint cost attributable to N** | **15,000** |
+
+So **₹15,000** of the joint cost is deemed to belong to N and is *credited to (deducted from)* the joint cost of M.
+
+Net joint cost borne by M = 3,00,000 − 15,000 = **₹2,85,000**.
+
+**Step (ii) — Prove N earns its 25% target (reconciliation of the by-product account).**
+
+| N account | ₹ |
+|---|---|
+| Sales | 40,000 |
+| Less: joint-cost share | 15,000 |
+| Less: further processing | 10,000 |
+| Less: selling expenses | 5,000 |
+| **Profit** | **10,000** |
+
+Profit ₹10,000 ÷ Sales ₹40,000 = **25%**. ✔ The reverse-cost method is *engineered* to deliver exactly the target margin — that is its whole point.
+
+**Step (iii) — Main product M.**
+
+M's total cost = ₹2,85,000 (no separable cost). Cost per unit = 2,85,000 ÷ 10,000 = **₹28.50**.
+
+| M statement | ₹ |
+|---|---|
+| Sales (10,000 × 40) | 4,00,000 |
+| Less: net joint cost | 2,85,000 |
+| **Profit on M** | **1,15,000** |
+
+**Overall reconciliation.**
+
+| Total realisations | ₹ |
+|---|---|
+| M (10,000 × 40) | 4,00,000 |
+| N (2,000 × 20) | 40,000 |
+| **Total** | **4,40,000** |
+
+| Total costs | ₹ |
+|---|---|
+| Joint process cost | 3,00,000 |
+| N further processing | 10,000 |
+| N selling expenses | 5,000 |
+| **Total** | **3,15,000** |
+
+Overall profit = 4,40,000 − 3,15,000 = **₹1,25,000** = M's ₹1,15,000 + N's ₹10,000. ✔✔
+
+**"What if the examiner tweaks it?"** If policy were *"20% profit on cost"* instead of *"25% on sales,"* note 25% on sales = 33⅓% on cost, so the two are **not** the same — misreading "on sales" vs "on cost" is a classic trap. With 20% on cost, you would set N's total cost = Sales ÷ 1.20 = 40,000 ÷ 1.20 = 33,333, so profit = 6,667; then joint share = total cost 33,333 − processing 10,000 − selling 5,000 = 18,333, credited to M. Always convert the margin base carefully before working back.
+
+---
+
+### Example 6 (Exam-Hard) — Constant Gross-Margin producing a NEGATIVE joint-cost allocation
+
+This is the edge case §4.5 warned about. A joint process costs **₹1,00,000** and yields two products, both processed further:
+
+| Product | Final sales (₹) | Separable cost (₹) |
+|---|---|---|
+| A | 2,00,000 | 20,000 |
+| B | 40,000 | 60,000 |
+
+**Apportion the joint cost by the constant gross-margin method and interpret the result.**
+
+Total sales = 2,40,000. Total cost = joint 1,00,000 + separable 80,000 = 1,80,000.
+Total gross profit = 2,40,000 − 1,80,000 = **₹60,000**.
+Overall gross-margin % = 60,000 ÷ 2,40,000 = **25%**.
+
+Force 25% GP on each, then back out joint cost:
+
+| Product | Sales | GP @ 25% | Total cost = Sales − GP | − Separable | = Joint cost (₹) |
+|---|---|---|---|---|---|
+| A | 2,00,000 | 50,000 | 1,50,000 | 20,000 | **1,30,000** |
+| B | 40,000 | 10,000 | 30,000 | 60,000 | **(30,000)** |
+| **Total** | **2,40,000** | **60,000** | **1,80,000** | **80,000** | **1,00,000** |
+
+**Reconciliation**: 1,30,000 + (−30,000) = **₹1,00,000**. ✔
+
+**Interpretation (this is where the marks are).** B's separable cost (₹60,000) *exceeds* its entire target total cost (₹30,000), so to still leave B with a 25% margin the method must assign it a **negative** joint cost of ₹30,000 — effectively saying "the joint process handed B *negative* value; the only way B breaks even at the group margin is to be credited ₹30,000." This is **arithmetically correct and reconciles** — do **not** floor it at zero, and do not redistribute. The result is a genuine *criticism* of the method: forcing uniform margins can produce economically odd (even negative) allocations when separable costs are lopsided. State this in your answer; examiners award the interpretation, not just the arithmetic.
+
+*If the same data were apportioned by NRV instead:* NRV of A = 2,00,000 − 20,000 = 1,80,000; NRV of B = 40,000 − 60,000 = **(20,000)** — a *negative NRV*. NRV cannot sensibly apportion on a negative figure either, which tells you something real: **B is destroying value** (its separable cost exceeds its final sales), and the sharper management question is whether B should be processed further *at all*. If B could be sold at split-off for any positive amount, or even scrapped to avoid the ₹60,000, that would beat processing it to a ₹40,000 sale. The negative allocation is the arithmetic *screaming* that a decision, not an apportionment, is needed.
+
 ---
 
 ## 6. Presentation / Format — how to lay it out in the exam
@@ -390,16 +585,18 @@ A joint-cost answer that reconciles but is *messy* still loses presentation mark
 3. **Cross-total and prove** that apportioned joint cost sums back to the given joint cost — write "= joint cost ✔".
 4. **By-product**: show its net realisation as a *deduction from joint cost* in a labelled line, not silently.
 5. **Round consistently** (usually two decimals, or to the nearest rupee if the question uses whole numbers) and keep the reconciliation exact.
+6. **Separate the two questions.** Keep the *further-processing decision* (a relevant-cost table) physically apart from the *profit statement* (which uses apportioned/absorbed cost). Mixing sunk joint cost into the decision table is the fastest way to lose the decision marks — quarantine them.
+7. **Answer the decision in words.** After the numbers, write the one-line verdict: "Process P further (gain ₹20,000); sell Q at split-off (processing loses ₹5,000)." Examiners look for the explicit recommendation, not just the table.
 
 ---
 
 ## 7. Connections — where this plugs into the rest of the syllabus
 
-- **Process Costing (Ch. 10)**: joint-product costing *is* process costing up to the split-off point — the joint process is just a process account whose output is *several* products instead of one. Normal/abnormal loss, equivalent units and process accounts all still apply *before* split-off. This chapter adds the *apportionment* layer on top.
-- **Cost Sheet & overhead apportionment (Ch. 3–4)**: joint-cost apportionment is the same "share a common cost by a sensible base" logic as overhead apportionment — only here the base is value (cost-bearing ability) rather than area or machine hours.
+- **Process Costing (Ch. 10)**: joint-product costing *is* process costing up to the split-off point — the joint process is just a process account whose output is *several* products instead of one. Normal/abnormal loss, equivalent units and process accounts all still apply *before* split-off. This chapter adds the *apportionment* layer on top. A neat linkage: an **abnormal loss** in the joint process is costed at the *average pre-apportionment* cost per unit and taken to Costing P&L exactly as in Ch. 10 — it never becomes a joint product and is not part of the apportionment base.
+- **Cost Sheet (Ch. 06) & overhead apportionment (Ch. 04)**: joint-cost apportionment is the same "share a common cost by a sensible base" logic as overhead apportionment — only here the base is value (cost-bearing ability) rather than area or machine hours.
 - **Marginal Costing & Decision-Making (Ch. 14)**: the further-processing decision is a pure **relevant-cost / incremental** decision — the *same* logic as make-or-buy, accept-or-reject, and shutdown decisions. Apportioned joint cost is the classic **sunk cost** those chapters warn you to ignore.
 - **Standard Costing**: the by-product *standard cost* method links straight to standard-cost thinking.
-- **Financial Accounting (AS 2 / Ind AS 2, Inventories)**: for *inventory valuation* of joint products, accounting standards permit a *rational and consistent* allocation — typically **relative sales value (NRV)** — so this chapter's NRV method is what feeds closing-stock valuation in the financial statements too.
+- **Financial Accounting (AS 2 / Ind AS 2, Inventories)**: for *inventory valuation* of joint products, accounting standards permit a *rational and consistent* allocation — typically **relative sales value (NRV)** — so this chapter's NRV method is what feeds closing-stock valuation in the financial statements too. AS 2 specifically notes that when costs of conversion are *not separately identifiable*, they are allocated on a *rational and consistent basis such as relative sales value*, and that a by-product of immaterial value is measured at NRV and *deducted from the cost* of the main product — mirroring §4.6(A)(ii) exactly. *(Verify exact wording against current ICAI AS 2 / Ind AS 2 material.)*
 
 ---
 
@@ -411,11 +608,11 @@ A joint-cost answer that reconciles but is *messy* still loses presentation mark
 
 3. **Apportioning joint cost onto the by-product.** By-products normally get *no* joint cost. Their net realisation is *credited to* (deducted from) the joint cost of the main products. Watch the direction of the flow.
 
-4. **Gross vs net by-product realisation.** Credit the **net** figure — by-product sales *minus* its own selling and further-processing costs. Students forget the selling cost of the by-product.
+4. **Gross vs net by-product realisation.** Credit the **net** figure — by-product sales *minus* its own selling *and* further-processing costs. Students forget the selling cost, or forget the by-product's own processing cost, or both.
 
 5. **Mixed physical units.** In the physical-units method, if outputs are in different units (kg, litres, m³) you must convert to a common measure first. Apportioning across incompatible units is meaningless.
 
-6. **Negative joint-cost allocation under constant gross-margin.** When a product's separable cost is large relative to its sales, the method can assign it a *tiny or negative* joint cost. This is arithmetically correct — do not "adjust" it. State it and move on.
+6. **Negative joint-cost allocation under constant gross-margin.** When a product's separable cost is large relative to its sales, the method can assign it a *tiny or negative* joint cost. This is arithmetically correct — do not "adjust" it. State it and move on. (Example 6.)
 
 7. **Forgetting to reconcile.** The apportioned joint cost *must* sum to the given joint cost; product profits *must* sum to overall profit. If they don't, you have an error — and reconciling is where the last easy marks live.
 
@@ -424,6 +621,18 @@ A joint-cost answer that reconciles but is *messy* still loses presentation mark
 9. **"Which product is most profitable?" after constant-margin apportionment.** By construction every product shows the *same* margin — so profitability differences are an artefact of the method, not reality. The safe answer discusses this rather than naming a "winner."
 
 10. **Selling costs vs further-processing costs.** Both reduce NRV, but keep them labelled separately; some questions give distribution cost *and* processing cost and expect both deducted.
+
+11. **Market value "at split-off" vs "final".** In the *market-value-at-split-off* method use the split-off price, even if the product is later processed and sold dearer. Using the final price silently credits the joint stage with value the *separate* stage created. (Example 3, tweak.)
+
+12. **"Profit on sales" vs "profit on cost" in reverse-cost / by-product working.** 25% on sales ≠ 25% on cost (it is 33⅓% on cost). Convert the margin base before working backwards, or the whole by-product credit is wrong. (Example 5, tweak.)
+
+13. **Using input quantity instead of output at split-off.** Apportion on *good output* emerging at split-off, not the raw material fed in. Normal-loss units carry no cost. Questions often quote input to bait the wrong denominator.
+
+14. **Weighted/survey rate confusion.** After computing weighted units, the rate is "per **weighted** unit," not per physical unit. Do not re-multiply by physical output a second time.
+
+15. **Avoidable separable *fixed* cost in the decision.** If further processing needs a dedicated fixed cost that exists only if you process, it *is* relevant (avoidable). Only the *joint* fixed cost is sunk. Do not lump all fixed costs into "sunk."
+
+16. **Deducting notional profit inside joint-product NRV.** Standard joint-product NRV deducts only separable and selling costs — *not* a profit margin. Deducting profit is a *by-product reverse-cost* feature. Do it only if the question explicitly asks you to work back a margin. (Contrast §4.4 and §4.6.)
 
 ---
 
@@ -435,11 +644,11 @@ Strip everything away and you are left with four irreducible ideas:
 
 2. **The split-off point is the fault line.** Left of it, cost is joint and must be *apportioned by a rule*. Right of it, cost is separable and *traced directly*. Get this line right and the whole problem organises itself.
 
-3. **Share common cost by cost-bearing ability.** The most defensible rule lets each product bear cost in proportion to the *value* it derives from the shared process — hence value/NRV methods dominate, with physical units reserved for genuinely homogeneous outputs.
+3. **Share common cost by cost-bearing ability.** The most defensible rule lets each product bear cost in proportion to the *value* it derives from the shared process — hence value/NRV methods dominate, with physical units (and its weighted/survey refinement) reserved for genuinely homogeneous or price-less outputs.
 
 4. **Decisions use incremental, not apportioned, cost.** Whether to process further, or which product to push, depends only on costs and revenues that *change* with the decision. Apportioned joint cost is sunk — it must be *reported* for stock valuation but *ignored* for decisions. Confusing the two is the master-error of this topic.
 
-By-products are just the degenerate case: too small to deserve their own cost, so we let their sale *recover* joint cost off the main products.
+By-products are just the degenerate case: too small to deserve their own cost, so we let their sale *recover* joint cost off the main products. And when even that logic breaks — a "product" whose separable cost exceeds its sale value (negative NRV) — the numbers are telling you the real question is not *how to apportion* but *whether to make or process it at all*.
 
 ---
 
@@ -449,29 +658,33 @@ By-products are just the degenerate case: too small to deserve their own cost, s
 - *Joint cost* = cost incurred up to split-off (unsplittable, apportioned by convention).
 - *Split-off point* = where products become separately identifiable.
 - *Separable cost* = post-split-off cost, traced directly.
-- *Joint product* = significant value; *By-product* = minor, incidental value.
+- *Joint product* = significant value; *By-product* = minor, incidental value; *Scrap* = residual material value (credited back like a by-product); *Waste* = nil/negative value (disposal cost added to process).
+- *Apportion* (split a shared cost) vs *Allocate* (charge a whole traceable cost) — joint cost is only ever *apportioned*.
 
 **Apportionment methods**
 
 | Method | Basis | Best when | Key formula |
 |---|---|---|---|
 | Physical units | Quantity (common unit) | Products similar in value/unit | Rate = Joint cost ÷ total units |
+| Weighted / survey | Physical units × point factor | No prices but products differ in richness | Rate = Joint cost ÷ total weighted units |
 | Market value at split-off | Sales value at split-off | Split-off price exists | Ratio = qty × split-off price |
 | **NRV** (workhorse) | Final sales − separable & selling costs | Products processed further | NRV = Final sales − further-proc − selling |
 | Constant gross-margin | Force equal GP% | Products deemed equally profitable | Joint cost = (Sales − GP) − separable |
 
 **Why NRV is popular** — handles further-processed products, respects cost-bearing ability, isolates the joint stage's own value contribution, keeps separable costs visible for decisions.
 
-**By-product treatment (preferred)** — credit **net** realisation (sales − its selling/processing costs) as a **deduction from joint cost** of the main products; no joint cost pushed onto the by-product. (Other methods: other income; opportunity/replacement cost if consumed internally; standard cost; reverse-cost.)
+**By-product treatment (preferred)** — credit **net** realisation (sales − its selling/processing costs) as a **deduction from joint cost** of the main products; no joint cost pushed onto the by-product. (Other methods: other income; opportunity/replacement cost if consumed internally; standard cost; reverse-cost with a worked-back profit margin.)
 
 **Further-processing rule**
 $$\text{Process further iff } (\text{Sales after} - \text{Sales at split-off}) > \text{Further-processing cost}$$
-> Apportioned joint cost is **SUNK — ignore it** in the decision.
+> Apportioned joint cost is **SUNK — ignore it** in the decision. But *avoidable separable fixed cost* caused by processing **is** relevant.
 
 **Reconciliation checklist**
 1. Σ apportioned joint cost = given joint cost. ✔
 2. Σ product profits = overall (independently computed) profit. ✔
 3. By-product net realisation deducted, not added as forward cost. ✔
 4. NRV used (not final sales) whenever there is further processing. ✔
+5. Decision table kept separate from the profit statement; joint cost never inside it. ✔
+6. Margin base ("on sales" vs "on cost") converted correctly in any reverse-cost working. ✔
 
 **One-line memory hook**: *Share the womb by worth, trace the birth by hand, and decide by what changes.*

@@ -89,7 +89,7 @@ In words: CRR plugs *only the part of the face value that was NOT refilled by a 
 
 - CRR is created by transferring from **free reserves / distributable profits** (e.g., General Reserve, Surplus in Statement of P&L, Dividend Equalisation Reserve).
 - **Securities Premium** and **Capital Reserve** are *not* free profits available for dividend and therefore **cannot** be used to create CRR.
-- **Use of CRR:** By **Section 55(4)** read with **Section 63**, CRR may be used **only** for issuing **fully paid bonus shares** to members. It is treated as paid-up share capital for this purpose. It cannot be used to pay dividends, write off losses, or write off expenses.
+- **Use of CRR:** By the **proviso to Section 55(2)** (which requires the transfer to CRR and states the CRR "shall be treated as if it were paid-up share capital") read with **Section 63(1)** (CRR is a listed permitted source for a bonus issue), CRR may be used **only** for issuing **fully paid bonus shares** to members. (Note: there is no "Section 55(4)" — Section 55 has only sub-sections (1), (2) and (3).) It is treated as paid-up share capital for this purpose. It cannot be used to pay dividends, write off losses, or write off expenses.
 
 The CRR is, in effect, a statutory quarantine: profits that could have been paid out as dividend are permanently locked into a capital-equivalent reserve, so the redemption does not net-reduce the protected fund.
 
@@ -594,7 +594,7 @@ If you can derive the three Section 55 conditions from the capital-maintenance p
 **CRR facts:**
 - Source: free reserves / P&L surplus **only** (NOT Securities Premium, NOT Capital Reserve, NOT Revaluation Reserve).
 - Reduced by fresh issue of **shares** (equity OR preference); **not** reduced by debentures/loans.
-- Use: **only** fully paid **bonus shares** (Sec 55(4) + Sec 63). Treated as paid-up capital.
+- Use: **only** fully paid **bonus shares** (proviso to Sec 55(2) + Sec 63(1)). Treated as paid-up capital.
 - Amount = nominal value only; **premium excluded**.
 
 **Premium on redemption:**

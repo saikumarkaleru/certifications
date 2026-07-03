@@ -47,7 +47,7 @@
 | Reduction of capital | 66 | Special res + **Tribunal** confirmation |
 | Buy-back | 68 | ≤ **25%** paid-up + free reserves; debt-equity ≤ 2:1; **cooling 1 yr**; ≤10% by board res., >10% special res. |
 | Bonus shares | 63 | Out of free reserves/SP/CRR; not in lieu of dividend; can't reissue forfeited |
-| Sweat equity | 54 | 1 yr after commencement; special res. |
+| Sweat equity | 54 | special res.; **no 1-yr wait** (that condition omitted w.e.f. 7 May 2018) |
 | Prohibition on preference share | 55 | Redeemable ≤ **20 yrs** (infra 30 yrs) |
 | Debenture Redemption Reserve | 71 | Out of profits; no voting rights on debentures |
 

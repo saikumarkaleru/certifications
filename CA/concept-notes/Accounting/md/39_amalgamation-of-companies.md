@@ -556,7 +556,7 @@ PC (B) ₹18,00,000 − Net assets ₹19,00,000 = **Capital Reserve ₹1,00,000*
 | Capital Reserve A/c (40,000 + 25,000) | 65,000 | |
 | &nbsp;&nbsp;To Bank A/c | | 65,000 |
 
-*(Note: treatment of liquidation expenses varies by exam convention — some charge to P&L. The safe disclosure is to state the assumption. Adjusting Capital Reserve keeps it as an acquisition-related cost.)*
+*(Note: treatment of the transferee's amalgamation/liquidation expenses varies by convention — AS 14 gives no explicit rule. The **more commonly taught ICAI default** charges these to the **Statement of Profit and Loss** (they are period costs of the acquirer); some texts add them to Goodwill; adjusting Capital Reserve, as done here, treats them as an acquisition-related cost. If a question is silent, charging to P&L is the safer default — always state your assumption.)*
 
 Capital Reserve after expenses = ₹5,00,000 − ₹65,000 = **₹4,35,000**.
 

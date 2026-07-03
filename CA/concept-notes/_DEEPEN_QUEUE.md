@@ -14,4 +14,4 @@
 
 **Totals:** Accounting 40 · Law 14 · Cost 15 · Audit 12 · FM-SM 15 · Taxation 23 = **119 chapters (~20 batches of 6).**
 
-Progress: ✅ **Accounting done (40/40, PDF rebuilt 23MB)** · 🟡 Law in progress · ⬜ Cost, Audit, FM-SM, Taxation. (40/119 chapters deep.)
+Progress: ✅✅✅ **DONE.** All 119 chapters 2x-deepened + 33 audit corrections applied. All 6 *_FULL.pdf rebuilt final.

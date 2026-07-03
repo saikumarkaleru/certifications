@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 04 — Cost of Capital
 
 ## 1. The Problem — Money Is Not Free, So What Return Must a Project Clear?
@@ -13,6 +15,20 @@ This gives us the central role of cost of capital:
 > **The cost of capital is the minimum rate of return a project must earn to leave the firm's value unchanged. It is the hurdle rate every investment must clear.**
 
 That is why the invest decision and the finance decision are joined at the hip. You cannot decide *whether* to invest until you know *what it costs* to finance. The three FM decisions — invest, finance, distribute — all route through this one number.
+
+**Three faces of the same idea (the examiner tests all three).** Cost of capital is defined in three equivalent ways, and a theory question may quote any of them:
+
+- **The financing (supplier) view** — the *return demanded by suppliers of capital*. This is the definition we build the formulas from.
+- **The opportunity-cost (investor) view** — the *return the firm's investors could earn on the next-best investment of equal risk*. This is why retained earnings are not free (§4.4) and why we discount at the rate investors could get elsewhere.
+- **The break-even (firm) view** — the *minimum required rate of return that keeps the market price of the share unchanged*. Earn exactly the cost of capital and the share price neither rises nor falls; earn more and it rises. This is the view that links cost of capital directly to wealth maximisation.
+
+**A component has three sub-costs baked into it.** When ICAI's study material dissects "cost of capital" conceptually, each source's cost is the sum of:
+
+- **Return at zero risk** (the pure time-value of money, roughly the risk-free rate),
+- **Business-risk premium** (compensation for the operating uncertainty of the firm's assets), and
+- **Financial-risk premium** (extra compensation because the firm uses debt, which magnifies the volatility of equity returns).
+
+Symbolically, cost of capital $K = r_0 + b + f$, where $r_0$ is the riskless return, $b$ the business-risk premium and $f$ the financial-risk premium. You rarely compute this decomposition numerically, but it explains *why* equity costs more than debt (equity absorbs both risk premiums in full) and why a highly-levered firm's equity gets dearer (the $f$ term swells).
 
 ```mermaid
 flowchart LR
@@ -39,6 +55,10 @@ Two subtleties fall straight out of the analogy, and they matter for the exam:
 - **Riskier tools cost more.** The lathe (equity — last in line, no guaranteed return) costs more to rent than the drill (debt — first in line, contractually protected). We'll see cost of equity is always the highest component.
 - **The blend depends on the *value* of each tool, not what you paid for it years ago.** If you want to know what it costs to keep operating *today*, you use *today's* rental rates on *today's* values — this is the seed of the market-weights argument later.
 
+**Explicit vs implicit cost — a distinction the theory paper loves.** The "rent" you *pay in cash* (interest, dividend) is the **explicit cost** — the discount rate that equates the cash a source brings in with the present value of the cash outflows it triggers. But some costs are **implicit** (or *imputed*): they are opportunity costs that never appear as a cash payment. Retained earnings have a **zero explicit cost** (the firm pays nothing to keep them) but a very real **implicit cost** — the return shareholders forgo. When a firm uses debt today, it also incurs an *implicit* cost on future capital, because piling on debt now makes tomorrow's equity riskier and dearer. Whenever a question asks "is retained earnings free?", it is testing whether you can separate explicit (cash) from implicit (opportunity) cost.
+
+**Average vs marginal, previewed.** The blended rent computed on the *whole existing pool* is the **average** cost of capital. The rent on the *next tool you rent* is the **marginal** cost. For an incremental job (a new project financed with new money), it is the marginal rent that matters — a point we develop fully in §4.6.
+
 ---
 
 ## 3. Why It's Built This Way — Risk, Priority, and the Tax System
@@ -54,6 +74,8 @@ Cost of debt < cost of preference < cost of equity. If your computed numbers vio
 **Fact 2 — Interest is tax-deductible; dividends are not.** The tax law treats interest on debt as an *expense* that reduces taxable profit. Dividends (to equity or preference) are paid *out of after-tax profit* — they get no such deduction. This single asymmetry is the reason debt is cheaper than its coupon suggests, and it forces us to compute cost of debt on a **post-tax** basis. It is the deepest "why" in the chapter, so we'll unpack the mechanics fully in §4.
 
 **Fact 3 — We finance with a *mix*, so we need a *weighted average*.** No real firm is 100% equity or 100% debt. It raises a pool. A project isn't funded by "the debt" or "the equity" specifically — it is funded by the *pool*. Therefore the relevant hurdle is the *average* cost of the pool, weighted by each source's share. Hence WACC — also called the **overall / composite cost of capital**, denoted $K_o$.
+
+**Why not just use the cost of the source that actually funds the project?** Students often ask: if a new plant is bought entirely with a fresh 9% loan, why not use 9% as the hurdle instead of a 14% WACC? Because financing is *fungible*. Loading debt onto this project consumes the firm's borrowing capacity and forces the *next* project to be funded with costlier equity. Judging each project by the specific, temporarily-cheap money that happens to fund it would accept a string of low-return projects merely because debt was drawn first, then reject good projects later when only dear equity is left. The firm must therefore apply a **pooled, target-structure WACC** so every project faces the same, fair, blended hurdle. This is the "**pooling principle**", and it is the single most important reason WACC exists.
 
 ```mermaid
 flowchart TD
@@ -78,6 +100,8 @@ flowchart TD
 
 We build WACC bottom-up: first the cost of each individual source, then the blend. Notation used throughout: $K_e$ = cost of equity, $K_r$/$K_s$ = cost of retained earnings, $K_p$ = cost of preference, $K_d$ = cost of debt, $K_o$ = WACC. $t$ = tax rate.
 
+**One idea unifies every component cost.** Each source's cost is the **discount rate that equates the net cash the source brings into the firm today with the present value of every cash outflow the firm must make to that supplier.** Interest, dividend, and redemption are outflows; net proceeds are the inflow. The "exact" way to solve for that rate is IRR/YTM (used for redeemable debt below); the ratio formulas ICAI uses are quick approximations of it. Keep this in mind and every formula reads as "annual cost ÷ money at your disposal."
+
 ### 4.1 Cost of Debt ($K_d$) — and why the tax shield changes everything
 
 Debt has an explicit, contractual cost: the **interest** the firm promises to pay. That is the starting point. But two adjustments convert the coupon into the true economic cost.
@@ -90,6 +114,8 @@ The mechanism, expressed as a formula:
 $$K_d = I \,(1 - t)$$
 
 where $I$ is the interest rate (or interest amount over the relevant base). Equivalently, **post-tax cost = pre-tax cost × (1 − t)**. This is *the* reason firms favour a slice of debt: the tax system quietly discounts it. Preference and equity get **no** such adjustment because their dividends aren't deductible.
+
+> **Tax-shield caveat (theory trap).** The shield only bites if the firm is **profitable enough to pay tax**. A loss-making firm, or one already sheltering profits with carried-forward losses, gets *no* deduction — its effective cost of debt is the full pre-tax coupon. If a problem states the firm has no taxable income, drop the (1 − t) factor. Examiners occasionally slip this in as a one-line qualifier.
 
 **Adjustment B — net proceeds, not face value.**
 The firm rarely receives the full face value. It may issue at a discount, pay flotation costs, or redeem at a premium. So we compute cost on the **net proceeds** actually received and account for the **redemption** actually paid.
@@ -110,6 +136,26 @@ Read it as reasoning, not symbols:
 
 $RV$ = redemption value, $NP$ = net proceeds. Note the redemption premium/discount adjustment is **not** tax-adjusted in the standard ICAI treatment (only interest carries the tax shield).
 
+**The exact method — Yield to Maturity (YTM) by interpolation.** When a problem says "find the cost of debt by the present-value / YTM method," the approximation above won't do. You find the rate $K_d$ (post-tax) at which:
+
+$$NP = \sum_{y=1}^{n} \frac{I(1-t)}{(1+K_d)^y} + \frac{RV}{(1+K_d)^n}$$
+
+Procedure: pick two trial rates, compute NPV of the debt cash flows at each, and interpolate:
+
+$$K_d = L + \frac{NPV_L}{NPV_L - NPV_H}\times (H - L)$$
+
+where $L$ and $H$ are the low and high trial rates and $NPV_L$, $NPV_H$ the corresponding net present values (inflow $NP$ minus PV of outflows). The approximation formula is just a shortcut that lands close to this IRR; use YTM only when the question demands it.
+
+**Cost of a term loan / bank borrowing.** For a plain bank loan there is no premium or discount — net proceeds equal face value and redemption equals face value. The cost collapses to simply **$K_d = \text{Interest rate}\times(1 - t)$**. If the loan carries an upfront processing fee, reduce the net proceeds accordingly.
+
+**Cost of a zero-coupon bond (deep-discount bond).** Here there is *no* annual interest; the entire return is the gap between issue price and redemption. The cost is the compound rate linking the two:
+
+$$K_d = \left(\frac{RV}{NP}\right)^{1/n} - 1 \quad\text{(pre-tax)}$$
+
+The implicit annual "interest" (the accreted discount) is tax-deductible each year, so the post-tax cost is lower; unless the problem gives the year-wise amortisation, ICAI usually accepts the pre-tax compound rate and notes the tax effect qualitatively. Flag as "apply tax treatment per the problem's instruction."
+
+**Floating-rate note.** If a question quotes debt as "base rate + spread," use the current all-in rate as $I$; the (1 − t) treatment is unchanged.
+
 ### 4.2 Cost of Preference Capital ($K_p$) — a fixed dividend, no tax shield
 
 Preference shares pay a fixed dividend, ranking ahead of equity but behind debt. The logic mirrors debt — *but with no (1 − t) factor*, because preference dividend is paid from after-tax profit and earns no deduction.
@@ -124,11 +170,13 @@ $$K_p = \frac{PD + \dfrac{(RV - NP)}{n}}{\dfrac{RV + NP}{2}}$$
 
 where $PD$ = annual preference dividend (₹). Same structure as redeemable debt, tax factor dropped.
 
-> Exam nuance: if the problem mentions **Dividend Distribution Tax (DDT)** or a grossing-up on preference dividend, add it to $PD$. Post-2020 Indian law abolished DDT, so modern ICAI problems usually ignore it unless explicitly stated. Follow the problem.
+> Exam nuance: if the problem mentions **Dividend Distribution Tax (DDT)** or a grossing-up on preference dividend, add it to $PD$. Post-2020 Indian law abolished DDT, so modern ICAI problems usually ignore it unless explicitly stated. Follow the problem. *(Verify current ICAI material / AY for the DDT position applicable to your attempt.)*
+
+**Why preference sits between debt and equity — and can it ever misbehave?** Its dividend is fixed (like debt's coupon) but *not* contractually enforceable — a company can skip a preference dividend without triggering default, whereas skipping interest is default. So preference is riskier than debt (hence $K_p > K_d$) but safer than equity (fixed claim, priority over equity, hence $K_p < K_e$). *Edge case the examiner can spring:* if preference is issued at a **discount** and redeemable at a **premium**, both the $NP$ (small) and the $(RV − NP)$ term (large) push $K_p$ up — occasionally far enough to *approach or exceed* a heavily tax-shielded $K_d$. That does not violate the ordering, because the ordering compares like-for-like *risk*; verify your arithmetic but don't panic if a deeply-discounted preference edges near debt.
 
 ### 4.3 Cost of Equity ($K_e$) — the hardest, because equity makes no promise
 
-Debt and preference *tell* you their cost (the coupon, the fixed dividend). Equity promises nothing — no fixed dividend, no maturity. So its cost must be *inferred* from what shareholders *expect*. Two models dominate; know both.
+Debt and preference *tell* you their cost (the coupon, the fixed dividend). Equity promises nothing — no fixed dividend, no maturity. So its cost must be *inferred* from what shareholders *expect*. Several models exist; know the first two cold and the rest by name.
 
 **Model 1 — Dividend Valuation / Dividend Growth Model (Gordon).**
 The intuition: a share is worth the present value of all future dividends. Rearranging that valuation to solve for the return the market is implicitly demanding gives us $K_e$.
@@ -145,7 +193,7 @@ where $D_1$ = expected dividend **next year** = $D_0(1+g)$, $P_0$ = current mark
 
 Read it as economics: the shareholder's return has two parts — the **dividend yield** ($D_1/P_0$, cash in hand) plus the **capital gain** ($g$, the price growing as dividends grow). Their sum is the total return she demands, which is exactly the firm's cost of equity.
 
-*Estimating $g$:* if dividends grew from $D_{past}$ to $D_{now}$ over $n$ years, $g = \left(\dfrac{D_{now}}{D_{past}}\right)^{1/n} - 1$. Or, from fundamentals, $g = b \times r$ where $b$ = retention ratio and $r$ = return on equity (the **growth = retention × ROE** relationship).
+*Estimating $g$:* if dividends grew from $D_{past}$ to $D_{now}$ over $n$ years, $g = \left(\dfrac{D_{now}}{D_{past}}\right)^{1/n} - 1$. Or, from fundamentals, $g = b \times r$ where $b$ = retention ratio and $r$ = return on equity (the **growth = retention × ROE** relationship). *Watch the exponent:* if dividends are given for years 0 through 5, that is **5 years of growth** (n = 5), not 6 — count the *intervals*, not the data points.
 
 **Model 2 — Capital Asset Pricing Model (CAPM).**
 The intuition: a shareholder demands the **risk-free rate** as a baseline, plus a **premium for risk** — and only *systematic* (non-diversifiable, market-wide) risk is rewarded, scaled by the stock's **beta**.
@@ -153,6 +201,18 @@ The intuition: a shareholder demands the **risk-free rate** as a baseline, plus 
 $$K_e = R_f + \beta\,(R_m - R_f)$$
 
 where $R_f$ = risk-free return (govt securities), $R_m$ = expected market return, $\beta$ = the stock's sensitivity to market movements, and $(R_m − R_f)$ = the **market risk premium**. A β of 1 moves with the market; β > 1 is more volatile (higher cost); β < 1 is defensive (lower cost). CAPM shines when the firm pays no/erratic dividends, where Gordon's model breaks down.
+
+*Why only systematic risk is priced:* a diversified investor has already washed out firm-specific (unsystematic) risk by holding many stocks, so the market refuses to pay her for bearing risk she could have diversified away. She is compensated *only* for the risk she cannot escape — the market-wide (systematic) component, captured by β. This is the conceptual heart of CAPM and a favourite one-mark theory point.
+
+**Model 3 — Bond Yield plus Risk Premium approach.** A quick practitioner's estimate: since equity is riskier than the firm's own debt, add a judgement-based equity risk premium to the firm's pre-tax cost of debt:
+
+$$K_e = \text{Yield on the firm's long-term debt} + \text{Risk premium}$$
+
+Used when neither reliable dividends nor a trustworthy β are available. Know it by name; ICAI occasionally references it.
+
+**Model 4 — Realised-yield / earnings-price approach.** In the absence of growth data, the **earnings yield** $E/P$ (earnings per share ÷ price) is sometimes used as a rough $K_e$. It equals the Gordon result *only* under the special assumption of zero growth and a 100% payout, so treat it as a crude proxy, not a general formula.
+
+**Reconciling Gordon and CAPM.** The two rarely give the same number because they use different inputs (dividend expectations vs market-risk pricing). That is normal and *not* a mistake. In a problem that supplies data for both, ICAI usually expects you to compute both and either average them or use the one the question emphasises — read the requirement carefully.
 
 ### 4.4 Cost of Retained Earnings ($K_r$ or $K_s$) — the "free money" illusion
 
@@ -167,6 +227,8 @@ Two refinements can *lower* $K_r$ slightly below $K_e$ (apply only if the proble
 - **Brokerage/commission cost ($b$):** to reinvest a received dividend elsewhere, the shareholder pays brokerage, reducing what they'd effectively deploy: $K_r = K_e(1 - t_p)(1 - b)$.
 
 Default for the exam unless told otherwise: **$K_r = K_e$**. But note the *difference from fresh equity*: fresh equity issue incurs **flotation costs** (reducing net proceeds), so cost of *new* equity is typically *higher* than cost of retained earnings. Retained earnings avoid issue costs.
+
+> **The logic of the (1 − t_p)(1 − b) adjustment, made concrete.** Say the firm could pay ₹100 of dividends. The shareholder receives it, loses personal tax at say 10% (₹10), and pays 2% brokerage (₹1.80 on the remaining ₹90) to reinvest, leaving ₹88.20 actually working elsewhere. So retaining ₹100 inside the firm only needs to "beat" a ₹88.20 alternative — hence the opportunity cost is scaled down by (1 − t_p)(1 − b). The adjustment reflects *friction* the shareholder avoids by letting the firm retain. Only apply it when both figures are given; otherwise $K_r = K_e$.
 
 ### 4.5 The Blend — WACC ($K_o$)
 
@@ -187,7 +249,13 @@ Two ways to weight, and the choice is examined heavily.
 
 **Why market weights are preferred (the reasoning):** WACC is meant to be the *hurdle rate for raising money today to fund tomorrow's projects*. The relevant cost is what investors demand *now*, and that is embedded in *current market prices*, not the historical figures frozen in the balance sheet. A share issued at ₹10 par years ago may trade at ₹150 today — equity's true weight in the firm's economic value is driven by the ₹150, not the ₹10. Using book weights would understate equity's (larger, costlier) role and distort the hurdle rate. So: **market-value weights give a WACC that reflects the real, current cost of capital.** (The practical objection — prices move daily and unlisted debt has no quote — is why book weights survive as a fallback.)
 
+**A third weighting basis you must recognise — marginal (target) weights.** Some questions specify the *proportions in which fresh funds will be raised* — the firm's **target capital structure**. When the decision is about new financing, these **marginal weights** are the most correct of all, because WACC is meant to price the *next* rupee. Example 3 uses exactly this basis. So the full hierarchy of correctness for a *financing* decision is: **marginal (target) weights > market weights > book weights.**
+
 > Trap: When market weights are used and the firm has **retained earnings**, they usually have no separate market price. Convention: fold retained earnings into the **market value of equity** (equity's market cap already reflects retained profits). Alternatively, if instructed, split the equity market value between fresh equity and retained earnings in the *book-value proportion*. Follow the problem's instruction.
+
+**Book value of debt vs market value of debt.** For redeemable debt, the market value is the PV of its remaining coupons and redemption at the current yield — often given directly as a quoted price. Use the *market* price for market-weight WACC and the balance-sheet (face) amount for book-weight WACC. Do not mix a market weight with a book cost or vice versa within one column.
+
+**Should component costs be pre-tax or post-tax in the blend?** Always **post-tax throughout**. WACC is used to discount *post-tax* project cash flows in NPV, so consistency demands post-tax component costs. Debt enters at $I(1 − t)$; equity and preference are already effectively post-tax (no shield to remove). Mixing a pre-tax $K_d$ into WACC is a silent, marks-losing error.
 
 ### 4.6 Marginal Cost of Capital (MCC) — the cost of the *next* rupee
 
@@ -199,6 +267,8 @@ $$\text{Break point} = \frac{\text{Total amount of cheaper source available}}{\t
 
 For *marginal* decisions, the MCC — not the historical WACC — is the correct hurdle. If the firm keeps its capital-structure proportions unchanged and component costs constant, MCC = WACC. When new financing shifts costs or proportions, MCC diverges and governs the accept/reject line for incremental projects.
 
+**Multiple break points and the MCC schedule.** A single raise can cross *several* break points — one where retained earnings run out, another where cheap debt is exhausted and a higher coupon kicks in, and so on. Each break point starts a new "step," and the sequence of WACCs across steps forms the **marginal cost of capital schedule** (a rising staircase). To find the break points, compute one for *each* source that has a limited cheap tranche, then sort them ascending; between consecutive break points the MCC is constant, and it jumps at each. Pair this schedule against the firm's ranked investment opportunities (the **Investment Opportunity Schedule**): accept projects from the highest return downward until a project's return falls below the MCC prevailing at that cumulative level of financing. The intersection is the firm's **optimal capital budget**.
+
 ```mermaid
 flowchart TD
   A["Need new capital for a project"] --> B["Raise incremental funds in target proportions"]
@@ -208,6 +278,16 @@ flowchart TD
   E --> F["Use MCC as hurdle for the new project"]
 ```
 *Figure 3: Marginal cost of capital is the hurdle for incremental investment.*
+
+```mermaid
+flowchart LR
+  A["Rank projects by return high to low"] --> B["Draw the Investment Opportunity Schedule"]
+  C["Build the rising Marginal Cost of Capital schedule"] --> D["Find where project return meets MCC"]
+  B --> D
+  D --> E["Accept every project above the crossing point"]
+  E --> F["That cutoff sets the optimal capital budget"]
+```
+*Figure 4: The optimal capital budget sits where the investment opportunity schedule meets the marginal cost of capital.*
 
 ---
 
@@ -369,6 +449,96 @@ $$\text{MCC} = \frac{(30 × 13.28\%) + (20 × 13.64\%)}{50} = \frac{398.4 + 272.
 
 ---
 
+### Example 4 (Exam-hard) — Cost of equity by three methods, then WACC, and a reconciliation
+
+**Data.** Aster Ltd, tax rate 30%. The board wants the cost of equity estimated by *three* approaches and then a book-value WACC.
+
+- Equity: 5,00,000 shares of ₹10, currently quoted at ₹64. Last dividend $D_0$ = ₹4, and dividends have grown steadily from ₹2.72 five years ago to ₹4 now.
+- CAPM inputs: $R_f$ = 6%, market return $R_m$ = 14%, β = 1.10.
+- Bond-yield-plus-premium: the firm's long-term debt yields 11% pre-tax; a judgement risk premium of 5% applies.
+- Debt in the books: ₹40,00,000 of 11% debentures at par, irredeemable, issued at par (net proceeds ₹100).
+
+**Step 1 — Estimate the growth rate $g$ from dividend history.**
+Dividends grew from ₹2.72 to ₹4 over **5 years** (5 intervals).
+$$g = \left(\frac{4}{2.72}\right)^{1/5} - 1 = (1.4706)^{0.2} - 1$$
+$(1.4706)^{0.2}$: take ln → ln 1.4706 = 0.3857; ÷5 = 0.07714; $e^{0.07714}$ = 1.0802.
+$$g = 1.0802 - 1 = 0.0802 \approx \mathbf{8\%}$$
+
+**Step 2 — Cost of equity, Gordon.**
+$D_1 = D_0(1+g) = 4 × 1.08 = ₹4.32$.
+$$K_e = \frac{4.32}{64} + 0.08 = 0.0675 + 0.08 = 0.1475 = \mathbf{14.75\%}$$
+
+**Step 3 — Cost of equity, CAPM.**
+$$K_e = 6\% + 1.10\,(14\% - 6\%) = 6\% + 1.10 × 8\% = 6\% + 8.8\% = \mathbf{14.80\%}$$
+
+**Step 4 — Cost of equity, Bond yield + risk premium.**
+$$K_e = 11\% + 5\% = \mathbf{16.00\%}$$
+
+**Reconciliation.** Gordon (14.75%) and CAPM (14.80%) agree closely — reassuring, because both draw on market-consistent inputs (the ₹64 price already embeds the 8% growth the market expects, and β prices the same equity risk). The bond-yield method (16%) sits higher because its 5% premium is a *judgement* add-on, deliberately conservative. For WACC we use the **CAPM/Gordon consensus of ≈14.78%** (average of the two market-based figures); the bond-yield number is a sanity check, not the driver.
+
+Take $K_e = \dfrac{14.75 + 14.80}{2} = \mathbf{14.78\%}$.
+
+**Step 5 — Cost of irredeemable debt (post-tax).**
+$$K_d = \frac{11(1 - 0.30)}{100} = \frac{7.70}{100} = \mathbf{7.70\%}$$
+
+**Step 6 — Book-value WACC.**
+Equity book value = 5,00,000 × ₹10 = ₹50,00,000. Debt = ₹40,00,000. Total = ₹90,00,000.
+
+| Source | Book value (₹ lakh) | Weight | Cost | Weight × Cost |
+|---|---|---|---|---|
+| Equity | 50 | 0.5556 | 14.78% | 8.211% |
+| Debt | 40 | 0.4444 | 7.70% | 3.422% |
+| **Total** | **90** | **1.0000** | | **11.633%** |
+
+**WACC ≈ 11.63%.**
+
+**Self-check.** $K_d$ 7.70% < $K_e$ 14.78% ✓; weights sum to 1.0000 ✓; WACC lies *between* the two component costs (7.70% and 14.78%) as any weighted average must — a quick sanity test that catches gross slips. ✓
+
+---
+
+### Example 5 (Examiner-tweak drill) — Zero-coupon debt, loss-making tax edge, and a break point on debt
+
+**Data.** Nimbus Ltd, target structure **Equity 60%, Debt 40%**, plans to raise ₹1,00,00,000. Tax rate 30%.
+
+- Equity: price ₹150, $D_1$ = ₹15, g = 7%. Retained earnings available: ₹24,00,000 (no flotation). Fresh equity net proceeds ₹140 (flotation ₹10).
+- Debt tranche 1: bank loan up to ₹20,00,000 at 9% (post-tax already? No — pre-tax coupon 9%).
+- Debt tranche 2: beyond ₹20,00,000, the firm must issue a **zero-coupon bond**, face ₹100, 5-year maturity, issued at ₹68.
+- Twist: the firm expects a tax loss this year, so **no tax shield is available on debt this year** — compute debt cost on a *pre-tax* basis and flag it.
+
+**Step 1 — Cost of retained earnings.**
+$$K_r = \frac{15}{150} + 0.07 = 0.10 + 0.07 = \mathbf{17.00\%}$$
+
+**Step 2 — Cost of fresh equity.**
+$$K_e = \frac{15}{140} + 0.07 = 0.1071 + 0.07 = 0.1771 = \mathbf{17.71\%}$$
+
+**Step 3 — Cost of debt tranche 1 (bank loan), no tax shield this year.**
+Because there is no taxable income, the shield is worthless: $K_{d1} = 9\% × (1 − 0) = \mathbf{9.00\%}$ (pre-tax). *Flag: if the firm returns to profit, this falls to 9%(1 − 0.30) = 6.30% — verify the tax position stated in the problem.*
+
+**Step 4 — Cost of debt tranche 2 (zero-coupon), no tax shield.**
+$$K_{d2} = \left(\frac{100}{68}\right)^{1/5} - 1 = (1.4706)^{0.2} - 1 = 1.0802 - 1 = 0.0802 = \mathbf{8.02\%}$$
+(No annual coupon, so no shield to worry about this year anyway; the accreted discount would be deductible in a profitable year — flag for the tax-paying case.)
+
+**Step 5 — Break points.**
+*Equity break point* (retained earnings exhaust): $\dfrac{24,00,000}{0.60} = ₹40,00,000$.
+*Debt break point* (₹20L bank loan exhausts, weight of debt 40%): $\dfrac{20,00,000}{0.40} = ₹50,00,000$.
+So as total financing climbs: cheap equity (retained) runs out at ₹40L; cheap debt (bank loan) runs out at ₹50L. Two break points → three MCC steps.
+
+**Step 6 — MCC schedule.**
+
+*Step A: ₹0 – ₹40L* (retained equity 17.00%, bank debt 9.00%):
+$$0.60 × 17.00\% + 0.40 × 9.00\% = 10.20\% + 3.60\% = \mathbf{13.80\%}$$
+
+*Step B: ₹40L – ₹50L* (fresh equity 17.71%, bank debt still 9.00%):
+$$0.60 × 17.71\% + 0.40 × 9.00\% = 10.626\% + 3.60\% = \mathbf{14.23\%}$$
+
+*Step C: ₹50L – ₹100L* (fresh equity 17.71%, zero-coupon debt 8.02%):
+$$0.60 × 17.71\% + 0.40 × 8.02\% = 10.626\% + 3.208\% = \mathbf{13.83\%}$$
+
+**Reading the schedule.** MCC rises from 13.80% to 14.23% when retained earnings run out, then *falls* to 13.83% once the bank loan is replaced by the cheaper zero-coupon bond (8.02% < 9.00%). This non-monotonic staircase is the "examiner tweak": break points do not always push MCC *up* — a later tranche can be cheaper. **Lesson: build the schedule tranche by tranche; never assume MCC only rises.** For the full ₹1 crore raise, weight each step's rupees:
+$$\text{MCC}_{overall} = \frac{40(13.80) + 10(14.23) + 50(13.83)}{100} = \frac{552.0 + 142.3 + 691.5}{100} = \frac{1385.8}{100} = \mathbf{13.86\%}$$
+
+---
+
 ## 6. Presentation / Format — How to Lay It Out in the Exam
 
 Examiners award marks for structure, not just the final number. Adopt this discipline:
@@ -379,6 +549,9 @@ Examiners award marks for structure, not just the final number. Adopt this disci
 4. **State the weighting basis explicitly** ("WACC using market value weights") — if the question doesn't specify, compute **both** and note market is theoretically preferred.
 5. **Carry 2 decimal places** in percentages; state final WACC to two decimals.
 6. **Write a one-line interpretation** ("Any project must earn > X% to add value") — it signals conceptual understanding.
+7. **Show your net-proceeds working.** When flotation, discount or premium is involved, write "Net proceeds = Face − flotation = ₹…" on its own line so the marker sees *why* your denominator isn't the face value.
+8. **Round late, not early.** Carry intermediate figures to four decimals and round only the final percentage; premature rounding of $g$ or a component cost can shift WACC by several basis points and cost a reconciliation mark.
+9. **Label the basis of every cost as pre- or post-tax.** One explicit line — "all component costs are post-tax" — pre-empts any doubt about the debt figure.
 
 A clean WACC table skeleton:
 
@@ -399,6 +572,8 @@ A clean WACC table skeleton:
 - **→ Dividend Decision:** Cost of retained earnings ($K_r = K_e$) links straight to whether to retain or distribute. If the firm can reinvest retained earnings above $K_e$, retention creates value (Walter/Gordon models build on exactly this).
 - **→ Business Valuation:** WACC is the discount rate for Free Cash Flow to Firm (FCFF); $K_e$ discounts Free Cash Flow to Equity (FCFE).
 - **↔ Risk & Return / CAPM:** β and the market risk premium reappear across FM; cost of equity is where they first do real work.
+- **↔ Leverage & the financial-risk premium:** the $f$ term in §1's decomposition ($K = r_0 + b + f$) is exactly what the degree of financial leverage governs — this chapter and the leverage chapter are two views of the same risk premium.
+- **→ Economic Value Added (EVA):** EVA = NOPAT − (WACC × Capital Employed). WACC is the charge for capital that a firm must beat to create *economic* profit, not just accounting profit — a direct downstream use of this chapter's output.
 
 ---
 
@@ -414,6 +589,12 @@ A clean WACC table skeleton:
 8. **Marginal vs average confusion.** For a *new* project financed by *new* money, the hurdle is the **marginal** cost of capital, which can exceed the historical average once break points are crossed.
 9. **CAPM sign/premium error.** The premium is β × (R_m − R_f), *added* to R_f. Don't compute β × R_m. And (R_m − R_f) is the *excess* return, not R_m alone.
 10. **Weights not summing to 1.** Always show the totals row; a weight column that doesn't total 1.0000 flags an arithmetic slip before you lose the final marks.
+11. **Miscounting the growth period $n$.** Dividends "from year 0 to year 5" span *5* intervals, not 6. An off-by-one in the exponent of $g = (D_{now}/D_{past})^{1/n} - 1$ throws off $K_e$ and every downstream figure.
+12. **Mixing pre-tax cost with a market weight (or vice versa).** Keep the *whole* blend post-tax and keep weight-basis consistent — all market or all book — across every row. Never a market weight against a book-face cost.
+13. **Assuming MCC only rises.** A later, cheaper tranche (e.g. a low zero-coupon yield replacing a dearer loan) can *lower* a subsequent step. Build the schedule tranche by tranche instead of assuming a monotonic staircase (see Example 5).
+14. **Applying the tax shield to a loss-making firm.** No taxable profit means no deduction — use the pre-tax coupon and flag it. The (1 − t) factor is not automatic.
+15. **Grossing-up preference dividend for DDT when DDT no longer applies.** Post-2020 there is generally no DDT; only gross up if the problem explicitly says so. Verify the position for your attempt's AY.
+16. **Confusing earnings yield (E/P) with cost of equity.** E/P equals $K_e$ only under zero growth and full payout; otherwise it is a crude proxy, not the Gordon result.
 
 ---
 
@@ -421,15 +602,16 @@ A clean WACC table skeleton:
 
 Strip everything away and here is the chain of reasoning, rebuildable from scratch:
 
-- Money is supplied by investors who **demand a return**. That demanded return is the firm's **cost** for using their money.
+- Money is supplied by investors who **demand a return**. That demanded return is the firm's **cost** for using their money. Equivalently, it is the shareholders' **opportunity cost** and the **break-even** return that leaves the share price unchanged.
 - Suppliers sit in a **priority queue** (debt → preference → equity). Risk rises down the queue, so demanded return rises: $K_d < K_p < K_e$.
-- **Interest is tax-deductible; dividends are not.** So debt's true cost is $I(1 − t)$ — the government subsidises part of it. This alone makes debt the cheapest source and explains why firms lever up.
-- **Debt cost** = after-tax interest ÷ funds employed (net proceeds for perpetual; spread-the-premium average formula for redeemable).
+- Each component cost embeds a riskless return plus a **business-risk** and a **financial-risk** premium; equity carries both in full, which is why it is dearest.
+- **Interest is tax-deductible; dividends are not.** So debt's true cost is $I(1 − t)$ — the government subsidises part of it. This alone makes debt the cheapest source and explains why firms lever up. But the shield only works if the firm actually pays tax.
+- **Debt cost** = after-tax interest ÷ funds employed (net proceeds for perpetual; spread-the-premium average formula for redeemable; YTM interpolation when exactness is demanded; compound rate for zero-coupon).
 - **Preference cost** = same shape as debt but **no** tax shield.
-- **Equity cost** must be *inferred* (equity promises nothing): either dividend yield + growth (**Gordon**, $D_1/P_0 + g$) or risk-free + β × market premium (**CAPM**).
-- **Retained earnings** are *not free* — their cost is the equity shareholders' foregone return, so $K_r = K_e$.
-- The firm finances with a **mix**, so the true hurdle is the **weighted average** — WACC. Weight by **market value** because that reflects today's real cost of capital.
-- For the **next** project funded by **new** money, use the **marginal** cost of capital, which steps up once cheap sources (like retained earnings) are exhausted at their **break points**.
+- **Equity cost** must be *inferred* (equity promises nothing): dividend yield + growth (**Gordon**, $D_1/P_0 + g$), risk-free + β × market premium (**CAPM**), or **bond yield + risk premium** as a fallback. Only *systematic* risk is priced.
+- **Retained earnings** are *not free* — their cost is the equity shareholders' foregone return, so $K_r = K_e$ (an *implicit* cost with zero *explicit* cost). Fresh equity is dearer because of flotation costs.
+- The firm finances with a **mix**, so the true hurdle is the **weighted average** — WACC. Weight by **marginal/target proportions** for a financing decision, else by **market value**, because these reflect today's real cost of capital.
+- For the **next** project funded by **new** money, use the **marginal** cost of capital, which steps up (or occasionally down) as tranches change at their **break points**. Pair the MCC schedule with the investment opportunity schedule to set the optimal capital budget.
 - **The output — WACC/MCC — is the hurdle rate.** Beat it, create value; miss it, destroy value. That is why cost of capital is the hinge connecting the finance decision to the invest decision, both in service of maximising shareholder wealth.
 
 ---
@@ -442,10 +624,14 @@ Strip everything away and here is the chain of reasoning, rebuildable from scrat
 |---|---|---|
 | Irredeemable debt | $K_d = \dfrac{I(1-t)}{NP}$ | Tax shield on interest only |
 | Redeemable debt | $K_d = \dfrac{I(1-t) + (RV-NP)/n}{(RV+NP)/2}$ | Premium term **not** tax-adjusted |
+| Debt by YTM | Interpolate $K_d = L + \dfrac{NPV_L}{NPV_L - NPV_H}(H-L)$ | Exact method when demanded |
+| Term loan | $K_d = \text{rate}\times(1-t)$ | No premium/discount |
+| Zero-coupon bond | $K_d = (RV/NP)^{1/n} - 1$ | Discount accretes; tax per problem |
 | Irredeemable preference | $K_p = \dfrac{PD}{NP}$ | No (1 − t) |
 | Redeemable preference | $K_p = \dfrac{PD + (RV-NP)/n}{(RV+NP)/2}$ | No (1 − t) |
 | Equity — Gordon | $K_e = \dfrac{D_1}{P_0} + g$ | $D_1 = D_0(1+g)$; use NP for fresh issue |
 | Equity — CAPM | $K_e = R_f + \beta(R_m - R_f)$ | Only systematic risk priced |
+| Equity — Bond yield + premium | $K_e = \text{debt yield} + \text{risk premium}$ | Fallback when no dividend/β |
 | Retained earnings | $K_r = K_e$ | Opportunity cost; not free |
 | Retained (with adj.) | $K_r = K_e(1-t_p)(1-b)$ | Only if personal tax/brokerage given |
 
@@ -453,7 +639,7 @@ Strip everything away and here is the chain of reasoning, rebuildable from scrat
 
 | Method | Formula |
 |---|---|
-| From dividend history | $g = (D_{now}/D_{past})^{1/n} - 1$ |
+| From dividend history | $g = (D_{now}/D_{past})^{1/n} - 1$ (count intervals) |
 | From fundamentals | $g = b \times r$ (retention × ROE) |
 
 **WACC & marginal**
@@ -461,9 +647,12 @@ Strip everything away and here is the chain of reasoning, rebuildable from scrat
 | Item | Formula / Rule |
 |---|---|
 | WACC | $K_o = \sum(\text{component cost} \times \text{weight})$ |
-| Weights preferred | **Market value** (reflects current cost) |
+| Weights hierarchy | **Marginal/target > market > book** |
+| All costs | Post-tax; weight-basis consistent across rows |
+| Sanity test | WACC lies *between* the lowest and highest component cost |
 | Ordering check | $K_d < K_p < K_r \le K_e$ |
 | Break point | $\dfrac{\text{Amount of cheaper source}}{\text{Weight of that source}}$ |
-| Marginal cost of capital | WACC of the *incremental* funds; hurdle for new projects |
+| Marginal cost of capital | WACC of the *incremental* funds; build tranche by tranche (can rise or fall) |
+| Optimal capital budget | Where MCC schedule meets the investment opportunity schedule |
 
 **Golden rule:** Accept a project only if its return **> WACC (or MCC for new financing)**. Above the hurdle creates shareholder value; below it destroys value.

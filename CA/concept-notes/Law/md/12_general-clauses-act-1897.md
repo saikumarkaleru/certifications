@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 12 — The General Clauses Act 1897
 
 > The General Clauses Act, 1897 — the "law about laws." Central Act No. 10 of 1897, containing 30-odd sections that supply the default meanings and interpretation rules for **every** Central Act and Regulation, including the Companies Act 2013.
@@ -20,7 +22,26 @@ Now multiply this across **hundreds** of Central Acts. The Income-tax Act, the N
 
 There is a fourth, subtler abuse. When a new law repeals an old one, a clever defendant argues: "The offence I committed was under the *old* Act. The old Act no longer exists — it was repealed. Therefore there is no law under which I can be punished." Without a rule to the contrary, **repeal becomes an amnesty** for everyone with a pending case. Rights that had already accrued, liabilities already incurred, penalties already earned — all could evaporate the moment Parliament modernised a statute.
 
-So the real problem is this: **statutes need a huge amount of shared, boring, mechanical machinery** — definitions, timing rules, repeal-survival rules, service rules — and if each statute must supply its own, the result is bloated, contradictory, and full of exploitable gaps.
+There is even a **fifth** abuse worth naming, because examiners love it: the *drafting-precision* trap. Suppose a section says a duty is owed to "the Government," or that "he" shall do a thing, or that a power "may be exercised." Without shared defaults, a literalist wriggles free — "'the Government' meant only the Centre, not my State"; "the section says 'he', so it never bound a woman director"; "the Act let the officer make the rule *once*, and having made it he is now *functus officio* and cannot amend it." Each is a gap a sharp advocate would exploit if the machinery words were left undefined.
+
+So the real problem is this: **statutes need a huge amount of shared, boring, mechanical machinery** — definitions, timing rules, repeal-survival rules, service rules, gender/number rules, continuing-power rules — and if each statute must supply its own, the result is bloated, contradictory, and full of exploitable gaps.
+
+*The four (really five) failure modes the GCA exists to prevent.*
+
+```mermaid
+flowchart TD
+    A["Every statute needs the same boring machinery"] --> B["If each Act supplies its own"]
+    B --> C["Bloat and waste same definitions copied hundreds of times"]
+    B --> D["Inconsistency month means different things in different Acts"]
+    B --> E["Silent gaps no rule for holidays or last-day closure"]
+    B --> F["Repeal as amnesty pending cases collapse on modernisation"]
+    B --> G["Drafting-precision loopholes he or the Government read narrowly"]
+    C --> H["Solution write the machinery ONCE as a meta-statute"]
+    D --> H
+    E --> H
+    F --> H
+    G --> H
+```
 
 ---
 
@@ -36,7 +57,11 @@ The General Clauses Act 1897 is that meta-statute. Think of it as two things bun
 
 The governing principle is the phrase you will see again and again: **"unless there is anything repugnant in the subject or context"** and **"unless a different intention appears."** This makes the GCA a **fallback, not a dictator.** It fills silences. If the Companies Act 2013 defines "financial year" its own way (and it does, in Section 2(41)), that special definition *wins*. But where the Companies Act is *silent* — say, on how to count a 30-day period, or what "good faith" means, or whether "person" includes a firm — the GCA quietly supplies the answer.
 
+**A deeper why — the "generalia specialibus non derogant" logic.** The GCA is the *general* law of interpretation; the parent Act (Companies Act, Income-tax Act) is the *special* law. A settled maxim of construction holds that a general provision does not override a special one on the same point: *generalia specialibus non derogant* — "general things do not derogate from special things." The GCA is drafted to be consistent with that maxim. Its "unless a different intention appears" clause is not a casual afterthought; it is the *statutory embodiment* of the special-beats-general rule. That is why every trap in this chapter reduces to the same discipline: **look at the parent Act first; only fall back to the GCA when the parent Act is silent.**
+
 This is why the GCA is often called an **aid to interpretation** rather than a substantive law. It does not create rights or offences of its own. It is the invisible interpretive layer that makes every other Act complete, consistent, and gap-free. Learn it once; it pays interest across the entire statute book.
+
+**Two things the GCA is emphatically NOT.** (i) It is **not a code of interpretation** — it does not contain the literal / golden / mischief rules; those are judge-made and live in the companion "Interpretation of Statutes" chapter. The GCA supplies *fixed defaults*, not techniques for resolving genuine ambiguity. (ii) It is **not confined to old law** — because Section 3's definitions apply to "this Act and all Central Acts and Regulations made after the commencement," and Section 4 pulls some definitions back to *earlier* Acts, the GCA blankets the entire Central statute book, past and future.
 
 *The GCA as a default layer behind every Central Act.*
 
@@ -61,15 +86,21 @@ Every feature of the GCA answers a specific way the system could break. Learn th
 
 **"Why does a repealed law's *effect* survive (Section 6)?"** — Precisely to defeat the "repeal is an amnesty" trick from Section 1. If repeal automatically wiped out all pending cases and accrued rights, then every legal modernisation would be a jailbreak, and no one would ever collect a debt or finish a prosecution begun under an old law. Section 6 says: repeal changes the law *going forward*, but it does **not** unwind the past — rights already accrued, liabilities already incurred, penalties already earned, and proceedings already begun all survive. The old law is dead for the future but its completed effects live on.
 
+**"Why isn't Section 6 *needed* every time — what does 'unless a different intention appears' really do?"** — Because Parliament sometimes *wants* the clean slate. If the repealing Act itself says "all pending proceedings shall abate," that is a different intention, and Section 6 steps aside. The genius is that Parliament need not *repeat* the five survivors in every repealing Act (economy again) but retains the power to switch them off deliberately. Section 6 is the *silent presumption*; the repealing Act is the *express switch*.
+
 **"Why a special rule for counting 'from' and 'to' (Section 9)?"** — Because otherwise every deadline is ambiguous. "Within 30 days *from* 1st April" — is the 1st itself day one, or day zero? Different assumptions produce different deadlines and different winners in litigation. Section 9 fixes a single convention: the word **"from"** *excludes* the opening day; the word **"to"** *includes* the closing day. One rule, applied everywhere, kills the ambiguity.
 
 **"Why a rule for holidays (Section 10)?"** — Because a citizen should not lose a right through no fault of his own. If the last day to file falls on a Sunday when the court is bolted shut, punishing him for filing on Monday would be unjust — he *could not* have filed on time. Section 10 says: if the office is closed on the last day, doing the act on the *next open day* counts as on-time. It protects diligence against the accident of the calendar.
+
+**"Why does Section 10 *not* apply to the Limitation Act?"** — Because two rules doing the same job on the same matter would collide. The Limitation Act, 1963 has its own holiday rule in *its* Section 4. If Section 10 of the GCA also applied, a litigant might argue for whichever gives the longer time, and courts would face overlap. So the GCA proviso surgically carves out Limitation-Act matters: one matter, one holiday rule. This is the special-beats-general maxim applied *inside* the GCA itself.
 
 **"Why deem postal service complete on posting (Section 27)?"** — Because otherwise a dishonest recipient could defeat every notice simply by refusing to receive it or denying it arrived. If service depended on proof of *actual receipt*, the recipient controls whether the law reaches him. Section 27 shifts the risk: once the sender correctly addresses, pre-pays, and posts by registered post, service is *presumed* effected in the ordinary course — and it is now the *recipient's* burden to prove it did not arrive. The sender, who did everything right, is protected.
 
 **"Why say 'he' includes 'she' and singular includes plural (Section 13)?"** — Pure economy again. Without it, a draftsman must write "he or she," "the director or directors," endlessly. Section 13 lets statutes be written in the singular masculine as shorthand, read to cover all genders and numbers, saving oceans of words while closing the gap a literalist might exploit ("the Act says 'he,' so it doesn't apply to a woman director").
 
 **"Why say a power to make rules includes the power to amend or rescind them (Section 21)?"** — Because a power frozen at first use is useless. If the government could issue a notification but never modify it, every rule would be permanent and un-fixable. Section 21 reads a *continuing* power into every rule-making power: whoever can make can also add to, amend, vary, or rescind — using the same procedure. It keeps delegated legislation alive and correctable.
+
+**"Why does 'power to appoint' carry 'power to suspend or dismiss' (Section 16)?"** — Because responsibility without control is hollow. An authority answerable for how an office is filled must be able to *unfill* it when the holder misconducts himself; otherwise a bad appointment is permanent and the appointing authority is powerless to correct its own choice. Section 16 makes the removal power flow automatically from the appointment power — again "unless a different intention appears," e.g. where a special Act vests dismissal in a different, higher authority.
 
 ---
 
@@ -81,7 +112,9 @@ The GCA has three functional blocks: **(A) Preliminary & Definitions** (Ss. 1–
 
 - **Section 1 — Short title and extent.** The Act is the "General Clauses Act, 1897" and extends to the whole of India. *Why:* housekeeping — it names itself and fixes its territorial reach.
 - **Section 3 — Definitions.** The heart of the dictionary. It defines around 65 terms that apply to the GCA itself and to *all Central Acts and Regulations made after the commencement of this Act*, **unless there is anything repugnant in the subject or context.** That closing phrase is the whole philosophy: these meanings are defaults, displaced by context.
-- **Section 4 — Application of definitions to earlier Acts.** Some (not all) of the Section 3 definitions are extended to Central Acts made *before* 1897 as well. *Why:* to give even older statutes the benefit of the standard meanings, so the whole statute book — old and new — reads consistently.
+- **Section 4 — Application of definitions to earlier Acts.** Some (not all) of the Section 3 definitions are extended to Central Acts made *before* 1897 as well. *Why:* to give even older statutes the benefit of the standard meanings, so the whole statute book — old and new — reads consistently. *Fine point:* Section 4 does **not** import *all* of Section 3 into pre-1897 Acts — only an enumerated subset. So the safe exam statement is "certain definitions" apply to earlier Central Acts, not "all."
+
+**"Includes" vs "means" — a definitional distinction the examiner tests.** Read the Section 3 entries carefully: most say a term "**includes**" X (affidavit *includes* affirmation; person *includes* a company). "Includes" is an **extending / inclusive** definition — it *adds* to the ordinary meaning without shutting the door, so the term still covers its normal sense *plus* the listed items. Contrast "**means**", which is **exhaustive** — it fixes the meaning and excludes everything else (movable property *means* property of every description *except* immovable property). Whenever an answer turns on whether something unlisted is covered, first ask: does the definition say "includes" (open) or "means" (closed)?
 
 ### 4.2 The important general definitions — Section 3
 
@@ -106,8 +139,12 @@ These are the exam-favourite definitions. Each is a default meaning that flows s
 | **Document** [3(18)] | Any matter expressed or described upon any substance by letters, figures, or marks, intended to be used for recording that matter. | Broad enough to cover writings, maps, inscriptions — anything recording meaning. |
 | **Imprisonment** [3(27)] | Imprisonment of either description (rigorous or simple) as defined in the Indian Penal Code. | Borrows the IPC meaning so sentencing terms are consistent. |
 | **Swear / Oath** & **Writing** [3(65)] | Expressions referring to "writing" are construed as *including* printing, lithography, photography, and other modes of representing or reproducing words in visible form. | So "in writing" future-proofs against new recording technologies. |
+| **Act** (re offence) / **Act and Omission** [3(2)] | "Act" used with reference to an offence *includes* a series of acts; and words referring to acts done extend to *illegal omissions*. | Closes the "I did nothing, so I did no *act*" loophole — an illegal failure to act is caught. |
+| **Enactment** [3(19)] | *Includes* a Regulation and any provision contained in any Act or in any such Regulation. | So construction rules about "enactments" (e.g., repeal under Section 6) reach Regulations too, not just Acts. |
 
 **Why definitions matter for a company-law paper:** the Companies Act 2013 constantly uses words like "person," "document," "month," "immovable property," "good faith," "registered." Where the 2013 Act does not itself define them (and it does not define most), the GCA meaning is what a court applies. So these are not trivia — they are the *actual* operative meanings in your main Act.
+
+**The three "inclusiveness" siblings — affidavit, oath, writing.** Notice the recurring drafting move: whenever a legal act historically demanded a *particular form* (swearing on oath, ink on paper), the GCA quietly *widens* it so that a modern or conscientious alternative counts. Affidavit and oath include *affirmation/declaration* (protecting those who cannot swear); "writing" includes *print, photograph, lithograph* (protecting against technological obsolescence). If you can state the *pattern* — "the GCA prefers substance over antique form" — you can reconstruct all three definitions under exam pressure even if you forget the exact wording.
 
 ### 4.3 Coming into operation — Section 5
 
@@ -116,6 +153,8 @@ These are the exam-favourite definitions. Each is a default meaning that flows s
 **Rule (Section 5):** Where any Central Act is **not expressed to come into operation on a particular day**, it comes into operation on the day it **receives the assent** — of the President (after the Constitution; of the Governor-General before it). *Why:* fills the silence with a definite, verifiable moment — assent — so there is never a limbo period of doubt.
 
 **Fine point (interpretation of "commencement"):** an enactment comes into force at the **beginning of the day** on which it commences — i.e., the immediately preceding midnight. So a law commencing "on 1 April" is in force from the first instant of 1 April.
+
+**"What if the examiner tweaks it?" — three variations.** (i) *Act names a date:* Section 5 is displaced — the named date governs. (ii) *Act says "on such date as the Central Government may by notification appoint":* the Act commences only when that notification fixes the date; until then it is a dormant Act with no force (this is common in the Companies Act 2013, whose sections were notified in tranches). (iii) *Different sections notified on different dates:* perfectly valid — Section 5 read with the enabling clause allows *staggered* commencement, so Section X may be live while Section Y is not yet notified. The exam point: "assent = commencement" is only the *fallback*, triggered by *silence*.
 
 ### 4.4 Effect of repeal — Section 6 (the star section)
 
@@ -135,12 +174,30 @@ These are the exam-favourite definitions. Each is a default meaning that flows s
 
 **Crucial qualifier — "unless a different intention appears."** If the repealing Act *itself* says the old proceedings die, that wins. Section 6 is a default, not a straitjacket.
 
+**The accrued-right vs. mere-hope distinction (the hardest sub-point).** Section 6(c) saves a right **"acquired or accrued"** — but *not* a mere *expectation* or *inchoate* possibility. A right has **accrued** when everything needed to perfect it has happened *before* repeal; it is a **mere hope** when the repeal caught it mid-formation. Example: if under the old law you had already *completed* the acts that entitle you to a licence, that accrued entitlement survives repeal; but if you had merely *applied* and the authority had not yet decided, you had only a *hope*, which the repeal can extinguish. The examiner tests this by asking whether the right was *complete* or *still forming* at the moment of repeal.
+
+**Section 6 vs. an *expiry* (sunset) of a temporary Act.** Section 6 speaks of **repeal**. A temporary Act that simply *expires* by efflux of its own time-limit is, on the strict view, **not "repealed"**, so Section 6 does not automatically save pending proceedings — the temporary Act's own *saving clause* must be checked. This is a favourite distinction: *repeal* (Section 6 applies) vs. *expiry of a temporary Act* (Section 6 may not; look for a saving provision).
+
+**"Simultaneous repeal-and-re-enactment" — Section 6 read with Section 24.** The most common real-world pattern (as with the Companies Act 1956 → 2013) is repeal *and* immediate re-enactment. Here Section 6 saves the finished past under the old law, while Section 24 (below) *carries forward* subordinate instruments (rules, orders, notifications) so governance does not stall. Read them as a pair.
+
 ### 4.5 Repeal-and-re-enactment; textual amendments — Sections 6A, 7, 8, 24
 
 - **Section 6A — Repeal of an Act that only made a textual amendment.** If Act X merely inserted/amended words into Act Y, and X is later repealed, the *amendment already made to Y* is **not undone** (unless a different intention appears). *Why:* an amending Act, once it has done its surgery, is spent; repealing the spent scalpel does not reverse the surgery.
-- **Section 7 — Revival of repealed enactments.** To *revive* a wholly or partly repealed enactment, the reviving Act must **expressly state** the revival. *Why:* revival is a serious step; it must be deliberate and explicit, never accidental.
-- **Section 8 — Construction of references to repealed enactments.** Where an Act is repealed and **re-enacted** (with or without modification), any reference in another law to the repealed provision is read as a reference to the **corresponding provision** in the new law. *Why:* so a repeal-and-replace does not silently break every cross-reference in the statute book.
-- **Section 24 — Continuation of orders, rules, etc.** Where a law is repealed and re-enacted, any rule, notification, order, appointment, etc. made under the old law **continues in force** as if made under the new law, so far as consistent, until superseded. *Why:* avoids a governance vacuum between old and new regimes.
+- **Section 7 — Revival of repealed enactments.** To *revive* a wholly or partly repealed enactment, the reviving Act must **expressly state** the revival. *Why:* revival is a serious step; it must be deliberate and explicit, never accidental. *Link:* this is the mirror of Section 6(a) — 6(a) says repeal does not *automatically* revive; Section 7 says revival needs an *express* statement. Together they slam the door on accidental resurrection from both sides.
+- **Section 8 — Construction of references to repealed enactments.** Where an Act is repealed and **re-enacted** (with or without modification), any reference in another law to the repealed provision is read as a reference to the **corresponding provision** in the new law. *Why:* so a repeal-and-replace does not silently break every cross-reference in the statute book. *Condition:* Section 8 operates only when there is a *corresponding* provision in the re-enacting law; if the new law has *dropped* the provision entirely, there is nothing to redirect the reference to.
+- **Section 24 — Continuation of orders, rules, etc.** Where a law is repealed and re-enacted, any rule, notification, order, appointment, etc. made under the old law **continues in force** as if made under the new law, so far as consistent, until superseded. *Why:* avoids a governance vacuum between old and new regimes. *Limits:* the old instrument survives only **so far as it is not inconsistent** with the new law, and only **until** it is superseded/repealed under the new law — it is a bridge, not a permanent transplant.
+
+*How the repeal-family sections divide the labour.*
+
+```mermaid
+flowchart TD
+    A["A Central Act is repealed"] --> B{"What is at stake"}
+    B -->|"Finished past rights penalties pending cases"| C["Section 6 the five survivors continue"]
+    B -->|"An older law the repealed Act had replaced"| D["Section 6a no automatic revival Section 7 revival needs express words"]
+    B -->|"The repealed Act had only amended another Act"| E["Section 6A amendment already made stays"]
+    B -->|"Cross-references in other laws"| F["Section 8 read as reference to corresponding new provision"]
+    B -->|"Rules orders notifications under the old law"| G["Section 24 continue until superseded so far as consistent"]
+```
 
 ### 4.6 Computation of time — Sections 9 and 10
 
@@ -149,6 +206,10 @@ These two are the arithmetic engine of every deadline.
 - **Section 9 — "from" and "to."** In any Central Act, to express the *first* in a series of days or any other period of time, use the word **"from"** — and that first day is **EXCLUDED.** To express the *last*, use **"to"** — and that last day is **INCLUDED.** Mnemonic: **"From = First out; To = Terminal in."**
 
 - **Section 10 — court/office closed on the last day.** Where any act or proceeding is directed to be done in a **court or office** on a certain day or within a prescribed period, and the court/office is **closed** on that day (or the last day of the period), the act is deemed done **in time** if done on the **next day the court/office is open.** *Proviso:* Section 10 does **NOT apply** to acts/proceedings governed by the **Limitation Act, 1963** (which has its own equivalent rule in its Section 4). *Why the carve-out:* to avoid two overlapping holiday rules for the same limitation matter.
+
+**Three conditions Section 10 silently requires** (examiners strip one away to make it fail): (i) the act must be one directed to be done **in a court or office** — Section 10 protects you only against *institutional* closure, not against your own inability to act elsewhere; (ii) it is the **last day** (or the single appointed day) that must be closed — a mid-period holiday does **not** extend anything, you count straight through it; (iii) the matter must **not** be governed by the Limitation Act. Remove any one and the "next open day" relief evaporates.
+
+**Section 9 subtlety — "from" vs. "on and from."** Section 9's exclusion rule is triggered by the word **"from."** But a period expressed as running **"to"** a day, or **"till/until"** a day, brings the *last* day *in*. And where a statute says a thing takes effect **"on and from"** a date, the *inclusion* of that date is intended for commencement purposes even though "from" alone would exclude — read the whole phrase, not the isolated preposition.
 
 *Counting a deadline the GCA way — Sections 9 and 10 working together.*
 
@@ -169,10 +230,16 @@ flowchart TD
 - **Section 21 — Power to make also power to amend/rescind.** A power to issue **notifications, orders, rules or bye-laws** *includes* the power to **add to, amend, vary, or rescind** them, exercised the **same way** and subject to the same conditions as the original power. *Why:* keeps delegated legislation living and correctable. (Note: this applies to *executive/legislative* instruments, not to quasi-judicial orders, which cannot be casually reopened.)
 - **Section 22 — Anticipatory action between passing and commencement.** Where an Act is not yet in force but empowers rule-making, the rules may be **made in advance** so they are ready the moment the Act commences (though they take effect only on commencement). *Why:* prevents a machinery gap on day one.
 
+**The unifying theme of this block — powers are living, not spent.** Sections 14, 16, 21 and 22 all attack the same fallacy: that a statutory power, once used, is *exhausted* (the *functus officio* argument). Section 14 says a power recurs "from time to time"; Section 16 says the appointing power carries the removal power; Section 21 says the making power carries the amending/rescinding power; Section 22 says the making power can even be used *before* the Act is live. If you remember the theme — **"a conferred power is a continuing, self-correcting power unless the Act says otherwise"** — you can place any of the four instantly.
+
+**Section 15 — power to appoint by name or office.** Often paired with Section 16: where a Central Act authorises appointment of a person to fill an office, the appointment may be made either by **naming the individual** or by **designating the office/holder** (e.g., "the Registrar for the time being"). *Why:* designating the office means the appointment automatically follows the office-holder without a fresh order every time the incumbent changes.
+
 ### 4.8 Offences, fines, and double jeopardy — Sections 25, 26
 
 - **Section 25 — Recovery of fines.** Provisions of the Code of Criminal Procedure for the time being in force relating to recovery of fines apply to fines imposed under any Act (unless the Act says otherwise). *Why:* one uniform machinery to collect fines.
 - **Section 26 — Offence punishable under two or more enactments.** Where an act or omission is an offence under **two or more enactments**, the offender may be **prosecuted and punished under either or any** of them — **but shall NOT be punished twice for the same offence.** *Why:* mirrors the *double jeopardy* protection (Article 20(2) of the Constitution). You can be *charged* under multiple laws, but not *punished twice* for one wrong.
+
+**Section 26 — the "same offence" pivot.** The bar bites only where it is the **same offence**, i.e., the same act *and* the same set of ingredients. If two enactments punish the *same* act but require *different ingredients*, they are, in law, *different* offences, and punishment under both may be permissible — the double-punishment bar is not triggered because the offences are not identical. So the precise test is not "same *act*" but "same *offence* (same act + same essential ingredients)." Examiners exploit the loose reading "you can never be punished under two laws for one act" — which is wrong.
 
 ### 4.9 Service of documents by post — Section 27
 
@@ -184,11 +251,15 @@ flowchart TD
 - **Presumption of *effecting* service** = arises on correct addressing + pre-paying + registered posting.
 - **Presumption of *time* of service** = ordinary course of post — but **rebuttable** ("unless the contrary is proved").
 
+**Two failure points the examiner plants.** (i) *Not registered post* — Section 27's presumption is keyed to **registered** post; an ordinary (unregistered) letter does **not** attract the same statutory presumption of service, so the sender loses the burden-shift. (ii) *Wrong address or unpaid postage* — the three pre-conditions (proper address + pre-payment + registered posting) are **cumulative**; miss one and the presumption never arises. Only when all three are satisfied does the burden flip to the recipient.
+
+**Nature of each presumption — one weaker, one stronger.** The presumption *that service was effected* is strong (it follows automatically once the three conditions are met); the presumption *as to the time* of service ("ordinary course of post") is expressly **rebuttable** — the recipient may prove late or non-delivery. A **bare denial** of receipt, without cogent supporting evidence, is generally *insufficient* to rebut. Never describe either presumption as *conclusive*.
+
 *Why:* the sender who does everything right is protected; the burden shifts to the recipient to disprove delivery. This section is directly relevant to serving notices under the Companies Act 2013.
 
 ### 4.10 Reach into Ordinances — Section 30
 
-Section 30 applies the GCA's rules to **Ordinances** promulgated by the President/Governor as if they were Central Acts. *Why:* an Ordinance is temporary law with full force; it needs the same interpretive machinery.
+Section 30 applies the GCA's rules to **Ordinances** promulgated by the President/Governor as if they were Central Acts. *Why:* an Ordinance is temporary law with full force; it needs the same interpretive machinery. *Reach:* the section extends the GCA to Ordinances made by the **President under Article 123** and by a **Governor under Article 213**, and (historically) to Governor-General/Governor Ordinances under earlier constitutional instruments — so no species of Central-level delegated primary legislation escapes the machinery.
 
 ---
 
@@ -219,6 +290,25 @@ Section 30 applies the GCA's rules to **Ordinances** promulgated by the Presiden
 *Analysis:* The Act requires service "by post." Under **Section 27**, service is **deemed effected** by correctly addressing, pre-paying and posting by registered post; and deemed to occur when the letter would arrive in the ordinary course — **unless the contrary is proved.** A bare denial of receipt is generally not enough to rebut the presumption without cogent evidence.
 *Conclusion:* Service is presumed valid; the burden lies on the member to prove non-delivery. His unsupported denial likely fails.
 
+**Scenario 6 — "One month" is a calendar month, not 30 days (Section 3(35) with Section 9). [numerical]**
+*Facts:* A Central Act requires an appeal to be filed **"within one month from 30th January 2026."** The appellant counts "30 days" and files on **1st March 2026**, believing he is on time. The registry rejects it as late.
+*Analysis, step by step:*
+- **Step 1 (Section 9):** "**from** 30th January" *excludes* 30th January. So the period starts running 31st January.
+- **Step 2 (Section 3(35)):** "one month" is reckoned by the **British calendar**, not as a flat 30 days. The settled convention for a calendar month running "from" a date is that it ends on the day in the succeeding month **numerically corresponding to** the day *before* the starting-point — i.e., a month from 30 January ends on the corresponding date at end-February. 2026 is **not** a leap year, so February has 28 days and there is **no 30th February**; where the corresponding date does not exist, the period ends on the **last day of that month**, i.e., **28th February 2026**.
+- **Step 3 (verify):** Was the office open on 28 Feb 2026? Assume yes (a normal working Saturday/weekday — the examiner will tell you if it is closed, then Section 10 would extend to the next open day). So the last day to file is **28th February 2026**.
+- **Step 4 (reconcile the appellant's error):** The appellant assumed "one month = 30 days," which would have given roughly 1st March. But **month ≠ 30 days** under the GCA, and February's shortness pulls the deadline *earlier* to 28 February. His filing on 1st March is **one/two days late.**
+*Conclusion:* The appeal filed on 1st March 2026 is **time-barred.** The correct last date was **28th February 2026.** *Examiner tweak:* make 2026 a leap year (e.g. use 2028) and the corresponding date becomes **29th February** — reconciling why the "month" rule, not a 30-day count, is doing the work.
+
+**Scenario 7 — Repeal-and-re-enactment: does an old rule survive? (Sections 6 and 24).**
+*Facts:* Under the (imaginary) Old Widgets Act, 2005, the Central Government had made the "Widget Registration Rules, 2006." In 2025 Parliament **repeals** the 2005 Act and **re-enacts** a New Widgets Act, 2025, which contains a fresh rule-making power but the Government has **not yet** made new rules. A widget-maker argues that with the 2005 Act gone, the 2006 Rules are dead and he is free of all registration obligations until fresh rules appear.
+*Analysis:* This is repeal *with* re-enactment. **Section 24** provides that rules, orders, notifications etc. made under a repealed law **continue in force** as if made under the corresponding provision of the re-enacting law, **so far as not inconsistent** with it and **until** superseded. The 2006 Rules therefore bridge into the 2025 regime and remain binding until the Government replaces them. **Section 6** separately preserves any liability already *incurred* under the old Rules. The maker's "regulatory vacuum" argument fails.
+*Conclusion:* The 2006 Rules **continue** under Section 24; the widget-maker remains bound. *Examiner tweak:* if a specific 2006 Rule *contradicts* the 2025 Act, that Rule falls (Section 24 protects only what is *consistent*); and if the 2025 Act had *not* re-enacted the power at all, Section 24 would have nothing to attach to.
+
+**Scenario 8 — Two enactments, one act: prosecuted twice, punished once (Section 26).**
+*Facts:* A single fraudulent act by Mr B is an offence under both a Central special Act and the IPC. He is prosecuted and *convicted* under the special Act and fined. The prosecution then seeks to *punish* him again under the IPC for the very same act with the same ingredients.
+*Analysis:* **Section 26** permits prosecution "under either or any" of the enactments but forbids **punishment twice for the same offence**. Since it is the *same offence* (same act, same essential ingredients), he cannot be **punished** a second time, though the *choice* of which enactment to proceed under was open to the prosecution. This aligns with **Article 20(2)** of the Constitution.
+*Conclusion:* No second punishment for the identical offence. *Examiner tweak:* if the IPC offence required a **materially different ingredient** (e.g., an additional element the special Act does not need), it would be a *different* offence and the Section 26 bar might not apply — punishment under both could then be lawful.
+
 ---
 
 ## 6. Procedure / Compliance summary — how to *use* the GCA when reading any Act
@@ -231,6 +321,8 @@ The GCA is not "complied with" like a filing requirement; it is *applied* as an 
 4. **Check the context.** Is the GCA's default meaning *repugnant* to the subject or context? If clearly yes → context prevails.
 5. **Otherwise apply the GCA default** — the Section 3 definition, or the relevant construction rule (Ss. 5–27).
 6. **Watch the "unless a different intention appears" escape hatch** in Sections 6, 21, 27, etc. — always ask whether the specific Act has displaced the default.
+
+**One extra check for timing questions — sequence Section 9 → Section 3 (month) → Section 10.** When the machinery word is a *deadline*, run the three rules in a fixed order: first apply **Section 9** to fix the *starting* point (does "from" exclude the first day?); then apply the **Section 3** meaning of any unit used ("month" = calendar month, not 30 days) to find the *last* day; finally apply **Section 10** to see if that last day's institutional closure pushes you to the next open day (unless the Limitation Act governs). Doing them out of order is the commonest way students land the wrong date.
 
 *Decision order — special provision beats general default.*
 
@@ -246,10 +338,11 @@ flowchart LR
 
 ## 7. Connections — where the GCA plugs into the rest of the syllabus
 
-- **Companies Act 2013 (the whole paper).** Every undefined common word in the 2013 Act draws its meaning from the GCA — "person," "document," "month," "immovable property," "good faith," "registered," "writing." When a Companies Act section sets a deadline "within X days from," you compute it with **Sections 9 and 10.** When a notice must be "served by post," **Section 27** governs the presumption.
-- **Interpretation of Statutes (companion chapter).** The GCA is the *statutory* limb of interpretation; the common-law rules (literal, golden, mischief, harmonious construction; internal/external aids) are the *judicial* limb. Together they form the complete toolkit. The GCA supplies fixed defaults; the interpretation rules resolve genuine ambiguity the GCA does not touch.
-- **The Constitution.** Section 26 (no double punishment) mirrors **Article 20(2)** (double jeopardy). Section 5 (commencement on assent) connects to the President's assent power under **Article 111.**
+- **Companies Act 2013 (the whole paper).** Every undefined common word in the 2013 Act draws its meaning from the GCA — "person," "document," "month," "immovable property," "good faith," "registered," "writing." When a Companies Act section sets a deadline "within X days from," you compute it with **Sections 9 and 10.** When a notice must be "served by post," **Section 27** governs the presumption. The Companies Act 1956 → 2013 transition is itself a live **Section 6 + Section 24** case study (finished acts saved, old rules bridged forward).
+- **Interpretation of Statutes (companion chapter).** The GCA is the *statutory* limb of interpretation; the common-law rules (literal, golden, mischief, harmonious construction; internal/external aids) are the *judicial* limb. Together they form the complete toolkit. The GCA supplies fixed defaults; the interpretation rules resolve genuine ambiguity the GCA does not touch. The **special-beats-general maxim** (*generalia specialibus non derogant*) is the hinge that connects the two chapters — it is *why* the parent Act always overrides the GCA.
+- **The Constitution.** Section 26 (no double punishment) mirrors **Article 20(2)** (double jeopardy). Section 5 (commencement on assent) connects to the President's assent power under **Article 111.** Section 30 reaches Ordinances made under **Articles 123 and 213.**
 - **Limitation Act, 1963.** Section 10's proviso *carves out* Limitation-Act matters, which have their own holiday rule (Section 4 of that Act). Know the boundary.
+- **Indian Penal Code.** The "good faith" clash (honesty vs. due care) and the borrowed meaning of "imprisonment" both connect the GCA to the IPC — flagging where a *different* Act's own definition displaces the GCA default.
 - **General procedure across all Central Acts** — FEMA, LLP Act, IBC, etc. — all inherit the GCA defaults, making this chapter's payoff far larger than its size.
 
 ---
@@ -260,13 +353,17 @@ flowchart LR
 2. **"Good faith" — honesty vs. due care.** GCA = **honest, negligence irrelevant.** IPC = **due care and attention required.** The examiner presents a negligent-but-honest actor and asks which standard applies — answer depends on *which Act* governs the matter.
 3. **"From" and "to" (Section 9).** Students routinely include the first day. Remember: **"from" excludes the first day; "to" includes the last day.** A single day's error flips the answer.
 4. **Section 10 does NOT apply to Limitation-Act matters.** Don't blindly extend "office closed → next open day" to every deadline; the Limitation Act 1963 governs its own matters (its Section 4).
-5. **"Month" = calendar month, not 30 days (Section 3(35)).** "One month from 15th January" ends **15th February**, not "January 15 + 30 days." A trap when a February is involved.
+5. **"Month" = calendar month, not 30 days (Section 3(35)).** "One month from 15th January" ends **15th February**, not "January 15 + 30 days." A trap when a February is involved — and doubly so in a non-leap February, which can pull a deadline *earlier* than a 30-day count.
 6. **Section 6 "unless a different intention appears."** The 5 survivors of repeal are a *default.* If the repealing Act expressly ends pending proceedings, Section 6 yields. Never state Section 6 as absolute.
-7. **Section 26 — prosecuted vs. punished.** You *may be prosecuted under multiple laws* but **not punished twice.** Students wrongly say "cannot be prosecuted under two Acts." The bar is on double *punishment*, not double *prosecution*.
-8. **Section 27 — "unless the contrary is proved."** The *time* of service is a **rebuttable** presumption. Don't call it conclusive.
+7. **Section 26 — prosecuted vs. punished.** You *may be prosecuted under multiple laws* but **not punished twice.** Students wrongly say "cannot be prosecuted under two Acts." The bar is on double *punishment*, not double *prosecution* — and only for the **same offence** (same act + same ingredients).
+8. **Section 27 — "unless the contrary is proved."** The *time* of service is a **rebuttable** presumption. Don't call it conclusive. And the presumption needs **registered** post + correct address + pre-payment (all three); an ordinary letter or a mis-addressed one does not trigger it.
 9. **GCA governs only CENTRAL Acts/Regulations (and Ordinances via Section 30).** State laws follow their own State General Clauses Acts. Don't apply the Central GCA to a State statute.
 10. **The GCA is a *default*, not a command.** Its recurring phrase — "unless there is anything repugnant in the subject or context" / "unless a different intention appears" — means the parent Act and context always win. Treating GCA meanings as mandatory-everywhere is the deepest error.
 11. **Section 21 vs. quasi-judicial orders.** Power to make rules/notifications includes power to amend/rescind — but this does **not** let an authority casually reopen a *quasi-judicial* order once passed.
+12. **"Includes" vs "means."** An "includes" definition (person, affidavit, good faith) is *open* — it adds to the ordinary meaning. A "means" definition (movable property) is *exhaustive* — it shuts everything else out. Getting this backwards flips whether an unlisted item is covered.
+13. **Accrued right vs. mere hope (Section 6(c)).** Only a right *already perfected* before repeal survives; a right still *in the making* (a pending application) can be extinguished. The examiner tests the *timing* of the right relative to the repeal.
+14. **Repeal vs. expiry of a temporary Act.** Section 6 saves things on **repeal**; a temporary Act that merely **expires by efflux of time** is not "repealed," so look for its own saving clause instead of assuming Section 6 applies.
+15. **Section 5 fallback is only for silence.** "Assent = commencement" applies **only** where the Act does not name a date or a to-be-notified date. If the Act says "on such date as the Central Government may notify," it is dormant until that notification — a very common Companies Act pattern.
 
 ---
 
@@ -274,15 +371,15 @@ flowchart LR
 
 Start from a single frustration: **every statute needs the same boring machinery** — a dictionary of common words and a rulebook for timing, repeal, and service. Copying that machinery into each Act would cause **bloat, contradiction, and exploitable gaps.**
 
-The fix: **write the machinery once, in a meta-law, and make it the silent default behind every Central Act — overridable whenever the specific Act speaks.** That meta-law is the **General Clauses Act, 1897.**
+The fix: **write the machinery once, in a meta-law, and make it the silent default behind every Central Act — overridable whenever the specific Act speaks.** That meta-law is the **General Clauses Act, 1897.** The overridability is not a weakness but the *whole design*: it is the statutory form of *generalia specialibus non derogant* — general defaults must yield to special provisions.
 
 From that one idea, everything follows:
-- **A default dictionary (Section 3)** — so "person" covers companies, "month" means a calendar month, "good faith" means honesty, and every Central Act reads consistently.
-- **Commencement rule (Section 5)** — assent fixes the start moment, so no law floats in limbo.
-- **Repeal-survival (Section 6)** — because repeal must change the *future*, not erase the *finished past*; otherwise every modernisation is an amnesty. The **5 survivors**: no-revival, previous operation, accrued rights, incurred penalties, pending proceedings.
-- **Timing arithmetic (Sections 9 & 10)** — "from" excludes, "to" includes; a closed office on the last day forgives you to the next open day — so deadlines are certain and diligence isn't punished by the calendar.
-- **Economy rules (Sections 13, 14, 16, 21, 22)** — "he" includes "she," singular includes plural, powers are continuing and amendable — so statutes stay compact yet complete.
-- **Fair-process rules (Sections 26, 27)** — no double punishment; postal service is presumed once you post correctly — so process is fair to both sides.
+- **A default dictionary (Section 3)** — so "person" covers companies, "month" means a calendar month, "good faith" means honesty, and every Central Act reads consistently. Watch "includes" (open) vs "means" (closed).
+- **Commencement rule (Section 5)** — assent fixes the start moment when the Act is silent, so no law floats in limbo; but a named or to-be-notified date displaces it.
+- **Repeal-survival (Section 6, with 6A, 7, 8, 24)** — because repeal must change the *future*, not erase the *finished past*; otherwise every modernisation is an amnesty. The **5 survivors**: no-revival, previous operation, accrued rights, incurred penalties, pending proceedings. Only *perfected* rights survive; *hopes* do not. Sections 8 and 24 keep cross-references and subordinate instruments alive across a repeal-and-re-enactment.
+- **Timing arithmetic (Sections 9 & 10)** — "from" excludes, "to" includes; a month is a *calendar* month; a closed office on the last day forgives you to the next open day (except Limitation-Act matters) — so deadlines are certain and diligence isn't punished by the calendar.
+- **Economy + living-power rules (Sections 13, 14, 15, 16, 21, 22)** — "he" includes "she," singular includes plural; and a conferred power is *continuing and self-correcting* — exercisable from time to time, carrying the power to remove, amend, or rescind — so statutes stay compact yet complete and powers never go stale.
+- **Fair-process rules (Sections 25, 26, 27)** — uniform fine recovery; no double *punishment* for the same offence (though multiple prosecutions may be laid); postal service is presumed once you post correctly by registered post — so process is fair to both sides.
 
 And over all of it hangs the master switch: **"unless a different intention appears."** The GCA never overrides a statute that speaks for itself; it only fills silences. That is why it is called an **aid to interpretation** — the invisible layer that makes every other Indian Central Act complete.
 
@@ -301,7 +398,7 @@ And over all of it hangs the master switch: **"unless a different intention appe
 | **3(23)** | Government | Includes **both Central and State** Government. |
 | **3(26)** | Immovable Property | Includes land, benefits from land, things attached to earth. |
 | **3(35)** | Month | Reckoned by the **British/Gregorian calendar** (not 30 days). |
-| **3(36)** | Movable Property | Everything **except** immovable property. |
+| **3(36)** | Movable Property | Everything **except** immovable property (a "means" = exhaustive definition). |
 | **3(38)** | Offence | Any **act or omission** punishable by law in force. |
 | **3(42)** | Person | **Includes company, association, body of individuals**, incorporated or not. |
 | **3(66)** | Year | Reckoned by the **British calendar** (1 Jan–31 Dec). |
@@ -314,14 +411,15 @@ And over all of it hangs the master switch: **"unless a different intention appe
 | **10** | Office closed | Act done on **next open day** is in time — **not** for Limitation-Act matters. |
 | **13** | Gender & number | Masculine includes feminine; singular includes plural (and vice versa). |
 | **14** | Powers | Exercisable **from time to time.** |
+| **15** | Appointment by name/office | May appoint by **naming a person or designating the office.** |
 | **16** | Power to appoint | Includes power to **suspend or dismiss.** |
 | **21** | Power to make | Includes power to **add / amend / vary / rescind** (same procedure). |
 | **22** | Anticipatory rules | Rules may be made **before commencement**, effective on commencement. |
-| **24** | Continuation | Rules/orders under repealed law **continue** under re-enacted law. |
+| **24** | Continuation | Rules/orders under repealed law **continue** under re-enacted law (so far as consistent, until superseded). |
 | **25** | Recovery of fines | CrPC fine-recovery machinery applies. |
-| **26** | Two enactments | May be **prosecuted under either**, but **not punished twice.** |
+| **26** | Two enactments | May be **prosecuted under either**, but **not punished twice** for the same offence. |
 | **27** | Service by post | Deemed effected by correctly **addressing + pre-paying + registered posting**; time = ordinary course, **rebuttable.** |
-| **30** | Ordinances | GCA rules apply to Ordinances too. |
+| **30** | Ordinances | GCA rules apply to Ordinances too (Arts 123 / 213). |
 
 **Time-limits / thresholds table:**
 
@@ -330,17 +428,21 @@ And over all of it hangs the master switch: **"unless a different intention appe
 | First day of a period expressed by "from" | **Excluded** (Section 9). |
 | Last day of a period expressed by "to" | **Included** (Section 9). |
 | Last day is a holiday / office closed | Do it on the **next open day** = in time (Section 10). |
+| Mid-period holiday | **No extension** — count straight through; only *last-day* closure counts. |
 | Section 10 exception | Does **not** apply to Limitation Act, 1963 matters. |
-| "Month" | **Calendar month** (Section 3(35)). |
+| "Month" | **Calendar month** (Section 3(35)) — not 30 days; ends on corresponding date or last day of short month. |
 | "Year" / "Financial Year" | Calendar year / **1 April**-start year (Ss. 3(66), 3(21)). |
 | Commencement when Act silent | Day of **assent** (Section 5). |
 | Repeal survivors | **5 things** protected under Section 6(a)–(e). |
 | Double punishment | **Barred**; double prosecution permitted (Section 26). |
+| Section 27 presumption | Needs **registered post + correct address + pre-payment** (all three). |
 
 **Master mnemonics:**
 - **GCA = Dictionary + Rulebook**, both **default only** ("unless a different intention appears").
 - **Section 6 survivors** — *"No zombies, Past stands, Rights kept, Penalties due, Cases go on."*
 - **Section 9** — *"From = First out, To = Terminal in."*
 - **Section 27** — *"Address + Pre-pay + Registered post = served."*
+- **Living-power block (14/16/21)** — *"Make it, amend it; hire, fire; use it again and again — powers don't die on first use."*
+- **Timing order** — *"Section 9 start → Section 3 month → Section 10 closure."*
 
 > Exam note: where this chapter gives a Section 3 sub-clause number, **confirm the exact clause number against the current bare Act / ICAI study material**, as sub-clause numbering is renumbered across editions; the *principle* of each definition is stable and is what carries marks.

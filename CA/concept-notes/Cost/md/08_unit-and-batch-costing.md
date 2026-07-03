@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 08 — Unit & Batch Costing
 
 ## 1. The Problem: "What did one thing cost me?"
@@ -9,6 +11,8 @@ You cannot answer either question from a heap of total expenses. You need one nu
 Now change the business. You run a small printing press. You do not make an endless river of one identical item; you make **jobs that happen to repeat in groups**. A customer orders 5,000 identical wedding cards. Another orders 20,000 identical pharma cartons. Each order is a *batch* of identical pieces, but different batches are different products. Here a fresh problem appears that the brick kiln never had: **every time you start a new batch you must set up the machine** — clean the rollers, mount new plates, run test sheets, calibrate colour. That setup costs the same whether you then run 500 cards or 50,000 cards. So a new tension is born: run **big batches** and the setup cost is spread thin (good) but you sit on mountains of unsold inventory tying up cash and warehouse (bad); run **small batches** and inventory is lean (good) but you pay setup after setup after setup (bad). Somewhere between "one giant batch a year" and "a tiny batch every day" there is a batch size that costs the least. Finding it is the problem of the **Economic Batch Quantity (EBQ)**.
 
 This chapter builds the two costing methods that answer these two questions — **Unit (Output/Single) Costing** for the brick kiln, and **Batch Costing** with **EBQ** for the printing press — and it builds each one only *after* you feel the problem it exists to solve.
+
+**A third, quieter problem hides underneath both.** Notice that the brick kiln and the printing press are not two unrelated worlds — they are two points on a single spectrum of *how homogeneous the output is*. At one extreme sits a continuous river of one identical product (bricks, cement): pure **unit costing**. At the other extreme sits a one-off custom machine built to a single client's drawing (a ship, a bridge): pure **job costing**. **Batch costing lives in the middle** — identical pieces, but produced in finite lots rather than an endless stream. The reason the syllabus teaches Unit and Batch together is that they share the same engine (accumulate costs, then divide because the pieces are identical) and differ only in *what unit of output you accumulate against* — the whole period's output for unit costing, one lot for batch costing. Keep the spectrum in mind; it tells you which method a mystery exam question actually wants before you write a single number.
 
 ---
 
@@ -22,6 +26,10 @@ Hold two pictures in your head.
 
 And EBQ is the **cupcake-tray-size decision**. Bake giant trays rarely and you preheat seldom (low setup) but cupcakes go stale on the shelf (high holding). Bake tiny trays constantly and nothing goes stale (low holding) but you preheat all day (high setup). EBQ is the tray size where the money wasted on preheating exactly balances the money wasted on stale stock — the bottom of the total-cost valley. If that "trade-off between per-order cost and per-unit-held cost" feels familiar, it should: **EBQ is EOQ wearing a factory uniform.** EOQ (Chapter on Material Control) balanced *ordering* cost against *carrying* cost for buying; EBQ balances *setup* cost against *carrying* cost for making. Same maths, same valley, different words.
 
+**Why "cost per unit" is not one number but a family of numbers.** A subtlety students miss: the cake has *many* legitimate "cost per gram" figures depending on *where you stop slicing*. Cost per gram of raw batter (prime cost per unit), cost per gram out of the oven (works cost per unit), cost per gram boxed and ready to ship (cost of production per unit), cost per gram delivered (cost of sales per unit) — each answers a different question. Prime cost per unit answers "how efficient is my shop floor?"; cost of production per unit is what you value closing stock at; cost of sales per unit is what your selling price must beat. The Cost Sheet's staged design exists precisely so that *all* these per-unit numbers fall out of one statement instead of being computed separately. When an exam says "cost per unit," your first instinct must be "**at which stage?**"
+
+**Why the batch is the natural collection unit — the "identity" test.** The deepest reason batch costing draws the boundary at the batch and not the individual piece or the whole period is a test of *cost identity*: two things should share a cost pool only if they consumed resources identically. All pieces *inside* one batch shared the same setup, the same material lot, the same machine run — their costs are genuinely identical, so pooling then dividing is honest. Two *different* batches did not share a setup and may not share materials — pooling them would cross-subsidise. So the batch boundary is not administrative convenience; it is the largest group of units that truly consumed resources identically. This single test — "did these units consume resources identically?" — is what silently decides unit vs batch vs job costing in every question.
+
 ---
 
 ## 3. Why It's Built This Way
@@ -32,6 +40,14 @@ And EBQ is the **cupcake-tray-size decision**. Bake giant trays rarely and you p
 
 **Why is EBQ built on a square-root formula and not on "just guess a good size"?** Because the two costs pull in opposite directions and are *non-linear* in batch size. Annual setup cost falls as `1/Q` (bigger batch → fewer setups), while annual holding cost rises linearly as `Q/2` (bigger batch → more average stock). When one curve falls as `1/Q` and another rises as `Q`, their sum is a U-shape with a unique minimum, and calculus (or the AM-GM insight that the two costs are equal at the optimum) delivers a clean square-root answer. The formula is not arbitrary; it is the exact bottom of that valley. Building the decision on the formula means we never over- or under-batch by guesswork — we hit the least-cost size directly.
 
+**Why is setup cost a *fixed-per-batch* cost and not a per-unit cost — and why does that single fact create EBQ?** This is the hinge of the whole chapter, so make it airtight. When you set up a machine you incur the same rupees whether the ensuing run is 100 pieces or 100,000 — the setup does not "know" how long the run will be. That makes setup cost per *unit* a falling curve (spread over more pieces, it shrinks). If setup were genuinely per-unit (rose in lockstep with output), batch *size* would not matter at all — every size would carry the same per-unit setup, and you would just make the smallest convenient lot to keep stock lean. It is *only because setup is fixed per event* that "make it bigger to dilute setup" becomes a real temptation, and it is *only because holding cost rises with size* that the temptation has a limit. Kill either property and EBQ disappears. Whenever an exam scenario removes setup cost (says "negligible") or removes holding cost (says "made to order, no stock"), EBQ collapses and you should stop reaching for the formula.
+
+**Why derive EBQ two ways — and why the exam sometimes wants the derivation.** ICAI has asked students to *derive* EBQ, not just apply it. Two proofs exist and both are worth holding:
+- **Calculus:** T(Q) = (D/Q)·S + (Q/2)·C. Differentiate: dT/dQ = −DS/Q² + C/2. Set to zero: C/2 = DS/Q² ⇒ Q² = 2DS/C ⇒ Q = √(2DS/C). The second derivative 2DS/Q³ is positive, confirming a minimum (not a maximum).
+- **AM-GM / equal-cost insight:** the sum of a `1/Q` term and a `Q` term is minimised when the two terms are *equal*. Set (D/Q)·S = (Q/2)·C, cross-multiply: 2DS = CQ² ⇒ Q = √(2DS/C). This is why "at EBQ, setup cost = holding cost" is not a coincidence you memorise but the very condition that *defines* the optimum.
+
+Knowing both means you can answer "prove it" and you gain a free checking tool: compute setup and holding cost at your answer; if they are not equal you made an arithmetic error.
+
 ---
 
 ## 4. Full Technical Content
@@ -40,7 +56,12 @@ And EBQ is the **cupcake-tray-size decision**. Bake giant trays rarely and you p
 
 Use unit costing when **a single homogeneous product is produced continuously or in a single process**, in large volume, so that a meaningful **cost per unit** exists. Classic industries: bricks, cement, steel, paper, sugar, flour milling, mining (coal/ore per tonne), quarrying, dairy, breweries, cotton textiles at yarn stage, and utilities (cost per unit of electricity). The defining feature: *all units are essentially identical, so total cost ÷ total units is honest.*
 
-**The instrument is the Cost Sheet (Statement of Cost).** It is a memorandum statement (not a ledger account) that classifies and totals cost in stages. Learn the skeleton with its *reason at each stage*:
+**Unit vs Output vs Single costing — the terminology the examiner may probe.** These three names are often used interchangeably but carry shades of meaning:
+- **Single / Output costing** — one product, expressed per natural unit of output (per tonne, per 1,000 bricks, per litre). The purest case.
+- **Unit costing** — the umbrella term for the divide-by-output method.
+- When a product has **grades or by-products** (e.g., a colliery producing large coal, small coal, and slack), a *departmental or equivalent-grade* adjustment may be needed so that dividing stays honest. If the grades differ in value, you weight them — you do *not* blindly divide total cost by total tonnes across grades, or the premium grade subsidises the cheap grade (the same "chocolate subsidising fruit" error from Part 2).
+
+**The instrument is the Cost Sheet (Statement of Cost).** It is a memorandum statement (not a ledger account) that classifies and totals cost in stages. Being a *memorandum* statement matters: it is not part of the double-entry books, carries no debits/credits, and therefore never needs to "balance" like a ledger account — it simply builds a total. Learn the skeleton with its *reason at each stage*:
 
 | Stage | What is added | Why this stage exists |
 |---|---|---|
@@ -59,6 +80,15 @@ Direct Material Consumed = Opening Stock of Raw Material
                          − Closing Stock of Raw Material
 ```
 
+**Prime cost is more than material + labour.** Direct (chargeable) expenses — the third leg of prime cost — are costs directly traceable to the product but neither material nor labour: royalty paid per unit produced, hire of a special tool or mould for one job, the cost of a specific drawing/design, or excise/architect fees identifiable with the output. Students routinely drop these and understate prime cost. Ask of every expense: "can I trace this rupee to the product without an arbitrary basis?" If yes and it is not material or wages, it is a direct expense and belongs in prime cost.
+
+**The precise contents of each overhead block (so you classify correctly under pressure):**
+- **Factory / Works overhead:** indirect materials (lubricants, cotton waste, small tools), indirect wages (foreman, gatekeeper, storekeeper, maintenance staff), factory rent/rates/insurance, power and fuel, depreciation of plant and factory building, factory lighting, repairs to plant. *Anything to keep the factory running that you cannot trace to one unit.*
+- **Administration overhead:** office salaries, office rent, printing and stationery, legal and audit fees, directors' fees, depreciation of office equipment. In modern ICAI treatment, admin overhead *relating to production* is included in cost of production; general administration may be shown separately. **Follow the question's classification** — do not impose your own.
+- **Selling & distribution overhead:** salesmen's salaries and commission, advertising, showroom expenses, carriage *outward*, packing for delivery, warehouse of finished goods, bad debts, after-sales service. Note **carriage outward is S&D**, whereas **carriage inward is a material cost** — a classic swap trap.
+
+**Items that NEVER enter the Cost Sheet (purely financial items).** The Cost Sheet records *cost* items only. Exclude: income tax, dividends paid, transfer to reserves, donations, goodwill written off, loss/profit on sale of fixed assets or investments, interest paid on debentures/loans (financial charge), fines and penalties, cash discount, and appropriations of profit. These belong in the Financial P&L, and the *difference* they create is exactly what a **Cost–Financial Reconciliation Statement** (a separate chapter) later explains. If a data-dump question sprinkles "donation ₹10,000" or "loss on sale of machine ₹25,000," your job is to *ignore* them in the cost sheet.
+
 **Treatment of stock at three levels (a favourite exam distinction):**
 
 - **Raw Material** stock adjusts *before* Prime Cost (to get material consumed).
@@ -68,6 +98,8 @@ Direct Material Consumed = Opening Stock of Raw Material
 **Treatment of scrap:** the sale value of normal scrap is deducted from factory overheads (or works cost). Abnormal scrap/loss cost is removed from the cost sheet and taken to Costing P&L — it must not inflate the good units' cost.
 
 **Cost per unit** is computed at each relevant stage by dividing that stage's total by the number of units (units *produced* for cost of production; units *sold* for cost of sales).
+
+**A note on WIP valuation you can be quizzed on.** WIP is valued at *works/factory cost* because that is precisely the pool of costs a half-finished good has absorbed — material, labour, and factory overhead — but *not yet* administration or selling costs, which attach only to completed, sold goods. This is the logic behind adjusting WIP at exactly the works-cost line: add opening WIP (last period's part-finished goods completed this period) and subtract closing WIP (this period's part-finished goods to finish next period). If a question gives WIP "at prime cost" instead, adjust at the prime-cost line accordingly — the *principle* is: adjust WIP wherever it was valued.
 
 ```mermaid
 flowchart TD
@@ -86,6 +118,15 @@ flowchart TD
   P["plus Profit"] --> H
 ```
 *Figure 1 — The unit-costing cost sheet as a staged funnel, each stage adding one category of cost and answering one question.*
+
+```mermaid
+flowchart TD
+  X["Is the output homogeneous"] -->|"Yes and one continuous stream"| U["Unit / Output costing - divide period cost by period output"]
+  X -->|"Yes but made in distinct lots"| BB["Batch costing - accumulate per lot then divide by good units"]
+  X -->|"No each order is bespoke"| J["Job costing - accumulate per job no division"]
+  BB --> EBQ["If lot size is a decision solve EBQ equals root 2DS over C"]
+```
+*Figure 2 — The homogeneity spectrum decides the method before you compute anything.*
 
 ### 4.2 Batch Costing — where it fits
 
@@ -106,6 +147,15 @@ Note two exam-critical subtleties:
 - **Setup cost is a per-batch cost**, incurred once no matter how many pieces are run — this is exactly what makes batch *size* matter and drives EBQ.
 - If some units in the batch are **rejected/spoiled (normal)**, the good units absorb the whole batch cost, so you divide by *good* units, not total units started.
 
+**Two flavours of overhead absorption in batch costing.** Because a batch is a job, overheads are absorbed onto it exactly as in job costing — by a predetermined rate. Watch which basis the question uses:
+- **Labour-hour or machine-hour rate:** overhead = rate × hours the batch consumed. Preferred when the question gives hours and a rate per hour.
+- **Percentage of a direct cost:** overhead = x% of direct wages (or of prime cost). Preferred when the question gives a blanket percentage.
+Do not mix them: if you are given both a machine-hour rate and a "% of wages," read carefully which applies to which overhead block. A common trap is to have *factory* OH on a machine-hour basis and *administration/S&D* OH as a percentage — apply each to its own base.
+
+**Cost per unit of a customer order vs cost per unit of a batch.** A batch may satisfy several customer orders, or one order may span several batches. When a question asks "cost of executing order X for 3,000 units" but the economic batch is 5,000, you (i) compute cost per good unit from the batch, then (ii) multiply by the 3,000 units the order needs. Do not confuse the *production* lot with the *sales* lot.
+
+**Batch costing where setup is expressed per unit of time or per machine.** Sometimes setup is given as "2 hours of machine time at ₹300/hour" rather than a lump sum. Convert first (2 × 300 = ₹600 setup) before treating it as the per-batch setup S. The formula and logic are unchanged; only the arithmetic of arriving at S differs.
+
 ### 4.3 Economic Batch Quantity (EBQ) — the batch-size decision
 
 **The trade-off, made precise.** Let a factory need `D` units of a product per year (annual demand/requirement). It makes them in batches of size `Q`.
@@ -121,11 +171,20 @@ where **D** = annual demand/production requirement, **S** = set-up cost per batc
 
 **Notice the exact parallel to EOQ:** replace "set-up cost per batch S" with "ordering cost per order O" and you have EOQ = √(2DO/C). EBQ is EOQ for *making* instead of *buying*. Everything you learned about EOQ — that at the optimum ordering cost equals carrying cost, that the total-cost curve is flat-bottomed (so small errors in Q barely raise cost) — transfers directly.
 
+**The gradual-replenishment refinement (when the examiner tightens the model).** The simple `Q/2` average assumes a batch arrives *instantly* — stock jumps to Q, then depletes. But in real production the batch is *built up gradually* while it is also being consumed. If the production rate is `p` per period and the demand/usage rate is `d` per period (p > d, or you could never keep up), stock never reaches the full Q; it peaks lower because usage nibbles at it during the build-up. The refined maximum stock is `Q(1 − d/p)` and average stock is `Q(1 − d/p)/2`, giving:
+
+$$\textbf{EBQ}_{\text{gradual}} = \sqrt{\dfrac{2DS}{C\,\left(1 - \tfrac{d}{p}\right)}}$$
+
+The `(1 − d/p)` factor *shrinks the effective holding cost* (less average stock), so the optimal batch is *larger* than the simple model. **When to use it:** only when the question gives *both* a production/supply rate and a demand/consumption rate. If it gives only annual demand and setup/holding costs, use the plain EBQ. Flag: the exact notation and whether ICAI's current study material foregrounds this refinement can vary — *verify against current ICAI material for your attempt* — but the logic (gradual build-up lowers average stock) is standard.
+
 **Useful corollaries:**
 - **Number of batches per year** = `D / EBQ`.
 - **Batch cycle / interval** = `EBQ / D` (in years) or `(EBQ/D) × 12` months or `(EBQ/D) × 365` days.
 - If `C` is given as a **percentage `i` of unit cost `p`**, then `C = i × p` and EBQ = √(2DS / (i·p)).
 - **Holding-cost basis:** sometimes holding cost is charged on *average* inventory (Q/2) — the standard case above. Read the question: if it says "carrying cost per unit per annum," use C directly.
+- **Total minimum relevant cost** at EBQ = √(2·D·S·C). This tidy result (the minimised value of T) lets you state the least annual setup-plus-holding cost in one line without tabulating; it also equals *twice* the setup cost (or twice the holding cost) at the optimum, since the two are equal.
+
+**Why the total-cost curve is "flat-bottomed" and why that is examinable.** Because near the minimum the curve is nearly horizontal, a manager who chooses a *convenient* round batch size close to EBQ (say a full pallet of 4,000 rather than 3,795) pays almost nothing extra. This is a favourite short-note / MCQ point: EBQ is *robust* — precision to the last unit is not worth chasing, but being in the right neighbourhood matters a lot. Contrast a size far from EBQ (double or half), where cost climbs steeply.
 
 ```mermaid
 flowchart LR
@@ -139,7 +198,7 @@ flowchart LR
   I --> J["HIGH annual holding cost"]
   K["EBQ is the size where setup cost equals holding cost"] --> L["Minimum total annual cost"]
 ```
-*Figure 2 — The two opposing pressures on batch size; EBQ sits where they balance.*
+*Figure 3 — The two opposing pressures on batch size; EBQ sits where they balance.*
 
 ---
 
@@ -255,6 +314,11 @@ Profit = Sales − Cost of Sales = 52,43,750 − 41,95,000 = **₹10,48,750** (w
 
 **Reconciliation:** Cost of production per tonne ₹1,950 used consistently for closing stock and implicit in COGS; units flow 200 + 2,000 − 300 = 1,900 sold ✓; profit ₹10,48,750 ÷ sales ₹52,43,750 = 20.0% ✓. Statement fully reconciles.
 
+**"What if the examiner tweaks it?" variations on Example 2:**
+- *Opening FG given only in value, closing FG asked at cost of production, but opening FG per-tonne differs from this year's ₹1,950.* That is normal — opening stock carries *last year's* rate (₹5,00,000 / 200 = ₹2,500/tonne here, higher than this year), and you value only *closing* stock at the current ₹1,950. Do not "restate" opening stock. If the question instead demands **FIFO**, the 1,900 tonnes sold come first from the 200 opening tonnes (at ₹2,500) and then 1,700 from current production (at ₹1,950); COGS would then be 200×2,500 + 1,700×1,950 = 5,00,000 + 33,15,000 = ₹38,15,000 — coincidentally close here, but in general FIFO changes COGS, so read whether a cost-flow method is imposed.
+- *Profit given as 25% on cost instead of 20% on sales.* Then Sales = Cost of Sales × 1.25 = 41,95,000 × 1.25 = ₹52,43,750 — identical here only because 20% on sales = 25% on cost. This equivalence (20/80 = 25/100... check: profit/cost = 10,48,750/41,95,000 = 25%) is a neat cross-check the examiner exploits; know that "20% on sales" and "25% on cost" describe the *same* markup.
+- *Factory OH given as "60% of prime cost" instead of "of wages."* Then OH = 60% × 31,00,000 = ₹18,60,000 — vastly different. Always read the *base* of a percentage overhead.
+
 ### Example 3 — Batch Costing with EBQ (exam-hard, multi-part)
 
 *Precision Pharma manufactures a tablet with an annual demand of 24,000 strips. Each machine set-up for a batch costs ₹1,200. The cost of holding one strip in stock is ₹4 per annum. Direct material per strip is ₹5, direct labour per strip is ₹3, and variable overhead is 100% of direct labour. Fixed production overhead is ₹96,000 per annum, absorbed on the basis of annual output. Required:*
@@ -314,7 +378,7 @@ Test Q = 3,000 to show the other side:
 | 4,000 | 7,200 | 8,000 | 15,200 |
 | 6,000 | 4,800 | 12,000 | 16,800 |
 
-**Reconciliation / self-check:** at EBQ the two component costs are equal (the calculus condition), and total (₹15,179) is the lowest in the table — internally consistent. Note the flat bottom: moving from 3,795 to 4,000 costs only ₹21 extra, illustrating the EOQ/EBQ curve's insensitivity near the optimum. ✓
+**Reconciliation / self-check:** at EBQ the two component costs are equal (the calculus condition), and total (₹15,179) is the lowest in the table — internally consistent. Independent check via the shortcut: minimum total = √(2·D·S·C) = √(2 × 24,000 × 1,200 × 4) = √(23,04,00,000... = 230,400,000) = ₹15,179 ✓ — matches the tabulated minimum exactly. Note the flat bottom: moving from 3,795 to 4,000 costs only ₹21 extra, illustrating the EOQ/EBQ curve's insensitivity near the optimum. ✓
 
 ### Example 4 — Batch Costing with rejects (short, high-yield)
 
@@ -328,6 +392,34 @@ Test Q = 3,000 to show the other side:
 
 **Why divide by good units?** Normal spoilage is an unavoidable cost of making the good ones; loading the whole ₹3,84,000 onto 1,900 survivors correctly makes each good piston bear its fair share of the spoilage. Dividing by 2,000 would understate cost and let spoilage vanish. ✓
 
+**Tweak — what if the 100 rejects were ABNORMAL spoilage with ₹50 scrap each?** Then abnormal loss must *not* burden the good units. Compute cost per unit on *total input* first to value the abnormal loss: ₹3,84,000 / 2,000 = ₹192 per unit. Abnormal loss cost = 100 × ₹192 = ₹19,200; less its scrap recovery 100 × ₹50 = ₹5,000; net abnormal loss ₹14,200 goes to the **Costing P&L**. Good units then absorb 3,84,000 − 19,200 = ₹3,64,800 over 1,900 units = **₹192 per good piston** (plus the scrap of the good... there is none). The lesson: *normal* loss is spread over good units (raising their cost); *abnormal* loss is stripped out at cost and sent to P&L (good units stay at normal cost). This normal-vs-abnormal split is the single most tested idea where spoilage meets batch costing.
+
+### Example 5 — EBQ with holding cost as a percentage of value, plus stock-out framing (exam-hard)
+
+*A component is used at a steady 48,000 units per year. Setting up the machine for a run costs ₹450. Each component has a production cost of ₹20, and inventory carrying cost is estimated at 15% of production cost per annum. The factory works 300 days a year. Find (a) EBQ, (b) number of runs per year and interval between runs in days, (c) the total annual relevant cost at EBQ, and (d) recompute EBQ if the setup cost is halved by a quick-changeover project, and comment.*
+
+**Part (a) — EBQ.**
+First C: 15% of ₹20 = **₹3 per unit per annum**.
+EBQ = √(2DS / C) = √(2 × 48,000 × 450 / 3) = √(4,32,00,000 / 3) = √(1,44,00,000) = **4,000 units** (since 4,000² = 1,60,00,000... let me verify: 2×48,000×450 = 4,32,00,000; ÷3 = 1,44,00,000; √1,44,00,000 = 3,795). 
+
+Recompute carefully: √14,400,000 = 3,794.7. So **EBQ ≈ 3,795 units** — *not* 4,000. (I intentionally show the mis-step: never eyeball a square root. 3,795² = 14,402,025 ✓.)
+
+**Part (b) — Runs and interval.**
+Runs per year = D / EBQ = 48,000 / 3,795 = **12.65 ≈ 12.6 runs**.
+Interval = (EBQ / D) × 300 = (3,795 / 48,000) × 300 = 0.079 × 300 = **23.7 ≈ 24 days** between runs.
+
+**Part (c) — Total annual relevant cost.**
+Setup = (48,000/3,795) × 450 = 12.65 × 450 = ₹5,692.
+Holding = (3,795/2) × 3 = 1,897.5 × 3 = ₹5,693.
+Total ≈ **₹11,385**. Cross-check via √(2DSC) = √(2 × 48,000 × 450 × 3) = √(12,96,00,000... = 129,600,000) = ₹11,384 ✓ (₹1 rounding). Equality of setup and holding confirms the optimum.
+
+**Part (d) — Setup halved to ₹225.**
+New EBQ = √(2 × 48,000 × 225 / 3) = √(72,00,000... = 7,200,000... wait: 2×48,000×225 = 2,16,00,000; ÷3 = 72,00,000) = √72,00,000 = **2,683 units**.
+New total relevant cost = √(2 × 48,000 × 225 × 3) = √(6,48,00,000 = 64,800,000) = **₹8,050**.
+**Comment:** halving setup cost cut EBQ by a factor of √2 (from 3,795 to 3,795/√2 ≈ 2,683) and cut total relevant cost by √2 as well (₹11,385 → ₹8,050). This is the deep lesson behind lean "single-minute exchange of die" (SMED) programmes: because both EBQ and its cost scale with √S, attacking setup cost lets you make *smaller* batches *and* spend *less* overall — you move down and left along the valley. A √-relationship means a 4× reduction in setup would halve the batch and halve the cost.
+
+**Self-check across the example:** every EBQ satisfies "setup cost = holding cost"; every total equals √(2DSC); the direction of change (less setup ⇒ smaller batch, lower cost) is economically sensible. Consistent throughout. ✓
+
 ---
 
 ## 6. Presentation / Format
@@ -339,6 +431,8 @@ Test Q = 3,000 to show the other side:
 4. **Bracket deductions** (scrap sale, closing stocks) and label them "Less".
 5. **State per-unit denominators** explicitly (e.g., "per 1,000 bricks", "2,000 tonnes produced").
 6. Adjust each stock at its correct stage: RM before Prime Cost, WIP at Works Cost, FG at Cost of Production→COGS.
+7. **Show workings for every derived figure** (material consumed, OH as % of a base, closing-stock valuation) as clearly labelled notes below the statement — ICAI awards method marks even when a final number slips.
+8. **Do not net off unrelated items.** Keep scrap sale as a *deduction inside works cost*, S&D as an *addition after COGS*; never lump them.
 
 **Batch-costing statement — presentation:**
 
@@ -352,17 +446,21 @@ Test Q = 3,000 to show the other side:
 | Good units in batch | (n) |
 | **Cost per unit = Total ÷ Good units** | **xxx** |
 
-**EBQ answer presentation:** always (i) write the formula, (ii) substitute D, S, C with units, (iii) compute, (iv) round sensibly to whole units, then (v) if asked, derive batches per year and cycle time, and (vi) verify by showing setup cost ≈ holding cost at EBQ.
+**EBQ answer presentation:** always (i) write the formula, (ii) substitute D, S, C with units, (iii) compute, (iv) round sensibly to whole units, then (v) if asked, derive batches per year and cycle time, and (vi) verify by showing setup cost ≈ holding cost at EBQ. If the question gives production and demand rates, (vii) state explicitly that you are using the gradual-replenishment form and why.
+
+**Reconciliation habit that saves marks.** For unit costing, after finishing, multiply the final per-unit cost of sales by units sold and confirm it equals total cost of sales; confirm the unit flow (Opening FG + Produced − Closing FG = Sold). For EBQ, confirm setup cost = holding cost and, if time permits, that total relevant cost = √(2DSC). These 20-second checks catch the majority of arithmetic slips.
 
 ---
 
 ## 7. Connections
 
-- **← Material Control (EOQ):** EBQ *is* EOQ with "set-up cost" swapping in for "ordering cost." Every EOQ property — the √ formula, equality of the two costs at optimum, the flat-bottomed curve, treatment of holding cost as % of unit cost — carries over. If you can do EOQ, EBQ is free.
+- **← Material Control (EOQ):** EBQ *is* EOQ with "set-up cost" swapping in for "ordering cost." Every EOQ property — the √ formula, equality of the two costs at optimum, the flat-bottomed curve, treatment of holding cost as % of unit cost, the √(2DSC) minimum-cost result — carries over. If you can do EOQ, EBQ is free.
 - **↔ Job Costing (next family):** Batch costing is a *special case of job costing* where the job is a batch of identical units. Job costing accumulates cost per job; batch costing then divides by units — the extra step unit costing also uses. Unit → Batch → Job form a spectrum from "fully homogeneous" to "fully bespoke."
 - **↔ Process Costing:** Both unit costing and process costing handle homogeneous mass output; unit/output costing is essentially *single-process* costing. When production passes through *several sequential processes* (sugar, chemicals), you graduate to process costing with equivalent units — but the divide-cost-by-output logic is the same seed.
 - **→ Overhead absorption:** The "factory OH = x% of wages" and "overheads at y% of labour" steps come straight from the Overheads chapter's absorption rates; unit/batch costing is where you *apply* them.
 - **→ Cost control & pricing:** Cost per unit/batch feeds directly into quotation, tender pricing, inventory valuation for the balance sheet, and make-or-buy decisions.
+- **→ Cost–Financial Reconciliation:** The purely financial items you *excluded* from the cost sheet (interest, tax, donations, loss on asset sale) are exactly the reconciling items in that chapter — the cost sheet's exclusions are the reconciliation's inclusions.
+- **→ Marginal & Absorption Costing:** whether fixed production OH is absorbed per unit (Example 3's ₹4/strip) or treated as a period cost is the very fault-line between absorption and marginal costing; unit/batch costing here uses the *absorption* view.
 
 ---
 
@@ -379,6 +477,13 @@ Test Q = 3,000 to show the other side:
 9. **EBQ — set-up vs ordering vocabulary.** In EBQ the "S" is *set-up* cost per batch (a production cost), not ordering cost. Read the numbers, not the label.
 10. **Dividing a batch by total units instead of good units.** With normal rejects, divide by *good* units (Example 4). Dividing by units started understates cost per good unit.
 11. **Rounding EBQ then contradicting it.** Round EBQ to whole units, but when you then show "setup cost ≈ holding cost," expect a ₹1–₹2 gap purely from rounding — that is fine; do not "force" them equal by fudging.
+12. **Carriage inward vs carriage outward.** Carriage *inward* is a material cost (before prime cost); carriage *outward* is selling & distribution (after COGS). The examiner lists both in one data dump to see if you split them.
+13. **Base of a percentage overhead.** "60% of wages," "60% of prime cost," and "60% of works cost" give wildly different figures. Underline the base before multiplying (see Example 2 tweak).
+14. **Financial items smuggled into the data.** Interest on loan, income tax, donation, dividend, loss on sale of asset, goodwill written off — *exclude* all of these from the cost sheet. Including even one inflates cost and loses marks.
+15. **Eyeballing the square root.** √(1,44,00,000) is 3,795, not 4,000. Always square your answer back to check (Example 5). A wrong root cascades into wrong batches, cycle time, and cost.
+16. **Forgetting setup cost inside the batch's own cost.** When asked for "cost of one batch," include that batch's setup; when asked for annual setup vs holding trade-off, use (D/Q)·S. Same S, two different roles — do not double count or omit.
+17. **Gradual replenishment mis-triggered.** Use the (1 − d/p) form *only* when both a production rate and a usage rate are given. Applying it when only annual demand is given invents data and is wrong.
+18. **Opening stock of finished goods valued at this year's rate.** Opening FG carries *last year's* cost; only closing FG uses the current year's cost of production per unit (unless FIFO/WA is specified). Restating opening stock is a silent error.
 
 ---
 
@@ -386,11 +491,11 @@ Test Q = 3,000 to show the other side:
 
 Strip everything away and two ideas remain.
 
-**One:** *Division is only honest between identical things.* When output is a homogeneous mass (bricks, tonnes, litres, kWh), you may take the pile of period costs and divide by output — that is **unit costing**, and the Cost Sheet is merely a disciplined way to do that division stage by stage so each cost category is recovered and the total reconciles. When output comes in *identical lots but different products*, you first accumulate cost per **lot/batch** (because lots are not identical to each other) and only then divide *within* the lot (because pieces inside it are identical) — that is **batch costing**, a hybrid of job and unit costing.
+**One:** *Division is only honest between identical things.* When output is a homogeneous mass (bricks, tonnes, litres, kWh), you may take the pile of period costs and divide by output — that is **unit costing**, and the Cost Sheet is merely a disciplined way to do that division stage by stage so each cost category is recovered and the total reconciles. When output comes in *identical lots but different products*, you first accumulate cost per **lot/batch** (because lots are not identical to each other) and only then divide *within* the lot (because pieces inside it are identical) — that is **batch costing**, a hybrid of job and unit costing. The single question "did these units consume resources identically?" decides where you are allowed to divide.
 
-**Two:** *Whenever a fixed cost is triggered per event, the size of the event is a decision.* Making a batch triggers a fixed **set-up cost** regardless of batch size, while holding stock costs money proportional to size. Big batches waste setup less but waste holding more; small batches the reverse. The least-cost size is where the two wastes are equal — the square-root **EBQ = √(2DS/C)**. It is the same trade-off as EOQ because it is the same *shape* of problem: a `1/Q` cost fighting a `Q` cost always bottoms at a √ point.
+**Two:** *Whenever a fixed cost is triggered per event, the size of the event is a decision.* Making a batch triggers a fixed **set-up cost** regardless of batch size, while holding stock costs money proportional to size. Big batches waste setup less but waste holding more; small batches the reverse. The least-cost size is where the two wastes are equal — the square-root **EBQ = √(2DS/C)**. It is the same trade-off as EOQ because it is the same *shape* of problem: a `1/Q` cost fighting a `Q` cost always bottoms at a √ point, and the minimum total of the two is √(2DSC).
 
-Master those two sentences and you can *reconstruct* every formula and format in this chapter from scratch — no memorisation required.
+Master those two sentences and you can *reconstruct* every formula and format in this chapter from scratch — no memorisation required. The Cost Sheet ladder falls out of idea one (divide identical things, stage by stage); EBQ and all its corollaries fall out of idea two (a fixed-per-event cost makes event size a decision).
 
 ---
 
@@ -399,23 +504,29 @@ Master those two sentences and you can *reconstruct* every formula and format in
 **When to use:**
 - **Unit / Output costing** → single homogeneous product, mass/continuous production (bricks, cement, steel, sugar, power). Answer wanted: **cost per unit**.
 - **Batch costing** → identical articles made in distinct lots (pharma, bakery, garments, printing, components). Answer wanted: **cost per unit within a batch** + optimum **batch size**.
+- **Decision test:** did the units consume resources identically? All period → unit; per lot → batch; each order bespoke → job.
 
 **Cost Sheet stages (memorise the ladder):**
 Prime Cost → (+Factory OH ±WIP −Normal scrap) Works Cost → (+Admin OH) Cost of Production → (±FG stock) COGS → (+S&D OH) Cost of Sales → (+Profit) Sales.
 
 **Key formulas:**
 - Direct Material Consumed = Opening RM + Purchases + Carriage In − Returns − Closing RM
+- Prime Cost = Direct Material + Direct Labour + Direct (Chargeable) Expenses
 - Works Cost = Gross Works Cost + Opening WIP − Closing WIP
 - COGS = Cost of Production + Opening FG − Closing FG
 - Units sold = Opening FG + Produced − Closing FG
 - Profit on sales p%: Sales = Cost of Sales / (1 − p); Profit on cost p%: Sales = Cost × (1 + p)
 - **Batch cost per unit = Total batch cost / Good units**
 - **EBQ = √(2 D S / C)**  (D = annual demand, S = set-up cost/batch, C = holding cost/unit/annum; if C = i% of price p, use C = i·p)
+- **EBQ (gradual replenishment) = √(2DS / [C(1 − d/p)])** — only when both production rate p and usage rate d are given
+- **Minimum total relevant cost = √(2 D S C)** = twice the setup (= twice the holding) at optimum
 - Batches/year = D / EBQ; Cycle = (EBQ/D) × 360 days (or ×12 months)
 - At EBQ: annual set-up cost = annual holding cost
 
 **Stock adjustment stages:** RM → before Prime Cost; WIP → at Works Cost (valued at factory cost); FG → at Cost of Production (valued at cost of production/unit).
 
-**Top 5 traps:** (1) purchases ≠ consumed; (2) WIP at Works, FG at COGS — not swapped; (3) closing FG at current cost of production; (4) produced-vs-sold denominator; (5) profit on sales vs on cost.
+**Excluded (financial) items — never in the cost sheet:** interest on loan/debentures, income tax, dividends, donations, transfer to reserves, loss/profit on sale of assets or investments, goodwill written off, fines, cash discount.
 
-**EBQ ↔ EOQ:** identical formula; set-up cost replaces ordering cost; curve is flat-bottomed so near-optimum errors are cheap; at optimum the two opposing costs are equal.
+**Top 6 traps:** (1) purchases ≠ consumed; (2) WIP at Works, FG at COGS — not swapped; (3) closing FG at current cost of production, opening FG at last year's; (4) produced-vs-sold denominator; (5) profit on sales vs on cost; (6) carriage inward (material) vs outward (S&D).
+
+**EBQ ↔ EOQ:** identical formula; set-up cost replaces ordering cost; curve is flat-bottomed so near-optimum errors are cheap; at optimum the two opposing costs are equal; minimum total = √(2DSC); halving setup shrinks EBQ and total cost by √2 (the lean-manufacturing lever).

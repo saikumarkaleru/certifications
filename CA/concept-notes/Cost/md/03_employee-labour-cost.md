@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 03 — Employee (Labour) Cost
 
 ## 1. The Problem — Why Labour Refuses to Behave Like Material
@@ -13,6 +15,8 @@ Here is the manager's actual, daily headache. You pay a worker for **time** — 
 
 Financial accounting cannot answer any of these. The financial ledger records "Wages ₹8,00,000" as a single lump and moves on. It cannot tell you that ₹40,000 of it was idle time caused by a supplier's late delivery, or that your turnover cost you ₹1,20,000 in lost output last quarter, or that switching from time-rate to the Rowan plan would lift output 20% while raising the wage bill only 12%. **Cost accounting exists to open that lump sum and make each rupee accountable to a decision.**
 
+Before we go further, fix one more distinction that the exam quietly rewards. The syllabus calls this **"Employee Cost"**, not merely "wages". Employee cost is *everything* the firm spends to secure and keep human effort: basic wages, dearness allowance, production/attendance bonuses, employer's contribution to Provident Fund and ESI, gratuity, leave-with-pay, medical and canteen subsidies, and the cost of recruitment and training. A student who thinks "labour cost = hours × rate" will misclassify half the items in a theory question. **Direct employee cost** is the part identifiable with (traceable to) a cost object; **indirect employee cost** is the rest — supervision, idle time of a general nature, and all the fringe benefits that cannot be pinned to one job.
+
 That is the mission of this chapter: to turn the messy, human, leaky reality of paying people into numbers a manager can act on.
 
 ---
@@ -27,6 +31,8 @@ Think of two ways to pay for getting a parcel across the city.
 
 Every remuneration system in this chapter is a negotiation over **who carries the risk of the time-versus-output gap** — the firm or the worker. Time rate puts it all on the firm. Piece rate puts it all on the worker. The clever **premium bonus plans (Halsey and Rowan)** do something more interesting: they *split the savings* when a worker beats the standard time. The worker and the firm each pocket part of the time she saved. That shared-reward structure is the intellectual heart of this chapter — hold onto the image of *splitting the saved time*, because everything in Section 4 is a variation on how to split it.
 
+Picture a single continuous dial. At the far left sits pure time rate — **all risk on the firm, zero incentive**. At the far right sits pure (or differential) piece rate — **all risk on the worker, maximum incentive but maximum quality danger**. Every other scheme is a point somewhere along that dial, and each was invented to sit at a slightly different spot: Gantt near the safe left, Rowan and Halsey in the sensible middle, Merrick and Taylor out toward the aggressive right. When the examiner asks you to "comment on the suitability" of a plan, what she wants is for you to locate it on this dial and say *why that position fits that worker or that job*.
+
 And idle time, overtime, and turnover? Those are the **friction** that no payment system eliminates — the potholes on the road that make the meter tick while nothing useful happens. The accountant's job is to *name* each pothole and *charge it to whoever caused it*.
 
 ---
@@ -40,6 +46,10 @@ Before any formula, absorb the three principles that generate all the rules. If 
 **Principle 2 — Normal cost is a cost of doing business; abnormal cost is a loss to be spotlighted.** Some idle time is unavoidable — tea breaks, machine warm-up, the natural rhythm of work. That *normal* portion is baked into the cost of production because it is genuinely part of what it takes to make the product. But idle time from a *strike*, a *flood*, or a *major breakdown* is **abnormal** — it is not part of efficient production, so we refuse to let it hide inside product cost. We yank it out and dump it into the **Costing Profit & Loss Account** where management is forced to look at it. Costing deliberately makes waste *visible*; it never lets an avoidable loss quietly inflate the cost of a unit.
 
 **Principle 3 — Incentives are engineering, not charity.** A bonus scheme is not generosity; it is a *machine for changing behaviour*. You design it so that when the worker acts in her own interest, she simultaneously acts in the firm's interest. The reason the firm shares time-savings with the worker is coldly rational: a worker who finishes in 6 hours instead of 10 has freed 4 hours of capacity. Even after paying her a bonus, the firm gains — lower overhead per unit, more output from the same plant. A good plan makes both parties richer than time-rate would; a bad plan makes the worker cut corners. Every plan below is judged by one question: *does it align the worker's greed with the firm's goal?*
+
+There is a fourth, quieter principle that unlocks the hardest exam questions:
+
+**Principle 4 — The unit cost of the firm and the pay of the worker move in opposite time-frames.** When a worker speeds up, her *hourly* pay rises (she earns a bonus) but the firm's *per-unit* labour-plus-overhead cost usually **falls**, because the same fixed factory overhead is now spread over more units produced per hour. This is the engine behind every "which plan is cheaper for the firm?" question. The worker looks at rupees-per-hour; the firm looks at rupees-per-unit; a well-designed plan lets the first go up while the second comes down. Whenever an examiner slips a *fixed overhead per hour* figure into a remuneration sum, this principle is what he is testing — you must compute cost per unit **to the firm**, not just earnings to the worker.
 
 ```mermaid
 flowchart TD
@@ -66,6 +76,13 @@ The reconciliation of the two is where **idle time is discovered**: if the gate 
 
 $$\text{Idle Time} = \text{Time paid for (gate/attendance)} - \text{Time actually booked to jobs}$$
 
+**Why keep two systems at all?** Because they serve two masters who must never trust each other. Time-keeping protects the *worker's right to be paid* and the firm's need for discipline; time-booking protects the *product's right to carry only its true cost*. If you merged them — paid people purely from job cards — a worker would have every incentive to over-book hours to jobs to look busy, and idle time would vanish from view. Keeping the systems separate and *reconciling* them is precisely what forces idle time into the daylight. This is a small, elegant instance of a control principle you will meet again in auditing: **the person who records the benefit should not be the only person who records the cost.**
+
+A few finer points the exam has tested:
+- **Time-keeping methods** should record *arrival and departure* accurately, discourage proxy attendance ("buddy punching" — solved by biometrics), and be economical. The disc/token method is the classic manual system; know it as the ancestor of the swipe card.
+- **Casual workers ("badli") and out-workers** (people who take work home, or contract labour) need special treatment: out-workers on piece rate carry a risk of poor quality and material misuse, so their output must be inspected before payment.
+- **Overtime must be authorised in advance** by a responsible officer and recorded separately on the job card, otherwise the premium cannot be traced to a cause — an internal-control point that also happens to be the *reason* Section 4.3's treatment table is even possible.
+
 ### 4.2 Idle Time — Classification and Treatment
 
 Idle time is time for which the worker is paid but does no productive work. Split it by **controllability** and **normality**:
@@ -78,9 +95,22 @@ Idle time is time for which the worker is paid but does no productive work. Spli
 
 The standard technique for **normal general idle time** is to *inflate the hourly rate* so the cost gets absorbed by productive hours. If a worker is paid ₹10/hour for 8 hours (₹80/day) but only 7 hours are effective, the **effective/inflated rate = ₹80 ÷ 7 = ₹11.43/hour**. Charging jobs at ₹11.43 automatically absorbs the normal idle hour. This is the single most-tested idle-time computation.
 
+**A deeper cut on causes — the exam's favourite grey cases.** Not every "the worker sat idle" fact slots neatly into one row. Learn to reason through the borderline ones:
+- **Idle time due to *normal* seasonal / cyclical slack** (e.g. a fan factory in winter) is treated as *normal* and absorbed as overhead — it is a foreseeable feature of the business.
+- **Idle time waiting for the *next* operation on a flow line** (balancing losses between unequal machines) is *normal* and part of production overhead — it is designed into the process.
+- **Idle time because management deliberately over-hired** anticipating an order that never came is *abnormal* — a planning failure, sent to Costing P&L.
+- **Idle *facility* (machine) time** is a different animal from idle *labour* time; do not conflate them. This chapter charges idle *labour*. Idle capacity of *machines* is dealt with under overheads.
+
+The **causes checklist** examiners expect you to reproduce in a theory answer, grouped by root:
+1. **Productive causes** — machine breakdown, power failure, waiting for work, materials, tools, or instructions.
+2. **Administrative causes** — a deliberate policy decision to retain surplus capacity for a coming boom (often *treated as normal* if it is a conscious policy, but *abnormal* if it is simply poor scheduling).
+3. **Economic causes** — a fall in demand, seasonal or cyclical, where the firm chooses to keep skilled workers rather than lose them.
+
+The point of the grouping is that the **same visible fact ("worker idle") can be normal or abnormal depending on whether it was avoidable and whether it recurs as part of ordinary operations.** That judgement — not the arithmetic — is what the marks are for.
+
 ### 4.3 Overtime — The Premium Is the Whole Point
 
-Overtime = hours worked beyond normal working hours. Under Indian practice (Factories Act), overtime is typically paid at **double the ordinary rate**. Decompose the overtime payment into two parts, because they are treated differently:
+Overtime = hours worked beyond normal working hours. Under Indian practice (Factories Act, 1948), overtime is typically paid at **twice the ordinary rate of wages** (please *verify the exact current statutory multiple and the "ordinary rate" definition against current ICAI material / the applicable AY* — the standard exam assumption is double). Decompose the overtime payment into two parts, because they are treated differently:
 
 - **Ordinary wage for overtime hours** (the normal rate for those extra hours) — always a cost of production.
 - **Overtime premium** (the *extra* over normal — e.g. the second "1×" in double pay) — treatment *depends on the cause*:
@@ -96,6 +126,10 @@ Overtime = hours worked beyond normal working hours. Under Indian practice (Fact
 $$\text{Overtime premium per OT hour} = 2R - R = R \quad (\text{i.e. one normal rate extra per OT hour})$$
 
 The decision logic — *charge the premium to whoever caused the rush* — is a direct application of Principle 1. The exam loves a question where a worker does overtime and you must split total wages into ordinary (product cost) and premium (traced by cause).
+
+**Overtime vs. idle time — the mirror-image insight.** These two look opposite but share one root: a mismatch between hours available and hours needed. Idle time is *too many hours for the work*; overtime is *too little time for the work*. A well-run factory minimises **both simultaneously** by better scheduling — and the same abnormal event (a breakdown) can create idle time *now* and overtime *later* (to make up the lost output). The examiner sometimes builds exactly this trap: a breakdown causes idle time, and then overtime is worked to recover; **both the idle wages and the overtime premium for that recovery go to Costing P&L**, because both stem from the same abnormal cause.
+
+**The economic caution on overtime (theory marks).** Overtime is expensive not only for the premium but for hidden reasons: fatigue lowers productivity in the extra hours, quality tends to fall, and a habit of overtime can conceal chronic under-capacity. The costing recommendation is therefore to treat persistent overtime as a *signal to add capacity or a shift*, not as a permanent solution. Being able to say this converts a numerical question into a full-mark answer.
 
 ### 4.4 Labour Turnover — Measuring the Bleed
 
@@ -125,6 +159,12 @@ $$\text{LTR (Flux)} = \frac{\text{Separations} + \text{Replacements}}{\text{Aver
 **Equivalent Annual Turnover Rate** (when the period is less than a year):
 $$\text{Annual LTR} = \frac{\text{LTR for period}}{\text{Days in period}} \times 365$$
 
+**Why three methods, and which "means" what.** The three ratios answer three different managerial questions, and the exam sometimes asks you to *interpret* rather than compute:
+- The **separation rate** answers *"How fast are we losing people?"* — it is the retention alarm.
+- The **replacement rate** answers *"How much churn are we forced to backfill?"* — it isolates involuntary rehiring from growth.
+- The **flux rate** answers *"What is the total movement across the workforce boundary?"* — the broadest measure of instability.
+Because separations happen *before* replacements, in a stable (non-expanding) firm the separation and replacement figures often coincide; they diverge precisely when the firm is growing (expansion accessions) or shrinking (separations not backfilled). Reading which one the firm is doing *from the numbers* is a favourite short-note question.
+
 #### Costs of Labour Turnover — Two Buckets
 
 | **Preventive Costs** (spent to *stop* people leaving) | **Replacement Costs** (incurred *because* they left) |
@@ -136,6 +176,8 @@ $$\text{Annual LTR} = \frac{\text{LTR for period}}{\text{Days in period}} \times
 | | Extra machine breakdown/tool damage by novices |
 
 The managerial insight: preventive spending and replacement cost **trade off**. Spend nothing on prevention and replacement costs explode; spend sensibly on retention and you save more than you spend. Cost accounting quantifies both so management can find the economic optimum — this is a genuine decision the financial books can never illuminate.
+
+**A subtlety on apportioning turnover cost.** When a question gives you a lump of turnover cost and asks you to spread it, the usual base is the **number of workers replaced** or the **productive hours**, and preventive costs are generally apportioned over the *whole* workforce (everyone benefits from good conditions) while replacement costs attach to the *departments where the churn occurred*. State your base explicitly.
 
 ```mermaid
 flowchart LR
@@ -158,7 +200,9 @@ Now the payment machines themselves. We build them in order of increasing clever
 
 The taxi meter. Simple, guarantees the worker a stable income, and protects quality (no rush). But it gives *zero* incentive to produce more — a slow worker earns the same as a fast one. Suited to skilled/quality work (toolmakers, artists), or where output isn't within the worker's control. The firm bears all the efficiency risk.
 
-*High wage / measured day-rate variants exist (paying above market to attract better workers), but the core formula is the one above.*
+*High wage / measured day-rate variants exist (paying above market to attract better workers), but the core formula is the one above.* Two named refinements worth knowing:
+- **Measured Day Work** — the day rate is fixed periodically in the light of the worker's *recent average performance*, giving a mild, lagged incentive without the volatility of piece rate.
+- **Graduated / Differential Time Rate** — the hourly rate itself steps up with skill grade or with output bands, a gentle bridge toward incentive pay.
 
 #### (B) Straight Piece Rate System
 
@@ -166,7 +210,15 @@ The taxi meter. Simple, guarantees the worker a stable income, and protects qual
 
 The courier fee. Powerful incentive — earn exactly what you produce. But three dangers: (i) quality collapses as workers rush; (ii) no guaranteed minimum wage, so a slow day means near-starvation (industrially and legally problematic); (iii) the firm loses control over quality and material wastage. Suited to standardised, quality-tolerant, high-volume work.
 
-**Taylor's Differential Piece Rate** sharpens this: set a standard output; pay a *low* piece rate to those below standard and a *high* rate to those above — a deliberately punishing gap to drive efficiency. (Merrick's plan is a gentler three-tier version.) These reward the efficient brutally and penalise the slow — motivating but harsh.
+**Piece Rate with Guaranteed Day Wage.** The commonest real-world fix for danger (ii): the worker earns *the higher of* piece earnings or a guaranteed time wage. This puts a floor under a bad day while keeping the upside — and it is the conceptual bridge to the premium bonus plans, which are simply more sophisticated versions of "guaranteed floor plus performance upside."
+
+**Taylor's Differential Piece Rate** sharpens the raw piece rate: set a standard output; pay a *low* piece rate to those below standard and a *high* rate to those above — a deliberately punishing gap to drive efficiency. There is **no guaranteed minimum**; the whole design is to make inefficiency hurt. Typical textbook rates: **83% of the normal piece rate below standard, 125% at or above standard** (verify exact percentages against current ICAI material, as textbook conventions vary).
+
+**Merrick's Multiple / Differential Piece Rate** is the gentler, three-tier cousin — it softens Taylor by adding a middle band and, crucially, *never pays below the ordinary piece rate*:
+- Up to **83%** of standard output → **ordinary** piece rate (no penalty, unlike Taylor).
+- **83% to 100%** of standard → **110%** of ordinary piece rate.
+- **Above 100%** of standard → **120%** (some texts 120–130%) of ordinary piece rate.
+*(Verify the exact band boundaries and percentages against current ICAI material.)* The design philosophy: encourage the near-average worker with a reachable reward instead of Taylor's cliff-edge punishment.
 
 #### (C) The Premium Bonus Plans — Sharing the Saved Time
 
@@ -181,12 +233,44 @@ Let:
 **Halsey Plan — fixed 50% share of saved time:**
 $$\boxed{\text{Total Earnings} = (T \times R) + \left(50\% \times (S - T) \times R\right)}$$
 
-The worker gets her time-rate wage *plus* half the value of the time she saved. The firm keeps the other half. Simple, predictable; the firm always keeps 50% of the gain no matter how good the worker is. (A Halsey-Weir variant uses 30–33⅓%.)
+The worker gets her time-rate wage *plus* half the value of the time she saved. The firm keeps the other half. Simple, predictable; the firm always keeps 50% of the gain no matter how good the worker is. (A **Halsey-Weir** variant uses **30–33⅓%** as the sharing fraction — same structure, different slice.)
 
 **Rowan Plan — bonus proportional to the ratio of time saved to standard:**
 $$\boxed{\text{Total Earnings} = (T \times R) + \left(\frac{S - T}{S} \times T \times R\right)}$$
 
 The bonus is *time-rate wage × (time saved ÷ standard time)*. This looks odd — why scale the bonus by the fraction of time saved? Because it **self-limits**: as the worker saves more and more time, the fraction $(S-T)/S$ rises but $T$ shrinks, and the bonus is mathematically capped. **The Rowan bonus can never exceed the time-rate wage**, and it is *maximised when time saved = 50% of standard time*. This built-in ceiling protects the firm from over-paying and — crucially — protects the worker from the temptation to *over-report* speed by cutting quality, because racing past 50% saved actually *reduces* her marginal bonus. It is a self-governing incentive.
+
+*Why the Rowan bonus is capped at the time wage — the one-line proof to keep in your head.* Bonus $= \frac{(S-T)}{S}\,TR$. Write the time-saved fraction as $f = (S-T)/S$, so $T = S(1-f)$ and bonus $= f \cdot S(1-f) \cdot R = SR\,[f(1-f)]$. The quantity $f(1-f)$ is a downward parabola, **maximised at $f = 0.5$** with value $0.25$, so max bonus $= 0.25\,SR = 0.5 \times (0.5S)\,R = 0.5 \times \text{time wage at } T=0.5S$. Since $f(1-f) \le 0.25$ always, the bonus never exceeds half of $SR$, and because $T \ge 0.5S$ near the peak, it never exceeds $TR$. This *is* the ceiling, derived, not memorised.
+
+#### (D) Efficiency / Task-Bonus Plans — Beyond Halsey and Rowan
+
+The exam increasingly tests a second family that ties the bonus to an **efficiency percentage** rather than to raw hours saved. Learn the shape of each; the arithmetic is easy once you know the trigger points.
+
+**Gantt Task and Bonus Plan** — the "safe left" of the incentive dial. It guarantees a time wage and then jumps:
+- Output **below** standard (efficiency < 100%) → **guaranteed time wage** (no penalty — this is its kindness).
+- Output **at** standard (efficiency = 100%) → time wage **plus a bonus** (commonly **20%** of time wage).
+- Output **above** standard → **high piece rate** on the *whole* output (typically **120%** of ordinary rate).
+
+Gantt is ideal where you want to *protect a minimum livelihood* (learners, essential quality) yet still dangle a strong jump at the standard. The discontinuity at 100% is the motivational lever.
+
+**Emerson's Efficiency Plan** — a *smooth* ramp instead of Gantt's cliff. A guaranteed time wage up to a threshold, then a graduated bonus rising with efficiency:
+- Below **~66⅔%** efficiency → time wage only, **no bonus**.
+- From **66⅔% to 100%** → bonus rises **gradually** (reaching about **20%** of time wage at 100% efficiency).
+- Above **100%** → bonus of **20% plus 1% of time wage for every 1%** of efficiency above 100%.
+*(Verify the exact threshold and slope against current ICAI material.)* Emerson suits situations where you want to reward *steady improvement* toward the standard, not just crossing it.
+
+**Bedaux (Point) Plan.** Work is measured in standard minutes called **"B" units** (one B = one minute of standard work). Bonus is usually **75% of the time saved** (in B units, valued at the hourly rate), with the remaining **25% to the foreman/supervisor** — an early attempt to incentivise supervision too.
+
+**Barth's Scheme** (for learners) uses a square-root formula, earnings $= R \times \sqrt{\text{standard hours} \times \text{hours worked}}$; it has no guaranteed minimum and is now largely of historical/theory interest — know the name and that it suits trainees.
+
+#### (E) Group / Collective Bonus Schemes
+
+Where output is a *team* result (an assembly line, a foundry crew), you cannot isolate one worker's contribution, so the bonus is earned by the **group** and then **shared out**. Sharing bases you must be able to name and apply:
+- In proportion to **time-rate wages** of each member (the commonest, and fairest when skills differ), or
+- **Equally** among members (when contributions are broadly similar), or
+- On **specified percentages** agreed in advance (rewarding key roles more).
+
+Group schemes trade *sharpness of individual incentive* for *cooperation and reduced internal competition* — good where team output and safety matter more than individual racing.
 
 #### The Behavioural Difference — Why Two Plans, Not One
 
@@ -206,6 +290,18 @@ graph LR
 ```
 *Figure 3 — The Halsey-vs-Rowan crossover. Below 50% time saved Rowan is more generous, above 50% Halsey is, and at exactly 50% they meet.*
 
+```mermaid
+flowchart TD
+    A["Choose an incentive plan"] --> B{"Is output the worker's own individual result?"}
+    B -->|"No - team result"| G["Group bonus - share by time wages or equally"]
+    B -->|"Yes"| C{"Must a minimum wage be guaranteed?"}
+    C -->|"No - drive hard on efficiency"| D["Piece rate family - Taylor or Merrick"]
+    C -->|"Yes - protect a floor"| E{"Reward modest improvers or star performers?"}
+    E -->|"Modest improvers more"| F["Rowan - generous below 50 percent saved and self-capping"]
+    E -->|"Star performers more"| H["Halsey - fixed half share favours high savers"]
+```
+*Figure 4 — A selection map for remuneration plans. Walk the forks from the nature of the output to the behaviour you want to reward.*
+
 ### 4.6 Labour Efficiency & Effective Hourly Rate
 
 **Efficiency** measures output against a standard:
@@ -217,6 +313,10 @@ To compare plans, always compute the **Effective Hourly Rate** (also called effe
 $$\text{Effective Rate/hour} = \frac{\text{Total Earnings under the plan}}{\text{Actual Hours Worked }(T)}$$
 
 This normalises everything to a per-hour figure, letting you say "under Rowan she effectively earns ₹X/hr, under Halsey ₹Y/hr" — the sentence the examiner wants in your conclusion.
+
+**The firm's-eye view — labour cost per unit.** Where a question gives factory **overhead per hour**, do not stop at the worker's earnings. Compute what *the firm* pays per unit:
+$$\text{Cost per unit to firm} = \frac{\text{Wages} + \text{Overhead (hours} \times \text{OH rate)}}{\text{Units produced}}$$
+Because a faster worker uses **fewer hours**, she absorbs **less overhead**, so a plan that pays her *more per hour* can still make each unit *cheaper for the firm* (Principle 4). Answering "which plan is best?" from the firm's side means comparing **cost per unit**, not earnings. This is the discriminator between an average script and a top one.
 
 ---
 
@@ -235,6 +335,8 @@ The full ₹576 must be recovered over only 45 productive hours:
 $$\text{Effective rate} = \frac{₹576}{45} = ₹12.80 \text{ per hour}$$
 
 **Interpretation.** Jobs are charged at ₹12.80/hr, not ₹12/hr. The extra ₹0.80 per productive hour silently absorbs the 3 normal idle hours across the week. *Check:* 45 × ₹12.80 = ₹576 ✓ — the whole wage is recovered, nothing lost. This is Principle 1 (normal general idle time → spread over productive work) turned into arithmetic.
+
+**Examiner tweak — what if 1 of those 3 idle hours is abnormal (a power cut)?** Then only 2 hours are normal and absorbed; the 1 abnormal hour's wage (₹12) is stripped out to Costing P&L. Effective hours for absorption = 48 − 2 = 46; absorbed wage = 46 × rate must recover only the *normal* portion (₹576 − ₹12 = ₹564). Effective rate = ₹564 ÷ 46 = **₹12.26/hr**, and ₹12 goes to P&L. *Check:* 46 × 12.26 + 12 (P&L) = 564 + 12 = ₹576 ✓. The lesson: **abnormal idle wages never enter the inflated rate** — pull them out *first*, then inflate over the remaining productive hours.
 
 ---
 
@@ -262,6 +364,8 @@ Step 4 — **Treatment of the ₹400 premium**, split by cause (Principle 1):
 | **Total** | **2,800** | | |
 
 **Interpretation.** The same ₹2,800 wage is dissected: ₹2,400 flows into product cost, ₹250 attaches to the customer's job (so quoting/pricing that job reflects its true rush cost), and ₹150 is spotlighted as an abnormal loss rather than being hidden in inventory. Financial accounting would have shown only "Wages ₹2,800" — cost accounting makes each rupee accountable.
+
+**Examiner tweak — "general pressure of work" instead of a named cause.** If the question said all 8 OT hours arose from *general* seasonal pressure (no specific job, no abnormal event), the entire ₹400 premium becomes **factory overhead**, spread over all jobs — not traced to any one. And if the OT were worked to redo A's *own* defective output, the premium (and arguably the ordinary wage for redo) is charged to the **worker/department or P&L**, because the firm must not capitalise its own scrap into stock. The number never changes; only the *destination* does — that is the whole test.
 
 ---
 
@@ -360,6 +464,87 @@ Earnings = $T × R$ = 15 × ₹20 = **₹300**. Effective rate = ₹300 ÷ 15 = 
 
 ---
 
+### Example 6 — Which Plan Is Cheapest *for the Firm*? (Overhead-recovery twist)
+
+*A job has a standard time of 20 hours. Worker Q does it in 16 hours. Wage rate is ₹25/hour. Factory overhead is recovered at ₹30 per hour worked. Compute the total cost of the job to the firm under (a) Time Rate, (b) Halsey (50%), and (c) Rowan. Which plan gives the firm the lowest job cost, and why?*
+
+**Given:** $S$ = 20, $T$ = 16, $R$ = ₹25, OH = ₹30/hr, time saved = 4 hrs. Overhead is recovered on *hours worked (T)*, so all three plans absorb the **same** overhead here (16 × ₹30 = ₹480) because $T$ is identical across plans — the difference lies entirely in wages.
+
+**Wages under each plan:**
+- Time rate: 16 × 25 = **₹400**, bonus nil.
+- Halsey: 400 + 0.5 × 4 × 25 = 400 + 50 = **₹450**.
+- Rowan: 400 + (4/20) × 16 × 25 = 400 + 0.2 × 400 = 400 + 80 = **₹480**.
+
+**Total job cost (wages + ₹480 overhead):**
+
+| Plan | Wages (₹) | Overhead (₹) | Total job cost (₹) |
+|---|---:|---:|---:|
+| Time rate | 400 | 480 | 880 |
+| Halsey | 450 | 480 | 930 |
+| Rowan | 480 | 480 | 960 |
+
+**Comment — and the sharper insight.** Against *pure time rate for the same 16 hours*, time rate looks cheapest — but that comparison is a mirage, because under time rate Q has **no reason to finish in 16 hours**; she would drift to the full 20. The honest comparison is Halsey/Rowan-at-16-hours **versus time-rate-at-20-hours**: at 20 hours time-rate wages = 20 × 25 = ₹500 and overhead = 20 × 30 = ₹600, total **₹1,100** — far worse than Halsey (₹930) or Rowan (₹960). **The incentive plans look dearer on wages but slash the overhead by cutting hours, and that is where the firm truly wins** (Principle 4). Time saved here = 4/20 = 20% < 50%, so Rowan again pays the worker more than Halsey (₹480 vs ₹450), consistent with §4.5.
+
+*Check on the Rowan bonus:* (4/20) × 16 × 25 = 0.2 × 400 = ₹80 ✓; effective rate to worker under Rowan = 480 ÷ 16 = ₹30/hr vs Halsey 450 ÷ 16 = ₹28.13/hr.
+
+---
+
+### Example 7 — Reverse Problem: Find Standard Time from a Known Bonus (Exam-hard)
+
+*Under the Halsey plan (50%) a worker earned a bonus of ₹120. Under the Rowan plan, on the same job with the same time taken and same rate, he would have earned a bonus of ₹160. The wage rate is ₹40/hour. Find (a) the time taken, and (b) the standard (allowed) time.*
+
+**Solution — set up two equations.** Let time saved = $(S-T)$ hours.
+
+Halsey bonus: $0.5 (S-T) R = 120 \Rightarrow 0.5 (S-T)(40) = 120 \Rightarrow (S-T) = \dfrac{120}{20} = 6$ hours saved.
+
+Rowan bonus: $\dfrac{(S-T)}{S} T R = 160$. Substitute $(S-T) = 6$ and $R = 40$:
+$$\frac{6}{S} \cdot T \cdot 40 = 160 \Rightarrow \frac{240\,T}{S} = 160 \Rightarrow \frac{T}{S} = \frac{160}{240} = \frac{2}{3}$$
+
+So $T = \tfrac{2}{3}S$, meaning $S - T = \tfrac{1}{3}S = 6 \Rightarrow S = 18$ hours, and $T = 12$ hours.
+
+**(a) Time taken = 12 hours. (b) Standard time = 18 hours.** (Time saved = 6 hrs = 33.3% of standard.)
+
+**Verify both bonuses.**
+- Halsey: 0.5 × 6 × 40 = ₹120 ✓
+- Rowan: (6/18) × 12 × 40 = (1/3) × 480 = ₹160 ✓
+
+**Why this works — the exam craft.** The Halsey bonus alone fixes the *hours saved* (6) because it does not depend on $S$ separately. The Rowan bonus then supplies the *ratio* $T/S$. Two facts, two unknowns, solved cleanly. This "given the bonuses, find the times" reversal is a favourite because a student who only memorised the forward formulas freezes; a student who *understands* that Halsey encodes absolute saving and Rowan encodes the saving-ratio walks straight through it. Note the crossover check: time saved 33.3% < 50%, and indeed Rowan (₹160) > Halsey (₹120), consistent with theory.
+
+---
+
+### Example 8 — Group Bonus Sharing (Team output)
+
+*A team of three workers — A, B, C — jointly completes a job. Standard time for the job is 100 hours; the team finishes in 80 hours. The group bonus is computed under the Halsey principle (50% of time saved) at a common bonus rate of ₹30/hour, and the bonus is shared in proportion to each member's time-rate wages. Their individual rates and hours are: A — 80 hrs at ₹20/hr; B — 80 hrs at ₹25/hr; C — 80 hrs at ₹15/hr. Compute each worker's total earnings.*
+
+**Solution.**
+
+Step 1 — **Group time saved** = 100 − 80 = 20 hours. **Group bonus** = 50% × 20 × ₹30 = **₹300**.
+
+Step 2 — **Basic time wages of each member** (basis for sharing):
+- A: 80 × 20 = ₹1,600
+- B: 80 × 25 = ₹2,000
+- C: 80 × 15 = ₹1,200
+- **Total time wages = ₹4,800.**
+
+Step 3 — **Share the ₹300 bonus in the ratio 1,600 : 2,000 : 1,200 = 4 : 5 : 3** (sum 12):
+- A: 300 × 4/12 = **₹100**
+- B: 300 × 5/12 = **₹125**
+- C: 300 × 3/12 = **₹75**
+- *Check:* 100 + 125 + 75 = ₹300 ✓
+
+Step 4 — **Total earnings = basic wage + bonus share:**
+
+| Worker | Basic wage (₹) | Bonus share (₹) | Total (₹) |
+|---|---:|---:|---:|
+| A | 1,600 | 100 | 1,700 |
+| B | 2,000 | 125 | 2,125 |
+| C | 1,200 | 75 | 1,275 |
+| **Total** | **4,800** | **300** | **5,100** |
+
+**Comment.** Because the bonus is shared by *time wages*, the higher-rated worker B collects the largest slice — appropriate where the rate reflects skill contributed to the team result. Had the question said "share equally", each would take ₹100 regardless of rate. **Always read the sharing basis;** the individual output of A, B, C is unknowable here (it is a team result), which is *why* a group scheme is used at all. *Cross-check the whole:* total group earnings ₹5,100 = team wages ₹4,800 + group bonus ₹300, and the firm paid for 80 hours to get 100 standard hours of work — a genuine gain that funded the bonus.
+
+---
+
 ## 6. Presentation & Format — How to Lay It Out in the Exam
 
 **For remuneration comparisons**, always present a clean columnar statement and *always* end with the effective hourly rate — that is the line the examiner rewards:
@@ -379,17 +564,20 @@ Earnings = $T × R$ = 15 × ₹20 = **₹300**. Effective rate = ₹300 ÷ 15 = 
 - State **time saved = S − T** explicitly as a labelled line; many answers lose marks by not showing it.
 - For idle time / overtime, present a **treatment table** (item | amount | where charged | reason) — never just a number.
 - For turnover, **show the component computation** (separations, replacements, accessions, average) as a labelled block before the ratios.
+- When the question mentions **overhead per hour**, add a second statement for **cost per unit / per job to the firm** — do not stop at worker earnings (Example 6).
+- For **group schemes**, show the *sharing ratio* as its own line before allocating.
 - Round money to two decimals; keep hours exact; add a one-line **verification/check** ("45 × 12.80 = 576 ✓").
 
 ---
 
 ## 7. Connections — Where This Chapter Plugs Into the Rest of Cost Accounting
 
-- **→ Cost Sheet (Ch. 02 / overheads):** Direct labour (productive wages, job-related idle time, job-caused OT premium) enters **Prime Cost**. Normal general idle time and general OT premium become **Factory Overhead**. Abnormal idle time and abnormal OT go to **Costing P&L**, *outside* the cost sheet. Every labour item you classify here decides *which line of the cost sheet it lands on*.
-- **→ Overhead Absorption:** The "inflated rate" technique for idle time is the same absorption logic used for overheads — recover a fixed pool over a productive base.
-- **→ Standard Costing & Variances (later):** Labour efficiency here (Std time ÷ Actual time) is the seed of the **Labour Efficiency Variance** and **Labour Rate Variance**. Standard time $S$ reappears there as the benchmark.
+- **→ Cost Sheet (Ch. 06; overheads Ch. 04):** Direct labour (productive wages, job-related idle time, job-caused OT premium) enters **Prime Cost**. Normal general idle time and general OT premium become **Factory Overhead**. Abnormal idle time and abnormal OT go to **Costing P&L**, *outside* the cost sheet. Every labour item you classify here decides *which line of the cost sheet it lands on*.
+- **→ Overhead Absorption:** The "inflated rate" technique for idle time is the same absorption logic used for overheads — recover a fixed pool over a productive base. And Example 6's overhead-per-hour twist *is* overhead absorption meeting labour costing.
+- **→ Standard Costing & Variances (later):** Labour efficiency here (Std time ÷ Actual time) is the seed of the **Labour Efficiency Variance** and **Labour Rate Variance**. Standard time $S$ reappears there as the benchmark, and idle time becomes the **Idle Time Variance**.
 - **→ Reconciliation of Cost & Financial Accounts:** Abnormal idle/OT losses are precisely the items that cause cost profit to differ from financial profit.
 - **→ Marginal Costing / Decision-Making:** Whether labour is *fixed* (time-rate monthly staff) or *variable* (piece-rate) determines its behaviour in break-even and make-or-buy decisions.
+- **→ Job & Contract Costing:** The job card of §4.1 is the very document that carries labour into job costing; time-booking is where job cost sheets get their labour line.
 
 ---
 
@@ -400,11 +588,16 @@ Earnings = $T × R$ = 15 × ₹20 = **₹300**. Effective rate = ₹300 ÷ 15 = 
 3. **Forgetting the guaranteed time wage.** Under Halsey/Rowan, if the worker *exceeds* standard (T > S), there is **no negative bonus** — she still gets T × R. Never compute a negative bonus (Example 5).
 4. **Mixing up Halsey and Rowan bonus formulas.** Halsey = *fixed 50% of time saved*. Rowan = *(time saved ÷ standard) × time-rate wage*. A memory hook: **Rowan has a Ratio** (time saved / standard). Halsey is a **Half**.
 5. **Wrong crossover direction.** Below 50% time saved → **Rowan pays more**; above 50% → **Halsey pays more**; at 50% equal. Students routinely state it backwards.
-6. **Abnormal idle time inflating product cost.** Strike/flood/breakdown idle time must go to **Costing P&L**, never into the job or overhead. Hiding it in product cost is conceptually wrong and loses marks.
+6. **Abnormal idle time inflating product cost.** Strike/flood/breakdown idle time must go to **Costing P&L**, never into the job or overhead. Hiding it in product cost is conceptually wrong and loses marks. Pull abnormal wages out *before* computing the inflated rate (Example 1 tweak).
 7. **Using the wrong "time" in Rowan.** The bonus multiplies by **T (time taken)**, not S. Writing (S−T)/S × **S** × R is a classic slip that inflates the bonus.
 8. **Average workers denominator.** Turnover ratios use the *average* (opening + closing)/2, not closing. Using closing headcount is a silent error.
 9. **Idle time rate inflation direction.** The effective rate is *higher* than the paid rate (you recover the same money over fewer hours). If your inflated rate comes out lower, you've divided by the wrong figure.
 10. **Piece-rate quality/minimum-wage caveats.** Theory questions want you to *name* the drawbacks (no guaranteed wage, quality risk, material wastage) — don't just give the formula.
+11. **Stopping at worker earnings when overhead is given.** If the sum supplies overhead per hour, the examiner wants **cost per unit / per job to the firm** — the plan that pays the worker *more per hour* can still be cheaper per unit because it uses fewer hours (Example 6). Missing this misses the point of the question.
+12. **Taylor vs Merrick penalty confusion.** Taylor has **no guaranteed minimum and punishes below-standard with a low rate**; Merrick **never pays below the ordinary piece rate** and adds a middle band. Swapping their treatment of the slow worker is a common slip.
+13. **Gantt vs Emerson shape.** Gantt is a **step/cliff** (guaranteed wage, then a jump to high piece rate at standard); Emerson is a **smooth ramp** of graduated bonus with efficiency. Describing one as the other loses the concept mark.
+14. **Group bonus sharing basis.** "In proportion to wages" ≠ "equally". Read which, show the ratio line, and note that individual output is deliberately unknowable in a team scheme (Example 8).
+15. **Discharged/retired/dead all count as separations.** Any exit — voluntary or not — is a separation. Do not exclude retrenchment or death from the separation count.
 
 ---
 
@@ -416,7 +609,7 @@ If you forget every formula, you can regenerate this chapter from three ideas:
 2. **Every leaked cost is charged to whoever caused it (job → direct; general → overhead; abnormal → P&L), because cost must follow cause and waste must be made visible, not buried.**
 3. **Incentive pay is behavioural engineering: time rate loads risk on the firm, piece rate on the worker, and premium bonus plans (Halsey = fixed half of saved time; Rowan = saved-time-ratio share, self-capping at 50%) split the gain so the worker's speed and the firm's profit pull the same way.**
 
-From (3) you can re-derive both bonus formulas; from (2) you can classify any idle-time or overtime item; from (1) you can explain why time-keeping and time-booking are separate systems and how idle time is discovered. The whole chapter is those three sentences unfolded.
+From (3) you can re-derive both bonus formulas; from (2) you can classify any idle-time or overtime item; from (1) you can explain why time-keeping and time-booking are separate systems and how idle time is discovered. The whole chapter is those three sentences unfolded. And to reach the top band, add the fourth idea — **the worker measures pay per hour while the firm measures cost per unit, and a good plan lets the first rise while the second falls** — which is all you need to answer any "which plan is best for the firm?" question.
 
 ---
 
@@ -436,6 +629,7 @@ From (3) you can re-derive both bonus formulas; from (2) you can classify any id
 | Time saved | S − T |
 | Labour efficiency | (Std time for actual output ÷ Actual time) × 100 |
 | Effective rate/hour under a plan | Total earnings ÷ Actual hours (T) |
+| Cost per unit to firm | (Wages + Hours × OH rate) ÷ Units produced |
 
 **Labour turnover**
 
@@ -447,6 +641,22 @@ From (3) you can re-derive both bonus formulas; from (2) you can classify any id
 | Flux (replacement form) | (Separations + Replacements) ÷ Avg workers |
 | Average workers | (Opening + Closing) ÷ 2 |
 | Annualised (short period) | (Period LTR ÷ days) × 365 |
+
+**Incentive-plan family map**
+
+| Plan | One-line signature | Guaranteed floor? |
+|---|---|---|
+| Time rate | Hours × rate | Yes (the floor itself) |
+| Straight piece rate | Units × rate | No |
+| Taylor differential | Low rate below std, high rate above; punishing | No |
+| Merrick | Three bands, never below ordinary piece rate | Ordinary rate |
+| Halsey | Time wage + half of saved-time value | Yes (time wage) |
+| Rowan | Time wage + (saved ÷ standard) × time wage; self-caps at 50% | Yes (time wage) |
+| Gantt task & bonus | Guaranteed wage, jump to high piece rate at standard | Yes |
+| Emerson efficiency | Smooth graduated bonus rising with efficiency | Yes |
+| Group bonus | Team earns, shared by wages or equally | Per member |
+
+*(Verify all named percentages — Taylor 83/125, Merrick bands, Emerson 66⅔ threshold, Bedaux 75/25, Halsey-Weir 30–33⅓ — against current ICAI material / applicable AY.)*
 
 **Treatment cheat-sheet**
 
@@ -461,4 +671,4 @@ From (3) you can re-derive both bonus formulas; from (2) you can classify any id
 - Above 50% time saved → **Halsey pays more**.
 - Rowan bonus **cannot exceed** the time wage (T × R); maximised at 50% saved.
 
-**Memory hooks:** *Rowan = Ratio (saved/standard); Halsey = Half.* *Cause decides charge; abnormal is spotlighted; guaranteed wage is the floor.*
+**Memory hooks:** *Rowan = Ratio (saved/standard); Halsey = Half.* *Cause decides charge; abnormal is spotlighted; guaranteed wage is the floor.* *Worker counts rupees per hour; firm counts rupees per unit.* *Taylor punishes the slow; Merrick never does; Gantt jumps; Emerson ramps.*

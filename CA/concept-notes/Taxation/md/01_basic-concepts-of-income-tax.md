@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 01 — Basic Concepts of Income Tax
 
 > **Applicable-AY flag:** This chapter teaches the *structure and logic* that almost never change. The *numbers* (slab rates, surcharge thresholds, rebate ceilings, cess rate) DO change with every Finance Act. The figures used below are drawn from recent Finance Acts and are illustrative of the mechanism. **Before your attempt, verify the exact rates, limits, and the applicable Assessment Year in the current ICAI Study Material / RTP for your exam sitting.** If you learn *why* a slab or surcharge exists, plugging in the year's actual number is trivial.
@@ -24,6 +26,8 @@ But now three hard sub-problems appear, and the Income-tax Act, 1961 is essentia
 
 Everything in this chapter is one of those three questions being answered.
 
+**Why is the law layered — Act, Rules, Finance Act, notifications, circulars, case law?** Because each layer solves a different speed problem. The **Income-tax Act, 1961** is the *permanent skeleton* (definitions, charge, machinery) — Parliament changes it deliberately and rarely. The **Finance Act** (passed each year with the Union Budget) is the *annual dial* that sets rates and tweaks provisions — it must move yearly because economic conditions and revenue targets move yearly. The **Income-tax Rules, 1962** give *procedural detail* (how to value a perquisite, which form to file) that is too granular for the Act. **CBDT circulars** bind the *department* (not the taxpayer or courts) and explain administrative stance; **notifications** exercise powers the Act delegates. **Judicial precedent** fills gaps the words leave open. The exam almost always tests the first three; know which layer supplies rates (Finance Act) versus definitions (the Act itself) — that distinction is exactly what Sec 4 hinges on.
+
 ---
 
 ## 2. The Core Idea
@@ -46,6 +50,8 @@ The Act is not a random pile of sections. It is a **pipeline**:
 
 Hold that pipeline in your head. Every later chapter is a zoom-in on one pipe segment.
 
+**A one-sentence test of understanding:** if you can answer "which *person's* income, of which *previous year*, under which *head*, at which *year's* rate, in which *regime*" for any receipt thrown at you, you have understood this chapter. Every worked example below is that five-part question in disguise.
+
 ---
 
 ## 3. Why it's built this way
@@ -63,6 +69,10 @@ If you dumped all these into one formula you couldn't give each the deduction/ra
 **Why a separate "previous year" and "assessment year"?** Because income is earned *over* a year, but you can only *know* the full year's income *after* the year ends. You cannot assess income that hasn't finished happening. So the law fixes: earn in Year 1 (previous year), declare-and-assess in Year 2 (assessment year). More on the elegance of this in §4.
 
 **Why progressive rates + surcharge + rebate?** Ability-to-pay. But pure progressivity creates edge-effects (a rupee more of income pushing you into a higher bracket could cost more than a rupee of tax) — hence *marginal relief* and *slab-wise* (not flat) taxation. Each corrective exists to smooth an unfairness the previous rule created.
+
+**Why is income tax a *direct* tax, and why does that word matter?** A tax is *direct* when the person who legally pays it is the same person who economically bears it — you cannot pass your income tax on to someone else. Contrast GST: the shopkeeper *pays* it to government but *you*, the consumer, bear it in the price. This "incidence sticks to the earner" property is *what makes progressivity possible* — you can only tax someone by ability-to-pay if you can be sure the burden lands on *them*. A tax you could shift would defeat the whole moral engine of §1. That is the deep reason income tax, not GST, carries the slab structure.
+
+**Why does the same government run both a direct and an indirect tax?** Diversification of the revenue base. Income tax is *elastic and progressive* but volatile (falls hard in a recession when profits vanish). GST is *broad and stable* (people keep consuming even in a downturn) but regressive. Running both lets the state be fair (via income tax) *and* funded reliably (via GST). Understanding this pairing is why the "Connections" section contrasts the two.
 
 ---
 
@@ -86,11 +96,25 @@ If you dumped all these into one formula you couldn't give each the deduction/ra
 
 > **Memory hook:** "**I HFC A B — LA, AJP**" or simply remember the sweep: *humans → families → companies → firms → groups → government bodies → everything-else*. The 7th category (AJP) exists precisely so **nothing escapes**.
 
-**Sec 2(7) — "Assessee":** a person *by whom any tax or any other sum (interest, penalty) is payable*, OR against whom any proceeding has been taken, OR who is deemed to be an assessee, OR an assessee-in-default (e.g., an employer who failed to deduct TDS). 
+**Finer distinctions the examiner tests inside Sec 2(31):**
+
+- **AOP vs BOI — the one-line difference.** An **AOP** can include *any* person (an individual, a company, a firm can all be members); a **BOI** is a body of **individuals only**. Also, an AOP implies a *common purpose / joint venture to produce income* (there's *volition* to associate); a BOI can be a mere collection of individuals (e.g., co-heirs receiving property) without a business objective. Trap: two companies coming together form an **AOP**, never a BOI.
+- **"Even if not incorporated."** The definition's Explanation says an AOP/BOI/local authority/AJP is a person "whether or not [it] was formed or established with the object of deriving income, profits or gains." Reason: the state won't let an entity escape merely by claiming it wasn't set up to make money — if income arises, there is a person to tax.
+- **A single individual is a "person"; so is a one-person entity.** You don't need plurality — one human is an Individual.
+- **HUF is not a "firm" and not a "company"** — it is its own bucket. Its income is taxed in the HUF's own hands at individual-type slab rates, *separately* from the members. This is *why* HUFs exist as a tax-planning vehicle: they create an extra taxable "person" with its own basic exemption.
+- **Company includes a foreign company** and any body corporate; but a **firm includes an LLP** — a limited liability partnership is taxed *as a firm*, not as a company, despite the word "limited." Classic trap.
+
+**Sec 2(7) — "Assessee":** a person *by whom any tax or any other sum (interest, penalty) is payable*, OR against whom any proceeding has been taken, OR who is deemed to be an assessee, OR an assessee-in-default (e.g., an employer who failed to deduct TDS).
+
+The definition actually stitches together **three sub-species** — know them by name because questions ask "state the category of assessee":
+
+1. **Ordinary assessee** — a person by whom tax/interest/penalty is payable, or against whom any proceeding has been taken (whether or not any tax is ultimately due — a person filing a *loss return* or claiming a *refund* is still an assessee because a proceeding concerns them).
+2. **Deemed assessee (representative assessee)** — a person made responsible for *another's* tax: the legal heir of a deceased, the guardian of a minor, the agent of a non-resident, the trustee of a trust. Reason: tax the person who can actually pay/answer when the real earner cannot.
+3. **Assessee-in-default** — a person who *fails to do a duty* the Act casts on them, typically the payer who was required to deduct TDS and didn't, or deducted but didn't deposit it. Reason: the collection mechanism (Sec 4(2) pay-as-you-earn) needs teeth.
 
 > **Why the distinction between "person" and "assessee"?** *Person* is the universe of potential taxpayers (a definitional category). *Assessee* is a person who has actually entered the tax machinery — owes something or is under proceedings. Every assessee is a person; not every person is an assessee in a given year.
 
-**Representative assessee & deemed assessee:** where the real earner can't be taxed directly (a minor, a non-resident, a deceased person's estate), the law taxes a *representative* (guardian, agent, legal heir) so the income doesn't slip through. Reason: **collect from someone who can actually pay/answer.**
+> **Micro-trap:** a person claiming a **refund** is an assessee (a proceeding is taken to determine the refund) — students wrongly think only those who *owe* money are assessees. Also, a person filing a return of **loss** is an assessee.
 
 ### 4.2 "Income" [Sec 2(24)] — an *inclusive*, not exhaustive, definition
 
@@ -117,6 +141,16 @@ Key inclusions worth knowing (each is there because it was once argued *not* to 
 6. **Application vs diversion of income:** if income is diverted *before it reaches you* by an overriding legal obligation (diversion at source by *overriding title*) it's not your income; if it reaches you and you then *spend/apply* it toward an obligation, it *is* your income first, then spent. (A recurring exam trap — see §8.)
 7. **Income must come from *outside*** — you cannot earn taxable income by trading with yourself (mutuality).
 
+**Deeper first-principles tests the examiner slips into MCQs and short problems:**
+
+- **Capital vs revenue receipt.** The single most litigated distinction in tax. A *revenue* receipt is a fruit of the tree (rent, interest, salary, trading profit) — recurring, arising from *using* an income-earning apparatus — and is generally income. A *capital* receipt is a slice of the tree itself (sale of a machine, of the business, of a capital asset) — and is *not* income *unless* the Act specially deems it so (which it does for capital gains u/s 45, and for a few others). Reason for taxing capital gains despite being "capital": the accretion is real economic gain, so the law *expressly* pulls it in — but only because a specific charging section says so. **Rule to carry:** a capital receipt is taxable only if a section specifically brings it to charge; a revenue receipt is taxable unless a section specifically exempts it.
+- **Compensation — is it income?** Compensation for loss of a *source* (e.g., termination of an agency that was the whole business) tends to be capital; compensation for loss of *profits* or for a passing injury to trading is revenue. The examiner probes whether you can spot which "tree" was hurt.
+- **Contingent vs accrued.** Income accrues only when a *right to receive* it arises (a debt owed to you), not when it is merely *anticipated*. A bonus not yet declared, a claim still disputed, has not accrued.
+- **Diversion by overriding title — the precise test.** The obligation must attach to the *source* of the income and divert it *before* it becomes the assessee's, by a *title superior* to the assessee's own (a charge created by will, decree, or statute). A self-created contractual promise to pay someone is mere *application*. (Leading idea from *CIT v. Sitaldas Tirathdas*: personal obligations discharged out of income are application, not diversion.)
+- **Pin money, gifts within exempt limits, agricultural income** — flagged as either *not income* or *exempt income*; distinguish (a) receipts that are *not income at all*, (b) income that is *exempt* (Sec 10 — e.g., agricultural income), and (c) income that is *taxable*. All three feel similar but sit at different points in the pipeline.
+
+> **Diminishing distinction: "income" vs "exempt income" vs "not income."** *Not income* never enters the computation (e.g., a pure capital receipt with no charging section, a personal gift below the 56(2)(x) threshold). *Exempt income* IS income but the Act (mainly Sec 10) frees it from tax and it usually stays out of Total Income (e.g., agricultural income — though it is *aggregated* for rate purposes, taught in the rates chapter). *Taxable income* flows through to Total Income. Examiners deliberately mix all three in a list and ask for Total Income.
+
 > **Reason for the inclusive definition:** the state wants a *net* wide enough to catch tomorrow's cleverness, not just today's known receipts.
 
 ### 4.3 Gross Total Income vs Total Income [Sec 2(45), Sec 80B(5)] — and why two levels
@@ -125,6 +159,11 @@ Key inclusions worth knowing (each is there because it was once argued *not* to 
 - **Total Income (TI)** = GTI **minus** deductions under Chapter VI-A (80C, 80D, 80G, etc.). This is the figure on which tax is finally computed.
 
 **Why two levels?** Because the *heads* answer "what did you earn?" while *Chapter VI-A* answers "what socially-desirable things did you do with it (save, insure, donate, repay an education loan)?" The state first measures your economic income (GTI), then rewards chosen behaviours with deductions to arrive at the amount it will actually tax (TI). Keeping them separate keeps *measurement* and *policy incentive* cleanly distinguishable.
+
+**Two rules about GTI/TI that exams exploit:**
+
+- **Chapter VI-A deductions can never exceed GTI.** Total Income cannot go below nil via these deductions — you cannot create or increase a *loss* using 80C/80D/80G. Reason: these are *incentives to give back part of income*, not a source of refunds. (Business/house-property *losses*, by contrast, arise *within* the head computation and *can* pull GTI down — that happens at an earlier pipe segment, in set-off.)
+- **The order is fixed and one-directional:** heads → set-off of current & brought-forward losses → **GTI** → Chapter VI-A → **TI** → tax. You cannot deduct 80C *before* aggregating heads, and you cannot set off a loss *after* GTI. Getting the sequence wrong is a method-mark loss.
 
 ### 4.4 Previous Year [Sec 3] and Assessment Year [Sec 2(9)] — WHY two years
 
@@ -144,6 +183,8 @@ flowchart LR
 
 **Uniform PY for everyone [Sec 3]:** every taxpayer's PY is the *financial year* (Apr–Mar), regardless of when they keep their books. Reason: a single national tax calendar makes filing, TDS, and administration uniform — no chaos of a million different accounting periods.
 
+**The first previous year of a NEW source / new business — a favourite trap.** When a business is *newly set up* or a source *newly comes into existence* during a financial year, its first previous year is *shorter than 12 months*: it runs from the **date of setting up / coming into existence** to the **following 31 March**. Thereafter it is always the full Apr–Mar year. So a business started on 1 December 2025 has a first PY of 1 Dec 2025 – 31 Mar 2026 (4 months), assessed in AY 2026-27. Reason: you cannot have a previous year for a source that did not yet exist; the year "begins" only when the source does. *(A full 12-month PY can never be exceeded — the first one can only be shorter, never longer.)*
+
 **Exceptions — when income of a PY is taxed *in the same year* (why the lag is dropped):** if the state waited a full year, the money might vanish (person leaving India, a one-off venture, a body about to dissolve). The Act therefore taxes *immediately* in five situations:
 
 | Sec | Situation | Why taxed in same year |
@@ -155,6 +196,8 @@ flowchart LR
 | 176 | **Discontinued business** | Business gone; assess the final stretch now |
 
 > **Memory hook — "Ships Leaving Are Transferring & Discontinuing" (172, 174, 174A, 175, 176).** All five share one logic: *the taxpayer or the income might not be around next year, so tax now.*
+
+**Deeper reasoning on the exceptions — what actually happens mechanically.** In each case the income of the *part-year up to the triggering event* (or the whole special venture) is assessed *in the same financial year*, either at the rates in force or, where the rates for that year aren't yet enacted, at the rates of the *preceding* year (the section says so). The unifying principle is **risk of loss of revenue**: the ordinary one-year lag is a *convenience*, and the law withdraws that convenience the moment the lag would let tax escape. Note Sec 172 is a *self-contained* code for the ad-hoc levy on a non-resident's ship at an Indian port (a percentage of freight is deemed income) — a common MCQ is "which section deals with non-resident shipping" → **172**, not 174.
 
 ### 4.5 Charge of Income Tax [Sec 4] — the master switch
 
@@ -170,6 +213,14 @@ Unpack the four things Sec 4 stitches together (notice it *references everything
 4. **Of every person** — ties to Sec 2(31).
 
 **Sec 4(2)** — income tax is *deducted at source (TDS)* or *paid in advance* where the Act so requires, even though the final charge is by reference to the AY. Reason: the government can't wait a year for cash flow; **pay-as-you-earn** (TDS/advance tax) funds the state through the year, and it's all reconciled at assessment.
+
+**A subtle but heavily-tested point — "subject to the provisions of this Act."** Sec 4(1) charges tax *subject to* the rest of the Act. This little phrase is what lets *specific* provisions **override** the general charge. So:
+
+- **Deeming provisions** (e.g., clubbing u/s 60–64, deemed dividend, Sec 68–69 unexplained cash credits/investments) can tax income in the hands of someone *other* than the apparent earner, or tax something *as* income, *because* Sec 4 bows to "the provisions of this Act."
+- **Same-year assessment sections (172/174/174A/175/176)** override the general "previous year → next AY" rule for the same reason.
+- **Exemptions (Sec 10)** carve income *out* of the charge.
+
+> **Why Sec 4 is called the "charging section" while everything else is "machinery."** A charging section *creates liability*; a machinery/computation section *quantifies* it. If a receipt is income but no charging section catches it, it is not taxed no matter how much the computation sections say. Sec 4 is the *general* charge; Sec 15 (salary), 22 (house property), 28 (business), 45 (capital gains), 56 (other sources) are the *head-level* charging sections that Sec 4 orchestrates. This is why capital gains — a capital receipt — is nevertheless taxed: Sec 45 is an *express charging section* that Sec 4 activates.
 
 > **One-line intuition for Sec 4:** *"For each year Parliament announces, tax every person on last year's total income at this year's rates — and collect some of it in advance."* It is the constitutional-style trigger the whole Act hangs on.
 
@@ -203,6 +254,19 @@ flowchart TD
 | 5 | **Income from Other Sources** | 56–59 | The **residuary** head — anything that is income but fits none of the above (interest, dividends, lottery, gifts, family pension). Reason: guarantees *no income falls through the cracks* |
 
 > **Why classification matters practically:** the *same* rupee can be taxed differently depending on its head. Interest on a business's idle funds may be PGBP or Other Sources; rent may be House Property or PGBP (if letting is the business). The head decides the deductions and sometimes the rate — hence exams test *head identification* relentlessly.
+
+**The two governing principles of head classification (know both names):**
+
+1. **A head, once it applies, is mandatory — you cannot choose a more convenient head.** The heads are *mutually exclusive and specific*. Rent from a building you *own* is House Property even if you'd rather call it business; salary from an *employer* cannot be re-labelled "professional fees" to grab expense deductions. The nature of the source fixes the head. (Only where a genuine ambiguity exists — e.g., is this a business of letting? — does judgement enter.)
+2. **The residuary head is a true last resort.** Sec 56 catches an item *only if* (a) it is income, and (b) it is not chargeable under any of heads 1–4. If it fits an earlier head, it *must* go there. So "interest on securities held as stock-in-trade of a money-lending business" is PGBP, not Other Sources.
+
+**Classic re-classification traps:**
+
+- **Rent of a house let out** → House Property. **Rent of a house that is the *business asset* of a person whose business is letting/complex management, or composite letting of building + plant** → may be PGBP. **Sub-letting** by a *tenant* (who is not the owner) → Other Sources (not House Property, because House Property needs *ownership*).
+- **Interest on a delayed refund, on a fixed deposit, on securities (not held as business stock)** → Other Sources. **Interest earned by a bank / money-lender in the course of business** → PGBP.
+- **A director's sitting fee** → Other Sources; **a whole-time director's remuneration under an employment** → Salaries. The test is the *employer–employee relationship*.
+
+> **Why does head choice sometimes change the tax and not just the label?** Because each head carries its *own* deduction menu and occasionally its *own* rate. Casual income landing in Other Sources under Sec 115BB is taxed flat with *no* deductions; the *same* amount as business receipts would allow expense set-off. That is why examiners hide a mis-classifiable receipt in nearly every problem.
 
 **Memory hook:** "**S**he **H**as **B**ig **C**apital **O**utflows" → Salaries, House property, Business, Capital gains, Other sources. Head 5 (Other Sources) is always the *last resort residuary* — if it's income and homeless, it lives here.
 
@@ -239,12 +303,28 @@ There are now **two regimes** (see §4.9). Illustrative slab schedules:
 
 > **⚠ Verify these slabs, the exemption limit, and the AY against current ICAI material — they were revised by recent Finance Acts and change often. Learn the *shape* (more, finer slabs + higher entry threshold in the new regime), not the digits.**
 
+**Who gets slabs and who gets a flat rate — the taxpayer-type map.** Slabs are for *individuals, HUFs, AOP/BOI, and AJP*. Other persons are taxed at **flat rates** because the ability-to-pay/subsistence logic that justifies a tax-free basic slab is a *human* concern:
+
+- **Firms & LLPs** — flat 30% (illustrative) on total income; no basic exemption. Reason: a firm has no "subsistence needs"; the partners' personal circumstances are dealt with in *their* returns.
+- **Companies** — flat rates that differ for domestic vs foreign and by turnover/regime (e.g., concessional 22% u/s 115BAA, 15% for new manufacturing u/s 115BAB — verify). Reason: a company is an artificial person; policy (not subsistence) drives its rate.
+- **Local authorities** — flat 30% (illustrative).
+- **Co-operative societies** — their own slab/concessional-regime structure.
+
+> **Why no basic exemption for firms/companies?** The tax-free slab exists to spare *human* subsistence income; an artificial person needs no bread. This is the ability-to-pay principle drawing a line between natural and artificial persons.
+
 **Rebate u/s 87A — why the "zero-tax up to X" headline exists.** A resident *individual* whose total income is up to a ceiling gets a rebate that wipes out the tax up to a cap. Purpose: **relieve small taxpayers entirely** — collecting tiny amounts from low earners costs more in administration/hardship than it's worth. The ceiling and cap differ by regime and change yearly (e.g., historically ₹5,00,000 income / ₹12,500 rebate under old regime; a substantially higher income ceiling and rebate under the new regime). **Verify current figures.** Note: 87A rebate does *not* apply to income taxed at *special rates* (like lottery winnings).
+
+**Two finer 87A rules exams love:**
+
+- **Only a *resident individual* gets 87A** — *not* an HUF, *not* a firm, *not* a non-resident individual. A non-resident with ₹4,00,000 income does *not* get the rebate.
+- **The rebate equals the *lower* of (the actual tax on non-special-rate income) or (the statutory cap).** Under the new regime a *marginal relief on the 87A edge* also exists so that someone whose income just crosses the 87A ceiling is not worse off — the extra tax cannot exceed the extra income beyond the ceiling. **(Verify the current mechanics; this marginal-relief-on-rebate feature has been introduced/tweaked in recent Finance Acts.)**
 
 **Special (non-slab) rates** — some income bypasses slabs entirely because of its nature:
 
 - **Winnings from lottery/betting/gambling [Sec 115BB]** — flat high rate (e.g., 30% + surcharge + cess), *no basic exemption, no deductions, no 87A*. Reason: windfall, no effort, no expenses — the state taxes it hard and clean.
 - **Long-term capital gains** and certain **short-term capital gains on listed securities** — concessional special rates (learnt in the Capital Gains chapter).
+
+**How special-rate income interacts with the basic exemption — a resident-only relief.** A *resident individual/HUF* whose *other* income is below the basic exemption limit may use the *unexhausted* basic exemption to reduce *certain* special-rate incomes (notably LTCG u/s 112 and some STCG) — the shortfall in the basic exemption is first adjusted against such gains. This relief is **not** available to a **non-resident**, and is **never** available against **casual winnings u/s 115BB** (those are taxed rupee-one at the flat rate). Reason: the basic exemption is a subsistence shield for residents; a pure windfall gets no shield. **(Verify the exact list of gains eligible for this adjustment for your AY.)**
 
 ### 4.8 Surcharge, Marginal Relief, and Health & Education Cess — why three add-ons stack on top
 
@@ -261,11 +341,15 @@ The base slab rate isn't the end. Three layers sit above it, each solving a dist
 
 > **Verify the thresholds, rates, and the new-regime cap for your AY.** Logic to remember: *surcharge = a surtax on the tax of the rich, in bands.*
 
-**(b) Marginal Relief — the fairness patch on surcharge (and on the exemption edge).** 
+**A crucial surcharge carve-out — the 15% cap on certain incomes.** Surcharge on the portion of tax relating to **dividend income and to capital gains taxed u/s 111A / 112 / 112A** is *capped at 15%*, even if total income is above ₹2 crore or ₹5 crore. Reason: these incomes are volatile/mobile (equity investors and FIIs can shift capital abroad), so the state deliberately restrains the top surcharge on them to avoid driving investment away. Trap: students apply 25%/37% to the whole tax including the capital-gains portion — you must *split* the tax and cap the surcharge on the gains part at 15%. **(Verify the covered sections for your AY.)**
+
+**(b) Marginal Relief — the fairness patch on surcharge (and on the exemption edge).**
 
 **The problem it fixes:** surcharge kicks in the moment income *crosses* ₹50 lakh. Without a patch, earning ₹1 more than ₹50,00,000 could trigger surcharge on the *entire* tax — so a ₹1 extra of income could cost you thousands of extra rupees of tax. That's absurd (you'd be worse off for earning more).
 
 **Marginal relief rule:** the **extra tax (including surcharge)** payable on crossing the threshold **cannot exceed the extra income** earned above that threshold. In effect, surcharge is trimmed so that *income above ₹50 lakh is never taxed at more than ~100% at the margin.*
+
+**Marginal relief exists at *every* surcharge threshold, not just ₹50 lakh.** The same "extra tax ≤ extra income above the threshold" test is applied afresh at ₹1 crore, ₹2 crore and ₹5 crore, each time comparing tax at the just-crossed income with tax at exactly the threshold below it. So a person at ₹1.02 crore gets marginal relief measured against the tax at ₹1 crore (jump from 10% to 15% surcharge), *not* against ₹50 lakh. Method to carry: **always benchmark against the immediately-lower threshold that was just crossed.**
 
 > **Intuition:** marginal relief guarantees "*a rupee more of income never costs you more than a rupee more of tax.*" It smooths the cliff created by surcharge. (Worked in Example 3.)
 
@@ -284,6 +368,8 @@ flowchart TD
 ```
 *Figure 4.8 — The stacking order: rate → surcharge → marginal relief → rebate → cess. Cess is always LAST and computed on tax-plus-surcharge.*
 
+> **Where does rebate 87A sit relative to surcharge?** 87A applies to *small* taxpayers (income within a modest ceiling) who by definition never reach surcharge thresholds — so in practice 87A and surcharge never appear in the *same* computation. The stacking diagram shows the *general* order, but never expect to trim surcharge *and* grant 87A to one person. If a problem gives income within the 87A ceiling, forget surcharge; if it gives crores, forget 87A.
+
 ### 4.9 Old vs New Regime — Section 115BAC
 
 **The policy problem:** the old regime is riddled with *dozens* of exemptions and deductions (HRA, LTA, 80C, 80D, home-loan interest…). This is great for tax-planning but (a) complex to comply with, (b) distorts choices (people invest to save tax, not because it's a good investment), and (c) benefits mostly those who can afford advisers. The government's response: offer a **simpler, lower-rate regime with *most* deductions stripped away** — you choose lower rates *or* the deductions, not both.
@@ -293,6 +379,12 @@ flowchart TD
 - **Now the *default* regime.** If you do nothing, you're taxed under the new regime. (Reason: nudge the nation toward simplicity.)
 - **Lower slab rates + higher basic exemption** (see §4.7), **but most exemptions/deductions are forgone** — no 80C, 80D (largely), HRA, LTA, etc. A limited **standard deduction on salary** and **employer's NPS contribution (80CCD(2))** are still allowed. *(Verify the exact allowed/disallowed list for your AY — it has been loosened over time.)*
 - **Opting out (choosing the old regime):** a salaried person with no business income can choose each year. A person with **business/professional income** who opts out can generally switch back to the new regime **only once** — reason: businesses shouldn't flip-flop yearly to game rates; the law wants a stable, considered choice.
+
+**The opt-out mechanics — a heavily tested procedural point:**
+
+- **No business income (e.g., salaried/pension/only house-property/other-sources person):** may choose old or new **every single year**, simply by indicating in the return. Maximum flexibility because there's no gaming risk.
+- **Has business/professional income:** to opt *out* of the new regime into the old, must file **Form 10-IEA** on or before the due date of return. Having opted out, they may switch **back** to the new regime *once*; once they return to the new regime they *cannot* go to the old again (so long as they have business income). Reason: a one-way ratchet prevents rate-arbitrage year to year.
+- **The choice must be exercised by the *due date of filing the return* (Sec 139(1)).** Miss the due date and, generally, the old-regime option (which requires the form) is lost for that year — you're stuck with the default new regime. **(Verify current procedure and form numbers for your AY.)**
 
 ```mermaid
 flowchart TD
@@ -305,6 +397,8 @@ flowchart TD
 *Figure 4.9 — 115BAC decision tree. New regime is the default; you must actively opt out to claim the old regime's deductions. In practice you compute both and choose the lower.*
 
 > **How to reason about it, not memorise it:** the new regime wins for people who *don't* have big deductions (little 80C investment, no home loan, no HRA). The old regime wins for people *loaded* with deductions. The exam-and-life skill is to **compute both and compare.**
+
+**The break-even way of thinking (deeper than "compute both").** Conceptually, the old regime is worth choosing only if *the tax saved by your deductions* exceeds *the tax saved by the new regime's lower rates + higher exemption*. There is a **break-even level of total deductions** at each income: below it, new wins; above it, old wins. You don't memorise a number — you *see* that a person with, say, only ₹50,000 of deductions almost never beats the new regime, while a person maxing 80C + 80D + home-loan-interest + HRA often does. This turns a rote comparison into an intuition. **(Verify the actual break-even for your AY's numbers.)**
 
 ---
 
@@ -377,9 +471,11 @@ Tax on ₹8,75,000 (new slabs):
 - Tax after rebate = **Nil**; cess on nil = nil.
 - **Tax payable (new) = ₹0**
 
-**Advice:** New regime → **₹0** vs Old regime → **₹59,800**. Choose the **new regime**; the generous 87A ceiling makes her tax-free despite losing 80C/80D. 
+**Advice:** New regime → **₹0** vs Old regime → **₹59,800**. Choose the **new regime**; the generous 87A ceiling makes her tax-free despite losing 80C/80D.
 
 **Reconciliation/insight:** the deductions she loses (₹1,75,000) are worth *less* to her than the new regime's higher exemption + huge rebate. This is exactly the "compute both, compare" skill. ✔
+
+**What if the examiner tweaks it?** Suppose Ms. B also has **home-loan interest of ₹2,00,000** (deductible under the *old* regime's House Property head, but *not* under the new regime). Re-run: old-regime TI falls to ₹7,25,000 − 2,00,000 = ₹5,25,000, tax ≈ 12,500 + 20% × 25,000 = ₹17,500 + cess ₹700 = **₹18,200**; new regime is unchanged at **₹0** (home-loan interest on a self-occupied house is not allowed there). *New still wins.* Now push the deductions harder — give her 80C ₹1,50,000 + 80D ₹25,000 + home-loan interest ₹2,00,000 + HRA exemption ₹1,50,000. The old-regime deductions may now shrink TI below the old ₹5,00,000 rebate ceiling, making *both* regimes ₹0 — at which point you choose old only if it also gives a lower *cess-inclusive* figure or better loss carry-forward. **Lesson:** the regime verdict flips as deductions grow past the break-even (§4.9); never assume "new always wins."
 
 ---
 
@@ -417,6 +513,52 @@ Tax on ₹50,00,000:
 - **Tax payable = ₹14,69,000**
 
 **Reconciliation/insight:** without marginal relief the tax-plus-surcharge was ₹14,76,750; the earner's *extra* ₹1,00,000 of income should never cost more than ₹1,00,000 of extra tax. After relief, tax-plus-surcharge (₹14,12,500) − tax at ₹50L (₹13,12,500) = exactly **₹1,00,000**. Marginal relief did precisely its job. ✔
+
+---
+
+### Example 4 (Exam-hard) — Casual winnings mixed with normal income (the 115BB trap)
+
+*Mr. D, resident individual, aged 50, PY 2025-26, old regime. Normal business income ₹2,00,000; winnings from a TV game show ₹6,00,000 (gross, before the show deducted TDS). No Chapter VI-A investments. Illustrative: old slabs §4.7; 87A nil-tax up to TI ₹5,00,000; lottery/winnings taxed flat 30% u/s 115BB; cess 4%. Compute tax payable.*
+
+**Solution.** The examiner's bait: total income is ₹8,00,000 — a careless student taxes the whole thing on the slab, or grants 87A because "it's under some ceiling." Both are wrong. **Winnings must be segregated and taxed at the special flat rate with no exemption, no deduction, no 87A.**
+
+**Step 1 — Split the income:**
+
+| Component | ₹ | Rate |
+|-----------|---|------|
+| Winnings (special, Sec 115BB) | 6,00,000 | Flat 30% |
+| Normal income (business) | 2,00,000 | Slab |
+| **Total Income** | **8,00,000** | — |
+
+**Step 2 — Tax on winnings (115BB):** 30% × 6,00,000 = **₹1,80,000** (no basic exemption is set off against winnings; the flat rate hits rupee one).
+
+**Step 3 — Tax on normal income:** normal income ₹2,00,000 is *below* the ₹2,50,000 basic exemption → **Nil**. (The basic exemption shelters only the *normal* income, never the winnings.)
+
+**Step 4 — Rebate 87A?** Even though *total* income (₹8,00,000) exceeds ₹5,00,000 so 87A fails anyway here, note the deeper rule: **87A can never reduce the tax on the ₹6,00,000 winnings** even if total income were within the ceiling. So rebate = **Nil**.
+
+**Step 5 — Aggregate and add cess:**
+- Tax before cess = 1,80,000 + 0 = ₹1,80,000
+- Cess 4% × 1,80,000 = ₹7,200
+- **Tax payable = ₹1,87,200** (against which the TDS the show already deducted is credited).
+
+**Reconciliation/insight:** the flat-rate income (₹1,80,000 tax) dwarfs what a naive slab computation on ₹8,00,000 would give (≈ ₹72,500), *proving* why segregation matters — the special rate is *harsher*, not softer, and the basic exemption/87A shields cannot touch it. **Contrast trap:** had the ₹6,00,000 been *interest income* (ordinary Other Sources, not winnings), the whole ₹8,00,000 would be slab-taxed and 87A logic re-examined. The single word "winnings" changes the entire answer. ✔
+
+---
+
+### Example 5 (Moderate) — First previous year of a new business + same-year assessment
+
+*Mr. E sets up a manufacturing business on 1 August 2025. Separately, Mr. F, a resident who has no intention of returning, is leaving India permanently on 15 October 2025; his income from 1 April 2025 to 15 October 2025 is ₹7,00,000. State (a) Mr. E's first previous year and assessment year, and (b) how and when Mr. F's income is charged.*
+
+**Solution.**
+
+**(a) Mr. E — new business [Sec 3].** A newly set-up source's first previous year runs from the date of setting up to the following 31 March. So:
+- **First Previous Year:** 1 August 2025 – 31 March 2026 (8 months — shorter than 12, which is permitted only for a *first* PY).
+- **Assessment Year:** 2026-27.
+- From the next year it reverts to a full Apr–Mar previous year.
+
+**(b) Mr. F — leaving India [Sec 174].** Because he is unlikely to return, waiting for AY 2026-27 risks losing the tax. Sec 174 allows **same-year assessment**: his income from 1 April 2025 up to the *probable date of departure* is assessed **in AY 2025-26 itself**, at the rates in force (or the immediately preceding year's rates where the current year's are not yet enacted). So his ₹7,00,000 is taxed *now*, not next year.
+
+**Reconciliation/insight:** both parts hinge on the *same* structural idea — the PY/AY machinery bends to reality. It *shortens* the first year when a source is *born* mid-year (E), and it *collapses the lag* when the taxpayer is about to *disappear* (F). Memory anchor: "Ships Leaving Are Transferring & Discontinuing" (172/174/174A/175/176) — F falls under **174**. ✔
 
 ---
 
@@ -461,6 +603,10 @@ Computation of Tax Liability
 - **Round Total Income to nearest ₹10 [Sec 288A]** and **tax payable to nearest ₹10 [Sec 288B]** — administrative simplicity.
 - **State residential status and regime at the top** — because both change the very numbers you compute.
 
+**Rounding — the exact mechanics students fumble.** Under **Sec 288A**, *Total Income* is rounded to the nearest multiple of ₹10: ignore any paise, then if the last figure is ₹5 or more round *up*, else *down* (e.g., ₹7,25,246 → ₹7,25,250; ₹7,25,244 → ₹7,25,240). Under **Sec 288B**, the *final tax payable* is rounded the same way. Do **not** round after every intermediate step — round *Total Income once* and the *final tax once*. Rounding surcharge, cess and sub-totals individually accumulates error and can cost a mark.
+
+**Where each add-on physically sits — a presentation reminder.** Show *tax on normal income* and *tax on special-rate income* on separate lines, sum them, *then* apply surcharge on the aggregate (capping the surcharge on the capital-gains/dividend portion at 15% per §4.8), *then* marginal relief, *then* cess. Writing cess before surcharge, or netting winnings into the slab, are the two most common structure errors and both are visible to the examiner at a glance.
+
 ---
 
 ## 7. Connections — how this chapter wires into the rest of the syllabus
@@ -470,6 +616,8 @@ Computation of Tax Liability
 - **→ Clubbing & Set-off:** the "aggregate the heads" step hides two sub-rules — clubbing others' income into yours, and setting off losses across heads — done *before* GTI.
 - **→ Chapter VI-A deductions:** the GTI → TI step (80C, 80D, 80G…).
 - **→ Advance tax / TDS / Return filing:** Sec 4(2)'s pay-as-you-earn promise is operationalised there.
+- **→ Agricultural income & partial integration:** Sec 4's charge excludes agricultural income (a State subject, exempt u/s 10(1)), but the rates chapter *aggregates* it with non-agricultural income to fix the *rate* on the taxable slice — a direct sequel to §4.7.
+- **→ Assessment procedure & PAN/AY machinery:** the "assessee" definition of §4.1 is the doorway to the return-filing, assessment, appeals and penalty chapters — every "assessee-in-default" and "representative assessee" idea recurs there.
 - **→ GST/indirect tax:** contrast — income tax is *direct* (borne by the earner, progressive); GST is *indirect* (borne by the consumer, on spending). Same government, opposite base.
 
 ---
@@ -479,15 +627,21 @@ Computation of Tax Liability
 1. **"Higher slab taxes all income" myth.** Only the *slice* in a slab is taxed at that slab's rate. Never apply 30% to the whole income.
 2. **87A on special-rate income.** Rebate u/s 87A does **not** reduce tax on lottery/casual winnings (Sec 115BB) or (generally) on special-rate capital gains. Examiners plant a small lottery win to see if you wrongly zero-out the tax.
 3. **Cess is on (tax + surcharge), not on income, and comes AFTER marginal relief and after rebate.** Order matters — compute cess last.
-4. **Marginal relief direction.** It only *reduces* surcharge (or tax at the exemption edge); it never increases tax. Apply the "extra tax ≤ extra income" test only when income just crosses a threshold.
-5. **Default regime is NEW.** If the question says nothing, tax under **115BAC (new)**. A candidate who defaults to the old regime out of habit loses marks. Business-income assessees who opt out get *one* switch back.
-6. **PY = same-year taxation exceptions (172/174/174A/175/176).** A question about "a person leaving India permanently in Oct 2025" wants same-year assessment, not next-year.
+4. **Marginal relief direction.** It only *reduces* surcharge (or tax at the exemption edge); it never increases tax. Apply the "extra tax ≤ extra income" test only when income just crosses a threshold — and benchmark against the *immediately-lower* threshold, not always ₹50 lakh.
+5. **Default regime is NEW.** If the question says nothing, tax under **115BAC (new)**. A candidate who defaults to the old regime out of habit loses marks. Business-income assessees who opt out get *one* switch back (Form 10-IEA by the due date).
+6. **PY = same-year taxation exceptions (172/174/174A/175/176).** A question about "a person leaving India permanently in Oct 2025" wants same-year assessment (Sec 174), not next-year.
 7. **Application vs diversion of income.** "Mr. X's income is paid, under a court decree, directly to his ex-wife before it reaches him" = **diversion by overriding title → not X's income.** "Mr. X earns income and then pays his ex-wife maintenance out of it" = **application → fully X's income first.** The trigger word is *before it reaches him*.
 8. **Illegal income is still taxable.** Don't exclude smuggling/bribe income.
-9. **Rounding.** Round Total Income and tax to nearest ₹10 (Sec 288A/288B) — small marks, easy to bag.
+9. **Rounding.** Round Total Income and tax to nearest ₹10 (Sec 288A/288B), *once each* — small marks, easy to bag; don't round every intermediate line.
 10. **HUF/AOP are separate persons.** Income of an HUF is taxed in the HUF's hands, *not* the karta's — a classic "who is the assessee" trap.
 11. **Senior/super-senior higher exemption applies only in the OLD regime** (the new regime's exemption is uniform regardless of age). Verify current stance.
-12. **"Person" ≠ "assessee".** A person with only exempt/agricultural income below limits may not be an assessee at all.
+12. **"Person" ≠ "assessee".** A person with only exempt/agricultural income below limits may not be an assessee at all; but a person claiming a *refund* or filing a *loss* return IS an assessee.
+13. **Capital receipt vs revenue receipt.** A capital receipt is taxable *only* if a charging section (like Sec 45) specifically brings it in; a revenue receipt is taxable *unless* specifically exempted. Don't tax a pure capital receipt that no section charges, and don't exempt a revenue receipt just because it's irregular.
+14. **AOP vs BOI, firm vs company mix-ups.** Two *companies* joining form an **AOP** (never a BOI, which is individuals only); an **LLP is taxed as a firm**, not a company, despite "Limited."
+15. **First previous year can be *shorter* than 12 months but never longer.** New business/source started mid-year → PY from set-up date to 31 March.
+16. **Surcharge cap of 15% on capital-gains/dividend portion.** At incomes above ₹2 crore, don't blindly apply 25%/37% to the *whole* tax — split out the tax on 111A/112/112A/dividends and cap its surcharge at 15%.
+17. **Basic-exemption adjustment against special-rate gains is resident-only and never against 115BB winnings.** A non-resident cannot shelter LTCG with an unused basic exemption; no one can shelter lottery winnings.
+18. **Firms/companies have no basic exemption and no slabs.** Applying individual slabs to a firm is a structural error.
 
 ---
 
@@ -495,14 +649,14 @@ Computation of Tax Liability
 
 Rebuild the whole chapter from one seed idea: **a state needs recurring revenue and should collect it in proportion to ability to pay.** From that alone:
 
-- To tax *ability to pay*, tax **income** (a recurring flow), progressively → **slabs, surcharge, rebate**.
-- To tax fairly you must know *whom* → **person [2(31)]** (seven buckets so nothing escapes) and *who's in the machine* → **assessee [2(7)]**.
-- You must know *what counts* → **income [2(24)]**, defined *inclusively* so cleverness can't dodge it.
-- You can only measure income *after* the year ends → split **previous year [Sec 3]** from **assessment year [2(9)]**; drop the lag when the taxpayer might vanish (172/174/174A/175/176).
-- A law must *command* the tax → **Sec 4**, which ties the Finance Act's *rates* to the *AY* on the *PY's total income* of *every person*, and lets the state collect early via TDS/advance tax.
-- Different income types need different treatment → **5 heads [Sec 14]**, aggregating into **GTI**, less **Chapter VI-A** = **Total Income**.
-- Apply the climbing rate schedule → slab rate → **surcharge** (extra progressivity) → **marginal relief** (patch the cliff) → **rebate 87A** (spare the small) → **cess** (earmark for health/education).
-- Simplify the whole thing → **new regime u/s 115BAC** (default; low rates, few deductions) vs **old regime** (high rates, many deductions) → *compute both, choose lower.*
+- To tax *ability to pay*, tax **income** (a recurring flow), progressively → **slabs, surcharge, rebate**. And tax it *directly* (incidence sticks to the earner) so progressivity actually reaches the person meant to bear it.
+- To tax fairly you must know *whom* → **person [2(31)]** (seven buckets so nothing escapes; artificial persons get flat rates, humans get slabs) and *who's in the machine* → **assessee [2(7)]** (ordinary, representative/deemed, assessee-in-default).
+- You must know *what counts* → **income [2(24)]**, defined *inclusively* so cleverness can't dodge it; distinguish capital vs revenue receipts, and diversion vs application.
+- You can only measure income *after* the year ends → split **previous year [Sec 3]** from **assessment year [2(9)]**; shorten the *first* PY when a source is born mid-year; drop the lag when the taxpayer might vanish (172/174/174A/175/176).
+- A law must *command* the tax → **Sec 4**, which ties the Finance Act's *rates* to the *AY* on the *PY's total income* of *every person*, "subject to the provisions of this Act" (so deeming/override sections work), and lets the state collect early via TDS/advance tax.
+- Different income types need different treatment → **5 heads [Sec 14]** (mutually exclusive, residuary head last), aggregating into **GTI**, less **Chapter VI-A** (which can't create a loss) = **Total Income**.
+- Apply the climbing rate schedule → slab/special rate → **surcharge** (extra progressivity, 15% cap on gains/dividends) → **marginal relief** (patch the cliff at every threshold) → **rebate 87A** (spare the small, resident individuals only) → **cess** (earmark for health/education).
+- Simplify the whole thing → **new regime u/s 115BAC** (default; low rates, few deductions) vs **old regime** (high rates, many deductions) → *compute both, choose lower*, understanding the break-even.
 
 If you can narrate that chain aloud, you never have to memorise the chapter — you can *derive* it.
 
@@ -514,26 +668,27 @@ If you can narrate that chain aloud, you never have to memorise the chapter — 
 
 | Section | Concept | One-line why |
 |---------|---------|--------------|
-| 2(7) | Assessee | Person who owes tax / is under proceeding |
+| 2(7) | Assessee | Person who owes tax / is under proceeding / deemed / in-default |
 | 2(9) | Assessment Year | 12 months from 1 Apr; year of assessment |
 | 2(24) | Income | *Inclusive* definition — nets future cleverness |
 | 2(31) | Person (7 categories) | Wide net so nothing escapes |
 | 2(45) | Total Income | GTI minus Chapter VI-A; base for tax |
-| 3 | Previous Year | FY in which income is earned |
-| 4 | **Charge of tax** | Master switch: FA rates × AY × PY's TI × every person |
+| 3 | Previous Year | FY in which income is earned; first PY can be shorter |
+| 4 | **Charge of tax** | Master switch: FA rates × AY × PY's TI × every person; "subject to the Act" |
 | 5 | Scope of total income | (Next ch.) depends on residence |
-| 14 | Heads of income | 5 buckets — S/H/B/C/O |
+| 14 | Heads of income | 5 buckets — S/H/B/C/O; mutually exclusive |
 | 15–17 | Salaries | Head 1 |
 | 22–27 | House Property | Head 2 |
 | 28–44 | PGBP | Head 3 |
 | 45–55 | Capital Gains | Head 4 |
 | 56–59 | Other Sources | Head 5 (residuary) |
 | 80B(5) | Gross Total Income | Pre-deduction aggregate |
-| 87A | Rebate | Spare small taxpayers |
+| 87A | Rebate | Spare small taxpayers; resident individual only; not on special rates |
+| 111A/112/112A | Special-rate capital gains | Surcharge capped at 15% |
 | 115BB | Winnings — flat rate | No exemption/deduction/87A |
-| 115BAC | New (default) regime | Low rates, few deductions |
+| 115BAC | New (default) regime | Low rates, few deductions; Form 10-IEA to opt out |
 | 172/174/174A/175/176 | PY = AY exceptions | Taxpayer/income may vanish |
-| 288A / 288B | Rounding TI / tax | Nearest ₹10 |
+| 288A / 288B | Rounding TI / tax | Nearest ₹10, once each |
 
 **Same-year taxation (memory hook):** *Ships(172) Leaving(174) Associations-for-an-event(174A) Transferring(175) Discontinuing(176).*
 
@@ -541,7 +696,11 @@ If you can narrate that chain aloud, you never have to memorise the chapter — 
 
 **Persons memory hook:** Individual, HUF, Company, Firm, AOP/BOI, Local authority, AJP — *humans → families → companies → firms → groups → govt bodies → everything else.*
 
-**Stacking order of tax:** Slab/special rate → **+Surcharge** → **−Marginal relief** → **−87A rebate** → **+4% Cess** → −TDS/Advance tax = **Tax payable.**
+**Assessee sub-types:** Ordinary · Representative/Deemed · Assessee-in-default.
+
+**Stacking order of tax:** Slab/special rate → **+Surcharge** (15% cap on gains/dividends) → **−Marginal relief** → **−87A rebate** → **+4% Cess** → −TDS/Advance tax = **Tax payable.**
+
+**Persons that get SLABS vs FLAT rates:** Individual/HUF/AOP-BOI/AJP → slabs (+basic exemption). Firm/LLP, Company, Local authority, Co-op → flat (no basic exemption).
 
 **Illustrative limits to VERIFY each year:**
 
@@ -551,8 +710,9 @@ If you can narrate that chain aloud, you never have to memorise the chapter — 
 | Basic exemption (new) | ₹4,00,000 | Yes |
 | Senior / super-senior exemption (old) | ₹3,00,000 / ₹5,00,000 | Yes |
 | 87A ceiling (old / new) | TI ₹5,00,000 / ₹12,00,000 | Yes |
-| Surcharge bands | 10/15/25/37% (new-regime cap lower) | Yes |
+| Surcharge bands | 10/15/25/37% (new-regime cap lower; 15% cap on gains/dividends) | Yes |
 | Health & Education Cess | 4% | Yes |
 | Lottery rate (115BB) | 30% flat | Yes |
+| Firm / company flat rate | 30% / varies (22%, 15% concessional) | Yes |
 
 > **Final reminder:** every number above is *illustrative of the mechanism*. Rates, thresholds, exemption limits, the 87A ceiling, surcharge bands and the list of deductions allowed under 115BAC are amended almost every Finance Act. **Confirm the exact figures and the applicable Assessment Year from current ICAI Study Material / RTP / Finance Act for your attempt.** Master the *structure* here; slot in the year's digits at revision time.

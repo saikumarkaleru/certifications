@@ -158,6 +158,8 @@ This is heavily examined. Learn *why* each is barred (from Part 3's principle: n
 | Number of shares | **Increases** | **Unchanged** (same shares, now fully paid) |
 | Authorised-capital impact | May breach ceiling (new shares) | Usually none for *issued* capital count, but paid-up capital rises to face value |
 
+> **⚠ Verify against the current ICAI Advanced Accounting module (contested position).** The Transaction B route — capitalising *free reserves* to convert *existing partly-paid* shares into fully-paid ones (used in Worked Example 3(a)) — was expressly permitted under the **Companies Act, 1956** (old Table A). Under **Section 63 of the Companies Act, 2013**, a bonus issue can only produce **fully paid-up new shares**, and the 2013 Act does **not** carry forward an explicit route to capitalise reserves to convert partly-paid shares into fully-paid ones. Several current ICAI-aligned readings treat this conversion as **no longer available** under the 2013 Act. Treat Example 3(a) as illustrating the *mechanics* only; confirm the current statutory position (and whether the examiner expects it at all) in the latest ICAI material before relying on it in an answer.
+
 ### 4.7 SEBI ICDR (listed companies only) — extra conditions
 
 - Bonus issue **only out of free reserves, securities premium (collected in cash), or CRR** — Securities premium collected **in kind** (e.g., on a non-cash amalgamation) cannot be used.

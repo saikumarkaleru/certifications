@@ -292,7 +292,7 @@ This is where the law bares its teeth. Because the victims are the diffuse publi
 **Section 76A — punishment for contravention (the omnibus penalty).** If a company accepts or invites deposits in contravention, or fails to repay within the allowed time:
 
 - The **company** shall pay a **fine of not less than Rs. 1 crore or twice the amount of deposits accepted, whichever is lower, up to Rs. 10 crore**; **plus** the amount due to depositors **with interest**; **and**
-- **every officer in default** is punishable with **imprisonment up to 7 years and/or fine of not less than Rs. 25 lakh up to Rs. 2 crore**.
+- **every officer in default** is punishable with **imprisonment up to 7 years and with fine of not less than Rs. 25 lakh up to Rs. 2 crore** (post the 2017 amendment this is **both** imprisonment *and* fine — not "either/or").
 - If it is proved the officer acted with **intent to deceive** the company, shareholders, depositors or creditors, the officer also attracts **Section 447** (fraud).
 
 > **Memory hook for 76A:** *"1 to 10 for the company, 25 lakh to 2 crore + up to 7 years for the officer."* The company's floor fine is the **larger** of a real deterrent; the officer faces **jail**, because deposit fraud steals from the most vulnerable.
@@ -350,7 +350,7 @@ This is where the law bares its teeth. Because the victims are the diffuse publi
 **Scenario 8 — Small-fine contravention (testing the "twice the deposits" limb).**
 *Facts:* Micro Ltd wrongfully accepts Rs. 30 lakh of deposits in contravention of the Chapter and fails to repay. What minimum penalty does the *company* face under Section 76A?
 *Reasoning:* The company's minimum fine is the **lower of Rs. 1 crore OR twice the deposits accepted**, capped at Rs. 10 crore, **plus** repayment with interest. Twice Rs. 30 lakh = **Rs. 60 lakh**, which is *lower* than Rs. 1 crore.
-*Outcome:* The minimum fine is **Rs. 60 lakh** (not Rs. 1 crore), **plus** repayment of Rs. 30 lakh with interest to depositors, **plus** the officers face Rs. 25 lakh–Rs. 2 crore and/or up to 7 years. Lesson: don't reflexively state "minimum Rs. 1 crore" — the "twice the amount" limb protects small contraveners and is frequently tested.
+*Outcome:* The minimum fine is **Rs. 60 lakh** (not Rs. 1 crore), **plus** repayment of Rs. 30 lakh with interest to depositors, **plus** the officers face Rs. 25 lakh–Rs. 2 crore **and** up to 7 years. Lesson: don't reflexively state "minimum Rs. 1 crore" — the "twice the amount" limb protects small contraveners and is frequently tested.
 
 ---
 
@@ -483,6 +483,6 @@ Learn the *fears*, and every number — 100, 500, 35, 25, 10, 20%, 60, 15, 365, 
 | Depositor remedy | Sec **73(4)** | apply to **NCLT** | Fast route for the helpless |
 | Pre-Act deposits | Sec **74** / DPT-4 | statement + repay in Tribunal's time | Transition bridge |
 | Fraud — personal liability | Sec **75** | unlimited personal liability + Sec 447; class suit | Pierce the veil |
-| Contravention penalty | Sec **76A** | company **lower of 1 cr or 2× deposits, up to 10 cr** + repay with interest; officer **25 lakh–2 cr and/or up to 7 yrs** | Social harm = harsh sanction |
+| Contravention penalty | Sec **76A** | company **lower of 1 cr or 2× deposits, up to 10 cr** + repay with interest; officer **25 lakh–2 cr and up to 7 yrs** | Social harm = harsh sanction |
 
 > **Confirm the exact current figures (DRRA %, penalty bands, exemption list, insurance status, private-company exemption conditions, premature-repayment penalty) against the latest ICAI Study Material and the bare Companies Act 2013 / Deposit Rules before the exam — these have been amended multiple times.**

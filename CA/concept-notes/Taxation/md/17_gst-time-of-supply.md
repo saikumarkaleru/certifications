@@ -1,3 +1,5 @@
+<!-- v2-deep -->
+
 # Chapter 17 — Time of Supply
 
 > **Rates / thresholds / amendments flag:** Time-of-supply *provisions* (Secs 12–14 of the CGST Act, 2017) are structurally stable, but the surrounding machinery moves — the removal of the 30-day supplementary-invoice window, the abolition of the earlier "goods on payment" trigger, tweaks to reverse-charge lists, and e-invoicing timelines have all been amended. This chapter teaches the **logic that fixes the taxable moment** so the mechanism is permanent. **Always verify the exact triggers, the current reverse-charge list, and the applicable amendments against current ICAI study material for your attempt.**
@@ -24,6 +26,10 @@ The transaction touches *five* different dates. But the tax law needs a **single
 
 So the "time of supply" (TOS) is not a bookkeeping nicety. It is the **coordinate on the time axis** at which the charge under Sec 9 crystallises. Sec 9 tells you *whether* and *how much*; **time of supply tells you *when*, and through "when," it silently also fixes *which rate*.**
 
+**Why the framers separated "time" from "value" and "place."** GST needs three coordinates to raise a single rupee of tax: *time of supply* (when — Secs 12–14), *place of supply* (where, and hence which tax — IGST Act Secs 10–13), and *value of supply* (how much — Sec 15). These are deliberately three *independent* determinations because each answers a different question and each can move without the others moving. A worked TOS problem answers only one of the three; do not let it bleed into value or place questions. The exam sometimes bundles all three into one problem precisely to see whether you keep them separate.
+
+**A fourth, quieter consequence — input tax credit timing.** The recipient's right to ITC (Sec 16) is not governed by the supplier's TOS directly, but the two are linked in practice: the supplier must have *paid* the tax (which flows from his TOS landing in a return period) before the recipient's credit is safe. So a supplier who mis-times his TOS does not only expose himself to interest — he can jeopardise his customer's credit. TOS is therefore a *systemic* date, not a private one.
+
 ---
 
 ## 2. The Core Idea
@@ -37,6 +43,8 @@ Two design instincts run through every rule in this chapter, and if you hold the
 2. **"Don't let the taxpayer control the clock" — the anti-manipulation instinct.** The invoice is issued *by the supplier*. If TOS depended purely on when he chose to invoice, he could postpone tax indefinitely. So the law imposes a **statutory last date for the invoice** (Sec 31), and if the invoice is late, TOS falls back to an event the taxpayer *cannot* game.
 
 Everything else — the goods-vs-services split, the reverse-charge rules, vouchers, the residual rule, the rate-change rules — is these two instincts applied to different fact patterns.
+
+**A third, subtler instinct — "use the most reliable witness available."** Every trigger the Act picks is an event that leaves an *independent record*: an invoice is a serially-numbered document, a bank credit is a third-party record, a goods-receipt is physically observable. Where one party's record is untrustworthy (the supplier under reverse charge), the law switches the anchor to the *other* party's records. Read every rule as the legislature asking "whose record can we least easily fake, and does that record already exist by this date?" This single question explains why forward charge leans on the supplier's invoice, reverse charge leans on the recipient's receipt/payment, and the residual rule leans on the return-filing deadline (a record the tax system itself owns).
 
 ---
 
@@ -60,6 +68,14 @@ Historically GST taxed *advances on goods* at receipt — the "payment" trigger 
 
 > **Verify for your attempt:** the notification excluding advances-on-goods from TOS is a rate-notification and could be amended. ICAI has consistently examined the current position (advances on goods not taxed; advances on services taxed). Confirm before your sitting.
 
+### 3.2 Why the advance-on-goods relief does NOT rescue you from paperwork
+
+A subtle exam point: the notification removes the *tax-timing* consequence of an advance on goods, but the supplier must still, on receiving an advance for goods, issue a **receipt voucher** (Sec 31(3)(d)). And if the deal later falls through, a **refund voucher** (Sec 31(3)(e)). So "advance on goods is not taxed" does **not** mean "advance on goods is invisible" — the documentation obligation survives even though no tax is due yet. Examiners test this by asking "what document must the supplier issue on receiving the advance?" — the answer is *receipt voucher*, and the *tax* is still nil until the invoice/removal.
+
+### 3.3 Why "goods" and "services" split the chapter down the middle
+
+The deepest reason for two separate sections is **observability**. A supply of goods has a physical, datable pivot — the goods *move* or are *made available*. That pivot is external, hard to fake, and already captured by the Sec 31 invoice deadline (removal/delivery). A service frequently has **no such pivot**: when exactly is "advisory services" supplied? When the advice is given, drafted, delivered, or acted upon? Because services resist a clean physical pivot, the law keeps the *payment* trigger alive for services (money is at least a datable event) and uses the 30/45-day window as its anti-delay cap. Read Secs 12 and 13 as *the same idea forced to compromise differently* because goods are observable and services often are not.
+
 ---
 
 ## 4. Full Technical Content — with the "why" welded to each provision
@@ -76,6 +92,8 @@ Two phrases recur; nail them once.
 
 **"Date of issue of invoice"** = the actual date on the invoice — *but* the law constantly compares it to the **due date of issuing the invoice under Sec 31**, because the due date is the anti-manipulation backstop.
 
+**A precision point on "receipt of payment."** The two limbs (book entry / bank credit) exist because either can come first depending on how the business runs. A firm that records a cheque on receipt but banks it days later is fixed by the *book entry*; a firm whose accountant posts entries weekly but whose bank shows an instant NEFT credit is fixed by the *bank credit*. The rule is not "whichever the taxpayer prefers" — it is mechanically **the earlier of the two actual dates**. Examiners give you both dates precisely to see whether you pick the earlier one rather than defaulting to bank credit.
+
 ### 4.2 Sec 31 — the invoice due dates (the backstop you cannot skip)
 
 Time of supply for goods/services under forward charge leans on Sec 31, so learn these first.
@@ -85,10 +103,13 @@ Time of supply for goods/services under forward charge leans on Sec 31, so learn
 | **Goods — movement involved** | On or **before removal** of goods for supply |
 | **Goods — no movement** | On or before **delivery** / making available to recipient |
 | **Continuous supply of goods** | On or before each **statement/payment** is issued/received |
+| **Goods sent on approval (sale or return)** | Earlier of — when supply is *confirmed*, or **6 months** from removal |
 | **Services (general)** | Within **30 days** of supply of service |
 | **Services by banks/NBFCs/insurers** | Within **45 days** of supply of service |
 
 *Why a deadline at all?* Because the invoice is the supplier's own document. Sec 31 says "you must invoice by this date," and Sec 12/13 then says "if you invoice late, we tax you as if you had invoiced on time." The two sections lock together to defeat delay.
+
+**The "sale or return" (approval) subtlety.** Goods sent on approval are not yet a supply — the recipient may return them. But the supplier cannot hold them out indefinitely to defer tax. So Sec 31 caps the invoice at the **earlier of confirmation of supply or 6 months from removal**. If neither happens, at 6 months the law *deems* a supply and the invoice falls due, fixing TOS. This is the anti-manipulation instinct applied to a genuinely uncertain supply: uncertainty is tolerated for six months, then forcibly resolved.
 
 ### 4.3 Time of supply of GOODS — forward charge (Sec 12(2))
 
@@ -101,6 +122,8 @@ Because limb (b) is switched off for goods, in practice:
 > **TOS of goods (forward charge) = date of invoice, OR if the invoice is late/not issued, the Sec 31 due date (i.e. removal for movement cases; delivery otherwise) — whichever of the two applies. The advance is ignored.**
 
 **Worked micro-logic.** Goods removed 10 June, invoice raised 15 June. Sec 31 due date = removal = 10 June. TOS = *earlier* of actual invoice (15 June) and due date (10 June) = **10 June**. The late invoice bought the supplier nothing — exactly the anti-manipulation design at work.
+
+**The mirror case — an *early* invoice.** Goods to be removed 20 June, but invoice raised (with the supplier's choice) on 8 June. Sec 31 due date = removal = 20 June; actual invoice = 8 June. TOS = earlier of (8 June, 20 June) = **8 June**. Here the *invoice* date wins because the supplier issued it *before* the deadline. So the rule is symmetric: an early invoice *accelerates* TOS (it is a genuine trigger), a late invoice does *not defer* it (the deadline catches him). The invoice can only ever pull TOS *earlier* than the Sec 31 date, never later.
 
 ```mermaid
 flowchart TD
@@ -130,6 +153,8 @@ Decoded into a decision the way you would actually apply it:
 Notice the elegant symmetry with goods: a **timely** invoice lets you use the invoice date; a **late** invoice throws you back onto an event you cannot manipulate (the actual provision of service). Same instinct, adapted to a continuous supply.
 
 **Advances on services ARE taxed.** Because the payment limb is live, if a client pays you an advance on 1 June for a service invoiced 15 July, the *advance* fixes TOS at 1 June for that portion. This is the asymmetry against goods.
+
+**The "small advance" relief for services — a real exam wrinkle.** The proviso to Sec 13(2) (read with the invoice rules) gives a narrow relief: where the supplier receives an amount **up to ₹1,000 in excess** of the invoice value, he may, *at his option*, treat the TOS of that small excess as the **date of the invoice** for that excess, rather than the date the excess money was received. This spares businesses from raising a fresh tax entry for trivial over-payments (e.g. a customer who rounds ₹4,970 up to ₹5,000). It is optional, capped at ₹1,000 of *excess*, and applies to *services*. Examiners drop a small over-receipt into a services problem to see whether you know the excess need not create a separate earlier TOS. **Verify the ₹1,000 figure against current ICAI material.**
 
 ```mermaid
 flowchart TD
@@ -162,6 +187,10 @@ So RCM anchors TOS to events **within the recipient's own control and records** 
 
 Why 30 days for goods but **60 days** for services? Services take longer to complete and invoice, so the recipient is given a longer runway before the "invoice + N days" backstop bites — the same 30-vs-45/60 leniency logic that services get everywhere in GST.
 
+**Note the *asymmetry between forward and reverse* charge on the payment side.** Under forward charge, "payment" means what the *supplier receives*. Under reverse charge, "payment" means what the *recipient pays to the supplier* — the money flows the same direction, but the *anchoring party* is now the recipient, because he is the one whose records the tax officer will audit. Never carry the forward-charge definition of "receipt of payment" mechanically into an RCM problem without asking *whose* payment event the section names.
+
+**Why RCM on goods keeps a "receipt of goods" trigger but forward charge dropped its payment trigger.** These are not contradictory. Forward charge dropped the *supplier's payment* trigger for goods to spare small dealers from taxing advances. RCM keeps a *goods-receipt* trigger because the recipient physically taking delivery is the clearest, earliest, least-fakeable evidence that value has moved to the person who must now pay the tax. Different party, different most-reliable witness.
+
 ```mermaid
 flowchart TD
     A["Reverse charge liability on recipient"] --> B{"Goods or services"}
@@ -182,6 +211,10 @@ A voucher is a **prepaid instrument** — a gift card, a meal coupon. The proble
 
 *Why?* GST needs to know the rate. A single-purpose voucher (e.g. a coupon redeemable only for a specific 18% product) already tells us the rate, so tax it at issue. A general "₹1,000 gift card" usable across a store of mixed-rate goods gives us no rate yet, so we must **wait until redemption** to know what was actually supplied. **Rate-certainty drives the timing** — the same logic as Sec 9 needing a rate.
 
+**The vocabulary examiners hide behind.** "Single-purpose voucher" (redeemable for one known type of goods/service at a known rate) maps to *TOS = issue*. "Multi-purpose voucher" or a general gift card maps to *TOS = redemption*. The test is not the *value* on the voucher nor whether it is physical or digital — it is purely **"was the specific supply, and therefore the rate, knowable at issue?"** A ₹500 coupon for "any book" (books being a single rate) can still be identifiable; a ₹500 coupon for "anything in the store" (mixed rates) is not. Read the coupon's *scope*, not its price.
+
+**Edge case — expired/unredeemed vouchers (breakage).** If a general voucher is never redeemed and lapses, no supply of the underlying goods/services ever occurs, so the redemption-based TOS never triggers. The GST treatment of such lapsed value is unsettled and beyond the core Sec 12(4)/13(4) rule — **do not invent a TOS for unredeemed general vouchers in the exam; confine your answer to the issue-vs-redemption test.**
+
 ### 4.7 Residual rule (Sec 12(5) / 13(5))
 
 Some cases fit none of the above (records missing, unusual facts). The law needs a guaranteed fallback so a supply can never escape a TOS.
@@ -192,9 +225,13 @@ Some cases fit none of the above (records missing, unusual facts). The law needs
 
 This is pure gap-filling. It ties TOS to the next hard administrative deadline (the return due date), so there is always a determinable moment.
 
+**When does the residual rule actually bite?** Almost never in a well-documented transaction — and that is the point. It is a *safety net*, not a primary rule. You reach it only after every specific trigger in 12(2)-(4) or 13(2)-(4) has failed to yield a date (e.g. no invoice, no ascertainable payment date, no book entry). In the exam, invoke the residual rule **only** when you can affirmatively show the specific limbs are all indeterminable; reaching for it prematurely is a marked error, because the examiner planted enough facts to solve it under the specific rule.
+
 ### 4.8 Time of supply for interest, late fee, penalty for delayed payment (Sec 12(6) / 13(6))
 
 If a supplier charges **interest / late fee / penalty for delayed payment** of consideration, the TOS of *that extra amount* is the **date the supplier *receives* it**. Reason: this add-on is contingent and only becomes real when actually collected, so taxing it on receipt matches its nature.
+
+**Why "receipt" and not the usual earliest-of.** For the *principal* supply, the law front-loads tax (earliest of triggers) because the value is certain. But interest for late payment is *inherently uncertain* — you do not know if, when, or how much you will collect until it arrives. Taxing an uncertain, contingent amount on an "earliest of invoice/payment" basis would tax phantom income. So the Act sensibly waits for **actual receipt**. This is a rare instance where the law deliberately chooses a *later* trigger — because certainty, not just speed, is a competing value. Note this add-on's *value* is part of the value of supply under Sec 15, but its *timing* is governed here.
 
 ### 4.9 Change in rate of tax — Sec 14 (overrides Secs 12 & 13)
 
@@ -224,7 +261,11 @@ This is the section examiners love, and it exists for one reason: some supplies 
 
 You never need the two tables above if you internalise: **the majority of the three events wins, and the "time of supply" is the date of whichever event(s) sit on the winning side.**
 
+**Reading the tables against the shortcut so you trust it.** Take Case A row 2: supply before, invoice before, payment after → two events (supply + invoice) before → old rate, and TOS = date of invoice (the "before-side" event that is a trigger). Case B row 1: supply after, invoice before, payment after → two events (supply + payment) after → new rate, TOS = date of payment. Every row is just "count the majority, then read off the winning-side trigger date." Where supply is *alone* on its side (Case A rows 2 and 3 are *not* this; look at Case A row 1 vs the structure), the invoice+payment pair are together and they decide both the rate and, being the two triggers, the TOS via *earlier of the two*. The tables and the shortcut are the same machine.
+
 > **Payment-date relief under Sec 14:** for the purpose of Sec 14, if payment is credited to the bank account **more than 4 working days after** the rate change, the date of receipt of payment is taken as the **date of bank credit** (not book entry). This narrow proviso stops manipulation of the "book entry" date around a rate change.
+
+**Why Sec 14 *overrides* Secs 12 and 13, not the other way round.** Secs 12/13 assume a *stable* rate — they only tell you *when*, and *when* silently picks the rate because the rate is constant across the relevant window. But when the rate itself moves mid-transaction, "when" is no longer enough — two supplies with identical TOS under Sec 12 could deserve different rates depending on where the *supply* sat relative to the change. Sec 14 therefore re-computes both the rate *and* the TOS using the three-event majority, and expressly says "notwithstanding sections 12 and 13." The moment a rate-change date appears in a problem straddled by the supply, **stop applying 12/13 and switch to Sec 14** — mixing the two is the single most common way students lose these marks.
 
 ```mermaid
 flowchart TD
@@ -235,6 +276,30 @@ flowchart TD
     D -->|No| F["New rate applies - TOS is date on the after side"]
 ```
 *Figure 17.4 — Change in rate of tax under Sec 14. The majority of the three events (supply, invoice, payment) decides the rate and the time of supply.*
+
+### 4.10 The master decision flow — choosing the right rule first
+
+Most wrong answers come not from mis-applying a rule but from applying the *wrong* rule. Before any computation, run this triage: is a rate change straddling the supply (→ Sec 14, stop)? If not, is it forward or reverse charge? Then goods or services? Only then apply the specific limb.
+
+```mermaid
+flowchart TD
+    A["A supply - determine TOS"] --> B{"Does a rate change straddle this supply"}
+    B -->|Yes| C["Apply Sec 14 - two of three majority - ignore Secs 12 and 13"]
+    B -->|No| D{"Forward charge or reverse charge"}
+    D -->|Reverse charge| E{"Goods or services"}
+    E -->|Goods| F["Sec 12(3) - earliest of receipt - payment - invoice plus 30"]
+    E -->|Services| G["Sec 13(3) - earliest of payment - invoice plus 60"]
+    D -->|Forward charge| H{"Goods or services"}
+    H -->|Goods| I["Sec 12(2) - invoice date or Sec 31 due date - advance ignored"]
+    H -->|Services| J["Sec 13(2) - earlier of invoice or payment - advance taxed"]
+    F --> K{"Is it a voucher"}
+    G --> K
+    I --> K
+    J --> K
+    K -->|Yes| L["Sec 12(4) or 13(4) - identifiable at issue then issue else redemption"]
+    K -->|No trigger determinable| M["Residual - Sec 12(5) or 13(5) - return due date or date tax paid"]
+```
+*Figure 17.5 — Master triage. Pick the correct rule before computing; Sec 14 pre-empts everything when a rate change straddles the supply.*
 
 ---
 
@@ -338,6 +403,68 @@ flowchart TD
 
 ---
 
+### Example 7 — Goods, forward charge, "no movement" supply (delivery, not removal)
+
+**Facts.** Nimbus Ltd sells a large fabrication rig that is **installed at the buyer's site and never physically "removed"** in the ordinary sense — it is *made available* to the buyer on 14 November. Invoice is raised 9 November. An advance of ₹2,00,000 was received on 1 November.
+
+**Determine the time of supply.**
+
+**Step 1 — Rule.** Goods, forward charge → **Sec 12(2)**; payment trigger removed, so the 1 November advance is **ignored**.
+**Step 2 — Which Sec 31 limb?** No movement is involved → invoice due **on/before delivery / when goods are made available = 14 November**.
+**Step 3 — Invoice 9 November is *before* the due date (14 Nov).** So the invoice is timely and is itself the earlier trigger.
+**Step 4 — TOS = earlier of invoice (9 Nov) and due date (14 Nov) = 9 November.**
+
+**Reconciliation.** This is the *early-invoice* mirror of Example 1: because the invoice preceded the Sec 31 deadline, the invoice date governs. The examiner's trap here is twofold — (i) using the "removal" limb when the correct limb is "delivery/made available" for a no-movement supply, and (ii) taxing the 1 November advance, which for goods must be ignored. TOS falls in the **November** return regardless, but for the *right* reasons.
+
+---
+
+### Example 8 — Services, forward charge, invoice issued LATE (window breached)
+
+**Facts.** Zephyr LLP (registered, general services — 30-day window) completes a service on **5 January**. It issues the invoice only on **20 February** (46 days later — outside 30 days). The client pays on **28 February**. No advance.
+
+**Determine the time of supply.**
+
+**Step 1 — Rule.** Services, forward charge → **Sec 13(2)**.
+**Step 2 — Was the invoice within the 30-day window?** Service provided 5 Jan; 30 days ends 4 Feb. Invoice 20 Feb is **late**. So we drop to limb (b): **TOS = earlier of (date of provision of service) or (date of payment).**
+**Step 3 — Compute.** Date of provision = **5 January**; date of payment = 28 February. Earlier = **5 January**.
+**Step 4 — TOS = 5 January** (January return).
+
+**Reconciliation.** Because Zephyr blew the 30-day window, the law refused to let the *invoice date* (20 Feb) govern and threw TOS back to the un-manipulable *date of provision* (5 Jan). Zephyr therefore owes tax in the **January** return and interest under Sec 50 for every day it under-reported — a punitive outcome engineered by the anti-delay cap. Contrast Example 2, where a *timely* invoice let the invoice date govern. The single variable that flips the whole answer is *whether the 30-day window was met*.
+
+---
+
+### Example 9 — Change in rate (Sec 14), supply AFTER the change, with the 4-day payment proviso
+
+**Facts.** GST on a service **falls from 18% to 12% on 1 October**. For one engagement:
+- Service **provided**: 8 October (**after** change).
+- **Invoice** issued: 24 September (**before** change).
+- **Payment**: entered in the supplier's books 27 September (**before**), but actually **credited to the bank on 9 October** — i.e. more than 4 working days after the 1 October change.
+
+**Determine TOS and rate.**
+
+**Step 1 — Supply is *after* the change → Case B.**
+**Step 2 — Apply the payment proviso first.** Because bank credit (9 Oct) is **more than 4 working days after** the rate-change date (1 Oct), the date of receipt of payment is deemed to be the **date of bank credit = 9 October** (not the 27 September book entry). So *payment counts as AFTER* the change.
+**Step 3 — 2-of-3 test.** Events: supply (8 Oct, after), invoice (24 Sep, before), payment (9 Oct, after). Two events (supply + payment) after → **new side wins → NEW rate 12%.**
+**Step 4 — TOS.** Case B, "invoice before / payment after" → TOS = **date of payment = 9 October**, rate **12%.**
+
+**Reconciliation.** Without the proviso, a taxpayer could backdate the *book entry* to 27 September to drag payment onto the "before" side and claim the 18%/12% treatment he preferred. The proviso closes that door: once bank credit lands beyond 4 working days of the change, the *bank* date (an independent third-party record) governs. Had the bank credited within 4 working days, the 27 September book entry would have stood and payment would count as *before*, giving supply-after but invoice+payment-before → majority before → **old 18%**, TOS = earlier of invoice/payment. One proviso, opposite result — a favourite examiner pivot.
+
+---
+
+### Example 10 — Reverse charge on services, associated enterprise with a supplier outside India
+
+**Facts.** Helios Ltd (India) receives management services under RCM from its **parent company located outside India** (an associated enterprise). The parent raises an invoice on 5 March. Helios records the service in its books on **20 February** (accrued earlier) and pays on **15 April**.
+
+**Determine the time of supply.**
+
+**Step 1 — Rule.** RCM services → Sec 13(3), *but* this is the **special case**: supplier is an *associated enterprise located outside India*. TOS = **earlier of** (date of entry in the recipient's books) or (date of payment).
+**Step 2 — Compare.** Book entry = **20 February**; payment = 15 April. Earlier = **20 February**.
+**Step 3 — TOS = 20 February** (February return).
+
+**Reconciliation.** Note the ordinary Sec 13(3) triggers (payment, or invoice+60 days) would have pointed at 15 April or ~4 May — *later*. The special associated-enterprise rule deliberately anchors TOS to the *earlier* of book entry or payment, precisely because cross-border related parties can arrange invoices and payments at will, so the law leans on the recipient's *accrual entry* (20 Feb) to catch the value the moment Helios recognised it. The trap is applying the plain "payment or invoice + 60 days" limb and missing that the associated-enterprise-abroad override pulls TOS all the way back to the book entry.
+
+---
+
 ## 6. Format / Summary Table
 
 | Scenario | Section | Time of supply = |
@@ -358,11 +485,12 @@ flowchart TD
 ## 7. Connections
 
 - **Sec 9 (Charge) → Sec 12–14 (Time):** Sec 9 says *whether* and *how much*; TOS says *when*, and *when* silently fixes *which rate* (Sec 14).
-- **Sec 31 (Tax invoice):** TOS of forward-charge supplies is bolted to the Sec 31 invoice due dates. You cannot solve a TOS problem without knowing Sec 31 — study them together.
+- **Sec 31 (Tax invoice):** TOS of forward-charge supplies is bolted to the Sec 31 invoice due dates. You cannot solve a TOS problem without knowing Sec 31 — study them together. Sec 31(3) documents (receipt voucher, refund voucher, payment voucher for RCM) also surface in TOS problems.
 - **Sec 13 of IGST Act / place of supply:** *Time* and *place* of supply together decide *which* tax (CGST+SGST vs IGST) applies *when*. TOS fixes the tax period; place of supply fixes the tax's identity.
 - **Sec 50 (Interest):** get TOS wrong → wrong return period → interest for delayed payment. TOS errors are expensive.
-- **Reverse charge (Sec 9(3)/9(4)):** TOS under RCM (12(3)/13(3)) only matters once you have determined a supply *is* under RCM — link to the RCM chapter.
-- **Value of supply (Sec 15):** advances on services are taxed at TOS but the *value* on which tax is computed comes from Sec 15.
+- **Reverse charge (Sec 9(3)/9(4)):** TOS under RCM (12(3)/13(3)) only matters once you have determined a supply *is* under RCM — link to the RCM chapter. Under RCM the recipient also issues a **payment voucher** (Sec 31(3)(g)) and, if the supplier is unregistered, a **self-invoice** (Sec 31(3)(f)).
+- **Value of supply (Sec 15):** advances on services are taxed at TOS but the *value* on which tax is computed comes from Sec 15; interest/late fee for delayed payment is *valued* under Sec 15 but *timed* under 12(6)/13(6).
+- **Input tax credit (Sec 16):** the supplier's TOS drives when he pays tax, which conditions the recipient's ability to safely claim ITC — TOS is a systemic, not private, date.
 
 ---
 
@@ -377,6 +505,12 @@ flowchart TD
 7. **Voucher timing is about rate-certainty, not about when cash was taken.** Single-purpose = issue; general = redemption.
 8. **Splitting the invoice value across two TOS.** For services with an advance, the advance and the balance can have *different* TOS in *different* months — you must split (Example 2).
 9. **Continuous supply** has its own Sec 31 invoice dates (tied to statements/payments); do not apply the plain 30-day rule.
+10. **"No movement" goods use the *delivery* limb, not removal.** For goods made available on site (no physical removal), the Sec 31 due date is *delivery/made available*, not removal (Example 7).
+11. **Missing the 30/45-day window flips services onto the *date of provision*.** If the invoice is late for a service, do not fall back to the invoice date — fall back to the *date the service was provided* (Example 8). This is the mirror of trap 2 for services.
+12. **The associated-enterprise-abroad override for RCM services.** When the RCM supplier is a foreign associated enterprise, TOS is the *earlier of book entry or payment* — often far earlier than the ordinary "payment / invoice + 60" limb (Example 10).
+13. **The Sec 14 4-working-days payment proviso.** If bank credit lands more than 4 working days after the rate change, use the *bank-credit* date, not the book entry — this can flip payment to the "after" side and change the rate (Example 9).
+14. **Receipt voucher survives the advance-on-goods relief.** No tax on the advance, but a *receipt voucher* is still mandatory. Questions on "what document is issued" trip students who think "not taxed = nothing to do."
+15. **Do not reach the residual rule prematurely.** It applies only when every specific trigger is genuinely indeterminable; the examiner usually plants enough facts to solve under the specific limb.
 
 ---
 
@@ -388,35 +522,36 @@ Start from nothing and rebuild the chapter:
 2. The exchequer wants money early and cannot let taxpayers stall. → **Earliest-of triggers**, capped by a **statutory invoice deadline (Sec 31)**.
 3. **Goods** are a visible physical event; the invoice (capped at removal/delivery) is a reliable marker, and taxing advances on goods was a nuisance, so the payment trigger was switched off. → *Goods TOS watches the invoice only.*
 4. **Services** are often continuous and invisible; there is no "removal," so the **payment trigger stays live** and a **30/45-day invoice window** is the anti-delay cap. → *Services TOS = earlier of invoice/payment (or provision/payment if invoice is late); advances taxed.*
-5. Under **reverse charge** the recipient pays, so the supplier's invoice is not a trustworthy anchor. → *Anchor to the recipient's goods-receipt/payment, with an invoice+30/60-day backstop.*
+5. Under **reverse charge** the recipient pays, so the supplier's invoice is not a trustworthy anchor. → *Anchor to the recipient's goods-receipt/payment, with an invoice+30/60-day backstop; foreign associated enterprise → earlier of book entry or payment.*
 6. **Vouchers** need a known rate; if the supply is identifiable at issue, tax at issue, else at redemption.
-7. Any gap → **residual rule** (return due date / date tax paid).
-8. When the **rate changes** mid-transaction, whichever period holds **2 of the 3 events** (supply, invoice, payment) wins the rate, and TOS is the date on that winning side (Sec 14, overriding 12/13).
+7. Any gap → **residual rule** (return due date / date tax paid) — a safety net, reached only when specific triggers fail.
+8. When the **rate changes** mid-transaction, whichever period holds **2 of the 3 events** (supply, invoice, payment) wins the rate, and TOS is the date on that winning side (Sec 14, overriding 12/13); a payment credited >4 working days after the change is dated by bank credit.
+9. Contingent add-ons (interest/late fee for delayed payment) are uncertain, so — uniquely — they are taxed on **actual receipt**, not earliest-of.
 
-Every provision in the chapter is one of these eight sentences. You did not memorise; you *derived*.
+Every provision in the chapter is one of these nine sentences. You did not memorise; you *derived*.
 
 ---
 
 ## 10. Quick-Revision Sheet
 
-**Core moment:** TOS = earliest legally-fixed trigger; invoice trigger capped by Sec 31 due date.
+**Core moment:** TOS = earliest legally-fixed trigger; invoice trigger capped by Sec 31 due date. **Triage first:** rate change straddling? → Sec 14. Else forward/reverse → goods/services.
 
-**Goods — forward (Sec 12(2)):** invoice date, else Sec 31 due date (removal / delivery). **Advance IGNORED.**
+**Goods — forward (Sec 12(2)):** invoice date, else Sec 31 due date (removal for movement / delivery for no-movement). **Advance IGNORED** (but issue a receipt voucher).
 
 **Services — forward (Sec 13(2)):**
 - Invoice within 30 days (45 = banks/NBFC/insurer) → **earlier of invoice or payment**.
 - Invoice late → **earlier of provision or payment**.
-- Else → recipient's book entry. **Advance TAXED.**
+- Else → recipient's book entry. **Advance TAXED.** Excess ≤ ₹1,000 → optionally TOS = invoice date (verify figure).
 
 **Goods — RCM (Sec 12(3)):** earliest of — receipt of goods / payment / (invoice **+30** days +1). Else book entry.
 
-**Services — RCM (Sec 13(3)):** earliest of — payment / (invoice **+60** days +1). Else book entry. Foreign associated enterprise → earlier of book entry or payment.
+**Services — RCM (Sec 13(3)):** earliest of — payment / (invoice **+60** days +1). Else book entry. Foreign associated enterprise → **earlier of book entry or payment**.
 
-**Voucher (12(4)/13(4)):** identifiable at issue → **issue**; else → **redemption**.
+**Voucher (12(4)/13(4)):** identifiable at issue → **issue**; else → **redemption**. (Test = was the rate knowable at issue.)
 
-**Residual (12(5)/13(5)):** return due date; else date tax paid.
+**Residual (12(5)/13(5)):** return due date; else date tax paid. (Only when specific limbs all fail.)
 
-**Interest/late fee/penalty (12(6)/13(6)):** date of **receipt**.
+**Interest/late fee/penalty (12(6)/13(6)):** date of **receipt** (contingent → wait for the cash).
 
 **Receipt of payment** = earlier of book entry or bank credit.
 
@@ -425,6 +560,6 @@ Every provision in the chapter is one of these eight sentences. You did not memo
 - Supply **after** change: both invoice+payment before → OLD (earlier of the two); one after → NEW (that date).
 - Shortcut: majority of {supply, invoice, payment} on one side → that side's rate; TOS = date on winning side. Payment >4 working days after change → use bank-credit date.
 
-**Golden asymmetries to never forget:** advance on goods = ignored / advance on services = taxed; RCM goods +30 / RCM services +60; single-purpose voucher = issue / general = redemption.
+**Golden asymmetries to never forget:** advance on goods = ignored / advance on services = taxed; RCM goods +30 / RCM services +60; single-purpose voucher = issue / general = redemption; late invoice on goods → Sec 31 due date / late invoice on services → date of provision; contingent charges → taxed on receipt.
 
-> **Flag:** verify the advance-on-goods exclusion, the current RCM list, and any Sec 14 / e-invoicing amendments in the latest ICAI material for your attempt.
+> **Flag:** verify the advance-on-goods exclusion, the ₹1,000 services-excess relief figure, the current RCM list, and any Sec 14 / e-invoicing amendments in the latest ICAI material for your attempt.
