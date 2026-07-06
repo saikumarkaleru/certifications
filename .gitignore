@@ -7,3 +7,7 @@ Desktop.ini
 
 # scratch
 scratchpad/
+
+# Third-party downloaded coaching notes (large PDFs, exceed GitHub 100MB limit)
+CA/CA WALLAH NOTES/
+
