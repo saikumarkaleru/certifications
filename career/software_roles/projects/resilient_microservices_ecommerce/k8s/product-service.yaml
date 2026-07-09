@@ -1,0 +1,80 @@
+# Product Service: Deployment (2 replicas) + ClusterIP Service.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-service
+  labels:
+    app: product-service
+    app.kubernetes.io/part-of: resilient-ecommerce
+spec:
+  replicas: 2                       # multiple replicas => no single point of failure
+  selector:
+    matchLabels:
+      app: product-service
+  strategy:
+    type: RollingUpdate            # zero-downtime deploys
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: product-service
+    spec:
+      containers:
+        - name: product-service
+          image: resilient-ecommerce/product-service:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: ecommerce-config
+          env:
+            - name: SERVICE_NAME
+              value: product-service
+            - name: DB_PATH
+              value: /data/product.db
+          volumeMounts:
+            - name: data
+              mountPath: /data
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "250m"
+              memory: "128Mi"
+          # Liveness: restart the pod if the process wedges.
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            failureThreshold: 3
+          # Readiness: only send traffic once the DB is reachable.
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: 8000
+            initialDelaySeconds: 3
+            periodSeconds: 5
+            failureThreshold: 3
+      volumes:
+        - name: data
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-service
+  labels:
+    app: product-service
+spec:
+  selector:
+    app: product-service
+  ports:
+    - port: 8000
+      targetPort: 8000
+  type: ClusterIP

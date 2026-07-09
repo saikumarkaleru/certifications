@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Georgia","Cambria",serif; font-size: 10.5pt; line-height: 1.5; color: #1a1a1a; }
+  h1,h2,h3,.cover-kicker,.cover-sub,.ex-h,.q,th { font-family: "Calibri","Segoe UI",sans-serif; }
+
+  /* Cover */
+  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+  .cover-kicker { font-size: 11pt; font-weight: 700; letter-spacing: 2px; color: #1f4e79; text-transform: uppercase; }
+  .cover-title { font-size: 34pt; font-weight: 800; color: #16365c; margin: 10px 0 6px; line-height: 1.1; }
+  .cover-sub { font-size: 12pt; color: #444; font-style: italic; }
+  .cover-foot { margin-top: 22px; font-size: 10pt; color: #666; font-family:"Calibri",sans-serif; }
+
+  /* TOC */
+  .toc { page-break-after: always; }
+  .toc h2 { border: none; }
+  .toc ol { margin-left: 20px; font-family:"Calibri",sans-serif; font-size: 11pt; line-height: 1.9; }
+
+  /* Headings */
+  h2 { font-size: 16pt; font-weight: 700; color: #16365c; border-bottom: 2px solid #16365c;
+       padding-bottom: 4px; margin: 18px 0 10px; page-break-after: avoid; }
+  h3 { font-size: 12.5pt; font-weight: 700; color: #1f4e79; margin: 14px 0 5px; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; color: #333; margin: 10px 0 4px; font-family:"Calibri",sans-serif; }
+  p { margin: 5px 0; text-align: justify; }
+  ul, ol { margin: 5px 0 5px 22px; }
+  li { margin-bottom: 3px; }
+  b, strong { color: #16365c; }
+
+  /* Formula box */
+  .formula { background: #f4f7fb; border-left: 4px solid #1f4e79; padding: 8px 12px; margin: 8px 0;
+             font-family: "Cambria Math","Cambria",serif; page-break-inside: avoid; }
+  .formula b { color: #16365c; }
+  .formula .where { font-size: 9.3pt; color: #555; margin-top: 3px; font-family:"Calibri",sans-serif; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 9px 0; font-size: 9.6pt; page-break-inside: avoid; }
+  th { background: #16365c; color: #fff; text-align: left; padding: 5px 8px; font-size: 9.6pt; }
+  td { border: 1px solid #cbd5e1; padding: 4px 8px; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f4f7fb; }
+
+  /* Worked example */
+  .example { border: 1px solid #b7c7dd; border-radius: 4px; padding: 9px 12px; margin: 10px 0;
+             background: #fbfdff; page-break-inside: avoid; }
+  .ex-h { font-weight: 700; color: #1f4e79; font-size: 10.5pt; margin-bottom: 4px; }
+
+  /* Q&A */
+  .qa { margin: 8px 0; page-break-inside: avoid; }
+  .qa .q { font-weight: 700; color: #16365c; }
+  .qa .a { margin-top: 2px; }
+
+  /* Trap / takeaway callouts */
+  .trap { background: #fff6f0; border-left: 4px solid #c26a2c; padding: 6px 11px; margin: 8px 0; font-size: 10pt; }
+  .keytake { background: #f0f7f1; border-left: 4px solid #3f7d45; padding: 8px 12px; margin: 12px 0; }
+
+  .sec { page-break-before: always; }   /* put on an <h2> to force a fresh page */
+</style></head><body>
+
+<div class="cover">
+  <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+  <h1 class="cover-title">Economics</h1>
+  <div class="cover-sub">Microeconomics, Macroeconomics &amp; the Indian Economy — a complete interview companion.</div>
+  <div class="cover-foot">Roles: Equity Research · Investment Banking · Risk · Credit · Treasury · Sales &amp; Trading · Corporate Finance · Wealth &amp; PMS.<br>
+  Economics is a universal interview topic — every finance interviewer expects fluency in demand/supply, GDP, inflation, monetary &amp; fiscal policy, exchange rates and the RBI toolkit.</div>
+</div>
+
+<div class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li>How to Use This Guide &amp; the 10 Ideas That Recur</li>
+    <li>Microeconomics: Demand, Supply &amp; Equilibrium</li>
+    <li>Elasticity and Its Applications</li>
+    <li>Utility &amp; Consumer Choice</li>
+    <li>Production, Costs &amp; Returns to Scale</li>
+    <li>Market Structures, Price Discrimination, Game Theory &amp; Market Failure</li>
+    <li>National Income, Circular Flow, AD–AS &amp; the Keynesian Multiplier</li>
+    <li>Inflation, Deflation &amp; Stagflation</li>
+    <li>Unemployment &amp; the Phillips Curve</li>
+    <li>Money, Banking &amp; the Money Multiplier</li>
+    <li>Monetary Policy &amp; Transmission</li>
+    <li>Fiscal Policy, Deficits &amp; Crowding Out</li>
+    <li>Business Cycles &amp; Economic Indicators</li>
+    <li>International Economics: Exchange Rates &amp; BoP</li>
+    <li>The RBI: Framework, MPC &amp; Policy Tools</li>
+    <li>Indian Macro Indicators &amp; Government vs RBI</li>
+    <li>How Macro Links to Markets</li>
+    <li>Interview Q&amp;A Bank (70+ questions with model answers)</li>
+    <li>One-Page Cheat Sheet &amp; Final Checklist</li>
+  </ol>
+</div>
+
+<h2>1. How to Use This Guide &amp; the 10 Ideas That Recur</h2>
+<p>Economics is the interviewer's favourite screening subject because it is <b>universal</b>: whether you are pitching a stock, sizing a credit, hedging a book, or advising a corporate treasury, the macro backdrop and the price mechanism are always in play. You do not need to be a PhD economist. You need to (a) reason cleanly from first principles, (b) know the handful of identities and definitions cold, and (c) connect a macro variable to a market outcome in one clean sentence. That last skill — "so what for markets?" — is what separates a candidate who <i>memorised</i> economics from one who <i>uses</i> it.</p>
+<p>This guide is deliberately dense. Read it once end-to-end for structure, then use the Q&amp;A bank (Section 18) and the cheat sheet (Section 19) as your night-before revision. Every concept is written to be spoken aloud in an interview in 30–90 seconds.</p>
+
+<div class="keytake"><b>The 10 ideas that recur in almost every finance interview:</b>
+<ol>
+<li><b>Price is set where demand meets supply</b> — everything else (shortages, gluts, subsidies, taxes) is a deviation the market corrects.</li>
+<li><b>Elasticity decides who bears a cost</b> — a tax, a price change, or a currency move lands on the inelastic side.</li>
+<li><b>GDP identity: Y = C + I + G + (X − M)</b> — memorise it; every fiscal/trade argument sits on it.</li>
+<li><b>Real vs nominal</b> — always ask whether a number is inflation-adjusted; growth and returns are meaningful only in real terms.</li>
+<li><b>Inflation is a monetary and demand/supply phenomenon</b> — and it is the single biggest driver of central-bank action and bond prices.</li>
+<li><b>Bond prices move inverse to yields; yields track expected inflation + policy rates</b> — the master link between macro and fixed income.</li>
+<li><b>Monetary policy works on the price of money (rates); fiscal policy works on the quantity of demand (spending/taxes).</b></li>
+<li><b>A repo hike is contractionary</b> — costlier money, slower credit, cooler demand, lower inflation, typically a headwind for equities and existing bonds.</li>
+<li><b>Exchange rates redistribute</b> — a weaker rupee helps exporters/IT, hurts importers and inflation.</li>
+<li><b>The RBI targets inflation (flexible inflation targeting) via the MPC</b> — repo is the lever, CPI is the target, transmission is the plumbing.</li>
+</ol>
+</div>
+
+<p><b>A note on numbers and accuracy:</b> interviewers respect candidates who describe <i>mechanisms</i> and avoid stating stale figures as fact. Throughout, specific rates and indicator values are given only as illustrative "for example / around" ranges. Do the same in the room: "the repo rate is around the mid-single digits, for example roughly 6%, but the level matters less than the direction and the reasoning."</p>
+
+<h2 class="sec">2. Microeconomics: Demand, Supply &amp; Equilibrium</h2>
+
+<h3>2.1 The Law of Demand and the Law of Supply</h3>
+<p><b>Demand</b> is the quantity of a good buyers are willing and able to purchase at each price, holding other things constant (<i>ceteris paribus</i>). The <b>law of demand</b> says quantity demanded falls as price rises — the demand curve slopes downward. Two forces drive this: the <b>substitution effect</b> (as a good gets dearer, buyers switch to substitutes) and the <b>income effect</b> (a higher price erodes real purchasing power, so buyers can afford less).</p>
+<p><b>Supply</b> is the quantity sellers are willing to offer at each price. The <b>law of supply</b> says quantity supplied rises as price rises — the supply curve slopes upward — because higher prices cover higher marginal costs and reward extra production.</p>
+
+<h3>2.2 Movement Along vs Shift Of a Curve — the classic trap</h3>
+<p>This distinction is tested constantly. A <b>movement along</b> a curve is caused <i>only</i> by a change in the good's <b>own price</b>. A <b>shift of</b> the whole curve is caused by a change in any <b>other determinant</b>.</p>
+<ul>
+<li><b>Demand shifters:</b> income (normal vs inferior goods), prices of substitutes and complements, tastes/preferences, expectations of future prices, and the number of buyers.</li>
+<li><b>Supply shifters:</b> input/factor costs, technology, taxes and subsidies, prices of related goods, expectations, weather (for commodities), and the number of sellers.</li>
+</ul>
+<div class="trap"><b>Common trap — movement vs shift:</b> "Demand rose because the price fell" is <b>wrong</b> phrasing. A price fall causes a <i>movement along</i> the demand curve to a larger quantity demanded — it does not shift demand. Demand (the whole curve) shifts only when a <i>non-price</i> factor changes (e.g., higher incomes). Say "quantity demanded rose" for a price-driven change, and "demand increased" for a curve shift.</div>
+
+<h3>2.3 Market Equilibrium, Shortages and Surpluses</h3>
+<p><b>Equilibrium</b> is the price–quantity pair where quantity demanded equals quantity supplied; the market <b>clears</b>. Above the equilibrium price there is a <b>surplus (glut)</b> — sellers cut price to clear inventory. Below it there is a <b>shortage</b> — buyers bid the price up. The market self-corrects toward equilibrium.</p>
+<p><b>Comparative statics</b> — the interviewer's favourite drill — asks what happens to price (P) and quantity (Q) when a curve shifts:</p>
+<ul>
+<li>Demand up (supply fixed) → P up, Q up.</li>
+<li>Demand down → P down, Q down.</li>
+<li>Supply up → P down, Q up.</li>
+<li>Supply down → P up, Q down.</li>
+<li>Both shift → the direction of P or Q becomes ambiguous and depends on the relative magnitude of the shifts. (Good candidates name the ambiguity.)</li>
+</ul>
+
+<h3>2.4 Consumer Surplus and Producer Surplus</h3>
+<p><b>Consumer surplus (CS)</b> is the difference between what buyers are <i>willing</i> to pay (their reservation price, read off the demand curve) and what they <i>actually</i> pay — the area below the demand curve and above the market price. <b>Producer surplus (PS)</b> is the difference between the price sellers receive and their marginal cost — the area above the supply curve and below the price. Their sum is <b>total welfare</b>. A competitive market maximises this sum; interventions such as price ceilings, floors, taxes or monopoly pricing create a <b>deadweight loss</b> — welfare that simply disappears because mutually beneficial trades no longer happen.</p>
+
+<div class="formula"><b>Welfare accounting</b><br>
+Total Surplus = Consumer Surplus + Producer Surplus<br>
+CS ≈ ½ × (base) × (height) for a linear demand curve above price<br>
+<div class="where">where the "height" is the gap between the choke price (max willingness to pay) and the market price; a tax or monopoly wedge shrinks total surplus and the missing triangle is the deadweight loss.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 1 — Reading a shift, a price cap, and surplus</div>
+<p>Suppose the market for onions clears at ₹30/kg and 100 lakh kg. A poor monsoon cuts the harvest (a <b>supply-curve shift left</b>, not a movement). New equilibrium: ₹45/kg and 80 lakh kg — price up, quantity down, exactly as "supply down → P up, Q down" predicts.</p>
+<p>The government, worried about consumers, imposes a <b>price ceiling</b> of ₹35/kg (below the new equilibrium of ₹45). At ₹35, quantity demanded (say 95 lakh) exceeds quantity supplied (say 78 lakh): a <b>shortage of ~17 lakh kg</b> appears, often rationed by queues, hoarding or a black market. Consumers who <i>get</i> onions gain, but total surplus falls versus the free-market outcome — a textbook illustration of why well-intentioned price controls create scarcity. This is a favourite "reason it out" question.</p></div>
+
+<h3>2.5 Price Floors, Price Ceilings &amp; the Incidence of Taxes</h3>
+<p>A <b>price ceiling</b> is a legal <i>maximum</i> price set <b>below</b> equilibrium (e.g., rent control, a cap on essential-drug prices). It helps some buyers but creates a persistent <b>shortage</b>, queues, quality deterioration and black markets. A <b>price floor</b> is a legal <i>minimum</i> price set <b>above</b> equilibrium; it creates a persistent <b>surplus</b>. The two Indian examples interviewers love: the <b>Minimum Support Price (MSP)</b> for crops (a price floor that produces grain surpluses the government must procure and store) and the statutory <b>minimum wage</b> (a labour-market floor that, if set above the market-clearing wage, can create unemployment).</p>
+<p><b>Tax incidence — who really pays?</b> The side a tax is legally levied on is <i>not</i> who bears it. The burden falls on the <b>more inelastic</b> side of the market, because that side cannot escape by changing quantity. A tax on petrol (inelastic demand) is borne mostly by consumers; a tax on a good with elastic demand is borne more by producers. This is the same elasticity logic that explains why governments tax fuel, alcohol and tobacco.</p>
+<div class="trap"><b>Common trap — ceiling vs floor:</b> a price <b>ceiling</b> sits <i>below</i> equilibrium and causes a <b>shortage</b> (demand &gt; supply); a price <b>floor</b> sits <i>above</i> equilibrium and causes a <b>surplus</b> (supply &gt; demand). A ceiling set <i>above</i> equilibrium (or a floor set <i>below</i> it) is simply non-binding and has no effect.</div>
+
+<h2 class="sec">3. Elasticity and Its Applications</h2>
+
+<h3>3.1 What Elasticity Measures</h3>
+<p>Elasticity measures the <b>responsiveness</b> of one variable to another, expressed as a ratio of percentage changes so it is unit-free. The three you must know cold:</p>
+
+<div class="formula"><b>Price Elasticity of Demand (PED)</b><br>
+PED = %Δ Quantity Demanded ÷ %Δ Price<br>
+<div class="where">Usually negative (law of demand); economists often quote the absolute value. |PED| &gt; 1 = elastic; |PED| &lt; 1 = inelastic; |PED| = 1 = unit elastic.</div></div>
+
+<div class="formula"><b>Income Elasticity of Demand (YED)</b><br>
+YED = %Δ Quantity Demanded ÷ %Δ Income<br>
+<div class="where">YED &gt; 0 = normal good; YED &gt; 1 = luxury (income-elastic); 0 &lt; YED &lt; 1 = necessity; YED &lt; 0 = inferior good.</div></div>
+
+<div class="formula"><b>Cross-Price Elasticity of Demand (XED)</b><br>
+XED = %Δ Quantity Demanded of good A ÷ %Δ Price of good B<br>
+<div class="where">XED &gt; 0 = substitutes (tea and coffee); XED &lt; 0 = complements (cars and petrol); XED ≈ 0 = unrelated goods.</div></div>
+
+<h3>3.2 Determinants of Price Elasticity</h3>
+<ul>
+<li><b>Availability of substitutes</b> — more substitutes → more elastic (a single brand of soap is elastic; salt in general is inelastic).</li>
+<li><b>Necessity vs luxury</b> — necessities (medicine, staple food) are inelastic; luxuries are elastic.</li>
+<li><b>Share of budget</b> — big-ticket items (a car) are more elastic than trivial ones (matchboxes).</li>
+<li><b>Time horizon</b> — demand is more elastic in the long run as buyers adjust habits and find substitutes (petrol demand barely moves this week, but over years people buy efficient vehicles).</li>
+<li><b>Definition of the market</b> — narrowly defined goods (one airline) are more elastic than broad categories (all travel).</li>
+</ul>
+
+<h3>3.3 The Killer Application — Elasticity and Total Revenue</h3>
+<p>Total Revenue (TR) = Price × Quantity. Because a price change moves P and Q in opposite directions, the net effect on revenue depends on elasticity:</p>
+<ul>
+<li><b>Demand elastic (|PED| &gt; 1):</b> cut price → revenue rises (quantity gain dominates). Raise price → revenue falls.</li>
+<li><b>Demand inelastic (|PED| &lt; 1):</b> raise price → revenue rises (price gain dominates). This is why governments tax inelastic goods (fuel, tobacco, alcohol) — the tax raises revenue without collapsing quantity, and consumers bear most of the burden.</li>
+<li><b>Unit elastic (|PED| = 1):</b> revenue is unchanged at the margin.</li>
+</ul>
+
+<div class="example"><div class="ex-h">Worked Example 2 — Computing and interpreting PED</div>
+<p>A telecom operator cuts its data plan price from ₹250 to ₹200 (a 20% fall). Monthly subscribers on the plan rise from 10 lakh to 13 lakh (a 30% rise).</p>
+<p><b>PED = %ΔQ ÷ %ΔP = (+30%) ÷ (−20%) = −1.5.</b> The absolute value 1.5 &gt; 1, so demand is <b>elastic</b>. Check the revenue logic: old TR = ₹250 × 10 lakh = ₹25 crore; new TR = ₹200 × 13 lakh = ₹26 crore. Revenue rose — consistent with the rule that cutting price on an elastic good raises revenue. In an interview, always close the loop: "elastic, so the price cut was revenue-accretive, which is exactly why data-heavy telecoms chase volume."</p></div>
+
+<div class="trap"><b>Common trap:</b> Elasticity is a <b>percentage</b> ratio, not a slope, and it varies <i>along</i> a straight-line demand curve — elastic at the top (high price), inelastic at the bottom. Never say "the demand curve has constant elasticity because it's a straight line." Also, don't confuse an <i>inelastic</i> good with one that has "no demand response" — it responds, just less than proportionately.</div>
+
+<h3>3.4 Advertising Elasticity and the Elasticity of Supply</h3>
+<p><b>Advertising elasticity of demand (AED)</b> = %Δ Quantity demanded ÷ %Δ Advertising spend. It measures how responsive sales are to marketing: a high AED (typical of FMCG, discretionary and lifestyle brands) justifies heavy ad budgets, while a low AED (staples, commodities) does not. It is positive whenever advertising works.</p>
+<p><b>Price elasticity of supply (PES)</b> = %Δ Quantity supplied ÷ %Δ Price — the mirror image on the sell side. Supply is more elastic when producers have <b>spare capacity</b>, can <b>store</b> the good, and have <b>time</b> to adjust (long run &gt; short run). Agricultural output is very inelastic in the short run (a planted crop can't respond to a price spike this season); manufactured goods with idle capacity are elastic. PES helps determine who bears a tax and how sharply prices spike after a supply shock.</p>
+<div class="formula"><b>The full elasticity family</b><br>
+PED = %ΔQ<sub>d</sub> ÷ %ΔP (own price) &nbsp;|&nbsp; YED = %ΔQ<sub>d</sub> ÷ %ΔIncome<br>
+XED = %ΔQ<sub>d,A</sub> ÷ %ΔP<sub>B</sub> (cross) &nbsp;|&nbsp; AED = %ΔQ<sub>d</sub> ÷ %ΔAdSpend<br>
+PES = %ΔQ<sub>s</sub> ÷ %ΔP (supply)<br>
+<div class="where">Sign conventions: PED &lt; 0; YED &gt; 0 normal / &lt; 0 inferior; XED &gt; 0 substitutes / &lt; 0 complements; AED &gt; 0; PES &gt; 0.</div></div>
+
+<h2 class="sec">4. Utility &amp; Consumer Choice</h2>
+<p><b>Utility</b> is the satisfaction a consumer derives from consuming a good. <b>Total utility</b> rises as consumption rises (up to a point), while <b>marginal utility (MU)</b> — the extra utility from one more unit — behaves differently.</p>
+<p>The <b>Law of Diminishing Marginal Utility</b> states that as a person consumes more of a good, the additional satisfaction from each successive unit falls. The first glass of water on a hot day is priceless; the fifth is barely wanted. This downward-sloping MU is the microfoundation of the downward-sloping demand curve — buyers pay less for units that give them less satisfaction.</p>
+<p><b>Consumer equilibrium (utility maximisation):</b> a rational consumer allocates a fixed budget so that the <b>marginal utility per rupee is equal across all goods</b>. If a rupee spent on tea yields more utility than a rupee spent on coffee, the consumer reallocates toward tea until the ratios equalise.</p>
+<div class="formula"><b>Equi-marginal principle (consumer equilibrium)</b><br>
+MU<sub>A</sub> / P<sub>A</sub> = MU<sub>B</sub> / P<sub>B</sub> = … = marginal utility of money<br>
+<div class="where">The consumer keeps switching spending to whichever good gives more utility per rupee until all these ratios are equal. Modern theory generalises this with indifference curves and budget lines (optimum where MRS = price ratio), but the intuition is identical.</div></div>
+<p><b>Why finance interviewers care:</b> the equi-marginal idea reappears everywhere — a portfolio manager equalises risk-adjusted marginal return across positions; a capital-budgeting team allocates to projects until marginal returns equalise. It is the same optimisation logic dressed in different clothes.</p>
+
+<h3>4.1 Indifference Curves, the Budget Line &amp; the Consumer Optimum</h3>
+<p>The modern (ordinal) treatment does not need to <i>measure</i> utility, only to <b>rank</b> bundles. An <b>indifference curve</b> joins all combinations of two goods that give the consumer the <b>same</b> satisfaction. Its key properties: it slopes <b>downward</b> (more of one good needs less of the other to keep utility constant), it is <b>convex</b> to the origin (a diminishing marginal rate of substitution), higher curves mean higher utility, and two curves <b>never cross</b>. The slope of an indifference curve is the <b>Marginal Rate of Substitution (MRS)</b> — the rate at which a consumer will willingly swap one good for another.</p>
+<p>The <b>budget line</b> shows all bundles the consumer can just afford given income (M) and prices: P<sub>x</sub>·X + P<sub>y</sub>·Y = M. Its slope is the <b>price ratio</b> (−P<sub>x</sub>/P<sub>y</sub>). A rise in income shifts the budget line outward in parallel; a change in one price rotates it.</p>
+<div class="formula"><b>Consumer optimum (ordinal approach)</b><br>
+Optimum where the budget line is tangent to the highest attainable indifference curve:<br>
+MRS = P<sub>x</sub> / P<sub>y</sub> &nbsp;⇔&nbsp; MU<sub>x</sub>/MU<sub>y</sub> = P<sub>x</sub>/P<sub>y</sub> &nbsp;⇔&nbsp; MU<sub>x</sub>/P<sub>x</sub> = MU<sub>y</sub>/P<sub>y</sub><br>
+<div class="where">This is exactly the equi-marginal principle above, restated with curves: the consumer equates the rate they are <i>willing</i> to trade goods (MRS) with the rate the <i>market</i> lets them trade (the price ratio).</div></div>
+
+<h2 class="sec">5. Production, Costs &amp; Returns to Scale</h2>
+
+<h3>5.1 Fixed vs Variable, and the Short Run vs Long Run</h3>
+<p>The <b>short run</b> is the period in which at least one input (usually capital/plant) is fixed; the <b>long run</b> is long enough for all inputs to vary and firms to enter or exit. This is a conceptual distinction, not a calendar one — for an airline the long run (new aircraft) is years; for a food cart it is weeks.</p>
+<ul>
+<li><b>Fixed costs (FC):</b> do not vary with output (rent, insurance, plant depreciation). They exist even at zero output in the short run.</li>
+<li><b>Variable costs (VC):</b> rise with output (raw materials, wages of hourly labour, power).</li>
+<li><b>Total cost (TC) = FC + VC.</b></li>
+</ul>
+
+<div class="formula"><b>Key cost measures</b><br>
+Average Total Cost: ATC = TC / Q &nbsp;&nbsp; Average Variable Cost: AVC = VC / Q<br>
+Marginal Cost: MC = ΔTC / ΔQ (cost of one more unit)<br>
+<div class="where">MC cuts both AVC and ATC at their minimum points. When MC &lt; ATC, average cost is falling; when MC &gt; ATC, average cost is rising.</div></div>
+
+<h3>5.2 The Law of Diminishing Marginal Returns</h3>
+<p>In the short run, adding more of a variable input to a fixed input eventually raises output by smaller and smaller increments — the <b>law of diminishing marginal returns</b>. Ten cooks in one small kitchen start to get in each other's way. This is why the marginal-cost curve eventually turns upward and short-run cost curves are U-shaped.</p>
+
+<h3>5.3 Economies and Diseconomies of Scale (Long Run)</h3>
+<p><b>Economies of scale</b> mean long-run average cost <i>falls</i> as output rises — from bulk purchasing, specialisation of labour, spreading fixed costs (R&amp;D, brand, technology) over more units, and financial advantages (cheaper funding for large firms). <b>Diseconomies of scale</b> mean average cost <i>rises</i> at very large scale — usually from managerial complexity, coordination failures and bureaucracy. The long-run average cost curve is therefore U-shaped, and its lowest point defines the <b>minimum efficient scale (MES)</b> — the smallest output at which a firm captures most scale advantages. Industries with high MES relative to market size (steel, telecom, cement) naturally consolidate into a few large players — a direct bridge to market structure.</p>
+
+<div class="trap"><b>Common trap:</b> Do not confuse <b>economies of scale</b> (a long-run fall in average cost as the <i>firm gets bigger</i>) with <b>diminishing marginal returns</b> (a short-run phenomenon with fixed capital). They operate on different time horizons. Also distinguish <b>returns to scale</b> (proportional change in output when <i>all</i> inputs change) from <b>marginal returns</b> (one input changes).</p></div>
+
+<h3>5.4 Returns to Scale &amp; Isoquants</h3>
+<p><b>Returns to scale</b> describe what happens to output when <b>all</b> inputs are scaled up by the same proportion in the <i>long run</i> — distinct from marginal returns (only one input varies). If all inputs double: output <b>more than doubles</b> = <b>increasing returns to scale</b> (the source of economies of scale); output <b>exactly doubles</b> = <b>constant returns to scale</b>; output <b>less than doubles</b> = <b>decreasing returns to scale</b> (the source of diseconomies).</p>
+<p>An <b>isoquant</b> ("equal quantity") is the producer's analogue of an indifference curve: it joins all combinations of two inputs (say capital and labour) that produce the <b>same</b> output. Its slope is the <b>Marginal Rate of Technical Substitution (MRTS)</b>. The parallel to the budget line is the <b>isocost</b> line (input combinations of equal total cost). The <b>cost-minimising input mix</b> is where an isoquant is tangent to an isocost line: MRTS = ratio of input prices (w/r) ⇔ MP<sub>L</sub>/w = MP<sub>K</sub>/r — the equi-marginal principle again, now for producers.</p>
+
+<h3>5.5 Revenue Concepts: TR, AR &amp; MR</h3>
+<div class="formula"><b>Revenue measures</b><br>
+Total Revenue: TR = Price × Quantity<br>
+Average Revenue: AR = TR / Q = Price (so the demand curve <i>is</i> the AR curve)<br>
+Marginal Revenue: MR = ΔTR / ΔQ (revenue from one more unit)<br>
+<div class="where">In perfect competition the firm is a price taker, so P = AR = MR (a horizontal line). For any firm facing a downward-sloping demand curve (monopoly, monopolistic competition), MR &lt; AR, because selling one more unit requires cutting price on <i>all</i> units. Every firm maximises profit where <b>MR = MC</b>.</div></div>
+<p>The link to elasticity: MR is positive when demand is elastic, zero at unit elasticity (where TR peaks), and negative when demand is inelastic — which is exactly why a profit-maximising firm never chooses to operate on the inelastic part of its demand curve.</p>
+
+<h2 class="sec">6. Market Structures: Competition to Monopoly</h2>
+<p>Market structure describes the competitive environment a firm operates in — how many sellers, how similar the products, how easy entry is, and how much pricing power results. This determines pricing, efficiency and profitability, and underpins any equity-research "moat" analysis.</p>
+
+<h3>6.1 The Four Structures</h3>
+<table>
+<thead><tr><th>Feature</th><th>Perfect Competition</th><th>Monopolistic Competition</th><th>Oligopoly</th><th>Monopoly</th></tr></thead>
+<tbody>
+<tr><td>Number of firms</td><td>Very many</td><td>Many</td><td>Few (dominant)</td><td>One</td></tr>
+<tr><td>Product</td><td>Identical (homogeneous)</td><td>Differentiated</td><td>Identical or differentiated</td><td>Unique, no close substitute</td></tr>
+<tr><td>Entry/exit barriers</td><td>None</td><td>Low</td><td>High</td><td>Very high / blocked</td></tr>
+<tr><td>Pricing power</td><td>None — price taker</td><td>Some</td><td>Substantial, interdependent</td><td>High — price maker (limited by demand)</td></tr>
+<tr><td>Demand curve faced</td><td>Perfectly elastic (flat)</td><td>Downward, elastic</td><td>Kinked / strategic</td><td>Market demand (downward)</td></tr>
+<tr><td>Long-run profit</td><td>Normal (zero economic)</td><td>Normal (zero economic)</td><td>Can be supernormal</td><td>Supernormal (sustained)</td></tr>
+<tr><td>Efficiency</td><td>Allocative &amp; productive</td><td>Neither fully (excess capacity)</td><td>Usually inefficient</td><td>Inefficient (deadweight loss)</td></tr>
+<tr><td>Real-world example</td><td>Agricultural commodities, FX (near)</td><td>Restaurants, salons, apparel</td><td>Telecom, airlines, cement, autos</td><td>Regulated utility, patented drug</td></tr>
+</tbody>
+</table>
+
+<h3>6.2 Pricing and Efficiency Logic</h3>
+<p><b>Perfect competition:</b> each firm is a <b>price taker</b> — it faces a horizontal demand curve at the market price and produces where <b>P = MC</b>. Free entry competes away any supernormal profit, so in the long run firms earn only <b>normal profit</b> (economic profit = 0). This delivers both <b>allocative efficiency</b> (P = MC, so the value to society of the last unit equals its cost) and <b>productive efficiency</b> (production at minimum ATC). It is the welfare benchmark against which other structures are judged.</p>
+<p><b>Monopoly:</b> a single seller is a <b>price maker</b>. Because it faces the whole (downward-sloping) market demand, its marginal revenue lies below price, and it maximises profit where <b>MR = MC</b>, then charges the higher price the demand curve allows. The result is <b>P &gt; MC</b>: output is restricted and price raised relative to competition, transferring surplus from consumers to the firm and creating a <b>deadweight loss</b>. Monopolies persist only where entry barriers (patents, network effects, control of an essential input, huge scale economies/"natural monopoly", or legal grants) keep rivals out.</p>
+<p><b>Monopolistic competition:</b> many firms sell <i>differentiated</i> products (brand, location, quality). Each has a little pricing power (downward-sloping demand) and can earn short-run profit, but low entry barriers attract imitators until profit is competed back to normal in the long run. Firms operate with <b>excess capacity</b> (not at minimum ATC) — the "cost" of variety.</p>
+<p><b>Oligopoly:</b> a few large firms whose decisions are <b>interdependent</b> — each must anticipate rivals' reactions (the domain of game theory). Outcomes range from fierce price wars to tacit collusion/cartels. The <b>kinked demand curve</b> model explains sticky prices: rivals match price cuts (so cutting doesn't gain share) but ignore price rises (so raising loses share), making firms reluctant to change price. Non-price competition (advertising, features, loyalty programmes) dominates. Indian telecom and aviation are textbook oligopolies.</p>
+
+<div class="keytake"><b>Interview framing for a stock pitch:</b> map the company to a structure. "This firm sits in a consolidated oligopoly with high entry barriers (spectrum, capex) and rational pricing after years of price wars — that supports pricing power and margin expansion." That single sentence signals you understand structure, moats and earnings quality at once.</div>
+
+<h3>6.3 Price Discrimination</h3>
+<p><b>Price discrimination</b> is charging different prices to different buyers for the <i>same</i> good in order to capture more consumer surplus as profit. It requires <b>market power</b>, the ability to <b>segment</b> buyers by willingness to pay, and prevention of <b>resale/arbitrage</b> between segments. Three degrees:</p>
+<ul>
+<li><b>First-degree (perfect):</b> each buyer charged their maximum willingness to pay — rare; auctions and bespoke negotiation approximate it.</li>
+<li><b>Second-degree:</b> price varies with quantity or version — bulk discounts, tiered telecom/data plans, business vs economy class.</li>
+<li><b>Third-degree:</b> different prices to identifiable groups — student/senior concessions, peak vs off-peak power and airfares, regional pricing. The most common form.</li>
+</ul>
+<p>Firms discriminate <i>more</i> (charge more) to the inelastic segment and offer discounts to the elastic segment — a direct application of the elasticity–revenue logic.</p>
+
+<h3>6.4 Game Theory &amp; Nash Equilibrium</h3>
+<p>Oligopoly is <b>strategic</b>: each firm's best move depends on what rivals do, which is the domain of <b>game theory</b>. A <b>Nash equilibrium</b> is a set of strategies where <b>no player can do better by unilaterally changing</b> their own strategy, given what everyone else is doing — a stable, self-enforcing outcome (not necessarily the best for the group).</p>
+<p>The classic <b>Prisoner's Dilemma</b> shows why cooperation is hard: two firms would <i>jointly</i> earn most by both keeping prices high (colluding), but each has a private incentive to undercut. The Nash equilibrium is <b>both cut prices</b> — individually rational, collectively worse. This explains price wars, why cartels (like OPEC) are unstable and prone to cheating, and why sustained tacit collusion needs repeated interaction and credible punishment. Indian telecom's price war after a new entrant is a textbook payoff matrix.</p>
+<div class="trap"><b>Common trap:</b> a Nash equilibrium is <i>not</i> necessarily the socially or jointly optimal outcome, and it is <i>not</i> the same as collusion. It is simply the point from which no single player wants to deviate. In the Prisoner's Dilemma the Nash outcome (both defect) is precisely the <i>worse</i> collective result.</div>
+
+<h3 class="sec">6.5 Market Failure &amp; Externalities</h3>
+<p><b>Market failure</b> occurs when a free market, left alone, fails to allocate resources efficiently — the core case for a role for government. The main sources are externalities, public goods, asymmetric information and market power (monopoly, covered above).</p>
+<p>An <b>externality</b> is a cost or benefit imposed on a third party that is not reflected in the market price.</p>
+<ul>
+<li><b>Negative externality</b> (e.g., pollution, congestion): social cost exceeds private cost, so the market <b>over-produces</b> relative to the social optimum. Remedy: make the polluter pay — a <b>Pigouvian tax</b>, carbon pricing, or tradable permits — to "internalise" the cost.</li>
+<li><b>Positive externality</b> (e.g., education, vaccination, R&amp;D): social benefit exceeds private benefit, so the market <b>under-produces</b>. Remedy: <b>subsidies</b>, public provision, patents.</li>
+</ul>
+<p>The <b>Coase theorem</b> notes that if property rights are clear and bargaining is costless, private parties can negotiate an efficient outcome without government — but in practice transaction costs and many affected parties make that hard, which is why we use taxes and regulation.</p>
+
+<h3>6.6 Public Goods &amp; the Free-Rider Problem</h3>
+<p>A <b>public good</b> is <b>non-rival</b> (one person's use doesn't reduce another's — e.g., national defence, a lighthouse, street lighting) and <b>non-excludable</b> (you cannot stop non-payers from benefiting). Because of non-excludability, everyone has an incentive to <b>free-ride</b> — enjoy the good without paying — so private markets <b>under-provide or fail to provide</b> it at all. This is why government funds public goods through taxation. Contrast with a <b>private good</b> (rival and excludable, e.g., a sandwich) and <b>common resources</b> (rival but non-excludable, e.g., fisheries, groundwater — prone to the "tragedy of the commons," or over-exploitation).</p>
+
+<h3>6.7 Asymmetric Information: Adverse Selection &amp; Moral Hazard</h3>
+<p><b>Asymmetric information</b> exists when one party to a transaction knows more than the other. Two distinct problems follow — a favourite finance/insurance topic:</p>
+<ul>
+<li><b>Adverse selection</b> (hidden information, <i>before</i> the deal): the informed side self-selects to the detriment of the uninformed. In insurance, the sickest buy the most cover; in lending, the riskiest borrowers most want loans; Akerlof's "market for lemons" shows bad used cars driving out good ones. Remedies: screening, medical checks, credit scores, warranties, signalling (e.g., education as a signal).</li>
+<li><b>Moral hazard</b> (hidden action, <i>after</i> the deal): being protected changes behaviour. An insured person takes more risk; a "too-big-to-fail" bank gambles expecting a bailout; a borrower diverts funds. Remedies: deductibles/co-pay, collateral, monitoring, covenants, "skin in the game."</li>
+</ul>
+<div class="trap"><b>Common trap — adverse selection vs moral hazard:</b> <b>adverse selection</b> is a <i>pre-contract</i> problem of hidden <b>information</b> (who you deal with); <b>moral hazard</b> is a <i>post-contract</i> problem of hidden <b>action</b> (how they behave once protected). Memory hook: <b>selection</b> happens when you <i>select</i> whom to trade with (before); <b>hazard</b> arises once the contract changes incentives (after).</div>
+
+<h3>6.8 Government Intervention &amp; Its Limits</h3>
+<p>Governments correct market failure through <b>taxes and subsidies</b> (to internalise externalities), <b>regulation</b> (emission norms, safety, disclosure), <b>direct provision</b> of public goods, <b>competition/antitrust policy</b> (to curb monopoly), and <b>defining property rights</b>. But intervention carries its own risks — <b>government failure</b>: imperfect information, unintended consequences, regulatory capture, bureaucratic inefficiency and political incentives. The mature interview answer notes both: "markets fail for identifiable reasons, but intervention should be weighed against the risk of government failure — the real question is always which imperfect allocator does better at the margin."</p>
+
+<h2 class="sec">7. National Income: GDP, GVA, GNP &amp; Deflator</h2>
+
+<h3>7.1 What GDP Is</h3>
+<p><b>Gross Domestic Product (GDP)</b> is the total market value of all <b>final</b> goods and services produced <b>within a country's borders</b> in a given period. Four words carry the definition: <i>market value</i> (valued at prices, so we can add apples and haircuts), <i>final</i> (to avoid double-counting intermediate inputs), <i>within borders</i> (geography, not nationality — hence "domestic"), and <i>in a period</i> (a flow, usually a quarter or year).</p>
+
+<h3>7.2 The Three Measurement Methods (they must agree)</h3>
+<p>GDP can be measured three ways because one person's spending is another's income is another's output:</p>
+<ul>
+<li><b>Expenditure method:</b> add up all spending on final output. This gives the famous identity.</li>
+<li><b>Income method:</b> add up all incomes earned in production — wages, rent, interest and profits (plus indirect taxes net of subsidies).</li>
+<li><b>Production (value-added / output) method:</b> add up the <b>value added</b> at each stage of production (output value minus intermediate inputs), avoiding double counting. This is the basis of <b>GVA</b>.</li>
+</ul>
+
+<div class="formula"><b>GDP — Expenditure Identity</b><br>
+Y = C + I + G + (X − M)<br>
+<div class="where">C = private consumption; I = investment (business capex + inventories + housing); G = government spending on goods/services (not transfers); X = exports; M = imports; (X − M) = net exports. This is the single most-tested macro identity — know it by heart.</div></div>
+
+<h3>7.3 GVA and the GDP–GVA Link (very Indian-context)</h3>
+<p><b>Gross Value Added (GVA)</b> measures output from the <b>producer's / supply side</b> — it is GDP viewed by industry (agriculture, manufacturing, services). In India both are published and closely watched. The bridge is:</p>
+<div class="formula"><b>GDP ↔ GVA</b><br>
+GDP = GVA + Taxes on products − Subsidies on products<br>
+<div class="where">GVA captures value added at basic prices; adding net product taxes converts to GDP at market prices. GVA is often preferred to gauge underlying <i>sectoral</i> economic activity because it strips out the distortion of tax/subsidy changes.</div></div>
+
+<h3>7.4 Nominal vs Real GDP and the GDP Deflator</h3>
+<p><b>Nominal GDP</b> is measured at <i>current</i> prices; it rises both when output grows and when prices rise. <b>Real GDP</b> is measured at <i>constant</i> (base-year) prices; it strips out inflation and reflects true changes in the <b>volume</b> of output. Growth should always be quoted in <b>real</b> terms.</p>
+<div class="formula"><b>Real GDP and the GDP Deflator</b><br>
+Real GDP = Nominal GDP ÷ (GDP Deflator ÷ 100)<br>
+GDP Deflator = (Nominal GDP ÷ Real GDP) × 100<br>
+<div class="where">The GDP deflator is the broadest measure of economy-wide prices — it covers <i>all</i> domestically produced goods and services, unlike CPI (a fixed consumer basket). Deflator inflation = %change in the deflator year over year.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 3 — Real GDP from nominal GDP and the deflator</div>
+<p>An economy's nominal GDP rises from ₹200 lakh crore (base year, deflator = 100) to ₹224 lakh crore next year, when the GDP deflator is 112.</p>
+<p><b>Real GDP (year 2)</b> = Nominal ÷ (Deflator/100) = 224 ÷ 1.12 = <b>₹200 lakh crore</b> in base-year prices.</p>
+<p>So although <b>nominal</b> GDP grew 12% (200→224), <b>real</b> GDP grew <b>0%</b> — the entire increase was inflation (the deflator rose from 100 to 112, i.e., 12% inflation). The economy produced no more <i>stuff</i>; prices simply rose. This is exactly why a headline "GDP up 12%" means little until you separate volume from price. Interviewers love this because it exposes whether you instinctively think real vs nominal.</p></div>
+
+<h3>7.5 GNP, NNP and the Domestic-vs-National Distinction</h3>
+<p><b>GNP (Gross National Product)</b> counts output by a country's <b>residents/nationals wherever located</b>, whereas GDP counts output <b>within the borders</b> regardless of nationality. The bridge is <b>Net Factor Income from Abroad (NFIA)</b> — income residents earn abroad minus income foreigners earn domestically.</p>
+<div class="formula"><b>GNP and NNP</b><br>
+GNP = GDP + Net Factor Income from Abroad (NFIA)<br>
+NNP = GNP − Depreciation (consumption of fixed capital)<br>
+National Income (NNP at factor cost) = NNP − Net Indirect Taxes<br>
+<div class="where">For a country with many workers abroad sending remittances and few foreign-owned firms, GNP &gt; GDP. For a host of large foreign multinationals, GDP &gt; GNP.</div></div>
+
+<div class="trap"><b>Common trap — GDP vs GNP:</b> GDP is about <b>location</b> ("Domestic" = within borders); GNP is about <b>ownership/nationality</b> ("National" = by residents). An Indian working in Dubai adds to India's <i>GNP</i> (Indian resident) but to the UAE's <i>GDP</i> (produced there). A Japanese carmaker's Indian plant adds to India's <i>GDP</i> but Japan's <i>GNP</i>.</div>
+
+<h3>7.6 Limitations of GDP</h3>
+<ul>
+<li><b>Ignores distribution</b> — GDP can rise while inequality worsens; it is an aggregate, not a per-person welfare measure. (Per-capita and real terms help.)</li>
+<li><b>Excludes non-market and informal activity</b> — household/unpaid work and much of the informal economy go uncounted; this matters greatly for India.</li>
+<li><b>Ignores externalities and depletion</b> — pollution and resource exhaustion aren't netted out; "growth" can degrade natural capital.</li>
+<li><b>Says nothing about quality of life</b> — health, leisure, education quality, happiness. (Hence HDI and other supplements.)</li>
+<li><b>Composition matters</b> — building prisons and hospitals both add to GDP; the number alone doesn't judge value.</li>
+</ul>
+
+<h3 class="sec">7.7 The Circular Flow of Income</h3>
+<p>The <b>circular flow</b> model shows how money moves around the economy. In the simplest two-sector version, <b>households</b> supply factors (labour, capital) to <b>firms</b> and receive income (wages, rent, interest, profit); they then spend that income buying firms' output. One flow's expenditure is another's income — the reason the three GDP methods must agree. <b>Leakages</b> (saving, taxes, imports) drain the flow; <b>injections</b> (investment, government spending, exports) refill it. When injections equal leakages (S + T + M = I + G + X), the economy is in equilibrium. This model is the skeleton beneath Y = C + I + G + (X − M).</p>
+
+<h3>7.8 Aggregate Demand &amp; Aggregate Supply (AD–AS)</h3>
+<p><b>Aggregate demand (AD)</b> is total planned spending at each price level — it is Y = C + I + G + (X − M) plotted against the price level, and it slopes <b>downward</b> (lower prices raise real wealth, lower interest rates and improve competitiveness). <b>Aggregate supply (AS)</b> is total output firms will produce: the <b>short-run AS</b> slopes up (higher prices with sticky wages make extra output profitable), while the <b>long-run AS is vertical</b> at potential/full-employment output (set by resources and technology, not prices).</p>
+<ul>
+<li><b>A rightward AD shift</b> (fiscal/monetary stimulus, higher confidence) raises output and prices in the short run — demand-pull inflation if the economy is near capacity.</li>
+<li><b>A leftward AS shift</b> (an oil shock, higher input costs) raises prices while cutting output — <b>cost-push inflation / stagflation</b>. This is the AD–AS way of seeing the stagflation problem from Section 8.</li>
+</ul>
+
+<h3>7.9 The Consumption Function &amp; the Keynesian Multiplier</h3>
+<p>Keynes linked consumption to income via the <b>consumption function</b>: C = a + b·Y, where <b>a</b> is autonomous consumption and <b>b</b> is the <b>marginal propensity to consume (MPC)</b> — the fraction of an extra rupee of income that is spent. Whatever is not consumed is saved, so <b>MPC + MPS = 1</b>.</p>
+<div class="formula"><b>The spending (Keynesian) multiplier</b><br>
+Multiplier k = 1 / (1 − MPC) = 1 / MPS<br>
+Change in GDP = k × (initial change in spending)<br>
+<div class="where">An initial injection is re-spent round after round (a geometric series). Higher MPC → bigger multiplier. Leakages (saving, taxes, imports) shrink it; in an open economy with taxes, k = 1 / [1 − MPC(1 − t) + m]. Do not confuse this <b>spending</b> multiplier with the <b>money</b> multiplier (1 ÷ reserve ratio) from Section 10.</div></div>
+<div class="example"><div class="ex-h">Worked Example 3b — the Keynesian multiplier</div>
+<p>Suppose the MPC is <b>0.8</b> (households spend 80 paise of every extra rupee) and the government raises infrastructure spending by <b>₹1,00,000 crore</b>.</p>
+<p><b>Multiplier k = 1 / (1 − 0.8) = 1 / 0.2 = 5.</b> Maximum rise in GDP = 5 × ₹1,00,000 crore = <b>₹5,00,000 crore</b>.</p>
+<p>Mechanism: the ₹1 lakh crore becomes income for construction workers and suppliers, who spend 80% (₹80,000 cr), which becomes others' income, who spend 80% of that (₹64,000 cr), and so on — 1,00,000 + 80,000 + 64,000 + … sums to ₹5,00,000 cr. In reality the realised multiplier is smaller because of leakages into saving, taxes and imports, and supply constraints near full capacity. Say that caveat aloud — it shows you know where theory meets reality.</p></div>
+
+<h3>7.10 IS–LM (concept)</h3>
+<p>The <b>IS–LM model</b> shows how the goods market and the money market jointly determine the interest rate and output. The <b>IS curve</b> (Investment–Saving) is goods-market equilibrium: it slopes <b>downward</b> because lower interest rates spur investment and hence output. The <b>LM curve</b> (Liquidity–Money) is money-market equilibrium: it slopes <b>upward</b> because higher output raises money demand and thus the interest rate for a fixed money supply. Their intersection is the short-run equilibrium. <b>Fiscal expansion shifts IS right</b> (higher output and interest rates — the seed of crowding out); <b>monetary expansion shifts LM right</b> (lower rates, higher output). You won't be asked to derive it, but knowing it frames how monetary and fiscal policy interact.</p>
+
+<h2 class="sec">8. Inflation, Deflation &amp; Stagflation</h2>
+
+<h3>8.1 Definition and Types</h3>
+<p><b>Inflation</b> is a sustained rise in the general price level, which erodes the purchasing power of money (the same rupee buys less). By cause:</p>
+<ul>
+<li><b>Demand-pull inflation</b> — "too much money chasing too few goods." Aggregate demand outpaces the economy's productive capacity (from strong spending, easy credit, loose fiscal/monetary policy). Typical of a booming economy.</li>
+<li><b>Cost-push inflation</b> — rising input costs (crude oil, wages, imported raw materials, a weaker currency) push firms to raise prices even without extra demand. Often accompanies supply shocks. A <b>wage-price spiral</b> can entrench it as workers demand higher wages to match prices.</li>
+<li><b>Built-in / expectations-driven inflation</b> — once people <i>expect</i> prices to rise, they set wages and prices accordingly, making inflation self-fulfilling. Anchoring expectations is precisely why central banks adopt inflation targets.</li>
+</ul>
+
+<h3>8.2 Measurement — CPI vs WPI (a core Indian question)</h3>
+<table>
+<thead><tr><th>Dimension</th><th>CPI (Consumer Price Index)</th><th>WPI (Wholesale Price Index)</th></tr></thead>
+<tbody>
+<tr><td>What it measures</td><td>Retail prices paid by consumers</td><td>Wholesale/bulk transaction prices</td></tr>
+<tr><td>Stage of transaction</td><td>Final consumer stage</td><td>Producer/wholesale stage</td></tr>
+<tr><td>Basket coverage</td><td>Goods <b>and</b> services</td><td>Goods only (no services)</td></tr>
+<tr><td>Food weight</td><td>High (food &amp; beverages large share)</td><td>Lower; manufactured products dominate</td></tr>
+<tr><td>Includes services?</td><td>Yes (housing, health, education, transport)</td><td>No</td></tr>
+<tr><td>Policy role in India</td><td><b>The RBI's official inflation target</b> (headline CPI)</td><td>A supplementary gauge of producer-side price pressure</td></tr>
+<tr><td>Published by</td><td>NSO / MoSPI</td><td>Office of the Economic Adviser, Ministry of Commerce</td></tr>
+</tbody>
+</table>
+<p><b>Key point for interviews:</b> since India adopted <b>flexible inflation targeting</b>, the RBI targets <b>CPI</b> (headline consumer inflation), not WPI. CPI matters because it reflects what households actually experience, and it includes services. WPI can diverge from CPI — for example, falling global commodity prices can pull WPI down (even negative) while CPI stays firm on sticky food and services costs. <b>Core inflation</b> (CPI excluding volatile food and fuel) is watched to judge underlying, persistent price pressure.</p>
+
+<h3>8.3 Effects of Inflation</h3>
+<ul>
+<li><b>Erodes purchasing power and real wages</b> — hurts savers and those on fixed incomes; redistributes from lenders to borrowers (debt is repaid in cheaper money).</li>
+<li><b>Distorts saving and investment</b> — high/uncertain inflation raises risk premia and discourages long-term contracts.</li>
+<li><b>Menu costs and shoe-leather costs</b> — the resource cost of changing prices and economising on cash holdings.</li>
+<li><b>Fiscal drag and bracket creep</b> — nominal incomes push taxpayers into higher brackets.</li>
+<li><b>External competitiveness</b> — persistently higher domestic inflation than trading partners erodes export competitiveness and pressures the currency.</li>
+</ul>
+
+<h3>8.4 Inflation, Markets and Bonds — the money link</h3>
+<p>This is where finance interviewers push hardest. <b>Bonds:</b> a bond pays fixed cash flows, so higher expected inflation erodes their real value; investors demand higher <b>yields</b>, and since price moves inverse to yield, <b>bond prices fall when inflation (and rate expectations) rise</b>. The <b>Fisher relation</b> formalises it:</p>
+<div class="formula"><b>Fisher equation (nominal vs real rates)</b><br>
+(1 + nominal rate) = (1 + real rate) × (1 + expected inflation)<br>
+Approximation: nominal ≈ real + expected inflation<br>
+<div class="where">Rising inflation expectations push up nominal yields even before the central bank acts. Real yield is what compensates a lender after inflation; it is the true reward for deferring consumption.</div></div>
+<p><b>Equities:</b> moderate, stable inflation is tolerable; high or accelerating inflation hurts by (i) raising the discount rate on future cash flows (lowering present values, especially for long-duration "growth" stocks), (ii) squeezing margins where firms cannot fully pass on costs, and (iii) inviting rate hikes. <b>Sector nuance:</b> firms with pricing power, commodities/energy producers, and banks (rising rates can widen margins) tend to fare better; rate-sensitive and high-multiple sectors fare worse.</p>
+
+<h3>8.5 Deflation and Stagflation</h3>
+<p><b>Deflation</b> is a sustained <i>fall</i> in the general price level. It sounds pleasant but is dangerous: consumers <b>delay purchases</b> expecting lower prices (crushing demand), the <b>real burden of debt rises</b> (you repay in dearer money — Fisher's "debt-deflation"), and nominal wages are sticky downward, so firms cut jobs. A deflationary spiral is very hard to escape, which is why central banks fear it and aim for low <i>positive</i> inflation, not zero.</p>
+<p><b>Stagflation</b> is the nasty combination of <b>stagnant growth + high unemployment + high inflation</b> — the 1970s oil-shock disease. It is a policymaker's nightmare because the usual tools conflict: fighting inflation (raising rates) worsens unemployment, while supporting growth (cutting rates) worsens inflation. It typically originates in an <b>adverse supply shock</b> (e.g., an oil-price spike), which shifts aggregate supply left — raising prices and cutting output simultaneously.</p>
+
+<h2 class="sec">9. Unemployment &amp; the Phillips Curve</h2>
+
+<h3>9.1 Types of Unemployment</h3>
+<ul>
+<li><b>Frictional</b> — short-term, people between jobs or new entrants searching. Always present and even healthy in a dynamic economy.</li>
+<li><b>Structural</b> — a mismatch between workers' skills/location and available jobs (e.g., automation displacing manual roles). Longer-lasting; needs reskilling and mobility.</li>
+<li><b>Cyclical</b> — caused by the downturn phase of the business cycle when aggregate demand is weak; this is what fiscal/monetary stimulus targets.</li>
+<li><b>Seasonal</b> — regular, predictable variation (agriculture, tourism, festive retail). Relevant in India's farm economy.</li>
+<li><b>Disguised/underemployment</b> — especially relevant in India: more people work a job than are actually needed (common in agriculture), so marginal productivity is near zero.</li>
+</ul>
+<p>The <b>natural rate of unemployment</b> is frictional + structural — the unemployment that remains even at "full employment," when cyclical unemployment is zero. <b>Full employment</b> does not mean zero unemployment.</p>
+
+<h3>9.2 The Phillips Curve</h3>
+<p>The <b>Phillips curve</b> posits a short-run <b>inverse relationship between unemployment and inflation</b>: when demand is strong, unemployment falls but wage and price pressure builds (inflation rises), and vice versa. It captures the short-run trade-off a central bank appears to face.</p>
+<p>The crucial caveat: in the <b>long run</b>, the trade-off <b>breaks down</b>. Once inflation expectations adjust, the economy returns to its natural rate of unemployment regardless of the inflation rate — so the long-run Phillips curve is <b>vertical</b> at the natural rate. Stagflation (high inflation <i>and</i> high unemployment together) directly contradicted the naive curve and forced this "expectations-augmented" refinement. Interview-ready line: "There is a short-run inflation–unemployment trade-off, but no permanent one — trying to hold unemployment below its natural rate just produces ever-higher inflation."</p>
+
+<h2 class="sec">10. Money, Banking &amp; the Money Multiplier</h2>
+
+<h3>10.1 Functions of Money</h3>
+<p>Money is anything widely accepted in exchange. Its four textbook functions:</p>
+<ul>
+<li><b>Medium of exchange</b> — removes the "double coincidence of wants" problem of barter (its primary function).</li>
+<li><b>Unit of account</b> — a common yardstick for pricing and accounting.</li>
+<li><b>Store of value</b> — carries purchasing power into the future (inflation erodes this).</li>
+<li><b>Standard of deferred payment</b> — enables credit and contracts denominated in money.</li>
+</ul>
+
+<h3>10.2 Measures of Money Supply (M0 to M3)</h3>
+<p>Money supply is measured in progressively broader aggregates. In India the RBI publishes these; the key ones:</p>
+<table>
+<thead><tr><th>Aggregate</th><th>Also called</th><th>Roughly what it includes</th><th>Liquidity</th></tr></thead>
+<tbody>
+<tr><td><b>M0</b></td><td>Reserve / high-powered money / monetary base</td><td>Currency in circulation + bankers' deposits with RBI + other deposits with RBI</td><td>Base of the pyramid</td></tr>
+<tr><td><b>M1</b></td><td>Narrow money</td><td>Currency with public + demand deposits + other deposits with RBI</td><td>Most liquid</td></tr>
+<tr><td><b>M2</b></td><td>—</td><td>M1 + savings deposits with post office savings banks</td><td>Very liquid</td></tr>
+<tr><td><b>M3</b></td><td>Broad money (the key aggregate)</td><td>M1 + time (fixed) deposits with banks</td><td>Less liquid, broadest</td></tr>
+</tbody>
+</table>
+<p><b>M0 is what the central bank directly controls</b> (it prints currency and sets reserves); the broader aggregates (especially <b>M3</b>) are created largely by <b>commercial banks lending</b>, via the multiplier below.</p>
+
+<h3>10.3 Fractional-Reserve Banking and the Money Multiplier</h3>
+<p>Banks keep only a <b>fraction</b> of deposits as reserves and lend out the rest. The borrowed money is re-deposited, re-lent, and so on — so an initial injection of base money expands into a much larger stock of broad money. The maximum expansion is the <b>money multiplier</b>.</p>
+<div class="formula"><b>Money Multiplier</b><br>
+Simple multiplier = 1 ÷ (reserve ratio) = 1 ÷ r<br>
+Change in money supply = initial reserve injection × multiplier<br>
+<div class="where">r = fraction of deposits banks hold as reserves. A lower reserve ratio → larger multiplier → more money created per rupee of base. In reality the multiplier is smaller because the public holds some cash (currency drain) and banks hold excess reserves.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 4 — The money multiplier in action</div>
+<p>Suppose the required reserve ratio is <b>10%</b> (r = 0.10) and the RBI injects <b>₹1,000 crore</b> of fresh reserves by buying government bonds (an OMO).</p>
+<p><b>Multiplier = 1 ÷ 0.10 = 10.</b> Maximum increase in broad money = ₹1,000 crore × 10 = <b>₹10,000 crore</b>.</p>
+<p>Mechanically: the first bank keeps ₹100 crore as reserves and lends ₹900 crore; that ₹900 crore is spent and re-deposited, the next bank keeps ₹90 crore and lends ₹810 crore, and so on. The geometric series 1000 + 900 + 810 + … sums to ₹10,000 crore. In practice the realised figure is smaller because people hold cash and banks hold excess reserves — but the direction and mechanism are exactly what you should articulate: <b>a small change in the reserve requirement or base money produces a magnified change in credit and broad money.</b> This is precisely why the CRR is such a powerful (blunt) tool.</p></div>
+
+<h3>10.4 Role of the Central Bank (generic)</h3>
+<ul>
+<li><b>Monetary authority</b> — sets policy rates and manages liquidity to pursue price stability (and, in India, growth).</li>
+<li><b>Sole issuer of currency</b> — controls the monetary base.</li>
+<li><b>Banker to banks and to the government</b> — holds reserves, settles interbank obligations, manages government debt.</li>
+<li><b>Lender of last resort</b> — provides emergency liquidity to solvent-but-illiquid banks to prevent panics.</li>
+<li><b>Regulator/supervisor of banks and payment systems; manager of foreign-exchange reserves.</b></li>
+</ul>
+
+<h2 class="sec">11. Monetary Policy &amp; Transmission</h2>
+
+<h3>11.1 Expansionary vs Contractionary</h3>
+<p><b>Monetary policy</b> is the central bank's management of money and credit conditions — primarily by moving the <b>policy interest rate</b> — to influence demand, inflation and growth.</p>
+<table>
+<thead><tr><th>Stance</th><th>Expansionary (easing / "dovish")</th><th>Contractionary (tightening / "hawkish")</th></tr></thead>
+<tbody>
+<tr><td>When used</td><td>Weak growth, recession, low inflation</td><td>Overheating, high inflation</td></tr>
+<tr><td>Policy rate</td><td>Cut (e.g., lower repo)</td><td>Raise (e.g., higher repo)</td></tr>
+<tr><td>Liquidity</td><td>Inject (OMO purchases, lower CRR)</td><td>Absorb (OMO sales, higher CRR)</td></tr>
+<tr><td>Aim</td><td>Cheaper credit → more spending &amp; investment → higher demand</td><td>Costlier credit → less spending → cooler demand → lower inflation</td></tr>
+<tr><td>Typical market effect</td><td>Supportive for equities &amp; bonds</td><td>Headwind for equities &amp; existing bonds</td></tr>
+</tbody>
+</table>
+
+<h3>11.2 The Transmission Mechanism</h3>
+<p>A policy-rate change does not affect the real economy instantly; it works through several <b>channels</b>, with a lag of several quarters:</p>
+<ul>
+<li><b>Interest-rate channel:</b> the policy rate flows into interbank rates, then bank deposit/lending rates and bond yields, changing the cost of borrowing for firms and households.</li>
+<li><b>Credit channel:</b> tighter policy reduces banks' willingness/ability to lend, shrinking credit availability.</li>
+<li><b>Asset-price / wealth channel:</b> lower rates raise bond and equity prices and property values, boosting wealth and spending.</li>
+<li><b>Exchange-rate channel:</b> higher domestic rates can attract capital inflows and strengthen the currency (cheaper imports, dearer exports), and vice versa.</li>
+<li><b>Expectations channel:</b> credible guidance shapes inflation expectations and behaviour directly.</li>
+</ul>
+<p>In India, transmission has historically been <b>incomplete and slow</b> — banks did not always pass the full repo change into lending rates, which is why the RBI moved many loans to <b>external benchmark linked rates</b> (e.g., repo-linked lending rates) to speed pass-through. Expect a follow-up on "why doesn't a repo cut immediately lower my EMI?" — the answer is transmission frictions (deposit-cost stickiness, bank margins, competition for deposits).</p>
+
+<h3>11.3 Unconventional Policy: QE and QT (concept)</h3>
+<p>When the policy rate is already near zero (the <b>zero lower bound</b>) and the economy still needs support, central banks turn to <b>Quantitative Easing (QE)</b>: large-scale purchases of government (and sometimes other) bonds, paid for with newly created reserves. QE expands the central bank's balance sheet, injects durable liquidity, pushes <b>bond prices up and long-term yields down</b>, and nudges investors toward riskier assets (equities, credit) — the "portfolio-balance" and signalling channels. <b>Quantitative Tightening (QT)</b> is the reverse: the central bank shrinks its balance sheet by letting bonds mature or selling them, draining liquidity and putting <b>upward pressure on yields</b>. Advanced-economy central banks used QE heavily after 2008 and 2020; the RBI has used similar tools in Indian form (e.g., OMO purchases, G-SAP, Operation Twist) rather than a formal QE programme. Interview line: "QE eases via the <i>quantity</i> and composition of assets when the <i>price</i> of money can't fall any further."</p>
+
+<h2 class="sec">12. Fiscal Policy, Deficits &amp; Crowding Out</h2>
+
+<h3>12.1 The Tools of Fiscal Policy</h3>
+<p><b>Fiscal policy</b> is the government's use of <b>spending</b> and <b>taxation</b> to influence the economy. <b>Expansionary</b> fiscal policy (more spending and/or lower taxes) boosts aggregate demand — used in downturns; <b>contractionary</b> fiscal policy (less spending and/or higher taxes) cools an overheating economy and repairs public finances. <b>Automatic stabilisers</b> (progressive taxes and unemployment/welfare transfers) cushion the cycle without new legislation — tax take falls and transfers rise automatically in a slump.</p>
+<p>Fiscal changes affect demand with a <b>multiplier</b>: an initial rupee of government spending circulates as income and re-spending, so total demand rises by a multiple. The multiplier is larger when the marginal propensity to consume is high and there is spare capacity.</p>
+
+<h3>12.2 Deficits and Debt</h3>
+<div class="formula"><b>Key fiscal balances</b><br>
+Fiscal Deficit = Total Expenditure − Total Receipts (excluding borrowings)<br>
+&nbsp;&nbsp;= the government's total borrowing requirement in a year<br>
+Revenue Deficit = Revenue Expenditure − Revenue Receipts<br>
+Primary Deficit = Fiscal Deficit − Interest Payments<br>
+<div class="where">Usually expressed as a % of GDP. The fiscal deficit is financed by borrowing, which adds to public debt. The primary deficit strips out the legacy interest burden to show the "new" imbalance. India's FRBM framework sets fiscal-discipline targets.</div></div>
+<p><b>Why the fiscal deficit matters to markets:</b> a larger deficit means more <b>government borrowing</b>, which increases the <b>supply of government bonds</b>, tending to push <b>yields up</b> (bond prices down). It can also stoke inflation and pressure the currency and sovereign rating. Bond and currency desks watch the deficit number in every Union Budget precisely for this reason.</p>
+
+<h3>12.3 Crowding Out</h3>
+<p><b>Crowding out</b> is the risk that heavy government borrowing raises interest rates and absorbs the pool of savings, thereby <b>displacing private investment</b>. If the government soaks up loanable funds, private firms face dearer, scarcer credit and invest less — blunting the stimulus. The counter-argument ("crowding in") is that in a deep slump with idle resources, well-targeted public investment (e.g., infrastructure) can <i>raise</i> private returns and attract private capital rather than displace it.</p>
+
+<h3>12.4 Monetary vs Fiscal Policy — the comparison they always want</h3>
+<table>
+<thead><tr><th>Dimension</th><th>Monetary Policy</th><th>Fiscal Policy</th></tr></thead>
+<tbody>
+<tr><td>Who conducts it</td><td>Central bank (RBI), via the MPC</td><td>Government (Ministry of Finance), via the Budget</td></tr>
+<tr><td>Main tools</td><td>Policy rate (repo), CRR, SLR, OMO, LAF</td><td>Government spending, taxation, transfers</td></tr>
+<tr><td>Works on</td><td>The <b>price and quantity of money/credit</b></td><td>Aggregate demand directly (spending &amp; disposable income)</td></tr>
+<tr><td>Speed of decision</td><td>Fast (MPC meets frequently)</td><td>Slow (annual budget, legislative process)</td></tr>
+<tr><td>Speed of impact</td><td>Slow &amp; indirect (transmission lags)</td><td>Can be quicker &amp; more direct</td></tr>
+<tr><td>Targeting</td><td>Economy-wide, blunt</td><td>Can target sectors/regions/groups</td></tr>
+<tr><td>Key constraint</td><td>Transmission frictions; "liquidity trap" at very low rates</td><td>Debt sustainability; crowding out; political cycle</td></tr>
+<tr><td>Primary goal</td><td>Price stability (with growth)</td><td>Growth, distribution, public goods</td></tr>
+</tbody>
+</table>
+<p><b>Interview-ready synthesis:</b> "Monetary policy manages the <i>cost of money</i>; fiscal policy manages the <i>level of demand</i> directly. They work best in coordination — for example, fiscal support with accommodative monetary policy in a downturn — but conflict when, say, a loose budget forces the central bank to keep rates higher to contain inflation."</p>
+
+<h3>12.5 Direct vs Indirect Taxes &amp; GST</h3>
+<p>Taxes are the revenue side of fiscal policy. A <b>direct tax</b> is levied on income or wealth and its burden cannot be shifted (income tax, corporate tax, capital-gains tax) — these are typically <b>progressive</b> (higher earners pay a higher rate). An <b>indirect tax</b> is levied on goods and services and can be passed to the consumer in the price (GST, customs duty, excise) — these are <b>regressive</b> in impact (the same rate takes a bigger bite out of lower incomes).</p>
+<p><b>GST (Goods and Services Tax)</b> is India's unified indirect tax (from 2017) that subsumed a web of central and state levies (excise, service tax, VAT and others) into "one nation, one tax." It is a <b>destination-based, value-added</b> tax collected at each stage with an <b>input tax credit</b>, so tax is effectively borne only on the value added — eliminating the earlier "tax on tax" cascading. It is governed jointly through the <b>GST Council</b> (Centre + states), has multiple rate slabs, and is split into CGST, SGST and IGST. Its aims: a common national market, wider formalisation of the economy and a broader tax base, and simpler compliance.</p>
+<div class="trap"><b>Common trap — direct vs indirect / progressive vs regressive:</b> a <b>direct</b> tax's burden stays with the person taxed (it can't be shifted) and is usually <b>progressive</b>; an <b>indirect</b> tax is on transactions, is shifted into prices, and is usually <b>regressive</b>. A revenue-hungry government leaning on indirect taxes raises money more easily but less equitably.</div>
+
+<h2 class="sec">13. Business Cycles &amp; Economic Indicators</h2>
+<p>The <b>business cycle</b> is the recurring fluctuation of economic activity around its long-run trend, with four phases: <b>expansion</b> (rising output/employment) → <b>peak</b> → <b>contraction/recession</b> (falling activity; a common rule of thumb is two consecutive quarters of falling real GDP) → <b>trough</b> → recovery. Policy aims to smooth these swings.</p>
+<p><b>Economic indicators</b> are classified by timing relative to the cycle — a favourite quick-fire question:</p>
+<table>
+<thead><tr><th>Type</th><th>What it does</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td><b>Leading</b></td><td>Turns <i>before</i> the economy; used to forecast</td><td>Stock market, new orders/PMI, building permits, yield curve, business/consumer confidence, money supply growth</td></tr>
+<tr><td><b>Coincident</b></td><td>Turns <i>with</i> the economy; measures current state</td><td>GDP, industrial production (IIP), employment, retail sales</td></tr>
+<tr><td><b>Lagging</b></td><td>Turns <i>after</i> the economy; confirms trends</td><td>Unemployment rate, CPI/inflation, corporate profits, interest rates on outstanding loans</td></tr>
+</tbody>
+</table>
+<p><b>The yield curve as a leading indicator:</b> an <b>inverted yield curve</b> (short-term yields above long-term) has historically preceded recessions, because it signals the market expects future rate cuts amid a slowdown. Worth mentioning to show market-macro fluency.</p>
+
+<h2 class="sec">14. International Economics: Exchange Rates &amp; BoP</h2>
+
+<h3>14.1 Exchange-Rate Regimes</h3>
+<ul>
+<li><b>Fixed (pegged):</b> the central bank commits to a set value against another currency (or basket) and defends it by buying/selling reserves. Gives stability and predictability but requires large reserves and surrenders independent monetary policy.</li>
+<li><b>Floating:</b> the market sets the rate via supply and demand for the currency. Adjusts automatically to shocks and preserves monetary independence, but can be volatile.</li>
+<li><b>Managed float ("dirty float") — India's regime:</b> mostly market-determined, but the central bank intervenes to smooth excessive volatility rather than target a level. The RBI buys/sells USD from its FX reserves to curb sharp INR swings.</li>
+</ul>
+<p><b>Appreciation</b> = a currency gains value (fewer rupees per dollar); <b>depreciation</b> = a currency loses value (more rupees per dollar). Under a fixed regime the equivalent deliberate changes are <b>revaluation</b> and <b>devaluation</b>.</p>
+
+<h3>14.2 What Moves a Floating Exchange Rate</h3>
+<ul>
+<li><b>Interest-rate differentials</b> — higher domestic rates attract capital inflows, raising currency demand (appreciation).</li>
+<li><b>Inflation differentials</b> — higher relative inflation erodes competitiveness and tends to depreciate the currency (PPP logic).</li>
+<li><b>Trade/current-account balance</b> — a large deficit (imports &gt; exports) means net selling of the home currency, pressuring it down.</li>
+<li><b>Capital flows &amp; risk sentiment</b> — FPI/FDI inflows strengthen the currency; "risk-off" episodes trigger flight to safe-haven currencies (USD), weakening emerging-market currencies like the INR.</li>
+<li><b>Central-bank intervention and reserves.</b></li>
+</ul>
+
+<h3>14.3 Purchasing Power Parity (PPP)</h3>
+<p><b>PPP</b> holds that, in the long run, exchange rates should equalise the price of an identical basket of goods across countries (the "law of one price" writ large). If a basket costs ₹8,000 in India and $100 in the US, the PPP-implied rate is ₹80/$. The popular <b>Big Mac Index</b> is a light-hearted PPP gauge. PPP explains long-run currency trends and is why we use <b>PPP-adjusted GDP</b> to compare living standards across countries (it corrects for the fact that non-traded goods are cheaper in poorer countries). Market exchange rates deviate from PPP for long periods because of capital flows, trade barriers and non-traded goods.</p>
+
+<h3>14.4 Balance of Payments (BoP)</h3>
+<p>The <b>BoP</b> records all economic transactions between residents of a country and the rest of the world over a period. It has two main accounts (plus reserves), and by construction it <b>balances</b>:</p>
+<ul>
+<li><b>Current account</b> — trade in <b>goods</b> (merchandise) and <b>services</b>, plus primary income (interest/dividends) and secondary income (<b>remittances</b>). India typically runs a <b>merchandise trade deficit</b> partly offset by a <b>services surplus</b> (IT/software exports) and large remittances.</li>
+<li><b>Capital &amp; financial account</b> — cross-border investment and lending: <b>FDI</b>, <b>FPI</b> (portfolio flows into equities/bonds), external commercial borrowings, banking capital. A current-account deficit must be financed by net inflows here.</li>
+<li><b>Official reserves</b> — the RBI's FX reserves; changes here are the balancing item and reflect intervention.</li>
+</ul>
+<div class="trap"><b>Common trap — current vs capital account:</b> the <b>current account</b> is about <i>goods, services, income and transfers</i> (flows from trade and earnings). The <b>capital/financial account</b> is about <i>assets and liabilities</i> — cross-border investment and borrowing. Remittances and software exports sit in the <b>current</b> account; FDI and FII/FPI flows sit in the <b>capital/financial</b> account. A <b>current-account deficit</b> is not inherently bad if it funds productive investment and is financed by stable inflows (FDI) rather than volatile "hot money."</div>
+
+<h3>14.5 The Impossible Trinity (brief)</h3>
+<p>The <b>impossible trinity (trilemma)</b> states a country cannot simultaneously have all three of: (1) a <b>fixed exchange rate</b>, (2) <b>free capital movement</b>, and (3) an <b>independent monetary policy</b>. It can pick only two. India, for instance, opts for <b>monetary-policy independence and managed (mostly free) capital flows</b>, and therefore accepts a <b>managed-floating</b> exchange rate rather than a hard peg. Naming the trilemma signals genuine macro depth.</p>
+
+<div class="example"><div class="ex-h">Worked Example 5 — Rupee depreciation: who wins, who loses?</div>
+<p>Suppose the rupee weakens from <b>₹80/$ to ₹85/$</b> (a depreciation — more rupees per dollar).</p>
+<p><b>Winners:</b> <i>Exporters and IT/software firms</i> earn in dollars and convert to more rupees, so revenue and margins improve — a ₹100 crore-equivalent dollar receipt now fetches more rupees. Domestic producers competing with imports also benefit (imports become dearer).</p>
+<p><b>Losers:</b> <i>Importers</i> — anyone buying crude oil, electronics, capital goods or dollar-priced commodities pays more rupees, squeezing margins. Because India imports most of its crude, depreciation <b>raises imported inflation</b> and can widen the current-account deficit. <i>Companies with unhedged dollar debt</i> see their rupee repayment burden rise. Foreign travel and education get costlier.</p>
+<p><b>Macro chain to say aloud:</b> "Depreciation boosts export competitiveness and IT earnings, but raises imported inflation (especially via oil), can widen the CAD, and hurts firms with dollar liabilities — so the RBI may sell dollars from reserves to smooth the fall, and a persistently weak rupee can pressure it to keep rates higher." That single answer touches trade, inflation, the RBI and rates — exactly the joined-up thinking interviewers reward.</p></div>
+
+<h3 class="sec">14.6 Comparative Advantage &amp; the Gains from Trade</h3>
+<p><b>Absolute advantage</b> is producing a good using fewer resources than another country. <b>Comparative advantage</b> — Ricardo's key insight — is producing a good at a lower <b>opportunity cost</b> than another country. The powerful result: even a country that is worse at <i>everything</i> (no absolute advantage) still gains by specialising in what it is <b>least-bad</b> at and trading. Total world output rises when each country specialises according to comparative advantage and trades. This is the intellectual foundation for free trade, India's IT-services export model, and global supply chains.</p>
+<div class="example"><div class="ex-h">Worked Example 5b — comparative advantage</div>
+<p>In one day India can produce 100 units of software <i>or</i> 50 units of textiles; Country B can produce 40 software <i>or</i> 40 textiles. India has an absolute advantage in both. But look at <b>opportunity cost</b>: in India, 1 software costs 0.5 textiles; in B, 1 software costs 1 textile. India gives up <i>less</i> textile per software, so India has the comparative advantage in <b>software</b>; and B (giving up only 1 software per textile vs India's 2) has it in <b>textiles</b>. If each specialises and trades at a price between the two opportunity costs, <b>both</b> countries end up consuming more than in isolation. That is the gains-from-trade argument in a nutshell.</p></div>
+
+<h3>14.7 Tariffs, Quotas &amp; Protectionism</h3>
+<p>Governments restrict trade through <b>tariffs</b> (taxes on imports — they raise import prices, protect domestic producers and earn revenue), <b>quotas</b> (quantity limits on imports), <b>subsidies</b> to domestic industry, and <b>non-tariff barriers</b> (standards, licensing). Protection helps the shielded industry and its workers but <b>hurts consumers</b> (higher prices, less choice), can invite <b>retaliation</b> and trade wars, and reduces overall efficiency by blunting comparative advantage. The standard economist's view favours free trade for aggregate welfare, with <i>targeted</i> support (rather than blanket protection) for genuine <b>infant industries</b> or strategic sectors — directly relevant to India's tariff and "Atmanirbhar/Make in India" debates.</p>
+
+<h3>14.8 Interest-Rate Parity (IRP)</h3>
+<p><b>Interest-rate parity</b> links interest-rate differentials to expected currency movements — the no-arbitrage condition of FX. <b>Covered IRP</b> says the forward exchange rate must exactly offset the interest differential, or riskless arbitrage exists. <b>Uncovered IRP</b> says the currency of the <b>higher-interest-rate</b> country is expected to <b>depreciate</b> by roughly the interest gap, so hedged returns equalise.</p>
+<div class="formula"><b>Covered Interest-Rate Parity</b><br>
+Forward ÷ Spot = (1 + i<sub>domestic</sub>) ÷ (1 + i<sub>foreign</sub>)<br>
+Approx.: forward premium/discount ≈ i<sub>domestic</sub> − i<sub>foreign</sub><br>
+<div class="where">If Indian rates exceed US rates, the rupee trades at a <b>forward discount</b> (it is expected to weaken) by about the rate gap. This is why a higher-yielding currency isn't a free lunch — the forward market prices in expected depreciation. Bets that uncovered IRP won't hold in the short run are the "carry trade."</div></div>
+
+<h2 class="sec">15. The RBI: Framework, MPC &amp; Policy Tools</h2>
+
+<h3>15.1 Role and the Inflation-Targeting Framework</h3>
+<p>The <b>Reserve Bank of India (RBI)</b> is India's central bank. Since the adoption of <b>flexible inflation targeting (FIT)</b> under the amended RBI Act, its primary objective is <b>price stability while keeping in mind the objective of growth</b>. The government, in consultation with the RBI, sets a <b>CPI inflation target</b> — for example a mid-point of <b>4% with a tolerance band of +/- 2 percentage points</b> (i.e., 2–6%). If inflation stays outside the band for a defined period, the RBI must formally explain the failure and its remedial plan — an accountability mechanism.</p>
+
+<h3>15.2 The Monetary Policy Committee (MPC)</h3>
+<p>Interest-rate decisions are made not by one person but by a <b>six-member Monetary Policy Committee (MPC)</b>: three from the RBI (including the Governor, who chairs it and has a casting vote in a tie) and three external members appointed by the government. The MPC meets periodically (several times a year), votes on the policy <b>repo rate</b> and the <b>stance</b> (accommodative / neutral / withdrawal of accommodation / hawkish), and publishes minutes. This committee structure depersonalises and de-politicises rate-setting and anchors expectations.</p>
+
+<h3>15.3 The RBI's Policy Toolkit</h3>
+<table>
+<thead><tr><th>Tool</th><th>What it is</th><th>Direction of effect</th></tr></thead>
+<tbody>
+<tr><td><b>Repo rate</b></td><td>The rate at which the RBI <b>lends</b> short-term to banks against government securities (the key policy rate)</td><td>Raise → costlier funds → higher lending rates → cools demand/inflation</td></tr>
+<tr><td><b>Reverse repo / SDF</b></td><td>The rate at which the RBI <b>absorbs</b> liquidity — banks park surplus funds with the RBI. The <b>Standing Deposit Facility (SDF)</b> is now the floor of the corridor (collateral-free absorption)</td><td>Higher floor → banks prefer parking → drains liquidity</td></tr>
+<tr><td><b>MSF (Marginal Standing Facility)</b></td><td>Emergency overnight borrowing above the repo (ceiling of the corridor), against SLR securities</td><td>Sets the upper bound on overnight rates</td></tr>
+<tr><td><b>CRR (Cash Reserve Ratio)</b></td><td>% of a bank's net deposits it must hold as <b>cash reserves with the RBI</b> — earns no interest</td><td>Raise → less lendable money → tightens; lowers the money multiplier</td></tr>
+<tr><td><b>SLR (Statutory Liquidity Ratio)</b></td><td>% of deposits banks must hold in <b>safe liquid assets</b> (mainly government securities, gold) — held by the bank itself</td><td>Raise → less credit capacity; also captive demand for G-secs</td></tr>
+<tr><td><b>OMO (Open Market Operations)</b></td><td>RBI <b>buys/sells government securities</b> in the market to manage durable liquidity</td><td>Buy → injects liquidity (easing); Sell → absorbs (tightening)</td></tr>
+<tr><td><b>LAF (Liquidity Adjustment Facility)</b></td><td>The daily repo/reverse-repo window through which banks manage short-term liquidity; the <b>corridor</b> = SDF (floor) to MSF (ceiling), with repo in the middle</td><td>Keeps the overnight rate near the repo rate</td></tr>
+</tbody>
+</table>
+
+<div class="trap"><b>Common trap — repo vs reverse repo:</b> <b>Repo</b> is when the RBI <i>lends</i> to banks (banks borrow) → the RBI's key policy rate. <b>Reverse repo / SDF</b> is the reverse — banks <i>park</i> surplus funds <i>with</i> the RBI (the RBI borrows) and it sets the <b>floor</b> of the corridor. Repo &gt; reverse repo/SDF always. Mnemonic: from the <i>bank's</i> viewpoint, repo = "I borrow," reverse repo = "I lend to the RBI."</div>
+
+<div class="trap"><b>Common trap — CRR vs SLR:</b> both are reserve requirements, but (1) <b>CRR</b> is held as <b>cash with the RBI</b> and earns <b>no interest</b>; <b>SLR</b> is held by the bank itself in <b>liquid assets (mainly G-secs, gold)</b> and <i>does</i> earn a return. (2) CRR's main purpose is <b>liquidity/monetary control</b>; SLR also ensures bank <b>solvency</b> and creates captive demand for government bonds. Raising either reduces the funds banks can lend.</div>
+
+<div class="example"><div class="ex-h">Worked Example 6 — Walking through an RBI repo-rate hike</div>
+<p><b>Scenario:</b> CPI inflation has run above the upper tolerance band (say around 7% against a 4% target) on strong demand and firm food prices. The MPC votes to <b>raise the repo rate by 50 bps</b> and signals "withdrawal of accommodation." Trace the chain step by step (this is the single most-asked applied question):</p>
+<ol>
+<li><b>Cost of funds ↑:</b> banks now borrow overnight from the RBI more expensively; interbank and money-market rates rise toward the new repo.</li>
+<li><b>Lending &amp; deposit rates ↑:</b> banks reprice loans (many are repo-linked, so home/auto/business EMIs rise) and eventually deposit rates too.</li>
+<li><b>Credit &amp; demand ↓:</b> costlier borrowing discourages new loans, big-ticket consumption (housing, autos) and corporate capex; households save more.</li>
+<li><b>Aggregate demand cools → inflation eases</b> over the next several quarters (the lag), moving CPI back toward target.</li>
+<li><b>Bonds:</b> yields rise, so <b>existing bond prices fall</b> (inverse relationship); long-duration bonds fall most.</li>
+<li><b>Equities:</b> a headwind — a higher discount rate lowers the present value of future earnings (hurting high-multiple/growth and rate-sensitive sectors like real estate, autos, NBFCs), though <b>banks</b> can benefit from wider margins.</li>
+<li><b>Currency:</b> higher domestic rates can attract capital inflows and <b>support/strengthen the rupee</b>, other things equal.</li>
+</ol>
+<p><b>One-line summary to deliver:</b> "A repo hike is contractionary — it makes money costlier, slows credit and demand to bring inflation down; bond prices fall as yields rise, equities generally face a headwind (banks a relative exception), and the rupee tends to firm on rate support." Deliver it in that order and you have answered the classic question completely.</p></div>
+
+<h2 class="sec">16. Indian Macro Indicators &amp; Government vs RBI</h2>
+
+<h3>16.1 The Indicators to Know (conceptually)</h3>
+<ul>
+<li><b>GDP growth</b> — real GDP growth, released quarterly by the NSO; India is among the faster-growing large economies. Watch the composition (consumption vs investment vs government vs net exports) and the GVA split by sector.</li>
+<li><b>CPI inflation</b> — the RBI's target variable; headline plus <b>core</b> (ex food and fuel) and the food component (which drives volatility in India).</li>
+<li><b>IIP (Index of Industrial Production)</b> — a monthly volume gauge of industrial-sector output (mining, manufacturing, electricity); a coincident indicator of the industrial cycle.</li>
+<li><b>WPI</b> — wholesale/producer-side price pressure; supplementary to CPI.</li>
+<li><b>Fiscal deficit (% of GDP)</b> — the government's borrowing need, set each year in the Union Budget under the FRBM discipline framework.</li>
+<li><b>Current-account deficit (CAD, % of GDP)</b>, <b>trade balance</b>, <b>FX reserves</b>, <b>PMI</b> (a leading survey), and <b>credit growth</b>.</li>
+</ul>
+
+<h3>16.2 Who Does What — Government vs RBI</h3>
+<table>
+<thead><tr><th>Function</th><th>Government (Ministry of Finance)</th><th>RBI (Central Bank)</th></tr></thead>
+<tbody>
+<tr><td>Policy type</td><td>Fiscal policy (Budget)</td><td>Monetary policy (MPC)</td></tr>
+<tr><td>Levers</td><td>Taxation, spending, borrowing, subsidies</td><td>Repo rate, CRR/SLR, OMO, LAF</td></tr>
+<tr><td>Prints currency?</td><td>Mints coins; issues sovereign debt</td><td>Issues currency notes; sole monetary authority</td></tr>
+<tr><td>Manages the deficit</td><td>Sets and finances the fiscal deficit</td><td>Manages government debt issuance as banker to government</td></tr>
+<tr><td>Inflation target</td><td>Sets the target (with RBI)</td><td>Achieves the target via policy</td></tr>
+<tr><td>FX &amp; reserves</td><td>Trade/FDI policy</td><td>Manages reserves; intervenes in FX; sets capital-flow norms with government</td></tr>
+<tr><td>Bank regulation</td><td>Legislation, capital in PSU banks</td><td>Supervises &amp; regulates banks and NBFCs</td></tr>
+</tbody>
+</table>
+<p><b>Coordination and tension:</b> ideally fiscal and monetary policy pull together (e.g., both supportive in a downturn). Tension arises when a loose Budget adds to demand/inflation, forcing the RBI to keep rates higher — or when heavy government borrowing crowds out private credit. The RBI's independence in rate-setting (via the MPC) is designed to keep monetary policy credible even amid fiscal pressures.</p>
+
+<h3>16.3 The Three Sectors, Core Sector &amp; PMI</h3>
+<p><b>The three sectors of the economy:</b> the <b>primary</b> sector (agriculture, mining — extraction of natural resources), the <b>secondary</b> sector (manufacturing, construction — processing), and the <b>tertiary</b> sector (services — trade, finance, IT, transport). A hallmark of India's development path is that <b>services lead GDP</b> (a large tertiary share) while <b>agriculture still employs a large share of the workforce</b> — a structural feature interviewers like you to note.</p>
+<ul>
+<li><b>Core sector (Index of Eight Core Industries):</b> the eight infrastructure industries — coal, crude oil, natural gas, refinery products, fertilisers, steel, cement and electricity — which carry a large weight in the IIP and act as a bellwether of industrial momentum.</li>
+<li><b>PMI (Purchasing Managers' Index):</b> a monthly, survey-based <b>leading</b> indicator for manufacturing and services; a reading <b>above 50 signals expansion</b>, below 50 contraction. Markets watch it as an early read before the hard data arrive.</li>
+</ul>
+
+<h2 class="sec">17. How Macro Links to Markets</h2>
+<p>This is the payoff section — where economics becomes an <i>investment</i> conversation. Master these three linkages and you can answer almost any "what does this mean for markets?" question.</p>
+
+<h3>17.1 Rates ↔ Bonds and Equities</h3>
+<ul>
+<li><b>Bonds:</b> price and yield move <b>inversely</b>. Rising policy rates / inflation expectations → higher yields → <b>lower bond prices</b>; the effect is larger for <b>longer-duration</b> bonds. Falling rates → bond prices rise (capital gains for existing holders).</li>
+<li><b>Equities (discount-rate channel):</b> a stock's value is the present value of future cash flows. Lower rates reduce the discount rate, <b>raising valuations</b> — especially for long-duration "growth" stocks whose cash flows are far in the future. Higher rates do the reverse. Lower rates also cut corporate interest costs and support demand, lifting earnings.</li>
+<li><b>Rate-sensitive sectors:</b> real estate, autos, NBFCs/financiers and capital goods are most sensitive to rate moves (borrowing-dependent demand). <b>Banks</b> can be a partial exception — rising rates can widen net interest margins.</li>
+</ul>
+<div class="keytake"><b>The master link:</b> "A rate cut lowers the discount rate and borrowing costs — supportive for both bonds (prices up) and equities (valuations up), especially rate-sensitive and high-growth sectors. A rate hike does the opposite." If you remember one market sentence from this guide, remember this.</div>
+
+<h3>17.2 Inflation ↔ Sectors</h3>
+<ul>
+<li><b>Winners in inflation:</b> firms with <b>pricing power</b> (strong brands, oligopolies), <b>commodity/energy producers</b> (they sell the very things whose prices rise), and often <b>banks</b> (rate hikes widen margins). Real assets and value stocks tend to hold up better.</li>
+<li><b>Losers in inflation:</b> firms that <b>cannot pass on costs</b> (margin squeeze), high-multiple <b>growth/tech</b> stocks (their long-dated cash flows get discounted harder), and <b>fixed-income</b> holders (real value eroded). Consumer discretionary can suffer as real incomes fall.</li>
+</ul>
+
+<h3>17.3 Currency ↔ IT/Exporters vs Importers</h3>
+<ul>
+<li><b>Rupee depreciation</b> → tailwind for <b>IT services and exporters</b> (dollar revenue converts to more rupees), headwind for <b>importers</b>, <b>oil marketing companies</b> and firms with <b>unhedged dollar debt</b>; it also raises imported inflation.</li>
+<li><b>Rupee appreciation</b> → the reverse: pressures exporter margins, eases imported inflation and helps import-heavy businesses.</li>
+</ul>
+<p><b>Putting it together (a mock macro read):</b> "If inflation is rising, expect the RBI to hike; bond yields rise (prices fall), rate-sensitive equities face a headwind while banks and pricing-power names hold up, and higher rates plus intervention support the rupee, which in turn slightly pressures IT earnings." That is a complete, joined-up macro-to-markets narrative — exactly what distinguishes a strong candidate.</p>
+
+<h2 class="sec">18. Interview Q&amp;A Bank</h2>
+<p>Model answers below are written to be spoken in 30–90 seconds. Adapt the length to the interviewer's cues; lead with the definition, then the mechanism, then the "so what for markets."</p>
+
+<h3>18.1 Microeconomics</h3>
+<div class="qa"><div class="q">Q1. What is the difference between a movement along a demand curve and a shift of the curve?</div>
+<div class="a">A: A movement along the curve is caused only by a change in the good's <b>own price</b> — we call it a change in quantity demanded. A shift of the whole curve is caused by a change in a <b>non-price determinant</b> — income, prices of substitutes/complements, tastes, expectations, or the number of buyers — and we call it a change in demand. Saying "demand rose because price fell" is the classic error; the correct statement is "quantity demanded rose."</div></div>
+
+<div class="qa"><div class="q">Q2. Explain price elasticity of demand and why it matters for pricing.</div>
+<div class="a">A: PED is the percentage change in quantity demanded divided by the percentage change in price. If the absolute value exceeds 1, demand is elastic (buyers are responsive); below 1, inelastic. It drives revenue: for an <b>elastic</b> good, cutting price raises revenue; for an <b>inelastic</b> good, raising price raises revenue — which is why fuel, tobacco and alcohol (inelastic) are heavily taxed. Determinants include substitutes, necessity vs luxury, budget share and time horizon.</div></div>
+
+<div class="qa"><div class="q">Q3. What determines whether a good is elastic or inelastic?</div>
+<div class="a">A: Mainly the availability of close substitutes (more substitutes → more elastic), whether it is a necessity or luxury (necessities are inelastic), its share of the buyer's budget (big-ticket items more elastic), the time horizon (more elastic in the long run as habits adjust), and how narrowly the market is defined (a single brand is more elastic than the whole category).</div></div>
+
+<div class="qa"><div class="q">Q4. State the law of diminishing marginal utility.</div>
+<div class="a">A: As a person consumes more units of a good, the additional (marginal) satisfaction from each successive unit declines. The first unit gives the most utility, the next a little less, and so on. This underlies the downward-sloping demand curve — people pay less for units that deliver less added satisfaction — and drives consumer equilibrium, where marginal utility per rupee is equalised across goods.</div></div>
+
+<div class="qa"><div class="q">Q5. What is the difference between fixed and variable costs, and the short run and long run?</div>
+<div class="a">A: Fixed costs don't vary with output (rent, plant depreciation) and exist even at zero output; variable costs rise with output (materials, wages). The short run is the period in which at least one input is fixed, so diminishing marginal returns push marginal cost up; the long run is long enough to vary all inputs and for firms to enter/exit, which is where economies of scale operate. It's a conceptual, not a calendar, distinction.</div></div>
+
+<div class="qa"><div class="q">Q6. What are economies of scale? How do they relate to market structure?</div>
+<div class="a">A: Economies of scale mean long-run average cost falls as output rises — from bulk buying, specialisation, and spreading fixed costs like R&amp;D and technology over more units. If the minimum efficient scale is large relative to market size, only a few big firms can operate efficiently, which pushes the industry toward oligopoly or natural monopoly. That's why steel, telecom and cement consolidate.</div></div>
+
+<div class="qa"><div class="q">Q7. Compare perfect competition and monopoly.</div>
+<div class="a">A: In perfect competition there are many firms selling identical products with free entry; each is a price taker producing where P = MC, earning only normal profit in the long run — allocatively and productively efficient. A monopoly is a single price maker facing the whole market demand; it produces where MR = MC and sets P &gt; MC, restricting output and creating a deadweight loss, and can sustain supernormal profit because entry barriers keep rivals out. Competition is the welfare benchmark; monopoly is the inefficient case.</div></div>
+
+<div class="qa"><div class="q">Q8. What is an oligopoly and why are prices often "sticky"?</div>
+<div class="a">A: An oligopoly is a market dominated by a few interdependent firms, so each must anticipate rivals' reactions. The kinked-demand model explains sticky prices: rivals match a price cut (so you gain no share but lose margin) yet ignore a price rise (so you lose share). That asymmetry makes firms reluctant to change price, so they compete on advertising, features and loyalty instead. Indian telecom and aviation are good examples.</div></div>
+
+<div class="qa"><div class="q">Q9. What are consumer and producer surplus?</div>
+<div class="a">A: Consumer surplus is the gap between what buyers are willing to pay and what they actually pay — the area under the demand curve above the price. Producer surplus is the gap between the price received and marginal cost — above the supply curve below the price. Their sum is total welfare, which competitive markets maximise; taxes, price controls and monopoly create a deadweight loss, the welfare lost when beneficial trades don't happen.</div></div>
+
+<h3>18.2 National Income &amp; Growth</h3>
+<div class="qa"><div class="q">Q10. What is GDP and what are its three measurement methods?</div>
+<div class="a">A: GDP is the total market value of all final goods and services produced within a country's borders in a period. It can be measured three equivalent ways: the <b>expenditure</b> method (Y = C + I + G + (X − M)); the <b>income</b> method (sum of wages, rent, interest and profits plus net indirect taxes); and the <b>production/value-added</b> method (sum of value added at each stage, the basis of GVA). All three must agree because one person's spending is another's income is another's output.</div></div>
+
+<div class="qa"><div class="q">Q11. Difference between nominal and real GDP, and what is the GDP deflator?</div>
+<div class="a">A: Nominal GDP is measured at current prices, so it rises with both output and prices; real GDP is measured at constant base-year prices, stripping out inflation to show the true change in volume. The GDP deflator = (nominal ÷ real) × 100 is the broadest price measure, covering all domestically produced goods and services. Growth should always be quoted in real terms — a 12% nominal rise with 12% inflation is 0% real growth.</div></div>
+
+<div class="qa"><div class="q">Q12. What's the difference between GDP and GNP? And GVA?</div>
+<div class="a">A: GDP is about <b>location</b> — output produced within the borders. GNP is about <b>nationality</b> — output by residents wherever located; GNP = GDP + net factor income from abroad. An Indian working abroad adds to India's GNP but the host country's GDP. GVA is GDP viewed from the supply/producer side by industry; GDP = GVA + product taxes − product subsidies. In India both GDP and GVA are closely watched.</div></div>
+
+<div class="qa"><div class="q">Q13. What are the limitations of GDP as a measure of welfare?</div>
+<div class="a">A: GDP ignores income distribution, excludes non-market and informal activity (large in India), doesn't net out pollution or resource depletion, says nothing about quality of life or leisure, and treats all spending as equal regardless of value. That's why we supplement it with per-capita and real figures, and with measures like the Human Development Index.</div></div>
+
+<h3>18.3 Inflation &amp; Money</h3>
+<div class="qa"><div class="q">Q14. What is inflation and how is it measured in India (CPI vs WPI)?</div>
+<div class="a">A: Inflation is a sustained rise in the general price level that erodes purchasing power. India measures it mainly through two indices: <b>CPI</b>, retail prices paid by consumers, covering goods <b>and services</b> with a high food weight — this is the RBI's official target; and <b>WPI</b>, wholesale/producer prices, goods only, no services. CPI reflects household experience and is what policy targets; WPI is a supplementary gauge of producer-side pressure. Core CPI strips out volatile food and fuel to reveal underlying inflation.</div></div>
+
+<div class="qa"><div class="q">Q15. Distinguish demand-pull from cost-push inflation.</div>
+<div class="a">A: Demand-pull inflation is "too much money chasing too few goods" — aggregate demand outruns capacity, typical of a boom or overly loose policy. Cost-push inflation comes from rising input costs — crude oil, wages, imported materials or a weaker currency — pushing prices up even without extra demand, and can entrench into a wage-price spiral. The policy response differs: demand-pull yields to rate hikes, while cost-push (a supply shock) is trickier because tightening also hurts growth.</div></div>
+
+<div class="qa"><div class="q">Q16. How does inflation affect bond prices?</div>
+<div class="a">A: Bonds pay fixed cash flows, so higher expected inflation erodes their real value; investors demand higher yields to compensate. Since price and yield move inversely, <b>bond prices fall when inflation and rate expectations rise</b>, and longer-duration bonds fall most. The Fisher relation captures it: nominal yield ≈ real yield + expected inflation, so yields can climb on inflation expectations even before the central bank acts.</div></div>
+
+<div class="qa"><div class="q">Q17. What is stagflation and why is it hard to fix?</div>
+<div class="a">A: Stagflation is the combination of stagnant growth, high unemployment and high inflation together — the 1970s oil-shock problem. It usually comes from an adverse supply shock that raises prices and cuts output simultaneously. It's a policy nightmare because the tools conflict: raising rates to fight inflation worsens unemployment, while cutting rates to support growth worsens inflation. It also disproved the naive Phillips-curve trade-off.</div></div>
+
+<div class="qa"><div class="q">Q18. Why do central banks fear deflation?</div>
+<div class="a">A: Because falling prices make consumers delay purchases (waiting for lower prices), which crushes demand; they raise the real burden of debt since loans are repaid in dearer money; and with sticky nominal wages, firms cut jobs. This can spiral downward and is very hard to escape — which is why central banks target low positive inflation, not zero.</div></div>
+
+<div class="qa"><div class="q">Q19. What are the functions of money and the main money-supply measures?</div>
+<div class="a">A: Money serves as a medium of exchange, a unit of account, a store of value and a standard of deferred payment. In India money supply is measured in aggregates: M0 (reserve/high-powered money — currency plus bank reserves with the RBI, which the central bank controls directly), M1 (narrow money — currency plus demand deposits), and M3 (broad money — M1 plus time deposits), which is the key aggregate created largely by bank lending.</div></div>
+
+<div class="qa"><div class="q">Q20. Explain the money multiplier.</div>
+<div class="a">A: Under fractional-reserve banking, banks hold only a fraction of deposits as reserves and lend the rest, which gets re-deposited and re-lent. The simple multiplier is 1 divided by the reserve ratio, so a 10% ratio implies a multiplier of 10 — ₹1,000 crore of fresh reserves can expand broad money by up to ₹10,000 crore. In reality it's smaller because the public holds cash and banks hold excess reserves, but it shows why small changes in the CRR or base money have amplified effects on credit.</div></div>
+
+<h3>18.4 Monetary &amp; Fiscal Policy</h3>
+<div class="qa"><div class="q">Q21. What is the repo rate, and what happens when the RBI raises it?</div>
+<div class="a">A: The repo rate is the rate at which the RBI lends short-term to banks against government securities — the key policy rate. When the RBI raises it, banks' cost of funds rises, so lending and deposit rates rise (many loans are repo-linked, so EMIs go up), credit and demand cool, and inflation eases over the next few quarters. For markets: bond yields rise so bond prices fall, equities generally face a headwind (though banks can gain from wider margins), and the rupee tends to firm on rate support. In short, a repo hike is contractionary.</div></div>
+
+<div class="qa"><div class="q">Q22. Difference between repo and reverse repo (SDF)?</div>
+<div class="a">A: Repo is when the RBI lends to banks — banks borrow, and it's the main policy rate. Reverse repo, now largely operationalised through the Standing Deposit Facility, is the opposite: banks park surplus funds with the RBI, which sets the floor of the rate corridor. Repo is always higher than the reverse repo/SDF. From the bank's viewpoint, repo means "I borrow," reverse repo means "I lend to the RBI."</div></div>
+
+<div class="qa"><div class="q">Q23. Difference between CRR and SLR?</div>
+<div class="a">A: Both are reserve requirements on deposits, but CRR is the share held as cash with the RBI and earns no interest, used mainly for liquidity and monetary control. SLR is the share held by the bank itself in safe liquid assets — mainly government securities and gold — which does earn a return and also ensures solvency while creating captive demand for G-secs. Raising either reduces the funds banks can lend and tightens credit.</div></div>
+
+<div class="qa"><div class="q">Q24. What are open market operations (OMO)?</div>
+<div class="a">A: OMO is the RBI buying or selling government securities in the open market to manage durable liquidity. Buying securities injects liquidity into the banking system (easing), while selling absorbs liquidity (tightening). It complements the repo rate by managing the <i>quantity</i> of liquidity, whereas repo sets the <i>price</i> of short-term money.</div></div>
+
+<div class="qa"><div class="q">Q25. What is the LAF and the interest-rate corridor?</div>
+<div class="a">A: The Liquidity Adjustment Facility is the RBI's daily window for banks to manage short-term liquidity by borrowing (repo) or parking funds (reverse repo/SDF). It creates a corridor: the SDF is the floor, the MSF (emergency overnight borrowing) is the ceiling, and the repo rate sits in the middle. The corridor keeps the overnight market rate anchored close to the repo rate.</div></div>
+
+<div class="qa"><div class="q">Q26. Explain monetary policy transmission and why it can be incomplete in India.</div>
+<div class="a">A: Transmission is how a policy-rate change flows through to the real economy — via interbank rates, then bank lending/deposit rates and bond yields, credit availability, asset prices, the exchange rate and expectations — with a lag of several quarters. In India it's been slow and partial because banks didn't always pass the full change into lending rates, given deposit-cost stickiness, margins and competition for deposits. That's why the RBI moved many loans to external-benchmark (repo-linked) lending rates to speed pass-through.</div></div>
+
+<div class="qa"><div class="q">Q27. Monetary policy versus fiscal policy — compare them.</div>
+<div class="a">A: Monetary policy is run by the RBI's MPC using the repo rate, CRR/SLR and OMO to manage the cost and quantity of money; it decides fast but acts slowly through transmission lags and is economy-wide and blunt. Fiscal policy is run by the government through spending and taxation in the Budget; it's slower to legislate but can act more directly and can be targeted to sectors or groups. Monetary policy manages the cost of money; fiscal policy manages the level of demand. They work best coordinated but conflict when a loose Budget forces the RBI to hold rates higher.</div></div>
+
+<div class="qa"><div class="q">Q28. What is the fiscal deficit and why does it matter to markets?</div>
+<div class="a">A: The fiscal deficit is total government expenditure minus total receipts excluding borrowings — essentially the government's annual borrowing requirement, usually expressed as a percentage of GDP. It matters because a bigger deficit means more government bond issuance, which raises the supply of bonds and tends to push yields up (prices down); it can also fuel inflation, pressure the currency and the sovereign rating, and crowd out private investment. Bond and currency desks scrutinise the deficit in every Union Budget.</div></div>
+
+<div class="qa"><div class="q">Q29. What is crowding out?</div>
+<div class="a">A: Crowding out is when heavy government borrowing raises interest rates and absorbs the available pool of savings, displacing private investment that can no longer borrow as cheaply. It blunts the effect of fiscal stimulus. The counterpoint is "crowding in" — in a deep slump with idle resources, productive public investment like infrastructure can raise private returns and attract, rather than displace, private capital.</div></div>
+
+<div class="qa"><div class="q">Q30. What's the difference between fiscal deficit, revenue deficit and primary deficit?</div>
+<div class="a">A: The fiscal deficit is total expenditure minus receipts excluding borrowings — the overall borrowing need. The revenue deficit is revenue expenditure minus revenue receipts — it shows the government is borrowing to fund day-to-day spending, which is lower quality. The primary deficit is the fiscal deficit minus interest payments — it strips out the legacy interest burden to reveal the "new" imbalance created this year.</div></div>
+
+<h3>18.5 The RBI &amp; Indian Economy</h3>
+<div class="qa"><div class="q">Q31. What is the RBI's monetary policy framework and inflation target?</div>
+<div class="a">A: India follows flexible inflation targeting under the amended RBI Act: the primary objective is price stability while keeping growth in mind. The government, with the RBI, sets a CPI inflation target — for example a 4% mid-point with a +/- 2 percentage-point band, so roughly 2–6%. If inflation stays outside the band for a defined period, the RBI must formally explain the miss and its remedial plan — a built-in accountability mechanism.</div></div>
+
+<div class="qa"><div class="q">Q32. What is the MPC and how does it work?</div>
+<div class="a">A: The Monetary Policy Committee is a six-member body that sets the repo rate — three RBI members including the Governor, who chairs it and holds a casting vote, and three external members appointed by the government. It meets several times a year, votes on the repo rate and the policy stance, and publishes minutes. The committee structure depersonalises rate-setting, insulates it somewhat from politics and helps anchor inflation expectations.</div></div>
+
+<div class="qa"><div class="q">Q33. What is the difference between the roles of the government and the RBI?</div>
+<div class="a">A: The government runs fiscal policy through the Budget — taxation, spending, borrowing and subsidies — and sets the inflation target. The RBI runs monetary policy through the MPC — the repo rate, CRR/SLR and OMO — is the sole issuer of currency, banker to the government and banks, lender of last resort, manager of FX reserves, and regulator of banks and NBFCs. The government sets the inflation target; the RBI achieves it. Ideally they coordinate, but a loose Budget can force tighter money.</div></div>
+
+<div class="qa"><div class="q">Q34. Which key indicators would you watch to gauge the Indian economy?</div>
+<div class="a">A: Real GDP growth and its composition and GVA by sector; CPI inflation, including core and food; the IIP for industrial activity; the fiscal deficit as a share of GDP; the current-account deficit, trade balance and FX reserves; PMI surveys as a leading signal; and bank credit growth. Together they tell you about growth momentum, price pressure, external stability and policy space.</div></div>
+
+<div class="qa"><div class="q">Q35. What does it mean when the RBI changes its "stance" versus the rate?</div>
+<div class="a">A: The rate decision — raising, cutting or holding the repo — is the immediate action. The stance — accommodative, neutral, or withdrawal of accommodation — is forward guidance about the likely direction of future policy and liquidity. For example, the RBI can hold the rate but shift to "withdrawal of accommodation" to signal that hikes or tighter liquidity are coming, which itself moves market expectations and yields.</div></div>
+
+<h3>18.6 International &amp; Markets</h3>
+<div class="qa"><div class="q">Q36. How does rupee depreciation affect the Indian economy?</div>
+<div class="a">A: Depreciation — more rupees per dollar — helps exporters and IT firms whose dollar revenue converts to more rupees, and it makes imports dearer, supporting domestic producers. But since India imports most of its crude oil and much of its electronics, it raises imported inflation and can widen the current-account deficit, and it increases the rupee burden on firms with unhedged dollar debt. The RBI often sells dollars from reserves to smooth sharp moves, and a persistently weak rupee can pressure it to keep rates higher.</div></div>
+
+<div class="qa"><div class="q">Q37. What's the difference between the current account and the capital account?</div>
+<div class="a">A: The current account records trade in goods and services plus income and transfers — merchandise trade, software/IT exports and remittances. The capital or financial account records cross-border investment and borrowing — FDI, portfolio flows (FPI/FII), external commercial borrowings. A current-account deficit must be financed by net inflows on the capital account. India typically runs a goods-trade deficit offset partly by a services surplus and remittances.</div></div>
+
+<div class="qa"><div class="q">Q38. What are fixed, floating and managed-float exchange-rate regimes? Which does India use?</div>
+<div class="a">A: Under a fixed regime the central bank pegs the currency and defends it with reserves — stable but requires giving up monetary independence. Under a floating regime the market sets the rate — flexible but volatile. India uses a managed float: the rate is mostly market-determined, but the RBI intervenes by buying or selling dollars to smooth excessive volatility rather than target a specific level.</div></div>
+
+<div class="qa"><div class="q">Q39. Explain purchasing power parity.</div>
+<div class="a">A: PPP says that in the long run exchange rates should equalise the price of an identical basket of goods across countries — the law of one price. If a basket costs ₹8,000 in India and $100 in the US, the PPP rate is ₹80 per dollar; the Big Mac Index is a popular proxy. PPP explains long-run currency trends and is used to compare living standards via PPP-adjusted GDP, but market rates deviate from PPP for long periods due to capital flows and non-traded goods.</div></div>
+
+<div class="qa"><div class="q">Q40. What is the impossible trinity?</div>
+<div class="a">A: The impossible trinity says a country can't simultaneously have a fixed exchange rate, free capital mobility and an independent monetary policy — it can pick only two. India chooses monetary-policy independence and largely free capital flows, and therefore accepts a managed-floating exchange rate rather than a hard peg.</div></div>
+
+<div class="qa"><div class="q">Q41. How does a rate cut affect the stock market?</div>
+<div class="a">A: A rate cut is generally supportive. It lowers the discount rate applied to future cash flows, raising equity valuations — especially for long-duration growth stocks — and it reduces corporate borrowing costs and supports consumer demand, lifting earnings. Rate-sensitive sectors like real estate, autos and NBFCs typically benefit most. The main caveat is that if the cut signals alarm about a sharp slowdown, sentiment can offset the mechanical boost; and banks' margins can compress.</div></div>
+
+<div class="qa"><div class="q">Q42. How does inflation affect different equity sectors?</div>
+<div class="a">A: Firms with pricing power, commodity and energy producers, and often banks (rate hikes widen margins) tend to weather inflation well. Firms that can't pass on costs face margin squeeze, and high-multiple growth or tech stocks suffer because their long-dated cash flows get discounted harder. Consumer discretionary can weaken as real incomes fall. So inflation tends to favour value and real-asset sectors over long-duration growth.</div></div>
+
+<div class="qa"><div class="q">Q43. What is the relationship between bond prices and interest rates?</div>
+<div class="a">A: They move inversely. When market interest rates or rate expectations rise, newly issued bonds offer higher coupons, so existing lower-coupon bonds must fall in price for their yield to match — hence prices drop when yields rise, and rise when yields fall. The sensitivity is measured by duration: longer-duration bonds move more for a given change in rates.</div></div>
+
+<div class="qa"><div class="q">Q44. What are leading, coincident and lagging indicators — give examples.</div>
+<div class="a">A: Leading indicators turn before the economy and help forecast — the stock market, PMI/new orders, building permits, the yield curve and consumer confidence. Coincident indicators move with the economy and measure its current state — GDP, industrial production, employment and retail sales. Lagging indicators turn after and confirm trends — the unemployment rate, CPI inflation and corporate profits. An inverted yield curve is a classic leading recession signal.</div></div>
+
+<div class="qa"><div class="q">Q45. Walk me through how a repo hike transmits to the wider economy and markets.</div>
+<div class="a">A: A repo hike raises banks' cost of funds, so money-market and then lending and deposit rates rise; borrowing gets costlier, so credit growth, consumption and capex slow; aggregate demand cools and inflation eases over the next several quarters. In markets, bond yields rise and prices fall, longest-duration most; equities face a headwind from a higher discount rate — hurting rate-sensitive and high-multiple sectors, though banks can gain from wider margins; and the rupee tends to strengthen as higher rates attract capital. In one line: a repo hike is contractionary — costlier money, slower demand, lower inflation, weaker bonds and a firmer currency.</div></div>
+
+<div class="qa"><div class="q">Q46. What is the Phillips curve, and does the trade-off hold?</div>
+<div class="a">A: The Phillips curve describes a short-run inverse relationship between unemployment and inflation — strong demand lowers unemployment but raises price pressure. The trade-off holds only in the short run; once inflation expectations adjust, the economy returns to its natural rate of unemployment, so the long-run curve is vertical. Trying to hold unemployment below its natural rate just produces ever-higher inflation — and stagflation showed the naive trade-off doesn't survive supply shocks.</div></div>
+
+<div class="qa"><div class="q">Q47. What is the natural rate of unemployment and full employment?</div>
+<div class="a">A: The natural rate is the sum of frictional unemployment (people between jobs) and structural unemployment (skill or location mismatch) — the unemployment that persists even when the economy is at full capacity and cyclical unemployment is zero. So full employment doesn't mean zero unemployment; it means no cyclical unemployment, with only the natural frictional and structural component remaining.</div></div>
+
+<div class="qa"><div class="q">Q48. Give an example of demand and supply comparative statics.</div>
+<div class="a">A: Sure — take crude oil. If a supply disruption cuts output, the supply curve shifts left, so price rises and quantity falls (supply down → P up, Q down). Separately, if a global boom raises demand for oil, the demand curve shifts right, so both price and quantity rise. If both happen — supply falls and demand rises — price definitely rises, but the change in quantity is ambiguous and depends on which shift is larger. Naming that ambiguity is the mark of a careful answer.</div></div>
+
+<div class="qa"><div class="q">Q49. Why does the RBI hold foreign-exchange reserves?</div>
+<div class="a">A: Reserves let the RBI intervene to smooth excessive rupee volatility under the managed float, provide an import-cover buffer and a war chest against sudden capital outflows or external shocks, support confidence and the sovereign's creditworthiness, and help manage orderly conditions in the FX market. In practice the RBI sells dollars to cushion sharp depreciation and buys dollars to prevent excessive appreciation and rebuild reserves.</div></div>
+
+<div class="qa"><div class="q">Q50. If you had to read the macro in one minute, what would you look at and why?</div>
+<div class="a">A: I'd start with growth (real GDP and PMI) for momentum, then CPI including core for price pressure and the RBI's likely direction, then the policy rate and stance for the cost of money, then the fiscal deficit for bond supply and crowding-out risk, and finally the current-account deficit, rupee and FX reserves for external stability. From those I can build the chain: if inflation is rising the RBI likely tightens, yields rise and bonds fall, rate-sensitive equities face a headwind, and rate support tends to firm the rupee — a joined-up read that connects macro to markets.</div></div>
+
+<div class="qa"><div class="q">Q51. What is the difference between economic growth and economic development?</div>
+<div class="a">A: Economic growth is a quantitative rise in real output — an increase in real GDP or per-capita income. Economic development is broader and qualitative: it includes improvements in living standards, health, education, income distribution and structural change in the economy. A country can grow without developing much if the gains are narrowly concentrated — which is why measures like the Human Development Index complement GDP.</div></div>
+
+<div class="qa"><div class="q">Q52. What is a liquidity trap?</div>
+<div class="a">A: A liquidity trap is a situation where interest rates are already very low — near zero — so further monetary easing loses traction: people and banks hoard cash rather than spend or lend, and cutting rates can't stimulate demand. In that case monetary policy is "pushing on a string," and fiscal policy or unconventional tools like quantitative easing become more effective. It's the textbook argument for fiscal stimulus in a deep slump.</div></div>
+
+<h3>18.7 Extended Concepts — Market Failure, AD–AS, Trade &amp; Taxes</h3>
+<div class="qa"><div class="q">Q53. What is an externality, and how should policy handle it?</div>
+<div class="a">A: An externality is a cost or benefit falling on a third party that the market price ignores. A <b>negative</b> externality like pollution means social cost exceeds private cost, so the market over-produces — the fix is to make the polluter pay via a <b>Pigouvian tax</b>, carbon price or tradable permits. A <b>positive</b> externality like vaccination or education means social benefit exceeds private benefit, so the market under-produces — the fix is subsidies or public provision. The Coase theorem adds that with clear property rights and low bargaining costs, private parties could solve it themselves, but high transaction costs usually rule that out.</div></div>
+
+<div class="qa"><div class="q">Q54. What is a public good and the free-rider problem?</div>
+<div class="a">A: A public good is non-rival (my use doesn't reduce yours) and non-excludable (you can't stop non-payers) — national defence, street lighting, a lighthouse. Because non-payers can't be excluded, everyone has an incentive to free-ride, so private markets under-provide or don't provide it at all; that's why government funds public goods through taxation. It contrasts with a private good (rival and excludable) and a common resource (rival but non-excludable), which is prone to the tragedy of the commons.</div></div>
+
+<div class="qa"><div class="q">Q55. Distinguish adverse selection from moral hazard.</div>
+<div class="a">A: Both stem from asymmetric information. <b>Adverse selection</b> is a pre-contract problem of hidden information — the riskiest self-select in, like the sickest buying the most insurance or Akerlof's "lemons" driving good used cars out; remedies are screening, credit scores and signalling. <b>Moral hazard</b> is a post-contract problem of hidden action — being protected changes behaviour, like an insured person taking more risk or a too-big-to-fail bank gambling; remedies are deductibles, collateral, monitoring and skin in the game. Selection is about <i>whom</i> you deal with, hazard about <i>how</i> they act once protected.</div></div>
+
+<div class="qa"><div class="q">Q56. What is price discrimination and what does it require?</div>
+<div class="a">A: Price discrimination is charging different prices to different buyers for the same good to capture more consumer surplus. It needs market power, a way to segment buyers by willingness to pay, and prevention of resale. First-degree charges each buyer their maximum; second-degree varies price by quantity or version (bulk discounts, tiered plans); third-degree charges different groups differently (student concessions, peak vs off-peak fares). Firms charge the inelastic segment more and discount the elastic segment.</div></div>
+
+<div class="qa"><div class="q">Q57. What is a Nash equilibrium? Use the Prisoner's Dilemma.</div>
+<div class="a">A: A Nash equilibrium is a set of strategies where no player can do better by unilaterally changing their own move, given what the others do — stable and self-enforcing. In the Prisoner's Dilemma two firms would jointly earn most by both keeping prices high, but each has a private incentive to undercut, so the Nash outcome is both cutting prices — individually rational, collectively worse. It explains price wars and why cartels like OPEC are unstable and prone to cheating. Key nuance: the Nash outcome is not necessarily the jointly optimal one.</div></div>
+
+<div class="qa"><div class="q">Q58. Explain the consumer optimum using indifference curves.</div>
+<div class="a">A: An indifference curve joins bundles giving equal satisfaction; it's downward-sloping and convex, and its slope is the marginal rate of substitution. The budget line shows affordable bundles, with slope equal to the price ratio. The consumer optimum is where the budget line is tangent to the highest attainable indifference curve — MRS equals the price ratio, which is the same as MU per rupee being equal across goods. It's just the equi-marginal principle drawn with curves.</div></div>
+
+<div class="qa"><div class="q">Q59. What's the difference between returns to scale and marginal returns?</div>
+<div class="a">A: Returns to scale is a long-run idea about scaling <b>all</b> inputs by the same proportion: if output more than doubles when inputs double, that's increasing returns to scale (the source of economies of scale); exactly doubles is constant; less than doubles is decreasing. Diminishing marginal returns is a short-run idea where you add <b>one</b> variable input to fixed capital and each extra unit adds less output. Different time horizons, different number of inputs changing.</div></div>
+
+<div class="qa"><div class="q">Q60. Why is marginal revenue below average revenue for a monopoly?</div>
+<div class="a">A: For a firm facing a downward-sloping demand curve, selling one more unit requires cutting the price on <i>all</i> units, not just the last one. So the marginal revenue from that extra unit is the new price minus the revenue lost on units that would have sold at the higher price — which makes MR less than price (AR). In perfect competition the firm is a price taker, so P equals AR equals MR. Either way, profit is maximised where MR equals MC.</div></div>
+
+<div class="qa"><div class="q">Q61. Use AD–AS to explain how a supply shock causes stagflation.</div>
+<div class="a">A: Aggregate demand slopes down and short-run aggregate supply slopes up, with long-run AS vertical at potential output. A sharp rise in input costs — say an oil-price spike — shifts short-run AS to the left. At the new intersection the price level is higher <i>and</i> output is lower, so you get inflation and rising unemployment together: stagflation. It's a policy trap because tightening to fight inflation deepens the output loss, while easing to support output worsens inflation.</div></div>
+
+<div class="qa"><div class="q">Q62. If MPC is 0.75, what is the spending multiplier and the effect of ₹40,000 crore of extra spending?</div>
+<div class="a">A: The multiplier is 1 divided by (1 minus MPC), so 1 ÷ (1 − 0.75) = 1 ÷ 0.25 = <b>4</b>. A ₹40,000 crore injection therefore raises GDP by up to 4 × ₹40,000 crore = <b>₹1,60,000 crore</b>, as the initial spending is re-spent round after round. The realised figure is smaller because of leakages into saving, taxes and imports, and supply constraints near full capacity — but the mechanism is what matters.</div></div>
+
+<div class="qa"><div class="q">Q63. What does the IS–LM model show?</div>
+<div class="a">A: It shows how the goods market and money market jointly set the interest rate and output. The IS curve is goods-market equilibrium and slopes down because lower rates boost investment and output; the LM curve is money-market equilibrium and slopes up because higher output raises money demand and the interest rate. Fiscal expansion shifts IS right — higher output and higher rates, which is the seed of crowding out; monetary expansion shifts LM right — lower rates and higher output. It's the standard frame for how the two policies interact.</div></div>
+
+<div class="qa"><div class="q">Q64. Explain the circular flow, and leakages versus injections.</div>
+<div class="a">A: In the circular flow, households supply factors to firms and earn income, then spend it on firms' output, so one party's spending is another's income — which is why the three GDP methods agree. Leakages that drain the flow are saving, taxes and imports; injections that refill it are investment, government spending and exports. Equilibrium is where injections equal leakages: S + T + M = I + G + X. It's the skeleton behind Y = C + I + G + (X − M).</div></div>
+
+<div class="qa"><div class="q">Q65. What is comparative advantage, and why does it beat absolute advantage?</div>
+<div class="a">A: Absolute advantage is producing a good with fewer resources; comparative advantage is producing it at a lower opportunity cost. Ricardo's insight is that even a country worse at everything still gains by specialising in what it's least-bad at and trading, because world output rises when each specialises by comparative advantage. So a country never needs an absolute edge to benefit from trade — India's IT-services export success and global supply chains rest on exactly this logic.</div></div>
+
+<div class="qa"><div class="q">Q66. Who gains and who loses from a tariff?</div>
+<div class="a">A: A tariff is a tax on imports. It raises import prices, so the protected <b>domestic producers</b> and their workers gain, and the <b>government</b> earns revenue. But <b>consumers</b> lose through higher prices and less choice, efficiency falls because comparative advantage is blunted, and trading partners may retaliate, risking a trade war. Economists generally favour free trade for aggregate welfare, using targeted support only for genuine infant industries or strategic sectors rather than blanket protection.</div></div>
+
+<div class="qa"><div class="q">Q67. Why isn't a high-interest-rate currency a free lunch (interest-rate parity)?</div>
+<div class="a">A: Because of interest-rate parity. Covered IRP says the forward rate must offset the interest differential exactly, or arbitrage exists; uncovered IRP says the higher-rate currency is <i>expected</i> to depreciate by about the interest gap. So if Indian rates exceed US rates, the rupee trades at a forward discount — the extra yield is expected to be given back through currency depreciation. Betting that this depreciation won't fully happen is the carry trade, which carries real risk.</div></div>
+
+<div class="qa"><div class="q">Q68. What are QE and QT?</div>
+<div class="a">A: Quantitative easing is a central bank buying large amounts of bonds with newly created reserves once the policy rate is near zero — it expands the balance sheet, injects durable liquidity, pushes bond prices up and long-term yields down, and pushes investors into riskier assets. Quantitative tightening is the reverse: shrinking the balance sheet by letting bonds mature or selling them, which drains liquidity and lifts yields. The RBI has used Indian variants like OMO purchases, G-SAP and Operation Twist rather than a formal QE programme.</div></div>
+
+<div class="qa"><div class="q">Q69. Direct versus indirect taxes, and what is GST?</div>
+<div class="a">A: A direct tax is on income or wealth and can't be shifted — income tax, corporate tax — and is usually progressive. An indirect tax is on goods and services and is passed into prices — GST, customs, excise — and is usually regressive. GST is India's unified indirect tax from 2017 that merged many central and state levies into one destination-based, value-added tax with input tax credit, so tax falls only on value added and cascading is removed. It's run jointly via the GST Council and split into CGST, SGST and IGST.</div></div>
+
+<div class="qa"><div class="q">Q70. What is a price floor, and how does India's MSP illustrate it?</div>
+<div class="a">A: A price floor is a legal minimum price set above the equilibrium, which creates a persistent surplus because quantity supplied exceeds quantity demanded at that price. India's Minimum Support Price for crops is a classic example — by guaranteeing farmers a floor above the market rate, it encourages surplus production that the government must then procure and store. A minimum wage set above the market-clearing wage is a labour-market floor that can create a surplus of labour, i.e., unemployment.</div></div>
+
+<div class="qa"><div class="q">Q71. A tax is levied on sellers of petrol. Who actually bears it, and why?</div>
+<div class="a">A: Consumers bear most of it, because petrol has <b>inelastic demand</b>. Tax incidence falls on the more inelastic side of the market — that side can't escape by cutting quantity, so it absorbs the burden. Sellers pass most of the tax into the pump price and buyers keep buying nearly as much. This is exactly why governments tax inelastic goods like fuel, alcohol and tobacco: the revenue is large and stable, and quantity barely falls. If demand were elastic, sellers would bear more and quantity would drop sharply.</div></div>
+
+<div class="qa"><div class="q">Q72. What's the difference between the money multiplier and the spending multiplier?</div>
+<div class="a">A: They're often confused. The <b>money multiplier</b> is 1 divided by the reserve ratio and describes how base money expands into broad money through fractional-reserve bank lending — a monetary concept. The <b>spending (Keynesian) multiplier</b> is 1 divided by (1 minus MPC) and describes how an initial change in spending multiplies into a larger change in GDP through rounds of re-spending — a fiscal/demand concept. Different formulas, different mechanisms; naming both correctly signals you really understand each.</div></div>
+
+<div class="qa"><div class="q">Q73. What are the core sector, PMI and the three sectors of the economy?</div>
+<div class="a">A: The economy splits into the primary sector (agriculture, mining), the secondary sector (manufacturing, construction) and the tertiary sector (services); India is notable for services leading GDP while agriculture still employs a large share of workers. The core sector is the Index of Eight Core Industries — coal, crude oil, natural gas, refinery products, fertilisers, steel, cement and electricity — a large chunk of the IIP and a gauge of industrial momentum. PMI is a monthly survey-based leading indicator where a reading above 50 means expansion and below 50 contraction.</div></div>
+
+<div class="qa"><div class="q">Q74. What is government failure, and why does it matter?</div>
+<div class="a">A: Government failure is when state intervention makes an outcome worse rather than better — through imperfect information, unintended consequences, regulatory capture, bureaucratic inefficiency or short-term political incentives. It matters because market failure alone doesn't automatically justify intervention: the mature view is to compare two imperfect allocators and ask which does better at the margin. So the best answer to "should the government step in?" weighs the specific market failure against the realistic risk of government failure, rather than assuming either is perfect.</div></div>
+
+<h2 class="sec">19. One-Page Cheat Sheet &amp; Final Checklist</h2>
+
+<h3>19.1 Formulas to Have on Instant Recall</h3>
+<div class="formula"><b>Core equations</b><br>
+GDP (expenditure): Y = C + I + G + (X − M)<br>
+GDP ↔ GVA: GDP = GVA + product taxes − product subsidies<br>
+GNP = GDP + Net Factor Income from Abroad<br>
+Real GDP = Nominal GDP ÷ (Deflator/100); Deflator = (Nominal/Real) × 100<br>
+PED = %ΔQ ÷ %ΔP (|·|&gt;1 elastic); YED, XED analogous<br>
+Money multiplier = 1 ÷ reserve ratio<br>
+Spending (Keynesian) multiplier k = 1 ÷ (1 − MPC) = 1 ÷ MPS; ΔGDP = k × Δspending<br>
+Consumer/producer optimum: MU<sub>x</sub>/P<sub>x</sub> = MU<sub>y</sub>/P<sub>y</sub>; MRTS = w/r; firm max profit at MR = MC<br>
+Covered IRP: Forward ÷ Spot = (1 + i<sub>domestic</sub>) ÷ (1 + i<sub>foreign</sub>)<br>
+Fisher: nominal rate ≈ real rate + expected inflation<br>
+Fiscal Deficit = Total Expenditure − Receipts (excl. borrowings); Primary = Fiscal − Interest<br>
+</div>
+
+<h3>19.2 Directional Reflexes (say these instantly)</h3>
+<ul>
+<li>Repo <b>up</b> → rates up → credit/demand down → inflation down → bonds down, equities headwind, rupee firmer. (Repo <b>down</b> = the reverse.)</li>
+<li>CRR/SLR <b>up</b> → less lendable money → tighter credit. CRR = cash with RBI (no interest); SLR = G-secs/gold with the bank (earns return).</li>
+<li>OMO <b>buy</b> = inject liquidity (easing); OMO <b>sell</b> = absorb (tightening).</li>
+<li>Rupee <b>depreciates</b> → exporters/IT win, importers/oil/dollar-debtors lose, imported inflation up.</li>
+<li>Bond yields <b>up</b> → bond prices <b>down</b> (always inverse); longer duration = bigger move.</li>
+<li>Fiscal deficit <b>up</b> → more bond supply → yields up; possible crowding out.</li>
+<li>Inflation <b>up</b> → favours pricing-power/commodities/banks; hurts long-duration growth &amp; fixed income.</li>
+<li>A <b>tax</b> lands on the <b>inelastic</b> side of the market; ceiling (below eq.) → shortage; floor/MSP (above eq.) → surplus.</li>
+<li>Negative externality → over-production → <b>tax</b> it; positive externality → under-production → <b>subsidise</b> it.</li>
+<li><b>QE</b> → yields down, asset prices up; <b>QT</b> → yields up, liquidity drained.</li>
+<li><b>Adverse selection</b> = hidden info <i>before</i> (whom you trade with); <b>moral hazard</b> = hidden action <i>after</i> (behaviour once protected).</li>
+<li>Higher MPC → bigger spending multiplier; higher-yield currency → forward discount (IRP), not a free lunch.</li>
+</ul>
+
+<h3>19.3 Definitions You Must Not Fumble</h3>
+<ul>
+<li><b>Repo</b> = RBI lends to banks (policy rate). <b>Reverse repo/SDF</b> = banks park with RBI (corridor floor).</li>
+<li><b>CPI</b> = retail, goods + services, RBI's target. <b>WPI</b> = wholesale, goods only, supplementary.</li>
+<li><b>GDP</b> = within borders (location). <b>GNP</b> = by residents (nationality).</li>
+<li><b>Nominal</b> = current prices. <b>Real</b> = inflation-adjusted, constant prices.</li>
+<li><b>Current account</b> = goods, services, income, remittances. <b>Capital account</b> = FDI, FPI, borrowing.</li>
+<li><b>Movement</b> along a curve = own-price change. <b>Shift</b> = non-price determinant.</li>
+<li><b>Fixed cost</b> = independent of output. <b>Variable cost</b> = varies with output.</li>
+<li><b>Monetary policy</b> = RBI/MPC, cost of money. <b>Fiscal policy</b> = government/Budget, level of demand.</li>
+<li><b>Direct tax</b> = on income/wealth, can't be shifted, progressive. <b>Indirect tax</b> (GST) = on goods/services, shifted into prices, regressive.</li>
+<li><b>Comparative advantage</b> = lower <i>opportunity</i> cost (beats absolute advantage). <b>Public good</b> = non-rival + non-excludable.</li>
+<li><b>Money multiplier</b> = 1/reserve ratio (bank credit). <b>Spending multiplier</b> = 1/(1−MPC) (GDP from demand).</li>
+</ul>
+
+<div class="keytake"><b>Final interview checklist:</b>
+<ul>
+<li>Lead every answer with a crisp <b>definition</b>, then the <b>mechanism</b>, then <b>"so what for markets."</b></li>
+<li>Always separate <b>real vs nominal</b> and <b>movement vs shift</b> — the two most common traps.</li>
+<li>Know <b>Y = C + I + G + (X − M)</b>, the <b>money multiplier</b>, and <b>real GDP from the deflator</b> cold.</li>
+<li>Be able to walk the full <b>repo-hike chain</b> and the <b>rupee-depreciation chain</b> unprompted.</li>
+<li>Anchor everything in <b>India</b>: RBI, MPC, flexible inflation targeting, CPI target, managed float.</li>
+<li>Never state a <b>current</b> repo rate or figure as hard fact — describe direction and mechanism, and phrase levels as "around / for example."</li>
+<li>Show <b>joined-up thinking</b>: connect inflation → policy → rates → bonds/equities → currency in one narrative. That is what wins the round.</li>
+</ul>
+</div>
+
+</body></html>

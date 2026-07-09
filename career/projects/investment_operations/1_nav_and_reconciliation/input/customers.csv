@@ -1,0 +1,9 @@
+customer_id,name,country,entity_type,product,pep_flag,adverse_media,account_age_months,expected_monthly_volume
+K001,John Smith,GB,Individual,Savings,0,0,48,5000
+K002,Acme Trading Ltd,US,Company,Brokerage,0,0,36,200000
+K003,Ivan Petrov,RU,Individual,PrivateBanking,1,0,6,150000
+K004,Global Shell Holdings,KY,Company,CorrespondentBanking,0,1,3,900000
+K005,Maria Garcia,ES,Individual,Savings,0,0,60,3000
+K006,Nguyen Enterprises,VN,Company,Derivatives,0,0,18,80000
+K007,Ahmed Hassan,IR,Individual,Brokerage,0,1,9,40000
+K008,Sunrise Family Trust,SG,Trust,PrivateBanking,1,0,24,120000

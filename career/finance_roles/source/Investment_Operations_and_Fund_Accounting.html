@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 10mm 15mm 9mm 15mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Calibri","Carlito","Segoe UI",sans-serif; font-size: 10pt; line-height: 1.16;
+         color: #1a1a1a; font-variant-ligatures: none; font-feature-settings: "liga" 0,"clig" 0,"dlig" 0; }
+  .name { text-align: center; font-size: 22pt; font-weight: 700; letter-spacing: 1px; color: #16365c; }
+  .role-tag { text-align: center; font-size: 10.5pt; font-weight: 700; color: #1f4e79;
+              letter-spacing: 0.5px; text-transform: uppercase; margin-top: 1px; }
+  .contact { text-align: center; font-size: 9.6pt; margin-top: 3px; color: #333; }
+  .contact a { color: #1f4e79; text-decoration: none; }
+  h2 { font-size: 11pt; font-weight: 700; color: #16365c; text-transform: uppercase; letter-spacing: 0.6px;
+       border-bottom: 1.4px solid #16365c; padding-bottom: 2px; margin-top: 5px; margin-bottom: 3px; }
+  p, li { font-size: 10pt; }
+  .summary { text-align: justify; }
+  .skills p { margin-bottom: 2.5px; }
+  .skills b { color: #16365c; }
+  .role { display: flex; justify-content: space-between; margin-top: 4.5px; }
+  .role .title { font-weight: 700; }
+  .role .date { font-style: italic; color: #444; white-space: nowrap; }
+  .sub { font-style: italic; color: #555; font-size: 9.7pt; margin-bottom: 1px; }
+  ul { margin: 1.5px 0 1.5px 17px; }
+  li { margin-bottom: 1.2px; }
+  .proj { font-weight: 700; color: #16365c; margin-top: 4px; }
+  .cert-line { margin-bottom: 2px; }
+  .cert-line b { color: #16365c; }
+</style></head><body>
+
+<div class="name">SAIKUMAR KALERU</div>
+
+<div class="contact">Hyderabad, India &nbsp;|&nbsp; +91 9398320218 &nbsp;|&nbsp; saikumarkaleru56@gmail.com &nbsp;|&nbsp;
+<a href="https://linkedin.com/in/saikumar-kaleru">linkedin.com/in/saikumar-kaleru</a></div>
+
+<h2>Professional Summary</h2>
+<p class="summary">Investment operations and fund accounting analyst with an MBA in Finance and a B.E. in Computer Science, NISM Series-XV certified, with close to two years of capital markets experience at D. E. Shaw. Strong in NAV computation, trade and cash reconciliation, and KYC and AML checks, and fluent in SQL, Excel, and Python for automating operational workflows. Comfortable across the trade lifecycle, from capture and settlement to reconciliation and exception management.</p>
+
+<h2>Skills</h2>
+<div class="skills">
+<p><b>Investment Operations:</b> Trade lifecycle, trade capture and validation, T+1 settlement, reconciliation, exception and break management, corporate actions, static and reference data</p>
+<p><b>Fund Accounting:</b> NAV computation, securities pricing and valuation, income and expense accruals, expense ratio (TER), fund reporting, data quality checks</p>
+<p><b>KYC / AML:</b> Customer due diligence (CDD, EDD), risk scoring and tiers, transaction monitoring, sanctions and PEP screening basics, STR and CTR concepts</p>
+<p><b>Programming &amp; Tools:</b> Python (pandas, NumPy), SQL, Advanced Excel, Power BI, process automation</p>
+<p><b>Domain:</b> Mutual funds, asset management, banking and financial services</p>
+</div>
+
+<h2>Experience</h2>
+<div class="role"><span class="title">D. E. Shaw India Pvt. Ltd. &nbsp;|&nbsp; Member Technical (F&amp;O Trading Desk)</span><span class="date">May 2022 to Jan 2024</span></div>
+<ul>
+<li>Captured, cleaned, validated, and reconciled daily F&amp;O market and trade data across the desk's systems.</li>
+<li>Found and resolved discrepancies and exceptions between sources to keep records accurate and reports reliable.</li>
+<li>Built automated Python pipelines to capture and process daily market data, cutting manual work and errors.</li>
+<li>Built analytics tools and dashboards to monitor positioning, exposure, and data quality.</li>
+<li>Prepared daily and weekly reports on market data and positioning, working to tight daily deadlines with high ownership.</li>
+<li>Documented the daily data checks and controls so the process was repeatable and auditable.</li>
+</ul>
+<div class="role"><span class="title">Arcesium India Pvt. Ltd. &nbsp;|&nbsp; Site Reliability Engineer (Intern)</span><span class="date">Jan 2022 to May 2022</span></div>
+<ul>
+<li>Kept AWS EC2 and RDS services highly available and resolved production database issues.</li>
+<li>Managed and optimized MS SQL and PostgreSQL databases, improved slow running queries, and evaluated Flyway for automated schema migration.</li>
+</ul>
+
+<h2>Projects</h2>
+<div class="proj">Fund NAV &amp; Investor Reporting Engine: Daily Pricing, P&amp;L &amp; Statement Generation &nbsp;|&nbsp; Python, Excel</div>
+<ul>
+<li>Computed a fund's NAV from priced holdings, cash, and income accruals net of fees, with NAV per unit and a prior day check.</li>
+<li>Handled stale and missing prices with a documented policy and produced a clean fund report.</li>
+<li>Flagged NAV moves beyond a set threshold against the prior day and produced a multi-sheet fund report.</li>
+</ul>
+<div class="proj">Trade &amp; Cash Reconciliation Engine: Custodian vs Book Break Detection &nbsp;|&nbsp; Python</div>
+<ul>
+<li>Reconciled trades and cash across sources and classified breaks (missing, quantity, amount, duplicate) into an aged exception queue.</li>
+<li>Automated the match to cut manual checks and speed up break investigation.</li>
+<li>Output a match rate summary and an aged exception report so the team worked the biggest breaks first.</li>
+</ul>
+<div class="proj">KYC Risk Scoring &amp; AML Transaction Monitoring System &nbsp;|&nbsp; Python</div>
+<ul>
+<li>Scored customers into risk tiers on geography, product, and profile to drive CDD and EDD.</li>
+<li>Flagged unusual transactions such as large or structuring-like activity for review.</li>
+<li>Raised AML alerts and aged the exception queue so the highest risk items surfaced first.</li>
+<li>Packaged the scoring and monitoring rules as a reusable Python module with a documented risk methodology.</li>
+</ul>
+
+<h2>Education</h2>
+<div class="role"><span class="title">MBA in Finance, University College of Commerce &amp; Business Management, Hyderabad</span><span class="date">2024 to 2026</span></div>
+<div class="sub">CGPA 8.9</div>
+<div class="role"><span class="title">B.E. Computer Science &amp; Engineering, Chaitanya Bharathi Institute of Technology, Hyderabad</span><span class="date">2018 to 2022</span></div>
+<div class="sub">CGPA 8.8</div>
+
+<h2>Relevant Coursework</h2>
+<div class="skills"><p>Banking &amp; Financial Services, Financial Statement Analysis, Corporate Finance, Management Accounting, Managerial Economics, Business Statistics</p></div>
+
+<h2>Certifications</h2>
+<p class="cert-line"><b>NISM Series-XV: Research Analyst</b> (SEBI/NISM), Reg. No. NISM-202600123995</p>
+
+<h2>Achievements</h2>
+<ul>
+<li>UGC NET 2025 (Management): 95.6 percentile.</li>
+</ul>
+
+</body></html>

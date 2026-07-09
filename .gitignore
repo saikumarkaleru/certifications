@@ -11,3 +11,18 @@ scratchpad/
 # Third-party downloaded coaching notes (large PDFs, exceed GitHub 100MB limit)
 CA/CA WALLAH NOTES/
 
+# Python (from merged career/ projects)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# Transient render artifacts (regenerable)
+_tmp_render.html
+_ihb.html
+

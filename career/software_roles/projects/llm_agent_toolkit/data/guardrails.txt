@@ -1,0 +1,12 @@
+Guardrails and evaluation for LLM agents
+
+Guardrails keep an agent safe and reliable. Important guardrails in this
+project are: a maximum step budget to prevent infinite loops, an allow-list
+AST calculator that never uses Python eval, tolerant JSON parsing that fails
+into an error observation instead of crashing, and handling of unknown tools
+so a wrong tool name is reported back to the model rather than raising.
+
+Evaluation of an agent measures whether it reaches the correct final answer,
+how many steps it took, whether it selected the right tool, and whether it
+recovered from bad inputs. Deterministic tests with a mock model make these
+behaviors reproducible without any API key or network access.

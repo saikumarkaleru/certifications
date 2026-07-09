@@ -1,0 +1,104 @@
+# Local orchestration for the whole stack.
+#   docker compose up --build
+# Services talk to each other over the compose network by service name.
+# Postgres is optional (profile "postgres") — the services default to SQLite so
+# the stack runs with zero external DB.
+
+services:
+  product-service:
+    build: ./services/product-service
+    environment:
+      SERVICE_NAME: product-service
+      DB_PATH: /data/product.db
+      LOG_LEVEL: INFO
+    volumes:
+      - product-data:/data
+    ports:
+      - "8001:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/readyz').status==200 else 1)"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  order-service:
+    build: ./services/order-service
+    environment:
+      SERVICE_NAME: order-service
+      DB_PATH: /data/order.db
+      LOG_LEVEL: INFO
+      # Resilient dependency wiring — reach product-service by its compose name.
+      PRODUCT_SERVICE_URL: http://product-service:8000
+      HTTP_TIMEOUT: "2.0"
+      HTTP_RETRIES: "3"
+    volumes:
+      - order-data:/data
+    ports:
+      - "8002:8000"
+    depends_on:
+      product-service:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/readyz').status==200 else 1)"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  user-service:
+    build: ./services/user-service
+    environment:
+      SERVICE_NAME: user-service
+      DB_PATH: /data/user.db
+      LOG_LEVEL: INFO
+      SECRET_KEY: ${USER_SECRET_KEY:-dev-only-change-me}
+    volumes:
+      - user-data:/data
+    ports:
+      - "8003:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/readyz').status==200 else 1)"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  gateway:
+    build: ./gateway
+    environment:
+      SERVICE_NAME: gateway
+      PRODUCT_SERVICE_URL: http://product-service:8000
+      ORDER_SERVICE_URL: http://order-service:8000
+      USER_SERVICE_URL: http://user-service:8000
+    ports:
+      - "8080:8000"
+    depends_on:
+      - product-service
+      - order-service
+      - user-service
+    restart: unless-stopped
+
+  # Optional: only starts with `docker compose --profile postgres up`.
+  postgres:
+    image: postgres:16-alpine
+    profiles: ["postgres"]
+    environment:
+      POSTGRES_USER: ecommerce
+      POSTGRES_PASSWORD: ecommerce
+      POSTGRES_DB: ecommerce
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ecommerce"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  product-data:
+  order-data:
+  user-data:
+  pg-data:

@@ -1,0 +1,67 @@
+{
+  "ticker": "AAPL",
+  "name": "Apple Inc.",
+  "price": 292.239990234375,
+  "shares": 14687356000,
+  "beta": 1.086,
+  "risk_free_rate": 0.04488999843597412,
+  "history": [
+    {
+      "year": "2025",
+      "ebit": 133050000000.0,
+      "ebitda": 144748000000.0,
+      "pretax_income": 132729000000.0,
+      "tax_provision": 20719000000.0,
+      "tax_rate": 0.156,
+      "dep_amort": 11698000000.0,
+      "capex": -12715000000.0,
+      "change_in_wc": -25000000000.0,
+      "operating_cash_flow": 111482000000.0,
+      "interest_expense": null
+    },
+    {
+      "year": "2024",
+      "ebit": 123216000000.0,
+      "ebitda": 134661000000.0,
+      "pretax_income": 123485000000.0,
+      "tax_provision": 29749000000.0,
+      "tax_rate": 0.241,
+      "dep_amort": 11445000000.0,
+      "capex": -9447000000.0,
+      "change_in_wc": 3651000000.0,
+      "operating_cash_flow": 118254000000.0,
+      "interest_expense": null
+    },
+    {
+      "year": "2023",
+      "ebit": 114301000000.0,
+      "ebitda": 125820000000.0,
+      "pretax_income": 113736000000.0,
+      "tax_provision": 16741000000.0,
+      "tax_rate": 0.147,
+      "dep_amort": 11519000000.0,
+      "capex": -10959000000.0,
+      "change_in_wc": -6577000000.0,
+      "operating_cash_flow": 110543000000.0,
+      "interest_expense": 3933000000.0
+    },
+    {
+      "year": "2022",
+      "ebit": 119437000000.0,
+      "ebitda": 130541000000.0,
+      "pretax_income": 119103000000.0,
+      "tax_provision": 19300000000.0,
+      "tax_rate": 0.162,
+      "dep_amort": 11104000000.0,
+      "capex": -10708000000.0,
+      "change_in_wc": 1200000000.0,
+      "operating_cash_flow": 122151000000.0,
+      "interest_expense": 2931000000.0
+    }
+  ],
+  "total_debt": 98657000000.0,
+  "cash": 54697000000.0,
+  "net_debt": 62723000000.0,
+  "source": "yfinance_live",
+  "as_of": "2026-07-01 13:32 UTC"
+}

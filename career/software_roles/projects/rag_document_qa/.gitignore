@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# virtual envs
+.venv/
+venv/
+env/
+
+# secrets / local config
+.env
+
+# generated index
+.rag_index.json
+*.rag_index.json
+
+# tooling
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

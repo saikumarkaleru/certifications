@@ -1,0 +1,10 @@
+security_id,ticker,name,asset_class,quantity,currency
+EQ0001,AAPL,Apple Inc,Equity,12000,USD
+EQ0002,MSFT,Microsoft Corp,Equity,8000,USD
+EQ0003,JPM,JPMorgan Chase & Co,Equity,9000,USD
+EQ0004,XOM,Exxon Mobil Corp,Equity,15000,USD
+EQ0005,JNJ,Johnson & Johnson,Equity,7000,USD
+EQ0006,NVDA,NVIDIA Corp,Equity,5000,USD
+EQ0007,WMT,Walmart Inc,Equity,10000,USD
+BD0001,UST10Y,US Treasury 3.5% 2034,Bond,20000,USD
+BD0002,CORP28,Acme Corp 5.0% 2028,Bond,12000,USD

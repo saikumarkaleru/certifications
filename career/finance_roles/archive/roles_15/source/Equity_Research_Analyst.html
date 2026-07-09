@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 10mm 15mm 9mm 15mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Calibri","Carlito","Segoe UI",sans-serif; font-size: 10pt; line-height: 1.16;
+         color: #1a1a1a; font-variant-ligatures: none; font-feature-settings: "liga" 0,"clig" 0,"dlig" 0; }
+  .name { text-align: center; font-size: 22pt; font-weight: 700; letter-spacing: 1px; color: #16365c; }
+  .role-tag { text-align: center; font-size: 10.5pt; font-weight: 700; color: #1f4e79;
+              letter-spacing: 0.5px; text-transform: uppercase; margin-top: 1px; }
+  .contact { text-align: center; font-size: 9.6pt; margin-top: 3px; color: #333; }
+  .contact a { color: #1f4e79; text-decoration: none; }
+  h2 { font-size: 11pt; font-weight: 700; color: #16365c; text-transform: uppercase; letter-spacing: 0.6px;
+       border-bottom: 1.4px solid #16365c; padding-bottom: 2px; margin-top: 5px; margin-bottom: 3px; }
+  p, li { font-size: 10pt; }
+  .summary { text-align: justify; }
+  .skills p { margin-bottom: 2.5px; }
+  .skills b { color: #16365c; }
+  .role { display: flex; justify-content: space-between; margin-top: 4.5px; }
+  .role .title { font-weight: 700; }
+  .role .date { font-style: italic; color: #444; white-space: nowrap; }
+  .sub { font-style: italic; color: #555; font-size: 9.7pt; margin-bottom: 1px; }
+  ul { margin: 1.5px 0 1.5px 17px; }
+  li { margin-bottom: 1.2px; }
+  .proj { font-weight: 700; color: #16365c; margin-top: 4px; }
+  .cert-line { margin-bottom: 2px; }
+  .cert-line b { color: #16365c; }
+</style></head><body>
+
+  <div class="name">SAIKUMAR KALERU</div>
+  <div class="role-tag">Equity Research Analyst</div>
+  <div class="contact">
+    Hyderabad &nbsp;|&nbsp; +91 9398320218 &nbsp;|&nbsp; saikumarkaleru56@gmail.com &nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/saikumar-kaleru/">linkedin.com/in/saikumar-kaleru</a>
+  </div>
+
+  <h2>Professional Summary</h2>
+  <p class="summary">Equity research analyst and MBA Finance candidate, NISM Series-XV certified, with close to two years on a derivatives trading desk. Comfortable reading annual reports and earnings calls, forecasting revenue and margins, and turning a company view into a clear thesis, price target, and risk section. Builds DCF and relative valuation models in Excel and Python, and screens ideas across a coverage universe. Backed by a B.E. in Computer Science.</p>
+
+  <h2>Skills</h2>
+  <div class="skills">
+    <p><b>Equity Research and Valuation:</b> Financial modeling, DCF, comparable company analysis, relative valuation, WACC, revenue and earnings forecasting, fundamental and ratio analysis, initiating coverage, price targets</p>
+    <p><b>Market and Technical Analysis:</b> Nifty 50 and Bank Nifty, support and resistance, moving averages, RSI, MACD, chart patterns, trend and momentum</p>
+    <p><b>Derivatives and Markets:</b> Options and futures, implied volatility, option greeks, commodity and F&amp;O markets</p>
+    <p><b>Finance Core:</b> Corporate finance, economics, statistics, financial reporting, research report writing</p>
+    <p><b>Data and Tools:</b> Advanced Excel, Python, SQL, Power BI, DAX, TradingView</p></div>
+
+  <h2>Work Experience</h2>
+  <div class="role">
+    <span class="title">D. E. Shaw India Private Limited &nbsp;|&nbsp; Member Technical (F&amp;O Trading Desk)</span>
+    <span class="date">May 2022 to Jan 2024</span>
+  </div>
+  <ul>
+    <li>Analysed derivatives market data and tracked implied volatility, open interest, and option greeks across the F&amp;O universe.</li>
+    <li>Reviewed option strategies such as straddles, strangles, and spreads for risk and return trade offs.</li>
+    <li>Prepared daily research reports on market data and volatility for the trading desk.</li>
+    <li>Built automated pipelines to capture and analyse F&amp;O market data, improving speed and accuracy.</li>
+  </ul>
+
+  <div class="role">
+    <span class="title">Arcesium India Private Limited &nbsp;|&nbsp; Site Reliability Engineer (Intern)</span>
+    <span class="date">Jan 2022 to May 2022</span>
+  </div>
+  <ul>
+    <li>Kept AWS EC2 and RDS services available and fixed production database issues.</li>
+    <li>Managed MS SQL and PostgreSQL databases and improved slow queries.</li>
+    <li>Tested Flyway for automated database schema migration and version control.</li>
+  </ul>
+
+  <h2>Projects</h2>
+
+  <div class="proj">DCF Valuation Model &nbsp;|&nbsp; Python, Excel</div>
+  <ul>
+    <li>Built a discounted cash flow model that projects five years of free cash flow, discounts them at WACC, adds a terminal value, and bridges enterprise to equity value for an intrinsic price per share.</li>
+    <li>Added bull, base, and bear scenarios, a WACC by terminal growth sensitivity grid, and a reverse DCF, using real financials (yfinance).</li>
+  </ul>
+  <div class="proj">Comparable Company Analysis &nbsp;|&nbsp; Python, Excel</div>
+  <ul>
+    <li>Computed peer trading multiples (P/E, EV/EBITDA, EV/Revenue, P/B, PEG) across real peers and derived an implied valuation range versus price.</li>
+    <li>Automated peer set assembly and multiple calculation in Python (yfinance), and cross checked the read against the DCF.</li>
+  </ul>
+  <div class="proj">Multi Strategy Backtester: Nifty &amp; Bank Nifty &nbsp;|&nbsp; Python</div>
+  <ul>
+    <li>Backtested eight rules based strategies over six years, comparing CAGR, Sharpe, Sortino, and max drawdown against buy and hold.</li>
+    <li>Added transaction cost and slippage assumptions and a walk forward split, and charted equity curves and drawdowns to compare strategies.</li>
+  </ul>
+
+  <h2>Education</h2>
+  <div class="role">
+    <span class="title">MBA in Finance, University College of Commerce &amp; Business Management, Hyderabad</span>
+    <span class="date">2024 to 2026</span>
+  </div>
+  <div class="sub">CGPA 8.9</div>
+  <div class="role">
+    <span class="title">B.E. in Computer Science &amp; Engineering, Chaitanya Bharathi Institute of Technology, Hyderabad</span>
+    <span class="date">2018 to 2022</span>
+  </div>
+  <div class="sub">CGPA 8.8</div>
+
+  <h2>Relevant Coursework</h2>
+  <p>Security Analysis &amp; Portfolio Management &middot; Financial Statement Analysis &middot; Financial Modeling &amp; Valuation &middot; Corporate Finance &middot; Financial Derivatives &middot; Financial Management &middot; Business Statistics &middot; Managerial Economics</p>
+
+  <h2>Certifications</h2>
+  <div class="cert-line"><b>NISM Series-XV: Research Analyst Certification</b> (SEBI / NISM) &nbsp;|&nbsp; Reg. No. NISM-202600123995</div>
+  <div class="cert-line"><b>HackerRank Certified</b> in Problem Solving &amp; Java Programming</div>
+
+  <h2>Achievements</h2>
+  <ul>
+    <li>GATE CSE 2021: top 5% among national candidates &nbsp;&middot;&nbsp; UGC NET 2025 (Management): 95.6 percentile.</li>
+  </ul>
+
+  <h2>Additional Information</h2>
+  <div class="skills"><p>Languages: English, Hindi, Telugu &nbsp;&middot;&nbsp; Location: Hyderabad, India (open to relocation) &nbsp;&middot;&nbsp; Availability: Immediate</p></div>
+
+</body></html>

@@ -1,0 +1,12 @@
+ReAct: Reasoning and Acting with language models
+
+ReAct is a prompting pattern that interleaves reasoning traces (Thought) with
+task-specific actions (Action) and their results (Observation). The model
+writes a Thought, chooses an Action such as calling a tool, reads the
+Observation returned by the environment, and repeats until it can produce a
+Final Answer.
+
+The benefit of ReAct is that reasoning helps the model plan which tool to call,
+while the observations ground the reasoning in real data and reduce
+hallucination. This project implements ReAct with a strict text protocol:
+Thought / Action / Action Input / Observation / Final Answer.

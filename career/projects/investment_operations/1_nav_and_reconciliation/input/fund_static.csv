@@ -1,0 +1,12 @@
+parameter,value
+fund_name,Meridian Global Balanced Fund
+valuation_date,2026-07-08
+prior_valuation_date,2026-07-07
+base_currency,USD
+units_outstanding,5000000
+cash_balance,1250000.00
+accrued_income,45000.00
+ter_annual,0.0125
+fee_accrual_days,30
+other_accrued_expenses,8000.00
+prior_nav_per_unit,3.2600

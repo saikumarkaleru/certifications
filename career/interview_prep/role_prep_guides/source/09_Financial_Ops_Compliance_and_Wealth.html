@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Georgia","Cambria",serif; font-size: 10.5pt; line-height: 1.5; color: #1a1a1a; }
+  h1,h2,h3,.cover-kicker,.cover-sub,.ex-h,.q,th { font-family: "Calibri","Segoe UI",sans-serif; }
+
+  /* Cover */
+  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+  .cover-kicker { font-size: 11pt; font-weight: 700; letter-spacing: 2px; color: #1f4e79; text-transform: uppercase; }
+  .cover-title { font-size: 34pt; font-weight: 800; color: #16365c; margin: 10px 0 6px; line-height: 1.1; }
+  .cover-sub { font-size: 12pt; color: #444; font-style: italic; }
+  .cover-foot { margin-top: 22px; font-size: 10pt; color: #666; font-family:"Calibri",sans-serif; }
+
+  /* TOC */
+  .toc { page-break-after: always; }
+  .toc h2 { border: none; }
+  .toc ol { margin-left: 20px; font-family:"Calibri",sans-serif; font-size: 11pt; line-height: 1.9; }
+
+  /* Headings */
+  h2 { font-size: 16pt; font-weight: 700; color: #16365c; border-bottom: 2px solid #16365c;
+       padding-bottom: 4px; margin: 18px 0 10px; page-break-after: avoid; }
+  h3 { font-size: 12.5pt; font-weight: 700; color: #1f4e79; margin: 14px 0 5px; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; color: #333; margin: 10px 0 4px; font-family:"Calibri",sans-serif; }
+  p { margin: 5px 0; text-align: justify; }
+  ul, ol { margin: 5px 0 5px 22px; }
+  li { margin-bottom: 3px; }
+  b, strong { color: #16365c; }
+
+  /* Formula box */
+  .formula { background: #f4f7fb; border-left: 4px solid #1f4e79; padding: 8px 12px; margin: 8px 0;
+             font-family: "Cambria Math","Cambria",serif; page-break-inside: avoid; }
+  .formula b { color: #16365c; }
+  .formula .where { font-size: 9.3pt; color: #555; margin-top: 3px; font-family:"Calibri",sans-serif; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 9px 0; font-size: 9.6pt; page-break-inside: avoid; }
+  th { background: #16365c; color: #fff; text-align: left; padding: 5px 8px; font-size: 9.6pt; }
+  td { border: 1px solid #cbd5e1; padding: 4px 8px; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f4f7fb; }
+
+  /* Worked example */
+  .example { border: 1px solid #b7c7dd; border-radius: 4px; padding: 9px 12px; margin: 10px 0;
+             background: #fbfdff; page-break-inside: avoid; }
+  .ex-h { font-weight: 700; color: #1f4e79; font-size: 10.5pt; margin-bottom: 4px; }
+
+  /* Q&A */
+  .qa { margin: 8px 0; page-break-inside: avoid; }
+  .qa .q { font-weight: 700; color: #16365c; }
+  .qa .a { margin-top: 2px; }
+
+  /* Trap / takeaway callouts */
+  .trap { background: #fff6f0; border-left: 4px solid #c26a2c; padding: 6px 11px; margin: 8px 0; font-size: 10pt; }
+  .keytake { background: #f0f7f1; border-left: 4px solid #3f7d45; padding: 8px 12px; margin: 12px 0; }
+
+  .sec { page-break-before: always; }   /* put on an <h2> to force a fresh page */
+</style></head><body>
+
+<div class="cover">
+  <div class="cover-kicker">Interview Prep · Finance Roles</div>
+  <h1 class="cover-title">Financial Operations, Compliance &amp; Wealth Management</h1>
+  <div class="cover-sub">Investment operations &amp; trade lifecycle · fund accounting &amp; NAV · KYC/AML &amp; financial crime · treasury operations · wealth management &amp; investment advisory.</div>
+  <div class="cover-foot">
+    Target roles: Investment Operations / Middle Office · Fund Accounting · KYC/AML Analyst · Treasury Operations · Wealth Management &amp; Investment Advisory (India).<br>
+    Indian market context throughout: SEBI · RBI · NSDL/CDSL · NISM · PMLA/FIU-IND · BRSR · INR.
+  </div>
+</div>
+
+<div class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li>Investment Operations &amp; the Trade Lifecycle</li>
+    <li>Fund Accounting &amp; NAV</li>
+    <li>KYC / AML / Financial Crime</li>
+    <li>Treasury Operations</li>
+    <li>Wealth Management &amp; Investment Advisory</li>
+    <li>Interview Q&amp;A Bank (76 questions with model answers)</li>
+    <li>Rapid-Fire Glossary &amp; Final Checklist</li>
+  </ol>
+  <p style="margin-top:14px;font-family:'Calibri',sans-serif;font-size:9.5pt;color:#555;">
+  How to use this guide: read a section, then cover the model answers in the Q&amp;A bank and answer aloud. Every worked example is designed to be reproduced on a whiteboard in under three minutes. Numbers used in examples are illustrative; where the guide is unsure of an exact regulatory threshold it says "typically" or "around" on purpose &mdash; never quote a fabricated statute section or cap in an interview.</p>
+</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">1. Investment Operations &amp; the Trade Lifecycle</h2>
+
+<p>Investment operations is the machinery that turns a trading decision into a settled, correctly-recorded position. In an interview for a middle-office or investment-operations role, this is the single most important story you must be able to tell fluently. The examiner is checking whether you understand not just <i>what</i> happens but <i>why</i> each control exists and what breaks when it fails.</p>
+
+<h3>1.1 Front office, middle office, back office</h3>
+<p>A financial institution &mdash; a bank, an asset manager, a broker, or a custodian &mdash; is conventionally split into three "offices". They are not physical rooms; they are a separation of <b>duties</b> designed so that the people who take risk are not the same people who confirm, value, and settle that risk. This segregation of duties is itself a core control against error and fraud.</p>
+
+<table>
+  <thead><tr><th style="width:16%">Office</th><th style="width:42%">What it does</th><th style="width:42%">Typical roles / outputs</th></tr></thead>
+  <tbody>
+    <tr><td><b>Front office</b></td><td>Generates revenue. Takes and prices risk: originating trades, making markets, executing client orders, managing portfolios, advising clients.</td><td>Traders, dealers, portfolio managers, sales, relationship managers. Output: executed orders and P&amp;L.</td></tr>
+    <tr><td><b>Middle office</b></td><td>Controls and measures risk. Sits between front and back. Trade capture validation, risk management, P&amp;L production and attribution, limit monitoring, collateral, some compliance surveillance.</td><td>Risk analysts, product control, trade support, valuations. Output: independent P&amp;L, risk numbers, limit breaches, exception reports.</td></tr>
+    <tr><td><b>Back office</b></td><td>Processes and finalises. Confirmation, clearing, settlement, reconciliation, corporate actions, books-and-records, custody instructions, regulatory reporting.</td><td>Settlements, reconciliations, corporate actions, static data teams. Output: settled trades, reconciled books, clean records.</td></tr>
+  </tbody>
+</table>
+
+<div class="trap"><b>Common trap &mdash; front vs back office:</b> Candidates often collapse "middle" and "back" together, or say the front office "settles trades". The front office <i>never</i> settles its own trades &mdash; that would destroy segregation of duties. If one desk could execute, confirm, value <i>and</i> settle, a single dishonest or careless person could hide losses (the classic rogue-trader failure). Say clearly: front office takes risk; middle office independently measures and controls it; back office confirms and settles it.</p></div>
+
+<h3>1.2 The trade lifecycle end to end</h3>
+<p>The lifecycle is the sequence a single trade travels from decision to final record. Learn it as a chain; each link is a control point where a "break" (mismatch) can occur.</p>
+<ol>
+  <li><b>Order / decision:</b> the portfolio manager or client decides to buy or sell. An order is raised with instrument, side (buy/sell), quantity, and any price limit.</li>
+  <li><b>Execution:</b> the order is routed to a market (exchange) or counterparty and filled at a price. This produces a <i>fill</i> or <i>execution</i>. Large orders may be split into many fills at different prices; the average is the execution price.</li>
+  <li><b>Trade capture / booking:</b> the executed trade is recorded ("booked") into the order-management or trade-capture system with full economic terms &mdash; instrument, quantity, price, trade date, value/settlement date, counterparty, account. Capture is where operations first "sees" the trade.</li>
+  <li><b>Enrichment &amp; validation:</b> static/reference data is attached &mdash; standing settlement instructions (SSIs), account numbers, security identifiers (ISIN), fees, taxes. The middle office validates the trade is economically sensible and within limits.</li>
+  <li><b>Confirmation / affirmation:</b> both sides agree the terms. <b>Confirmation</b> = the two counterparties exchange and match trade details. <b>Affirmation</b> = an institutional client agrees the details captured by its broker/custodian before settlement. Mismatches here are caught <i>before</i> money and securities move.</li>
+  <li><b>Clearing:</b> the clearing corporation steps in, novates the trade (becomes buyer to every seller and seller to every buyer as central counterparty, CCP), nets obligations, and calculates what each member must deliver or receive. Margin is collected to cover the risk between trade and settlement.</li>
+  <li><b>Settlement:</b> the actual exchange &mdash; securities move in the depository and cash moves in the banking system, ideally simultaneously (<b>Delivery versus Payment, DVP</b>). After settlement the buyer legally owns the security and the seller has the cash.</li>
+  <li><b>Reconciliation &amp; record-keeping:</b> internal books are matched against the custodian, depository, and cash accounts. Positions and cash are confirmed to agree with the outside world; any difference is a <i>break</i> to be investigated.</li>
+</ol>
+
+<div class="keytake"><b>Key takeaways &mdash; lifecycle in one breath:</b> Order &rarr; Execution &rarr; Capture/Booking &rarr; Enrichment &rarr; Confirmation/Affirmation &rarr; Clearing (CCP novation + netting + margin) &rarr; Settlement (DVP) &rarr; Reconciliation. Trade date is when you deal; settlement date is when securities and cash actually change hands.</div>
+
+<h3>1.3 Trade date, settlement date and T+1 in India</h3>
+<p>The gap between <b>trade date (T)</b> and <b>settlement date</b> is expressed as "T plus n business days". Historically Indian equities settled at T+2. The Indian market moved to <b>T+1 settlement</b> for the cash equity segment (phased in through 2022&ndash;2023), meaning a trade done today settles the next business day. SEBI has also been piloting an optional shorter cycle. T+1 reduces <b>settlement risk</b> (less time for a counterparty to fail) and frees up capital and margin faster, but it compresses the operational window: confirmation, funding, and securities availability must all be sorted within a day.</p>
+<p>Why settlement is not instant everywhere: cash and securities must be gathered, netted, funded, and delivered; shorter cycles demand more automation and pre-funding. The general direction of travel globally (India, US) is toward shorter cycles.</p>
+
+<div class="formula"><b>Delivery versus Payment (DVP) &mdash; the core principle</b><br>
+Securities are delivered <i>if and only if</i> the corresponding payment is made, simultaneously.
+<div class="where">Purpose: eliminate <b>principal risk</b> &mdash; the risk that you deliver securities but never receive the cash (or pay cash but never receive the securities). DVP links the two legs so neither can happen without the other.</div></div>
+
+<h3>1.4 The market infrastructure: custodians, clearing corporations, depositories</h3>
+<p>These are the institutions that make settlement safe. Know the Indian names.</p>
+<ul>
+  <li><b>Depositories &mdash; NSDL and CDSL (India):</b> hold securities in <i>dematerialised</i> (electronic) form. Your shares sit in a demat account. NSDL (National Securities Depository Limited) and CDSL (Central Depository Services Limited) are the two Indian depositories. On settlement, securities move by book entry between demat accounts &mdash; no paper certificates.</li>
+  <li><b>Clearing corporations / CCPs:</b> guarantee settlement by becoming the central counterparty. In India, entities such as the NSE's clearing arm (NSE Clearing) and Indian Clearing Corporation (for BSE) net trades, manage margins, run the settlement guarantee fund, and step in if a member defaults. Novation is what lets them guarantee: they replace bilateral exposure with exposure to the CCP.</li>
+  <li><b>Custodians:</b> hold assets on behalf of institutional investors (FPIs, mutual funds, insurers), settle trades against the depository, safe-keep securities, collect income (dividends, coupons), process corporate actions, and provide reporting. The custodian is the asset manager's operational agent in the market.</li>
+  <li><b>Registrar &amp; Transfer Agents (RTAs):</b> for mutual funds (e.g., CAMS, KFin) they maintain unit-holder records, process subscriptions/redemptions and pay distributions.</li>
+</ul>
+
+<h3>1.5 Reconciliations, breaks and exception management</h3>
+<p>Reconciliation is the daily discipline of proving that your internal records match an independent external source. If they do not, you have a <b>break</b>. Managing breaks &mdash; investigating, escalating and clearing them &mdash; is the daily bread of investment operations.</p>
+<ul>
+  <li><b>Position (stock) reconciliation:</b> internal holdings vs the custodian/depository record, security by security. A break means you think you hold a different quantity than the custodian shows.</li>
+  <li><b>Cash reconciliation:</b> internal cash ledger vs the bank/custody cash account. Breaks arise from missing fees, wrong value dates, failed receipts, or unbooked income.</li>
+  <li><b>Nostro reconciliation:</b> a <b>nostro</b> is "our" account held with another (usually foreign) bank in that bank's currency ("our money with you"). A <b>vostro</b> is "your money with us". Nostro recs match the bank's own ledger of what it thinks is in the nostro against the statement the foreign bank actually sends.</li>
+</ul>
+<p><b>Exception management</b> is the workflow around breaks: identify &rarr; classify (timing difference vs real difference) &rarr; assign owner &rarr; investigate root cause &rarr; resolve or escalate &rarr; age and report. A <i>timing break</i> clears itself (e.g., the other side books tomorrow); a <i>real break</i> needs correction. Aged, un-cleared breaks are a red flag for auditors and can hide losses or fraud.</p>
+
+<div class="example"><div class="ex-h">Worked Example 1 &mdash; A reconciliation break</div>
+<p><b>Situation:</b> Your fund's books show a holding of <b>50,000</b> shares of Company X. The custodian's statement shows <b>49,000</b> shares. There is a <b>1,000-share break</b>.</p>
+<p><b>Investigation steps:</b></p>
+<ol>
+  <li>Check for <i>unsettled trades</i>: was there a buy of 1,000 shares on trade date that has not yet settled at the custodian? If so, this is a <b>timing break</b> &mdash; your book has already recognised the trade; the custodian will show it after settlement (T+1). It will self-clear.</li>
+  <li>Check <i>corporate actions</i>: did a bonus/split or a partial redemption affect one side but not the other?</li>
+  <li>Check <i>booking errors</i>: was the quantity fat-fingered (e.g., 50,000 vs 49,000), or was a trade booked to the wrong account?</li>
+  <li>Check <i>failed settlement</i>: did a delivery fail because the counterparty did not deliver shares?</li>
+</ol>
+<p><b>Resolution:</b> Suppose the buy of 1,000 shares traded today (T) and settles tomorrow (T+1). The custodian legitimately shows 49,000 today. The break is a genuine <b>timing difference</b>; you document it, mark it "pending settlement", and confirm it clears the next day. Had there been no pending trade, you would treat it as a <b>real break</b>, freeze the position, and escalate &mdash; a missing 1,000 shares could be a mis-booking or a failed delivery that must be corrected before it affects NAV or client reporting.</p></div>
+
+<h3>1.6 Corporate actions processing</h3>
+<p>A <b>corporate action</b> is an event initiated by an issuer that affects its securities and therefore the holders. Operations must capture the event, calculate entitlements, and apply the right cash or stock to each holder &mdash; accurately and on time. Errors directly hit client value.</p>
+<table>
+  <thead><tr><th style="width:22%">Type</th><th style="width:39%">Meaning</th><th style="width:39%">Examples</th></tr></thead>
+  <tbody>
+    <tr><td><b>Mandatory</b></td><td>Automatic; the holder has no choice. Operations simply applies the entitlement.</td><td>Cash dividend, bonus issue, stock split, coupon payment, mandatory redemption, spin-off.</td></tr>
+    <tr><td><b>Voluntary</b></td><td>The holder must actively elect; operations must collect and submit instructions by a deadline.</td><td>Rights issue (take up or lapse), tender/buyback offer, optional dividend (cash or scrip), conversion of a convertible.</td></tr>
+    <tr><td><b>Mandatory with options</b></td><td>The event happens automatically but the holder may choose between forms.</td><td>Dividend with a default of cash but an option to reinvest (scrip).</td></tr>
+  </tbody>
+</table>
+<p>Two dates matter constantly: the <b>record date</b> (who is on the register that day is entitled) and the <b>ex-date</b> (from this date the security trades <i>without</i> the entitlement). A missed voluntary election deadline means the client loses the benefit &mdash; a direct, measurable operational loss, so corporate-actions teams are deadline-obsessed.</p>
+
+<h3>1.7 Allocation, netting and the role of prime brokers</h3>
+<p>Two mechanics deserve a closer look because interviewers probe them.</p>
+<p><b>Allocation</b> sits between execution and confirmation. A fund manager often places one large "block" order across several client accounts or sub-funds, gets it filled at various prices, and then must <b>allocate</b> the fills fairly to each account &mdash; usually at the average price, pro-rata to the intended split, following a documented, pre-decided allocation policy so no account is cherry-picked the best fills. Allocation must be done promptly and fairly; doing it <i>after</i> seeing which trades worked (to favour one account) is an abuse.</p>
+<p><b>Netting</b> reduces how much actually has to move. Two flavours:</p>
+<ul>
+  <li><b>Position/settlement netting:</b> if you bought 1,000 and sold 400 of the same security for the same settlement date, you settle the <b>net 600</b> rather than both gross legs. Less to deliver = less settlement risk and lower cost.</li>
+  <li><b>Multilateral netting</b> at the CCP: across all members, each member has a single net obligation per security and per cash currency instead of thousands of bilateral ones. This is a major reason CCPs exist.</li>
+</ul>
+<p><b>Prime brokers</b> serve hedge funds and active managers as a one-stop counterparty: they execute and clear trades, provide <b>financing and leverage</b> (margin lending), lend securities to enable <b>short selling</b>, hold assets in custody, and produce consolidated reporting. The prime broker bundles the operational plumbing a fund would otherwise assemble from many providers.</p>
+
+<h3>1.8 Static / reference data, trade fails and buy-ins</h3>
+<p><b>Static (reference) data</b> is the slow-changing master data that every trade relies on &mdash; security identifiers (ISIN, ticker), counterparty and account details, <b>standing settlement instructions (SSIs)</b>, calendars, fee schedules, corporate-action terms. It is called "static" because it changes rarely, but a single wrong SSI or ISIN causes trades to fail or settle to the wrong place. Clean reference data is an unglamorous but critical control; a dedicated static-data team owns it.</p>
+<p>A <b>trade fail</b> occurs when a trade does not settle on the agreed date &mdash; typically the seller cannot deliver the securities (a short or an unreceived incoming delivery) or the buyer has not funded the cash. Fails create reconciliation breaks, may attract <b>penalties</b>, and expose the non-failing party to replacement risk. If a fail persists, the clearing corporation can invoke a <b>buy-in</b>: it goes into the market, buys the undelivered securities on behalf of the buyer who was let down, and charges the cost (including any price difference) to the failing seller. The threat of a buy-in is what disciplines timely delivery.</p>
+
+<div class="keytake"><b>Key takeaways &mdash; Section 1:</b> Segregation of duties (front takes risk, middle controls, back settles) is the foundation. The lifecycle is a chain of control points ending in reconciliation. Block orders are <b>allocated</b> fairly at average price; the CCP <b>novates</b> and <b>multilaterally nets</b>. India settles cash equities at T+1; DVP removes principal risk. NSDL/CDSL hold demat securities; clearing corporations act as CCP through novation and margining; custodians safe-keep and settle for institutions; <b>prime brokers</b> finance and service hedge funds. <b>Static/reference data</b> (SSIs, ISINs) underpins clean settlement. Breaks are either timing (self-clearing) or real (must be fixed); an unresolved fail can trigger a <b>buy-in</b>. Corporate actions are mandatory or voluntary &mdash; missing a voluntary deadline is a real loss.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">2. Fund Accounting &amp; NAV</h2>
+
+<p>Fund accounting is the independent production of a fund's books and, above all, its <b>Net Asset Value (NAV)</b> &mdash; the price at which investors buy and sell units. Fund accounting sits in the back/middle office of an asset manager or, more often, at a third-party <b>fund administrator</b>. In an interview the examiner wants to see that you can compute a NAV, explain what moves it, and understand why an error is serious.</p>
+
+<h3>2.1 What a fund is</h3>
+<p>A <b>fund</b> is a pooled investment vehicle: many investors contribute money, which is invested collectively in a portfolio of securities according to a stated mandate. Each investor owns <b>units</b> (mutual funds) or shares proportional to their contribution. Pooling gives small investors diversification, professional management, and economies of scale. The fund itself is a legal structure (in India, mutual funds are set up as trusts regulated by SEBI, with a sponsor, trustee, and asset management company/AMC).</p>
+
+<h3>2.2 NAV &mdash; the central calculation</h3>
+<div class="formula"><b>Net Asset Value (NAV) per unit</b><br>
+NAV per unit = ( Total Assets &minus; Total Liabilities ) / Number of units outstanding<br>
+= Net Assets / Units outstanding
+<div class="where">Total Assets = market value of all securities + cash + accrued income (dividends/interest earned but not yet received) + receivables.<br>
+Total Liabilities = accrued expenses (management fee, admin, audit) + payables + any borrowings.<br>
+Units outstanding = total units held by all investors after that day's subscriptions and redemptions.</div></div>
+
+<p>The value of the securities is the largest and most volatile input, so <b>pricing (valuation)</b> is done carefully:</p>
+<ul>
+  <li><b>Exchange-traded securities</b> (equities, listed bonds): use the day's closing/last-traded market price. This is "mark to market".</li>
+  <li><b>Debt securities</b> that trade thinly: valued using prices/yields from valuation agencies (in India, agencies provide security-level valuations that AMCs use), i.e. "mark to model / matrix pricing" where no live quote exists.</li>
+  <li><b>Fair valuation:</b> when a market price is stale, unavailable, or unreliable (a suspended stock, a market holiday abroad), a documented fair-value policy is applied so the NAV reflects true worth and no investor is advantaged by dealing at a wrong price.</li>
+</ul>
+
+<h3>2.3 Income and expense accruals</h3>
+<p>Funds use <b>accrual accounting</b>: income and expenses are recognised as they are <i>earned or incurred</i>, not when cash moves. This keeps the NAV fair to investors dealing on any given day.</p>
+<ul>
+  <li><b>Income accrual:</b> interest on a bond accrues daily; a declared-but-unpaid dividend is booked as a receivable. If you did not accrue, the NAV would jump the day cash arrived, unfairly rewarding whoever happened to hold on that day.</li>
+  <li><b>Expense accrual:</b> the management fee, trustee fee, custody, audit, and admin costs are accrued daily so each day's NAV bears its fair share. The bundle of recurring costs charged to the fund is the <b>Total Expense Ratio (TER)</b>.</li>
+</ul>
+
+<div class="formula"><b>Total Expense Ratio (TER)</b><br>
+TER (% p.a.) = Total annual recurring expenses / Average net assets &times; 100
+<div class="where">Recurring expenses = management/investment fee + admin + trustee + custody + audit + distribution/commission (in "regular" plans) + GST on fees.<br>
+TER is expressed as an annual percentage but accrued <i>daily</i> in the NAV. SEBI caps TER on a sliding scale &mdash; larger funds must charge a lower percentage; "direct" plans have lower TER than "regular" plans because they exclude distributor commission. (Treat exact caps as tiered/"around" values, not fixed numbers, in interview.)</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 2 &mdash; Computing NAV per unit</div>
+<p><b>Fund position at day close:</b></p>
+<ul>
+  <li>Equities at market value: &#8377;480,00,000 (&#8377;48.0 crore)</li>
+  <li>Cash and bank: &#8377;15,00,000</li>
+  <li>Accrued interest &amp; dividend receivable: &#8377;2,00,000</li>
+  <li>Accrued expenses payable (mgmt fee, admin, audit): &#8377;3,00,000</li>
+  <li>Units outstanding: 50,00,000 units</li>
+</ul>
+<p><b>Step 1 &mdash; Total assets:</b> 480,00,000 + 15,00,000 + 2,00,000 = <b>&#8377;497,00,000</b>.</p>
+<p><b>Step 2 &mdash; Net assets:</b> 497,00,000 &minus; 3,00,000 (liabilities) = <b>&#8377;494,00,000</b>.</p>
+<p><b>Step 3 &mdash; NAV per unit:</b> 494,00,000 / 50,00,000 = <b>&#8377;9.88 per unit</b>.</p>
+<p><b>Interpretation:</b> an investor buying today pays &#8377;9.88 per unit; one redeeming receives &#8377;9.88 (before any exit load). Note how the accrued expenses of &#8377;3,00,000 lowered NAV by &#8377;0.06 per unit &mdash; expenses are a daily drag baked into the price.</p></div>
+
+<h3>2.4 Capital activity: subscriptions and redemptions</h3>
+<p>Every day investors put money in (<b>subscriptions</b>) and take money out (<b>redemptions</b>). This changes units outstanding but, done correctly, does <i>not</i> change NAV per unit:</p>
+<ul>
+  <li><b>Subscription:</b> money in &divide; NAV = new units created. Assets and units rise together, so NAV per unit is unchanged.</li>
+  <li><b>Redemption:</b> units cancelled &times; NAV = cash paid out. Assets and units fall together; NAV per unit unchanged.</li>
+</ul>
+<p>This is why funds are called "open-ended": units are created and cancelled on demand at NAV. The key control is that capital activity must be struck at the <i>correct</i> NAV for the applicable cut-off time, so no dealing investor gains at the expense of remaining investors.</p>
+
+<h3>2.5 Distributions and the expense ratio's bite</h3>
+<p>When a fund pays a <b>dividend/distribution</b> (in Indian mutual funds the "IDCW" &mdash; Income Distribution cum Capital Withdrawal &mdash; option), NAV falls by exactly the per-unit amount distributed. The investor is not richer; value simply moves from inside the fund (higher NAV) to their pocket (cash). A "growth" option pays nothing and lets the NAV compound.</p>
+
+<div class="example"><div class="ex-h">Worked Example 3 &mdash; TER's impact on long-run returns</div>
+<p><b>Question:</b> Two funds earn the same 10% gross annual return. Fund A (a "regular" plan) charges TER of <b>1.8%</b>; Fund B (a "direct" plan) charges <b>0.8%</b>. What does the 1.0% TER gap cost over 10 years on &#8377;10,00,000?</p>
+<p><b>Net returns:</b> Fund A nets 10% &minus; 1.8% = <b>8.2%</b>; Fund B nets 10% &minus; 0.8% = <b>9.2%</b>.</p>
+<p><b>Growth of &#8377;10,00,000 over 10 years</b> (compounded):</p>
+<ul>
+  <li>Fund A: 10,00,000 &times; (1.082)<sup>10</sup> &asymp; 10,00,000 &times; 2.202 = <b>&#8377;22,02,000</b> (approx).</li>
+  <li>Fund B: 10,00,000 &times; (1.092)<sup>10</sup> &asymp; 10,00,000 &times; 2.412 = <b>&#8377;24,12,000</b> (approx).</li>
+</ul>
+<p><b>Cost of the 1% TER gap:</b> roughly <b>&#8377;2,10,000</b> over ten years &mdash; more than 20% of the original investment &mdash; purely from a 1% annual fee difference compounding. This is exactly why direct plans and low-cost funds matter, and why an adviser must be able to explain TER clearly.</p></div>
+
+<h3>2.6 Types of funds, the administrator, and NAV errors</h3>
+<table>
+  <thead><tr><th style="width:22%">Vehicle</th><th style="width:78%">What it is (high level, Indian context)</th></tr></thead>
+  <tbody>
+    <tr><td><b>Mutual Fund (MF)</b></td><td>Pooled, open-ended (or close-ended) SEBI-regulated retail vehicle; daily NAV; strict disclosure, diversification and TER caps; suits the mass retail investor.</td></tr>
+    <tr><td><b>Portfolio Management Service (PMS)</b></td><td>Discretionary or non-discretionary management of an <i>individual</i> portfolio for HNIs; securities held in the client's own name/demat; high minimum investment (a large ticket set by SEBI); fees negotiable; less standardised than MFs.</td></tr>
+    <tr><td><b>Alternative Investment Fund (AIF)</b></td><td>Privately pooled vehicle for sophisticated investors, categorised I / II / III (e.g., venture/infra, private equity/debt, hedge-style). High minimum commitment; lighter retail protections; SEBI-registered.</td></tr>
+  </tbody>
+</table>
+<p>The <b>fund administrator</b> is the independent third party (or in-house team) that keeps the fund's books: it strikes the NAV daily, does the security pricing, accrues income and expenses, processes capital activity, reconciles to the custodian, and produces investor and regulatory reporting. Independence from the portfolio manager is the point &mdash; the people who value the fund should not be the people who chose the investments.</p>
+
+<p><b>NAV error and its impact:</b> a NAV is wrong if a security was mis-priced, an accrual was missed, a corporate action was not applied, or units were mis-counted. The impact is direct and asymmetric: investors who dealt at the wrong NAV were either overcharged or overpaid. If the error exceeds a materiality threshold (commonly expressed as a small percentage of NAV), the fund must correct the NAV, compensate harmed investors, and often report the incident. This is why NAV production has multiple checks: automated tolerance alerts (today's NAV vs yesterday's, vs a benchmark move), four-eyes review, and price-source validation.</p>
+
+<div class="trap"><b>Common trap &mdash; NAV per unit vs total NAV:</b> "NAV" in conversation usually means <b>NAV per unit</b> (a price, e.g., &#8377;9.88). "Total NAV" or "net assets" means the whole fund's value (e.g., &#8377;494 crore). A subscription raises <i>total</i> net assets and units but leaves <i>per-unit</i> NAV unchanged. Do not say "the fund grew because NAV went up" if units also changed &mdash; distinguish size (net assets) from price (per-unit NAV).</p></div>
+
+<h3>2.7 The fair-value hierarchy</h3>
+<p>Accounting standards classify how reliable a valuation input is on a three-level <b>fair-value hierarchy</b>. Know it as Level 1/2/3.</p>
+<table>
+  <thead><tr><th style="width:16%">Level</th><th style="width:44%">Input</th><th style="width:40%">Examples</th></tr></thead>
+  <tbody>
+    <tr><td><b>Level 1</b></td><td>Quoted prices in an active market for the <i>identical</i> asset &mdash; the most reliable, "mark to market".</td><td>A listed equity's closing price; an exchange-traded fund.</td></tr>
+    <tr><td><b>Level 2</b></td><td>Observable inputs <i>other than</i> Level 1 quotes &mdash; prices of similar assets, yields, benchmark curves. "Mark to model" using market data.</td><td>A thinly-traded corporate bond valued off comparable yields; most OTC derivatives.</td></tr>
+    <tr><td><b>Level 3</b></td><td>Unobservable inputs &mdash; the firm's own assumptions/models. Least reliable, most judgemental, most disclosure.</td><td>An unlisted private-equity stake; a complex illiquid structured note.</td></tr>
+  </tbody>
+</table>
+<p>The higher the level number, the more judgement and the greater the valuation risk &mdash; Level 3 holdings attract the most scrutiny from auditors and valuation committees because there is no market to check them against.</p>
+
+<h3>2.8 Management fees, performance fees, hurdle and high-water mark</h3>
+<p>Beyond the flat management fee, many private funds (AIFs, PMS, hedge funds, PE/VC) charge a <b>performance fee</b> &mdash; a share of the profits. Three concepts govern it:</p>
+<ul>
+  <li><b>Management fee:</b> a flat annual percentage of assets (or committed capital) &mdash; the classic "2" in "2 and 20". Paid regardless of performance, to run the firm.</li>
+  <li><b>Performance/incentive fee (carried interest):</b> a share of profits &mdash; the "20" (i.e., 20%). In PE/VC the manager's profit share is called <b>carried interest ("carry")</b>.</li>
+  <li><b>Hurdle rate:</b> a minimum return the fund must clear <i>before</i> any performance fee is earned &mdash; e.g., the manager takes carry only on returns above 8% p.a. It protects the investor from paying for mediocre performance.</li>
+  <li><b>High-water mark (HWM):</b> the highest NAV previously reached on which a performance fee has already been paid. The manager earns a performance fee only on <b>new</b> profits above the HWM &mdash; so investors never pay twice for recovering the same lost ground after a drawdown.</li>
+</ul>
+
+<div class="formula"><b>Performance fee with a high-water mark</b><br>
+Fee = Performance rate &times; ( Ending NAV &minus; High-water mark ) &times; units &nbsp; <i>[only if Ending NAV &gt; HWM]</i>
+<div class="where">If Ending NAV &le; the high-water mark, no performance fee is charged &mdash; the fund must first recover past losses. A hurdle rate, if present, raises the threshold further (fee only on the excess above the hurdle).</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 4A &mdash; High-water-mark performance fee</div>
+<p><b>Setup:</b> A fund charges a <b>20% performance fee</b> above a high-water mark, no hurdle. An investor holds <b>1,00,000 units</b>. The high-water mark is <b>&#8377;100</b> per unit (the last peak on which fees were paid).</p>
+<p><b>Year 1:</b> NAV falls to <b>&#8377;90</b>. Ending NAV (&#8377;90) is below the HWM (&#8377;100), so <b>no performance fee</b> &mdash; the manager earns nothing extra for a loss year.</p>
+<p><b>Year 2:</b> NAV recovers to <b>&#8377;110</b>. The fee is charged only on the gain <i>above the &#8377;100 HWM</i>, not on the recovery from &#8377;90 to &#8377;100:</p>
+<ul>
+  <li>Profit above HWM per unit = &#8377;110 &minus; &#8377;100 = <b>&#8377;10</b>.</li>
+  <li>Performance fee = 20% &times; &#8377;10 &times; 1,00,000 units = <b>&#8377;2,00,000</b>.</li>
+</ul>
+<p><b>Point:</b> without a HWM the manager would have charged 20% on the &#8377;90&rarr;&#8377;110 rise (&#8377;20/unit = &#8377;4,00,000), making the investor <i>pay twice</i> to recover ground already lost. The high-water mark exists precisely to prevent that. The new HWM becomes &#8377;110.</p></div>
+
+<h3>2.9 Open vs closed-ended funds; PE/VC capital calls, distributions and the waterfall</h3>
+<p><b>Open-ended vs closed-ended:</b> an <b>open-ended</b> fund (most mutual funds) continuously creates and cancels units at NAV on demand &mdash; you subscribe/redeem with the fund itself. A <b>closed-ended</b> fund issues a fixed number of units for a fixed term; you exit by selling to another investor (often on an exchange), not back to the fund, so its market price can differ from NAV (a premium or discount). Most PE/VC and many AIF structures are closed-ended with a defined life.</p>
+<p><b>Private equity / venture capital mechanics:</b> investors (LPs) do not hand over all their money upfront. They make a <b>commitment</b>; the manager (GP) then issues <b>capital calls (drawdowns)</b> as deals are found, and returns money through <b>distributions</b> as investments are exited.</p>
+<ul>
+  <li><b>Commitment:</b> the total an LP promises (e.g., &#8377;10 crore).</li>
+  <li><b>Capital call / drawdown:</b> the GP calls a portion when needed to fund an investment or fees.</li>
+  <li><b>Distribution:</b> proceeds from exits returned to LPs.</li>
+</ul>
+<p><b>The distribution waterfall</b> is the agreed order in which exit proceeds are shared between LPs and the GP (concept &mdash; state the sequence, not exact percentages):</p>
+<ol>
+  <li><b>Return of capital:</b> LPs first get back the capital they contributed.</li>
+  <li><b>Preferred return (hurdle):</b> LPs then receive a minimum return on that capital (e.g., ~8%) before the GP shares profit.</li>
+  <li><b>GP catch-up:</b> the GP then receives a larger slice until its share of profit above the hurdle reaches the agreed carry ratio.</li>
+  <li><b>Carried-interest split:</b> remaining profits are split in the agreed ratio (commonly ~80% LP / ~20% GP carry).</li>
+</ol>
+
+<h3>2.10 AIF categories, hedge funds and swing pricing</h3>
+<p>SEBI groups <b>Alternative Investment Funds</b> into three categories &mdash; a common Indian interview check:</p>
+<table>
+  <thead><tr><th style="width:16%">AIF</th><th style="width:52%">Focus (concept)</th><th style="width:32%">Examples</th></tr></thead>
+  <tbody>
+    <tr><td><b>Category I</b></td><td>Socially/economically desirable investments that regulators encourage; generally no leverage.</td><td>Venture capital, SME, infrastructure, social-venture funds.</td></tr>
+    <tr><td><b>Category II</b></td><td>Funds that don't fall in I or III and don't use significant leverage (except for operations).</td><td>Private equity, private credit/debt, real-estate funds.</td></tr>
+    <tr><td><b>Category III</b></td><td>Funds using complex/diverse strategies and allowed leverage; often seek short-term returns.</td><td>Hedge funds, long-short equity funds.</td></tr>
+  </tbody>
+</table>
+<p>A <b>hedge fund</b> is a lightly-regulated pooled vehicle for sophisticated investors that uses flexible strategies &mdash; long/short, leverage, derivatives, arbitrage &mdash; to seek "absolute" returns, typically charging a management <i>and</i> performance fee (with HWM/hurdle). In India, hedge-style funds sit in AIF Category III.</p>
+<p><b>Swing pricing (concept):</b> a mechanism to protect existing investors from the dealing costs caused by large inflows/outflows. On a day of heavy net redemptions, the NAV used for that day's dealing is "swung" slightly downward (and upward for heavy net subscriptions), so the transacting investors &mdash; not the remaining ones &mdash; bear the trading costs their activity created. It keeps the fund fair to those who stay put.</p>
+
+<div class="keytake"><b>Key takeaways &mdash; Section 2:</b> NAV per unit = (assets &minus; liabilities) / units. Securities are marked to market; illiquid ones are fair-valued on the <b>Level 1/2/3 hierarchy</b> (higher level = more judgement). Income and expenses accrue daily. TER compounds into a large drag &mdash; direct &lt; regular. Subscriptions/redemptions change units and net assets together, not per-unit NAV; <b>swing pricing</b> makes dealers bear their own costs. Private funds add a <b>performance fee</b> above a <b>hurdle</b> and <b>high-water mark</b> (carried interest in PE/VC). PE/VC use commitments, <b>capital calls</b> and a <b>distribution waterfall</b> (return of capital &rarr; preferred return &rarr; GP catch-up &rarr; carry split). AIFs are Cat I/II/III; hedge funds sit in Cat III. The administrator independently strikes NAV; a material error means correction and compensation.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">3. KYC / AML / Financial Crime</h2>
+
+<p>Anti-money-laundering (AML) and Know-Your-Customer (KYC) work protects the financial system from being used to hide criminal money and to fund terrorism. For KYC/AML analyst roles this section is the heart of the interview. The examiner wants precise, calm, accurate answers &mdash; this is a compliance role and sloppiness signals risk.</p>
+
+<h3>3.1 The three stages of money laundering</h3>
+<p>Money laundering is the process of making "dirty" money (proceeds of crime) look "clean" (legitimate). It is classically described in three stages. This is the single most-asked AML question &mdash; know it cold.</p>
+<table>
+  <thead><tr><th style="width:16%">Stage</th><th style="width:42%">What happens</th><th style="width:42%">Typical methods / red flags</th></tr></thead>
+  <tbody>
+    <tr><td><b>1. Placement</b></td><td>Dirty cash first enters the financial system. The riskiest stage for the criminal because cash is conspicuous.</td><td>Cash deposits, buying chips/instruments, <b>structuring/smurfing</b> (many small deposits below reporting thresholds), cash-intensive businesses.</td></tr>
+    <tr><td><b>2. Layering</b></td><td>The money is moved through complex layers of transactions to obscure its origin and break the audit trail.</td><td>Rapid transfers between accounts and jurisdictions, shell companies, back-to-back loans, buying and selling assets, converting to other instruments.</td></tr>
+    <tr><td><b>3. Integration</b></td><td>The now-obscured money re-enters the economy looking legitimate, available for the criminal to use openly.</td><td>Buying real estate, luxury goods, businesses; false invoicing; "clean" investment returns and salaries.</td></tr>
+  </tbody>
+</table>
+
+<h3>3.2 KYC and Customer Due Diligence (CDD/EDD)</h3>
+<p><b>KYC</b> is the process of identifying and verifying who a customer really is before and during a relationship. It is the foundation on which all AML controls stand &mdash; you cannot monitor or report on a customer you have not properly identified.</p>
+<ul>
+  <li><b>Customer Due Diligence (CDD):</b> the standard process &mdash; identify the customer, verify identity from reliable documents (in India: PAN, Aadhaar/officially valid documents), understand the purpose and intended nature of the relationship, and identify the source of funds where relevant.</li>
+  <li><b>Simplified DD:</b> lighter checks for genuinely low-risk customers/products (where permitted).</li>
+  <li><b>Enhanced Due Diligence (EDD):</b> deeper checks for higher-risk customers &mdash; more documentation, source-of-wealth evidence, senior sign-off, and closer ongoing monitoring. Triggered by high-risk factors below.</li>
+  <li><b>Ongoing due diligence:</b> KYC is not one-and-done. Records are periodically refreshed ("re-KYC"/KYC refresh) &mdash; more frequently for high-risk, less for low-risk &mdash; and transactions are monitored against the expected profile.</li>
+</ul>
+
+<h4>Customer risk categorisation</h4>
+<p>Every customer is risk-rated (commonly <b>Low / Medium / High</b>) using a risk-based approach. Factors that raise risk:</p>
+<ul>
+  <li><b>Customer type:</b> PEPs, cash-intensive businesses, complex ownership structures, non-face-to-face onboarding.</li>
+  <li><b>Geography:</b> links to high-risk or sanctioned jurisdictions, or jurisdictions with weak AML controls.</li>
+  <li><b>Product/channel:</b> products that allow anonymity, rapid movement of funds, or cross-border transfers.</li>
+</ul>
+<p>The risk rating drives how much due diligence and monitoring the customer gets. This is the <b>risk-based approach</b> that underpins modern AML: spend effort where risk is highest.</p>
+
+<h4>Beneficial ownership</h4>
+<p>The <b>Ultimate Beneficial Owner (UBO)</b> is the natural person(s) who ultimately owns or controls a customer (e.g., an individual owning above a threshold of a company, or who otherwise controls it). Criminals hide behind shell companies and trusts, so identifying the flesh-and-blood person behind an entity is essential &mdash; you must "look through" the structure to the real human beneficiary.</p>
+
+<h4>Politically Exposed Persons (PEPs)</h4>
+<p>A <b>PEP</b> is a person entrusted with a prominent public function (senior politicians, judges, military officers, heads of state-owned enterprises), plus their close family and associates. PEPs are higher risk not because they are criminals but because their position creates greater opportunity and exposure to bribery/corruption. PEPs generally attract EDD, senior approval to onboard, and source-of-wealth scrutiny.</p>
+
+<h3>3.3 The pillars of an AML program</h3>
+<p>A compliant AML program rests on a few standard pillars &mdash; a good structured answer for "what makes an AML program":</p>
+<ol>
+  <li><b>Internal policies, controls and governance</b> &mdash; a documented, board-approved AML framework and a risk assessment.</li>
+  <li><b>A designated compliance officer</b> (the Principal/Designated Officer) with authority and independence.</li>
+  <li><b>Ongoing training</b> for staff to recognise and escalate red flags.</li>
+  <li><b>Independent audit/testing</b> of the program's effectiveness.</li>
+  <li><b>CDD and ongoing monitoring</b> &mdash; the KYC engine described above.</li>
+</ol>
+
+<h3>3.4 Transaction monitoring, screening and adverse media</h3>
+<ul>
+  <li><b>Transaction monitoring:</b> automated rules and models watch activity for patterns inconsistent with the customer's known profile &mdash; sudden large transfers, rapid in-and-out (pass-through), structuring, unexpected geographies. Alerts are triaged by analysts; genuine concerns become cases.</li>
+  <li><b>Sanctions &amp; watchlist screening:</b> customers and their transactions are screened against sanctions lists (e.g., UN and, in India, lists notified under the UAPA / by regulators) and other watchlists. A true sanctions match is serious &mdash; you generally must <b>freeze and not proceed</b>, and report as required. Screening must handle name variations (fuzzy matching) and avoid false positives.</li>
+  <li><b>Adverse media (negative news) screening:</b> checking whether a customer appears in credible negative news &mdash; fraud, corruption, organised crime &mdash; which may raise their risk rating or trigger EDD/exit.</li>
+</ul>
+
+<h3>3.5 Suspicious transaction reporting and the Indian framework</h3>
+<p>When monitoring or an analyst identifies activity that has no apparent lawful purpose or is inconsistent with the customer, the institution files a <b>Suspicious Transaction Report (STR)</b> &mdash; called a <b>Suspicious Activity Report (SAR)</b> in some jurisdictions &mdash; with the national financial intelligence unit. Key points:</p>
+<ul>
+  <li>The trigger is <b>suspicion</b>, not proof. You do not need to establish a crime; you report a reasonable suspicion for the authorities to investigate.</li>
+  <li><b>Tipping off is prohibited:</b> you must not tell the customer that a report has been (or may be) filed, or that they are under investigation. Tipping off is itself an offence and defeats the purpose.</li>
+  <li>Reports are confidential and filed through defined channels.</li>
+</ul>
+<p><b>India-specific framework (high level):</b></p>
+<ul>
+  <li>The <b>Prevention of Money Laundering Act (PMLA)</b> is the principal Indian anti-money-laundering statute. It obliges reporting entities (banks, financial institutions, intermediaries) to maintain records, do KYC, and report prescribed transactions.</li>
+  <li><b>FIU-IND (Financial Intelligence Unit &ndash; India)</b> is the national agency that receives, analyses and disseminates suspicious/prescribed transaction reports &mdash; including STRs and cash-based reports (large cash transaction reports and cross-border/counterfeit reports). It is India's central financial-intelligence body.</li>
+  <li><b>FATF (Financial Action Task Force)</b> is the global standard-setter: it issues the internationally recognised AML/CFT recommendations and maintains grey/black lists of jurisdictions with strategic deficiencies. National frameworks (including India's) are built to align with FATF standards; countries undergo FATF mutual evaluations.</li>
+</ul>
+<div class="trap"><b>Accuracy note:</b> quote the <i>concepts</i> &mdash; PMLA, FIU-IND, FATF, STR, tipping-off &mdash; not exact rupee thresholds or statute section numbers unless you are certain. Say "cash transactions above a prescribed threshold are reportable" rather than inventing a figure. Interviewers respect a candidate who is precise about what they do and don't know.</p></div>
+
+<h3>3.6 Red flags to recognise</h3>
+<ul>
+  <li><b>Structuring / smurfing:</b> breaking a large sum into many smaller transactions to stay under reporting thresholds &mdash; a classic placement/layering red flag.</li>
+  <li><b>Rapid movement / pass-through:</b> money in and straight out, leaving little balance &mdash; suggests layering.</li>
+  <li><b>Inconsistency with profile:</b> a small-salaried account suddenly receiving crores; activity unrelated to the stated business.</li>
+  <li><b>Reluctance / evasion:</b> customer unwilling to provide KYC, UBO, or source-of-funds information; use of nominees.</li>
+  <li><b>Unnecessary complexity:</b> convoluted ownership, shell companies, third-party funding with no clear rationale.</li>
+  <li><b>High-risk connections:</b> counterparties in sanctioned or high-risk jurisdictions.</li>
+</ul>
+
+<div class="example"><div class="ex-h">Worked Example 4 &mdash; A simple KYC risk-scoring illustration</div>
+<p><b>Method:</b> many firms score each risk factor and weight them to produce an overall rating. Suppose a simple model scores four factors 1 (low) to 5 (high) and weights them:</p>
+<table>
+  <thead><tr><th style="width:34%">Risk factor</th><th style="width:16%">Score (1&ndash;5)</th><th style="width:16%">Weight</th><th style="width:34%">Weighted = score &times; weight</th></tr></thead>
+  <tbody>
+    <tr><td>Customer type (PEP? entity?)</td><td>4</td><td>0.30</td><td>1.20</td></tr>
+    <tr><td>Geography (jurisdiction risk)</td><td>2</td><td>0.25</td><td>0.50</td></tr>
+    <tr><td>Product / channel</td><td>3</td><td>0.25</td><td>0.75</td></tr>
+    <tr><td>Transaction behaviour</td><td>2</td><td>0.20</td><td>0.40</td></tr>
+    <tr><td><b>Total</b></td><td>&mdash;</td><td><b>1.00</b></td><td><b>2.85</b></td></tr>
+  </tbody>
+</table>
+<p><b>Mapping:</b> if the firm's bands are 1.0&ndash;2.0 = Low, 2.0&ndash;3.5 = Medium, 3.5&ndash;5.0 = High, this customer scores <b>2.85 &rarr; Medium risk</b>. The customer type score of 4 (a PEP) pulled the rating up despite low geography and behaviour scores. <b>Consequence:</b> Medium risk means standard-plus monitoring and a KYC refresh cycle shorter than a low-risk client; had the total crossed 3.5 into High, EDD and senior sign-off would be required. This shows the risk-based approach in action: a single high-weight factor (PEP) can escalate the whole file.</p></div>
+
+<h3>3.7 STR vs CTR &mdash; the two report types</h3>
+<p>Reporting entities file more than one kind of report to FIU-IND. Do not confuse them.</p>
+<table>
+  <thead><tr><th style="width:20%">Report</th><th style="width:40%">Trigger</th><th style="width:40%">Nature</th></tr></thead>
+  <tbody>
+    <tr><td><b>STR</b> (Suspicious Transaction Report)</td><td><b>Suspicion</b> &mdash; activity with no apparent lawful purpose or inconsistent with the customer, of <i>any</i> amount.</td><td>Judgement-based; filed on reasonable suspicion; confidential; never tip off.</td></tr>
+    <tr><td><b>CTR</b> (Cash Transaction Report)</td><td><b>Threshold</b> &mdash; cash transactions above a prescribed value (and series of connected cash transactions), regardless of suspicion.</td><td>Rule/amount-based; filed automatically because the threshold is met, not because anything looks wrong.</td></tr>
+  </tbody>
+</table>
+<p>India's framework also includes reports for cross-border wire transfers and counterfeit-currency transactions. The key distinction: a <b>CTR is mechanical</b> (an amount crossed a line), while an <b>STR is judgemental</b> (a human formed a suspicion). A single transaction can be neither, either, or both.</p>
+<div class="trap"><b>Common trap &mdash; STR vs CTR:</b> Candidates say "we report anything above the threshold as suspicious". Wrong. A <b>CTR</b> is filed <i>because of the amount</i> &mdash; an entirely innocent large cash deposit still generates a CTR. An <b>STR</b> is filed <i>because of suspicion</i> &mdash; it can be a tiny amount. A large cash deal that also looks odd triggers both. Threshold reporting is automatic and objective; suspicious reporting is judgement-based and subjective.</p></div>
+
+<h3>3.8 FATCA / CRS and trade-based money laundering</h3>
+<p><b>FATCA and CRS (tax-transparency regimes &mdash; concept):</b> these are <i>not</i> AML rules but sit beside KYC because firms collect the data during onboarding.</p>
+<ul>
+  <li><b>FATCA (Foreign Account Tax Compliance Act):</b> a US law requiring financial institutions worldwide to identify and report accounts held by <b>US persons</b> to (via the local authority) the US IRS &mdash; aimed at US tax evasion offshore.</li>
+  <li><b>CRS (Common Reporting Standard):</b> the OECD's global, multilateral version &mdash; institutions identify the <b>tax residency</b> of account holders and report to their local tax authority, which exchanges the information with other participating countries. India participates in CRS and FATCA, so onboarding forms ask for tax residency and (for US persons) a US TIN.</li>
+</ul>
+<p><b>Trade-based money laundering (TBML):</b> disguising criminal proceeds by manipulating trade transactions rather than moving cash. Classic techniques:</p>
+<ul>
+  <li><b>Over-/under-invoicing:</b> deliberately mis-stating the price of goods to move value across borders (over-invoice to move money out, under-invoice to move it in).</li>
+  <li><b>Multiple invoicing:</b> issuing several invoices for the same shipment to justify multiple payments.</li>
+  <li><b>Over-/under-shipment or phantom shipment:</b> mis-stating quantity, or shipping nothing at all, so the payment has no honest basis.</li>
+</ul>
+<p>TBML red flags include prices far off market, goods inconsistent with the customer's business, and unusually complex trade routes. It is hard to detect because it hides inside legitimate-looking trade documents.</p>
+
+<div class="keytake"><b>Key takeaways &mdash; Section 3:</b> Laundering = Placement &rarr; Layering &rarr; Integration. KYC/CDD identifies and verifies the customer and the UBO; EDD for high-risk (PEPs, high-risk geographies). Risk-based approach rates each customer Low/Medium/High. AML program pillars: policies + compliance officer + training + independent audit + CDD/monitoring. Screen against sanctions and adverse media. <b>STR = suspicion-based</b> (any amount); <b>CTR = threshold-based</b> (cash above a limit) &mdash; both go to FIU-IND under the PMLA; never tip off. <b>FATCA/CRS</b> are tax-transparency (not AML) regimes captured at onboarding. <b>TBML</b> hides value in mis-invoiced trade. FATF sets global standards. Know the red flags &mdash; structuring, pass-through, profile mismatch.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">4. Treasury Operations</h2>
+
+<p>Treasury is the function that manages an institution's own cash, liquidity, funding and market-risk exposures &mdash; making sure the firm always has the right money, in the right currency, in the right place, at the right time, at acceptable cost and risk. Treasury <b>operations</b> is the execution and settlement side of that: positioning cash, moving funds, settling FX and money-market deals, and controlling settlement risk.</p>
+
+<h3>4.1 Cash and liquidity management</h3>
+<ul>
+  <li><b>Cash positioning:</b> forecasting and knowing, intraday, how much cash the firm has across all its accounts and currencies, so obligations can be met without leaving idle balances. Idle cash earns nothing; a shortfall means costly emergency borrowing or a failed payment.</li>
+  <li><b>Liquidity management:</b> ensuring enough liquid assets/committed funding to meet outflows under both normal and stressed conditions. Banks manage this under regulatory liquidity rules; the principle is to match the timing of inflows and outflows and hold a buffer.</li>
+  <li><b>Funding:</b> raising cash to cover gaps &mdash; interbank borrowing, repo (selling securities with an agreement to buy back), issuing commercial paper/certificates of deposit, or using central-bank facilities. Treasury chooses the cheapest reliable source for the required tenor.</li>
+</ul>
+
+<h3>4.2 Nostro and vostro accounts</h3>
+<p>To move money across currencies and borders, banks hold accounts with each other. The terminology is a frequent interview check:</p>
+<table>
+  <thead><tr><th style="width:16%">Term</th><th style="width:44%">Meaning</th><th style="width:40%">Memory hook</th></tr></thead>
+  <tbody>
+    <tr><td><b>Nostro</b></td><td>Our account, held with another (usually foreign) bank, denominated in that bank's local currency.</td><td>"Nostro = <b>ours</b>" (our money with you). E.g., an Indian bank's USD account at a US bank.</td></tr>
+    <tr><td><b>Vostro</b></td><td>Another bank's account held with us, in our currency.</td><td>"Vostro = <b>yours</b>" (your money with us). E.g., a foreign bank's INR account at an Indian bank.</td></tr>
+  </tbody>
+</table>
+<p>Nostro reconciliation &mdash; matching the bank's internal record of a nostro against the statement the correspondent bank sends &mdash; is a core treasury-operations control, catching missing, duplicated, or mis-valued cross-border payments.</p>
+
+<h3>4.3 Money markets</h3>
+<p>The <b>money market</b> is where short-term (typically up to one year) funds are borrowed and lent. It is treasury's main tool for managing day-to-day liquidity. Instruments include:</p>
+<ul>
+  <li><b>Call/notice money</b> &mdash; very short interbank borrowing/lending (overnight and up to a few days).</li>
+  <li><b>Repo / reverse repo</b> &mdash; collateralised borrowing/lending of cash against securities; the RBI's repo rate is the policy anchor in India.</li>
+  <li><b>Treasury Bills (T-Bills)</b> &mdash; short-term government paper issued at a discount.</li>
+  <li><b>Commercial Paper (CP) and Certificates of Deposit (CD)</b> &mdash; short-term unsecured corporate and bank paper.</li>
+</ul>
+
+<h3>4.4 FX and interest-rate hedging &mdash; the operations view</h3>
+<p>Treasury enters derivatives not to speculate but to <b>hedge</b> the firm's currency and interest-rate exposures. From an operations standpoint you must know what the instruments are and how they settle:</p>
+<ul>
+  <li><b>FX forward:</b> an agreement to exchange two currencies at a fixed rate on a future date. Used to lock in a rate for a known future foreign-currency payment/receipt, removing currency uncertainty. Operations confirms, values, and settles both currency legs on the value date.</li>
+  <li><b>FX swap:</b> a simultaneous spot exchange and reverse forward exchange &mdash; used to move liquidity from one currency to another for a period without taking currency risk.</li>
+  <li><b>Interest-rate swap (IRS):</b> exchanging fixed-rate for floating-rate interest payments on a notional principal &mdash; used to convert floating-rate funding into fixed (or vice versa) to manage interest-rate risk. Operations calculates and settles the periodic net interest payments; the notional itself is not exchanged.</li>
+</ul>
+<p>Operationally, each hedge must be captured, confirmed with the counterparty, collateralised/margined where applicable, valued for P&amp;L, and settled on time &mdash; the same lifecycle discipline as Section 1, applied to treasury products.</p>
+
+<h3>4.5 Settlement risk and the Herstatt problem</h3>
+<p><b>Settlement risk</b> is the risk that one party to a trade delivers its side but the other fails to deliver theirs. In FX it is acute because the two currency legs settle in different countries and time zones. The canonical case is <b>Herstatt risk</b>: in 1974 Germany's Bankhaus Herstatt was shut down after it had received Deutsche Marks from counterparties but before it had paid the corresponding US dollars (which would settle later in the New York day). Counterparties lost the dollar leg entirely &mdash; a pure principal loss caused by the time-zone gap.</p>
+<div class="formula"><b>Herstatt / FX settlement risk &mdash; the core idea</b><br>
+You pay currency A &rarr; but counterparty fails before paying currency B &rarr; you lose the full principal of leg B.
+<div class="where">Mitigants: <b>PvP (Payment versus Payment)</b> settlement &mdash; the FX analogue of DVP &mdash; where both currency legs settle simultaneously or not at all (e.g., via CLS Bank). Also: netting, counterparty limits, and shorter settlement windows. PvP is to FX what DVP is to securities.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 5 &mdash; A cash-positioning / funding decision</div>
+<p><b>Situation:</b> By 11:00 the treasury dashboard shows the bank's INR position for value today: expected inflows &#8377;900 crore, expected outflows &#8377;1,050 crore, opening balance &#8377;100 crore.</p>
+<p><b>Step 1 &mdash; net position:</b> 100 + 900 &minus; 1,050 = <b>&minus;&#8377;50 crore</b> projected shortfall by end of day.</p>
+<p><b>Step 2 &mdash; decision:</b> treasury must fund &#8377;50 crore. Options: borrow overnight in the call money market, do a repo against government securities it holds, or draw a committed line. It picks the cheapest reliable source for one day &mdash; say an overnight repo at the prevailing rate &mdash; to avoid a failed payment.</p>
+<p><b>Step 3 &mdash; control:</b> operations must ensure the borrowed cash actually arrives (nostro/settlement confirmation) before the outgoing payments are released, otherwise the bank swaps a funding gap for a settlement failure. This is treasury liquidity management and settlement control working together.</p></div>
+
+<h3>4.6 Asset-liability management (ALM)</h3>
+<p><b>ALM</b> is the discipline of managing the <i>mismatch</i> between a firm's assets and liabilities &mdash; especially a bank's. Banks fund long-term assets (loans) with shorter-term liabilities (deposits), creating two risks ALM manages:</p>
+<ul>
+  <li><b>Liquidity risk:</b> the timing mismatch &mdash; deposits can be withdrawn faster than loans are repaid. ALM ensures enough liquid assets and stable funding to meet outflows (measured with maturity/gap ladders and regulatory ratios).</li>
+  <li><b>Interest-rate risk in the banking book:</b> if assets and liabilities reprice at different times, a rate move squeezes the net interest margin. ALM measures this "repricing gap" and hedges it (e.g., with interest-rate swaps).</li>
+</ul>
+<p>The governance forum is the <b>ALCO (Asset-Liability Committee)</b>, which sets funding, pricing and hedging policy. The one-line answer: <b>ALM matches the maturity and repricing of assets and liabilities to control liquidity and interest-rate risk.</b></p>
+
+<h3>4.7 Payment systems: RTGS, NEFT, SWIFT</h3>
+<p>Treasury moves money through defined payment rails. Know the Indian and international ones and how they differ.</p>
+<table>
+  <thead><tr><th style="width:14%">System</th><th style="width:46%">What it is</th><th style="width:40%">Key feature</th></tr></thead>
+  <tbody>
+    <tr><td><b>RTGS</b></td><td>Real-Time Gross Settlement (India, RBI) &mdash; large-value interbank/customer payments settled <b>individually and in real time</b>.</td><td><b>Gross</b> (each payment settled one-by-one, no netting), continuous, final &mdash; used for high-value transfers; now available around the clock.</td></tr>
+    <tr><td><b>NEFT</b></td><td>National Electronic Funds Transfer (India, RBI) &mdash; retail/any-value transfers settled on a <b>deferred net</b> basis in batches.</td><td>Netted in batches; no minimum amount; suits smaller/regular payments.</td></tr>
+    <tr><td><b>SWIFT</b></td><td>Society for Worldwide Interbank Financial Telecommunication &mdash; the global <b>messaging network</b> banks use to send payment/settlement instructions across borders.</td><td>It <b>carries the instructions, not the money</b>; actual settlement happens through correspondent (nostro/vostro) accounts.</td></tr>
+  </tbody>
+</table>
+<p>The crucial distinction: <b>RTGS = gross, real-time, final; NEFT = net, batched.</b> And <b>SWIFT is a messaging system</b>, not a settlement system &mdash; a frequent trap. India's UPI/IMPS provide instant retail payments alongside these.</p>
+
+<h3>4.8 Collateral and margin operations</h3>
+<p>To reduce counterparty credit risk on derivatives and financing trades, parties post <b>collateral</b> and exchange <b>margin</b>. This is a large and growing operations area.</p>
+<ul>
+  <li><b>Initial margin (IM):</b> collateral posted up front to cover potential future exposure if the counterparty defaults &mdash; a buffer sized to a stressed move.</li>
+  <li><b>Variation margin (VM):</b> collateral exchanged (usually daily) to cover the <i>current</i> mark-to-market change &mdash; the party that has lost value on the day pays the party that has gained. This keeps net exposure near zero.</li>
+  <li><b>Margin call:</b> the demand to post more collateral when exposure rises or collateral value falls. Operations must value positions and collateral, issue/meet calls on time, and settle the movements &mdash; a missed call is a serious control failure.</li>
+  <li><b>Haircut:</b> a discount applied to collateral value (e.g., a bond taken at 98% of market value) to protect against the collateral itself falling in price before it can be sold.</li>
+</ul>
+<p>Collateral operations run their own daily lifecycle: value exposure &rarr; agree the call &rarr; select eligible collateral &rarr; settle &rarr; reconcile &rarr; manage disputes &mdash; the same exception-management discipline as trade settlement, applied to margin.</p>
+
+<div class="keytake"><b>Key takeaways &mdash; Section 4:</b> Treasury manages the firm's own cash, liquidity, funding and market-risk hedging. Cash positioning = knowing your intraday cash by currency; funding = filling gaps via call money, repo, CP/CD. <b>ALM</b> matches the maturity/repricing of assets and liabilities (liquidity + rate risk), governed by ALCO. Nostro = our money abroad; vostro = your money with us. Payment rails: <b>RTGS</b> (gross, real-time), <b>NEFT</b> (net, batched), <b>SWIFT</b> (messaging, not settlement). FX forwards/swaps and interest-rate swaps hedge currency and rate risk; the IRS notional is not exchanged, only net interest. <b>Collateral/margin ops</b> post initial &amp; variation margin (with haircuts) and meet margin calls to cut counterparty risk. Settlement (Herstatt) risk is the time-zone principal risk in FX &mdash; mitigated by PvP (the FX cousin of DVP).</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">5. Wealth Management &amp; Investment Advisory</h2>
+
+<p>Wealth management is the client-facing craft of helping individuals grow and protect their money toward their life goals. Investment advisory is the regulated activity of giving investment advice. For these roles the examiner tests both the <i>process</i> (planning, risk profiling, asset allocation) and your grasp of the <i>rules</i> (SEBI RIA framework, fiduciary duty, adviser vs distributor).</p>
+
+<h3>5.1 The financial planning process</h3>
+<p>Good advice follows a structured, repeatable process rather than product-pushing:</p>
+<ol>
+  <li><b>Establish the relationship &amp; gather data:</b> understand the client's income, expenses, assets, liabilities, family, and &mdash; crucially &mdash; their goals and time horizons.</li>
+  <li><b>Assess &amp; profile:</b> analyse the financial position and determine the client's risk profile (capacity and tolerance, below).</li>
+  <li><b>Develop the plan:</b> set an asset allocation and product mix that targets the goals within the risk profile; plan for contingencies (emergency fund, insurance).</li>
+  <li><b>Implement:</b> execute &mdash; open accounts, invest, set up SIPs, buy protection.</li>
+  <li><b>Monitor &amp; review:</b> track progress against goals, rebalance, and revise as life changes. Planning is a cycle, not a one-off.</li>
+</ol>
+
+<h3>5.2 Risk profiling: capacity vs tolerance</h3>
+<p>Risk profiling determines how much investment risk is <i>appropriate</i>. It has two distinct dimensions that must not be confused:</p>
+<ul>
+  <li><b>Risk capacity</b> &mdash; the client's <i>objective, financial ability</i> to absorb losses without derailing their goals. Driven by time horizon, income stability, wealth, and how essential the goal is. A young investor with steady income and a 25-year horizon has high capacity.</li>
+  <li><b>Risk tolerance</b> &mdash; the client's <i>subjective, psychological willingness</i> to accept volatility and the chance of loss. A person may be financially able to take risk (high capacity) but emotionally unable to sleep through a 30% drawdown (low tolerance).</li>
+</ul>
+<p>The appropriate risk level is generally the <i>lower</i> of the two, adjusted through education: never put a client in a portfolio whose swings will make them panic-sell at the bottom, even if they could "afford" it.</p>
+<div class="trap"><b>Common trap &mdash; risk capacity vs tolerance:</b> These are not synonyms. <b>Capacity = ability</b> (objective, financial). <b>Tolerance = willingness</b> (subjective, emotional). A wealthy retiree may have high capacity but low tolerance; a young earner may have high tolerance but low capacity (little saved, unstable income). Suitability requires respecting <i>both</i> &mdash; typically the more conservative of the two.</p></div>
+
+<h3>5.3 Asset allocation and diversification</h3>
+<p><b>Asset allocation</b> is how you divide a portfolio across asset classes &mdash; equity, debt/fixed income, cash, gold, real estate. It is the biggest driver of a portfolio's risk and long-run return. Two flavours:</p>
+<table>
+  <thead><tr><th style="width:20%">Type</th><th style="width:40%">Strategic Asset Allocation (SAA)</th><th style="width:40%">Tactical Asset Allocation (TAA)</th></tr></thead>
+  <tbody>
+    <tr><td><b>Horizon</b></td><td>Long-term, policy mix aligned to goals and risk profile.</td><td>Short-term deviations from the policy mix.</td></tr>
+    <tr><td><b>Driver</b></td><td>Client goals, risk capacity/tolerance, time horizon.</td><td>Market views &mdash; valuations, momentum, macro.</td></tr>
+    <tr><td><b>Changes</b></td><td>Rarely; reviewed periodically; rebalanced back to target.</td><td>Actively, to exploit short-term opportunities.</td></tr>
+    <tr><td><b>Example</b></td><td>60% equity / 30% debt / 10% gold as the anchor.</td><td>Temporarily 55/35/10 because equities look expensive.</td></tr>
+  </tbody>
+</table>
+<p><b>Diversification</b> is spreading investments <i>within and across</i> asset classes so that no single security, sector, or risk dominates &mdash; "don't put all your eggs in one basket". Because assets don't move perfectly together (imperfect correlation), a diversified portfolio has lower risk than the weighted average of its parts. Diversification reduces <i>unsystematic</i> (specific) risk but not <i>systematic</i> (market-wide) risk.</p>
+<div class="trap"><b>Common trap &mdash; asset allocation vs diversification:</b> They are related but different. <b>Asset allocation</b> = the top-level split <i>between</i> asset classes (how much equity vs debt). <b>Diversification</b> = spreading holdings <i>within/across</i> those classes so you're not concentrated in one name or sector. You can have an asset allocation of 100% equity that is well-diversified across 200 stocks, or poorly diversified in 2 stocks. Allocation sets the risk/return dial; diversification removes uncompensated specific risk.</p></div>
+
+<div class="formula"><b>Weighted portfolio return (asset-allocation weighting)</b><br>
+Portfolio return R<sub>p</sub> = &Sigma; ( w<sub>i</sub> &times; r<sub>i</sub> )
+<div class="where">w<sub>i</sub> = weight (fraction) of the portfolio in asset class i; r<sub>i</sub> = return of asset class i; weights sum to 1 (100%). The same weighting logic gives the target allocation amounts: amount<sub>i</sub> = w<sub>i</sub> &times; total corpus.</div></div>
+
+<div class="formula"><b>Simple (holding-period) return</b><br>
+Return = ( Ending value &minus; Beginning value + Income ) / Beginning value &times; 100
+<div class="where">Income = dividends/interest received during the period. Gives the total percentage gain/loss over the holding period.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 6 &mdash; Building and weighting an asset allocation</div>
+<p><b>Client:</b> 35 years old, stable income, goal is retirement in 25 years, assessed as <b>moderately aggressive</b> (high capacity, medium-high tolerance). Corpus to invest: &#8377;20,00,000. Adviser sets a strategic allocation of <b>65% equity, 25% debt, 10% gold</b>.</p>
+<p><b>Step 1 &mdash; rupee allocation (amount = weight &times; corpus):</b></p>
+<ul>
+  <li>Equity: 0.65 &times; 20,00,000 = <b>&#8377;13,00,000</b></li>
+  <li>Debt: 0.25 &times; 20,00,000 = <b>&#8377;5,00,000</b></li>
+  <li>Gold: 0.10 &times; 20,00,000 = <b>&#8377;2,00,000</b></li>
+</ul>
+<p><b>Step 2 &mdash; expected portfolio return</b> (assume equity 12%, debt 7%, gold 8%):</p>
+<p>R<sub>p</sub> = (0.65 &times; 12%) + (0.25 &times; 7%) + (0.10 &times; 8%) = 7.80% + 1.75% + 0.80% = <b>10.35% p.a. (expected)</b>.</p>
+<p><b>Step 3 &mdash; suitability check &amp; rebalancing:</b> the 65/25/10 mix matches a 25-year horizon and moderate-aggressive profile. If after a year equities rally to 72% of the portfolio, the adviser <b>rebalances</b> back to 65% &mdash; selling some equity, buying debt/gold &mdash; which mechanically "sells high, buys low" and keeps risk on target. This ties allocation, weighting, and monitoring together.</p></div>
+
+<h3>5.4 Goal-based investing and product suitability</h3>
+<p><b>Goal-based investing</b> maps each pot of money to a specific goal with its own horizon and risk level &mdash; a child's education in 15 years (equity-heavy), a house down-payment in 3 years (debt/conservative), an emergency fund (liquid). It makes advice concrete and keeps clients invested through volatility because they see the <i>purpose</i>, not just a number.</p>
+<p><b>Suitability</b> means every recommendation must fit that client's objectives, horizon, risk profile, and circumstances. An investment can be perfectly good yet <i>unsuitable</i> for a particular client (e.g., a 30-year-locked product for someone needing the money in two years). Suitability is a professional and regulatory obligation for advisers.</p>
+
+<h3>5.5 Mutual fund categories and the SIP/STP/SWP toolkit</h3>
+<table>
+  <thead><tr><th style="width:18%">Category</th><th style="width:42%">Invests in</th><th style="width:40%">Risk / typical use</th></tr></thead>
+  <tbody>
+    <tr><td><b>Equity funds</b></td><td>Mainly stocks (large/mid/small-cap, sectoral, ELSS tax-saving, etc.).</td><td>Higher risk, higher expected return; long-horizon goals.</td></tr>
+    <tr><td><b>Debt funds</b></td><td>Bonds and money-market instruments (liquid, short-duration, corporate bond, gilt, etc.).</td><td>Lower risk; income, capital preservation, short/medium goals.</td></tr>
+    <tr><td><b>Hybrid funds</b></td><td>A mix of equity and debt (aggressive hybrid, balanced advantage, conservative hybrid).</td><td>Middle risk; one-stop diversified exposure.</td></tr>
+    <tr><td><b>Solution / other</b></td><td>Retirement, children's funds, index/ETF, fund-of-funds.</td><td>Goal-tagged or passive low-cost exposure.</td></tr>
+  </tbody>
+</table>
+<p>Systematic facilities discipline investing and manage timing risk:</p>
+<ul>
+  <li><b>SIP (Systematic Investment Plan):</b> invest a fixed amount at regular intervals. Averages the purchase price over time (<b>rupee-cost averaging</b>) and builds discipline &mdash; the default recommendation for salaried retail investors.</li>
+  <li><b>STP (Systematic Transfer Plan):</b> move a fixed amount periodically from one fund to another (e.g., park a lump sum in a liquid fund and transfer into equity gradually) &mdash; staggers entry into volatile assets.</li>
+  <li><b>SWP (Systematic Withdrawal Plan):</b> withdraw a fixed amount periodically &mdash; used to create a regular income stream (e.g., in retirement) while the rest stays invested.</li>
+</ul>
+
+<h3>5.6 Direct vs regular plans; taxation at a concept level</h3>
+<p><b>Direct vs regular plans</b> (every Indian mutual fund offers both):</p>
+<ul>
+  <li><b>Regular plan:</b> bought <i>through a distributor</i>; the TER includes a distribution commission, so the ongoing cost is higher and the NAV grows a little slower.</li>
+  <li><b>Direct plan:</b> bought <i>directly</i> from the AMC with no distributor commission; lower TER, higher long-run NAV (see Worked Example 3). Suits investors who don't need &mdash; or who pay separately for &mdash; advice.</li>
+</ul>
+<p><b>Taxation (concept only, rules change &mdash; do not quote exact rates/holding periods you're unsure of):</b> investment returns are broadly taxed as <b>capital gains</b> (on selling units/securities) and as <b>income</b> (dividends/interest). Capital gains are split into <b>short-term</b> vs <b>long-term</b> based on the holding period, with different treatment for equity-oriented vs debt/other funds. The practical adviser point is <b>tax efficiency</b>: after-tax return is what the client keeps, so holding period, product type, and use of tax-advantaged options (e.g., ELSS for eligible deductions) all matter. Always frame tax as "broadly, subject to current rules" rather than quoting a precise figure that may be outdated.</p>
+
+<h3>5.7 The regulatory frame: adviser vs distributor, SEBI RIA, fiduciary duty</h3>
+<p>This is the most important regulatory distinction in Indian wealth management and a near-certain interview question.</p>
+<table>
+  <thead><tr><th style="width:20%">Dimension</th><th style="width:40%">Investment Adviser (RIA)</th><th style="width:40%">Distributor (Mutual Fund Distributor / agent)</th></tr></thead>
+  <tbody>
+    <tr><td><b>What they do</b></td><td>Give <i>advice</i> on what to invest in, for a fee, tailored to the client.</td><td><i>Distribute/sell</i> products and facilitate transactions.</td></tr>
+    <tr><td><b>Registration</b></td><td>SEBI-registered <b>Investment Adviser (RIA)</b> under the SEBI RIA regulations; must clear NISM Investment Adviser exams.</td><td>Registered with AMFI (ARN); passes NISM MF Distributors exam.</td></tr>
+    <tr><td><b>Paid by</b></td><td>The <b>client</b>, via an advisory fee (fee-only).</td><td>The <b>product manufacturer</b> (AMC), via commission embedded in the regular-plan TER.</td></tr>
+    <tr><td><b>Standard of care</b></td><td><b>Fiduciary</b> &mdash; must act in the client's best interest; suitability, disclosure, no conflicted advice.</td><td>Suitability/appropriateness in selling, but not a full fiduciary advisory relationship.</td></tr>
+    <tr><td><b>Conflict rule</b></td><td>Separation of advice from distribution &mdash; an RIA is generally required to keep advisory and distribution activities segregated to avoid conflicts.</td><td>Discloses commission; is a seller, not an adviser.</td></tr>
+  </tbody>
+</table>
+<p><b>SEBI RIA framework:</b> SEBI regulates investment advisers to protect investors. Registered Investment Advisers must meet qualification, certification (NISM), net-worth, and conduct requirements; must risk-profile clients and ensure suitability; must disclose conflicts; and must keep advice separate from product distribution.</p>
+<p><b>NISM Investment Adviser (Series X-A / X-B):</b> the certification examinations mandated for individuals engaged in investment advice under the SEBI RIA framework. They cover the advisory process, products, risk profiling, suitability, and the regulatory/ethical obligations of an adviser &mdash; the knowledge base a fiduciary adviser must demonstrate.</p>
+<p><b>Fiduciary duty</b> means the adviser must place the client's interests ahead of their own &mdash; recommend what is right for the client, disclose conflicts, avoid or manage them, and be transparent about costs. It is the ethical and legal core of advice, and the sharpest line separating an adviser from a distributor.</p>
+<div class="trap"><b>Common trap &mdash; adviser vs distributor:</b> They are <i>not</i> the same job. An <b>adviser (RIA)</b> is paid by the client and owes a <b>fiduciary</b> duty to give best-interest advice; a <b>distributor</b> is paid by the AMC (commission in the regular-plan TER) and sells products. The conflict is obvious: a commission-paid seller has an incentive to favour higher-commission products. That is exactly why SEBI insists advice be fee-based and separated from distribution. If asked "are you an adviser or a distributor?", know that the answer changes who pays you and what duty you owe.</p></div>
+
+<h3>5.8 Dynamic asset allocation and the MPT link</h3>
+<p>Beyond strategic and tactical, a third style is often asked about:</p>
+<ul>
+  <li><b>Dynamic asset allocation (DAA):</b> the mix is adjusted <i>systematically by a rule/model</i> as market conditions or valuations change &mdash; e.g., a "balanced advantage" fund that cuts equity when markets look expensive and raises it when cheap. It differs from TAA (discretionary manager views) in being formula-driven, and from SAA in that the mix is meant to move, not stay anchored.</li>
+</ul>
+<p><b>The Modern Portfolio Theory (MPT) link:</b> diversification and asset allocation rest on Harry Markowitz's MPT. Its core insight is that a portfolio's risk depends not just on each asset's own volatility but on how assets move <i>together</i> (their <b>correlation</b>). Because imperfectly-correlated assets partly offset each other, you can combine them to get a <b>higher return for a given risk</b> (or lower risk for a given return) &mdash; the set of best such portfolios is the <b>efficient frontier</b>. This is the theoretical reason "don't put all your eggs in one basket" actually works: combining assets that don't move in lockstep reduces portfolio risk without sacrificing expected return.</p>
+
+<h3>5.9 Products beyond mutual funds</h3>
+<p>An adviser must know the wider product shelf and where each fits.</p>
+<table>
+  <thead><tr><th style="width:20%">Product</th><th style="width:50%">What it is</th><th style="width:30%">Typical use</th></tr></thead>
+  <tbody>
+    <tr><td><b>Bonds / fixed income</b></td><td>Debt securities (government G-Secs, corporate bonds) paying periodic interest and principal at maturity.</td><td>Income, capital preservation, portfolio ballast.</td></tr>
+    <tr><td><b>NPS</b></td><td>National Pension System &mdash; a low-cost, regulated (PFRDA) retirement product with market-linked equity/debt options and additional tax benefits.</td><td>Long-term retirement corpus.</td></tr>
+    <tr><td><b>Gold / SGB</b></td><td>Gold exposure via ETFs or <b>Sovereign Gold Bonds</b> (RBI-issued, pay interest plus track gold price, no storage risk).</td><td>Inflation hedge, diversifier.</td></tr>
+    <tr><td><b>REITs / InvITs</b></td><td>Real Estate / Infrastructure Investment Trusts &mdash; listed, SEBI-regulated vehicles that pool income-producing property/infrastructure and pass through rental/toll income.</td><td>Real-asset income with liquidity.</td></tr>
+    <tr><td><b>Insurance</b></td><td>Protection (term, health) and, separately, savings-linked products. The adviser distinction: insurance is primarily for <b>protection</b>, not investment.</td><td>Risk protection; contingency planning.</td></tr>
+  </tbody>
+</table>
+<p>A recurring adviser message: buy <b>insurance for protection and mutual funds/NPS for investment</b> &mdash; do not conflate the two by buying expensive investment-cum-insurance products when term cover plus a low-cost fund would serve the client better.</p>
+
+<h3>5.10 Behavioural biases and estate planning</h3>
+<p><b>Behavioural finance</b> shows investors are not perfectly rational; a good adviser recognises and counteracts common <b>biases</b>:</p>
+<ul>
+  <li><b>Loss aversion:</b> losses hurt more than equivalent gains please &mdash; leads to holding losers and panic-selling.</li>
+  <li><b>Herding:</b> following the crowd into (or out of) markets at the wrong time.</li>
+  <li><b>Overconfidence:</b> over-trading and under-diversifying from believing one can beat the market.</li>
+  <li><b>Anchoring:</b> fixating on an irrelevant reference (e.g., the price you paid) when deciding.</li>
+  <li><b>Recency &amp; confirmation bias:</b> over-weighting recent events and seeking only confirming information.</li>
+</ul>
+<p>Goal-based investing, SIPs, rebalancing rules and an <b>Investment Policy Statement</b> are practical antidotes &mdash; they pre-commit the client to disciplined behaviour so emotion doesn't drive decisions.</p>
+<p><b>Estate planning (concept):</b> arranging for the orderly transfer of wealth on death or incapacity &mdash; through a <b>will</b>, <b>nomination</b> of beneficiaries on accounts/policies, and, for larger or complex estates, <b>trusts</b>. The adviser's role is to flag the need and coordinate with legal/tax experts, ensuring nominations are current and assets pass to intended beneficiaries with minimal dispute.</p>
+
+<h3>5.11 Performance measurement and reporting</h3>
+<p>Advisers and managers must measure and report performance honestly. Key concepts:</p>
+<ul>
+  <li><b>Benchmark:</b> a reference index (e.g., Nifty 50) against which a portfolio's return is judged. Performance is only meaningful <i>relative to</i> an appropriate benchmark and risk taken.</li>
+  <li><b>Alpha:</b> the return earned <i>above</i> what the benchmark/risk taken would predict &mdash; the manager's value-add (positive alpha) or drag (negative).</li>
+  <li><b>Beta:</b> sensitivity to the market &mdash; beta 1 moves with the market, &gt;1 amplifies it, &lt;1 dampens it. Beta measures systematic risk exposure.</li>
+  <li><b>Attribution:</b> decomposing a portfolio's excess return into <i>why</i> it happened &mdash; typically <b>allocation</b> (being over/under-weight the right asset classes/sectors) vs <b>selection</b> (picking the right securities within them).</li>
+  <li><b>GIPS (concept):</b> the Global Investment Performance Standards &mdash; a voluntary global code for calculating and presenting performance fairly and comparably, so managers can't cherry-pick flattering track records.</li>
+</ul>
+<div class="formula"><b>Time-weighted vs money-weighted return &mdash; the concept</b><br>
+<b>TWR</b> strips out the effect of client cash flows &rarr; measures the <b>manager's</b> skill.<br>
+<b>MWR</b> (an IRR) reflects the size and timing of cash flows &rarr; measures the <b>investor's actual experience</b>.
+<div class="where">TWR links sub-period returns geometrically, neutralising when money went in/out (which the manager doesn't control). MWR (money-weighted / internal rate of return) is the single rate that sets the present value of all cash flows to zero &mdash; it rewards/penalises the <i>timing</i> of contributions.</div></div>
+<div class="example"><div class="ex-h">Worked Example 7 &mdash; Why TWR and MWR differ</div>
+<p><b>Setup:</b> Year 1 a portfolio returns <b>+30%</b>; Year 2 it returns <b>&minus;10%</b>. The client invests &#8377;1,00,000 at the start, then adds a large &#8377;10,00,000 <i>at the start of Year 2</i> (just before the bad year).</p>
+<p><b>Time-weighted return</b> (link the two years, ignore the cash flow):</p>
+<p>TWR = (1 + 0.30) &times; (1 &minus; 0.10) &minus; 1 = 1.30 &times; 0.90 &minus; 1 = <b>+17%</b> over two years (&asymp; 8.2% annualised). This is the <b>manager's</b> result.</p>
+<p><b>Money-weighted return</b> is <i>lower</i>: because most of the money (&#8377;10,00,000) was only present during the &minus;10% year and only a little during the +30% year, the investor's actual rupee experience is poor &mdash; a small gain then a large loss. The IRR that reconciles the cash flows comes out well below 8.2%.</p>
+<p><b>Takeaway:</b> the manager looks fine on <b>TWR</b> (skill), but the investor did badly on <b>MWR</b> (timing) &mdash; because the client's own decision to add money before a down year hurt the rupee outcome. Judge the manager on TWR; judge the client's experience on MWR.</p></div>
+<div class="trap"><b>Common trap &mdash; TWR vs MWR:</b> They answer different questions. <b>TWR</b> removes the effect of when the client added or withdrew money &mdash; use it to judge the <b>manager</b> (regulators/GIPS favour it for fund reporting). <b>MWR (IRR)</b> keeps cash-flow timing in &mdash; use it to describe the <b>investor's own</b> return. If a client added money right before a crash, MWR will look worse than TWR even though the manager did nothing wrong. Never quote MWR as the manager's performance.</p></div>
+
+<h3>5.12 Fee-only vs commission</h3>
+<p>The compensation model shapes the conflict of interest, so name it clearly:</p>
+<ul>
+  <li><b>Fee-only:</b> the adviser is paid <i>only</i> by the client (a flat fee, hourly, or a percentage of assets). No product commissions &mdash; so the advice has no built-in incentive to push particular products. This is the RIA / fiduciary model.</li>
+  <li><b>Commission (fee-based selling):</b> the intermediary is paid by the product manufacturer (the AMC/insurer) out of the product's charges. Cheaper for the client to access, but creates the incentive to favour higher-commission products.</li>
+</ul>
+<p>SEBI's separation of advice from distribution is precisely to keep genuine advice <b>fee-only</b> so the adviser's incentive aligns with the client's interest.</p>
+
+<h3>5.13 ESG basics</h3>
+<p><b>ESG</b> stands for <b>Environmental, Social and Governance</b> &mdash; a set of non-financial factors used to assess a company's sustainability and ethical impact alongside traditional financials. Environmental: emissions, resource use, climate. Social: labour, safety, communities, data privacy. Governance: board quality, shareholder rights, transparency, anti-corruption.</p>
+<ul>
+  <li><b>GRI (Global Reporting Initiative):</b> a widely used global framework for sustainability reporting, focused on a company's impacts on the economy, environment and people (a broad, multi-stakeholder lens).</li>
+  <li><b>SASB (Sustainability Accounting Standards Board):</b> industry-specific standards focused on the <i>financially material</i> sustainability issues for each sector (an investor-materiality lens; now under the ISSB umbrella).</li>
+  <li><b>TCFD (Task Force on Climate-related Financial Disclosures):</b> a framework for disclosing <i>climate</i> risks and opportunities across four pillars &mdash; governance, strategy, risk management, and metrics/targets. Focused specifically on how climate change affects a company's financials (now largely absorbed into ISSB standards).</li>
+  <li><b>PRI (Principles for Responsible Investment):</b> a UN-supported <i>investor</i> initiative &mdash; signatory asset owners and managers commit to six principles to incorporate ESG into investment analysis, ownership and reporting. PRI is about investors' behaviour, whereas GRI/SASB/TCFD are about company disclosure.</li>
+  <li><b>BRSR (Business Responsibility and Sustainability Report) &mdash; India:</b> SEBI's mandated ESG disclosure framework requiring large listed companies to report on environmental, social and governance performance in a standardised way. BRSR is the key Indian ESG-reporting reference to cite.</li>
+</ul>
+<p><b>Responsible-investing styles:</b> <b>SRI (Socially Responsible Investing)</b> screens out (or into) companies on ethical grounds &mdash; e.g., excluding tobacco, weapons or fossil fuels (negative screening) or favouring positive performers (positive screening). <b>Impact investing</b> goes further: it intentionally seeks a <b>measurable positive social or environmental impact alongside a financial return</b> (e.g., financing clean energy or affordable housing). The spectrum runs from ESG integration (managing risk) &rarr; SRI (values-based screening) &rarr; impact (deliberate, measured good).</p>
+<p><b>ESG integration &amp; scoring (high level):</b> ESG integration means systematically factoring material ESG risks and opportunities into investment analysis and decisions &mdash; not as a separate ethical overlay but as part of assessing long-term risk and value. <b>ESG scores</b> (from rating providers) rate companies on ESG performance, letting investors compare, screen (exclude/include), or tilt portfolios. Limitations to mention: scores differ across providers, data can be self-reported, and "greenwashing" is a real risk &mdash; so scores are an input, not gospel.</p>
+
+<div class="keytake"><b>Key takeaways &mdash; Section 5:</b> Financial planning is a cyclical process (gather &rarr; profile &rarr; plan &rarr; implement &rarr; review). Risk capacity (ability) &ne; tolerance (willingness); use the more conservative. Asset allocation (the class-level split) drives most risk/return; diversification removes uncompensated specific risk. SAA is the long-term anchor, TAA the short-term tilt. Goal-based investing and suitability keep advice client-centred. SIP/STP/SWP are the systematic toolkit; direct plans beat regular plans on cost. An RIA is a fee-paid <b>fiduciary</b>; a distributor is a commission-paid seller &mdash; SEBI separates the two. ESG = E+S+G; cite GRI, SASB and India's BRSR.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">6. Interview Q&amp;A Bank</h2>
+<p style="font-family:'Calibri',sans-serif;font-size:9.5pt;color:#555;">Seventy-six questions with model answers. Practise saying each answer aloud in 30&ndash;60 seconds. Bold phrases are the "must-say" keywords an interviewer listens for.</p>
+
+<h3>6.1 Investment Operations &amp; Trade Lifecycle</h3>
+
+<div class="qa"><div class="q">Q1. Walk me through the trade lifecycle.</div>
+<div class="a">A: A trade goes <b>order &rarr; execution &rarr; capture/booking &rarr; enrichment &amp; validation &rarr; confirmation/affirmation &rarr; clearing &rarr; settlement &rarr; reconciliation</b>. The PM or client raises an order; it's executed on a market at a price; operations books it with full economic terms; reference data and SSIs are attached; both sides agree the terms (confirmation/affirmation); the clearing corporation novates and nets and takes margin; securities and cash exchange on settlement date under <b>DVP</b>; and finally we reconcile our books to the custodian and depository, investigating any breaks. Each step is a control point.</div></div>
+
+<div class="qa"><div class="q">Q2. What does the middle office do?</div>
+<div class="a">A: The middle office <b>independently controls and measures risk</b> between the risk-taking front office and the settling back office. It validates trade capture, produces independent P&amp;L and risk numbers, monitors limits and flags breaches, handles valuations and collateral, and runs surveillance. Its independence from the front office is the point &mdash; the people measuring the risk aren't the people taking it.</div></div>
+
+<div class="qa"><div class="q">Q3. What is T+1 settlement?</div>
+<div class="a">A: T+1 means a trade settles <b>one business day after trade date</b> &mdash; securities and cash actually change hands the next day. India moved its cash equity market to T+1 (phased through 2022&ndash;23) from T+2. Shorter cycles <b>reduce settlement/counterparty risk</b> and free up margin and capital faster, but they compress the operational window &mdash; confirmation, funding and securities availability must all be completed within a day, which demands more automation.</div></div>
+
+<div class="qa"><div class="q">Q4. What is DVP and why does it matter?</div>
+<div class="a">A: <b>Delivery versus Payment</b> means securities are delivered <i>if and only if</i> payment is made, simultaneously. It removes <b>principal risk</b> &mdash; the risk that you deliver stock but never get the cash, or pay and never get the stock. By linking the two legs so neither can happen alone, DVP is the core safety mechanism of securities settlement.</div></div>
+
+<div class="qa"><div class="q">Q5. Difference between confirmation and affirmation?</div>
+<div class="a">A: <b>Confirmation</b> is the two counterparties exchanging and matching the trade's details so both agree the terms. <b>Affirmation</b> is an institutional client agreeing the details captured by its broker or custodian before settlement. Both catch mismatches <i>before</i> money and securities move &mdash; it's cheaper to fix a trade on paper than to unwind a wrong settlement.</div></div>
+
+<div class="qa"><div class="q">Q6. What is a reconciliation break and how do you handle it?</div>
+<div class="a">A: A break is a <b>mismatch between our internal records and an independent external source</b> &mdash; position, cash or nostro. I first classify it: a <b>timing break</b> (e.g., a trade we've booked but that settles tomorrow) self-clears; a <b>real break</b> (mis-booking, failed settlement, missed corporate action) must be corrected. The workflow is identify &rarr; classify &rarr; assign owner &rarr; investigate root cause &rarr; resolve or escalate &rarr; age and report. Aged, uncleared breaks are a red flag because they can hide errors or fraud.</div></div>
+
+<div class="qa"><div class="q">Q7. What's the difference between position, cash and nostro reconciliation?</div>
+<div class="a">A: <b>Position rec</b> matches our security holdings against the custodian/depository. <b>Cash rec</b> matches our internal cash ledger against the bank account. <b>Nostro rec</b> matches our record of "our money held at another bank" against the statement that correspondent bank sends. All three prove our books agree with the outside world.</div></div>
+
+<div class="qa"><div class="q">Q8. What is a custodian and what does it do?</div>
+<div class="a">A: A custodian <b>safe-keeps assets for institutional investors</b> and acts as their operational agent in the market &mdash; it settles trades against the depository, holds securities, collects income like dividends and coupons, processes corporate actions, and provides reporting. It lets an asset manager focus on investing while the custodian handles safekeeping and settlement.</div></div>
+
+<div class="qa"><div class="q">Q9. What are NSDL and CDSL?</div>
+<div class="a">A: They are India's two <b>depositories</b>, which hold securities in <b>dematerialised (electronic) form</b> in demat accounts. NSDL is the National Securities Depository Limited and CDSL is the Central Depository Services Limited. On settlement, securities move by <b>book entry</b> between demat accounts &mdash; no paper certificates.</div></div>
+
+<div class="qa"><div class="q">Q10. What does a clearing corporation / CCP do?</div>
+<div class="a">A: A clearing corporation acts as the <b>central counterparty</b>: it <b>novates</b> each trade (becoming buyer to every seller and seller to every buyer), <b>nets</b> obligations to reduce what must be moved, collects <b>margin</b> to cover the risk between trade and settlement, and <b>guarantees settlement</b> through a settlement guarantee fund if a member defaults. In India, NSE Clearing and Indian Clearing Corporation perform this role.</div></div>
+
+<div class="qa"><div class="q">Q11. Explain mandatory vs voluntary corporate actions.</div>
+<div class="a">A: A <b>mandatory</b> corporate action is automatic &mdash; the holder has no choice and operations just applies the entitlement (dividends, bonus issues, splits, coupons). A <b>voluntary</b> action requires the holder to actively elect by a deadline (rights issues, tender/buyback offers, conversions). Missing a voluntary deadline means the client loses the benefit &mdash; a direct operational loss &mdash; so corporate-action teams are deadline-obsessed. There's also "mandatory with options", where the event is automatic but the holder can choose the form (e.g., cash or scrip dividend).</div></div>
+
+<div class="qa"><div class="q">Q12. What are the record date and ex-date?</div>
+<div class="a">A: The <b>record date</b> is the cut-off &mdash; whoever is on the register that day is entitled to the corporate action. The <b>ex-date</b> is the date from which the security trades <i>without</i> the entitlement, so a buyer on or after the ex-date doesn't receive it. Operations uses these dates to calculate who gets what.</div></div>
+
+<div class="qa"><div class="q">Q13. Why is segregation of duties so important in operations?</div>
+<div class="a">A: Because if one person or desk could execute, confirm, value <i>and</i> settle a trade, they could hide errors or losses &mdash; the classic rogue-trader failure. Splitting into front (takes risk), middle (independently controls) and back (settles) means no single point can both create and conceal a problem. It's the foundational internal control.</div></div>
+
+<div class="qa"><div class="q">Q14. What happens if a trade "fails" to settle?</div>
+<div class="a">A: A settlement fails when one side can't deliver &mdash; securities aren't available or cash isn't funded. It creates a <b>break</b>, may trigger penalties or buy-in procedures by the clearing corporation, and exposes the counterparty to risk. Operations investigates the cause (short position, funding gap, wrong SSI), resolves it, and escalates if it can't be cleared. Shorter settlement cycles and DVP reduce the fallout.</div></div>
+
+<div class="qa"><div class="q">Q15. What is straight-through processing (STP)?</div>
+<div class="a">A: STP is processing a trade <b>end to end automatically</b>, without manual re-keying, from capture through confirmation and settlement. It cuts errors, speeds settlement, and is essential under compressed cycles like T+1. The more of the lifecycle that's automated and exception-based, the fewer breaks and the lower the operational risk.</div></div>
+
+<h3>6.2 Fund Accounting &amp; NAV</h3>
+
+<div class="qa"><div class="q">Q16. How is NAV calculated?</div>
+<div class="a">A: <b>NAV per unit = (total assets &minus; total liabilities) / units outstanding</b>. Total assets are the market value of the securities plus cash, accrued income and receivables; liabilities are accrued expenses and payables; divide the net assets by the units outstanding after that day's capital activity. Securities are marked to market; illiquid ones are fair-valued.</div></div>
+
+<div class="qa"><div class="q">Q17. What is a fund and why do investors use one?</div>
+<div class="a">A: A fund is a <b>pooled investment vehicle</b> &mdash; many investors' money invested collectively in a portfolio per a stated mandate, with each investor owning proportional units. It gives small investors <b>diversification, professional management and economies of scale</b> they couldn't get alone. In India mutual funds are structured as SEBI-regulated trusts with a sponsor, trustee and AMC.</div></div>
+
+<div class="qa"><div class="q">Q18. What is the Total Expense Ratio and why does it matter?</div>
+<div class="a">A: TER is the fund's <b>annual recurring cost as a percentage of average net assets</b> &mdash; management fee, admin, trustee, custody, audit and (in regular plans) distribution commission. It's accrued daily into the NAV, so it's a constant drag on returns. Because it compounds, even a 1% difference costs a large amount over years &mdash; which is why direct plans (lower TER) beat regular plans, and larger funds must charge lower percentages under SEBI's tiered caps.</div></div>
+
+<div class="qa"><div class="q">Q19. Why do funds use accrual accounting?</div>
+<div class="a">A: So the NAV is <b>fair to whoever deals on any given day</b>. Interest and expenses are recognised as they're earned or incurred, not when cash moves. If we didn't accrue interest, the NAV would jump the day a coupon arrived, unfairly rewarding whoever held that day; if we didn't accrue expenses, early investors would dodge costs later ones bear. Daily accrual spreads income and cost evenly.</div></div>
+
+<div class="qa"><div class="q">Q20. A big investor subscribes &#8377;10 crore today &mdash; does NAV per unit change?</div>
+<div class="a">A: No. A subscription adds cash <i>and</i> creates new units at the current NAV, so assets and units rise together and <b>per-unit NAV is unchanged</b>. Same in reverse for a redemption. What changes is the fund's <i>total</i> net assets and units outstanding, not the price per unit. That's the key distinction between total NAV (size) and NAV per unit (price).</div></div>
+
+<div class="qa"><div class="q">Q21. What is a NAV error and what's its impact?</div>
+<div class="a">A: A NAV is wrong if a security was mis-priced, an accrual missed, a corporate action not applied, or units mis-counted. The impact is <b>direct and asymmetric</b>: investors who dealt at the wrong NAV were over- or under-charged. Above a materiality threshold, the fund must <b>correct the NAV, compensate harmed investors and report the incident</b>. That's why NAV production has tolerance alerts, four-eyes review and price-source validation.</div></div>
+
+<div class="qa"><div class="q">Q22. How are illiquid securities priced for NAV?</div>
+<div class="a">A: When there's no reliable live market price, we use a documented <b>fair-value policy</b> &mdash; for thinly-traded debt, valuations from independent valuation agencies (matrix/model pricing based on yields of comparable paper); for a suspended or stale-priced stock, a fair value that reflects true worth. The aim is that no dealing investor is advantaged or disadvantaged by a wrong price.</div></div>
+
+<div class="qa"><div class="q">Q23. What does a fund administrator do?</div>
+<div class="a">A: The administrator is the <b>independent bookkeeper of the fund</b>: it strikes the NAV daily, prices securities, accrues income and expenses, processes subscriptions and redemptions, reconciles to the custodian, and produces investor and regulatory reporting. Independence from the portfolio manager is the point &mdash; those who value the fund shouldn't be those who picked the investments.</div></div>
+
+<div class="qa"><div class="q">Q24. Difference between a mutual fund, PMS and AIF?</div>
+<div class="a">A: A <b>mutual fund</b> is a pooled, daily-NAV, heavily-regulated retail vehicle with diversification and TER caps. <b>PMS</b> manages an <i>individual</i> HNI portfolio held in the client's own name, with a high minimum ticket and negotiable fees. An <b>AIF</b> is a privately-pooled vehicle for sophisticated investors, in categories I/II/III (venture/PE/hedge-style), with high minimums and lighter retail protections. Retail protection is highest for MFs, lowest for AIFs.</div></div>
+
+<div class="qa"><div class="q">Q25. What happens to NAV when a fund pays a dividend/IDCW?</div>
+<div class="a">A: NAV falls by <b>exactly the per-unit amount distributed</b>. The investor isn't richer &mdash; value just moves from inside the fund (higher NAV) to their pocket (cash). A growth option pays nothing and lets NAV compound; the IDCW option pays out and resets NAV lower.</div></div>
+
+<h3>6.3 KYC / AML / Financial Crime</h3>
+
+<div class="qa"><div class="q">Q26. What are the three stages of money laundering?</div>
+<div class="a">A: <b>Placement</b> &mdash; dirty cash first enters the financial system (the riskiest stage; think cash deposits and structuring). <b>Layering</b> &mdash; the money is moved through complex transactions across accounts and jurisdictions to break the audit trail. <b>Integration</b> &mdash; the now-obscured money re-enters the economy looking legitimate, ready to use (real estate, businesses, false invoicing). Placement &rarr; Layering &rarr; Integration.</div></div>
+
+<div class="qa"><div class="q">Q27. What is KYC and why does it matter?</div>
+<div class="a">A: KYC &mdash; Know Your Customer &mdash; is <b>identifying and verifying who a customer really is</b>, understanding the purpose of the relationship, and monitoring it over time. It matters because it's the <b>foundation of all AML controls</b>: you can't monitor, screen or report on a customer you haven't properly identified. Good KYC keeps criminal money and terrorist financing out of the system and protects the firm from regulatory and reputational damage.</div></div>
+
+<div class="qa"><div class="q">Q28. Difference between CDD and EDD?</div>
+<div class="a">A: <b>CDD (Customer Due Diligence)</b> is the standard process &mdash; identify and verify the customer and the beneficial owner, and understand the relationship. <b>EDD (Enhanced Due Diligence)</b> is deeper scrutiny for <b>higher-risk</b> customers &mdash; PEPs, high-risk geographies, complex structures &mdash; with more documentation, source-of-wealth evidence, senior sign-off and closer monitoring. The risk-based approach decides who gets which.</div></div>
+
+<div class="qa"><div class="q">Q29. What is a beneficial owner and why identify one?</div>
+<div class="a">A: The ultimate beneficial owner (UBO) is the <b>natural person who ultimately owns or controls a customer</b> &mdash; for example an individual owning above a threshold of a company. We identify them because criminals hide behind shell companies and trusts; you must "look through" the structure to the real human being to know who you're actually dealing with.</div></div>
+
+<div class="qa"><div class="q">Q30. What is a PEP and how do you treat one?</div>
+<div class="a">A: A <b>Politically Exposed Person</b> holds a prominent public function &mdash; senior politician, judge, military officer, head of a state-owned enterprise &mdash; plus close family and associates. They're higher risk because their position creates greater exposure to bribery and corruption, not because they're presumed guilty. PEPs generally get <b>EDD</b>: senior approval to onboard, source-of-wealth scrutiny and enhanced ongoing monitoring.</div></div>
+
+<div class="qa"><div class="q">Q31. Explain the risk-based approach and customer risk categorisation.</div>
+<div class="a">A: The risk-based approach means <b>spending due-diligence and monitoring effort where risk is highest</b>. Each customer is rated &mdash; typically Low/Medium/High &mdash; using factors like customer type (PEP, entity, cash business), geography (high-risk jurisdictions), and product/channel (anonymity, cross-border, speed of funds). The rating then drives the depth of due diligence and the frequency of KYC refresh and monitoring.</div></div>
+
+<div class="qa"><div class="q">Q32. What is a Suspicious Transaction Report?</div>
+<div class="a">A: An STR (a SAR in some countries) is a confidential report a firm files with the national financial intelligence unit &mdash; in India, <b>FIU-IND</b> &mdash; when it identifies activity with <b>no apparent lawful purpose or inconsistent with the customer's profile</b>. The trigger is <b>suspicion, not proof</b>; you report a reasonable suspicion for authorities to investigate. Crucially, you must not <b>tip off</b> the customer &mdash; that's an offence and defeats the purpose.</div></div>
+
+<div class="qa"><div class="q">Q33. What is "tipping off"?</div>
+<div class="a">A: Tipping off is <b>alerting a customer</b> that they're being investigated or that a suspicious report has been or may be filed. It's prohibited and itself an offence because it lets the criminal move funds or destroy evidence. Analysts investigate and report through confidential channels without ever signalling anything to the customer.</div></div>
+
+<div class="qa"><div class="q">Q34. What are the PMLA and FIU-IND?</div>
+<div class="a">A: The <b>Prevention of Money Laundering Act (PMLA)</b> is India's principal anti-money-laundering statute; it obliges reporting entities to do KYC, keep records, and report prescribed and suspicious transactions. <b>FIU-IND</b> is the Financial Intelligence Unit &ndash; India, the central agency that <b>receives, analyses and disseminates</b> those reports &mdash; STRs and cash-based reports &mdash; to law-enforcement and other agencies. I'd cite the concepts confidently but not invent exact thresholds or section numbers.</div></div>
+
+<div class="qa"><div class="q">Q35. What is FATF?</div>
+<div class="a">A: The <b>Financial Action Task Force</b> is the global standard-setter for anti-money-laundering and counter-terrorist-financing. It issues the internationally recognised recommendations, evaluates countries through mutual evaluations, and maintains grey/black lists of jurisdictions with strategic deficiencies. National frameworks, including India's, are built to align with FATF standards.</div></div>
+
+<div class="qa"><div class="q">Q36. What are the pillars of an AML program?</div>
+<div class="a">A: A compliant program rests on: <b>documented policies, controls and a risk assessment</b>; a <b>designated compliance officer</b> with authority; <b>ongoing staff training</b>; <b>independent audit/testing</b>; and <b>CDD with ongoing transaction monitoring</b>. Together they let a firm identify customers, watch their activity, and report what looks suspicious.</div></div>
+
+<div class="qa"><div class="q">Q37. What red flags suggest laundering?</div>
+<div class="a">A: <b>Structuring/smurfing</b> (many small transactions under reporting thresholds), <b>rapid pass-through</b> (money in and straight out), <b>activity inconsistent with the profile</b> (a small account suddenly receiving crores), <b>reluctance</b> to give KYC/UBO/source-of-funds, <b>unnecessary complexity</b> (shells, nominees), and <b>links to sanctioned or high-risk jurisdictions</b>. Any of these should trigger review and possible escalation.</div></div>
+
+<div class="qa"><div class="q">Q38. What is sanctions screening and what do you do on a hit?</div>
+<div class="a">A: Sanctions screening checks customers and transactions against <b>sanctions and watchlists</b> (UN lists, lists notified in India, etc.), handling name variations to catch true matches while managing false positives. On a genuine sanctions match you generally must <b>freeze / not proceed</b> with the transaction and escalate/report as required &mdash; you don't process it and you don't tip off. False positives are cleared with documented rationale.</div></div>
+
+<div class="qa"><div class="q">Q39. What is transaction monitoring?</div>
+<div class="a">A: It's the <b>automated surveillance of customer activity</b> against rules and models to spot patterns inconsistent with the customer's known profile &mdash; sudden large transfers, rapid in-and-out, structuring, unexpected geographies. Alerts are triaged by analysts; genuine concerns become investigation cases that may lead to an STR. It's how a firm turns KYC into ongoing vigilance.</div></div>
+
+<div class="qa"><div class="q">Q40. What is adverse media screening?</div>
+<div class="a">A: Checking whether a customer appears in <b>credible negative news</b> &mdash; fraud, corruption, organised crime, sanctions evasion. A material adverse-media hit can raise the customer's risk rating, trigger EDD, or lead to exiting the relationship. It supplements sanctions/PEP screening with real-world reputational intelligence.</div></div>
+
+<h3>6.4 Treasury Operations</h3>
+
+<div class="qa"><div class="q">Q41. What does a treasury function do?</div>
+<div class="a">A: Treasury manages the firm's <b>own cash, liquidity, funding and market-risk hedging</b> &mdash; making sure the firm has the right money, in the right currency and place, at the right time and acceptable cost. Treasury operations is the execution side: positioning cash, moving funds, and settling FX and money-market deals with proper controls.</div></div>
+
+<div class="qa"><div class="q">Q42. Explain nostro and vostro accounts.</div>
+<div class="a">A: A <b>nostro</b> is "our" account held with another (usually foreign) bank in that bank's currency &mdash; "our money with you" (e.g., an Indian bank's USD account in New York). A <b>vostro</b> is another bank's account held with us in our currency &mdash; "your money with us" (a foreign bank's INR account in Mumbai). Nostro reconciliation &mdash; matching our record against the correspondent's statement &mdash; is a core treasury control.</div></div>
+
+<div class="qa"><div class="q">Q43. What is cash positioning?</div>
+<div class="a">A: Cash positioning is <b>knowing, intraday, how much cash the firm has across all accounts and currencies</b>, and forecasting the day's flows, so obligations are met without idle balances. Idle cash earns nothing; a shortfall means costly emergency funding or a failed payment. It's the daily heartbeat of treasury operations.</div></div>
+
+<div class="qa"><div class="q">Q44. What is settlement risk / Herstatt risk?</div>
+<div class="a">A: Settlement risk is the risk that <b>you deliver your side of a trade but the counterparty fails to deliver theirs</b>. In FX it's acute because the two currency legs settle in different time zones &mdash; the classic <b>Herstatt</b> case (1974), where a bank received one currency then failed before paying the other, and counterparties lost the full principal. It's mitigated by <b>PvP (Payment versus Payment)</b> settlement &mdash; the FX analogue of DVP &mdash; plus netting and counterparty limits.</div></div>
+
+<div class="qa"><div class="q">Q45. How do FX forwards and swaps hedge risk, from an ops view?</div>
+<div class="a">A: An <b>FX forward</b> locks a rate today for a currency exchange on a future date, removing uncertainty on a known future foreign payment/receipt; operations confirms, values and settles both legs on value date. An <b>FX swap</b> is a spot exchange plus a reverse forward &mdash; used to move liquidity between currencies for a period without taking currency risk. Both follow the same capture &rarr; confirm &rarr; settle discipline as any trade.</div></div>
+
+<div class="qa"><div class="q">Q46. What is an interest-rate swap and how does it settle?</div>
+<div class="a">A: An IRS exchanges <b>fixed-rate for floating-rate interest</b> on a notional principal &mdash; used to convert floating funding into fixed (or vice versa) to manage rate risk. The <b>notional isn't exchanged</b>; only the <b>net interest</b> is settled each period. Operations calculates the reset, nets the two legs, and settles the difference on each payment date.</div></div>
+
+<div class="qa"><div class="q">Q47. What is the money market and why does treasury use it?</div>
+<div class="a">A: The money market is where <b>short-term funds (up to about a year) are borrowed and lent</b> &mdash; call money, repo/reverse repo, T-bills, commercial paper, certificates of deposit. Treasury uses it to manage day-to-day liquidity: to fund a shortfall cheaply or park a surplus. In India the RBI's repo rate anchors short-term rates.</div></div>
+
+<h3>6.5 Wealth Management &amp; Investment Advisory</h3>
+
+<div class="qa"><div class="q">Q48. Difference between an adviser and a distributor?</div>
+<div class="a">A: An <b>Investment Adviser (RIA)</b> gives tailored advice for a <b>fee paid by the client</b> and owes a <b>fiduciary duty</b> to act in the client's best interest; SEBI requires advice to be separated from distribution. A <b>distributor</b> sells products and is <b>paid by the AMC</b> via commission embedded in the regular-plan TER. The conflict is clear &mdash; a commission-paid seller has an incentive to favour higher-commission products &mdash; which is exactly why SEBI keeps advice fee-based and separate. Different pay, different duty.</div></div>
+
+<div class="qa"><div class="q">Q49. How would you build an asset allocation for a client?</div>
+<div class="a">A: I'd start with the <b>financial planning process</b>: gather the client's goals, horizon, income and net worth, then <b>risk-profile</b> them on capacity <i>and</i> tolerance. From that I'd set a <b>strategic asset allocation</b> &mdash; say 65% equity / 25% debt / 10% gold for a 35-year-old with a 25-year retirement goal and moderate-aggressive profile &mdash; compute the rupee amounts by weight, select suitable diversified products (often via SIP), and then <b>monitor and rebalance</b> back to target. Every choice is checked for <b>suitability</b> against that specific client.</div></div>
+
+<div class="qa"><div class="q">Q50. What is asset allocation vs diversification?</div>
+<div class="a">A: <b>Asset allocation</b> is the top-level split <i>between</i> asset classes &mdash; how much equity vs debt vs gold &mdash; and it drives most of the portfolio's risk and return. <b>Diversification</b> is spreading holdings <i>within and across</i> those classes so no single security or sector dominates, which removes uncompensated <b>specific (unsystematic) risk</b>. Allocation sets the risk dial; diversification cleans up the risk you aren't paid to take. You can be 100% equity yet well-diversified across 200 stocks.</div></div>
+
+<div class="qa"><div class="q">Q51. Risk capacity vs risk tolerance?</div>
+<div class="a">A: <b>Capacity is the objective financial ability to absorb loss</b> &mdash; driven by time horizon, income stability and wealth. <b>Tolerance is the subjective psychological willingness</b> to endure volatility. They diverge: a wealthy retiree may have high capacity but low tolerance; a young earner high tolerance but low capacity. Suitable advice respects <b>both</b> &mdash; usually the more conservative of the two &mdash; so the client doesn't panic-sell at the bottom.</div></div>
+
+<div class="qa"><div class="q">Q52. Strategic vs tactical asset allocation?</div>
+<div class="a">A: <b>Strategic (SAA)</b> is the long-term policy mix anchored to the client's goals and risk profile &mdash; the target you rebalance back to. <b>Tactical (TAA)</b> is short-term deviation from that mix to exploit market views, like trimming equity when it looks expensive. SAA is the anchor; TAA is the tilt. Most of the long-run outcome comes from SAA.</div></div>
+
+<div class="qa"><div class="q">Q53. Explain SIP, STP and SWP.</div>
+<div class="a">A: <b>SIP</b> invests a fixed amount at regular intervals &mdash; rupee-cost averaging and discipline, ideal for salaried investors. <b>STP</b> transfers a fixed amount periodically from one fund to another &mdash; e.g., staggering a lump sum from a liquid fund into equity. <b>SWP</b> withdraws a fixed amount periodically &mdash; creating a regular income, useful in retirement, while the rest stays invested. Systematic in, systematic move, systematic out.</div></div>
+
+<div class="qa"><div class="q">Q54. Direct vs regular mutual fund plans &mdash; which and why?</div>
+<div class="a">A: A <b>regular plan</b> is bought through a distributor and its TER includes a distribution commission, so it costs more and its NAV grows a little slower. A <b>direct plan</b> is bought straight from the AMC with no commission, so lower TER and higher long-run NAV. For a fee-paying advised client or a self-directed investor, direct is more cost-efficient &mdash; and because TER compounds, even ~1% a year is a large sum over a decade.</div></div>
+
+<div class="qa"><div class="q">Q55. What is ESG, and what frameworks apply in India?</div>
+<div class="a">A: ESG is <b>Environmental, Social and Governance</b> factors used alongside financials to assess a company's sustainability and long-term risk. Key frameworks: <b>GRI</b> (broad impact reporting), <b>SASB</b> (industry-specific financially-material issues, now under the ISSB), and in India <b>BRSR &mdash; the Business Responsibility and Sustainability Report</b> that SEBI mandates for large listed companies. <b>ESG integration</b> means factoring material ESG risks into investment decisions; <b>ESG scores</b> help compare and screen companies &mdash; but they vary by provider and carry greenwashing risk, so they're an input, not gospel.</div></div>
+
+<h3>6.6 Deeper-dive questions across all areas</h3>
+
+<div class="qa"><div class="q">Q56. What is trade allocation and why must it be fair?</div>
+<div class="a">A: When a manager places one <b>block order</b> for several accounts and gets fills at various prices, <b>allocation</b> assigns those fills to each account &mdash; usually at the <b>average price, pro-rata</b> to a pre-decided policy. It must be fair and prompt because allocating <i>after</i> seeing which trades worked (to hand the best fills to a favoured account) is an abuse. A documented, pre-trade allocation policy is the control.</div></div>
+
+<div class="qa"><div class="q">Q57. What is netting and how does it help?</div>
+<div class="a">A: Netting reduces what actually has to move. <b>Settlement netting</b> means if you bought 1,000 and sold 400 of a security for the same date you settle the <b>net 600</b>. At the CCP, <b>multilateral netting</b> collapses each member's many bilateral obligations into one net figure per security and currency. Less to move means lower settlement risk, less liquidity needed, and lower cost.</div></div>
+
+<div class="qa"><div class="q">Q58. What does a prime broker do?</div>
+<div class="a">A: A prime broker is the one-stop counterparty for hedge funds and active managers: it <b>executes and clears trades, provides financing and leverage (margin lending), lends securities to enable short selling, holds assets in custody, and gives consolidated reporting</b>. It bundles the operational plumbing a fund would otherwise stitch together from many providers.</div></div>
+
+<div class="qa"><div class="q">Q59. What is static/reference data and why does it matter? What is a buy-in?</div>
+<div class="a">A: <b>Static (reference) data</b> is slow-changing master data every trade relies on &mdash; ISINs, counterparty/account details, <b>SSIs</b>, calendars, fees. A single wrong SSI or ISIN makes a trade fail or settle to the wrong place, so a static-data team owns its accuracy. A <b>buy-in</b> is what the clearing corporation does when a seller persistently fails to deliver: it buys the securities in the market for the let-down buyer and charges the cost and price difference to the failing seller &mdash; the threat that disciplines timely delivery.</div></div>
+
+<div class="qa"><div class="q">Q60. Explain the fair-value hierarchy (Level 1/2/3).</div>
+<div class="a">A: It ranks valuation inputs by reliability. <b>Level 1</b> = quoted prices in an active market for the identical asset (a listed share) &mdash; most reliable. <b>Level 2</b> = other observable inputs, like yields of comparable bonds or curves (mark-to-model on market data). <b>Level 3</b> = unobservable, model/assumption-driven inputs (an unlisted PE stake) &mdash; most judgemental. Higher level = more valuation risk and more disclosure/scrutiny.</div></div>
+
+<div class="qa"><div class="q">Q61. What is a high-water mark and a hurdle rate?</div>
+<div class="a">A: A <b>high-water mark</b> is the highest NAV on which a performance fee has already been paid; the manager earns a performance fee only on <b>new profits above it</b>, so investors don't pay twice to recover a drawdown. A <b>hurdle rate</b> is a minimum return the fund must clear before any performance fee applies (e.g., carry only above 8%). Together they ensure the manager is paid for genuine, above-threshold outperformance &mdash; not for a bounce-back or a mediocre year.</div></div>
+
+<div class="qa"><div class="q">Q62. Explain capital calls and the distribution waterfall in PE/VC.</div>
+<div class="a">A: LPs make a <b>commitment</b>; the GP draws it down through <b>capital calls</b> as deals arise, and returns money via <b>distributions</b> on exits. Proceeds follow a <b>waterfall</b>: first <b>return of capital</b> to LPs, then a <b>preferred return</b> (hurdle) to LPs, then a <b>GP catch-up</b>, then the remaining profit split in the carry ratio (commonly ~80/20). It ensures LPs get their money and a minimum return before the GP earns carried interest.</div></div>
+
+<div class="qa"><div class="q">Q63. Open-ended vs closed-ended fund?</div>
+<div class="a">A: An <b>open-ended</b> fund continuously creates and redeems units at NAV with the fund itself &mdash; unlimited size, daily liquidity (most mutual funds). A <b>closed-ended</b> fund issues a fixed number of units for a fixed term; you exit by selling to another investor (often on an exchange), so its market price can trade at a <b>premium or discount to NAV</b>. Most PE/VC and many AIFs are closed-ended.</div></div>
+
+<div class="qa"><div class="q">Q64. What are the three AIF categories?</div>
+<div class="a">A: <b>Category I</b> &mdash; socially/economically encouraged, generally unleveraged (venture, SME, infra, social funds). <b>Category II</b> &mdash; the residual, no significant leverage (private equity, private credit, real estate). <b>Category III</b> &mdash; complex strategies with leverage, often short-term (hedge funds, long-short). Retail protection is lighter than mutual funds throughout; minimums are high.</div></div>
+
+<div class="qa"><div class="q">Q65. What is swing pricing?</div>
+<div class="a">A: It's a mechanism to make <b>transacting investors bear their own dealing costs</b>. On a day of heavy net redemptions the dealing NAV is swung slightly down (and up for heavy net subscriptions), so the cost of the trading their flows caused falls on them, not on the investors who stayed. It keeps the fund fair to remaining holders.</div></div>
+
+<div class="qa"><div class="q">Q66. STR vs CTR &mdash; what's the difference?</div>
+<div class="a">A: An <b>STR (Suspicious Transaction Report)</b> is filed because of <b>suspicion</b> &mdash; activity with no lawful purpose or inconsistent with the customer &mdash; of <i>any</i> amount; it's judgemental. A <b>CTR (Cash Transaction Report)</b> is filed because a <b>cash amount crossed a prescribed threshold</b>, regardless of suspicion; it's mechanical. An innocent large cash deposit still triggers a CTR; a small odd transfer can trigger an STR. Both go to FIU-IND under the PMLA.</div></div>
+
+<div class="qa"><div class="q">Q67. What are FATCA and CRS?</div>
+<div class="a">A: They're <b>tax-transparency</b> regimes captured at onboarding, not AML rules. <b>FATCA</b> is a US law requiring institutions worldwide to identify and report <b>US persons'</b> accounts to the US IRS. <b>CRS</b> is the OECD's multilateral equivalent &mdash; institutions identify account holders' <b>tax residency</b> and report to the local authority, which exchanges it with participating countries. India does both, so forms ask for tax residency and a US TIN where relevant.</div></div>
+
+<div class="qa"><div class="q">Q68. What is trade-based money laundering?</div>
+<div class="a">A: TBML disguises criminal money inside <b>trade transactions</b> rather than moving cash &mdash; <b>over- or under-invoicing</b> goods to shift value across borders, <b>multiple invoicing</b> for one shipment, or <b>over-/under-/phantom shipment</b>. Red flags: prices far off market, goods unrelated to the customer's business, needlessly complex routing. It's hard to spot because it hides inside legitimate-looking documents.</div></div>
+
+<div class="qa"><div class="q">Q69. What is asset-liability management (ALM)?</div>
+<div class="a">A: ALM manages the <b>mismatch between assets and liabilities</b> &mdash; a bank funds long-term loans with short-term deposits. It controls <b>liquidity risk</b> (deposits can leave faster than loans repay) and <b>interest-rate risk in the banking book</b> (assets and liabilities repricing at different times squeeze the net interest margin). The <b>ALCO</b> committee sets funding, pricing and hedging policy; swaps and buffers are the tools.</div></div>
+
+<div class="qa"><div class="q">Q70. RTGS vs NEFT vs SWIFT?</div>
+<div class="a">A: <b>RTGS</b> settles large-value payments <b>individually and in real time (gross)</b> &mdash; each payment final and immediate. <b>NEFT</b> settles any-value payments on a <b>deferred net basis in batches</b>. <b>SWIFT</b> is a global <b>messaging network</b> &mdash; it carries the payment instructions, not the money itself; actual settlement happens through correspondent nostro/vostro accounts. The trap: SWIFT is messaging, not settlement.</div></div>
+
+<div class="qa"><div class="q">Q71. Explain initial margin, variation margin and a margin call.</div>
+<div class="a">A: <b>Initial margin</b> is collateral posted up front to cover <i>potential future</i> exposure if a counterparty defaults. <b>Variation margin</b> is exchanged (usually daily) to cover the <i>current</i> mark-to-market move &mdash; the losing side pays the winning side, keeping net exposure near zero. A <b>margin call</b> is the demand for more collateral when exposure rises or collateral falls; a <b>haircut</b> discounts collateral value for safety. Operations values positions/collateral, meets calls on time, and settles &mdash; a missed call is a serious control failure.</div></div>
+
+<div class="qa"><div class="q">Q72. Time-weighted vs money-weighted return?</div>
+<div class="a">A: <b>TWR</b> links sub-period returns and <b>removes the effect of client cash flows</b>, so it measures the <b>manager's skill</b> &mdash; it's what GIPS and fund reporting use. <b>MWR</b> is an <b>IRR</b> that keeps the size and timing of cash flows in, so it measures the <b>investor's actual experience</b>. If a client adds money just before a fall, MWR looks worse than TWR though the manager did nothing wrong. Judge the manager on TWR, the client on MWR.</div></div>
+
+<div class="qa"><div class="q">Q73. What are alpha, beta and attribution?</div>
+<div class="a">A: <b>Alpha</b> is return earned <i>above</i> what the benchmark and risk taken would predict &mdash; the manager's value-add. <b>Beta</b> is sensitivity to the market (1 = moves with it, &gt;1 amplifies, &lt;1 dampens) &mdash; systematic-risk exposure. <b>Attribution</b> decomposes excess return into <i>why</i> &mdash; typically <b>allocation</b> (over/under-weighting the right classes/sectors) vs <b>selection</b> (picking the right securities). All are judged against an appropriate benchmark.</div></div>
+
+<div class="qa"><div class="q">Q74. How does Modern Portfolio Theory justify diversification?</div>
+<div class="a">A: MPT (Markowitz) shows portfolio risk depends not only on each asset's volatility but on how assets <b>move together (correlation)</b>. Because imperfectly-correlated assets partly offset, you can combine them for a <b>higher return per unit of risk</b> &mdash; the best such combinations form the <b>efficient frontier</b>. That's the mathematical reason diversification works: mixing assets that don't move in lockstep cuts risk without cutting expected return.</div></div>
+
+<div class="qa"><div class="q">Q75. Name some behavioural biases and how an adviser counters them.</div>
+<div class="a">A: <b>Loss aversion</b> (losses hurt more, so clients hold losers and panic-sell), <b>herding</b>, <b>overconfidence</b> (over-trading), <b>anchoring</b>, and <b>recency/confirmation bias</b>. An adviser counters them with <b>goal-based investing, SIPs, rule-based rebalancing and a written Investment Policy Statement</b> &mdash; pre-commitments that keep emotion from driving decisions at the wrong moment.</div></div>
+
+<div class="qa"><div class="q">Q76. What's the difference between SRI, impact investing and ESG integration? And fee-only vs commission?</div>
+<div class="a">A: <b>ESG integration</b> factors material ESG risks into ordinary investment analysis (risk management). <b>SRI</b> screens on ethical grounds &mdash; excluding tobacco/weapons or favouring positive performers (values). <b>Impact investing</b> intentionally seeks a <b>measurable social/environmental benefit alongside financial return</b>. On pay: <b>fee-only</b> means the adviser is paid only by the client (RIA/fiduciary, no product conflict); <b>commission</b> means paid by the manufacturer out of product charges (incentive to push higher-commission products) &mdash; which is why SEBI separates advice from distribution.</div></div>
+
+<!-- ============================================================ -->
+<h2 class="sec">7. Rapid-Fire Glossary &amp; Final Checklist</h2>
+
+<h3>7.1 One-line glossary</h3>
+<ul>
+  <li><b>Trade date vs settlement date</b> &mdash; when you deal vs when securities/cash actually move.</li>
+  <li><b>T+1</b> &mdash; settlement one business day after trade date (Indian cash equities).</li>
+  <li><b>DVP</b> &mdash; delivery only against simultaneous payment; kills principal risk.</li>
+  <li><b>PvP</b> &mdash; the FX version of DVP; both currency legs settle together (mitigates Herstatt risk).</li>
+  <li><b>Novation</b> &mdash; the CCP replacing the two counterparties, becoming buyer to seller and seller to buyer.</li>
+  <li><b>Break</b> &mdash; a mismatch between internal records and an external source; timing (self-clears) or real (must fix).</li>
+  <li><b>Nostro / Vostro</b> &mdash; our money with you / your money with us.</li>
+  <li><b>NAV per unit</b> &mdash; (assets &minus; liabilities) / units outstanding.</li>
+  <li><b>TER</b> &mdash; annual recurring fund cost as a % of average net assets; accrued daily; direct &lt; regular.</li>
+  <li><b>Accrual accounting</b> &mdash; recognise income/expense as earned/incurred, not when cash moves.</li>
+  <li><b>Placement / Layering / Integration</b> &mdash; the three stages of money laundering.</li>
+  <li><b>CDD / EDD</b> &mdash; standard vs enhanced due diligence (EDD for high-risk/PEPs).</li>
+  <li><b>UBO</b> &mdash; the natural person who ultimately owns/controls a customer.</li>
+  <li><b>PEP</b> &mdash; politically exposed person; higher-risk, gets EDD.</li>
+  <li><b>STR / SAR</b> &mdash; suspicious transaction/activity report filed to the FIU on suspicion (never tip off).</li>
+  <li><b>PMLA / FIU-IND / FATF</b> &mdash; India's AML law / India's financial intelligence unit / the global AML standard-setter.</li>
+  <li><b>Structuring (smurfing)</b> &mdash; splitting sums to stay under reporting thresholds.</li>
+  <li><b>Herstatt risk</b> &mdash; FX settlement (time-zone principal) risk.</li>
+  <li><b>SAA / TAA</b> &mdash; strategic (long-term policy) vs tactical (short-term tilt) asset allocation.</li>
+  <li><b>Risk capacity vs tolerance</b> &mdash; ability (objective) vs willingness (subjective).</li>
+  <li><b>SIP / STP / SWP</b> &mdash; systematic invest / transfer / withdraw.</li>
+  <li><b>RIA</b> &mdash; SEBI-registered investment adviser; fee-based; fiduciary.</li>
+  <li><b>Fiduciary duty</b> &mdash; act in the client's best interest above your own.</li>
+  <li><b>BRSR</b> &mdash; SEBI's mandated ESG disclosure for large listed Indian companies.</li>
+  <li><b>Allocation</b> &mdash; fair, average-price splitting of a block fill across accounts (pre-decided policy).</li>
+  <li><b>Buy-in</b> &mdash; CCP buys undelivered securities for the let-down buyer, charging the failing seller.</li>
+  <li><b>SSI</b> &mdash; standing settlement instruction; core static/reference data.</li>
+  <li><b>Prime broker</b> &mdash; one-stop financing/custody/securities-lending counterparty for hedge funds.</li>
+  <li><b>Fair-value hierarchy</b> &mdash; Level 1 (quoted) &lt; Level 2 (observable) &lt; Level 3 (unobservable) reliability.</li>
+  <li><b>High-water mark</b> &mdash; highest NAV on which a performance fee was paid; no fee until exceeded.</li>
+  <li><b>Hurdle rate</b> &mdash; minimum return before a performance fee/carry applies.</li>
+  <li><b>Carried interest</b> &mdash; the GP's profit share in a PE/VC fund.</li>
+  <li><b>Capital call / waterfall</b> &mdash; drawdown of committed capital; return-of-capital &rarr; pref &rarr; catch-up &rarr; carry split.</li>
+  <li><b>Open vs closed-ended</b> &mdash; deal with the fund at NAV vs fixed units traded at a premium/discount.</li>
+  <li><b>AIF I/II/III</b> &mdash; encouraged/unleveraged · residual/PE-debt · leveraged hedge-style.</li>
+  <li><b>Swing pricing</b> &mdash; swing the dealing NAV so transacting investors bear their own dealing costs.</li>
+  <li><b>STR vs CTR</b> &mdash; suspicion-based (any amount) vs cash-threshold-based (mechanical) reporting.</li>
+  <li><b>FATCA / CRS</b> &mdash; US and OECD tax-residency reporting regimes captured at onboarding.</li>
+  <li><b>TBML</b> &mdash; trade-based ML via over/under-invoicing and mis-shipment.</li>
+  <li><b>ALM / ALCO</b> &mdash; managing asset-liability mismatch (liquidity + rate risk); the governing committee.</li>
+  <li><b>RTGS / NEFT / SWIFT</b> &mdash; gross real-time · net batched · messaging (not settlement).</li>
+  <li><b>Initial vs variation margin</b> &mdash; buffer for future exposure vs daily mark-to-market top-up; haircut discounts collateral.</li>
+  <li><b>TWR vs MWR</b> &mdash; manager skill (cash-flow-neutral) vs investor experience (IRR, timing-sensitive).</li>
+  <li><b>Alpha / beta</b> &mdash; return above benchmark/risk vs sensitivity to the market.</li>
+  <li><b>MPT / efficient frontier</b> &mdash; correlation-based diversification for best return per unit of risk.</li>
+  <li><b>Fee-only vs commission</b> &mdash; paid by client (fiduciary) vs paid by product manufacturer.</li>
+  <li><b>SRI / impact</b> &mdash; ethical screening vs deliberately measured positive impact + return.</li>
+  <li><b>GRI / SASB / TCFD / PRI</b> &mdash; impact reporting · material-issue reporting · climate reporting · investor principles.</li>
+</ul>
+
+<h3>7.2 The must-know summary tables at a glance</h3>
+<table>
+  <thead><tr><th style="width:25%">Theme</th><th style="width:75%">The three-part answer to memorise</th></tr></thead>
+  <tbody>
+    <tr><td><b>Three offices</b></td><td>Front takes risk &rarr; Middle independently controls/measures &rarr; Back confirms &amp; settles.</td></tr>
+    <tr><td><b>Three ML stages</b></td><td>Placement (cash in) &rarr; Layering (obscure trail) &rarr; Integration (spend as clean).</td></tr>
+    <tr><td><b>Three reconciliations</b></td><td>Position (holdings) · Cash (ledger) · Nostro (our account abroad).</td></tr>
+    <tr><td><b>Three fund vehicles</b></td><td>Mutual Fund (retail, daily NAV) · PMS (HNI, own name) · AIF (sophisticated, cat I/II/III).</td></tr>
+    <tr><td><b>Adviser vs distributor</b></td><td>Adviser: client pays, fiduciary. Distributor: AMC pays commission, seller.</td></tr>
+    <tr><td><b>Allocation vs diversification</b></td><td>Allocation = split between classes. Diversification = spread within/across to cut specific risk.</td></tr>
+  </tbody>
+</table>
+
+<h3>7.3 Final interview checklist</h3>
+<ul>
+  <li>Can I recite the trade lifecycle in one breath and name a control at each step?</li>
+  <li>Can I compute a NAV per unit and explain TER's compounding drag with numbers?</li>
+  <li>Can I state the three ML stages and what an STR is &mdash; without inventing thresholds?</li>
+  <li>Do I clearly separate capacity vs tolerance, allocation vs diversification, adviser vs distributor, NAV per unit vs total NAV, front vs back office?</li>
+  <li>Can I place every concept in Indian context &mdash; SEBI, RBI, NSDL/CDSL, NISM, PMLA/FIU-IND, BRSR, INR?</li>
+  <li>Do I say "typically/around/broadly, subject to current rules" instead of quoting exact caps, rates or statute sections I'm unsure of?</li>
+</ul>
+
+<div class="keytake"><b>Closing note:</b> Operations, compliance and advisory all reward the same trait &mdash; disciplined accuracy. In the interview, be precise about what you know, honest about what you don't, and always tie the concept back to the client's or the firm's real-world outcome. That is exactly the mindset these roles are hiring for.</div>
+
+</body></html>

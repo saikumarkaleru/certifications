@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<!--
+  SHARED STUDY-GUIDE TEMPLATE — do not change the <style> block.
+  Each subject guide must reuse this exact <head> so all PDFs look consistent.
+  Fill <body> with the guide content using the classes documented below.
+
+  STRUCTURE TO USE INSIDE <body>:
+    <div class="cover">                              (title page)
+      <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+      <h1 class="cover-title">Subject Name</h1>
+      <div class="cover-sub">One-line scope. Roles: ...</div>
+    </div>
+    <div class="toc">...contents list...</div>       (optional)
+    <h2>1. Section</h2>            (major section, starts near top; use page-break as needed)
+    <h3>1.1 Subsection</h3>
+    <p>...</p>
+    <ul><li>...</li></ul>
+    <div class="formula"><b>Name</b><br> equation <div class="where">where: ...</div></div>
+    <table><thead><tr><th>..</th></tr></thead><tbody><tr><td>..</td></tr></tbody></table>
+    <div class="example"><div class="ex-h">Worked Example</div> ...steps... </div>
+    <div class="qa"><div class="q">Q: ...</div><div class="a">A: ...</div></div>
+    <div class="trap"><b>Common trap:</b> ...</div>
+    <div class="keytake"><b>Key takeaways:</b> ...</div>
+-->
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Georgia","Cambria",serif; font-size: 10.5pt; line-height: 1.5; color: #1a1a1a; }
+  h1,h2,h3,.cover-kicker,.cover-sub,.ex-h,.q,th { font-family: "Calibri","Segoe UI",sans-serif; }
+
+  /* Cover */
+  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+  .cover-kicker { font-size: 11pt; font-weight: 700; letter-spacing: 2px; color: #1f4e79; text-transform: uppercase; }
+  .cover-title { font-size: 34pt; font-weight: 800; color: #16365c; margin: 10px 0 6px; line-height: 1.1; }
+  .cover-sub { font-size: 12pt; color: #444; font-style: italic; }
+  .cover-foot { margin-top: 22px; font-size: 10pt; color: #666; font-family:"Calibri",sans-serif; }
+
+  /* TOC */
+  .toc { page-break-after: always; }
+  .toc h2 { border: none; }
+  .toc ol { margin-left: 20px; font-family:"Calibri",sans-serif; font-size: 11pt; line-height: 1.9; }
+
+  /* Headings */
+  h2 { font-size: 16pt; font-weight: 700; color: #16365c; border-bottom: 2px solid #16365c;
+       padding-bottom: 4px; margin: 18px 0 10px; page-break-after: avoid; }
+  h3 { font-size: 12.5pt; font-weight: 700; color: #1f4e79; margin: 14px 0 5px; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; color: #333; margin: 10px 0 4px; font-family:"Calibri",sans-serif; }
+  p { margin: 5px 0; text-align: justify; }
+  ul, ol { margin: 5px 0 5px 22px; }
+  li { margin-bottom: 3px; }
+  b, strong { color: #16365c; }
+
+  /* Formula box */
+  .formula { background: #f4f7fb; border-left: 4px solid #1f4e79; padding: 8px 12px; margin: 8px 0;
+             font-family: "Cambria Math","Cambria",serif; page-break-inside: avoid; }
+  .formula b { color: #16365c; }
+  .formula .where { font-size: 9.3pt; color: #555; margin-top: 3px; font-family:"Calibri",sans-serif; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 9px 0; font-size: 9.6pt; page-break-inside: avoid; }
+  th { background: #16365c; color: #fff; text-align: left; padding: 5px 8px; font-size: 9.6pt; }
+  td { border: 1px solid #cbd5e1; padding: 4px 8px; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f4f7fb; }
+
+  /* Worked example */
+  .example { border: 1px solid #b7c7dd; border-radius: 4px; padding: 9px 12px; margin: 10px 0;
+             background: #fbfdff; page-break-inside: avoid; }
+  .ex-h { font-weight: 700; color: #1f4e79; font-size: 10.5pt; margin-bottom: 4px; }
+
+  /* Q&A */
+  .qa { margin: 8px 0; page-break-inside: avoid; }
+  .qa .q { font-weight: 700; color: #16365c; }
+  .qa .a { margin-top: 2px; }
+
+  /* Trap / takeaway callouts */
+  .trap { background: #fff6f0; border-left: 4px solid #c26a2c; padding: 6px 11px; margin: 8px 0; font-size: 10pt; }
+  .keytake { background: #f0f7f1; border-left: 4px solid #3f7d45; padding: 8px 12px; margin: 12px 0; }
+
+  .sec { page-break-before: always; }   /* put on an <h2> to force a fresh page */
+</style></head><body>
+
+  <div class="cover">
+    <div class="cover-kicker">Interview Prep · Finance Roles</div>
+    <h1 class="cover-title">Equity &amp; Capital Markets</h1>
+    <div class="cover-sub">Market structure, raising equity, indices, trading, corporate actions, and the equity research process — with strong Indian (SEBI / NSE / BSE) context.</div>
+    <div class="cover-foot">
+      Target roles: Equity Research · Investment Banking · Wealth Management · Investor Relations<br>
+      Audience: MBA (Finance) fresher · NISM Series-XV Research Analyst · derivatives-desk background<br>
+      Study Guide 05 of the Finance Interview Series · India focus · All figures in INR (₹)
+    </div>
+  </div>
+
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li>Capital Markets: The Big Picture</li>
+      <li>Market Structure &amp; Participants (SEBI, Exchanges, Depositories, Brokers)</li>
+      <li>Dematerialisation, Clearing &amp; T+1 Settlement</li>
+      <li>Raising Equity: IPO, FPO, Rights, OFS, QIP &amp; ASBA</li>
+      <li>Indices: Nifty 50 &amp; Sensex — Construction &amp; Maintenance</li>
+      <li>Trading Mechanics: Orders, Spreads, Circuit Breakers</li>
+      <li>Market Participants: FII/FPI, DII, Retail, HNI, Proprietary</li>
+      <li>Corporate Actions: Dividend, Split, Bonus, Buyback, Rights</li>
+      <li>Equity Instruments: Shares, Preference, ADR/GDR, MF/ETF, REIT/InvIT</li>
+      <li>Market-Cap Categories, Investment Style &amp; Market-Level Multiples</li>
+      <li>The Equity Research Process: Thesis, Report, Ratings &amp; Concalls</li>
+      <li>What Moves Stock Prices</li>
+      <li>Market Efficiency (EMH), Behavioural Finance &amp; Risk–Return</li>
+      <li>Interview Q&amp;A Bank (70+ questions)</li>
+      <li>Rapid-Fire Glossary &amp; Final Checklist</li>
+    </ol>
+  </div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">1. Capital Markets: The Big Picture</h2>
+
+  <p>A <b>capital market</b> is the mechanism through which savers (households, institutions) channel surplus funds to users of capital (companies, governments) in exchange for financial claims — <b>equity</b> (ownership) or <b>debt</b> (lending). This guide focuses on the <b>equity</b> side and the broader <b>secondary-market plumbing</b> that any equity research, IB, wealth, or investor-relations professional must know cold.</p>
+
+  <p>Two distinctions frame everything that follows:</p>
+  <ul>
+    <li><b>Primary market</b> — where securities are <i>created and sold for the first time</i>. The <i>company</i> (or a selling shareholder) receives the money. Example: an <b>IPO</b>, a rights issue, a QIP.</li>
+    <li><b>Secondary market</b> — where <i>already-issued</i> securities change hands between investors. The <i>company gets nothing</i>; liquidity, price discovery, and exit happen here. Example: buying Reliance shares on the NSE.</li>
+  </ul>
+
+  <p>The equity market performs four economic functions: (1) <b>capital formation</b> — funding real investment; (2) <b>price discovery</b> — aggregating information into a market price; (3) <b>liquidity</b> — letting investors enter/exit cheaply; and (4) <b>corporate governance</b> — the share price and takeover threat discipline management. Equity research sits at the intersection of (2) and (4): analysts produce the information that feeds price discovery.</p>
+
+  <div class="keytake"><b>Key takeaways:</b> Primary market = money to the company (issuance). Secondary market = money between investors (trading). India's markets are among the most retail-participatory and technologically advanced in the world — fully dematerialised, largely T+1 (moving to T+0), with a strong regulator (SEBI). Master the plumbing; the analysis sits on top of it.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">2. Market Structure &amp; Participants</h2>
+
+  <p>The Indian securities market is a layered ecosystem. Understanding "who does what" is a favourite opening interview question because it reveals whether you actually understand the flow of a trade from click to settlement.</p>
+
+  <h3>2.1 The Regulator — SEBI</h3>
+  <p>The <b>Securities and Exchange Board of India (SEBI)</b>, established as a statutory body under the SEBI Act, 1992, is the apex regulator. Its statutory mandate has three prongs: <b>protect investors</b>, <b>develop the market</b>, and <b>regulate the market</b>. SEBI's remit includes:</p>
+  <ul>
+    <li>Registering and regulating intermediaries — stock exchanges, brokers, merchant bankers, mutual funds, portfolio managers, research analysts, investment advisers, depositories, and rating agencies.</li>
+    <li>Framing disclosure norms — notably the <b>ICDR</b> (Issue of Capital and Disclosure Requirements) regulations for fund-raising and the <b>LODR</b> (Listing Obligations and Disclosure Requirements) regulations for continuous disclosure by listed companies.</li>
+    <li>Prohibiting fraud, insider trading (PIT regulations) and market manipulation.</li>
+    <li>Regulating takeovers via the <b>SAST</b> (Substantial Acquisition of Shares and Takeovers) regulations.</li>
+  </ul>
+  <p>For the research analyst specifically, SEBI's <b>Research Analyst (RA) Regulations</b> govern registration, disclosures of conflicts of interest, and prohibitions on trading against one's own recommendations. Your <b>NISM Series-XV</b> certification is the qualifying exam under these regulations.</p>
+
+  <h3>2.2 The Stock Exchanges — NSE &amp; BSE</h3>
+  <p>Exchanges provide the trading platform, ensure fair price discovery, and enforce listing/trading rules. India's two dominant equity exchanges:</p>
+  <ul>
+    <li><b>NSE (National Stock Exchange)</b> — launched screen-based electronic trading in the mid-1990s; today the larger of the two by cash-equity and by far the dominant venue for equity derivatives. Benchmark index: <b>Nifty 50</b>.</li>
+    <li><b>BSE (Bombay Stock Exchange)</b> — Asia's oldest exchange (founded 1875). Benchmark index: <b>Sensex (S&amp;P BSE Sensex, 30 stocks)</b>. BSE has the largest number of listed companies.</li>
+  </ul>
+  <p>Both are order-driven, fully electronic markets. Orders match on strict <b>price-time priority</b>: the best price wins, and among equal prices, the earliest order is filled first. There are no specialists/market-makers in the classic NYSE sense for large caps; liquidity is provided by the crowd of participants.</p>
+
+  <h3>2.3 Depositories — NSDL &amp; CDSL</h3>
+  <p>A <b>depository</b> holds securities in electronic (dematerialised) form, analogous to a bank holding money. India has two:</p>
+  <ul>
+    <li><b>NSDL</b> — National Securities Depository Limited (associated historically with NSE).</li>
+    <li><b>CDSL</b> — Central Depository Services Limited (associated historically with BSE; itself listed).</li>
+  </ul>
+  <p>Investors don't deal with depositories directly; they open a <b>demat account</b> with a <b>Depository Participant (DP)</b> — typically a bank or broker acting as the depository's agent. Your shares sit in your demat account as electronic book entries.</p>
+
+  <h3>2.4 Clearing Corporations</h3>
+  <p>A <b>Clearing Corporation (CC)</b> stands between buyer and seller and guarantees settlement — it becomes the <b>central counterparty (CCP)</b> via <b>novation</b>, so neither side bears the other's default risk. The CC nets obligations, manages margins, and runs a <b>Settlement Guarantee Fund</b>. Key entities: <b>NSE Clearing (NCL / erstwhile NSCCL)</b> for NSE and <b>ICCL (Indian Clearing Corporation)</b> for BSE.</p>
+
+  <h3>2.5 Brokers &amp; Depository Participants</h3>
+  <p>A <b>stockbroker</b> is a SEBI-registered trading member of an exchange who executes client orders and, as a DP, holds client securities. Modern India is dominated by low-cost <b>discount brokers</b> (flat per-order pricing) alongside full-service brokers who bundle research and advisory. Brokers must keep client funds/securities segregated and follow SEBI's investor-protection norms.</p>
+
+  <h3>2.6 RTAs, custodians &amp; other intermediaries</h3>
+  <ul>
+    <li><b>Registrar &amp; Transfer Agent (RTA)</b> — a SEBI-registered agency (e.g., KFin Technologies, Link Intime, CAMS for funds) that maintains the <b>register of shareholders/unitholders</b> on behalf of companies and mutual funds, processes IPO allotments and refunds, and executes corporate actions (crediting bonus shares, paying dividends). When you see an IPO "registrar", that is the RTA running the allotment lottery.</li>
+    <li><b>Custodian</b> — an institution that <b>safe-keeps securities and settles trades</b> for large clients (FPIs, mutual funds, insurers), handling settlement, corporate-action collection, FX, and reporting. Big institutions never self-custody; a custodian (often a large bank) sits between them and the clearing system. A <b>Custodial Participant (CP)</b> code links an institution's trades to its custodian for settlement.</li>
+    <li><b>Merchant bankers, underwriters, credit-rating agencies, debenture trustees, investment advisers (RIAs) and research analysts (RAs)</b> round out the SEBI-registered intermediary ecosystem.</li>
+  </ul>
+
+  <h3>2.7 The trade flow — click to settlement</h3>
+  <p>Putting it together, here is the life of a buy order:</p>
+  <ol>
+    <li>You place an order through your <b>broker's</b> platform.</li>
+    <li>The order routes to the <b>exchange (NSE/BSE)</b>, where it matches on price-time priority.</li>
+    <li>On execution, obligations pass to the <b>clearing corporation</b>, which novates and nets.</li>
+    <li>On the settlement date, funds move via your bank and shares move into your <b>demat account</b> at the <b>depository</b> (NSDL/CDSL) through your DP.</li>
+    <li>SEBI oversees every layer.</li>
+  </ol>
+
+  <table>
+    <thead><tr><th>Layer</th><th>Entity</th><th>Function</th></tr></thead>
+    <tbody>
+      <tr><td>Regulator</td><td>SEBI</td><td>Rules, registration, enforcement, investor protection</td></tr>
+      <tr><td>Trading venue</td><td>NSE, BSE</td><td>Order matching, price discovery, listing</td></tr>
+      <tr><td>Clearing</td><td>NCL, ICCL</td><td>Novation, netting, settlement guarantee, margins</td></tr>
+      <tr><td>Settlement / custody</td><td>NSDL, CDSL</td><td>Hold securities in demat, transfer on settlement</td></tr>
+      <tr><td>Intermediary</td><td>Broker / DP</td><td>Execute orders, hold client demat &amp; funds</td></tr>
+    </tbody>
+  </table>
+
+  <div class="trap"><b>Common trap:</b> Candidates conflate the <i>exchange</i> with the <i>clearing corporation</i>. The exchange <i>matches</i> trades; the clearing corporation <i>guarantees and settles</i> them. Also don't confuse a <b>depository</b> (NSDL/CDSL — holds securities) with a <b>Depository Participant</b> (your broker/bank — the interface you actually deal with).</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">3. Dematerialisation, Clearing &amp; T+1 Settlement</h2>
+
+  <h3>3.1 Dematerialisation</h3>
+  <p><b>Dematerialisation (demat)</b> is the conversion of physical share certificates into electronic book entries held in a depository. India completed the transition to compulsory demat trading for listed securities decades ago; physical certificates are essentially obsolete for transfer. Benefits: no risk of loss/forgery/bad delivery, instant transfer, easy corporate-action credits (bonus/dividend), and lower cost. The reverse process — converting electronic holdings back to physical — is <b>rematerialisation</b> and is rare.</p>
+
+  <h3>3.2 The settlement cycle — T+1 (and towards T+0)</h3>
+  <p><b>Settlement</b> is the actual exchange of securities for cash. The cycle is described relative to the trade date <b>T</b>:</p>
+  <ul>
+    <li><b>T+2</b> — the older global standard (trade Monday, settle Wednesday).</li>
+    <li><b>T+1</b> — India completed a phased migration of the entire listed universe to <b>T+1 rolling settlement</b> (trade today, settle next business day). India was among the first major markets to do this at scale.</li>
+    <li><b>T+0 / instant settlement</b> — SEBI has introduced an optional <b>same-day (T+0)</b> settlement for a set of stocks, with a longer-term vision of optional instantaneous settlement. Treat this as an emerging, <i>optional</i> mechanism, not the universal default.</li>
+  </ul>
+  <p><b>Rolling settlement</b> means each day's trades settle on their own timeline (no fixed weekly account period). Shorter cycles reduce counterparty and market risk and free up capital faster, but demand tighter funding and operational discipline.</p>
+
+  <div class="formula"><b>Settlement date</b><br>
+    Settlement Date = Trade Date (T) + n business days<br>
+    <div class="where">where: n = 1 for standard Indian cash equities (T+1); weekends and exchange holidays are skipped. Under optional T+0, n = 0.</div>
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 1 — Settlement date &amp; entitlement</div>
+    <p>You buy 100 shares of a stock on <b>Thursday</b> under T+1. Assuming Friday is a normal business day, the trade <b>settles Friday</b>: cash debited, shares credited to your demat. If Friday were an exchange holiday, settlement would roll to the next business day (Monday). This matters for corporate-action <b>record dates</b>: to be a "holder of record", you generally must <b>buy on or before the day that settles by the record date</b> — practically, you must own the shares before the <b>ex-date</b> (covered in Section 8).</p>
+  </div>
+
+  <h3>3.3 Margins and risk management</h3>
+  <p>Clearing corporations collect margins to cover the risk of default between trade and settlement. Key margin types you should be able to name: <b>VaR margin</b> (Value-at-Risk based, covers normal price moves), <b>ELM (Extreme Loss Margin)</b> (covers tail moves beyond VaR), and <b>MTM (mark-to-market)</b> on open positions. SEBI's <b>upfront margin</b> and <b>peak margin</b> norms require margins to be collected before/at the time of trade, not after — a big shift from the older intraday-leverage culture. Coming from a derivatives desk, you already know SPAN + exposure margins; the cash-market logic is the simplified analogue.</p>
+
+  <h3>3.4 Delivery versus Payment (DVP)</h3>
+  <p><b>DVP</b> is the settlement principle that <b>the delivery of securities happens if and only if the payment happens</b> — the two legs are linked so neither party is exposed to the other having taken the cash (or shares) and run. The clearing corporation enforces DVP: it releases shares to the buyer only against funds, and funds to the seller only against shares, on the same settlement cycle. This eliminates <b>principal risk</b> (the risk of paying and never receiving). Combined with the CCP guarantee, DVP is why an Indian investor never worries about the counterparty on the other side of a screen trade.</p>
+
+  <div class="keytake"><b>Key takeaways:</b> India = 100% demat, T+1 rolling settlement (optional T+0 emerging), on a <b>DVP</b> basis (delivery only against payment). Clearing corporations novate and guarantee; margins (VaR + ELM + MTM, collected upfront) protect the system. Shorter cycles cut risk but tighten funding.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">4. Raising Equity: IPO, FPO, Rights, OFS, QIP &amp; ASBA</h2>
+
+  <p>This is the <b>primary market</b>, and it is the bread and butter of investment banking (the sell-side deal team) and a core knowledge area for equity research and wealth. Expect "walk me through an IPO" in almost any interview.</p>
+
+  <h3>4.1 Initial Public Offering (IPO)</h3>
+  <p>An <b>IPO</b> is the first sale of shares by a company to the public, after which it becomes <b>listed</b> and freely tradable. An IPO can comprise:</p>
+  <ul>
+    <li><b>Fresh issue</b> — new shares created; proceeds go <i>to the company</i> (for growth, debt repayment, working capital). This <b>dilutes</b> existing shareholders and expands the share count.</li>
+    <li><b>Offer for Sale (OFS component)</b> — existing shareholders (promoters, PE/VC funds) sell their shares; proceeds go <i>to those sellers</i>, not the company. No new shares, no dilution of the count — just a change of ownership and an increase in public float.</li>
+  </ul>
+
+  <h4>The book-building process</h4>
+  <p>Most large Indian IPOs use <b>book building</b>, where the price is discovered from investor demand rather than fixed in advance:</p>
+  <ol>
+    <li><b>Appointment of merchant bankers / BRLMs</b> — the company hires <b>Book Running Lead Managers</b> (investment banks) to structure, price, market, and underwrite the issue.</li>
+    <li><b>Due diligence &amp; DRHP</b> — the bankers prepare the <b>Draft Red Herring Prospectus</b>, filed with SEBI for review. After SEBI comments, the <b>RHP</b> is filed.</li>
+    <li><b>Price band</b> — a floor and cap (e.g., ₹100–₹105) within which investors bid. A <b>fixed-price</b> issue (less common for large deals) sets a single price instead.</li>
+    <li><b>Anchor investors</b> — a day before the public issue opens, large institutional investors are allotted shares at a fixed price to anchor confidence, subject to a <b>lock-in</b>. Anchor allocation comes out of the QIB portion.</li>
+    <li><b>Public bidding window</b> — the issue is open for a few days across three investor categories (QIB, NII/HNI, Retail).</li>
+    <li><b>Price discovery &amp; cut-off</b> — demand across the band builds the "book"; the final <b>issue price</b> is fixed. Retail investors may bid "at cut-off" (agreeing to the final price).</li>
+    <li><b>Allotment &amp; refunds</b> — shares are allotted (pro-rata / lottery if oversubscribed); blocked funds of unsuccessful bidders are released (via ASBA).</li>
+    <li><b>Listing</b> — shares list on the exchange, typically within a short, SEBI-mandated timeline after issue close; the difference between listing price and issue price is the "listing gain/pop".</li>
+  </ol>
+
+  <h4>Investor categories</h4>
+  <p>SEBI's ICDR framework reserves portions of a book-built issue for three broad categories. The exact split depends on whether the issuer meets profitability/other norms, so learn the <i>logic</i>, not brittle percentages:</p>
+
+  <table>
+    <thead><tr><th>Category</th><th>Who</th><th>Typical reservation*</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><b>QIB</b> — Qualified Institutional Buyer</td><td>Mutual funds, banks, insurers, FPIs, pension funds</td><td>Around half (often up to ~50%)</td><td>Anchor portion carved from here; QIB bids generally can't be withdrawn; margin/allotment rules differ. Higher QIB reservation for issuers not meeting profitability track record.</td></tr>
+      <tr><td><b>NII / HNI</b> — Non-Institutional Investor</td><td>Individuals/entities applying above the retail limit (large applications)</td><td>Around 15%</td><td>Often split into "small NII" and "big NII" sub-buckets; allotment by lottery/proportion if oversubscribed.</td></tr>
+      <tr><td><b>Retail (RII)</b></td><td>Individuals applying up to the retail threshold (commonly up to ₹2 lakh)</td><td>Around 35%</td><td>Minimum one lot; if oversubscribed, allotment is by <b>lottery</b> of lots — you either get a full lot or none.</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:9pt;color:#555;">*Indicative for a "profitable" book-built issue; the QIB share rises (and retail/NII fall) when the issuer doesn't meet the eligibility track record. Always phrase as "typically/around" in interviews.</p>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 2 — Retail IPO allotment (oversubscription)</div>
+    <p>An IPO has a lot size of 15 shares at a cut-off price of ₹200 (one lot = ₹3,000). The retail portion is oversubscribed <b>4×</b>. Because retail allotment in India is by <b>lottery of lots</b> (not proportionate fractions), roughly <b>1 in 4 applicants</b> receive one full lot; the rest get nothing and their blocked ASBA funds are released. Applying for multiple lots does <i>not</i> improve your <i>per-application</i> odds much in a heavily oversubscribed retail book — the mechanism is designed to maximise the number of allottees. <b>Takeaway:</b> in a hot IPO, more applications (across family demat accounts) beats a bigger single application for retail.</p>
+  </div>
+
+  <h4>ASBA</h4>
+  <p><b>ASBA — Application Supported by Blocked Amount</b> is the mandatory payment mechanism for public issues. Instead of paying upfront, the application amount is <b>blocked (lien-marked) in your bank account</b>; it continues to earn interest and is only <b>debited to the extent of shares allotted</b>. Unsuccessful/partly-successful bidders get the block released. UPI-based ASBA is now standard for retail. ASBA eliminated the old refund delays and protects investor cash.</p>
+
+  <h3>4.2 Follow-on Public Offer (FPO)</h3>
+  <p>An <b>FPO</b> is a public issue by an <b>already-listed</b> company to raise <i>additional</i> capital (fresh issue) or let large holders sell (OFS). Because a market price already exists, an FPO is usually priced at a modest discount to the prevailing market price to attract demand. Same book-building machinery as an IPO, but with the anchor of a live market price.</p>
+
+  <h3>4.3 Rights Issue</h3>
+  <p>A <b>rights issue</b> offers <i>existing</i> shareholders the right (not obligation) to buy additional shares <b>pro-rata</b> to their holding, usually at a <b>discount</b> to market. It's a fast, relatively cheap way to raise equity from those who already own the company, and it protects them from dilution <i>if they subscribe</i>. Rights are <b>renounceable</b> — a shareholder who doesn't want to subscribe can sell the rights entitlement (RE) in the market. Non-participation means <b>dilution</b> and forgoing the discount.</p>
+
+  <div class="formula"><b>Theoretical ex-rights price (TERP)</b><br>
+    TERP = [ (P<sub>cum</sub> × N<sub>old</sub>) + (P<sub>rights</sub> × N<sub>new</sub>) ] ÷ (N<sub>old</sub> + N<sub>new</sub>)
+    <div class="where">where: P<sub>cum</sub> = cum-rights market price; P<sub>rights</sub> = subscription (offer) price of new shares; N<sub>old</sub> = existing shares; N<sub>new</sub> = new rights shares. TERP is the blended price after the rights adjustment.</div>
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 3 — Rights issue &amp; TERP</div>
+    <p>A stock trades at <b>₹100</b>. The company announces a <b>1-for-4 rights issue at ₹60</b> (for every 4 shares held, you may buy 1 new share at ₹60). Take 4 existing shares:</p>
+    <p>Value of 4 old shares = 4 × ₹100 = ₹400. Buy 1 new at ₹60 → total outlay ₹460 for 5 shares.<br>
+    <b>TERP = ₹460 ÷ 5 = ₹92.</b></p>
+    <p>So the price "adjusts" from ₹100 to ~₹92 ex-rights. The theoretical <b>value of one right</b> = ₹92 − ₹60 = <b>₹32</b> per new share entitlement (or ₹32 spread over 4 old shares = ₹8 of dilution per old share). A shareholder who subscribes is made whole; one who neither subscribes nor sells the right <i>loses</i> that ~₹8/share of value to dilution.</p>
+  </div>
+
+  <h3>4.4 Offer for Sale (OFS)</h3>
+  <p>An <b>OFS</b> (as a standalone mechanism, distinct from the OFS <i>component</i> of an IPO) is an exchange-based mechanism for <b>promoters/large shareholders of a listed company to sell</b> a chunk of shares to the public through a transparent bidding process on the exchange, over a day. It's commonly used to (a) meet SEBI's <b>minimum public shareholding (MPS)</b> norm — listed companies must keep at least the mandated public float — or (b) let the government divest PSU stakes. Proceeds go to the seller, not the company.</p>
+
+  <h3>4.5 Private Placement &amp; QIP</h3>
+  <p><b>Private placement</b> is the sale of securities to a select group of investors (not the public). For listed companies, the flagship instrument is the <b>QIP — Qualified Institutions Placement</b>: a fast, lightly-documented route to raise equity (or convertibles) <b>only from QIBs</b>. It avoids the long IPO/FPO prospectus process, is priced with reference to a SEBI floor-price formula (based on recent average market prices), and is a favourite for listed companies needing quick growth capital. A <b>preferential allotment</b> is a related route allotting shares to identified investors (e.g., a strategic/PE investor), also with SEBI pricing and lock-in rules.</p>
+
+  <table>
+    <thead><tr><th>Route</th><th>Issuer status</th><th>Buyers</th><th>Money to</th><th>New shares?</th></tr></thead>
+    <tbody>
+      <tr><td>IPO (fresh)</td><td>Unlisted → listing</td><td>Public (QIB/NII/Retail)</td><td>Company</td><td>Yes (dilution)</td></tr>
+      <tr><td>IPO (OFS part)</td><td>Unlisted → listing</td><td>Public</td><td>Selling holders</td><td>No</td></tr>
+      <tr><td>FPO</td><td>Listed</td><td>Public</td><td>Company / holders</td><td>Depends</td></tr>
+      <tr><td>Rights</td><td>Listed</td><td>Existing shareholders</td><td>Company</td><td>Yes</td></tr>
+      <tr><td>OFS (standalone)</td><td>Listed</td><td>Public (exchange)</td><td>Selling holders</td><td>No</td></tr>
+      <tr><td>QIP</td><td>Listed</td><td>QIBs only</td><td>Company</td><td>Yes</td></tr>
+      <tr><td>Preferential</td><td>Listed</td><td>Identified investors</td><td>Company</td><td>Yes</td></tr>
+    </tbody>
+  </table>
+
+  <h3>4.6 Green-shoe option (over-allotment)</h3>
+  <p>The <b>green-shoe option (GSO)</b> — formally an <b>over-allotment option</b> — is a price-stabilisation mechanism. The BRLM is authorised to allot <b>extra shares (typically up to ~15% of the issue)</b> beyond the base size. A <b>Stabilising Agent</b> borrows these extra shares from the promoter and sells them in the issue, holding the cash in a special escrow. After listing:</p>
+  <ul>
+    <li>If the price <b>falls below the issue price</b>, the agent uses the escrow cash to <b>buy shares from the open market</b>, supporting the price, and returns them to the promoter — the option is <i>not</i> (fully) exercised.</li>
+    <li>If the price <b>holds/rises</b>, the agent <b>exercises</b> the option (the company issues fresh shares to cover the borrowing), pocketing the extra capital.</li>
+  </ul>
+  <p>Net effect: the green-shoe dampens post-listing volatility and provides a soft floor for a defined window. The name comes from Green Shoe Company, the first US issuer to use it.</p>
+
+  <h3>4.7 SME IPO</h3>
+  <p>An <b>SME IPO</b> is a public issue by a small/medium enterprise on the dedicated <b>SME platforms</b> — <b>NSE Emerge</b> and <b>BSE SME</b>. Versus a mainboard IPO: lighter eligibility and disclosure norms, a <b>much larger minimum application/lot size</b> (so retail participation is capped at genuine risk-takers), <b>100% underwriting</b> is typically required, and there is a <b>market-making obligation</b> for a few years to provide liquidity. SME issues can later <b>migrate to the mainboard</b> once they meet size/track-record criteria. They are higher-risk, less-liquid, and less-researched — attractive to informed HNIs, not first-time retail investors.</p>
+
+  <h3>4.8 The role of merchant bankers / underwriters</h3>
+  <p><b>Merchant bankers</b> (SEBI-registered, acting as BRLMs) run the equity-issuance process end to end: due diligence and drafting the DRHP/RHP, valuation and pricing advice, structuring, marketing the issue (roadshows, anchor book, institutional demand), and coordinating with SEBI, exchanges, registrars, and legal counsel. <b>Underwriting</b> is a commitment to <b>buy any unsubscribed portion</b> — the underwriter guarantees the issuer a minimum raise, taking on the risk that the public won't fully take up the shares. In practice large Indian IPOs are marketed to be fully subscribed, but underwriting commitments (especially for the non-QIB portion) formalise the risk transfer. This is the core sell-side ECM (Equity Capital Markets) function within an investment bank.</p>
+
+  <div class="trap"><b>Common trap:</b> "IPO money goes to the company." Only the <b>fresh-issue</b> portion does. In a pure <b>OFS</b> (or the OFS part of an IPO), the money goes to the <b>selling shareholders</b> — the company's balance sheet is unchanged. Always ask/clarify the fresh-vs-OFS split; it changes the entire investment case (is this growth capital or an exit?).</p></div>
+
+  <div class="keytake"><b>Key takeaways:</b> IPO = first public sale (fresh raises capital + dilutes; OFS is an exit). Book building discovers price within a band via anchor + QIB/NII/Retail demand; ASBA blocks (not debits) your money. Rights, OFS, QIP and preferential allotment are the listed-company routes — know who gets the money and whether new shares are created.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">5. Indices: Nifty 50 &amp; Sensex</h2>
+
+  <p>An <b>index</b> is a statistical measure of a basket of stocks, used as a market barometer, a benchmark for performance, and the underlying for derivatives and index funds/ETFs. "How is the Nifty calculated?" is a near-certain interview question.</p>
+
+  <h3>5.1 The two headline indices</h3>
+  <ul>
+    <li><b>Nifty 50</b> — the NSE's flagship, <b>50</b> large-cap stocks across sectors, managed by <b>NSE Indices Ltd</b>. Base period value 1000.</li>
+    <li><b>S&amp;P BSE Sensex</b> — the BSE's flagship, <b>30</b> large, well-established stocks. Base value 100.</li>
+  </ul>
+  <p>Both are <b>free-float market-capitalisation-weighted</b> indices. Bigger, more liquid companies with more publicly-tradable shares move the index more.</p>
+
+  <h3>5.2 Free-float market-cap weighting</h3>
+  <p>Two refinements over a naive "sum of prices" index:</p>
+  <ul>
+    <li><b>Market-cap weighting</b> — each stock's weight is proportional to its market value, not its price. A ₹5-lakh-crore company moves the index far more than a ₹5,000-crore one, regardless of per-share price.</li>
+    <li><b>Free-float</b> — only shares <i>available to the public</i> for trading are counted, excluding locked-in promoter, government, and strategic holdings. This is captured by an <b>Investible Weight Factor (IWF)</b> — roughly the fraction of shares that are freely floating.</li>
+  </ul>
+
+  <div class="formula"><b>Free-float market capitalisation</b><br>
+    Free-float MCap = Price × Total Shares Outstanding × IWF
+    <div class="where">where: IWF (Investible Weight Factor) = fraction of shares in public hands (0 to 1). Full MCap uses IWF = 1.</div>
+  </div>
+
+  <div class="formula"><b>Index level (free-float method)</b><br>
+    Index = (Σ Free-float MCap of constituents ÷ Base Free-float MCap) × Base Index Value
+    <div class="where">The denominator (base market cap adjusted by the "index divisor") is periodically adjusted so that corporate actions and constituent changes don't create artificial jumps.</div>
+  </div>
+
+  <div class="formula"><b>Weight of a stock in the index</b><br>
+    Weight<sub>i</sub> = Free-float MCap<sub>i</sub> ÷ Σ Free-float MCap (all constituents)
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 4 — Free-float weight &amp; index impact</div>
+    <p>Consider a tiny 2-stock index. Stock A: price ₹1,000, 100 crore shares, promoter holds 50% (IWF = 0.50). Stock B: price ₹200, 500 crore shares, fully public (IWF = 1.0).</p>
+    <ul>
+      <li>A free-float MCap = 1,000 × 100 × 0.50 = ₹50,000 cr.</li>
+      <li>B free-float MCap = 200 × 500 × 1.0 = ₹1,00,000 cr.</li>
+      <li>Total free-float = ₹1,50,000 cr. → <b>A weight = 33.3%, B weight = 66.7%.</b></li>
+    </ul>
+    <p>Now B rises 10% (₹200 → ₹220). B's free-float MCap becomes ₹1,10,000 cr; total = ₹1,60,000 cr. The index rises by 10,000/150,000 = <b>+6.67%</b> — exactly B's 10% × B's 66.7% weight. Notice A's high per-share price of ₹1,000 gave it <i>less</i> weight than B, because <b>weight follows free-float market cap, not price</b>.</p>
+  </div>
+
+  <h3>5.3 Index maintenance</h3>
+  <p>Indices are actively maintained by the index provider:</p>
+  <ul>
+    <li><b>Periodic rebalancing/reconstitution</b> — constituents are reviewed (typically semi-annually) against eligibility criteria (market cap, liquidity/impact cost, free float, listing history). Stocks that no longer qualify are dropped and replacements added; inclusion/exclusion drives large passive-fund flows on the effective date.</li>
+    <li><b>The divisor / base adjustment</b> — for corporate actions (splits, bonuses, rights, mergers) and constituent changes, the base market cap is adjusted so the index level is continuous. Example: a 2:1 split halves a stock's price but the divisor is adjusted so the index doesn't fall artificially.</li>
+    <li><b>Capping</b> — some indices cap single-stock or single-group weights to avoid concentration.</li>
+  </ul>
+
+  <h3>5.4 Broad, sectoral, and thematic indices</h3>
+  <p>Beyond the headline 50/30, providers publish a family: broad-market (e.g., Nifty Next 50, Nifty 100/200/500, Nifty Midcap 150, Smallcap 250), sectoral (Nifty Bank, Nifty IT, Nifty Auto, Nifty Pharma, Nifty FMCG), and thematic/strategy indices. These serve as benchmarks for funds and inform sector rotation analysis in research.</p>
+
+  <h3>5.5 Price Return vs Total Return index</h3>
+  <p>Every index is published in (at least) two variants — a distinction that trips up many candidates:</p>
+  <ul>
+    <li><b>Price Return Index (PRI)</b> — tracks only <b>capital appreciation</b> (price changes) of the constituents. The headline "Nifty 50" / "Sensex" you see quoted on TV is the <b>price return</b> version. It <b>ignores dividends</b>.</li>
+    <li><b>Total Return Index (TRI)</b> — assumes all <b>dividends are reinvested</b> back into the index. Over time TRI rises <b>faster</b> than PRI by roughly the dividend yield compounded (India's large caps yield ~1–1.5% p.a., so TRI outpaces PRI by that much annually — a large gap over a decade).</li>
+  </ul>
+  <p>SEBI mandates that mutual funds benchmark performance against the <b>TRI</b>, not PRI — because a fund <i>does</i> receive and reinvest dividends, so comparing it to a dividend-blind PRI would flatter the fund's apparent out-performance. When you compare a fund's return to "the index", always confirm it is the TRI.</p>
+
+  <div class="trap"><b>Common trap (price vs total-return index):</b> The Nifty/Sensex level quoted daily is the <b>price return</b> index and <b>excludes dividends</b>. A fund that "beat the Nifty" may simply be capturing dividends the PRI ignores. Correct benchmarking uses the <b>Total Return Index (TRI)</b>, which reinvests dividends and rises ~1–1.5% p.a. faster for large-cap India. Never judge active out-performance against the price index.</div>
+
+  <div class="trap"><b>Common trap:</b> Confusing <b>free-float</b> with <b>full</b> market cap, and thinking a high <i>share price</i> means a big index weight. Nifty/Sensex are <b>free-float</b> weighted: a company with a high price but low public float (large promoter holding) can have a smaller weight than a lower-priced, widely-held company. Weight ∝ free-float market cap, full stop.</div>
+
+  <div class="keytake"><b>Key takeaways:</b> Nifty 50 (NSE, base 1000) and Sensex (BSE, 30 stocks, base 100) are free-float market-cap-weighted. Weight = stock's free-float MCap ÷ total free-float MCap. The divisor is adjusted for corporate actions and reconstitutions so the level stays continuous. Rebalancing triggers big passive flows.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">6. Trading Mechanics: Orders, Spreads, Circuit Breakers</h2>
+
+  <h3>6.1 Order types</h3>
+  <ul>
+    <li><b>Market order</b> — buy/sell immediately at the best available price. Guarantees execution, not price. Risky in illiquid stocks (you may "walk the book").</li>
+    <li><b>Limit order</b> — buy/sell only at a specified price or better. Guarantees price, not execution. The building block of the order book.</li>
+    <li><b>Stop-loss (SL) order</b> — a <b>trigger price</b> converts a dormant order into a live order to cap losses or protect gains. <b>SL-Market</b> triggers a market order; <b>SL-Limit</b> triggers a limit order at a set limit. Example: long at ₹100, SL trigger ₹95 → if price hits ₹95 the sell order activates.</li>
+    <li>Other flags: <b>IOC (Immediate-or-Cancel)</b>, <b>Day</b> vs <b>GTT/GTC</b> (good-till-triggered/cancelled at broker level), <b>AMO</b> (after-market orders), <b>disclosed quantity (iceberg)</b>.</li>
+  </ul>
+
+  <h3>6.2 Bid, ask, and the spread</h3>
+  <p>The <b>bid</b> is the highest price a buyer will pay; the <b>ask (offer)</b> is the lowest price a seller will accept. The <b>bid-ask spread</b> is the gap between them — a core measure of <b>liquidity</b> and a real transaction cost.</p>
+  <div class="formula"><b>Bid-ask spread</b><br>
+    Absolute spread = Ask − Bid &nbsp;&nbsp;|&nbsp;&nbsp; % spread = (Ask − Bid) ÷ Mid-price × 100
+    <div class="where">Mid-price = (Ask + Bid) ÷ 2. Tight spreads = liquid, large-cap. Wide spreads = illiquid, small-cap; a related concept is <b>impact cost</b> — the price you actually move by trading a given size.</div>
+  </div>
+  <p>Related terms: <b>market depth</b> (quantity available at each price level), <b>impact cost</b> (used in Nifty eligibility — the cost of executing a standard order size), and <b>LTP</b> (last traded price).</p>
+
+  <h3>6.3 Circuit breakers &amp; price bands</h3>
+  <p>To curb excessive volatility, exchanges impose limits:</p>
+  <ul>
+    <li><b>Market-wide circuit breakers</b> — coordinated NSE/BSE halts triggered when a benchmark index moves by <b>10%, 15%, or 20%</b> in a day. The halt duration and whether trading resumes depend on the trigger level and time of day. A 20% move halts trading for the rest of the day.</li>
+    <li><b>Stock-specific price bands</b> — individual securities have daily <b>upper/lower circuit</b> limits (e.g., 2%, 5%, 10%, 20%) beyond which they can't trade that day. Index constituents and stocks with active derivatives typically have no fixed band (or wider "dynamic" bands) since the market-wide breaker and futures provide the check.</li>
+  </ul>
+  <p>A stock "hitting upper circuit" means only buyers, no sellers (locked up); "lower circuit" means only sellers, no buyers (locked down) — a liquidity trap for anyone wanting to exit.</p>
+
+  <h3>6.4 ASM &amp; GSM surveillance frameworks</h3>
+  <p>Beyond circuits, SEBI and the exchanges run <b>surveillance frameworks</b> to curb speculation and protect investors in stocks showing abnormal activity:</p>
+  <ul>
+    <li><b>ASM — Additional Surveillance Measure</b>: applied to stocks with sharp price/volume swings, high volatility, or unusual client concentration. Consequences escalate through stages — <b>higher margins (up to 100%)</b>, moving to <b>trade-for-trade</b> (compulsory delivery, no intraday netting), and <b>price-band tightening</b>. It flags "watch this stock", not necessarily "this is fraud".</li>
+    <li><b>GSM — Graded Surveillance Measure</b>: aimed at stocks with <b>weak fundamentals</b> (low net worth, no earnings) trading at unjustified valuations — a shell/penny-stock filter. Higher GSM stages impose <b>100% margin</b>, <b>periodic call auctions instead of continuous trading</b>, and <b>trading only once a week/month</b> with additional surveillance deposits. Being in a high GSM stage is a serious red flag.</li>
+  </ul>
+  <p>For an analyst/advisor these lists are a quick screen: a stock under ASM/GSM warrants extra caution regardless of how good the "story" sounds.</p>
+
+  <h3>6.5 Delivery vs intraday vs BTST</h3>
+  <ul>
+    <li><b>Delivery (CNC)</b> — you buy and <b>take delivery</b> into your demat (settled T+1); you can hold indefinitely. Full payment required. This is investing.</li>
+    <li><b>Intraday (MIS)</b> — buy and sell (or short and cover) <b>within the same session</b>; the position is squared off before close and <b>never enters demat</b>. Attracts leverage but must be closed same day.</li>
+    <li><b>BTST — "Buy Today, Sell Tomorrow"</b> — you buy today and sell the <b>next day before the shares are credited</b> to demat (i.e., before settlement completes). It exploits the T+1 gap. The risk is a <b>short-delivery/auction</b> penalty if the original seller fails to deliver, since you are selling shares you don't yet physically hold. (The mirror, STBT — sell today, buy tomorrow — is generally not allowed in cash equities because you can't short-deliver.)</li>
+  </ul>
+
+  <h3>6.6 Securities Lending &amp; Borrowing (SLB)</h3>
+  <p><b>SLB</b> is a SEBI-regulated, exchange/clearing-corp-guaranteed mechanism to <b>lend shares you own</b> for a fee (extra yield on idle holdings) or <b>borrow shares</b> — most importantly to <b>short-sell in the cash market for delivery</b> (India bans naked short selling; a genuine short needs borrowed stock via SLB). Lenders earn a lending fee; borrowers pay it and post collateral. It also supports arbitrage and covering delivery obligations. Volumes are modest but SLB is the legitimate route to a delivery-based short.</p>
+
+  <h3>6.7 Block &amp; bulk deals</h3>
+  <ul>
+    <li><b>Bulk deal</b> — a trade (or aggregate of trades in a day by one client) exceeding <b>~0.5% of a company's listed shares</b>, executed in the <b>normal market</b>. The broker must disclose it to the exchange, which publishes it the same day — useful for tracking who is buying/selling.</li>
+    <li><b>Block deal</b> — a <b>large, pre-negotiated single trade</b> (above a high value threshold, e.g., ~₹10 crore) executed in a <b>separate block-deal window</b> at a price within a narrow band of the reference price. Used by institutions to move big quantities without disrupting the order book; also disclosed.</li>
+  </ul>
+  <p>Both create a transparent trail of large-investor activity that analysts and the media watch for signals (promoter selling, PE exits, marquee-investor entries).</p>
+
+  <h3>6.8 Trading sessions</h3>
+  <p>The equity market runs a <b>pre-open session</b> (call auction that discovers an opening price and absorbs overnight news), the <b>continuous (normal) session</b>, and a <b>closing session</b> that computes the <b>closing price as a weighted average of the last ~30 minutes</b> (not simply the last trade — this deters manipulation). India has also introduced special/optional windows over time; know the core three.</p>
+
+  <div class="keytake"><b>Key takeaways:</b> Market order = speed, no price guarantee; limit = price, no execution guarantee; SL = trigger-based protection. Spread and impact cost measure liquidity. Market-wide breakers fire at 10/15/20% index moves; individual stocks have upper/lower circuits. Close = VWAP of the last ~30 minutes.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">7. Market Participants: FII/FPI, DII, Retail, HNI, Prop</h2>
+
+  <p>Who is on the other side of your trade shapes flows, volatility, and sentiment. Daily <b>FII vs DII net buy/sell</b> figures are among the most-watched market data in India.</p>
+  <table>
+    <thead><tr><th>Participant</th><th>Who</th><th>Behaviour / significance</th></tr></thead>
+    <tbody>
+      <tr><td><b>FII / FPI</b> (Foreign Institutional / Portfolio Investor)</td><td>Overseas funds — pensions, sovereign funds, hedge funds, EM funds — registered with SEBI as FPIs</td><td>Large, momentum-and-macro-driven flows; sensitive to global rates, US dollar, and risk appetite. Big swing factor for large caps and the rupee. "FPI" is the modern regulatory term; "FII" is used loosely/interchangeably.</td></tr>
+      <tr><td><b>DII</b> (Domestic Institutional Investor)</td><td>Indian mutual funds, insurers (esp. LIC), banks, pension/EPFO, NPS</td><td>Increasingly the <b>counterweight to FIIs</b>, funded by steady domestic SIP inflows. Often absorb FII selling, dampening volatility. A structural shift of the last decade.</td></tr>
+      <tr><td><b>Retail</b></td><td>Individual investors (direct + via MF/SIP)</td><td>Huge and growing (demat accounts in the tens of crores). Direct retail can be sentiment-driven; indirect retail (via SIPs) is stabilising.</td></tr>
+      <tr><td><b>HNI / NII</b></td><td>High-net-worth individuals, family offices, large non-institutional applicants</td><td>Active in IPOs (NII category, often leveraged) and mid/small caps. Wealth-management clients.</td></tr>
+      <tr><td><b>Proprietary (prop)</b></td><td>Brokers/firms trading their own capital; includes algo/HFT desks</td><td>Provide liquidity, arbitrage, and much of the derivative volume; short-horizon.</td></tr>
+      <tr><td><b>PMS</b> (Portfolio Management Service)</td><td>SEBI-registered managers running <b>individually-owned</b> concentrated portfolios for HNIs</td><td>Discretionary/non-discretionary; high minimum (₹50 lakh). Client owns the underlying stocks in their own demat — not a pooled unit like a MF.</td></tr>
+      <tr><td><b>AIF</b> (Alternative Investment Fund)</td><td>Pooled private funds for sophisticated investors (₹1 cr minimum)</td><td>Cat I (VC/infra/social), Cat II (PE/debt/unlisted), Cat III (hedge-fund-style, long-short, listed equity). Lightly regulated, high-risk/high-return mandates.</td></tr>
+      <tr><td><b>Market makers</b></td><td>Firms obliged/incentivised to continuously quote two-way prices</td><td>Provide liquidity in ETFs, SME stocks, and options; earn the spread. Not classic specialists for large-cap cash, but essential where natural liquidity is thin.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>7.1 Pooled vehicles at a glance — MF vs PMS vs AIF</h3>
+  <p>A frequent wealth/IR question is "who manages money for whom?" The three regulated professional-management routes differ by <b>ticket size, pooling, and freedom of mandate</b>:</p>
+  <ul>
+    <li><b>Mutual Fund</b> — mass-market, <b>pooled</b> (you own <i>units</i>, priced at NAV), tightly regulated, low minimums, standardised disclosure. The retail default.</li>
+    <li><b>PMS</b> — for HNIs (₹50 lakh min); <b>not pooled</b> — the client directly owns the securities in their own demat; more concentrated and customisable.</li>
+    <li><b>AIF</b> — for the wealthy/institutional (₹1 crore min); <b>pooled</b> private fund with the widest mandate (unlisted equity, debt, long-short). Three SEBI categories as above.</li>
+  </ul>
+
+  <div class="keytake"><b>Key takeaways:</b> FIIs/FPIs drive marginal large-cap flows and the rupee (global risk sentiment); DIIs (SIP-funded MFs + insurers) are the domestic counterweight. Watch daily net FII/DII activity as a sentiment gauge. The rise of domestic SIPs has structurally deepened and stabilised Indian equities.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">8. Corporate Actions: Dividend, Split, Bonus, Buyback, Rights</h2>
+
+  <p>A <b>corporate action</b> is an event initiated by a company that affects its shareholders and share structure. Interviewers love these because they test whether you understand that <b>total value is conserved</b> in mechanical actions — the pie is re-sliced, not grown. This is the single most common "trick" area, so master it.</p>
+
+  <h3>8.1 Key dates</h3>
+  <ul>
+    <li><b>Announcement / board date</b> — the company declares the action.</li>
+    <li><b>Record date</b> — the cut-off; whoever is a registered holder on this date is entitled.</li>
+    <li><b>Ex-date</b> — the first day the stock trades <i>without</i> the entitlement. Under T+1, the ex-date is typically the <b>same day/around the record date</b>. To be entitled, you must <b>buy before the ex-date</b>. On the ex-date, the price mechanically adjusts down by the value of the benefit (e.g., drops by the dividend amount).</li>
+  </ul>
+
+  <h3>8.2 Dividend</h3>
+  <p>A <b>dividend</b> is a distribution of profits to shareholders, declared as an <b>interim</b> (during the year) or <b>final</b> (with annual results) dividend. In India, dividends are declared on <b>face value</b> (e.g., "300% dividend" on a ₹10 face value = ₹30/share). Post the abolition of Dividend Distribution Tax, dividends are <b>taxed in the shareholder's hands</b> at their slab (with TDS above a threshold).</p>
+  <div class="formula"><b>Dividend yield</b><br>
+    Dividend Yield (%) = Annual Dividend per Share ÷ Current Market Price × 100
+    <div class="where">A relative-value gauge; high, sustainable yields suit income/wealth mandates. Compare with the dividend <b>payout ratio</b> = DPS ÷ EPS (share of earnings paid out).</div>
+  </div>
+
+  <h3>8.3 Stock split</h3>
+  <p>A <b>stock split</b> subdivides each share into more shares by reducing the <b>face value</b> (e.g., a 1-share of ₹10 FV becomes 2 shares of ₹5 FV in a 2:1 split). Shares outstanding rise, price falls proportionally; <b>market cap, ownership %, and EPS-based value are unchanged</b>. Purpose: improve affordability/liquidity by lowering the per-share price. <b>No accounting reserves are touched.</b></p>
+  <div class="formula"><b>Effect of a stock split (ratio a-for-1)</b><br>
+    New shares = Old shares × a &nbsp;|&nbsp; New price = Old price ÷ a &nbsp;|&nbsp; New face value = Old FV ÷ a<br>
+    Market cap unchanged; EPS becomes old EPS ÷ a
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 5 — 5:1 stock split</div>
+    <p>You hold <b>100 shares at ₹2,000</b> (face value ₹10). Holding value = ₹2,00,000. The company announces a <b>5:1 split</b> (FV ₹10 → ₹2).</p>
+    <ul>
+      <li>Shares: 100 × 5 = <b>500 shares</b>.</li>
+      <li>Price: ₹2,000 ÷ 5 = <b>₹400</b>.</li>
+      <li>New holding value = 500 × ₹400 = <b>₹2,00,000 — unchanged.</b></li>
+      <li>EPS (say ₹100 pre-split) becomes ₹100 ÷ 5 = ₹20; the P/E is unchanged (400/20 = 20 = 2000/100).</li>
+    </ul>
+    <p><b>Nothing of value changed</b> — just more, cheaper shares. This is pure re-slicing.</p>
+  </div>
+
+  <h3>8.4 Bonus issue</h3>
+  <p>A <b>bonus issue</b> gives existing shareholders <b>free additional shares</b> in proportion to their holding (e.g., 1:1 = one free share for each held), funded by <b>capitalising the company's reserves</b> (retained earnings/reserves are converted into share capital). Share count rises, price falls proportionally, <b>market cap unchanged</b>. Unlike a split, <b>face value stays the same</b> and <b>reserves reduce</b> as they move into paid-up capital.</p>
+  <div class="formula"><b>Effect of a bonus (ratio m:n, m new for n held)</b><br>
+    New shares = Old shares × (1 + m/n) &nbsp;|&nbsp; Adjusted price = Old price × n ÷ (n + m)<br>
+    Face value unchanged; reserves ↓, share capital ↑; market cap unchanged
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 6 — 1:1 bonus vs a 2:1 split (same effect on price, different accounting)</div>
+    <p>You hold <b>100 shares at ₹500</b> (FV ₹10), holding value ₹50,000.</p>
+    <p><b>1:1 bonus:</b> you receive 100 free shares → <b>200 shares</b>. Price adjusts to ₹500 × 1/2 = <b>₹250</b>. Value = 200 × ₹250 = ₹50,000 (unchanged). Face value stays ₹10; the company moves ₹1,000 (100 × ₹10) from reserves to share capital.</p>
+    <p><b>2:1 split:</b> each ₹10 share splits into two ₹5 shares → <b>200 shares</b> at <b>₹250</b>, value ₹50,000. Face value halves to ₹5; <b>reserves untouched.</b></p>
+    <p><b>Same effect on your price and count; different balance-sheet mechanics.</b> Bonus capitalises reserves (signals confidence in retained profits); split just subdivides face value.</p>
+  </div>
+
+  <div class="trap"><b>Common trap (bonus vs split):</b> Both increase share count and cut the price so total value is unchanged. The difference is <b>accounting</b>: a <b>bonus capitalises reserves</b> (share capital ↑, reserves ↓, <b>face value unchanged</b>); a <b>split reduces face value</b> (no reserves touched). If an interviewer asks "what's the difference between a 1:1 bonus and a 2:1 split," lead with "identical impact on price/shares/market cap; the difference is face value and reserves."</div>
+
+  <h3>8.5 Buyback</h3>
+  <p>A <b>buyback (share repurchase)</b> is the company using its cash to <b>buy back its own shares</b>, which are then extinguished (cancelled). Effects: <b>shares outstanding fall</b>, so <b>EPS rises</b> (same earnings over fewer shares), ownership of remaining holders increases, and it returns surplus cash. Routes in India: <b>tender offer</b> (company invites holders to tender shares at a fixed price, usually a premium, pro-rata) or <b>open-market</b> purchases. A buyback signals management believes the stock is undervalued and/or that it lacks better reinvestment opportunities. (Note: buyback taxation in India has shifted over time — historically company-level tax, more recently taxed in the shareholder's hands as deemed dividend; keep this "as per prevailing rules".)</p>
+  <div class="formula"><b>Buyback impact on EPS</b><br>
+    New EPS = Net Profit ÷ (Shares outstanding − Shares bought back)
+    <div class="where">Fewer shares ⇒ higher EPS (mechanically), even if profit is flat. Also raises ROE and, if funded by cash, reduces the cash on the balance sheet.</div>
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 7 — Buyback impact on EPS &amp; ownership</div>
+    <p>A company has net profit of <b>₹100 cr</b> and <b>10 cr shares</b> → EPS = ₹10. It buys back and cancels <b>1 cr shares</b> (a tender at a premium).</p>
+    <ul>
+      <li>New share count = 9 cr. <b>New EPS = ₹100 cr ÷ 9 cr = ₹11.11</b> — an ~11% EPS boost with no change in operations.</li>
+      <li>If you held 1,000 shares (0.01% of 10 cr), you now own 1,000 ÷ 9 cr = <b>0.0111%</b> — your proportional stake rose because the pie has fewer slices.</li>
+      <li>At a constant P/E, the higher EPS supports a higher price; plus the tender premium returns cash to tendering holders. The trade-off: less cash on the balance sheet (lower financial flexibility).</li>
+    </ul>
+  </div>
+
+  <h3>8.6 Rights (as a corporate action)</h3>
+  <p>Covered in Section 4.3 as a fund-raise; as a corporate action it changes both <b>share count</b> (up) and, unlike bonus/split, brings <b>fresh cash into the company</b> (shareholders <i>pay</i> the subscription price). The price adjusts to TERP. It is the one action here that is <i>not</i> value-neutral by construction — non-subscribers are diluted.</p>
+
+  <h3>8.7 Spin-off / demerger</h3>
+  <p>A <b>demerger (spin-off)</b> splits a company into two or more <b>separately-listed</b> entities. Shareholders of the parent receive shares of the demerged entity in a fixed ratio — they now hold <b>two stocks instead of one</b>. The logic is <b>value unlocking</b>: a conglomerate discount disappears when, say, a slow FMCG arm and a fast-growing digital arm trade separately so the market can value each on its own merits, attract focused investors, and give each management sharper accountability. On the <b>effective date</b>, the parent's price is <b>adjusted down</b> to reflect the value carved out into the new entity; total value to the shareholder is (broadly) unchanged at the moment of separation — the re-rating comes later.</p>
+  <div class="example">
+    <div class="ex-h">Worked Example 9a — Demerger value split</div>
+    <p>You hold 100 shares of a conglomerate at <b>₹1,500</b> (holding ₹1,50,000). It demerges its financial-services arm, valued by the market at ~₹400/parent-share, giving you 1 new FinCo share for every 1 held. On the effective date the parent price adjusts to about <b>₹1,100</b> and you also hold <b>100 FinCo shares worth ~₹400</b> each. Combined value ≈ 100×₹1,100 + 100×₹400 = ₹1,50,000 — <b>unchanged at separation</b>. The investment case is that the two, valued independently, may <b>together</b> command more than the old ₹1,500 conglomerate (removal of the holding-company/conglomerate discount).</p>
+  </div>
+
+  <table>
+    <thead><tr><th>Action</th><th>Shares</th><th>Price</th><th>Market cap</th><th>Cash to company?</th><th>Face value</th><th>Reserves</th></tr></thead>
+    <tbody>
+      <tr><td>Dividend</td><td>Same</td><td>↓ by dividend on ex-date</td><td>↓ (cash leaves)</td><td>Out (to holders)</td><td>Same</td><td>↓</td></tr>
+      <tr><td>Stock split</td><td>↑</td><td>↓ proportional</td><td>Unchanged</td><td>No</td><td>↓</td><td>Same</td></tr>
+      <tr><td>Bonus</td><td>↑</td><td>↓ proportional</td><td>Unchanged</td><td>No</td><td>Same</td><td>↓ (capitalised)</td></tr>
+      <tr><td>Buyback</td><td>↓</td><td>Supported ↑ (EPS ↑)</td><td>↓ (cash used)</td><td>Out (to sellers)</td><td>Same</td><td>↓ (funds buyback)</td></tr>
+      <tr><td>Rights</td><td>↑</td><td>↓ to TERP</td><td>↑ (cash in)</td><td>In (subscribers pay)</td><td>Same</td><td>Same/↑</td></tr>
+    </tbody>
+  </table>
+
+  <div class="trap"><b>Common trap (market cap unchanged by split/bonus):</b> A split or bonus does <b>not</b> create value — market cap is unchanged; only the number and price of shares change. A stock "looking cheaper" after a split isn't cheaper on any multiple. Value is created by <b>earnings and cash flows</b>, not by re-slicing the equity.</div>
+
+  <div class="keytake"><b>Key takeaways:</b> Split &amp; bonus = value-neutral re-slicing (market cap unchanged); difference is face value (split ↓) vs reserves (bonus capitalised). Buyback shrinks share count → EPS/ownership ↑, cash ↓. Rights bring in cash and dilute non-subscribers (price → TERP). Dividends transfer cash out; price drops by the dividend on the ex-date.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">9. Equity Instruments</h2>
+
+  <h3>9.1 Equity (ordinary) shares</h3>
+  <p><b>Equity shares</b> represent <b>residual ownership</b>: holders have voting rights, share in profits (via dividends) and in growth (via price appreciation), but rank <b>last</b> in the payout waterfall on liquidation (after creditors and preference holders). Unlimited upside, downside limited to the invested amount (limited liability). This is the core instrument of the entire guide.</p>
+
+  <h3>9.2 Preference shares</h3>
+  <p><b>Preference (preferred) shares</b> carry a <b>fixed dividend</b> and rank <b>ahead of equity</b> for dividends and on liquidation, but usually carry <b>no/limited voting rights</b>. Varieties: <b>cumulative</b> (unpaid dividends accumulate) vs non-cumulative; <b>participating</b> (share extra profits) vs non-participating; <b>convertible</b> (into equity) vs non-convertible; <b>redeemable</b> (bought back at a date) vs irredeemable. They are a <b>hybrid</b> — equity in legal form, bond-like in cash-flow behaviour. In India they're relatively uncommon in public markets but frequent in private/PE structures (e.g., CCPS — compulsorily convertible preference shares).</p>
+
+  <h3>9.3 ADR &amp; GDR — accessing foreign capital</h3>
+  <p>A <b>Depository Receipt (DR)</b> is a negotiable instrument issued by a foreign depository bank representing shares of a company, letting it raise capital and trade abroad without a direct cross-listing. For an Indian company:</p>
+  <ul>
+    <li><b>ADR — American Depository Receipt</b>: trades on <b>US</b> exchanges (NYSE/Nasdaq), denominated in <b>USD</b>, under <b>US SEC</b> rules. (e.g., Indian IT/banking names have historically listed ADRs.)</li>
+    <li><b>GDR — Global Depository Receipt</b>: trades on <b>non-US</b> markets (commonly London or Luxembourg), often USD/EUR-denominated, marketed to international investors across multiple jurisdictions.</li>
+  </ul>
+  <p>Each DR represents a defined number of underlying shares (the "DR ratio"). The DR price tracks the home-market share price adjusted for the ratio and FX; large gaps invite arbitrage. DRs let global investors hold Indian companies in their own currency/timezone and let issuers tap deeper foreign capital and visibility.</p>
+
+  <table>
+    <thead><tr><th>Feature</th><th>ADR</th><th>GDR</th></tr></thead>
+    <tbody>
+      <tr><td>Listing market</td><td>US (NYSE / Nasdaq)</td><td>Non-US (e.g., London, Luxembourg)</td></tr>
+      <tr><td>Regulator / regime</td><td>US SEC</td><td>Local exchange / EU regimes</td></tr>
+      <tr><td>Currency</td><td>USD</td><td>USD or EUR (typically)</td></tr>
+      <tr><td>Investor base</td><td>US investors</td><td>Global (multi-jurisdiction) investors</td></tr>
+      <tr><td>Disclosure burden</td><td>Higher (US GAAP/SEC)</td><td>Generally lighter than full US listing</td></tr>
+    </tbody>
+  </table>
+
+  <h3>9.4 Mutual funds &amp; ETFs</h3>
+  <p>A <b>mutual fund (MF)</b> pools money from many investors and invests per a stated mandate, managed by an <b>AMC (Asset Management Company)</b> under SEBI regulation and an SIP culture that now channels large steady domestic flows. Key concepts:</p>
+  <ul>
+    <li><b>NAV (Net Asset Value)</b> = (Assets − Liabilities) ÷ Units outstanding — the per-unit value, struck end-of-day for open-ended funds.</li>
+    <li><b>Open-ended</b> (continuous subscribe/redeem at NAV) vs <b>close-ended</b> (fixed corpus, listed).</li>
+    <li><b>Active</b> (manager tries to beat a benchmark) vs <b>passive/index</b> (tracks an index).</li>
+    <li><b>Expense ratio</b> — annual cost; <b>Direct</b> plans (no distributor commission) have lower expense ratios than <b>Regular</b> plans.</li>
+    <li><b>SIP (Systematic Investment Plan)</b> — periodic fixed investing that rupee-cost-averages; the backbone of DII inflows.</li>
+  </ul>
+  <p>An <b>ETF (Exchange-Traded Fund)</b> is a fund whose units <b>trade on the exchange like a stock</b> throughout the day. Most ETFs are passive (track an index/commodity such as gold). ETFs typically have <b>low expense ratios</b>; large investors create/redeem units with the fund via <b>authorised participants</b>, keeping the market price close to NAV (arbitrage closes any gap). ETF vs index fund: both passive, but an ETF trades intraday on-exchange (needs a demat account) whereas an index fund is bought/sold at end-of-day NAV directly from the AMC.</p>
+
+  <div class="formula"><b>Net Asset Value (NAV)</b><br>
+    NAV per unit = (Market value of holdings + cash − liabilities) ÷ Units outstanding
+  </div>
+
+  <h3>9.5 REITs &amp; InvITs (high level)</h3>
+  <p><b>REIT — Real Estate Investment Trust</b>: pools investor money to own <b>income-generating real estate</b> (typically leased commercial/office assets); it is required to distribute the bulk of its net distributable cash flow to unitholders, giving a bond-like yield plus some growth. <b>InvIT — Infrastructure Investment Trust</b>: the same structure for <b>infrastructure assets</b> (roads, power transmission, telecom towers, pipelines). Both are SEBI-regulated, listed and traded like securities, and give retail investors access to large, otherwise-illiquid real-asset cash flows with professional management and mandatory high payout. Think of them as a fourth asset-class bridge between equity and fixed income — valued largely on <b>yield and distribution growth</b>.</p>
+
+  <h3>9.6 DVR — differential voting rights shares</h3>
+  <p><b>DVR shares</b> are equity shares carrying <b>different (usually fewer) voting rights</b> than ordinary shares, often compensated with a <b>higher dividend</b>. They let promoters raise equity capital <b>without diluting control</b> — a shareholder gets economic ownership but, say, one vote for every ten shares. DVRs typically trade at a <b>discount</b> to the ordinary share (the market prices the lost voting power). They are uncommon in India and SEBI norms around them have evolved (including "superior voting right" shares for founders of new-age tech companies). Concept to remember: <b>economic interest and voting power can be decoupled.</b></p>
+
+  <h3>9.7 SEBI mutual-fund categorisation</h3>
+  <p>To end the confusion of hundreds of overlapping schemes, SEBI standardised mutual funds into defined categories (a fund house may run <b>only one scheme per category</b>, with a few exceptions). The five groups:</p>
+  <table>
+    <thead><tr><th>Group</th><th>Examples of categories</th><th>What it holds</th></tr></thead>
+    <tbody>
+      <tr><td><b>Equity</b></td><td>Large-cap, Large&amp;Mid, Mid-cap, Small-cap, Multi-cap, Flexi-cap, ELSS (tax-saver), Sectoral/Thematic, Value/Contra, Focused</td><td>Predominantly equities; each category has minimum equity/segment allocation rules (e.g., large-cap ≥ ~80% in top-100 stocks).</td></tr>
+      <tr><td><b>Debt</b></td><td>Liquid, Overnight, Ultra-short, Short/Medium/Long duration, Corporate bond, Gilt, Credit risk, Dynamic bond</td><td>Fixed-income instruments; categories defined largely by <b>duration</b> and <b>credit</b> profile.</td></tr>
+      <tr><td><b>Hybrid</b></td><td>Aggressive hybrid, Conservative hybrid, Balanced Advantage/Dynamic asset allocation, Arbitrage, Multi-asset</td><td>A mix of equity + debt (+ sometimes gold), by defined bands.</td></tr>
+      <tr><td><b>Solution-oriented</b></td><td>Retirement, Children's fund</td><td>Goal-linked, with a <b>lock-in</b> (e.g., 5 years or till retirement/majority).</td></tr>
+      <tr><td><b>Other</b></td><td>Index funds, ETFs, Fund-of-Funds</td><td>Passive/structural vehicles.</td></tr>
+    </tbody>
+  </table>
+  <p>For wealth interviews, know that categorisation drives <b>suitability</b>: liquid/overnight for parking cash, large-cap/flexi for core equity, ELSS for tax under the old regime, balanced-advantage for risk-managed exposure.</p>
+
+  <div class="keytake"><b>Key takeaways:</b> Equity = residual ownership + votes; preference = fixed dividend, priority, usually no vote (hybrid); <b>DVR</b> decouples economics from voting. ADR (US/USD/SEC) vs GDR (non-US, global) let Indian firms raise abroad. MFs (NAV-based, SIP-driven, SEBI-categorised into equity/debt/hybrid/solution/other) vs ETFs (exchange-traded, low-cost, mostly passive). REITs/InvITs = listed, high-payout vehicles for real estate / infrastructure cash flows.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">10. Market-Cap Categories, Style &amp; Multiples</h2>
+
+  <h3>10.1 Market capitalisation</h3>
+  <div class="formula"><b>Market capitalisation</b><br>
+    Market Cap = Current Share Price × Total Shares Outstanding
+    <div class="where">The market's estimate of the total equity value. India classifies by SEBI's ranking-based definition for mutual-fund categorisation.</div>
+  </div>
+  <p>SEBI (for mutual fund categorisation) defines market-cap buckets by <b>rank</b> on the exchange, refreshed periodically:</p>
+  <ul>
+    <li><b>Large-cap</b> — the <b>top 100</b> companies by full market cap. Stable, liquid, well-covered, index heavyweights; lower risk/return.</li>
+    <li><b>Mid-cap</b> — ranks <b>101–250</b>. Faster-growing, less liquid, higher risk/reward, "tomorrow's large caps".</li>
+    <li><b>Small-cap</b> — ranks <b>251 and below</b>. High growth potential, high volatility, thin liquidity, under-researched (where diligent research adds the most alpha).</li>
+  </ul>
+
+  <h3>10.2 Investment style — value vs growth</h3>
+  <ul>
+    <li><b>Value investing</b> — buy stocks trading below intrinsic worth: low P/E, low P/B, high dividend yield, "cheap" on fundamentals; a margin-of-safety mindset (Graham/Buffett lineage).</li>
+    <li><b>Growth investing</b> — buy companies with above-average earnings/revenue growth even at higher multiples, betting future growth justifies the price.</li>
+    <li><b>GARP (Growth at a Reasonable Price)</b> — a blend seeking growth without overpaying (e.g., using the PEG ratio).</li>
+    <li>Other factors/styles: <b>quality</b> (high ROE, low leverage, stable margins), <b>momentum</b>, <b>low volatility</b>, and <b>dividend/income</b>.</li>
+  </ul>
+
+  <h3>10.3 Market-level valuation multiples (reference)</h3>
+  <p>Full derivations live in the <b>Valuation guide</b>; here is the market-level reference an equity/capital-markets interview expects:</p>
+  <div class="formula"><b>Earnings per share (EPS)</b><br>
+    Basic EPS = (Net Profit − Preference Dividends) ÷ Weighted-avg equity shares outstanding<br>
+    Diluted EPS also counts convertibles/ESOPs/warrants in the denominator.
+  </div>
+  <div class="formula"><b>Price-to-Earnings (P/E)</b><br>
+    P/E = Market Price per Share ÷ EPS &nbsp;(=&nbsp; Market Cap ÷ Net Profit)
+    <div class="where">"How many rupees for ₹1 of earnings." Trailing P/E uses last 12m EPS; forward P/E uses estimated forward EPS. Compare within a sector and vs the stock's own history and growth (PEG = P/E ÷ growth).</div>
+  </div>
+  <div class="formula"><b>Price-to-Book (P/B)</b><br>
+    P/B = Market Price ÷ Book Value per Share &nbsp;(=&nbsp; Market Cap ÷ Net Worth)
+    <div class="where">Book value per share = Shareholders' equity ÷ shares. P/B is especially used for banks/financials (where book value is meaningful and ROE drives the justified P/B).</div>
+  </div>
+  <p>Interpretation cautions: multiples are <b>relative</b> tools — a "low" P/E can be a value trap (declining business) and a "high" P/E can be justified by growth/quality. Always ask "cheap/expensive <i>versus what</i> — the sector, the history, the growth, the quality?"</p>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 8 — From EPS to a quick valuation cross-check</div>
+    <p>A company earns net profit ₹500 cr on 25 cr shares → <b>EPS = ₹20</b>. Peers trade at a sector <b>P/E of 18×</b>. A first-cut "fair" price ≈ 18 × ₹20 = <b>₹360</b>. If the stock trades at ₹300 (P/E 15×) <i>and</i> its growth/quality match peers, it looks relatively cheap — a potential <b>Buy</b> candidate to investigate further. If it trades at ₹450 (P/E 22.5×) you'd need superior growth/ROE to justify the premium. This is a <i>screen</i>, not a verdict — the full thesis needs the drivers behind the numbers.</p>
+  </div>
+
+  <div class="keytake"><b>Key takeaways:</b> Large (top 100) / mid (101–250) / small (251+) by SEBI rank. Value = cheap on fundamentals; growth = pays up for growth; GARP/quality blend the two. P/E and P/B are relative screens — interpret vs sector, history, growth and quality, never in isolation.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">11. The Equity Research Process</h2>
+
+  <p>This is the heart of the sell-side/buy-side research role and the reason your NISM Series-XV matters. A great answer to "how do you analyse a stock?" walks a structured path from the macro to the number to the recommendation.</p>
+
+  <h3>11.1 Top-down vs bottom-up</h3>
+  <ul>
+    <li><b>Top-down</b> — start from the <b>macro</b> (GDP growth, interest rates, inflation, currency, policy), narrow to attractive <b>sectors/themes</b>, then pick the best <b>stocks</b> within them. Good for asset allocation and sector rotation.</li>
+    <li><b>Bottom-up</b> — start from the <b>individual company's fundamentals</b> (business quality, moat, management, valuation) largely irrespective of macro; pick great companies wherever they are. The stock-picker's approach.</li>
+  </ul>
+  <p>In practice, most research blends both: a bottom-up thesis stress-tested against a top-down view of the sector and cycle.</p>
+
+  <h3>11.2 Sector analysis</h3>
+  <p>Before the stock comes the sector. Standard tools: <b>Porter's Five Forces</b> (rivalry, new entrants, substitutes, supplier and buyer power), <b>industry life cycle</b> (nascent/growth/mature/declining), <b>regulatory landscape</b>, <b>demand drivers</b>, and the <b>competitive structure</b> (fragmented vs consolidated, market shares). You assess where profit pools sit and whether the industry structure lets a company earn durable returns above its cost of capital.</p>
+
+  <h3>11.3 The investment thesis</h3>
+  <p>The <b>thesis</b> is the one-paragraph argument for why the stock will make (or lose) money — <b>and why the market is mispricing it</b>. A strong thesis is <b>differentiated</b> (a "variant perception" vs consensus), <b>falsifiable</b> (you can state what would prove you wrong), and <b>time-bound</b> (catalysts to close the gap). Structure it as:</p>
+  <ol>
+    <li><b>What the market believes</b> (consensus).</li>
+    <li><b>Why you believe something different</b> (your edge: a mis-modelled driver, an underappreciated catalyst, structural change).</li>
+    <li><b>What closes the gap</b> (catalysts &amp; timeline).</li>
+    <li><b>What you'd get paid</b> (target price / upside) <b>and what could go wrong</b> (risks that would break the thesis).</li>
+  </ol>
+
+  <h3>11.4 Anatomy of a research report</h3>
+  <p>A sell-side <b>initiating coverage</b> or update report typically contains:</p>
+  <ol>
+    <li><b>Header / summary box</b> — rating, target price (TP), current price, upside %, market cap, key ratios.</li>
+    <li><b>Investment thesis / key arguments</b> — the 2–4 pillars of the call.</li>
+    <li><b>Business overview</b> — what the company does, segments, revenue mix, geography.</li>
+    <li><b>Industry &amp; competitive positioning</b> — market share, moat, drivers.</li>
+    <li><b>Financial analysis &amp; forecasts</b> — historical trends and modelled P&amp;L / balance sheet / cash flows; key assumptions (volume, price, margins, capex).</li>
+    <li><b>Valuation</b> — methodology (DCF, relative multiples, SOTP), the derivation of the TP, and scenario/sensitivity analysis.</li>
+    <li><b>Catalysts</b> — near-term events that re-rate the stock.</li>
+    <li><b>Risks</b> — what could invalidate the call (with a bear case).</li>
+    <li><b>Management &amp; governance</b> — quality, capital allocation, promoter track record, related-party/ESG flags.</li>
+    <li><b>Financial appendix</b> — model summary tables.</li>
+    <li><b>Disclosures</b> — analyst certification and SEBI-mandated conflict-of-interest disclosures.</li>
+  </ol>
+
+  <h3>11.5 Ratings &amp; target price</h3>
+  <p>Most houses use a three- (or five-) tier scale mapped to the expected total return vs the current price over a horizon (usually 12 months):</p>
+  <table>
+    <thead><tr><th>Rating</th><th>Meaning</th><th>Typical trigger</th></tr></thead>
+    <tbody>
+      <tr><td><b>Buy / Outperform / Overweight</b></td><td>Expected return meaningfully above the market/benchmark</td><td>TP implies solid upside</td></tr>
+      <tr><td><b>Hold / Neutral / Marketweight</b></td><td>Fairly valued; return roughly in line</td><td>Limited upside/downside</td></tr>
+      <tr><td><b>Sell / Underperform / Underweight</b></td><td>Expected to lag; downside likely</td><td>TP below current price</td></tr>
+    </tbody>
+  </table>
+  <p>The <b>target price</b> is the analyst's fair value over the horizon, derived from the valuation section (e.g., "20× forward EPS of ₹30 = TP ₹600"). Upside = (TP − CMP) ÷ CMP. A rating is the <i>conclusion</i>; the TP is the <i>quantification</i>; both must be justified by the thesis.</p>
+
+  <h3>11.6 Catalysts &amp; risks</h3>
+  <p><b>Catalysts</b> are identifiable events expected to move the price and close the gap to your TP: earnings surprises, new capacity/product, margin inflection, a demerger/buyback, regulatory approval, a re-rating on index inclusion, or a cyclical upturn. <b>Risks</b> are the mirror image: demand slowdown, competition/pricing pressure, input-cost inflation, regulation, currency, execution/leverage, governance red flags. A credible report quantifies the <b>bull/base/bear</b> outcomes.</p>
+
+  <h3>11.7 Earnings / results analysis</h3>
+  <p>Every quarter, listed companies report results (P&amp;L, and half-yearly/annual balance sheet and cash flows). The analyst checks: revenue growth (YoY and QoQ), <b>volume vs price/mix</b>, gross/EBITDA/net margins and their drivers, one-offs/exceptional items, order book/guidance, working capital and cash conversion, and — crucially — <b>actuals vs consensus/your estimate</b>. A "beat" or "miss" on the number, and the change in <b>forward guidance</b>, is what usually moves the stock, not the absolute level.</p>
+
+  <h3>11.8 Management commentary &amp; the concall</h3>
+  <p>The <b>earnings conference call (concall)</b> is where management discusses results and takes analyst questions. It is a goldmine for <b>qualitative</b> signals: demand commentary, pricing power, margin outlook, capex plans, capital-allocation intent, and management's <b>credibility</b> (do they hit past guidance?). Reading the <b>tone</b> (confident vs defensive), how they handle tough questions, and what they <i>avoid</i> saying is a genuine analytical edge. Concall transcripts plus the earnings presentation and the annual report (esp. the MD&amp;A, notes, related-party transactions, and cash-flow statement) are the core primary sources.</p>
+
+  <h3>11.9 Building an earnings model</h3>
+  <p>The engine under any target price is a <b>three-statement model</b> (P&amp;L, balance sheet, cash flow) built the <b>revenue-driver way</b> — never just "grow everything 10%". The disciplined sequence:</p>
+  <ol>
+    <li><b>Revenue build-up</b> — decompose into real drivers: <b>Volume × Realisation (price)</b>, or stores × sales-per-store, or AUM × yield, or capacity × utilisation. This is where variant perception lives.</li>
+    <li><b>Cost &amp; margin build</b> — model the big cost lines (raw material as % of sales, employee cost, other opex) to get to <b>EBITDA</b> and the <b>EBITDA margin</b> trajectory.</li>
+    <li><b>Below EBITDA</b> — depreciation (from the capex/asset schedule), interest (from the debt schedule), tax → <b>PAT</b>. Divide by shares → <b>EPS</b>.</li>
+    <li><b>Balance sheet &amp; cash flow</b> — working-capital assumptions (debtor/inventory/creditor days), capex, debt movement → <b>free cash flow</b>, which feeds a DCF and validates that growth is cash-backed, not just accrual.</li>
+    <li><b>Link &amp; sanity-check</b> — the three statements must tie (cash-flow closing cash = balance-sheet cash); run <b>scenarios/sensitivities</b> on the two or three assumptions that matter most.</li>
+  </ol>
+  <div class="formula"><b>Revenue driver logic</b><br>
+    Revenue = Volume × Average Realisation &nbsp;|&nbsp; ΔRevenue ≈ Volume growth + Price/Mix growth<br>
+    EBITDA = Revenue − Operating costs &nbsp;|&nbsp; EPS = PAT ÷ Weighted-avg shares
+    <div class="where">Growth without a volume/price story is a red flag; a good model always explains <i>why</i> the top line moves.</div>
+  </div>
+
+  <h3>11.10 Trailing vs forward, and the role of consensus</h3>
+  <p>Markets are <b>forward-looking</b>, so metrics come in two flavours:</p>
+  <ul>
+    <li><b>Trailing (TTM)</b> — based on the <b>last 12 months of actual reported</b> results. Factual but backward-looking.</li>
+    <li><b>Forward</b> — based on <b>estimated</b> future (next-year or NTM) numbers. What the market actually prices on; a stock at "15× forward" is cheaper than "15× trailing" if earnings are growing.</li>
+  </ul>
+  <p><b>Consensus</b> is the average (or median) of all covering analysts' estimates — the market's baseline expectation. It matters because <b>stocks move on the surprise versus consensus</b>, not the absolute result: a strong quarter that <i>misses</i> consensus can fall; a weak quarter that <i>beats</i> can rise. Your edge as an analyst is having a <b>defensible variant vs consensus</b> and being right on the direction of the surprise and the <b>guidance revision</b> that follows.</p>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 9 — Building a simple call end-to-end</div>
+    <p><b>Company:</b> a mid-cap consumer firm. <b>Top-down:</b> rising rural demand + benign input costs favour FMCG. <b>Bottom-up:</b> the company is gaining share via distribution expansion; EBITDA margin has room to expand ~150 bps as commodity costs ease. <b>Consensus:</b> models flat margins. <b>Variant view:</b> you model the 150 bps expansion → your FY-ahead EPS of ₹32 is ~8% above consensus ₹30. <b>Valuation:</b> peers at 25× forward; you apply 25× → TP = 25 × ₹32 = <b>₹800</b> vs CMP ₹680 → <b>~18% upside → BUY</b>. <b>Catalysts:</b> next two quarters' margin print, new-plant commissioning. <b>Risks:</b> commodity reversal, rural demand disappointment, a demanding multiple. <b>Falsifier:</b> if margins <i>don't</i> expand for two quarters, the thesis breaks. That is a complete, defensible research call.</p>
+  </div>
+
+  <div class="keytake"><b>Key takeaways:</b> Research = macro/sector context (top-down) + company fundamentals (bottom-up) → a differentiated, falsifiable, catalyst-driven <b>thesis</b> → valuation → <b>target price</b> and <b>Buy/Hold/Sell</b>. A good report has a clear thesis, honest risks, defensible assumptions, and identifiable catalysts. Concalls/annual reports are the primary qualitative edge; what moves the stock is the <b>surprise vs expectations</b> and the change in <b>guidance</b>.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">12. What Moves Stock Prices</h2>
+  <p>Price = the market's discounted view of future cash flows and the risk/return demanded. Drivers cluster into:</p>
+  <ul>
+    <li><b>Company-specific (idiosyncratic)</b> — earnings vs expectations, guidance changes, new orders/products, management actions (buyback, M&amp;A, capex), governance events.</li>
+    <li><b>Sector / thematic</b> — commodity cycles, regulation, technology shifts, demand trends affecting the whole industry.</li>
+    <li><b>Macro</b> — GDP growth, <b>interest rates</b> (lower rates ⇒ lower discount rate ⇒ higher valuations, and vice-versa), inflation, <b>currency</b>, fiscal/monetary policy, Budget.</li>
+    <li><b>Global</b> — US Fed policy, crude oil, global risk sentiment, geopolitics — transmitted heavily via <b>FII flows</b>.</li>
+    <li><b>Flows / sentiment / liquidity</b> — FII vs DII buying, index rebalancing, IPO supply absorbing liquidity, positioning and momentum. In the short run, "flows and news"; in the long run, "earnings and cash flows".</li>
+  </ul>
+  <p>A crisp framing for interviews: <b>"Price = f(earnings expectations, discount rate, and flows). Long-term it's driven by fundamentals — earnings growth and returns on capital; short-term by surprises relative to expectations and by supply/demand for the stock."</b></p>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">13. Market Efficiency, Behavioural Finance &amp; Risk–Return</h2>
+
+  <p>Underneath all the plumbing sits the <b>theory</b> of why prices are what they are — a favourite for testing conceptual depth beyond memorised mechanics.</p>
+
+  <h3>13.1 The Efficient Market Hypothesis (EMH)</h3>
+  <p>The <b>EMH</b> (Eugene Fama) holds that <b>asset prices fully reflect all available information</b>, so it is impossible to consistently earn risk-adjusted excess returns using that information — prices follow a "random walk" and react instantly to news. It comes in three forms by the <i>breadth</i> of information already in the price:</p>
+  <table>
+    <thead><tr><th>Form</th><th>Prices reflect…</th><th>Implication (if true)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Weak</b></td><td>All <b>past prices/volumes</b> (historical trading data)</td><td><b>Technical analysis</b> can't beat the market; but fundamental analysis might.</td></tr>
+      <tr><td><b>Semi-strong</b></td><td>All <b>publicly available information</b> (past prices + financials, news, filings)</td><td>Neither technical nor <b>fundamental</b> analysis of public info gives an edge; only private information could.</td></tr>
+      <tr><td><b>Strong</b></td><td><b>All information, public and private (insider)</b></td><td><b>No one</b>, not even insiders, can beat the market. Empirically rejected — insiders <i>do</i> earn abnormal returns, which is why insider trading is illegal.</td></tr>
+    </tbody>
+  </table>
+  <p><b>The research-analyst's paradox:</b> if markets were perfectly (semi-strong) efficient, equity research would add no value. In reality markets are <b>mostly</b> efficient in large, liquid, well-covered names but <b>less</b> efficient in under-researched small/mid-caps, special situations, and around information gaps — which is exactly where diligent bottom-up work earns <b>alpha</b>. The pragmatic view: efficiency is a spectrum, not a switch, and research helps <i>make</i> markets efficient.</p>
+
+  <h3>13.2 Behavioural finance — why prices deviate</h3>
+  <p><b>Behavioural finance</b> explains the persistent anomalies EMH struggles with, by dropping the "rational investor" assumption. Investors are prone to systematic <b>cognitive and emotional biases</b>:</p>
+  <ul>
+    <li><b>Herding</b> — following the crowd (bubbles and panics); the root of momentum extremes.</li>
+    <li><b>Anchoring</b> — over-relying on a reference number (e.g., the price you paid, the 52-week high).</li>
+    <li><b>Confirmation bias</b> — seeking evidence that supports your existing view, ignoring the rest.</li>
+    <li><b>Loss aversion / disposition effect</b> — losses hurt ~2× as much as equal gains please; investors sell winners too early and hold losers too long.</li>
+    <li><b>Overconfidence</b> — overestimating one's forecasting skill → over-trading, under-diversifying.</li>
+    <li><b>Recency &amp; availability bias</b> — extrapolating the recent past; over-weighting vivid, easily-recalled events.</li>
+    <li><b>Framing &amp; mental accounting</b> — decisions swing with how a choice is presented; treating "house money" differently from principal.</li>
+  </ul>
+  <p>For an analyst, behavioural finance cuts both ways: it explains <b>mispricings you can exploit</b> (a variant-perception opportunity when the crowd is anchored or panicking) and it is a <b>checklist for your own errors</b> (are you falling for confirmation bias on your Buy call?).</p>
+
+  <h3>13.3 Risk and return</h3>
+  <p>The central bargain of investing: <b>higher expected return demands higher risk.</b> Key ideas:</p>
+  <ul>
+    <li><b>Risk = variability of outcomes</b>, commonly measured by <b>standard deviation (volatility)</b> of returns.</li>
+    <li><b>Systematic (market) risk</b> — undiversifiable, macro-driven, captured by <b>beta</b> (sensitivity to the market). <b>Unsystematic (specific) risk</b> — company/sector-specific, <b>diversifiable</b> by holding many uncorrelated stocks.</li>
+    <li><b>Diversification</b> reduces total risk without necessarily cutting expected return — "the only free lunch in finance".</li>
+    <li><b>CAPM</b> prices only systematic risk: Expected return = Risk-free rate + β × (Market risk premium). (Full derivation in the Valuation guide.)</li>
+    <li><b>Risk-adjusted return</b> matters more than raw return — the <b>Sharpe ratio</b> = (Return − Risk-free) ÷ Std-dev rewards return <i>per unit of risk</i>.</li>
+  </ul>
+  <div class="formula"><b>Sharpe ratio &amp; CAPM (reference)</b><br>
+    Sharpe = (R<sub>p</sub> − R<sub>f</sub>) ÷ σ<sub>p</sub> &nbsp;&nbsp;|&nbsp;&nbsp; E(R<sub>i</sub>) = R<sub>f</sub> + β<sub>i</sub> × (E(R<sub>m</sub>) − R<sub>f</sub>)
+    <div class="where">R<sub>f</sub> = risk-free rate; σ<sub>p</sub> = portfolio volatility; β = systematic-risk sensitivity; (E(R<sub>m</sub>) − R<sub>f</sub>) = equity risk premium.</div>
+  </div>
+
+  <div class="trap"><b>Common trap (efficiency vs research):</b> Don't claim markets are "perfectly efficient" (then why hire analysts?) <i>or</i> "totally inefficient" (naïve). The credible answer: markets are <b>largely efficient in liquid large-caps</b> and <b>less efficient where coverage/liquidity is thin</b>; research earns alpha by exploiting those gaps and by being right on the <b>surprise vs consensus</b>. Also: EMH's <b>strong form is empirically rejected</b> — insiders do beat the market, hence insider-trading law.</div>
+
+  <div class="keytake"><b>Key takeaways:</b> EMH = prices reflect information (weak = past prices, semi-strong = all public info, strong = even private info — the last is rejected). Behavioural finance explains deviations via biases (herding, anchoring, loss aversion, overconfidence). Risk–return: higher return needs higher risk; diversification kills unsystematic risk; CAPM prices only systematic (β) risk; judge managers on risk-adjusted return (Sharpe), not raw return.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">14. Interview Q&amp;A Bank</h2>
+
+  <h3>14.1 Market structure &amp; plumbing</h3>
+
+  <div class="qa"><div class="q">Q1. What is the difference between the primary and secondary market?</div>
+  <div class="a">A: The <b>primary market</b> is where securities are issued for the first time and the <b>company</b> (or a selling shareholder) receives the money — IPOs, rights issues, QIPs. The <b>secondary market</b> is where already-issued securities trade between investors on the exchange; the company receives nothing, but it provides <b>liquidity and price discovery</b>. The primary market raises capital; the secondary market prices and recycles it.</div></div>
+
+  <div class="qa"><div class="q">Q2. What is the role of SEBI?</div>
+  <div class="a">A: SEBI is the statutory regulator of the Indian securities market with a three-part mandate: <b>protect investors</b>, <b>develop the market</b>, and <b>regulate it</b>. It registers and supervises intermediaries (exchanges, brokers, merchant bankers, mutual funds, research analysts), frames disclosure norms (ICDR for issuance, LODR for continuous disclosure), and prohibits insider trading and manipulation. My NISM Series-XV is under SEBI's Research Analyst regulations.</div></div>
+
+  <div class="qa"><div class="q">Q3. Difference between NSE and BSE?</div>
+  <div class="a">A: Both are electronic, order-driven exchanges. <b>BSE</b> is Asia's oldest (1875), benchmark <b>Sensex (30 stocks)</b>, most listed companies. <b>NSE</b> pioneered nationwide screen-based trading in the mid-90s, benchmark <b>Nifty 50</b>, and dominates cash-equity turnover and especially equity derivatives. Functionally similar; NSE is the larger venue by volume.</div></div>
+
+  <div class="qa"><div class="q">Q4. What is a depository and what's the difference between NSDL and CDSL?</div>
+  <div class="a">A: A depository holds securities in <b>electronic (demat)</b> form, like a bank for shares. India has two — <b>NSDL</b> (linked historically to NSE) and <b>CDSL</b> (linked to BSE; itself listed). Investors access them via a <b>Depository Participant (DP)</b> — usually a broker or bank — where they open a demat account. The two depositories are largely interchangeable from an investor's standpoint.</div></div>
+
+  <div class="qa"><div class="q">Q5. What does a clearing corporation do?</div>
+  <div class="a">A: It guarantees settlement by becoming the <b>central counterparty</b> via novation — stepping between buyer and seller so neither bears the other's default risk. It <b>nets</b> obligations, collects <b>margins</b>, and maintains a settlement guarantee fund. NSE's is NSE Clearing (NCL); BSE's is ICCL. The exchange <i>matches</i>; the clearing corporation <i>guarantees and settles</i>.</div></div>
+
+  <div class="qa"><div class="q">Q6. Walk me through what happens from clicking "buy" to owning the shares.</div>
+  <div class="a">A: My order goes through my <b>broker</b> to the <b>exchange</b>, where it matches on <b>price-time priority</b>. On execution, the obligation passes to the <b>clearing corporation</b>, which novates and nets. On the settlement date (<b>T+1</b> in India), cash is debited via my bank and shares are credited to my <b>demat account</b> at the depository through my DP. SEBI oversees the whole chain.</div></div>
+
+  <div class="qa"><div class="q">Q7. What is dematerialisation?</div>
+  <div class="a">A: Converting physical share certificates into electronic book entries held in a depository. It eliminated bad delivery, forgery, and transfer delays, and enables instant settlement and automatic corporate-action credits. India moved to compulsory demat for listed securities long ago; the reverse — rematerialisation — is rare.</div></div>
+
+  <div class="qa"><div class="q">Q8. What is T+1 settlement and why does a shorter cycle matter?</div>
+  <div class="a">A: Trades settle <b>one business day</b> after the trade date. India completed a phased move of the entire listed universe to T+1 — among the first major markets to do so — and has introduced <b>optional T+0 (same-day)</b> for select stocks. Shorter cycles <b>reduce counterparty and market risk</b> and free up capital faster, at the cost of tighter funding and operational discipline.</div></div>
+
+  <div class="qa"><div class="q">Q9. What margins does a cash-equity trade attract?</div>
+  <div class="a">A: Primarily <b>VaR margin</b> (covers normal price moves via Value-at-Risk), <b>Extreme Loss Margin (ELM)</b> for tail moves, and <b>mark-to-market</b> on open positions. Under SEBI's <b>upfront/peak margin</b> norms, margins are collected before/at the time of trade, not after. It's the cash-market analogue of the SPAN + exposure framework I used on the derivatives desk.</div></div>
+
+  <div class="qa"><div class="q">Q59. What is the difference between an RTA and a custodian?</div>
+  <div class="a">A: A <b>Registrar &amp; Transfer Agent (RTA)</b> maintains the <b>register of shareholders/unitholders</b> for companies and mutual funds and executes corporate actions and IPO allotments/refunds — it works for the <b>issuer</b>. A <b>custodian</b> <b>safe-keeps securities and settles trades</b> for large investors (FPIs, MFs, insurers) — it works for the <b>investor</b>. Both are SEBI-registered but sit on opposite sides: RTA = issuer's record-keeper; custodian = big investor's safekeeper/settlement agent.</div></div>
+
+  <div class="qa"><div class="q">Q60. What is DVP and why does it matter?</div>
+  <div class="a">A: <b>Delivery versus Payment</b> — settlement where securities are delivered <b>if and only if</b> payment is made, the two legs linked so neither party can take one and default on the other. It eliminates <b>principal risk</b>. Combined with the clearing corporation's CCP guarantee, DVP is why a screen-based investor never worries about who is on the other side of the trade.</div></div>
+
+  <h3>14.2 Raising equity</h3>
+
+  <div class="qa"><div class="q">Q10. Walk me through an IPO.</div>
+  <div class="a">A: A company hires <b>merchant bankers (BRLMs)</b>, who do due diligence and file a <b>DRHP</b> with SEBI; after comments, the <b>RHP</b>. For a book-built issue a <b>price band</b> is set. A day before opening, <b>anchor investors</b> are allotted (from the QIB portion) with a lock-in. The issue opens for a few days across <b>QIB, NII, and Retail</b> categories; demand builds the <b>book</b> and the <b>final price</b> is discovered. Payment is via <b>ASBA</b> (funds blocked, not debited). Shares are <b>allotted</b> (lottery/pro-rata if oversubscribed), unsuccessful applicants' blocks released, and the stock <b>lists</b> within SEBI's timeline. Fresh-issue proceeds go to the company; OFS proceeds go to selling shareholders.</div></div>
+
+  <div class="qa"><div class="q">Q11. What is book building and how does it differ from a fixed-price issue?</div>
+  <div class="a">A: In <b>book building</b>, the issuer sets a <b>price band</b> and lets investors bid within it; the final price is <b>discovered from demand</b>. In a <b>fixed-price</b> issue the price is set upfront and investors simply subscribe. Book building gives better price discovery and is standard for large issues; fixed-price is simpler and used for smaller ones.</div></div>
+
+  <div class="qa"><div class="q">Q12. Explain the IPO investor categories.</div>
+  <div class="a">A: Three broad buckets: <b>QIBs</b> (institutions — MFs, banks, insurers, FPIs; anchor allocation carved from here, often up to ~half the issue), <b>NII/HNI</b> (large non-institutional applications, ~15%), and <b>Retail</b> (individuals up to ~₹2 lakh, ~35%). The exact split depends on whether the issuer meets the profitability track record — non-qualifying issuers must reserve a larger QIB share. Retail allotment is by <b>lottery of lots</b> when oversubscribed.</div></div>
+
+  <div class="qa"><div class="q">Q13. What are anchor investors?</div>
+  <div class="a">A: Large, reputed institutional investors allotted shares <b>one day before</b> the public issue opens, at a fixed price, subject to a <b>lock-in</b>. Their participation carved from the QIB portion signals confidence and helps set the tone/pricing for the broader book. It reduces the risk of an undersubscribed institutional book.</div></div>
+
+  <div class="qa"><div class="q">Q14. What is ASBA?</div>
+  <div class="a">A: <b>Application Supported by Blocked Amount</b> — the mandatory public-issue payment mechanism. The application money is <b>blocked (lien-marked)</b> in your bank account and only <b>debited to the extent of allotment</b>; it keeps earning interest meanwhile and unsuccessful bids are released. UPI-based ASBA is standard for retail. It removed old refund delays and protects investor cash.</div></div>
+
+  <div class="qa"><div class="q">Q15. Difference between an IPO and an FPO?</div>
+  <div class="a">A: An <b>IPO</b> is the <b>first</b> public issue by an <b>unlisted</b> company (which then lists). An <b>FPO</b> is a subsequent public issue by an <b>already-listed</b> company. Because a live market price exists, an FPO is typically priced at a small discount to market; an IPO's price is discovered fresh via the book.</div></div>
+
+  <div class="qa"><div class="q">Q16. What is a rights issue and what happens to the price?</div>
+  <div class="a">A: A rights issue offers <b>existing shareholders</b> the right to buy new shares <b>pro-rata at a discount</b>. It raises cash cheaply from current owners and protects them from dilution <i>if they subscribe</i>; rights are <b>renounceable</b> (sellable). The price adjusts to the <b>theoretical ex-rights price (TERP)</b> — a blend of the old price and the discounted subscription price. Non-subscribers who also don't sell their rights lose value to dilution.</div></div>
+
+  <div class="qa"><div class="q">Q17. What is an OFS and how does it differ from a fresh issue?</div>
+  <div class="a">A: In an <b>Offer for Sale</b>, <b>existing shareholders sell</b> their shares to the public (via the exchange mechanism for listed firms, or as a component of an IPO). No new shares are created and the <b>money goes to the sellers, not the company</b> — so no dilution of the count and no capital raised. It's commonly used to meet minimum public shareholding norms or for PSU/promoter divestment. A <b>fresh issue</b> creates new shares and raises capital for the company.</div></div>
+
+  <div class="qa"><div class="q">Q18. What is a QIP?</div>
+  <div class="a">A: A <b>Qualified Institutions Placement</b> — a fast, lightly-documented way for a <b>listed</b> company to raise equity (or convertibles) <b>only from QIBs</b>, without the full prospectus process. Pricing references a SEBI floor formula based on recent average market prices. It's the go-to route for quick growth capital from institutions.</div></div>
+
+  <div class="qa"><div class="q">Q19. What is the role of a merchant banker / underwriter?</div>
+  <div class="a">A: <b>Merchant bankers (BRLMs)</b> manage the entire issuance: due diligence, drafting the DRHP/RHP, valuation and pricing, structuring, marketing (anchor book, roadshows, institutional demand), and coordinating SEBI/exchanges/registrars/legal. <b>Underwriting</b> is a commitment to buy any <b>unsubscribed</b> portion — transferring subscription risk from issuer to bank. This is the ECM function within an investment bank.</div></div>
+
+  <div class="qa"><div class="q">Q20. If an IPO is oversubscribed 10x, how do you get allotment?</div>
+  <div class="a">A: For <b>retail</b>, allotment is by <b>lottery of lots</b> — the pool of one-lot allotments is distributed to maximise the number of allottees, so roughly 1-in-10 applicants get a full lot and the rest get nothing (ASBA block released). Bidding for more lots barely helps per-application odds. For <b>QIB/NII</b>, allotment is broadly <b>proportionate</b> to bid size. Practically, in a hot retail IPO, more applications across family accounts beats one large application.</div></div>
+
+  <div class="qa"><div class="q">Q61. What is a green-shoe option?</div>
+  <div class="a">A: An <b>over-allotment / price-stabilisation</b> mechanism. The BRLM can allot <b>up to ~15% extra shares</b>; a stabilising agent borrows them from the promoter, sells them in the issue, and keeps the cash in escrow. If the stock <b>falls below the issue price</b> post-listing, the agent buys from the market to support it; if it <b>holds up</b>, the option is exercised (fresh shares issued). It dampens listing-day volatility and gives a soft price floor for a window.</div></div>
+
+  <div class="qa"><div class="q">Q62. How does an SME IPO differ from a mainboard IPO?</div>
+  <div class="a">A: SME IPOs list on dedicated platforms (<b>NSE Emerge / BSE SME</b>) with <b>lighter eligibility and disclosure</b>, a <b>much larger minimum lot</b> (keeping out casual retail), <b>compulsory 100% underwriting</b>, and a <b>mandatory market-maker</b> for a few years. They can later <b>migrate to the mainboard</b>. Higher risk, thinner liquidity, less research — suited to informed HNIs, not first-time retail.</div></div>
+
+  <h3>14.3 Indices</h3>
+
+  <div class="qa"><div class="q">Q21. How is the Nifty 50 calculated?</div>
+  <div class="a">A: It's a <b>free-float market-cap-weighted</b> index of 50 large NSE stocks (base 1000). Each stock's <b>free-float market cap</b> = price × total shares × <b>IWF</b> (the public-float fraction). The index level = (sum of constituents' free-float MCap ÷ a base market cap) × base value, with the base/divisor adjusted for corporate actions and reconstitutions so the level stays continuous. A stock's <b>weight</b> = its free-float MCap ÷ total free-float MCap — so bigger, more widely-held companies move it most.</div></div>
+
+  <div class="qa"><div class="q">Q22. What does "free-float" mean and why use it instead of full market cap?</div>
+  <div class="a">A: Free-float counts only shares <b>available to the public</b> for trading, excluding locked promoter, government, and strategic holdings (via the IWF). It better reflects <b>investible</b> value and actual tradable liquidity, and prevents a company with a huge but untradeable promoter stake from dominating the index disproportionately.</div></div>
+
+  <div class="qa"><div class="q">Q23. Nifty vs Sensex?</div>
+  <div class="a">A: Both are Indian benchmark, free-float market-cap-weighted indices. <b>Nifty 50</b> = NSE, 50 stocks, base 1000, managed by NSE Indices. <b>Sensex</b> = BSE, 30 stocks, base 100. They track broadly the same large-cap market and move together; Nifty has more constituents and is the dominant derivatives underlying.</div></div>
+
+  <div class="qa"><div class="q">Q24. What happens to an index when a constituent does a 2:1 split?</div>
+  <div class="a">A: The stock's price halves and its share count doubles, so its <b>free-float market cap is unchanged</b> — but to keep the index continuous the provider adjusts the <b>divisor/base</b>. The net effect: <b>no artificial jump</b> in the index level from the split. The same divisor mechanism handles bonuses, rights, mergers, and constituent changes.</div></div>
+
+  <div class="qa"><div class="q">Q25. Why do stocks sometimes jump on "index inclusion"?</div>
+  <div class="a">A: When a stock is added to a widely-tracked index, <b>passive funds (index funds/ETFs) must buy it</b> to match the benchmark, creating forced demand around the effective date; active benchmark-aware funds often follow. The reverse (exclusion) forces selling. This flow-driven move is separate from fundamentals and is a known catalyst analysts watch.</div></div>
+
+  <div class="qa"><div class="q">Q63. What is the difference between a price-return and a total-return index?</div>
+  <div class="a">A: The <b>Price Return Index (PRI)</b> — the Nifty/Sensex level quoted daily — tracks only <b>capital gains and ignores dividends</b>. The <b>Total Return Index (TRI)</b> assumes <b>dividends are reinvested</b>, so it rises faster by ~1–1.5% p.a. for large-cap India. SEBI requires funds to benchmark against the <b>TRI</b>, because a fund receives dividends too — comparing it to a dividend-blind PRI would overstate out-performance.</div></div>
+
+  <h3>14.4 Trading mechanics</h3>
+
+  <div class="qa"><div class="q">Q26. Explain market, limit, and stop-loss orders.</div>
+  <div class="a">A: A <b>market order</b> executes immediately at the best available price — guarantees execution, not price. A <b>limit order</b> executes only at a specified price or better — guarantees price, not execution. A <b>stop-loss</b> uses a <b>trigger</b> that activates an order once the price is hit, to cap losses/protect gains — SL-Market triggers a market order, SL-Limit a limit order. E.g., long at ₹100 with SL trigger ₹95.</div></div>
+
+  <div class="qa"><div class="q">Q27. What is the bid-ask spread and what does it tell you?</div>
+  <div class="a">A: The gap between the highest bid and the lowest ask. It's a measure of <b>liquidity</b> and a real transaction cost — <b>tight</b> spreads mean liquid, easily-traded stocks (large caps); <b>wide</b> spreads mean illiquid stocks where trading itself moves the price (high <b>impact cost</b>). A related metric, impact cost, is used in Nifty eligibility screening.</div></div>
+
+  <div class="qa"><div class="q">Q28. What are circuit breakers?</div>
+  <div class="a">A: Volatility curbs. <b>Market-wide circuit breakers</b> halt all trading when a benchmark moves <b>10%, 15%, or 20%</b> in a day (duration depends on the level and time; 20% halts the day). <b>Stock-specific price bands</b> (e.g., 2/5/10/20%) cap how far an individual security can move daily; F&amp;O stocks and index constituents typically have wider/dynamic bands. "Upper circuit" = only buyers (locked up); "lower circuit" = only sellers (locked down).</div></div>
+
+  <div class="qa"><div class="q">Q29. How is the closing price determined?</div>
+  <div class="a">A: Not by the last trade, but as a <b>weighted average price of the last ~30 minutes</b> of the normal session (via the closing session/call auction). Using a VWAP window rather than a single print deters last-minute manipulation of the official close.</div></div>
+
+  <div class="qa"><div class="q">Q30. What is the pre-open session for?</div>
+  <div class="a">A: A short <b>call-auction</b> before continuous trading that collects orders and discovers a single <b>opening price</b>, absorbing overnight news in an orderly way and reducing the volatility of the open. Orders are collected, matched at a single equilibrium price, then continuous trading begins.</div></div>
+
+  <div class="qa"><div class="q">Q64. What are the ASM and GSM frameworks?</div>
+  <div class="a">A: Exchange <b>surveillance</b> measures. <b>ASM (Additional Surveillance Measure)</b> targets stocks with abnormal <b>price/volume volatility</b> — imposing higher margins, trade-for-trade, tighter bands. <b>GSM (Graded Surveillance Measure)</b> targets stocks with <b>weak fundamentals</b> trading at unjustified valuations (a penny/shell filter) — escalating to 100% margin, periodic call auctions, and trading only weekly/monthly. Both are red-flag screens: extra caution regardless of the "story".</div></div>
+
+  <div class="qa"><div class="q">Q65. What is BTST and what's its risk?</div>
+  <div class="a">A: <b>Buy Today, Sell Tomorrow</b> — selling shares the next day <b>before they are credited to demat</b> (before T+1 settlement completes), exploiting the settlement gap. The risk is a <b>short-delivery/auction penalty</b>: if the original seller fails to deliver, you are selling shares you don't yet physically hold and can be penalised. STBT (sell today, buy tomorrow) is generally not permitted in cash equities.</div></div>
+
+  <div class="qa"><div class="q">Q66. How does short selling work in India, and what is SLB?</div>
+  <div class="a">A: India <b>bans naked short selling</b> — a delivery-based short must be backed by <b>borrowed shares</b> via <b>SLB (Securities Lending &amp; Borrowing)</b>, a SEBI-regulated, clearing-corp-guaranteed mechanism. Owners lend idle stock for a <b>fee</b>; short-sellers/arbitrageurs borrow it against collateral. Intraday shorting (squared off same day) is allowed without SLB; carrying a short into delivery needs borrowed stock.</div></div>
+
+  <div class="qa"><div class="q">Q67. Difference between a block deal and a bulk deal?</div>
+  <div class="a">A: A <b>bulk deal</b> is any trade/aggregate by a client exceeding <b>~0.5% of a company's shares</b> in the <b>normal market</b>, disclosed the same day. A <b>block deal</b> is a <b>large, pre-negotiated single trade</b> (above a high value threshold, e.g., ~₹10 cr) executed in a <b>separate block window</b> within a tight price band. Both are disclosed and give a public trail of large-investor activity (promoter/PE exits, marquee entries) that analysts watch.</div></div>
+
+  <h3>14.5 Participants &amp; flows</h3>
+
+  <div class="qa"><div class="q">Q31. Difference between FII and DII?</div>
+  <div class="a">A: <b>FIIs/FPIs</b> are <b>foreign</b> institutional investors (overseas funds, registered with SEBI as FPIs) whose flows are driven by global rates, the dollar, and risk appetite — a big swing factor for large caps and the rupee. <b>DIIs</b> are <b>domestic</b> institutions (Indian mutual funds, insurers like LIC, banks, pension funds) funded by steady SIP inflows. DIIs have become the <b>counterweight</b> to FIIs, often absorbing foreign selling and dampening volatility. Watch daily net FII/DII figures as a sentiment gauge.</div></div>
+
+  <div class="qa"><div class="q">Q32. Who are the main market participants?</div>
+  <div class="a">A: <b>FIIs/FPIs</b> (foreign institutions), <b>DIIs</b> (domestic MFs, insurers, pension), <b>retail</b> (direct + via SIPs — huge and growing), <b>HNIs/family offices</b> (active in IPOs and mid/small caps), and <b>proprietary/algo desks</b> (own-capital traders providing liquidity and arbitrage). Each has a different horizon and motivation, which shapes flows and volatility.</div></div>
+
+  <div class="qa"><div class="q">Q33. How has the rise of SIPs changed Indian markets?</div>
+  <div class="a">A: Systematic Investment Plans have created a <b>large, steady, price-insensitive domestic inflow</b> into mutual funds, powering DII buying. This has <b>deepened and stabilised</b> the market, provided a domestic counterweight to volatile FII flows, and reduced India's historical dependence on foreign capital for market direction.</div></div>
+
+  <div class="qa"><div class="q">Q68. Difference between a mutual fund, a PMS, and an AIF?</div>
+  <div class="a">A: All are professional-management routes but differ by pooling and ticket. A <b>mutual fund</b> is mass-market, <b>pooled</b> (you own units at NAV), low minimum, tightly regulated. A <b>PMS</b> is for HNIs (₹50 lakh min), <b>not pooled</b> — the client directly owns the stocks in their own demat, concentrated and customisable. An <b>AIF</b> is for the wealthy/institutional (₹1 cr min), a <b>pooled private fund</b> with the widest mandate — Cat I (VC/infra), Cat II (PE/unlisted/debt), Cat III (hedge-fund-style long-short).</div></div>
+
+  <h3>14.6 Corporate actions</h3>
+
+  <div class="qa"><div class="q">Q34. What happens to price and shares in a bonus vs a split?</div>
+  <div class="a">A: <b>Both</b> increase the share count and reduce the price proportionally, leaving <b>market cap, your holding value, and ownership % unchanged</b>. The difference is accounting: a <b>bonus</b> capitalises <b>reserves</b> into share capital (<b>face value unchanged</b>, reserves fall); a <b>split</b> reduces the <b>face value</b> (reserves untouched). So a 1:1 bonus and a 2:1 split have <b>identical price/share effects</b> but different balance-sheet mechanics.</div></div>
+
+  <div class="qa"><div class="q">Q35. Does a stock split make a company cheaper?</div>
+  <div class="a">A: No. The <b>market cap is unchanged</b> and every valuation multiple (P/E, P/B) is identical after the split — EPS and book value per share fall in the same proportion as the price. It only lowers the <b>per-share price</b> to improve affordability/liquidity. Believing a post-split stock is "cheap" is a classic trap; value comes from earnings and cash flows, not re-slicing.</div></div>
+
+  <div class="qa"><div class="q">Q36. How does a buyback affect EPS and shareholders?</div>
+  <div class="a">A: The company buys back and <b>cancels</b> shares, so the <b>share count falls</b> and <b>EPS rises</b> (same profit over fewer shares); remaining holders' ownership % increases, and surplus cash is returned. It usually signals management sees the stock as undervalued or lacks better reinvestment options. The cost is lower cash/flexibility on the balance sheet. Routes: <b>tender offer</b> (fixed price, pro-rata, usually a premium) or <b>open-market</b>.</div></div>
+
+  <div class="qa"><div class="q">Q37. What is the ex-date vs record date?</div>
+  <div class="a">A: The <b>record date</b> is the cut-off on which registered holders are entitled to a corporate action. The <b>ex-date</b> is the first day the stock trades <b>without</b> the entitlement — to receive the benefit you must buy <b>before</b> the ex-date. On the ex-date the price mechanically adjusts down by the benefit's value (e.g., falls by the dividend amount). Under T+1 the ex-date and record date are essentially aligned.</div></div>
+
+  <div class="qa"><div class="q">Q38. Why does a share price fall on the ex-dividend date?</div>
+  <div class="a">A: Because the value of the dividend is leaving the company (cash paid out) and new buyers on/after the ex-date won't receive it. So the stock's price drops by roughly the dividend per share — no value is lost or gained by holders; the cash simply shifts from inside the company to the shareholder's pocket.</div></div>
+
+  <div class="qa"><div class="q">Q39. A company announces a 1:2 bonus. You hold 200 shares at ₹300. What now?</div>
+  <div class="a">A: 1:2 means one bonus share for every two held → 200/2 = <b>100 bonus shares</b> → total <b>300 shares</b>. Adjusted price = ₹300 × 2/3 = <b>₹200</b>. Holding value = 300 × ₹200 = ₹60,000 = original 200 × ₹300 — <b>unchanged</b>. Face value stays the same; the company capitalises reserves for the 100 new shares' face value.</div></div>
+
+  <div class="qa"><div class="q">Q69. What is a demerger and why do companies do it? (with numbers)</div>
+  <div class="a">A: A <b>demerger/spin-off</b> splits a company into <b>separately-listed</b> entities; shareholders receive shares of the new entity in a set ratio, holding two stocks instead of one. The aim is <b>value unlocking</b> — removing the <b>conglomerate discount</b> so each business is valued on its own merits with focused management and investors. Example: hold 100 shares of a conglomerate at ₹1,500; it spins off a FinCo worth ~₹400/share (1:1). On the effective date the parent adjusts to ~₹1,100 and you also hold 100 FinCo shares at ~₹400 — combined ₹1,50,000, unchanged at separation; the re-rating (2 parts &gt; 1 whole) comes later.</div></div>
+
+  <h3>14.7 Instruments</h3>
+
+  <div class="qa"><div class="q">Q40. Difference between equity and preference shares?</div>
+  <div class="a">A: <b>Equity</b> = residual ownership with <b>voting rights</b>, variable dividends, unlimited upside, but <b>last</b> in the liquidation waterfall. <b>Preference</b> = a <b>fixed dividend</b>, <b>priority</b> over equity for dividends and on liquidation, but usually <b>no voting rights</b> — a hybrid that behaves more like a bond. Preference can be cumulative/participating/convertible/redeemable.</div></div>
+
+  <div class="qa"><div class="q">Q41. ADR vs GDR?</div>
+  <div class="a">A: Both are depository receipts letting an Indian company raise capital abroad by having a foreign bank issue receipts backed by its shares. An <b>ADR</b> trades on <b>US</b> exchanges in <b>USD</b> under <b>SEC</b> rules; a <b>GDR</b> trades on <b>non-US</b> markets (e.g., London, Luxembourg), typically USD/EUR, for global investors. ADRs carry heavier US disclosure; GDRs are generally lighter and multi-jurisdiction.</div></div>
+
+  <div class="qa"><div class="q">Q42. Difference between a mutual fund and an ETF?</div>
+  <div class="a">A: Both pool investor money. A traditional (open-ended) <b>mutual fund</b> is bought/redeemed <b>at end-of-day NAV</b> directly from the AMC and can be actively or passively managed. An <b>ETF</b> <b>trades on the exchange intraday like a stock</b> (needs a demat account), is usually <b>passive</b> and <b>low-cost</b>, and stays near NAV through create/redeem arbitrage by authorised participants. An index <i>fund</i> is passive like an ETF but transacts at NAV, not intraday.</div></div>
+
+  <div class="qa"><div class="q">Q43. What is NAV?</div>
+  <div class="a">A: <b>Net Asset Value</b> per unit = (market value of the fund's holdings + cash − liabilities) ÷ units outstanding. It's the per-unit worth of an open-ended fund, struck at end of day; investors subscribe/redeem at NAV (mutual funds) or trade near it (ETFs).</div></div>
+
+  <div class="qa"><div class="q">Q44. What are REITs and InvITs?</div>
+  <div class="a">A: Listed, SEBI-regulated trusts that pool money to own income-generating real assets and <b>distribute the bulk of their cash flow</b> to unitholders. <b>REITs</b> hold <b>real estate</b> (mostly leased commercial/office); <b>InvITs</b> hold <b>infrastructure</b> (roads, power transmission, towers, pipelines). They give retail investors access to large, otherwise-illiquid assets with a bond-like yield plus some growth, and are valued mainly on <b>yield and distribution growth</b>.</div></div>
+
+  <div class="qa"><div class="q">Q70. What are DVR shares?</div>
+  <div class="a">A: <b>Differential Voting Rights</b> shares carry <b>fewer (or superior) voting rights</b> than ordinary shares, often with a <b>higher dividend</b> as compensation. They let promoters raise equity <b>without diluting control</b>. DVRs usually trade at a <b>discount</b> to the ordinary share, pricing the lost vote. Key idea: <b>economic ownership and voting power can be decoupled.</b></div></div>
+
+  <div class="qa"><div class="q">Q71. How does SEBI categorise mutual funds?</div>
+  <div class="a">A: Into five groups to standardise schemes: <b>Equity</b> (large/mid/small/multi/flexi-cap, ELSS, sectoral, value/focused), <b>Debt</b> (liquid, ultra-short, corporate bond, gilt, credit-risk — by duration &amp; credit), <b>Hybrid</b> (aggressive/conservative, balanced-advantage, arbitrage, multi-asset), <b>Solution-oriented</b> (retirement, children's — with lock-in), and <b>Other</b> (index funds, ETFs, FoFs). A fund house runs broadly one scheme per category. Categorisation drives <b>suitability</b> for a client.</div></div>
+
+  <h3>14.8 Research process &amp; valuation</h3>
+
+  <div class="qa"><div class="q">Q45. How would you analyse / value a stock?</div>
+  <div class="a">A: I'd blend <b>top-down and bottom-up</b>. Start with the <b>macro and sector</b> (drivers, structure via Porter's forces, cycle, regulation). Then the <b>company</b>: business model, moat, market share, management quality and capital allocation. Then the <b>financials</b> — growth, margins, returns on capital (ROE/ROCE), cash conversion, leverage — and build a <b>forecast</b>. <b>Value</b> it with a mix of <b>DCF</b> (intrinsic) and <b>relative multiples</b> (P/E, P/B, EV/EBITDA vs peers and history), cross-checked. That yields a <b>target price</b> and a <b>Buy/Hold/Sell</b>, framed by a clear <b>thesis, catalysts, and risks</b>.</div></div>
+
+  <div class="qa"><div class="q">Q46. Top-down vs bottom-up investing?</div>
+  <div class="a">A: <b>Top-down</b> starts from macro → sector → stock (good for allocation and sector rotation). <b>Bottom-up</b> starts from the individual company's fundamentals, picking great businesses regardless of macro (the stock-picker's approach). Most real research blends them — a bottom-up idea stress-tested against a top-down sector/cycle view.</div></div>
+
+  <div class="qa"><div class="q">Q47. What makes a good equity research report?</div>
+  <div class="a">A: A <b>clear, differentiated thesis</b> (a variant perception vs consensus), not just a description of the company. Then: defensible, transparent <b>assumptions</b> and forecasts; a valuation that <b>derives the target price</b> logically; explicit, honest <b>risks</b> and a bear case; identifiable <b>catalysts</b> with a timeline; and a rating consistent with all of the above. It should be falsifiable — I should be able to state what would prove me wrong. Concise, evidence-based, and free of conflicts (with proper disclosures).</div></div>
+
+  <div class="qa"><div class="q">Q48. What is an investment thesis?</div>
+  <div class="a">A: The core argument for why a stock will make money <b>and why the market is currently mispricing it</b>. It states what consensus believes, why I believe something different (my edge), what catalysts will close the gap, the resulting upside (target price), and what would break the thesis. Differentiated, time-bound, and falsifiable.</div></div>
+
+  <div class="qa"><div class="q">Q49. What are catalysts and risks in a research call?</div>
+  <div class="a">A: <b>Catalysts</b> are near-term events expected to re-rate the stock and close the gap to my target — earnings surprises, capacity/product launches, margin inflections, buybacks/demergers, regulatory approvals, or index inclusion. <b>Risks</b> are what could invalidate the call — demand slowdown, competition, input inflation, regulation, currency, execution/leverage, or governance issues. A good report quantifies bull/base/bear scenarios.</div></div>
+
+  <div class="qa"><div class="q">Q50. How do you read a quarterly result / what do you look for?</div>
+  <div class="a">A: Beyond the headline, I compare <b>actuals vs consensus/my estimate</b> (beat/miss), decompose revenue into <b>volume vs price/mix</b>, examine <b>margin</b> trends and their drivers, strip out one-offs/exceptional items, check working capital and <b>cash conversion</b>, and — most importantly — the change in <b>forward guidance</b>. The stock usually moves on the <b>surprise and the guidance</b>, not the absolute number.</div></div>
+
+  <div class="qa"><div class="q">Q51. Why do you value an earnings concall so highly?</div>
+  <div class="a">A: The concall is where management explains results and answers analysts, revealing <b>qualitative</b> signals numbers can't: demand and pricing commentary, margin and capex outlook, capital-allocation intent, and — crucially — management <b>credibility</b> (do they meet past guidance?). Their <b>tone</b>, how they handle hard questions, and what they avoid saying is genuine analytical edge. Transcripts, the earnings deck, and the annual report (MD&amp;A, notes, cash flows) are my core primary sources.</div></div>
+
+  <div class="qa"><div class="q">Q52. What is a Buy/Hold/Sell rating and how is the target price set?</div>
+  <div class="a">A: A rating maps expected 12-month return vs the current price/benchmark: <b>Buy</b> (meaningful upside), <b>Hold/Neutral</b> (fairly valued), <b>Sell</b> (expected to lag/downside). The <b>target price</b> is my fair value over the horizon, derived from the valuation section — e.g., applying a justified forward multiple to my estimated EPS, or a DCF. Upside = (TP − CMP) ÷ CMP. The rating is the conclusion; the TP quantifies it; both must follow from the thesis.</div></div>
+
+  <div class="qa"><div class="q">Q53. Difference between value and growth investing?</div>
+  <div class="a">A: <b>Value</b> buys stocks cheap relative to fundamentals (low P/E, low P/B, high yield) with a margin of safety. <b>Growth</b> buys companies with above-average earnings/revenue growth, accepting higher multiples on the bet that growth justifies them. <b>GARP</b> blends the two (growth at a reasonable price, e.g., via PEG); <b>quality</b> adds high-ROE, low-leverage screens.</div></div>
+
+  <div class="qa"><div class="q">Q54. How are large/mid/small caps defined in India?</div>
+  <div class="a">A: By SEBI's <b>rank</b> on the exchange (for MF categorisation), refreshed periodically: <b>large-cap</b> = top 100 by full market cap, <b>mid-cap</b> = 101–250, <b>small-cap</b> = 251 onwards. Large caps are stable, liquid, well-researched; small caps are volatile, under-researched, and where diligent bottom-up work can add the most alpha.</div></div>
+
+  <div class="qa"><div class="q">Q55. What is P/E and how do you interpret a high vs low P/E?</div>
+  <div class="a">A: <b>P/E = price ÷ EPS</b> — rupees paid per ₹1 of earnings (equivalently market cap ÷ profit). It's a <b>relative</b> tool: a "low" P/E can be a <b>value trap</b> (a declining business) and a "high" P/E can be <b>justified</b> by superior growth, quality, or returns on capital. I always compare within the sector, versus the stock's own history, and against growth (PEG) — never in isolation. (Full derivation is in the Valuation guide.)</div></div>
+
+  <div class="qa"><div class="q">Q56. What ultimately moves stock prices?</div>
+  <div class="a">A: Price reflects the market's discounted view of future cash flows and required return. <b>Long-term</b>, fundamentals dominate — <b>earnings growth and returns on capital</b>. <b>Short-term</b>, prices move on <b>surprises versus expectations</b> (results, guidance, news), on the <b>discount rate</b> (interest rates — lower rates lift valuations), on <b>macro/global</b> factors transmitted via <b>FII flows</b>, and on <b>supply/demand and sentiment</b> (index rebalancing, IPO supply, positioning). In short: earnings and cash flows over time; expectations and flows in the moment.</div></div>
+
+  <div class="qa"><div class="q">Q57. What's the difference between EV and market cap?</div>
+  <div class="a">A: <b>Market cap</b> = equity value (price × shares) — what the equity is worth. <b>Enterprise Value (EV)</b> = market cap + net debt (+ minorities/preference − cash) — the value of the whole business to all capital providers, independent of capital structure. EV pairs with pre-interest metrics (EV/EBITDA, EV/Sales); market cap pairs with equity metrics (P/E, P/B). The Valuation guide covers the bridge in full.</div></div>
+
+  <div class="qa"><div class="q">Q58. As a research analyst, what are your key SEBI compliance obligations?</div>
+  <div class="a">A: Under the SEBI Research Analyst regulations (I'm NISM Series-XV qualified): <b>register/qualify</b>, <b>disclose conflicts of interest</b> (my/my firm's holdings and business relationships in the covered company), maintain a <b>research policy and records</b>, ensure recommendations are <b>fair and not misleading</b>, and <b>not trade against my own published recommendations</b> within restricted windows. Every report carries an <b>analyst certification</b> and the mandated disclosures.</div></div>
+
+  <div class="qa"><div class="q">Q72. How do you build an earnings model?</div>
+  <div class="a">A: A linked <b>three-statement model</b> built from <b>drivers</b>, not blanket growth rates. Start with a <b>revenue build</b> (Volume × Realisation, or stores × sales/store, or AUM × yield). Model cost lines to <b>EBITDA and the margin path</b>; subtract depreciation (from the capex schedule), interest (from the debt schedule) and tax to get <b>PAT and EPS</b>. Add working-capital and capex assumptions to derive <b>free cash flow</b> (feeds a DCF). Ensure the statements <b>tie</b>, then run <b>sensitivities</b> on the two or three assumptions that matter most. A model must explain <i>why</i> revenue moves.</div></div>
+
+  <div class="qa"><div class="q">Q73. Trailing vs forward multiples — and what is consensus?</div>
+  <div class="a">A: <b>Trailing (TTM)</b> uses the last 12 months of <b>actual</b> results; <b>forward</b> uses <b>estimated</b> future earnings — and markets, being forward-looking, price on the forward number (a growing stock is cheaper on forward than trailing). <b>Consensus</b> is the average of all covering analysts' estimates — the market's baseline. Stocks move on the <b>surprise vs consensus</b> and the <b>guidance revision</b>, not the absolute print; a beat-vs-consensus can rise even on a weak-looking quarter.</div></div>
+
+  <div class="qa"><div class="q">Q74. Explain the Efficient Market Hypothesis. If markets are efficient, why do research?</div>
+  <div class="a">A: EMH says prices reflect available information, so you can't consistently earn excess risk-adjusted returns. Three forms: <b>weak</b> (past prices — defeats technicals), <b>semi-strong</b> (all public info — defeats fundamental analysis of public data), <b>strong</b> (even private/insider info — empirically rejected). My take: efficiency is a <b>spectrum</b> — high in liquid large-caps, <b>low in under-researched small/mid-caps and special situations</b>, which is exactly where diligent research earns <b>alpha</b>. Research also <i>makes</i> markets efficient by feeding price discovery.</div></div>
+
+  <div class="qa"><div class="q">Q75. Name some behavioural biases that affect markets.</div>
+  <div class="a">A: <b>Herding</b> (crowd-following → bubbles/panics), <b>anchoring</b> (fixating on the buy price or 52-week high), <b>confirmation bias</b> (seeking supporting evidence only), <b>loss aversion / disposition effect</b> (selling winners early, holding losers), <b>overconfidence</b> (over-trading), and <b>recency/availability bias</b> (extrapolating the recent past). They create <b>mispricings to exploit</b> and are a <b>checklist for my own errors</b> on a call.</div></div>
+
+  <div class="qa"><div class="q">Q76. Explain risk vs return and the value of diversification.</div>
+  <div class="a">A: Higher expected return demands higher risk (return variability, measured by <b>standard deviation</b>). Risk splits into <b>systematic</b> (market-wide, undiversifiable, captured by <b>beta</b>) and <b>unsystematic</b> (company-specific, <b>diversifiable</b>). Diversification cuts unsystematic risk without cutting expected return — "the only free lunch". <b>CAPM</b> prices only systematic risk (R<sub>f</sub> + β × equity risk premium), and I judge managers on <b>risk-adjusted</b> return (<b>Sharpe ratio</b>), not raw return.</div></div>
+
+  <div class="qa"><div class="q">Q77. What is the difference between systematic and unsystematic risk?</div>
+  <div class="a">A: <b>Systematic (market) risk</b> affects all stocks — interest rates, recessions, macro/global shocks; it is <b>undiversifiable</b> and is what beta and CAPM's risk premium reward. <b>Unsystematic (specific) risk</b> is company/sector-specific — a factory fire, a management exit, a regulatory hit; it is <b>diversifiable</b> by holding a broad, uncorrelated basket. Only systematic risk should command a return premium, because the rest can be diversified away for free.</div></div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">15. Rapid-Fire Glossary &amp; Final Checklist</h2>
+
+  <h3>15.1 One-line glossary</h3>
+  <ul>
+    <li><b>DRHP / RHP</b> — Draft / final offer document filed with SEBI for a public issue.</li>
+    <li><b>BRLM</b> — Book Running Lead Manager (lead investment bank on an issue).</li>
+    <li><b>ICDR / LODR</b> — SEBI issuance-disclosure / continuous-listing-disclosure regulations.</li>
+    <li><b>MPS</b> — Minimum Public Shareholding a listed company must maintain.</li>
+    <li><b>IWF</b> — Investible Weight Factor (free-float fraction used in index weighting).</li>
+    <li><b>TERP</b> — Theoretical Ex-Rights Price after a rights issue.</li>
+    <li><b>Impact cost</b> — cost of executing a standard order size; a liquidity measure used in Nifty eligibility.</li>
+    <li><b>Upper/Lower circuit</b> — a stock locked with only buyers / only sellers at its daily band.</li>
+    <li><b>DP</b> — Depository Participant (your broker/bank interface to NSDL/CDSL).</li>
+    <li><b>CCP / novation</b> — the clearing corporation stepping in as counterparty to guarantee settlement.</li>
+    <li><b>NAV</b> — per-unit value of a fund.</li>
+    <li><b>SOTP</b> — Sum-of-the-parts valuation (value each segment, add up).</li>
+    <li><b>PEG</b> — P/E ÷ earnings growth; a growth-adjusted valuation screen.</li>
+    <li><b>RTA</b> — Registrar &amp; Transfer Agent; keeps the shareholder/unitholder register and runs allotments/corporate actions.</li>
+    <li><b>Custodian / CP code</b> — safe-keeper and settlement agent for large investors (FPIs, MFs).</li>
+    <li><b>DVP</b> — Delivery versus Payment; shares move only against cash, killing principal risk.</li>
+    <li><b>Green-shoe / over-allotment</b> — up to ~15% extra shares used to stabilise the post-listing price.</li>
+    <li><b>SME IPO</b> — issue on NSE Emerge / BSE SME; larger lot, 100% underwriting, market-maker obligation.</li>
+    <li><b>PRI vs TRI</b> — Price Return (dividends excluded, the quoted level) vs Total Return (dividends reinvested; the fund benchmark).</li>
+    <li><b>ASM / GSM</b> — Additional / Graded Surveillance Measures (volatility filter / weak-fundamental penny-stock filter).</li>
+    <li><b>BTST</b> — Buy Today Sell Tomorrow; selling before demat credit, risking short-delivery/auction.</li>
+    <li><b>SLB</b> — Securities Lending &amp; Borrowing; the legitimate route to a delivery-based short.</li>
+    <li><b>Block vs bulk deal</b> — large pre-negotiated single trade (block window) vs &gt;~0.5% trade in the normal market (bulk).</li>
+    <li><b>PMS / AIF</b> — HNI managed accounts (₹50 L, unpooled) / pooled private funds (₹1 cr, Cat I/II/III).</li>
+    <li><b>DVR</b> — Differential Voting Rights shares (decouple economics from voting; usually trade at a discount).</li>
+    <li><b>Demerger / spin-off</b> — split into separately-listed entities to unlock the conglomerate discount.</li>
+    <li><b>EMH</b> — Efficient Market Hypothesis (weak / semi-strong / strong forms).</li>
+    <li><b>Beta / Sharpe</b> — systematic-risk sensitivity / risk-adjusted return (excess return per unit of volatility).</li>
+    <li><b>Consensus</b> — average analyst estimate; stocks move on the surprise vs it.</li>
+  </ul>
+
+  <h3>15.2 Numbers &amp; facts to keep timeless</h3>
+  <ul>
+    <li>India = fully <b>demat</b>, <b>T+1</b> rolling settlement (optional T+0 emerging). Do not overstate T+0 as universal.</li>
+    <li>Nifty 50 (base 1000) and Sensex (30 stocks, base 100) = <b>free-float market-cap weighted</b>.</li>
+    <li>Market-wide circuit breakers at <b>10 / 15 / 20%</b> index moves.</li>
+    <li>Large/mid/small = <b>top 100 / 101–250 / 251+</b> by SEBI rank.</li>
+    <li>IPO categories QIB / NII / Retail — describe splits as "typically/around", note higher QIB share for issuers lacking a profitability track record.</li>
+    <li>Retail IPO allotment = <b>lottery of lots</b> when oversubscribed.</li>
+    <li>Retail applicant limit commonly up to <b>₹2 lakh</b> per application.</li>
+  </ul>
+
+  <div class="trap"><b>Final accuracy reminder:</b> In interviews, never invent exact percentages, thresholds, or timelines you're unsure of. Say "typically around X" and pivot to the <b>mechanism and logic</b> — that is what senior interviewers actually test. Precise-sounding wrong numbers destroy credibility faster than an honest "the exact figure varies, but the principle is…".</div>
+
+  <div class="keytake"><b>Master summary:</b> The equity market is a layered system — SEBI (rules) → exchanges (matching) → clearing corps (guarantee) → depositories (custody) → brokers/DPs (access), settling T+1 in full demat. Capital is raised in the primary market (IPO/FPO/rights/OFS/QIP via merchant bankers, paid through ASBA) and priced in the secondary market. Indices are free-float MCap-weighted; corporate actions re-slice value (split/bonus neutral; buyback shrinks count; rights raise cash and dilute non-subscribers). On top sits the research craft: a differentiated, falsifiable <b>thesis</b> → forecast → valuation → <b>target price</b> and <b>Buy/Hold/Sell</b>, driven by earnings surprises, guidance, macro/rates, and FII/DII flows. Know the plumbing cold; reason from mechanisms; keep figures timeless and honest.</div>
+
+</body></html>

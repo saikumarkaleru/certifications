@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<!--
+  SHARED STUDY-GUIDE TEMPLATE — do not change the <style> block.
+  Each subject guide must reuse this exact <head> so all PDFs look consistent.
+  Fill <body> with the guide content using the classes documented below.
+
+  STRUCTURE TO USE INSIDE <body>:
+    <div class="cover">                              (title page)
+      <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+      <h1 class="cover-title">Subject Name</h1>
+      <div class="cover-sub">One-line scope. Roles: ...</div>
+    </div>
+    <div class="toc">...contents list...</div>       (optional)
+    <h2>1. Section</h2>            (major section, starts near top; use page-break as needed)
+    <h3>1.1 Subsection</h3>
+    <p>...</p>
+    <ul><li>...</li></ul>
+    <div class="formula"><b>Name</b><br> equation <div class="where">where: ...</div></div>
+    <table><thead><tr><th>..</th></tr></thead><tbody><tr><td>..</td></tr></tbody></table>
+    <div class="example"><div class="ex-h">Worked Example</div> ...steps... </div>
+    <div class="qa"><div class="q">Q: ...</div><div class="a">A: ...</div></div>
+    <div class="trap"><b>Common trap:</b> ...</div>
+    <div class="keytake"><b>Key takeaways:</b> ...</div>
+-->
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Georgia","Cambria",serif; font-size: 10.5pt; line-height: 1.5; color: #1a1a1a; }
+  h1,h2,h3,.cover-kicker,.cover-sub,.ex-h,.q,th { font-family: "Calibri","Segoe UI",sans-serif; }
+
+  /* Cover */
+  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+  .cover-kicker { font-size: 11pt; font-weight: 700; letter-spacing: 2px; color: #1f4e79; text-transform: uppercase; }
+  .cover-title { font-size: 34pt; font-weight: 800; color: #16365c; margin: 10px 0 6px; line-height: 1.1; }
+  .cover-sub { font-size: 12pt; color: #444; font-style: italic; }
+  .cover-foot { margin-top: 22px; font-size: 10pt; color: #666; font-family:"Calibri",sans-serif; }
+
+  /* TOC */
+  .toc { page-break-after: always; }
+  .toc h2 { border: none; }
+  .toc ol { margin-left: 20px; font-family:"Calibri",sans-serif; font-size: 11pt; line-height: 1.9; }
+
+  /* Headings */
+  h2 { font-size: 16pt; font-weight: 700; color: #16365c; border-bottom: 2px solid #16365c;
+       padding-bottom: 4px; margin: 18px 0 10px; page-break-after: avoid; }
+  h3 { font-size: 12.5pt; font-weight: 700; color: #1f4e79; margin: 14px 0 5px; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; color: #333; margin: 10px 0 4px; font-family:"Calibri",sans-serif; }
+  p { margin: 5px 0; text-align: justify; }
+  ul, ol { margin: 5px 0 5px 22px; }
+  li { margin-bottom: 3px; }
+  b, strong { color: #16365c; }
+
+  /* Formula box */
+  .formula { background: #f4f7fb; border-left: 4px solid #1f4e79; padding: 8px 12px; margin: 8px 0;
+             font-family: "Cambria Math","Cambria",serif; page-break-inside: avoid; }
+  .formula b { color: #16365c; }
+  .formula .where { font-size: 9.3pt; color: #555; margin-top: 3px; font-family:"Calibri",sans-serif; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 9px 0; font-size: 9.6pt; page-break-inside: avoid; }
+  th { background: #16365c; color: #fff; text-align: left; padding: 5px 8px; font-size: 9.6pt; }
+  td { border: 1px solid #cbd5e1; padding: 4px 8px; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f4f7fb; }
+
+  /* Worked example */
+  .example { border: 1px solid #b7c7dd; border-radius: 4px; padding: 9px 12px; margin: 10px 0;
+             background: #fbfdff; page-break-inside: avoid; }
+  .ex-h { font-weight: 700; color: #1f4e79; font-size: 10.5pt; margin-bottom: 4px; }
+
+  /* Q&A */
+  .qa { margin: 8px 0; page-break-inside: avoid; }
+  .qa .q { font-weight: 700; color: #16365c; }
+  .qa .a { margin-top: 2px; }
+
+  /* Trap / takeaway callouts */
+  .trap { background: #fff6f0; border-left: 4px solid #c26a2c; padding: 6px 11px; margin: 8px 0; font-size: 10pt; }
+  .keytake { background: #f0f7f1; border-left: 4px solid #3f7d45; padding: 8px 12px; margin: 12px 0; }
+
+  .sec { page-break-before: always; }   /* put on an <h2> to force a fresh page */
+</style></head><body>
+
+  <div class="cover">
+    <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+    <h1 class="cover-title">Credit Analysis &amp; Fixed Income</h1>
+    <div class="cover-sub">Bonds, yields, duration, credit ratios, ratings, and default risk — built for Indian markets (RBI · SEBI · CRISIL/ICRA/CARE · G-secs · INR).</div>
+    <div class="cover-foot">Target roles: Credit Rating Analyst · Corporate / NBFC Credit Analyst · Risk · Treasury<br>
+    Level: MBA (Finance) fresher with derivatives-desk exposure · NISM Series-XV certified</div>
+  </div>
+
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li>Orientation: what these roles actually do</li>
+      <li>Bond basics: face value, coupon, maturity, price</li>
+      <li>Clean vs dirty price and accrued interest</li>
+      <li>The inverse price–yield relationship</li>
+      <li>Yields: current yield, YTM, yield to call</li>
+      <li>Spot, par and forward rates (concept)</li>
+      <li>Bond pricing: PV of cash flows &amp; zero-coupon bonds</li>
+      <li>Interest-rate risk: duration, DV01/PVBP, convexity</li>
+      <li>The yield curve: shapes and theories</li>
+      <li>Credit spreads, G-sec vs corporate, types of bonds</li>
+      <li>Credit analysis framework: the 5 Cs, business vs financial risk</li>
+      <li>Financial spreading &amp; the key credit ratios</li>
+      <li>Cash-flow vs asset-based lending; working capital; bank facilities</li>
+      <li>Credit ratings: scale, agencies, support, transitions &amp; securitisation</li>
+      <li>Covenants, early-warning signals, credit monitoring</li>
+      <li>Default &amp; loss: PD, LGD, EAD, EL; NPAs, provisioning, ECL, CRAR, IBC</li>
+      <li>Worked examples (consolidated)</li>
+      <li>Interview Q&amp;A bank (75+)</li>
+      <li>Common traps &amp; last-mile revision</li>
+    </ol>
+  </div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">1. Orientation: what these roles actually do</h2>
+  <p>Credit and fixed-income roles all revolve around one question: <b>will we get our money back, and are we being paid enough for the risk we are taking?</b> A <b>credit rating analyst</b> (CRISIL, ICRA, CARE, India Ratings) forms an independent opinion on an issuer's ability and willingness to service debt on time, expressed as a rating symbol. A <b>corporate/NBFC credit analyst</b> inside a bank or NBFC underwrites individual borrowers, structures facilities, sets covenants and monitors the exposure. A <b>risk analyst</b> measures and limits the losses a portfolio of exposures can produce. A <b>treasury</b> analyst manages the institution's own investments, liquidity and funding, and is a heavy user of the bond and yield-curve concepts in this guide.</p>
+  <p>These four roles share a common toolkit. Fixed income gives you the <i>language of debt instruments</i> — how a bond is priced, how sensitive it is to interest rates, and what its yield tells you. Credit analysis gives you the <i>language of borrower quality</i> — the ratios, cash-flow logic and rating framework that decide whether a borrower deserves credit and at what price. This guide builds both, in Indian-market context, and ends with a large interview Q&amp;A bank. Wherever a precise regulatory number (a provisioning percentage, a rating threshold) is not universally fixed, the guide keeps it conceptual and flags it as "typically/around" — in interviews, showing you understand the <i>logic</i> matters more than reciting a number that changes with RBI circulars.</p>
+
+  <div class="keytake"><b>Key takeaways:</b> Fixed income = pricing and rate-risk of debt instruments. Credit analysis = judging repayment capacity and pricing the risk. Every role here is ultimately answering "probability and severity of not getting repaid, versus the yield offered."</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">2. Bond basics: face value, coupon, maturity, price</h2>
+  <p>A <b>bond</b> is a tradable loan. The issuer (a government, a company, an NBFC) borrows a defined amount, promises to pay periodic interest, and repays the principal at a fixed future date. Because the cash flows are contractually fixed, the family is called <b>fixed income</b>. As a lender/investor you are a <i>creditor</i>, not an owner — you rank ahead of equity, you have no upside beyond the promised cash flows, and your central risk is that you are not paid in full and on time.</p>
+
+  <h3>2.1 The defining parameters</h3>
+  <ul>
+    <li><b>Face value / par / principal</b> — the amount repaid at maturity and the base on which coupons are computed. Indian corporate bonds and NCDs are commonly issued at a face value of ₹1,000 (retail) or ₹10 lakh (wholesale market lots); G-secs use ₹100 face value by convention. Examples in this guide mostly use ₹100 or ₹1,000 for arithmetic clarity.</li>
+    <li><b>Coupon rate</b> — the annual interest rate on face value. A 7.5% coupon on ₹1,000 face pays ₹75 per year. Coupons may be <i>fixed</i>, <i>floating</i> (reset to a benchmark such as the T-bill rate or MIBOR plus a spread), or <i>zero</i> (no periodic coupon; issued at a discount). Indian G-secs and most corporate bonds pay coupons <b>semi-annually</b>.</li>
+    <li><b>Maturity (tenor)</b> — the date the principal is repaid. Money-market instruments (T-bills, commercial paper, certificates of deposit) mature within a year; bonds run longer. India issues G-secs out to 30–40 years.</li>
+    <li><b>Price</b> — what the bond trades at <i>today</i>, quoted as a percentage of face value. A bond at "98" costs ₹980 per ₹1,000 face. Price moves inversely with market yields and is the main thing that changes day to day.</li>
+    <li><b>Yield</b> — the return an investor earns given the price paid; the market's required rate for that bond's risk and tenor. Yield is an output of price (and vice-versa), not a fixed feature.</li>
+  </ul>
+
+  <h3>2.2 Par, premium and discount</h3>
+  <p>Compare the coupon to the market's required yield:</p>
+  <ul>
+    <li><b>Price = par (100):</b> coupon ≈ required yield. The bond exactly compensates the market.</li>
+    <li><b>Price &gt; par (premium):</b> the coupon is <i>higher</i> than what the market now demands, so investors bid the price up above face value.</li>
+    <li><b>Price &lt; par (discount):</b> the coupon is <i>lower</i> than the market's required yield, so the price falls below face to make up the shortfall through capital gain at maturity.</li>
+  </ul>
+  <p>This is the anchor intuition of the whole subject: <b>coupon is fixed at issue; yield floats with the market; price is what moves to reconcile the two.</b></p>
+
+  <div class="trap"><b>Common trap — coupon rate vs YTM.</b> The coupon rate is a fixed contractual feature set at issue and printed on the bond; it never changes for a fixed-rate bond. The <b>yield to maturity (YTM)</b> is the market's return today and changes every second with the price. A bond can carry a 6% coupon and yield 8% — it simply trades at a discount. If an interviewer asks "the return on this bond," clarify whether they mean the coupon (contractual) or the YTM (market return). Confusing the two is the single most common beginner error.</div>
+
+  <!-- ============================================================= -->
+  <h2>3. Clean vs dirty price and accrued interest</h2>
+  <p>Between coupon dates, interest accrues daily to the seller even though it will only be paid to whoever holds the bond on the next coupon date. To be fair, a buyer compensates the seller for the interest earned since the last coupon. This creates two quoted prices.</p>
+  <div class="formula"><b>Dirty (settlement) price</b><br>
+    Dirty Price = Clean Price + Accrued Interest
+    <div class="where">Clean Price = quoted market price (excludes accrued interest). Accrued Interest = coupon earned by the seller from the last coupon date up to settlement.</div>
+  </div>
+  <div class="formula"><b>Accrued Interest</b><br>
+    AI = Face × Coupon Rate × (Days since last coupon ÷ Days in coupon period)
+    <div class="where">Days convention in India for G-secs is typically 30/360 for corporate bonds and actual/actual for G-secs; the concept is the same — pro-rate the coupon over the fraction of the period elapsed.</div>
+  </div>
+  <p>The <b>clean price</b> is what screens quote and what analysts compare over time, because it strips out the mechanical saw-tooth of accrued interest (which builds up then drops to zero on each coupon date). The <b>dirty price</b> is what actually changes hands on settlement. NISM candidates should note that in Indian G-sec trading the settlement amount uses the dirty price.</p>
+
+  <div class="example"><div class="ex-h">Worked Example 1 — Accrued interest &amp; dirty price</div>
+    <p>A ₹1,000 face corporate bond carries an 8% annual coupon paid semi-annually (so ₹40 every six months). It is bought 60 days into a 180-day coupon period at a clean price of ₹995.</p>
+    <p><b>Accrued interest</b> = ₹40 × (60 ÷ 180) = ₹40 × 0.3333 = <b>₹13.33</b>.</p>
+    <p><b>Dirty price paid</b> = 995 + 13.33 = <b>₹1,008.33</b>.</p>
+    <p>The buyer pays ₹1,008.33 today, will receive the full ₹40 coupon in 120 days, and effectively recovers the ₹13.33 they advanced to the seller. Interpretation: the "13.33" is not a cost — it is a reimbursement of interest the seller genuinely earned.</p>
+  </div>
+
+  <!-- ============================================================= -->
+  <h2>4. The inverse price–yield relationship</h2>
+  <p>The most-asked fixed-income interview idea: <b>bond prices and market yields move in opposite directions.</b> When market interest rates rise, existing bond prices fall; when rates fall, existing bond prices rise.</p>
+  <h3>4.1 Why — the intuition</h3>
+  <p>A bond's coupon is fixed at issue. Suppose you hold a bond paying a 6% coupon and the market's required yield for that risk/tenor rises to 8%. New buyers can buy freshly-issued bonds paying 8%. Nobody will pay full face value (₹1,000) for your 6% bond when they can get 8% elsewhere. Your bond's <i>price must fall</i> until its total return — the fixed coupons plus the capital gain from buying below face — equals 8%. The reverse happens if required yields fall to 4%: your 6% bond is now generous, buyers bid its price above par until its yield drops to 4%.</p>
+  <p>Formally, price is the present value of fixed future cash flows discounted at the market yield. Yield sits in the denominator of every discounting term. Raise the discount rate and every present value shrinks — price falls. Lower it and price rises. The relationship is not just negative, it is <b>convex</b> (curved), which matters for the duration/convexity section.</p>
+
+  <div class="qa"><div class="q">Q: Why do bond prices fall when interest rates rise?</div>
+    <div class="a">A: A bond's coupon is locked in at issue. If market rates rise, newly issued bonds pay more, so an older bond with a lower fixed coupon is worth less — its price must drop until its yield matches the new, higher market rate. Mathematically, price is the present value of fixed cash flows discounted at the market yield; a higher discount rate lowers every present value, so price falls. It is the single most important relationship in fixed income.</div>
+  </div>
+
+  <div class="trap"><b>Common trap.</b> Candidates sometimes say "the coupon falls when rates rise." No — the <b>coupon never changes</b> for a fixed-rate bond; the <b>price</b> and hence the <b>yield</b> change. What adjusts is the market price, driving the yield to the new market level.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">5. Yields: current yield, YTM, yield to call</h2>
+  <p>"Yield" has several precise meanings. Getting them straight is a reliable interview differentiator.</p>
+
+  <h3>5.1 Current yield</h3>
+  <div class="formula"><b>Current Yield</b><br>
+    Current Yield = Annual Coupon ÷ Current Market Price
+    <div class="where">A quick income measure. Ignores any capital gain/loss to maturity and ignores the time value of money.</div>
+  </div>
+  <p>Current yield captures only the income component. For a bond bought at a discount it <i>understates</i> the true return (it misses the pull-to-par gain); for a premium bond it <i>overstates</i> it (it misses the pull-to-par loss). Useful as a rough income yardstick, not a complete return.</p>
+
+  <h3>5.2 Yield to maturity (YTM)</h3>
+  <p><b>YTM</b> is the single discount rate that makes the present value of all a bond's future cash flows equal to its current market price. It is the internal rate of return (IRR) of holding the bond to maturity, assuming coupons are reinvested at the same YTM and there is no default. It captures coupon income <i>and</i> the capital gain/loss to par <i>and</i> the timing of cash flows — the most complete standard yield measure.</p>
+  <div class="formula"><b>YTM — defining relationship</b><br>
+    Price = Σ [ C ÷ (1 + y)<sup>t</sup> ] + [ F ÷ (1 + y)<sup>n</sup> ]
+    <div class="where">C = periodic coupon; F = face value; y = YTM per period; t = each period 1…n; n = total periods to maturity. Solve for y such that the discounted cash flows equal Price. Because y appears in every term, YTM is solved iteratively (trial-and-error, financial calculator, or an approximation).</div>
+  </div>
+  <div class="formula"><b>YTM approximation (quick manual estimate)</b><br>
+    YTM ≈ [ C + (F − P) ÷ n ] ÷ [ (F + P) ÷ 2 ]
+    <div class="where">C = annual coupon; F = face value; P = current price; n = years to maturity. Numerator = annual coupon plus the annualised capital gain/loss; denominator = average of face and price. Good enough for interview mental math; the exact YTM needs iteration.</div>
+  </div>
+
+  <div class="example"><div class="ex-h">Worked Example 2 — Current yield and approximate YTM</div>
+    <p>A ₹1,000 face bond, 8% annual coupon (₹80/year), 5 years to maturity, currently priced at ₹950 (a discount).</p>
+    <p><b>Current yield</b> = 80 ÷ 950 = <b>8.42%</b>.</p>
+    <p><b>Approximate YTM</b> = [80 + (1000 − 950)/5] ÷ [(1000 + 950)/2]<br>
+       = [80 + 10] ÷ [975] = 90 ÷ 975 = <b>9.23%</b>.</p>
+    <p>Interpretation: YTM (9.23%) &gt; current yield (8.42%) &gt; coupon (8.00%). This ordering is the signature of a <b>discount bond</b> — the sub-par price adds a capital gain that current yield ignores but YTM captures. For a premium bond the ordering reverses: coupon &gt; current yield &gt; YTM.</p>
+  </div>
+
+  <h3>5.3 Yield to call (YTC)</h3>
+  <p>A <b>callable</b> bond lets the issuer redeem it early, usually when rates have fallen (so it can refinance more cheaply). For such bonds the more relevant number may be the <b>yield to call</b> — the same IRR calculation but with the cash flows ending at the <i>call date</i> and the <i>call price</i> substituted for face value. Prudent investors evaluate the <b>yield to worst</b>: the lowest of YTM and the various YTCs, i.e. assume the issuer acts to the investor's disadvantage. Many Indian AT1 (perpetual) bonds and some NCDs carry call options, so YTC/yield-to-worst is practically relevant. For a <b>puttable</b> bond the mirror-image measure is the <b>yield to put</b>, and the best case for the investor is the <b>yield to best</b>.</p>
+
+  <h3>5.4 Running, realised (horizon) and bond-equivalent yields</h3>
+  <p>A few more yield names appear in interviews and NISM material; keep them straight:</p>
+  <ul>
+    <li><b>Running yield</b> — simply another name for <b>current yield</b> (annual coupon ÷ price). "Running yield" is the phrasing you will hear on Indian dealing desks.</li>
+    <li><b>Realised / horizon yield (holding-period return)</b> — the <i>actual</i> annualised return an investor earns over a chosen holding period, capturing coupons received, the price at which the bond is <i>sold</i> (not necessarily par), and the rate at which coupons were reinvested. Unlike YTM it does not assume you hold to maturity or reinvest at the YTM — it is the honest, after-the-fact number.</li>
+    <li><b>Bond-equivalent yield (BEY)</b> — a convention that annualises a semi-annual yield by simply doubling it, so yields on bonds with different coupon frequencies can be compared. It is also used to restate a money-market discount instrument (T-bill, CP) onto a bond basis.</li>
+  </ul>
+  <div class="formula"><b>Horizon (realised) yield &amp; bond-equivalent yield</b><br>
+    Realised return over the horizon is the rate r solving: Purchase Price = Σ(reinvested coupons + sale price) ÷ (1+r)<sup>t</sup><br>
+    BEY (from a semi-annual yield) = 2 × semi-annual yield ·  BEY (money-market) = [(Face − Price) ÷ Price] × (365 ÷ Days)
+    <div class="where">Horizon yield depends on the <i>reinvestment rate</i> and the <i>selling price/yield</i> at the horizon — the two assumptions YTM ignores. BEY lets you compare a 91-day T-bill's discount return against a semi-annual G-sec's yield on a like-for-like annualised basis.</div>
+  </div>
+
+  <div class="trap"><b>Common trap.</b> Do not treat YTM as a guaranteed return. YTM assumes (i) you hold to maturity, (ii) no default, and (iii) every coupon is reinvested at the YTM. If reinvestment rates differ or the issuer defaults, the realised return will differ — this is <b>reinvestment risk</b> and it is why zero-coupon bonds (no coupons to reinvest) lock in their yield if held to maturity.</div>
+
+  <!-- ============================================================= -->
+  <h2>6. Spot, par and forward rates (concept)</h2>
+  <p>YTM is a convenient single number, but it blends together cash flows arriving at different times, each of which really deserves its own discount rate. Three related concepts unpack this. You will not usually compute these by hand in a fresher interview, but you must be able to explain them.</p>
+  <ul>
+    <li><b>Spot rate (zero rate):</b> the yield on a <i>single</i> cash flow arriving at one future date — i.e. the yield of a zero-coupon bond of that maturity. The set of spot rates across maturities is the <b>zero-coupon (spot) curve</b>, the theoretically correct set of rates for discounting individual cash flows. A coupon bond can be valued as a bundle of zero-coupon bonds, each discounted at its own spot rate.</li>
+    <li><b>Par rate:</b> the coupon rate that would make a bond of a given maturity price exactly at par today. The par curve is what most quoted "yield curve" charts approximate, because benchmark bonds are issued near par.</li>
+    <li><b>Forward rate:</b> the interest rate implied <i>today</i> for a loan starting at a future date and ending later — e.g. the "1-year rate, 1 year from now." Forward rates are extracted from spot rates by no-arbitrage: investing for two years must equal investing for one year and then rolling into the implied 1-year forward. Forwards are the market's break-even expectation, embedding both rate expectations and risk premia.</li>
+  </ul>
+  <div class="formula"><b>Forward rate (no-arbitrage, annual compounding)</b><br>
+    (1 + s<sub>2</sub>)<sup>2</sup> = (1 + s<sub>1</sub>) × (1 + f<sub>1,2</sub>)
+    <div class="where">s<sub>1</sub>, s<sub>2</sub> = 1-year and 2-year spot rates; f<sub>1,2</sub> = the 1-year forward rate starting one year from now. Rearranged: f<sub>1,2</sub> = (1 + s<sub>2</sub>)² ÷ (1 + s<sub>1</sub>) − 1.</div>
+  </div>
+  <p>Relationship in one line: <b>spot rates discount single cash flows; par rates describe coupon bonds priced at 100; forward rates are the future rates implied by today's spot curve.</b> In India these are estimated from the G-sec curve; treasury desks use the spot/zero curve for valuing and hedging portfolios.</p>
+
+  <h3>6.1 Bootstrapping the zero (spot) curve — concept</h3>
+  <p>The market quotes coupon bonds, not a clean set of zero rates. <b>Bootstrapping</b> is the step-by-step procedure that <i>extracts</i> the spot/zero curve from observed coupon-bond (or par) prices. You do not need to grind the algebra in a fresher interview, but you should be able to describe it:</p>
+  <ul>
+    <li>Start at the short end: the 1-period spot rate comes directly from a 1-period instrument (e.g. a T-bill), since it has a single cash flow.</li>
+    <li>Move to the 2-period bond: price it as its final cash flow discounted at the unknown 2-period spot rate, <i>plus</i> its first coupon discounted at the already-known 1-period spot rate. Solve for the 2-period spot.</li>
+    <li>Repeat outwards — each new maturity is solved using all the shorter spot rates already found. You "pull yourself up by the bootstraps," one maturity at a time.</li>
+  </ul>
+  <p>The result is an arbitrage-free zero curve used to value any set of cash flows and to derive forward rates. In India the G-sec curve (via reported yields / valuation agencies such as FBIL) is bootstrapped this way for mark-to-market and risk.</p>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">7. Bond pricing: PV of cash flows &amp; zero-coupon bonds</h2>
+  <p>A bond's fair value is simply the present value of everything it will pay you, discounted at the market yield.</p>
+  <div class="formula"><b>Bond price (coupon bond)</b><br>
+    P = Σ<sub>t=1..n</sub> [ C ÷ (1 + y)<sup>t</sup> ] + F ÷ (1 + y)<sup>n</sup>
+    <div class="where">P = price; C = coupon per period; F = face value; y = required yield per period; n = number of periods. First term = PV of the coupon stream (an annuity); second term = PV of principal repaid at maturity. For semi-annual bonds, use C/2, y/2 and 2× the years.</div>
+  </div>
+  <div class="formula"><b>Zero-coupon bond price</b><br>
+    P = F ÷ (1 + y)<sup>n</sup>
+    <div class="where">No coupons, so price is just the discounted face value. Always issued/traded at a discount to face; the entire return is the pull-to-par capital gain.</div>
+  </div>
+
+  <div class="example"><div class="ex-h">Worked Example 3 — Pricing a coupon bond</div>
+    <p>Price a ₹1,000 face bond, 8% annual coupon (₹80/year), 3 years to maturity, when the market's required yield is 10% (annual compounding).</p>
+    <p>PV of coupons: 80/1.10 + 80/1.10² + 80/1.10³ = 72.73 + 66.12 + 60.11 = ₹198.96<br>
+       PV of principal: 1000/1.10³ = 1000/1.331 = ₹751.31<br>
+       <b>Price = 198.96 + 751.31 = ₹950.27</b>.</p>
+    <p>Because the required yield (10%) exceeds the coupon (8%), the bond trades at a <b>discount</b> (₹950 &lt; ₹1,000) — exactly as theory predicts. If the required yield were 6% instead, the same bond would price above ₹1,000 (a premium).</p>
+  </div>
+
+  <div class="example"><div class="ex-h">Worked Example 4 — Zero-coupon bond</div>
+    <p>What should you pay today for a ₹1,00,000 face zero-coupon bond maturing in 4 years if the required yield is 7.5% (annual)?</p>
+    <p>P = 1,00,000 ÷ (1.075)<sup>4</sup> = 1,00,000 ÷ 1.3355 = <b>₹74,880</b> (approx).</p>
+    <p>You invest ₹74,880 and receive ₹1,00,000 in 4 years — the ₹25,120 gain is your entire return, and because there are no coupons to reinvest, holding to maturity locks in the 7.5% with no reinvestment risk. This clean feature makes zeros popular for liability-matching in treasuries and insurers.</p>
+  </div>
+
+  <div class="keytake"><b>Key takeaways:</b> Price = PV of coupons + PV of principal, discounted at the market yield. Yield &gt; coupon → discount; yield &lt; coupon → premium; yield = coupon → par. Zeros have no reinvestment risk and are the building block (spot rates) for pricing everything else.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">8. Interest-rate risk: duration, DV01/PVBP, convexity</h2>
+  <p>Because price moves inversely with yield, every bondholder faces <b>interest-rate risk</b>. The tools that measure <i>how much</i> a price moves for a given yield change are duration, DV01 and convexity — core vocabulary for risk and treasury roles.</p>
+
+  <h3>8.1 Macaulay duration</h3>
+  <p><b>Macaulay duration</b> is the weighted-average time (in years) to receive a bond's cash flows, where each cash flow's weight is its present value as a share of the bond's price. It is a "centre of gravity" of the cash-flow timeline. A zero-coupon bond's Macaulay duration equals its maturity (its only cash flow is at the end); a coupon bond's duration is <i>always less</i> than its maturity because earlier coupons pull the average time forward.</p>
+  <div class="formula"><b>Macaulay Duration</b><br>
+    D<sub>Mac</sub> = Σ [ t × PV(CF<sub>t</sub>) ] ÷ Price
+    <div class="where">t = time (in periods) of each cash flow; PV(CF<sub>t</sub>) = present value of the cash flow at time t; Price = sum of all PVs = the bond's price. Result is in periods; divide by payments-per-year to express in years.</div>
+  </div>
+
+  <h3>8.2 Modified duration — the price-sensitivity number</h3>
+  <p><b>Modified duration</b> converts Macaulay duration into an estimate of the <i>percentage</i> price change for a 1% (100 bp) change in yield. It is the headline interest-rate-risk measure.</p>
+  <div class="formula"><b>Modified Duration</b><br>
+    D<sub>Mod</sub> = D<sub>Mac</sub> ÷ (1 + y/m)
+    <div class="where">y = yield (annual); m = compounding periods per year. Modified duration is slightly smaller than Macaulay duration.</div>
+  </div>
+  <div class="formula"><b>Estimated price change from duration</b><br>
+    %ΔPrice ≈ − D<sub>Mod</sub> × Δy
+    <div class="where">Δy = change in yield in decimal (e.g. +0.01 for +100 bp). The minus sign encodes the inverse relationship. A modified duration of 6 means a +1% yield move causes roughly a −6% price change.</div>
+  </div>
+
+  <div class="example"><div class="ex-h">Worked Example 5 — Modified duration price change</div>
+    <p>A bond has a modified duration of 6.2 and a price of ₹1,050. Market yields rise by 75 basis points (0.75%). Estimate the price change.</p>
+    <p>%ΔPrice ≈ −6.2 × 0.0075 = −0.0465 = <b>−4.65%</b>.</p>
+    <p>₹ change ≈ −4.65% × 1,050 = <b>−₹48.8</b> → new price ≈ <b>₹1,001.2</b>.</p>
+    <p>Interpretation: longer duration = more price pain per unit of yield change. A treasury manager expecting rates to rise would <i>shorten</i> portfolio duration to cut this sensitivity; one expecting a rally would <i>lengthen</i> it to capture bigger gains.</p>
+  </div>
+
+  <h3>8.3 DV01 / PVBP</h3>
+  <p><b>DV01</b> ("dollar value of a basis point"), also called <b>PVBP</b> ("price value of a basis point"), is the <i>rupee</i> change in a bond's or portfolio's value for a <b>1 basis point</b> (0.01%) change in yield. Where modified duration is a percentage sensitivity, DV01 is an absolute cash sensitivity — exactly what a trading/risk desk needs to size hedges.</p>
+  <div class="formula"><b>DV01 (PVBP)</b><br>
+    DV01 ≈ D<sub>Mod</sub> × Price × 0.0001
+    <div class="where">0.0001 = 1 basis point. DV01 is the rupee P&amp;L per bond (or per ₹ of position) for a 1 bp yield move. Desks aggregate DV01 across positions to see total rate exposure and to build hedges (e.g. matching the DV01 of a bond with an offsetting IRS or G-sec future).</div>
+  </div>
+
+  <div class="example"><div class="ex-h">Worked Example 6 — DV01 and hedging intuition</div>
+    <p>A ₹100 crore G-sec position has a modified duration of 5.5. Compute its DV01.</p>
+    <p>DV01 = 5.5 × 1,00,00,00,000 × 0.0001 = 5.5 × 1,00,000 = <b>₹5.5 lakh per basis point</b>.</p>
+    <p>So a 1 bp rise in yields costs the desk ₹5.5 lakh; a 25 bp move (a typical RBI step) is roughly ₹1.375 crore. To hedge, the desk would short instruments (G-sec futures / receive-fixed swaps) whose combined DV01 also equals ₹5.5 lakh, so gains on the hedge offset losses on the book.</p>
+  </div>
+
+  <h3>8.4 Convexity — the correction term</h3>
+  <p>Duration assumes a straight-line relationship between price and yield, but the true relationship is <b>curved (convex)</b>. For small yield moves the straight-line estimate is fine; for large moves it errs. <b>Convexity</b> measures that curvature and refines the estimate.</p>
+  <div class="formula"><b>Price change with convexity correction</b><br>
+    %ΔPrice ≈ ( − D<sub>Mod</sub> × Δy ) + ( ½ × Convexity × (Δy)<sup>2</sup> )
+    <div class="where">The first term is the duration estimate; the second is the convexity adjustment, always positive for a standard (option-free) bond. Convexity helps the holder: it makes actual price gains slightly larger and actual price losses slightly smaller than duration alone predicts.</div>
+  </div>
+  <p>Practical meaning: <b>positive convexity is good for the bondholder</b> — for a symmetric yield move, prices rise a bit more than they fall. All else equal, investors prefer more convexity and will accept a slightly lower yield for it. Bonds with embedded short options (callable bonds, and mortgage-backed / prepayable instruments) can exhibit <b>negative convexity</b> over some yield range, which is unfavourable to the holder — a nuance worth mentioning for risk roles.</p>
+
+  <h3>8.5 Effective duration — for bonds with options</h3>
+  <p>Macaulay and modified duration assume the cash flows are <i>fixed</i>. For bonds whose cash flows change as yields move — callable, puttable, or prepayable (mortgage-backed) bonds — we use <b>effective duration</b>, which measures sensitivity by <i>re-pricing</i> the bond after a small up-and-down yield shock rather than assuming fixed cash flows.</p>
+  <div class="formula"><b>Effective Duration</b><br>
+    D<sub>eff</sub> = ( P<sub>−Δy</sub> − P<sub>+Δy</sub> ) ÷ ( 2 × P<sub>0</sub> × Δy )
+    <div class="where">P<sub>−Δy</sub>, P<sub>+Δy</sub> = prices if yield falls / rises by Δy; P<sub>0</sub> = current price. Because it re-prices the bond, it captures how embedded options change the cash flows. For an option-free bond, effective duration ≈ modified duration.</div>
+  </div>
+
+  <h3>8.6 Key-rate and spread duration</h3>
+  <ul>
+    <li><b>Key-rate (partial) duration:</b> sensitivity of a bond/portfolio to a change in <i>one</i> specific point on the yield curve (e.g. the 2-year or 10-year rate) while holding the others fixed. It reveals exposure to curve <i>reshaping</i> (steepening/flattening/twists) that a single overall duration hides. The key-rate durations sum to the effective duration for a parallel shift.</li>
+    <li><b>Spread duration:</b> sensitivity of a credit bond's price to a change in its <i>credit spread</i> (not the risk-free rate). For a fixed-rate bond it is close to modified duration, but the distinction matters when the G-sec curve and credit spreads move independently — spread duration is the lever that measures how much a spread widening (e.g. a rating scare) hurts, and is central for credit and floating-rate portfolios.</li>
+  </ul>
+
+  <h3>8.7 Portfolio duration</h3>
+  <div class="formula"><b>Portfolio Duration</b><br>
+    D<sub>portfolio</sub> = Σ ( w<sub>i</sub> × D<sub>i</sub> )
+    <div class="where">w<sub>i</sub> = market-value weight of bond i in the portfolio; D<sub>i</sub> = its modified/effective duration. Portfolio duration is just the market-value-weighted average of the holdings' durations — the single number a treasury or fund uses to set overall rate exposure against a target/benchmark.</div>
+  </div>
+
+  <h3>8.8 Immunization &amp; ALM (concept)</h3>
+  <p><b>Immunization</b> is a strategy that protects a portfolio's value against interest-rate moves by <b>matching the duration of assets to the duration (and present value) of the liabilities</b> they must fund. When durations match, a rate change moves the value of assets and liabilities by roughly the same amount, so the net (surplus) is shielded — the price-risk loss is offset by the reinvestment-rate gain, and vice-versa. This is the core of <b>Asset-Liability Management (ALM)</b> at banks, insurers and pension funds: measure the duration gap between rate-sensitive assets and liabilities and hedge it (with swaps, G-sec futures or by reshaping the book) so that earnings and net worth are not whipsawed by RBI rate moves. Banks in India run structured ALM under RBI guidelines, monitoring liquidity gaps and interest-rate-sensitivity gaps across time buckets.</p>
+
+  <div class="trap"><b>Common trap — duration is not maturity.</b> Duration is measured in years but it is <i>not</i> the time to maturity. It is a price-sensitivity / weighted-average-cash-flow-time measure. A 10-year 8% coupon bond might have a duration of ~7 years, not 10. Only a zero-coupon bond has duration equal to maturity. Higher coupon and higher yield both <i>shorten</i> duration (more value arrives earlier); lower coupon and longer maturity <i>lengthen</i> it.</div>
+
+  <div class="keytake"><b>Key takeaways:</b> Macaulay duration = weighted-average time to cash flows. Modified duration = % price change per 1% yield move. DV01/PVBP = ₹ change per 1 bp, the desk's hedging unit. Convexity corrects the straight-line duration estimate and is beneficial to the holder.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">9. The yield curve: shapes and theories</h2>
+  <p>The <b>yield curve</b> plots yield against maturity for bonds of the same credit quality — most importantly the <b>G-sec (sovereign) curve</b>, the risk-free benchmark for INR. Its shape is a closely watched macro signal and the backdrop for every credit spread.</p>
+
+  <h3>9.1 Shapes</h3>
+  <table>
+    <thead><tr><th>Shape</th><th>Description</th><th>Typical signal</th></tr></thead>
+    <tbody>
+      <tr><td><b>Normal (upward-sloping)</b></td><td>Long yields &gt; short yields</td><td>Healthy expansion; investors demand extra yield (term premium) for locking money up longer and bearing more rate risk. The usual state.</td></tr>
+      <tr><td><b>Inverted (downward-sloping)</b></td><td>Short yields &gt; long yields</td><td>Market expects rate cuts / slowdown ahead; historically a recession warning. Often follows aggressive central-bank tightening.</td></tr>
+      <tr><td><b>Flat</b></td><td>Little difference across maturities</td><td>Transition/uncertainty — the curve is moving between normal and inverted; the market is unsure of the growth/inflation path.</td></tr>
+      <tr><td><b>Steep</b></td><td>Long yields well above short yields</td><td>Strong growth or inflation expectations, or early-cycle after cuts; term premium is high.</td></tr>
+      <tr><td><b>Humped</b></td><td>Mid maturities highest</td><td>Rarer; often a temporary technical or expectations artefact.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>9.2 Theories of the yield curve</h3>
+  <ul>
+    <li><b>Pure expectations theory:</b> long rates are purely the average of expected future short rates. An upward slope means the market expects short rates to rise; an inversion means it expects them to fall. Forward rates are unbiased predictors of future spot rates. Elegant but ignores risk premia.</li>
+    <li><b>Liquidity preference theory:</b> expectations <i>plus</i> a <b>term (liquidity) premium</b> — investors demand extra yield to hold longer maturities because they bear more price risk and give up liquidity. This premium biases the curve upward and explains why the curve is normally upward-sloping even when short rates are expected to be flat.</li>
+    <li><b>Market segmentation / preferred habitat:</b> different investors (banks at the short end, insurers/pension funds at the long end) have structural maturity preferences driven by their liabilities, so supply and demand within each maturity bucket shape the curve. "Preferred habitat" softens this: investors will leave their preferred maturity only if paid a sufficient premium.</li>
+  </ul>
+
+  <div class="qa"><div class="q">Q: What does an inverted yield curve signal, and why?</div>
+    <div class="a">A: An inverted curve — short-term yields above long-term yields — signals that the market expects interest rates (and often growth/inflation) to fall in the future, which historically precedes economic slowdowns or recessions. The logic: long yields embed the average of expected future short rates, so if investors expect the central bank to cut rates in a coming downturn, long yields drop below current short yields. It usually appears after a tightening cycle. It is a signal, not a certainty, and the lead time can be long.</div>
+  </div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">10. Credit spreads, G-sec vs corporate, types of bonds</h2>
+  <h3>10.1 The credit spread</h3>
+  <p>A <b>credit spread</b> is the extra yield a corporate (or other non-sovereign) bond pays over a comparable-maturity G-sec. The G-sec is treated as risk-free in INR because the sovereign can always meet rupee obligations; anything riskier must pay more to compensate for <b>default risk</b>, plus liquidity and other premia.</p>
+  <div class="formula"><b>Credit spread</b><br>
+    Credit Spread = Corporate Bond Yield − Comparable G-sec Yield
+    <div class="where">Usually quoted in basis points. Widening spreads = market perceives more credit risk / risk aversion; tightening spreads = improving credit sentiment. A bond's total yield ≈ risk-free rate + credit spread.</div>
+  </div>
+  <p>Spreads widen with weaker credit quality (lower rating), longer tenor, worse liquidity, and risk-off sentiment. During stress (e.g. the 2018 IL&amp;FS/NBFC episode in India) spreads on lower-rated and NBFC paper blew out even when G-sec yields were stable — a pure repricing of credit risk. For a credit analyst, the spread is the market's real-time price of the risk you are assessing.</p>
+
+  <h3>10.2 G-sec vs corporate bonds</h3>
+  <table>
+    <thead><tr><th>Feature</th><th>Government Securities (G-secs)</th><th>Corporate Bonds / NCDs</th></tr></thead>
+    <tbody>
+      <tr><td>Issuer</td><td>Central/State Government (via RBI)</td><td>Companies, NBFCs, PSUs</td></tr>
+      <tr><td>Credit risk</td><td>Effectively nil in INR (sovereign)</td><td>Varies by issuer — the reason for ratings</td></tr>
+      <tr><td>Yield</td><td>Lowest (benchmark risk-free)</td><td>G-sec yield + credit spread</td></tr>
+      <tr><td>Liquidity</td><td>High for on-the-run benchmarks</td><td>Generally lower; many held to maturity</td></tr>
+      <tr><td>Regulation / venue</td><td>RBI; NDS-OM, primary auctions</td><td>SEBI; listed on NSE/BSE debt segment</td></tr>
+      <tr><td>Face value convention</td><td>₹100</td><td>₹1,000 or ₹10 lakh (wholesale)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>10.3 Types of bonds in India</h3>
+  <table>
+    <thead><tr><th>Type</th><th>What it is</th><th>Key points</th></tr></thead>
+    <tbody>
+      <tr><td><b>G-secs / dated securities</b></td><td>Central government long-dated bonds</td><td>Risk-free benchmark; semi-annual coupon; ₹100 face.</td></tr>
+      <tr><td><b>T-bills</b></td><td>Government short-term (91/182/364-day)</td><td>Zero-coupon, issued at discount; money-market instrument.</td></tr>
+      <tr><td><b>State Development Loans (SDLs)</b></td><td>State government bonds</td><td>Slightly higher yield than central G-secs; quasi-sovereign.</td></tr>
+      <tr><td><b>Corporate bonds / NCDs</b></td><td>Non-convertible debentures issued by companies/NBFCs</td><td>Rated; can be secured or unsecured; SEBI-regulated; carry credit spread.</td></tr>
+      <tr><td><b>Perpetual / AT1 bonds</b></td><td>Additional Tier-1 capital bonds of banks; no maturity</td><td>Coupons discretionary/skippable; can be written down or converted on stress; deeply subordinated — higher yield for higher risk. (Post the 2020 Yes Bank AT1 write-down, treated cautiously.)</td></tr>
+      <tr><td><b>Tax-free bonds</b></td><td>Issued (historically) by PSUs like NHAI, PFC, REC</td><td>Coupon interest exempt from income tax; attractive to high-tax investors; long tenors.</td></tr>
+      <tr><td><b>Floating-rate bonds</b></td><td>Coupon resets to a benchmark + spread</td><td>Low price sensitivity to rates (short effective duration); coupon rises/falls with rates.</td></tr>
+      <tr><td><b>Zero-coupon / deep-discount</b></td><td>No coupon; issued at discount</td><td>Entire return = pull to par; no reinvestment risk; longest duration for a given maturity.</td></tr>
+      <tr><td><b>Callable bond</b></td><td>Issuer can redeem early at a call price</td><td>Option benefits the <i>issuer</i>; investor bears call/reinvestment risk → higher yield, can show negative convexity. Evaluate on yield-to-worst.</td></tr>
+      <tr><td><b>Puttable bond</b></td><td>Investor can sell it back to the issuer early</td><td>Option benefits the <i>investor</i> (a floor under the price) → lower yield. Evaluate on yield-to-put.</td></tr>
+      <tr><td><b>Convertible bond / FCCB</b></td><td>Bond convertible into the issuer's equity at a set ratio</td><td>Debt with an equity call option; lower coupon in exchange for upside. FCCBs (foreign-currency convertible bonds) were common for Indian issuers raising abroad.</td></tr>
+      <tr><td><b>Commercial Paper (CP)</b></td><td>Unsecured short-term money-market debt of companies/NBFCs (up to ~1 year)</td><td>Zero-coupon, issued at discount; rated on the short-term A1/A2… scale; used for working-capital/bridge funding. IL&amp;FS/DHFL CP defaults were central to the 2018 NBFC crisis.</td></tr>
+      <tr><td><b>Certificate of Deposit (CD)</b></td><td>Short-term negotiable deposit issued by banks (and some FIs)</td><td>Money-market instrument, discount basis; a bank's funding tool — the deposit-side analogue of CP.</td></tr>
+      <tr><td><b>Masala bonds</b></td><td>INR-denominated bonds issued <i>offshore</i></td><td>Rupee bonds sold to overseas investors, so the issuer avoids currency risk (the investor bears it). Issued by bodies like HDFC, NTPC, and multilaterals.</td></tr>
+      <tr><td><b>Green / ESG bonds</b></td><td>Proceeds ring-fenced for green/sustainable projects</td><td>Same credit as the issuer; a use-of-proceeds label. India has begun issuing <b>Sovereign Green Bonds</b>.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>10.4 Advanced spread measures (concept)</h3>
+  <p>The simple credit spread compares two <i>yields</i>. More precise measures compare a bond against the whole risk-free <i>curve</i>:</p>
+  <ul>
+    <li><b>Nominal / G-spread:</b> the corporate yield minus the yield of an interpolated G-sec of the same maturity — the everyday "spread over G-sec." Simple but assumes a single benchmark point.</li>
+    <li><b>Z-spread (zero-volatility spread):</b> the <i>constant</i> spread added to <b>every</b> point of the G-sec spot (zero) curve that makes the bond's discounted cash flows equal its market price. Because it uses the whole curve, it is more accurate than the nominal spread, especially for steep curves.</li>
+    <li><b>Option-adjusted spread (OAS):</b> the Z-spread <i>after stripping out the value of any embedded option</i>. For a callable bond, OAS = Z-spread − option cost, isolating the pure credit/liquidity compensation so bonds with and without options can be compared fairly.</li>
+    <li><b>Asset-swap spread (ASW):</b> the spread over a floating benchmark (e.g. MIBOR/OIS) an investor earns by buying the bond and swapping its fixed coupons into floating via an interest-rate swap — a market-standard way to quote credit risk stripped of rate risk.</li>
+  </ul>
+
+  <h3>10.5 Credit default swaps (concept)</h3>
+  <p>A <b>credit default swap (CDS)</b> is a derivative that transfers the default risk of a reference entity. The <b>protection buyer</b> pays a periodic premium (the <b>CDS spread</b>, in bp) to the <b>protection seller</b>; if a defined <b>credit event</b> (default, failure to pay, restructuring) occurs, the seller compensates the buyer for the loss (par minus recovery). It is effectively <i>insurance on a bond</i>, and the CDS spread is a clean, traded read of the market's default-risk assessment — often more current than bond spreads. CDS can be used to hedge an exposure or to take a naked credit view. (In India a single-name corporate CDS market exists in a limited, RBI-permitted form and is far less liquid than in global markets, but the concept is standard interview material and underlies how credit risk is priced and transferred globally.)</p>
+
+  <div class="qa"><div class="q">Q: What is a credit default swap and how does the spread relate to bond spreads?</div>
+    <div class="a">A: A CDS is a contract where a protection buyer pays a periodic premium (the CDS spread) and the seller pays out if the reference entity has a credit event (default/failure to pay/restructuring). It is insurance on default risk. In theory the CDS spread should track the bond's credit spread over the risk-free curve; a persistent gap (the "CDS-bond basis") reflects liquidity, funding and technical factors. CDS lets you hedge or express a credit view without owning the bond.</div>
+  </div>
+
+  <div class="keytake"><b>Key takeaways:</b> Corporate yield = risk-free G-sec yield + credit spread. Spreads are the market's live price of credit risk and widen with lower ratings, longer tenor, weaker liquidity and risk-off moods. Know the Indian bond taxonomy — especially AT1/perpetuals (highest risk within an issuer) and tax-free bonds — because these come up in Indian interviews.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">11. Credit analysis framework: the 5 Cs, business vs financial risk</h2>
+  <p>We now shift from pricing instruments to judging borrowers. The goal of credit analysis is to form a view on the <b>probability of default</b> (will they pay?) and the <b>severity of loss if they do default</b> (how much do we lose?). A structured way to organise the enquiry is the <b>5 Cs of Credit</b>.</p>
+
+  <h3>11.1 The 5 Cs of Credit</h3>
+  <table>
+    <thead><tr><th>C</th><th>Meaning</th><th>What the analyst looks at</th></tr></thead>
+    <tbody>
+      <tr><td><b>Character</b></td><td>Willingness to repay; integrity and track record of the borrower/management</td><td>Repayment history, credit bureau record (CIBIL), promoter reputation, governance, any past defaults/frauds, group track record.</td></tr>
+      <tr><td><b>Capacity</b></td><td>Ability to repay from cash flows — the most important C</td><td>Cash-flow generation, coverage ratios (DSCR, interest coverage), earnings stability, debt-servicing headroom.</td></tr>
+      <tr><td><b>Capital</b></td><td>The borrower's own skin in the game</td><td>Net worth, promoter contribution/equity, leverage (D/E, Debt/EBITDA) — a buffer to absorb losses.</td></tr>
+      <tr><td><b>Collateral</b></td><td>Security available if cash flows fail — affects loss given default, not probability of default</td><td>Fixed assets, receivables, inventory, personal/corporate guarantees; quality, marketability and enforceability of security.</td></tr>
+      <tr><td><b>Conditions</b></td><td>The external and purpose context</td><td>Industry cycle, economy, interest-rate/regulatory environment, purpose of the loan, competitive position.</td></tr>
+    </tbody>
+  </table>
+  <p>Some frameworks add a 6th C, <b>Common sense</b>, or restate the set. In interviews, lead with <b>Capacity</b> (cash flow) as primary, note that <b>Character</b> gates everything (a dishonest borrower with great numbers is still un-bankable), and be clear that <b>Collateral is a fallback</b> — you lend against cash flows, not against the hope of selling collateral.</p>
+
+  <h3>11.2 Business risk vs financial risk</h3>
+  <p>A rating or credit view decomposes into two big buckets that are then combined:</p>
+  <ul>
+    <li><b>Business risk</b> — how risky is the enterprise <i>before</i> looking at how it is financed? Drivers: industry cyclicality and growth, competitive/market position, scale and diversification (products, customers, geography), operating efficiency and cost position, management quality and strategy, and regulatory exposure. A commodity producer with volatile prices has high business risk; a regulated utility with predictable tariffs has low business risk.</li>
+    <li><b>Financial risk</b> — given the business, how aggressively is it financed and how comfortably can it service debt? Drivers: leverage (Debt/EBITDA, D/E, gearing), coverage (interest coverage, DSCR), cash-flow adequacy and stability, liquidity, financial policy (dividend/capex/acquisition appetite), and refinancing profile.</li>
+  </ul>
+  <p>The two interact: a low-business-risk company (stable utility) can safely carry <i>high</i> leverage and still be investment-grade, while a high-business-risk company (cyclical, commodity) needs <i>low</i> leverage to earn the same rating. Rating agencies literally combine an assessment of business risk and financial risk into an overall rating.</p>
+
+  <h3>11.3 Industry risk</h3>
+  <p><b>Industry risk</b> is often assessed first because it caps the rating a company in that sector can realistically achieve. Key questions: Is demand cyclical or defensive? How intense is competition and pricing power? Is the sector capital-intensive with long payback (steel, power, infra) or asset-light? What are the regulatory and technological threats (e.g. policy shifts for power, disruption risk for telecom)? How do input costs behave? Analysts benchmark a borrower against sector peers, because a "good" ratio in one industry is mediocre in another — an interest coverage of 2.5× may be fine for a stable FMCG name but weak for a volatile commodity player.</p>
+
+  <h3>11.4 Management risk, and sovereign &amp; structural considerations</h3>
+  <p>Two further layers sit around the business/financial assessment:</p>
+  <ul>
+    <li><b>Management &amp; governance risk</b> — often the deciding factor at the margin. Analysts assess the promoter/management track record, financial discipline and risk appetite (aggressive debt-funded expansion vs prudence), succession and key-person dependence, related-party transactions, board independence, disclosure quality and audit integrity. Weak governance — auditor resignations, promoter share pledging, siphoning through related parties — has been at the heart of many Indian credit blow-ups (e.g. governance failures preceding large NBFC/corporate defaults). Good numbers cannot rescue a company whose management the market cannot trust.</li>
+    <li><b>Sovereign considerations &amp; the sovereign ceiling</b> — a company's rating is influenced by the country it operates in. Historically an issuer could rarely be rated <i>above</i> its home sovereign in foreign currency (the <b>sovereign ceiling</b>), because sovereign stress (transfer/convertibility restrictions, taxation, macro shocks) hits even strong local firms. India's own sovereign rating (around the lowest investment-grade band from the global agencies) therefore caps the foreign-currency ratings of Indian corporates.</li>
+    <li><b>Structural considerations</b> — where in the group and capital structure the debt sits: is the borrower an operating company (close to the cash flows) or a holding company (structurally subordinated, dependent on dividends up-streamed from subsidiaries)? Are there ring-fences, escrow/waterfall mechanisms, cross-guarantees, or covenants that change recovery? Structural subordination can make a holdco bond materially weaker than an opco bond of the same group.</li>
+  </ul>
+
+  <div class="qa"><div class="q">Q: How would you assess a company's creditworthiness?</div>
+    <div class="a">A: I'd work top-down and end on cash flow. First, <b>industry and business risk</b> — sector cyclicality, the company's market position, scale and diversification, management quality. Second, <b>financial risk</b> via financial spreading — leverage (Debt/EBITDA, D/E), coverage (interest coverage, DSCR), liquidity, profitability and, crucially, <b>cash-flow adequacy</b> since debt is repaid from cash, not accounting profit. Third, the <b>structure</b> — tenor, security/collateral, covenants, guarantees, refinancing profile. I'd frame it through the <b>5 Cs</b> — Character (track record, bureau/CIBIL, governance), Capacity (cash flows and coverage), Capital (net worth, promoter skin-in-the-game), Collateral (security quality), Conditions (macro and purpose). Then I'd stress-test: what happens to coverage if EBITDA falls 20% or rates rise. The conclusion is a view on probability of default and loss given default, translated into a rating/pricing/covenant package.</div>
+  </div>
+
+  <div class="qa"><div class="q">Q: What are the 5 Cs of credit?</div>
+    <div class="a">A: Character (willingness and track record of repayment), Capacity (ability to repay from cash flows — the most important), Capital (the borrower's own equity/net worth, i.e. skin in the game), Collateral (security that limits loss if they default), and Conditions (the industry, economy and purpose of the loan). Capacity and Character carry the most weight; Collateral is a fallback that affects loss severity, not the probability of default.</div>
+  </div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">12. Financial spreading &amp; the key credit ratios</h2>
+  <p><b>Financial spreading</b> means recasting a borrower's financial statements into a standard, comparable format — often adjusting reported numbers (removing one-offs, treating operating leases, netting cash, consolidating group entities) — so ratios are consistent across companies and years. On the spread you compute a small set of ratios in four families: <b>leverage, coverage, liquidity, profitability</b>, plus <b>cash-flow adequacy</b>.</p>
+
+  <h3>12.1 Leverage ratios — how much debt</h3>
+  <div class="formula"><b>Debt / EBITDA (Gross leverage)</b><br>
+    Debt/EBITDA = Total Debt ÷ EBITDA
+    <div class="where">EBITDA = Earnings Before Interest, Tax, Depreciation &amp; Amortisation — a proxy for operating cash generation. Roughly "how many years of operating earnings to repay all debt." Lower is safer. As a rough guide, &lt;2× is conservative, 2–4× moderate, &gt;4–5× aggressive — but the tolerable level depends heavily on the industry's stability.</div>
+  </div>
+  <div class="formula"><b>Debt-to-Equity (D/E) / Gearing</b><br>
+    D/E = Total Debt ÷ Shareholders' Equity (Net Worth)
+    <div class="where">How much of the capital structure is debt versus owners' funds. Higher D/E = more financial risk and less cushion to absorb losses. "Tangible net worth" (equity minus intangibles) is often used to be conservative.</div>
+  </div>
+
+  <h3>12.2 Coverage ratios — can they service the debt</h3>
+  <div class="formula"><b>Interest Coverage Ratio (ICR / Times Interest Earned)</b><br>
+    ICR = EBIT ÷ Interest Expense
+    <div class="where">EBIT = Earnings Before Interest &amp; Tax (operating profit). How many times operating profit covers the interest bill. Higher is safer; below ~1.5×–2× is a red flag. Some analysts use EBITDA/Interest for a cash-based variant.</div>
+  </div>
+  <div class="formula"><b>Debt Service Coverage Ratio (DSCR)</b><br>
+    DSCR = Cash Available for Debt Service ÷ (Interest + Principal Repayment)
+    <div class="where">Cash Available for Debt Service ≈ Net Operating Cash / Profit + Depreciation + Interest (definitions vary). Unlike ICR, DSCR covers <b>both interest AND principal</b>. DSCR &gt; 1 means cash flows fully cover total debt service. Lenders typically want a comfortable cushion (often ~1.25×–1.5×+ for project/term loans, sector-dependent).</div>
+  </div>
+
+  <h3>12.3 Liquidity ratios — short-term survival</h3>
+  <div class="formula"><b>Current Ratio</b><br>
+    Current Ratio = Current Assets ÷ Current Liabilities
+    <div class="where">Ability to meet short-term obligations. A benchmark of ~1.33:1 is a traditional Indian banking norm for working-capital borrowers, though it varies by business.</div>
+  </div>
+  <div class="formula"><b>Quick (Acid-Test) Ratio</b><br>
+    Quick Ratio = (Current Assets − Inventory) ÷ Current Liabilities
+    <div class="where">Stricter — strips out inventory (the least liquid current asset). Tests whether the firm can pay near-term dues without relying on selling stock.</div>
+  </div>
+
+  <h3>12.4 Profitability ratios — earnings quality</h3>
+  <div class="formula"><b>Key margins &amp; returns</b><br>
+    EBITDA Margin = EBITDA ÷ Revenue · Net Margin = PAT ÷ Revenue · RoCE = EBIT ÷ Capital Employed
+    <div class="where">PAT = Profit After Tax; Capital Employed = Total Assets − Current Liabilities (or Equity + Debt). Higher and stable margins/returns indicate a stronger, more defensible business that can absorb shocks and service debt.</div>
+  </div>
+
+  <h3>12.5 Cash-flow adequacy — the acid test</h3>
+  <p>Profit is an opinion; cash is a fact. Analysts examine the cash-flow statement to see whether <b>operating cash flow (CFO)</b> genuinely covers interest, capex and debt maturities, and how much reliance is placed on refinancing. Two useful measures:</p>
+  <div class="formula"><b>Cash-flow adequacy measures</b><br>
+    FFO/Debt = Funds From Operations ÷ Total Debt · CFO/Debt = Operating Cash Flow ÷ Total Debt
+    <div class="where">FFO = net income + depreciation/amortisation + other non-cash items (before working-capital changes). Higher ratios = faster ability to de-lever from internal cash. Rating agencies weight FFO/Debt and CFO/Debt heavily because they capture true cash-repayment capacity, not accounting profit.</div>
+  </div>
+
+  <h3>12.6 Ratio → what it measures (summary)</h3>
+  <table>
+    <thead><tr><th>Ratio</th><th>Family</th><th>What it tells you</th><th>Direction</th></tr></thead>
+    <tbody>
+      <tr><td>Debt / EBITDA</td><td>Leverage</td><td>Years of earnings to repay all debt</td><td>Lower = safer</td></tr>
+      <tr><td>Debt / Equity (gearing)</td><td>Leverage</td><td>Debt vs owners' capital; loss cushion</td><td>Lower = safer</td></tr>
+      <tr><td>Interest Coverage (ICR)</td><td>Coverage</td><td>Times operating profit covers interest</td><td>Higher = safer</td></tr>
+      <tr><td>DSCR</td><td>Coverage</td><td>Cash covers interest + principal</td><td>Higher = safer (want &gt;1)</td></tr>
+      <tr><td>Current Ratio</td><td>Liquidity</td><td>Short-term assets vs short-term dues</td><td>Higher = safer (~1.33 norm)</td></tr>
+      <tr><td>Quick Ratio</td><td>Liquidity</td><td>Liquidity excluding inventory</td><td>Higher = safer</td></tr>
+      <tr><td>EBITDA / Net Margin</td><td>Profitability</td><td>Earnings efficiency &amp; buffer</td><td>Higher/stable = safer</td></tr>
+      <tr><td>RoCE</td><td>Profitability</td><td>Return on all capital employed</td><td>Higher = safer</td></tr>
+      <tr><td>FFO/Debt, CFO/Debt</td><td>Cash-flow</td><td>Internal cash to de-lever</td><td>Higher = safer</td></tr>
+    </tbody>
+  </table>
+
+  <h3>12.7 Net debt and the Fixed-Charge Coverage Ratio (FCCR)</h3>
+  <p>Two refinements interviewers like to hear:</p>
+  <div class="formula"><b>Net debt &amp; Net Debt/EBITDA</b><br>
+    Net Debt = Total Debt − Cash &amp; Cash Equivalents ·  Net Leverage = Net Debt ÷ EBITDA
+    <div class="where">Netting surplus cash gives a truer picture of the debt a company would actually have to repay. Use it carefully — cash may be trapped in subsidiaries, pledged, or needed for operations, so gross leverage stays relevant for a conservative view.</div>
+  </div>
+  <div class="formula"><b>Fixed-Charge Coverage Ratio (FCCR)</b><br>
+    FCCR = (EBIT + Lease/Rental payments) ÷ (Interest + Lease/Rental payments)
+    <div class="where">A broader coverage ratio than ICR: it adds <b>fixed obligations beyond interest</b> — chiefly lease/rent (and sometimes preferred dividends) — to both numerator and denominator. It matters for lease-heavy businesses (retail, airlines, logistics) where rentals are as unavoidable as interest. Higher = safer; a cash variant uses EBITDAR.</div>
+  </div>
+
+  <div class="example"><div class="ex-h">Worked Example 7 — ICR &amp; DSCR computation</div>
+    <p>A manufacturer reports (₹ crore): EBIT 240, Depreciation 60, Interest 80, scheduled principal repayment this year 100, tax 40.</p>
+    <p><b>Interest Coverage (ICR)</b> = EBIT ÷ Interest = 240 ÷ 80 = <b>3.0×</b>. Operating profit covers interest three times — comfortable.</p>
+    <p><b>DSCR:</b> Cash available for debt service = PAT + Depreciation + Interest. PAT = EBIT − Interest − Tax = 240 − 80 − 40 = 120. So cash available = 120 + 60 + 80 = 260. Total debt service = Interest + Principal = 80 + 100 = 180.<br>
+    DSCR = 260 ÷ 180 = <b>1.44×</b>.</p>
+    <p>Interpretation: ICR of 3.0× looks healthy on interest alone, but DSCR of 1.44× — which also carries the ₹100 cr principal — is the tighter, more honest number. It is still above 1, with ~44% cushion, so debt service is covered, but a 30% drop in cash flow would push DSCR near 1.0 and into stress. This is exactly why lenders look at DSCR, not just ICR.</p>
+  </div>
+
+  <div class="trap"><b>Common trap — DSCR vs ICR.</b> ICR only tests whether operating profit covers the <b>interest</b> bill. DSCR tests whether cash covers <b>interest plus principal</b> repayments. A company can have a strong ICR but a weak DSCR if it faces heavy principal maturities. For term loans and projects, DSCR is the binding measure; for a quick solvency read, ICR. Never quote one when the interviewer means the other.</div>
+
+  <div class="trap"><b>Common trap — leverage vs coverage.</b> Leverage ratios (Debt/EBITDA, D/E) measure the <b>stock</b> of debt — how much is owed. Coverage ratios (ICR, DSCR) measure the <b>flow</b> — whether current earnings/cash can service it. A firm can be highly leveraged yet comfortably cover its debt (stable cash flows), or lowly leveraged yet strained (collapsing earnings). Always read the two together: leverage sizes the risk, coverage tests survivability.</div>
+
+  <div class="trap"><b>Common trap — liquidity vs solvency.</b> <b>Liquidity</b> is about <i>timing</i>: can the firm meet obligations falling due <i>now</i> (current/quick ratios, cash, undrawn lines)? <b>Solvency</b> is about <i>net worth</i>: do total assets exceed total liabilities over the long run (leverage, gearing, coverage)? A profitable, solvent firm can still default because cash is trapped in receivables/inventory on the due date (illiquid but solvent); conversely a firm can hold cash today yet be eroding its net worth (liquid but insolvent). Most defaults are <i>triggered</i> by a liquidity crunch even when the deeper problem is solvency — so assess both, and never treat a healthy current ratio as proof the firm is safe.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">13. Cash-flow vs asset-based lending; working-capital assessment</h2>
+  <h3>13.1 Two lending philosophies</h3>
+  <ul>
+    <li><b>Cash-flow-based lending:</b> the primary source of repayment is the borrower's operating cash flow. Underwriting centres on projected and historical cash generation, coverage ratios (DSCR/ICR) and earnings stability. Used for term loans, project finance and most corporate lending. Collateral is a secondary backstop.</li>
+    <li><b>Asset-based lending (ABL):</b> the loan is sized and secured against specific assets — receivables, inventory, plant &amp; machinery — and repayment relies on the value/liquidation of those assets. Common for working-capital finance and for weaker credits where cash flows alone don't justify the loan. The lender monitors asset quality and lends only a percentage of asset value (a "margin").</li>
+  </ul>
+  <p>In practice Indian bank credit blends both: a term loan is cash-flow-based but secured on fixed assets; working-capital limits are asset-based (against current assets) but still assessed against cash-conversion cycles.</p>
+
+  <h3>13.2 Working-capital assessment: MPBF and drawing power</h3>
+  <p><b>Working capital</b> funds the gap between paying for inputs and collecting from customers — the <b>operating cycle</b> (inventory days + receivable days − payable days). Banks fund part of this gap through cash-credit/working-capital limits. Two classic Indian concepts:</p>
+  <div class="formula"><b>Maximum Permissible Bank Finance (MPBF) — Tandon Committee, Method II</b><br>
+    MPBF = 0.75 × (Current Assets − Current Liabilities excl. bank borrowing)
+    <div class="where">Equivalently, MPBF = 0.75 × Working Capital Gap, requiring the borrower to fund at least 25% of the working-capital gap from long-term sources (net working capital). This yields a current ratio of ~1.33:1 — the origin of that benchmark. MPBF caps how much working-capital finance a bank will extend.</div>
+  </div>
+  <div class="formula"><b>Drawing Power (DP)</b><br>
+    DP = (Eligible Current Assets − Margin) − Creditors
+    <div class="where">Typically: DP = (Value of stock − margin on stock) + (Book debts − margin on debtors) − sundry creditors. "Margin" (a haircut, e.g. 25%) is the borrower's own stake in the assets. DP is recalculated regularly from stock/receivable statements and sets the actual amount that can be drawn against the sanctioned limit at any time.</div>
+  </div>
+  <p>Interpretation: the <b>sanctioned limit</b> is the ceiling; the <b>drawing power</b> is the live, asset-backed amount available — a borrower can only draw up to the lower of the two. Falling stock/receivables shrink DP and can trigger monitoring flags. MPBF sizes the facility at sanction; DP polices it during the year.</p>
+
+  <h3>13.3 Bank facilities — the Indian credit toolkit</h3>
+  <p>A credit analyst must know the products a borrower is sanctioned. These split into <b>fund-based</b> (bank actually parts with cash) and <b>non-fund-based</b> (bank lends its credit/name; cash only if the client fails):</p>
+  <table>
+    <thead><tr><th>Facility</th><th>Type</th><th>What it is / used for</th></tr></thead>
+    <tbody>
+      <tr><td><b>Cash Credit (CC)</b></td><td>Fund-based, working capital</td><td>Revolving limit against hypothecation of current assets (stock, debtors); drawings governed by <b>Drawing Power</b>. The workhorse of Indian WC finance.</td></tr>
+      <tr><td><b>Overdraft (OD)</b></td><td>Fund-based, short-term</td><td>Allows the account to go negative up to a limit; may be secured (against FD, property) or clean. Interest only on the amount used.</td></tr>
+      <tr><td><b>Term Loan</b></td><td>Fund-based, long-term</td><td>Lump-sum for capex/assets, repaid on a fixed amortisation schedule; assessed on DSCR and project viability; usually secured on fixed assets.</td></tr>
+      <tr><td><b>Bill Discounting / Purchase</b></td><td>Fund-based, short-term</td><td>Bank pays the seller upfront (at a discount) against trade bills/receivables and collects from the buyer on due date — monetises receivables early. Includes LC-backed bill discounting.</td></tr>
+      <tr><td><b>Letter of Credit (LC)</b></td><td>Non-fund-based</td><td>Bank guarantees payment to a supplier if its client (the buyer) fails to pay — facilitates trade. Becomes a funded liability only on <b>devolvement</b> (client can't pay).</td></tr>
+      <tr><td><b>Bank Guarantee (BG)</b></td><td>Non-fund-based</td><td>Bank promises to pay a beneficiary if its client defaults on a performance or financial obligation (e.g. performance/bid/advance-payment guarantees). Funded only if <b>invoked</b>.</td></tr>
+      <tr><td><b>Packing Credit / Export finance</b></td><td>Fund-based, trade</td><td>Pre-/post-shipment credit to exporters, often at concessional rates.</td></tr>
+    </tbody>
+  </table>
+  <p>Non-fund-based limits carry credit risk too — an LC devolvement or BG invocation instantly converts into a funded exposure, and heavy LC/BG usage is itself an early-warning signal. Total exposure = fund-based + non-fund-based.</p>
+
+  <div class="keytake"><b>Key takeaways:</b> Cash-flow lending repays from operations (coverage-driven); asset-based lending repays from/secures against assets (margin-driven). Working capital funds the operating cycle; MPBF caps the bank's share (Tandon Method II → ~1.33 current ratio) and Drawing Power is the daily asset-backed drawable amount within the sanctioned limit.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">14. Credit ratings: scale, agencies, what drives a rating</h2>
+  <h3>14.1 What a rating is</h3>
+  <p>A <b>credit rating</b> is an independent, forward-looking opinion on an issuer's (or instrument's) ability and willingness to meet financial obligations in full and on time. It is <i>relative</i> and <i>ordinal</i> — AAA is safer than AA is safer than A — not a precise probability, though each grade maps to a broad expected default frequency. Ratings compress the entire credit analysis above (business risk + financial risk + structure) into a symbol used for pricing, regulation and investment mandates. In India, ratings are mandatory for public debt issues and are used by RBI for risk-weighting bank exposures.</p>
+
+  <h3>14.2 The rating scale — investment vs speculative grade</h3>
+  <table>
+    <thead><tr><th>Bucket</th><th>Global (S&amp;P/Fitch)</th><th>Moody's</th><th>Indian (CRISIL-style long-term)</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="4"><b>Investment grade</b></td><td>AAA</td><td>Aaa</td><td>CRISIL AAA</td><td>Highest safety; lowest credit risk</td></tr>
+      <tr><td>AA</td><td>Aa</td><td>CRISIL AA</td><td>High safety</td></tr>
+      <tr><td>A</td><td>A</td><td>CRISIL A</td><td>Adequate safety</td></tr>
+      <tr><td>BBB</td><td>Baa</td><td>CRISIL BBB</td><td>Moderate safety — lowest investment grade</td></tr>
+      <tr><td rowspan="4"><b>Speculative / non-investment (&quot;high-yield&quot; / &quot;junk&quot;)</b></td><td>BB</td><td>Ba</td><td>CRISIL BB</td><td>Moderate risk of default</td></tr>
+      <tr><td>B</td><td>B</td><td>CRISIL B</td><td>High risk</td></tr>
+      <tr><td>CCC / CC / C</td><td>Caa / Ca / C</td><td>CRISIL C</td><td>Very high risk; default looming</td></tr>
+      <tr><td>D</td><td>C / (D)</td><td>CRISIL D</td><td>In default</td></tr>
+    </tbody>
+  </table>
+  <p>The dividing line is <b>BBB− / Baa3</b>: at or above is <b>investment grade</b>; below is <b>speculative grade</b>. Indian agencies use a "CRISIL AAA", "[ICRA]AA", "CARE A", "IND BBB" prefix to identify the agency, and append <b>+ / −</b> modifiers (e.g. AA+, AA, AA−) for finer gradation within a category — this finer step is called a <b>notch</b>. Short-term (money-market) instruments use a separate A1/A2/A3/A4/D scale (A1+ being the strongest). A <b>rating outlook</b> (Positive/Stable/Negative) signals the likely medium-term direction; a <b>rating watch / credit watch</b> flags a near-term event-driven review.</p>
+
+  <h3>14.3 The agencies</h3>
+  <ul>
+    <li><b>Indian (SEBI-registered):</b> <b>CRISIL</b> (majority-owned by S&amp;P), <b>ICRA</b> (associate of Moody's), <b>CARE Ratings</b>, and <b>India Ratings &amp; Research</b> (a Fitch group company). Others include Acuité and Brickwork. They rate bonds, NCDs, bank loans, commercial paper, fixed deposits and structured instruments.</li>
+    <li><b>Global "Big Three":</b> <b>S&amp;P Global Ratings</b>, <b>Moody's Investors Service</b>, and <b>Fitch Ratings</b> — rate sovereigns (including India), global corporates and cross-border issues.</li>
+    <li><b>Regulation:</b> Indian CRAs are regulated by <b>SEBI</b> (SEBI Credit Rating Agencies Regulations); the market operates on an <b>issuer-pays</b> model, a recognised conflict-of-interest that regulations try to manage through disclosure, rotation and default-rate transparency.</li>
+  </ul>
+
+  <h3>14.4 What drives a rating</h3>
+  <p>A rating synthesises the whole framework:</p>
+  <ul>
+    <li><b>Business risk profile</b> — industry risk, market position/scale, diversification, operating efficiency, management quality and governance.</li>
+    <li><b>Financial risk profile</b> — leverage (Debt/EBITDA, gearing), coverage (ICR, DSCR), cash-flow adequacy (FFO/Debt, CFO/Debt), liquidity and financial policy.</li>
+    <li><b>Management &amp; governance</b> — track record, financial discipline, related-party dealings, promoter support and appetite for risk.</li>
+    <li><b>Parent / group / external support</b> — expected support from a strong parent, group or (for PSUs) the government can <b>notch up</b> a standalone rating; a weak, encumbering group can notch it down.</li>
+    <li><b>Structural features</b> — for a specific instrument: seniority, security, guarantees, escrow/waterfall mechanisms.</li>
+  </ul>
+
+  <h3>14.5 Rating rationale and notching</h3>
+  <p>Every rating action is accompanied by a published <b>rating rationale</b> — a note explaining the key strengths, weaknesses, and the "rating sensitivities" (what could trigger an upgrade or downgrade). <b>Notching</b> is the practice of moving an instrument's rating a step above or below the issuer's baseline: <i>up</i> for strong security/guarantee/parental support, <i>down</i> for subordination (e.g. AT1/perpetual bonds are notched below the issuer's senior rating because they are deeply subordinated and can skip coupons or be written down).</p>
+
+  <h3>14.6 Standalone vs supported ratings; sovereign ceiling</h3>
+  <p>Agencies first form a <b>standalone credit profile</b> (also "standalone rating" / SACP) — the entity's own strength ignoring outside help. They then decide whether <b>external support</b> should adjust it:</p>
+  <ul>
+    <li><b>Parent / group support:</b> a strategically important subsidiary of a strong parent is <i>notched up</i> toward the parent's rating (based on how integral it is, ownership, shared name, track record of support). A weak, cash-extracting parent can <i>drag down</i> a healthy subsidiary.</li>
+    <li><b>Government support:</b> PSUs and government-linked entities often get an uplift for expected sovereign support, depending on ownership, strategic importance and any explicit guarantee.</li>
+    <li><b>Sovereign ceiling:</b> the sovereign's own rating generally caps how high a domestic issuer can be rated in <i>foreign currency</i>, because country-level stress (transfer/convertibility limits, taxation, macro shocks) reaches even strong companies. So Indian corporates' foreign-currency ratings sit at or below India's sovereign rating.</li>
+  </ul>
+  <p>The final rating is thus: <b>standalone profile ± support ± instrument-level notching for structure/subordination</b>.</p>
+
+  <h3>14.7 Rating transition, migration &amp; default studies</h3>
+  <p>Ratings are not static. Agencies publish annual <b>rating transition (migration) matrices</b> and <b>default &amp; recovery studies</b> that show, historically, how many issuers in each grade were upgraded, downgraded, stayed put, or defaulted over one year (or longer). Two ideas to carry into interviews:</p>
+  <ul>
+    <li>A <b>transition matrix</b> reads "of all AA-rated issuers at the start of the year, X% stayed AA, Y% moved to AA+/A, Z% defaulted." The <i>diagonal</i> (staying put) is usually the largest cell — ratings are "sticky" — and downgrades cluster in stress years.</li>
+    <li><b>Default studies</b> validate the scale: cumulative default rates should rise monotonically as you go down the grades (AAA almost never defaults; default rates climb steeply into the speculative grades). CRISIL, ICRA and CARE each publish these for Indian ratings, and they are the empirical backbone linking a rating to a <b>PD</b>.</li>
+  </ul>
+  <p>Migration matters commercially: a downgrade can breach covenants (rating triggers), raise funding cost, force index/mandate-driven selling (especially across the investment-grade line), and increase a bank's capital charge on the exposure.</p>
+
+  <h3>14.8 Structured finance &amp; securitisation (concept)</h3>
+  <p><b>Securitisation</b> pools illiquid loans (home loans, auto loans, microfinance, receivables) and repackages their cash flows into tradable securities sold to investors. It moves assets off the originator's balance sheet, frees up capital, and lets investors buy exposure to a diversified pool.</p>
+  <ul>
+    <li><b>SPV / bankruptcy remoteness:</b> the pool is sold to a <b>Special Purpose Vehicle (SPV)</b> so the assets are legally isolated from the originator's own bankruptcy — investors rely on the pool's cash flows, not the originator.</li>
+    <li><b>ABS / MBS:</b> <b>Asset-Backed Securities</b> are backed by loans/receivables generally; <b>Mortgage-Backed Securities</b> specifically by home loans. In India, pooled loans are commonly sold as <b>Pass-Through Certificates (PTCs)</b>, which "pass through" collections to investors, or via the <b>Direct Assignment</b> route.</li>
+    <li><b>Tranching:</b> the pool's cash flows are sliced into <b>senior, mezzanine and junior (equity)</b> tranches. Losses hit the junior tranche first (it absorbs losses and is unrated/lowest-rated), protecting the senior tranche, which is rated highest and paid first — the classic loss <b>waterfall</b>.</li>
+    <li><b>Credit enhancement:</b> techniques that raise the pool's rating above the raw asset quality — <b>over-collateralisation</b> (pool value &gt; securities issued), <b>subordination</b> (the tranching above), a <b>cash-collateral / reserve account</b>, and <b>excess spread</b> (interest earned on the pool above what is paid out). Enhancement sizes the credit protection so the senior PTC can reach AAA.</li>
+  </ul>
+  <p>Interview framing: securitisation converts a bunch of small, illiquid loans into rated bonds by pooling them in a bankruptcy-remote SPV, tranching the risk, and adding credit enhancement — the same machinery that, when abused with poor underwriting, caused the 2008 US sub-prime MBS crisis.</p>
+
+  <div class="qa"><div class="q">Q: What is a standalone rating and how does support change it?</div>
+    <div class="a">A: The standalone (or SACP) rating is the issuer's creditworthiness on its own, ignoring outside help. The agency then adjusts it for expected parent/group or government support — notching it up if the entity is strategically important to a strong parent/sovereign, or down if a weak group drains it — and finally applies instrument-level notching for security or subordination. The published rating is standalone profile ± support ± structural notching, all subject to the sovereign ceiling in foreign currency.</div>
+  </div>
+
+  <div class="qa"><div class="q">Q: What is a rating transition matrix and why do investors care?</div>
+    <div class="a">A: It is a table showing, historically, the probability that an issuer of a given grade moves to each other grade (or defaults) over a year. Ratings are "sticky," so the largest values sit on the diagonal, but downgrades spike in stress years and cumulative default rates rise steeply down the scale — which validates the rating-to-PD link. Investors care because migration drives covenant triggers, funding cost, forced selling across the IG line, and banks' capital charges.</div>
+  </div>
+
+  <div class="qa"><div class="q">Q: Walk me through securitisation and tranching.</div>
+    <div class="a">A: An originator pools loans (home/auto/MFI/receivables) and sells them to a bankruptcy-remote SPV, which issues securities (in India, Pass-Through Certificates) backed by the pool's cash flows. The cash flows are tranched — senior, mezzanine, junior/equity — so losses hit the junior tranche first and the senior tranche is protected and rated highest. Credit enhancement (over-collateralisation, subordination, a cash reserve, excess spread) lifts the senior tranche's rating above the raw pool. It frees capital and transfers risk, but depends entirely on underwriting quality — the lesson of 2008 sub-prime MBS.</div>
+  </div>
+
+  <div class="qa"><div class="q">Q: What drives a credit rating?</div>
+    <div class="a">A: A blend of business risk and financial risk, plus support and structure. On the business side: industry risk, the company's market position, scale, diversification, operating efficiency and management/governance quality. On the financial side: leverage (Debt/EBITDA, gearing), coverage (ICR, DSCR), cash-flow adequacy (FFO/Debt) and liquidity. Then adjustments: parent/group or sovereign support can notch the rating up, subordination or a weak group notches it down, and instrument-level features (security, guarantees) are reflected via notching. The agency publishes a rationale with the rating drivers and the sensitivities that would trigger a change.</div>
+  </div>
+
+  <div class="trap"><b>Common trap.</b> A rating is a measure of <b>relative default risk (and, for some scales, expected loss)</b> — it is <i>not</i> a buy/sell recommendation, not a guarantee against default, and not a comment on market price or liquidity. Even AAA issuers can be downgraded; ratings are opinions that change with information.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">15. Covenants, early-warning signals, credit monitoring</h2>
+  <h3>15.1 Covenants</h3>
+  <p><b>Covenants</b> are contractual promises in a loan/bond agreement that protect the lender by constraining the borrower and giving early rights if things deteriorate. Three types:</p>
+  <ul>
+    <li><b>Financial (maintenance) covenants:</b> the borrower must keep financial ratios within agreed limits — e.g. maximum Debt/EBITDA, minimum DSCR/ICR, minimum current ratio, minimum net worth. Breach is an early trigger for lender action, often before actual default.</li>
+    <li><b>Affirmative (positive) covenants:</b> things the borrower must <i>do</i> — maintain insurance, supply audited financials/stock statements on time, pay taxes, maintain assets, comply with law.</li>
+    <li><b>Negative (restrictive) covenants:</b> things the borrower must <i>not</i> do without consent — take on additional debt, create further charges on assets (negative lien/pledge), pay large dividends, make big capex/acquisitions, change ownership/control, or dispose of key assets.</li>
+  </ul>
+  <p>A covenant breach usually constitutes an <b>event of default</b>, letting the lender accelerate the loan, reprice, demand more security, or renegotiate — long before the borrower actually misses a payment. Well-designed covenants are the analyst's early-warning and control mechanism.</p>
+
+  <h3>15.2 Early-warning signals (EWS)</h3>
+  <p>Signs a credit may be deteriorating — watched closely by monitoring teams and RBI-mandated EWS frameworks:</p>
+  <ul>
+    <li><b>Financial:</b> falling margins/sales, rising leverage, thinning DSCR/ICR, stretched receivables and inventory (lengthening operating cycle), negative operating cash flow, frequent limit overutilisation.</li>
+    <li><b>Banking conduct:</b> cheque returns/bounced payments, delayed servicing, requests for ad-hoc/enhanced limits, devolvement of LCs, invocation of guarantees, routing sales through other banks, non-submission of stock statements.</li>
+    <li><b>Qualitative:</b> management/auditor resignations, qualified audit opinions, litigation, promoter share pledging, rating downgrades, adverse news, group/related-party stress, capex overruns.</li>
+  </ul>
+
+  <h3>15.3 Credit monitoring</h3>
+  <p>Credit work does not end at sanction. <b>Ongoing monitoring</b> includes periodic financial reviews, covenant compliance testing, stock/receivable statement scrutiny and drawing-power recomputation, account-conduct review, annual credit reviews and rating refreshes, and site visits. India has a formal escalation ladder for stressed assets: RBI's framework moves accounts through <b>Special Mention Accounts (SMA-0/1/2</b>, based on how many days a payment is overdue — broadly 1–30, 31–60, 61–90 days) before a 90-day overdue tips an account into <b>NPA</b> status. Early detection via SMA/EWS lets lenders act while recovery is still possible.</p>
+
+  <div class="qa"><div class="q">Q: What are covenants and why do lenders use them?</div>
+    <div class="a">A: Covenants are contractual conditions in the loan/bond agreement that protect the lender. Financial covenants require the borrower to keep ratios in a range (max Debt/EBITDA, min DSCR, min net worth); affirmative covenants require actions (supply financials, maintain insurance/assets); negative covenants restrict actions (no new debt, no additional charges on assets, no large dividends or asset sales without consent). They give the lender early rights — typically a breach is an event of default, allowing acceleration or renegotiation <i>before</i> a payment is actually missed. They are the analyst's main ongoing control lever.</div>
+  </div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">16. Default &amp; loss: PD, LGD, EAD, EL; NPAs, provisioning, ECL</h2>
+  <p>The final piece quantifies credit risk into an expected rupee loss and connects to the Indian regulatory/accounting treatment.</p>
+
+  <h3>16.1 The expected-loss trinity</h3>
+  <div class="formula"><b>Expected Loss</b><br>
+    EL = PD × LGD × EAD
+    <div class="where"><b>PD</b> = Probability of Default (chance the borrower defaults over a horizon, usually 1 year), expressed 0–1. <b>LGD</b> = Loss Given Default = 1 − Recovery Rate (fraction of exposure lost after recoveries/collateral). <b>EAD</b> = Exposure at Default (the rupee amount outstanding when default occurs, including expected drawdowns of unused limits). EL is the average loss you'd expect; it is priced into spreads and set aside as provisions.</div>
+  </div>
+  <ul>
+    <li><b>PD</b> is driven by borrower quality — the whole credit analysis above; it maps to the rating grade.</li>
+    <li><b>LGD</b> is driven by <b>recovery</b> — seniority, collateral quality/enforceability, guarantees. A well-secured senior loan has low LGD; unsecured/subordinated debt (e.g. AT1) has high LGD.</li>
+    <li><b>EAD</b> matters for revolving facilities where borrowers tend to draw down more as they approach distress.</li>
+    <li>Beyond expected loss, banks hold <b>capital</b> against <b>unexpected loss</b> (the volatility of losses) — the Basel logic separating provisions (for expected loss) from capital (for unexpected loss).</li>
+  </ul>
+
+  <div class="example"><div class="ex-h">Worked Example 8 — Expected loss</div>
+    <p>A bank has a ₹50 crore loan to a mid-corporate. It estimates a 1-year PD of 4% and, given the collateral, expects to recover 60% in default (so LGD = 40%). Assume EAD ≈ the full ₹50 crore.</p>
+    <p>EL = PD × LGD × EAD = 0.04 × 0.40 × 50 = <b>₹0.80 crore</b> (₹80 lakh).</p>
+    <p>Interpretation: on average the bank expects to lose ₹80 lakh a year on this exposure. To be economic, the loan's spread must at least cover this ₹80 lakh of expected loss (plus funding, capital charge and operating cost). Improve the collateral so recovery rises to 75% (LGD 25%) and EL falls to 0.04 × 0.25 × 50 = ₹0.50 crore — showing how security reduces loss severity even when default probability is unchanged.</p>
+  </div>
+
+  <div class="example"><div class="ex-h">Worked Example 9 — Leverage &amp; coverage credit assessment (mini case)</div>
+    <p>Two firms in the same cyclical sector seek a term loan (₹ crore):</p>
+    <table>
+      <thead><tr><th>Metric</th><th>Firm A</th><th>Firm B</th></tr></thead>
+      <tbody>
+        <tr><td>Total Debt</td><td>300</td><td>300</td></tr>
+        <tr><td>EBITDA</td><td>150</td><td>60</td></tr>
+        <tr><td>EBIT</td><td>120</td><td>40</td></tr>
+        <tr><td>Interest</td><td>30</td><td>36</td></tr>
+        <tr><td>Equity (Net worth)</td><td>250</td><td>90</td></tr>
+      </tbody>
+    </table>
+    <p><b>Firm A:</b> Debt/EBITDA = 300/150 = <b>2.0×</b>; D/E = 300/250 = <b>1.2×</b>; ICR = 120/30 = <b>4.0×</b>.<br>
+       <b>Firm B:</b> Debt/EBITDA = 300/60 = <b>5.0×</b>; D/E = 300/90 = <b>3.3×</b>; ICR = 40/36 = <b>1.1×</b>.</p>
+    <p>Conclusion: same absolute debt, very different credit. Firm A is moderately leveraged (2×) with strong 4× interest cover and a solid equity cushion — comfortably investment-grade-like for the sector. Firm B is aggressively leveraged (5×), barely covers its interest (1.1×) and has a thin equity buffer — in a cyclical downturn its coverage would fall below 1 and it would breach covenants. Firm B would rate several notches lower, pay a much wider spread, and require tighter covenants/more security — or be declined. This is the leverage-plus-coverage read in action.</p>
+  </div>
+
+  <h3>16.2 NPA classification (concept)</h3>
+  <p>Under RBI norms, a loan becomes a <b>Non-Performing Asset (NPA)</b> when interest and/or principal remains <b>overdue for more than 90 days</b> (the standard benchmark for term loans; different triggers apply to cash-credit out-of-order status and agricultural loans). NPAs are then classified by how long they have been impaired:</p>
+  <table>
+    <thead><tr><th>Classification</th><th>Broad concept</th></tr></thead>
+    <tbody>
+      <tr><td><b>Standard</b></td><td>Performing; not overdue beyond the threshold. (Not an NPA.)</td></tr>
+      <tr><td><b>Sub-standard</b></td><td>Has remained an NPA for up to ~12 months. Credit weaknesses evident; some loss risk.</td></tr>
+      <tr><td><b>Doubtful</b></td><td>NPA for more than ~12 months. Full recovery highly questionable; collateral value uncertain.</td></tr>
+      <tr><td><b>Loss</b></td><td>Loss identified; considered largely uncollectible and to be written off (though some salvage value may remain).</td></tr>
+    </tbody>
+  </table>
+  <p><b>Provisioning</b> is the amount set aside against these assets, rising as classification worsens: a small provision on standard assets (a general provision), a moderate provision on sub-standard, higher on doubtful (increasing with age and depending on the secured/unsecured portion), and up to 100% on loss assets. <i>Exact provisioning percentages are set by RBI and change over time, so in an interview state the direction (worse classification → higher provision) rather than quoting precise figures unless certain.</i></p>
+
+  <h3>16.3 ECL / Ind-AS 109 (concept)</h3>
+  <p>Historically, provisioning was <b>"incurred loss"</b> — you provided only after an asset actually went bad. <b>Ind-AS 109</b> (India's version of IFRS 9), applied to NBFCs and used in consolidated financials, introduced the <b>Expected Credit Loss (ECL)</b> model — <i>forward-looking</i> provisioning that recognises expected losses <i>before</i> default, using PD, LGD and EAD plus forward macro scenarios. It classifies exposures into three <b>stages</b>:</p>
+  <table>
+    <thead><tr><th>Stage</th><th>Situation</th><th>Provision basis</th></tr></thead>
+    <tbody>
+      <tr><td><b>Stage 1</b></td><td>Performing; no significant increase in credit risk since origination</td><td>12-month ECL (losses from defaults expected within 1 year)</td></tr>
+      <tr><td><b>Stage 2</b></td><td>Significant increase in credit risk (e.g. sizeable rating drop, overdue but not yet impaired)</td><td>Lifetime ECL</td></tr>
+      <tr><td><b>Stage 3</b></td><td>Credit-impaired (default/NPA-equivalent)</td><td>Lifetime ECL, interest on net carrying amount</td></tr>
+    </tbody>
+  </table>
+  <p>Key contrast for interviews: <b>the RBI IRAC/NPA framework is a rule-based prudential regime (banks); Ind-AS 109 ECL is a forward-looking accounting model (NBFCs and group accounts).</b> Both aim to recognise credit losses, but ECL front-loads them using PD/LGD/EAD and macro forecasts, whereas the incurred-loss NPA model reacts to actual overdues.</p>
+
+  <div class="qa"><div class="q">Q: What is an NPA?</div>
+    <div class="a">A: A Non-Performing Asset — a loan where interest or principal has been overdue for more than 90 days (for term loans; a cash-credit account is an NPA if it stays out-of-order / continuously overdrawn). Once an NPA, it stops accruing income to the bank and is classified as sub-standard, doubtful or loss depending on how long it has been impaired, with rising provisions at each stage. Before crossing 90 days, RBI's framework flags accounts as Special Mention Accounts (SMA-0/1/2) so lenders can act early.</div>
+  </div>
+
+  <div class="qa"><div class="q">Q: Explain expected loss and its components.</div>
+    <div class="a">A: Expected Loss = PD × LGD × EAD. PD is the probability the borrower defaults over the horizon (driven by borrower quality / rating). LGD is loss given default = 1 − recovery rate, driven by seniority and collateral. EAD is the exposure outstanding at default, including likely drawdowns of unused limits. Multiply them to get the average rupee loss you'd expect on the exposure — this is what spreads must cover and what provisions (especially under ECL) are built on. Losses above this average — "unexpected loss" — are covered by capital, not provisions.</div>
+  </div>
+
+  <h3>16.4 Capital adequacy: CRAR &amp; risk weights (concept)</h3>
+  <p>Banks must hold <b>capital</b> as a buffer against unexpected losses. The headline measure is the <b>Capital to Risk-weighted Assets Ratio (CRAR / CAR)</b>:</p>
+  <div class="formula"><b>Capital Adequacy Ratio (CRAR)</b><br>
+    CRAR = (Tier-1 Capital + Tier-2 Capital) ÷ Risk-Weighted Assets (RWA)
+    <div class="where"><b>Tier-1</b> = core, loss-absorbing capital (equity + reserves + AT1); <b>Tier-2</b> = supplementary (subordinated debt, certain reserves). <b>RWA</b> weights each exposure by its riskiness. Under Basel III, banks maintain a minimum total CRAR (RBI sets it a little above the Basel 8% minimum, plus buffers) — the exact figures are set by RBI and change, so state them as "around Basel minimum plus buffers" unless certain.</div>
+  </div>
+  <p><b>Risk weights</b> scale exposures by risk before capital is applied: a sovereign (G-sec) exposure carries a very low/zero risk weight, a well-rated corporate a moderate weight, and an unrated or lower-rated exposure a higher weight — which is precisely why external ratings feed bank capital under the Basel <b>standardised approach</b>. Lower-risk lending consumes less capital; risky lending consumes more, so capital charges shape pricing. Beyond expected loss (covered by provisions), this <b>capital</b> absorbs <b>unexpected loss</b> — the Basel distinction: <i>provisions for expected loss, capital for unexpected loss</i>.</p>
+
+  <h3>16.5 IBC, insolvency &amp; restructuring (concept)</h3>
+  <p>When a borrower defaults, resolution in India runs through two broad channels:</p>
+  <ul>
+    <li><b>Restructuring:</b> lenders renegotiate terms — extended tenor, lower rate, moratorium, or converting debt to equity — to keep a viable business alive. RBI's <b>Prudential Framework for Resolution of Stressed Assets (June 2019)</b> requires lenders to agree a resolution plan within set timelines once a default occurs; special one-time windows (e.g. the COVID-19 resolution framework) have also been used. Restructuring a stressed account normally requires provisioning and often a downgrade.</li>
+    <li><b>Insolvency &amp; Bankruptcy Code (IBC), 2016:</b> a time-bound, creditor-driven resolution process. On admission by the <b>NCLT</b>, a resolution professional runs the company, a <b>Committee of Creditors (CoC)</b> (mainly financial creditors) evaluates resolution plans, and the process targets completion within ~180+90 days (often longer in practice). If no plan is approved, the company goes to <b>liquidation</b>, with proceeds distributed by a statutory <b>waterfall</b> (insolvency costs → secured creditors/workmen → other dues → equity last). The IBC shifted India toward a "creditor-in-control" regime and underpins recovery/LGD assumptions — though recoveries and timelines vary widely by case.</li>
+  </ul>
+
+  <div class="trap"><b>Common trap — gross vs net NPA.</b> <b>Gross NPA (GNPA)</b> is the total book value of non-performing loans; <b>Net NPA (NNPA)</b> subtracts the provisions already held against them (NNPA = GNPA − provisions held). A bank with high GNPA but heavy provisioning has a <i>low</i> net NPA and is better protected than the gross figure suggests. Always check the <b>Provision Coverage Ratio (PCR = provisions ÷ GNPA)</b> alongside GNPA — a high GNPA with a high PCR is far less alarming than a moderate GNPA with thin coverage. Quoting gross NPA alone overstates the pain.</div>
+
+  <div class="qa"><div class="q">Q: What is CRAR and why do risk weights matter?</div>
+    <div class="a">A: The Capital to Risk-weighted Assets Ratio = (Tier-1 + Tier-2 capital) ÷ risk-weighted assets — the buffer a bank holds against unexpected losses, kept above the Basel III minimum plus buffers set by RBI. Risk weights scale each exposure by its riskiness before capital is applied: near-zero for G-secs, higher for lower-rated/unrated corporates. So safer lending consumes less capital and riskier lending more, which is why external ratings feed capital under the standardised approach and why capital charges influence loan pricing.</div>
+  </div>
+
+  <div class="qa"><div class="q">Q: What is the IBC and how does it help creditors?</div>
+    <div class="a">A: The Insolvency and Bankruptcy Code, 2016 is a time-bound, creditor-driven framework for resolving defaults. Once the NCLT admits a case, a resolution professional runs the company while a Committee of Creditors evaluates resolution plans within a target timeline; failing a viable plan, the firm is liquidated and proceeds are distributed by a statutory waterfall (costs, then secured creditors/workmen, down to equity last). It moved India to a "creditor-in-control" model and is central to estimating recoveries and LGD — though actual recovery rates and timelines vary a lot.</div>
+  </div>
+
+  <div class="keytake"><b>Key takeaways:</b> EL = PD × LGD × EAD. PD ← borrower/rating, LGD ← recovery/collateral, EAD ← outstanding + drawdowns. NPA = 90+ days overdue → standard/sub-standard/doubtful/loss with rising provisions (RBI, incurred-loss). Ind-AS 109 ECL = forward-looking, 3-stage, 12-month vs lifetime ECL (NBFCs). Keep exact percentages conceptual unless certain.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">17. Worked examples (consolidated quick-reference)</h2>
+  <p>The twelve worked examples in this guide, in one glance, so you can drill the mechanics before an interview:</p>
+  <table>
+    <thead><tr><th>#</th><th>Topic</th><th>Given</th><th>Answer</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Accrued interest / dirty price</td><td>₹1,000, 8% s.a., 60/180 days, clean ₹995</td><td>AI ₹13.33; dirty ₹1,008.33</td></tr>
+      <tr><td>2</td><td>Current yield &amp; approx YTM</td><td>₹1,000, 8%, 5y, price ₹950</td><td>CY 8.42%; YTM ≈ 9.23%</td></tr>
+      <tr><td>3</td><td>Price a coupon bond</td><td>₹1,000, 8%, 3y, yield 10%</td><td>₹950.27 (discount)</td></tr>
+      <tr><td>4</td><td>Zero-coupon price</td><td>₹1,00,000 face, 4y, 7.5%</td><td>≈ ₹74,880</td></tr>
+      <tr><td>5</td><td>Modified-duration price change</td><td>MDur 6.2, +75 bp, price ₹1,050</td><td>−4.65% ≈ −₹48.8</td></tr>
+      <tr><td>6</td><td>DV01 / hedging</td><td>₹100 cr, MDur 5.5</td><td>₹5.5 lakh per bp</td></tr>
+      <tr><td>7</td><td>ICR &amp; DSCR</td><td>EBIT 240, Dep 60, Int 80, Prin 100, Tax 40</td><td>ICR 3.0×; DSCR 1.44×</td></tr>
+      <tr><td>8</td><td>Expected loss</td><td>₹50 cr, PD 4%, LGD 40%</td><td>EL ₹0.80 cr</td></tr>
+      <tr><td>9</td><td>Leverage/coverage case</td><td>Firm A vs B, same ₹300 cr debt</td><td>A 2.0×/4.0×; B 5.0×/1.1×</td></tr>
+      <tr><td>10</td><td>Convexity adjustment</td><td>MDur 7, Convexity 90, Δy +100 bp</td><td>−7.00% + 0.45% = −6.55%</td></tr>
+      <tr><td>11</td><td>Fixed-charge coverage (FCCR)</td><td>EBIT 120, Rent 40, Interest 30</td><td>FCCR 2.29×</td></tr>
+      <tr><td>12</td><td>Drawing power</td><td>Stock 200, Debtors 120, Creditors 50, 25% margin</td><td>DP ₹190 cr</td></tr>
+    </tbody>
+  </table>
+
+  <h3>17.1 Three more worked numericals</h3>
+  <div class="example"><div class="ex-h">Worked Example 10 — Convexity adjustment</div>
+    <p>A bond has modified duration 7.0 and convexity 90. Yields rise 100 bp (Δy = +0.01). Estimate the % price change with and without the convexity correction.</p>
+    <p><b>Duration term</b> = −D<sub>Mod</sub> × Δy = −7.0 × 0.01 = −0.0700 = <b>−7.00%</b>.<br>
+       <b>Convexity term</b> = ½ × Convexity × (Δy)² = 0.5 × 90 × (0.01)² = 0.5 × 90 × 0.0001 = 0.0045 = <b>+0.45%</b>.<br>
+       <b>Total ≈ −7.00% + 0.45% = −6.55%</b>.</p>
+    <p>Interpretation: duration alone overstates the loss; convexity (always positive for a plain bond) cushions it, so the actual fall (≈6.55%) is smaller than the straight-line 7.00%. For an equal <i>fall</i> in yields the same convexity would make the gain slightly <i>larger</i> than 7% — the asymmetry that makes positive convexity valuable.</p>
+  </div>
+
+  <div class="example"><div class="ex-h">Worked Example 11 — Fixed-Charge Coverage Ratio (FCCR)</div>
+    <p>A retailer (lease-heavy) reports (₹ crore): EBIT 120, annual lease/rent 40, interest 30.</p>
+    <p><b>FCCR</b> = (EBIT + Rent) ÷ (Interest + Rent) = (120 + 40) ÷ (30 + 40) = 160 ÷ 70 = <b>2.29×</b>.</p>
+    <p>Compare with plain <b>ICR</b> = EBIT ÷ Interest = 120 ÷ 30 = 4.0×. The ICR looks very comfortable, but once the unavoidable ₹40 cr of rent is treated as a fixed charge, coverage drops to 2.29× — a truer picture for a business whose leases are as binding as its interest. This is why lenders use FCCR (or EBITDAR-based coverage) for retail, airlines and logistics.</p>
+  </div>
+
+  <div class="example"><div class="ex-h">Worked Example 12 — Drawing Power</div>
+    <p>A borrower's stock statement shows (₹ crore): paid stock 200, book debts (receivables) 120, sundry creditors 50. The bank applies a 25% margin on both stock and debtors. Sanctioned CC limit is ₹200 cr. Compute the Drawing Power and the amount drawable.</p>
+    <p>Stock after margin = 200 × (1 − 0.25) = 150.<br>
+       Debtors after margin = 120 × (1 − 0.25) = 90.<br>
+       Less sundry creditors (to avoid double-financing) = 50.<br>
+       <b>Drawing Power = 150 + 90 − 50 = ₹190 crore</b>.</p>
+    <p>The borrower can draw the <b>lower of DP (₹190 cr) and the sanctioned limit (₹200 cr) = ₹190 cr</b>. If stock or debtors fall next month, DP shrinks and the drawable amount tightens automatically — the mechanism that keeps working-capital finance backed by real current assets.</p>
+  </div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">18. Interview Q&amp;A bank</h2>
+  <p>Model answers below are deliberately crisp — in a real interview, expand with an Indian example (a G-sec, a CRISIL rating, an NBFC case) where you can.</p>
+
+  <h4>Fixed income</h4>
+  <div class="qa"><div class="q">Q1: What is a bond?</div><div class="a">A: A tradable debt instrument. The issuer borrows a fixed principal, pays periodic coupons and repays the principal at maturity. The holder is a creditor with contractually fixed cash flows, ranking ahead of equity, whose main risk is not being paid in full and on time (credit risk) and price loss if rates rise (interest-rate risk).</div></div>
+
+  <div class="qa"><div class="q">Q2: Difference between coupon rate and yield?</div><div class="a">A: The coupon rate is fixed at issue and paid on face value — it never changes for a fixed-rate bond. The yield (YTM) is the market's return today given the current price; it changes continuously. A 6% coupon bond can yield 8% if it trades at a discount.</div></div>
+
+  <div class="qa"><div class="q">Q3: Clean price vs dirty price?</div><div class="a">A: The clean price excludes accrued interest and is what's quoted on screens; the dirty (settlement) price adds accrued interest and is what actually changes hands. Dirty = clean + accrued interest, where accrued interest pro-rates the coupon for days since the last coupon date, compensating the seller.</div></div>
+
+  <div class="qa"><div class="q">Q4: Why do bond prices fall when interest rates rise?</div><div class="a">A: The coupon is fixed, so if market rates rise, newer bonds pay more and the old bond is worth less — its price falls until its yield matches the new market rate. Price is the PV of fixed cash flows discounted at the market yield; a higher discount rate lowers every PV. Inverse and convex.</div></div>
+
+  <div class="qa"><div class="q">Q5: What is YTM?</div><div class="a">A: The single discount rate that equates the PV of all a bond's future cash flows to its current price — effectively the IRR if held to maturity, assuming no default and coupons reinvested at the YTM. It captures coupon income plus capital gain/loss to par plus timing — the most complete standard yield.</div></div>
+
+  <div class="qa"><div class="q">Q6: Current yield vs YTM?</div><div class="a">A: Current yield = annual coupon ÷ price; it captures only income and ignores capital gain/loss and time value. YTM includes the pull-to-par gain/loss and the timing of cash flows. For a discount bond YTM &gt; current yield &gt; coupon; for a premium bond the order reverses.</div></div>
+
+  <div class="qa"><div class="q">Q7: What is yield to call / yield to worst?</div><div class="a">A: Yield to call is the IRR assuming the issuer redeems the bond at the earliest/next call date and price. For callable bonds, investors compute yield to worst — the lowest of YTM and all YTCs — to price the assumption that the issuer acts against them. Relevant for many Indian AT1 and callable NCDs.</div></div>
+
+  <div class="qa"><div class="q">Q8: What is a zero-coupon bond and why is it useful?</div><div class="a">A: A bond with no coupons, issued at a discount; the entire return is the pull to par. It carries no reinvestment risk (no coupons to reinvest), so holding to maturity locks in the yield — ideal for liability-matching. Its price is simply face ÷ (1+y)ⁿ, and it has the longest duration for a given maturity (duration = maturity).</div></div>
+
+  <div class="qa"><div class="q">Q9: Explain spot, par and forward rates.</div><div class="a">A: Spot (zero) rates apply to a single cash flow at one date — the correct rates for discounting individual cash flows. Par rates are the coupon that prices a bond at exactly 100. Forward rates are future-period rates implied today by the spot curve via no-arbitrage. A coupon bond = a bundle of zeros priced at their respective spot rates.</div></div>
+
+  <div class="qa"><div class="q">Q10: What is duration?</div><div class="a">A: Broadly, a bond's sensitivity to interest rates. Macaulay duration is the PV-weighted average time to receive the cash flows (in years). Modified duration converts that into the approximate % price change for a 1% yield move: %ΔP ≈ −ModDur × Δy. Higher duration = more rate risk. It is not the same as maturity.</div></div>
+
+  <div class="qa"><div class="q">Q11: Why is duration not the same as maturity?</div><div class="a">A: Maturity is just the final repayment date; duration weights <i>all</i> cash flows by their present value and timing, so intermediate coupons pull it well below maturity. Only a zero-coupon bond has duration = maturity. Higher coupons and higher yields shorten duration; lower coupons and longer maturities lengthen it.</div></div>
+
+  <div class="qa"><div class="q">Q12: What is DV01 / PVBP?</div><div class="a">A: The rupee change in a position's value for a 1 basis-point change in yield ≈ ModDur × Price × 0.0001. Where modified duration is a percentage sensitivity, DV01 is an absolute cash sensitivity — the unit desks use to size and match hedges (e.g. offsetting a bond's DV01 with G-sec futures or swaps).</div></div>
+
+  <div class="qa"><div class="q">Q13: What is convexity and why does it matter?</div><div class="a">A: Convexity measures the curvature of the price–yield relationship that duration (a straight line) misses. For a plain bond it's positive — actual price rises are a bit bigger and falls a bit smaller than duration predicts, so it benefits the holder. It matters most for large yield moves and for bonds with options, which can show negative convexity.</div></div>
+
+  <div class="qa"><div class="q">Q14: A bond has modified duration 7 and rates rise 50 bp — what happens to price?</div><div class="a">A: Roughly −7 × 0.50% = −3.5% price fall (duration estimate). Convexity would make the actual fall slightly smaller than 3.5%. On a ₹1,000 bond that's about −₹35.</div></div>
+
+  <div class="qa"><div class="q">Q15: What is the yield curve and what do its shapes mean?</div><div class="a">A: A plot of yield vs maturity for same-quality bonds (usually G-secs). Normal (upward) = healthy expansion and a term premium; inverted (downward) = expected rate cuts / recession risk; flat = transition/uncertainty; steep = strong growth or inflation expectations. It's the risk-free backdrop for all credit spreads.</div></div>
+
+  <div class="qa"><div class="q">Q16: Name the yield-curve theories.</div><div class="a">A: Pure expectations (long rates = average of expected future short rates); liquidity preference (expectations plus a term premium for holding longer maturities, biasing the curve upward); and market segmentation / preferred habitat (structural supply-demand by maturity, with investors leaving their habitat only for a premium).</div></div>
+
+  <div class="qa"><div class="q">Q17: What is a credit spread?</div><div class="a">A: The extra yield a corporate bond pays over a comparable-maturity G-sec, compensating for default risk, liquidity and other premia. Corporate yield ≈ risk-free rate + credit spread. Spreads widen with lower ratings, longer tenor, weaker liquidity and risk-off sentiment — the market's live price of credit risk.</div></div>
+
+  <div class="qa"><div class="q">Q18: G-sec vs corporate bond?</div><div class="a">A: A G-sec is issued by the government (via RBI), effectively risk-free in INR, most liquid and the benchmark; a corporate bond/NCD is issued by a company/NBFC, carries credit risk (hence a rating and a spread over G-secs), is SEBI-regulated and generally less liquid. Corporate yield = G-sec yield + credit spread.</div></div>
+
+  <div class="qa"><div class="q">Q19: What are AT1 / perpetual bonds and why risky?</div><div class="a">A: Additional Tier-1 bonds are perpetual (no maturity) instruments that count as bank capital. Coupons are discretionary and can be skipped, and the bonds can be written down or converted to equity if the bank breaches capital triggers — as investors learned in the 2020 Yes Bank write-down. They are deeply subordinated, so they carry high LGD and are notched well below the issuer's senior rating, and pay a higher yield.</div></div>
+
+  <div class="qa"><div class="q">Q20: What is reinvestment risk?</div><div class="a">A: The risk that coupons received must be reinvested at lower rates than the original YTM, reducing the realised return below the quoted YTM. It's greatest for high-coupon, long-maturity bonds and zero for zero-coupon bonds. It's the flip side of interest-rate (price) risk — falling rates hurt reinvestment but help price.</div></div>
+
+  <h4>Credit analysis</h4>
+  <div class="qa"><div class="q">Q21: What are the 5 Cs of credit?</div><div class="a">A: Character (willingness/track record), Capacity (ability to repay from cash flow — most important), Capital (owner's equity/skin in the game), Collateral (security limiting loss on default), Conditions (industry, economy, loan purpose). Capacity and Character dominate; Collateral is a fallback affecting loss severity, not default probability.</div></div>
+
+  <div class="qa"><div class="q">Q22: How would you assess a company's creditworthiness?</div><div class="a">A: Top-down: industry and business risk (cyclicality, market position, scale, management), then financial risk via spreading (leverage, coverage, liquidity, profitability and especially cash-flow adequacy), then structure (tenor, security, covenants, refinancing). Frame it through the 5 Cs, stress-test coverage against a downturn, and conclude with a view on PD and LGD translated into rating/pricing/covenants.</div></div>
+
+  <div class="qa"><div class="q">Q23: Business risk vs financial risk?</div><div class="a">A: Business risk is how risky the enterprise is before financing — industry cyclicality, competitive position, scale, diversification, management. Financial risk is how aggressively it's financed and how comfortably it services debt — leverage, coverage, cash flow, liquidity, financial policy. A stable business can carry more leverage for the same rating; a volatile one needs less.</div></div>
+
+  <div class="qa"><div class="q">Q24: What is financial spreading?</div><div class="a">A: Recasting a borrower's statements into a standard, adjusted format (removing one-offs, treating leases, netting cash, consolidating group entities) so ratios are comparable across companies and years, then computing leverage, coverage, liquidity, profitability and cash-flow ratios. It's the analytical backbone of underwriting and rating.</div></div>
+
+  <div class="qa"><div class="q">Q25: What is Debt/EBITDA and what's a comfortable level?</div><div class="a">A: Total debt ÷ EBITDA — roughly the number of years of operating earnings needed to repay all debt. Lower is safer; as a rough guide &lt;2× is conservative, 2–4× moderate, &gt;4–5× aggressive, but the tolerable level depends on industry stability — a utility sustains more than a commodity player.</div></div>
+
+  <div class="qa"><div class="q">Q26: What is the interest coverage ratio?</div><div class="a">A: EBIT ÷ interest expense — how many times operating profit covers the interest bill. Higher is safer; below ~1.5–2× is a red flag that earnings barely cover interest. A cash variant uses EBITDA/interest.</div></div>
+
+  <div class="qa"><div class="q">Q27: What is DSCR and what's a good level?</div><div class="a">A: Debt Service Coverage Ratio = cash available for debt service ÷ (interest + principal). Unlike ICR it covers principal too. Above 1 means cash fully covers total debt service; lenders typically want a cushion — often around 1.25×–1.5×+ for term/project loans, higher for riskier projects. It's the binding measure for amortising debt.</div></div>
+
+  <div class="qa"><div class="q">Q28: Difference between DSCR and ICR?</div><div class="a">A: ICR = EBIT ÷ interest, testing only interest cover. DSCR = cash ÷ (interest + principal), testing total debt service including principal repayment. A firm can have a strong ICR but weak DSCR if it faces heavy principal maturities. DSCR is stricter and more relevant for term loans.</div></div>
+
+  <div class="qa"><div class="q">Q29: Difference between liquidity and solvency?</div><div class="a">A: Liquidity is the ability to meet <i>short-term</i> obligations as they fall due — measured by current/quick ratios and cash flow. Solvency is whether the firm's <i>total</i> assets/net worth exceed its liabilities over the long run — measured by leverage/gearing and coverage. A firm can be solvent but illiquid (profitable but cash-strapped) or liquid but insolvent (cash now, but eroding net worth). Most defaults are triggered by liquidity, but the underlying cause is often solvency.</div></div>
+
+  <div class="qa"><div class="q">Q30: Leverage vs coverage ratios?</div><div class="a">A: Leverage ratios (Debt/EBITDA, D/E) measure the stock of debt — how much is owed. Coverage ratios (ICR, DSCR) measure the flow — whether current earnings/cash can service it. Read together: leverage sizes the risk, coverage tests whether it's survivable. High leverage with strong stable coverage can be fine; low leverage with collapsing coverage is not.</div></div>
+
+  <div class="qa"><div class="q">Q31: Why do analysts focus on cash flow over profit?</div><div class="a">A: Debt is serviced with cash, not accounting profit. Profit includes non-cash items and accrual judgments and can diverge from cash for years (e.g. rising receivables/inventory). Analysts check that operating cash flow genuinely covers interest, capex and maturities, using FFO/Debt and CFO/Debt — "profit is an opinion, cash is a fact."</div></div>
+
+  <div class="qa"><div class="q">Q32: Cash-flow-based vs asset-based lending?</div><div class="a">A: Cash-flow lending relies on the borrower's operating cash flow as the primary repayment source (coverage-driven; term loans, project finance). Asset-based lending sizes and secures the loan against specific assets — receivables, inventory, machinery — and relies on their value (margin-driven; working-capital finance and weaker credits). Indian bank credit usually blends both.</div></div>
+
+  <div class="qa"><div class="q">Q33: What is working capital and how do banks assess it?</div><div class="a">A: Working capital funds the operating-cycle gap between paying suppliers and collecting from customers (inventory + receivable days − payable days). Banks size the facility using MPBF (Tandon Method II: 0.75 × working-capital gap, forcing the borrower to fund 25% from long-term sources → ~1.33 current ratio) and control drawings via Drawing Power, computed from stock and receivable statements after margins.</div></div>
+
+  <div class="qa"><div class="q">Q34: What is MPBF?</div><div class="a">A: Maximum Permissible Bank Finance — the Tandon Committee cap on working-capital finance. Under Method II, MPBF = 0.75 × (current assets − current liabilities other than bank borrowing), i.e. the bank funds 75% of the working-capital gap and the borrower funds 25% from long-term sources, giving the traditional 1.33:1 current-ratio benchmark.</div></div>
+
+  <div class="qa"><div class="q">Q35: What is Drawing Power?</div><div class="a">A: The amount a borrower can actually draw against a sanctioned working-capital limit at a point in time, based on current-asset security after margins: DP = (stock − margin) + (book debts − margin) − creditors. It's recomputed regularly from stock statements; the borrower can draw only up to the lower of DP and the sanctioned limit, so shrinking DP is an early stress flag.</div></div>
+
+  <div class="qa"><div class="q">Q36: What is a credit rating?</div><div class="a">A: An independent, forward-looking opinion on an issuer's/instrument's ability and willingness to meet debt obligations in full and on time, expressed as a relative symbol (AAA down to D). It compresses business risk, financial risk and structure into one grade used for pricing, regulation and investment mandates — but it's an opinion, not a guarantee or a buy/sell call.</div></div>
+
+  <div class="qa"><div class="q">Q37: Explain investment grade vs speculative grade.</div><div class="a">A: Investment grade is BBB−/Baa3 and above — adequate-to-highest safety, eligible for conservative mandates. Speculative (high-yield / "junk") is BB+/Ba1 and below — meaningful default risk, higher yields. The BBB−/Baa3 line is critical because many funds and regulations restrict holdings to investment grade, so a downgrade across it can force selling.</div></div>
+
+  <div class="qa"><div class="q">Q38: Who are the main rating agencies in India and globally?</div><div class="a">A: In India (SEBI-registered): CRISIL, ICRA, CARE Ratings and India Ratings (plus Acuité, Brickwork). Globally the "Big Three": S&amp;P, Moody's and Fitch. Notably CRISIL is S&amp;P-linked, ICRA is Moody's-linked and India Ratings is a Fitch company. Indian CRAs run an issuer-pays model regulated by SEBI.</div></div>
+
+  <div class="qa"><div class="q">Q39: What drives a credit rating?</div><div class="a">A: Business risk (industry, market position, scale, diversification, management/governance) plus financial risk (leverage, coverage, cash-flow adequacy, liquidity, financial policy), adjusted for parent/group/sovereign support and instrument structure. Support and strong security notch the rating up; subordination or a weak group notches it down. The agency publishes a rationale with the drivers and sensitivities.</div></div>
+
+  <div class="qa"><div class="q">Q40: What is notching?</div><div class="a">A: Adjusting a specific instrument's rating above or below the issuer's baseline for structural reasons — up for strong collateral, guarantees or parental support; down for subordination. For example, a bank's AT1/perpetual bonds are notched several steps below its senior rating because they're deeply subordinated and can skip coupons or be written down.</div></div>
+
+  <div class="qa"><div class="q">Q41: What is a rating outlook vs a rating watch?</div><div class="a">A: An outlook (Positive/Stable/Negative) indicates the likely direction of the rating over the medium term (typically 1–2 years) based on trends. A rating/credit watch flags a specific near-term event (M&amp;A, regulatory action, refinancing) that could change the rating quickly, pending resolution. Watch is more urgent and event-driven than outlook.</div></div>
+
+  <div class="qa"><div class="q">Q42: What are covenants and their types?</div><div class="a">A: Contractual conditions protecting lenders. Financial covenants keep ratios in range (max Debt/EBITDA, min DSCR, min net worth); affirmative covenants require actions (submit financials, maintain insurance/assets); negative covenants restrict actions (no new debt, no further charges, no big dividends/asset sales without consent). A breach is typically an event of default, giving early rights before an actual missed payment.</div></div>
+
+  <div class="qa"><div class="q">Q43: What are early-warning signals of credit deterioration?</div><div class="a">A: Financial: falling margins/sales, rising leverage, thinning DSCR/ICR, stretched receivables/inventory, negative operating cash flow, chronic limit overuse. Banking conduct: cheque returns, delayed servicing, LC devolvement, ad-hoc limit requests, non-submission of stock statements, routing sales elsewhere. Qualitative: auditor/management exits, qualified audits, promoter share pledging, rating downgrades, litigation.</div></div>
+
+  <div class="qa"><div class="q">Q44: What is a Special Mention Account (SMA)?</div><div class="a">A: An RBI early-warning classification for accounts showing incipient stress before becoming NPAs. Broadly, SMA-0/1/2 correspond to principal/interest overdue for up to 30, 31–60 and 61–90 days respectively. Crossing 90 days overdue turns the account into an NPA. SMA reporting lets lenders and the system detect and act on stress early.</div></div>
+
+  <div class="qa"><div class="q">Q45: What is an NPA and its classifications?</div><div class="a">A: A Non-Performing Asset — a loan overdue beyond 90 days (or a cash-credit account continuously out-of-order). It stops accruing income and is classified as sub-standard (NPA up to ~12 months), doubtful (NPA over ~12 months) or loss (largely uncollectible), with provisioning rising as classification worsens. Performing loans are "standard."</div></div>
+
+  <div class="qa"><div class="q">Q46: How does provisioning work at a high level?</div><div class="a">A: Banks set aside provisions against expected losses, increasing with asset deterioration: a small general provision on standard assets, moderate on sub-standard, higher on doubtful (rising with age and the unsecured portion), and up to 100% on loss assets. Exact percentages are set by RBI and change over time, so I'd state the direction rather than quote fixed figures unless certain.</div></div>
+
+  <div class="qa"><div class="q">Q47: Explain PD, LGD, EAD and expected loss.</div><div class="a">A: Expected Loss = PD × LGD × EAD. PD is probability of default over a horizon (borrower/rating driven); LGD is loss given default = 1 − recovery rate (collateral/seniority driven); EAD is exposure at default including likely drawdowns. Their product is the average rupee loss expected — priced into spreads and provisions. Losses beyond this average (unexpected loss) are covered by capital.</div></div>
+
+  <div class="qa"><div class="q">Q48: What is LGD and how is it reduced?</div><div class="a">A: Loss Given Default = the fraction of exposure lost after recoveries = 1 − recovery rate. It's lowered by good collateral (quality, marketability, enforceable charge), senior ranking, guarantees and conservative loan-to-value margins. Unsecured or subordinated exposures (e.g. AT1) have high LGD. LGD affects loss severity, not the probability of default.</div></div>
+
+  <div class="qa"><div class="q">Q49: What is the ECL model under Ind-AS 109?</div><div class="a">A: A forward-looking Expected Credit Loss provisioning model (India's IFRS 9), used by NBFCs and in consolidated accounts. It classifies exposures into Stage 1 (performing → 12-month ECL), Stage 2 (significant increase in credit risk → lifetime ECL) and Stage 3 (credit-impaired → lifetime ECL), estimating losses using PD, LGD, EAD and macro scenarios — recognising losses <i>before</i> default, unlike the incurred-loss NPA model.</div></div>
+
+  <div class="qa"><div class="q">Q50: How does the RBI NPA framework differ from Ind-AS 109 ECL?</div><div class="a">A: The RBI IRAC/NPA framework is a rule-based prudential regime for banks — provisioning is triggered by actual overdues (incurred loss, 90-day rule, standard/sub-standard/doubtful/loss). Ind-AS 109 ECL is a forward-looking accounting model for NBFCs and group accounts that front-loads expected losses using PD/LGD/EAD and macro forecasts across three stages. Both recognise credit losses; ECL does so earlier and more model-driven.</div></div>
+
+  <div class="qa"><div class="q">Q51: A borrower is profitable but keeps missing payments — how is that possible?</div><div class="a">A: It's a liquidity, not solvency, problem. Profit is accrual-based; cash can be tied up in rising receivables and inventory, or drained by capex and debt maturities, so a profitable firm can lack cash to service debt on the due date. It's exactly why analysts prioritise cash flow (CFO, DSCR) over reported profit and monitor the working-capital cycle.</div></div>
+
+  <div class="qa"><div class="q">Q52: What's the difference between secured and unsecured bonds, and why does it matter?</div><div class="a">A: Secured bonds have a charge on specific assets, so on default holders recover from that collateral first — lower LGD, usually higher rating and lower yield. Unsecured (and worse, subordinated) bonds rely on the general estate and rank behind secured creditors — higher LGD, lower rating and higher yield. It changes recovery/loss severity, so it's central to notching and pricing.</div></div>
+
+  <div class="qa"><div class="q">Q53: How would you stress-test a credit?</div><div class="a">A: Flex the key drivers and re-check coverage/leverage and covenant headroom. E.g. cut EBITDA 15–25%, raise interest rates 100–200 bp, lengthen receivable days, or apply a sector downturn, then see whether DSCR falls below 1, ICR below covenant, and whether liquidity/refinancing survives. The goal is to find the breaking point and the margin of safety, not just the base case.</div></div>
+
+  <div class="qa"><div class="q">Q54: What is subordination and why does it matter for bondholders?</div><div class="a">A: Subordination is a lower priority claim on cash flows and assets in default — subordinated creditors are paid only after senior creditors are made whole. It raises LGD sharply, so subordinated/junior instruments (e.g. Tier-2 and especially AT1 bonds) are rated below senior debt and pay higher yields. Seniority in the capital structure is a primary driver of recovery.</div></div>
+
+  <div class="qa"><div class="q">Q55: What macro factors most affect credit risk in India?</div><div class="a">A: The interest-rate/RBI policy cycle (refinancing cost and rate risk), GDP/industrial growth (demand and cash flows), inflation and input costs (margins), the credit/liquidity environment (e.g. the post-IL&amp;FS NBFC funding squeeze), currency moves for importers/foreign-currency borrowers, and sector-specific regulation. These feed the "Conditions" C and shape both PD and spreads system-wide.</div></div>
+
+  <div class="qa"><div class="q">Q56: How do you price a loan for credit risk?</div><div class="a">A: The interest rate must at least cover the cost of funds + expected loss (PD×LGD×EAD) + a return on the regulatory capital held against unexpected loss + operating costs, plus a margin. Riskier borrowers (higher PD) or weaker security (higher LGD) require a wider spread. This links directly to market credit spreads over G-secs for the equivalent rating.</div></div>
+
+  <div class="qa"><div class="q">Q57: What is the significance of the BBB−/Baa3 boundary?</div><div class="a">A: It's the investment-grade / speculative-grade dividing line. Many mandates, indices and regulations restrict holdings to investment grade, so a downgrade from BBB− to BB+ ("falling angel") can force selling, widen spreads sharply and raise the issuer's funding cost — a cliff effect far larger than a one-notch move elsewhere.</div></div>
+
+  <div class="qa"><div class="q">Q58: Why might two companies with identical financial ratios get different ratings?</div><div class="a">A: Because ratings weigh business risk, not just financials. Different industries (cyclical vs stable), market positions, diversification, management quality, governance, group support and financial policy can differ even with identical current ratios. A given Debt/EBITDA is investment-grade for a utility but sub-investment-grade for a commodity producer. Structure and support then notch the instrument.</div></div>
+
+  <h4>More instruments, spreads &amp; regulation</h4>
+  <div class="qa"><div class="q">Q59: Callable vs puttable bond — who benefits and how does the yield differ?</div><div class="a">A: A callable bond gives the <i>issuer</i> the right to redeem early (typically after rates fall), so the investor bears call/reinvestment risk and demands a <i>higher</i> yield; it can show negative convexity. A puttable bond gives the <i>investor</i> the right to sell it back early (a floor under the price), which is investor-friendly, so it carries a <i>lower</i> yield. Callables are valued on yield-to-worst, puttables on yield-to-put.</div></div>
+
+  <div class="qa"><div class="q">Q60: What is a convertible bond?</div><div class="a">A: A bond that the holder can convert into a set number of the issuer's shares. It's debt bundled with an equity call option, so it pays a lower coupon in exchange for equity upside. Indian issuers used FCCBs (foreign-currency convertible bonds) to raise cheap money abroad; the risk is that if the share price stays below the conversion price, the bond must be redeemed in cash, straining liquidity.</div></div>
+
+  <div class="qa"><div class="q">Q61: Commercial paper vs certificate of deposit?</div><div class="a">A: Both are short-term (≤1 year) discount money-market instruments. <b>CP</b> is unsecured borrowing by companies/NBFCs for working-capital/bridge needs; <b>CD</b> is issued by banks (and some FIs) to raise deposits. CP is a corporate liability rated on the A1/A2 short-term scale; CD is a bank funding tool. The 2018 IL&amp;FS/DHFL CP defaults triggered the NBFC liquidity crisis.</div></div>
+
+  <div class="qa"><div class="q">Q62: What are masala bonds?</div><div class="a">A: Rupee-denominated bonds issued <i>offshore</i> to overseas investors. Because they are in INR, the <i>issuer</i> avoids currency risk — the foreign investor bears it. They let Indian entities (e.g. HDFC, NTPC) and multilaterals tap global money without taking on dollar liabilities.</div></div>
+
+  <div class="qa"><div class="q">Q63: Nominal spread vs Z-spread vs OAS?</div><div class="a">A: The nominal (G-)spread is the corporate yield minus a single matched G-sec yield. The Z-spread is the constant spread added to <i>every</i> point of the spot curve that reprices the bond to market — more accurate on steep curves. OAS is the Z-spread after removing the value of embedded options, isolating pure credit/liquidity compensation so option and non-option bonds compare fairly.</div></div>
+
+  <div class="qa"><div class="q">Q64: What is effective duration and when do you use it?</div><div class="a">A: Effective duration measures rate sensitivity by re-pricing the bond after small up/down yield shocks — D<sub>eff</sub> = (P₋ − P₊) ÷ (2·P₀·Δy) — rather than assuming fixed cash flows. Use it for bonds whose cash flows change with rates: callable, puttable and mortgage/prepayable bonds. For an option-free bond it collapses to modified duration.</div></div>
+
+  <div class="qa"><div class="q">Q65: What is spread duration?</div><div class="a">A: Sensitivity of a credit bond's price to a change in its <i>credit spread</i> (not the risk-free rate). It measures how much a spread widening — say a rating scare or risk-off move — hurts, independent of what G-sec yields do. It's central for credit portfolios and for floating-rate notes, whose rate duration is near zero but whose spread duration is not.</div></div>
+
+  <div class="qa"><div class="q">Q66: What is immunization / ALM?</div><div class="a">A: Immunization protects a portfolio against rate moves by matching the duration (and PV) of assets to that of the liabilities they fund, so both move together and the surplus is shielded — the price loss offsets the reinvestment gain. It's the core of Asset-Liability Management: banks and insurers measure the duration/liquidity gap between rate-sensitive assets and liabilities across time buckets (under RBI's ALM framework) and hedge it so RBI rate moves don't whipsaw earnings or net worth.</div></div>
+
+  <div class="qa"><div class="q">Q67: How does bootstrapping work?</div><div class="a">A: It extracts the zero (spot) curve from coupon-bond/par prices, one maturity at a time. The 1-period spot comes from a 1-period instrument; the 2-period bond is then priced using the known 1-period spot for its first coupon and solved for the unknown 2-period spot; repeat outwards. The output is an arbitrage-free spot curve used for valuation and to derive forward rates.</div></div>
+
+  <div class="qa"><div class="q">Q68: LC vs bank guarantee — and are they risk-free for the bank?</div><div class="a">A: Both are non-fund-based. A Letter of Credit is the bank's promise to pay a supplier if its client (buyer) fails; a Bank Guarantee is a promise to pay a beneficiary if the client defaults on a performance/financial obligation. Neither is risk-free — an LC that <i>devolves</i> or a BG that is <i>invoked</i> instantly becomes a funded exposure, so they carry credit risk and count in total exposure. Heavy LC/BG usage is itself an early-warning signal.</div></div>
+
+  <div class="qa"><div class="q">Q69: Cash credit vs overdraft vs term loan?</div><div class="a">A: Cash credit is a revolving working-capital limit against hypothecated current assets, governed by drawing power. Overdraft lets an account go negative up to a limit, often against FD/property or clean, for short-term needs. A term loan is a lump sum for capex repaid on a fixed amortisation schedule, assessed on DSCR and secured on fixed assets. CC/OD fund the operating cycle; term loans fund assets.</div></div>
+
+  <div class="qa"><div class="q">Q70: Gross NPA vs net NPA — why does the difference matter?</div><div class="a">A: Gross NPA is the total book value of bad loans; net NPA subtracts provisions already held (NNPA = GNPA − provisions). A bank with high GNPA but strong provisioning has a low net NPA and is better protected than the headline suggests. Read GNPA with the Provision Coverage Ratio (provisions ÷ GNPA): high GNPA + high PCR is far less alarming than moderate GNPA + thin coverage. Quoting gross alone overstates the risk.</div></div>
+
+  <div class="qa"><div class="q">Q71: Expected loss vs unexpected loss — and how is each covered?</div><div class="a">A: Expected loss (PD×LGD×EAD) is the <i>average</i> loss you anticipate; it's priced into the spread and set aside as <b>provisions</b>. Unexpected loss is the <i>volatility</i> of losses around that average — the worse-than-expected outcomes — and is absorbed by <b>capital</b> (the Basel CRAR buffer), not provisions. The two-line summary: provisions for expected loss, capital for unexpected loss.</div></div>
+
+  <div class="qa"><div class="q">Q72: What is the recovery rate and what drives it?</div><div class="a">A: The fraction of exposure a lender gets back after default; LGD = 1 − recovery rate. It's driven by seniority (senior secured recovers most, subordinated/AT1 least), collateral quality/marketability and enforceability of the charge, guarantees, and the resolution route/timeline (IBC vs restructuring). Better security and higher ranking raise recovery and cut LGD, reducing loss severity even if PD is unchanged.</div></div>
+
+  <div class="qa"><div class="q">Q73: What is the sovereign ceiling?</div><div class="a">A: The principle that a domestic issuer generally can't be rated above its home sovereign in <i>foreign currency</i>, because country-level stress — transfer/convertibility limits, taxation, macro shocks — reaches even strong local firms. So Indian corporates' foreign-currency ratings sit at or below India's sovereign rating, which is around the lowest investment-grade band from the global agencies.</div></div>
+
+  <div class="qa"><div class="q">Q74: A ₹1,000 bond has modified duration 8 and convexity 120; yields fall 150 bp. Estimate the price change.</div><div class="a">A: Duration term = −8 × (−0.015) = +12.00%. Convexity term = ½ × 120 × (0.015)² = 0.5 × 120 × 0.000225 = +1.35%. Total ≈ +13.35%, i.e. about +₹133.5 on a ₹1,000 bond. Convexity adds to the gain when yields fall — the favourable side of positive convexity.</div></div>
+
+  <div class="qa"><div class="q">Q75: What is the difference between FFO and CFO, and why do agencies use FFO/Debt?</div><div class="a">A: FFO (Funds From Operations) = net income + depreciation/amortisation + other non-cash items, <i>before</i> working-capital changes. CFO (operating cash flow) is FFO <i>after</i> working-capital swings. Agencies weight FFO/Debt heavily because it strips out volatile, sometimes manipulable working-capital timing to show underlying cash-generating capacity to de-lever; they cross-check with CFO/Debt to catch companies whose working capital is chronically consuming cash.</div></div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">19. Common traps &amp; last-mile revision</h2>
+  <h3>19.1 Trap checklist</h3>
+  <ul>
+    <li><b>Coupon ≠ YTM.</b> Coupon is fixed at issue on face value; YTM is the market return that moves with price.</li>
+    <li><b>Duration ≠ maturity.</b> Duration is PV-weighted average cash-flow time / price sensitivity; equals maturity only for zeros.</li>
+    <li><b>DSCR ≠ ICR.</b> ICR covers interest only (EBIT/interest); DSCR covers interest + principal.</li>
+    <li><b>Leverage ≠ coverage.</b> Leverage = stock of debt (Debt/EBITDA, D/E); coverage = flow servicing ability (ICR, DSCR). Read together.</li>
+    <li><b>Liquidity ≠ solvency.</b> Short-term cash vs long-term net-worth adequacy.</li>
+    <li><b>Price up when rates down</b> — the inverse relationship; and it's convex, not linear.</li>
+    <li><b>Rating is an opinion,</b> not a guarantee or buy/sell call; and it's relative/ordinal.</li>
+    <li><b>Collateral affects LGD, not PD.</b> Security limits loss severity; it doesn't stop default.</li>
+    <li><b>Profit ≠ cash.</b> Debt is serviced from cash; a profitable firm can default on liquidity.</li>
+    <li><b>Gross NPA ≠ net NPA.</b> Net NPA = gross NPA − provisions held; read gross NPA with the provision coverage ratio.</li>
+    <li><b>Provisions ≠ capital.</b> Provisions cover expected loss; capital (CRAR) covers unexpected loss.</li>
+    <li><b>Effective duration ≠ modified duration</b> for option bonds; and spread duration ≠ rate duration.</li>
+    <li><b>Callable helps the issuer; puttable helps the investor</b> — so callables yield more, puttables less.</li>
+    <li><b>Don't invent exact RBI/rating numbers.</b> State direction (worse asset → higher provision) and say "typically/around."</li>
+  </ul>
+
+  <h3>19.2 One-line memory hooks</h3>
+  <ul>
+    <li>Yield &gt; coupon → discount; yield &lt; coupon → premium; yield = coupon → par.</li>
+    <li>Discount bond ordering: YTM &gt; current yield &gt; coupon. Premium bond: reverse.</li>
+    <li>%ΔPrice ≈ −ModDur × Δy; DV01 = ModDur × Price × 0.0001.</li>
+    <li>Corporate yield = risk-free G-sec yield + credit spread.</li>
+    <li>5 Cs: Character, Capacity, Capital, Collateral, Conditions (Capacity is king).</li>
+    <li>EL = PD × LGD × EAD; LGD = 1 − recovery.</li>
+    <li>NPA = 90+ days overdue → standard / sub-standard / doubtful / loss.</li>
+    <li>Investment vs speculative line = BBB− / Baa3.</li>
+    <li>MPBF (Tandon II) = 0.75 × working-capital gap → ~1.33 current ratio; DP polices daily drawings.</li>
+    <li>RBI NPA = incurred-loss, rule-based (banks); Ind-AS 109 ECL = forward-looking, 3-stage (NBFCs).</li>
+    <li>%ΔPrice with convexity ≈ (−ModDur × Δy) + (½ × Convexity × Δy²); convexity always helps the holder.</li>
+    <li>Corporate spread ladder: nominal/G-spread → Z-spread (whole curve) → OAS (option stripped out).</li>
+    <li>CRAR = (Tier-1 + Tier-2) ÷ RWA; provisions for expected loss, capital for unexpected loss.</li>
+    <li>Securitisation = pool loans → bankruptcy-remote SPV → tranche (senior/mezz/junior) → credit-enhance → PTC.</li>
+    <li>FCCR = (EBIT + rent) ÷ (interest + rent); Net leverage = (Debt − cash) ÷ EBITDA.</li>
+    <li>IBC 2016 = time-bound, creditor-in-control resolution via NCLT/CoC; else liquidation waterfall.</li>
+  </ul>
+
+  <div class="keytake"><b>Final framing for interviews:</b> Every question in this subject reduces to two ideas — (1) what is the fair price/yield of a debt instrument and how sensitive is it to rates (fixed income), and (2) how likely is repayment and how much would we lose if not (credit). Anchor answers in cash flow, quantify with the right ratio, and always give the Indian context — RBI, SEBI, CRISIL/ICRA/CARE, G-secs, INR. Show judgment, not just formulas.</div>
+
+</body></html>

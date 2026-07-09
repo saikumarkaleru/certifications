@@ -1,0 +1,16 @@
+# The CORE toolkit (agent loop, tools, CLI, tests) needs NOTHING here —
+# it runs on the Python standard library only. These are OPTIONAL extras
+# for the real-LLM providers and the HTTP API. Install what you need:
+#
+#   pip install -r requirements.txt          # everything
+#   pip install openai                        # only the OpenAI provider
+#   pip install anthropic                     # only the Anthropic provider
+#   pip install fastapi uvicorn               # only the /run HTTP API
+
+# Real LLM providers (optional; guarded imports)
+openai>=1.0.0
+anthropic>=0.34.0
+
+# Optional HTTP API (api.py)
+fastapi>=0.110.0
+uvicorn>=0.29.0

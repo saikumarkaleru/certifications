@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<!--
+  SHARED STUDY-GUIDE TEMPLATE — do not change the <style> block.
+  Each subject guide must reuse this exact <head> so all PDFs look consistent.
+  Fill <body> with the guide content using the classes documented below.
+
+  STRUCTURE TO USE INSIDE <body>:
+    <div class="cover">                              (title page)
+      <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+      <h1 class="cover-title">Subject Name</h1>
+      <div class="cover-sub">One-line scope. Roles: ...</div>
+    </div>
+    <div class="toc">...contents list...</div>       (optional)
+    <h2>1. Section</h2>            (major section, starts near top; use page-break as needed)
+    <h3>1.1 Subsection</h3>
+    <p>...</p>
+    <ul><li>...</li></ul>
+    <div class="formula"><b>Name</b><br> equation <div class="where">where: ...</div></div>
+    <table><thead><tr><th>..</th></tr></thead><tbody><tr><td>..</td></tr></tbody></table>
+    <div class="example"><div class="ex-h">Worked Example</div> ...steps... </div>
+    <div class="qa"><div class="q">Q: ...</div><div class="a">A: ...</div></div>
+    <div class="trap"><b>Common trap:</b> ...</div>
+    <div class="keytake"><b>Key takeaways:</b> ...</div>
+-->
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Georgia","Cambria",serif; font-size: 10.5pt; line-height: 1.5; color: #1a1a1a; }
+  h1,h2,h3,.cover-kicker,.cover-sub,.ex-h,.q,th { font-family: "Calibri","Segoe UI",sans-serif; }
+
+  /* Cover */
+  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+  .cover-kicker { font-size: 11pt; font-weight: 700; letter-spacing: 2px; color: #1f4e79; text-transform: uppercase; }
+  .cover-title { font-size: 34pt; font-weight: 800; color: #16365c; margin: 10px 0 6px; line-height: 1.1; }
+  .cover-sub { font-size: 12pt; color: #444; font-style: italic; }
+  .cover-foot { margin-top: 22px; font-size: 10pt; color: #666; font-family:"Calibri",sans-serif; }
+
+  /* TOC */
+  .toc { page-break-after: always; }
+  .toc h2 { border: none; }
+  .toc ol { margin-left: 20px; font-family:"Calibri",sans-serif; font-size: 11pt; line-height: 1.9; }
+
+  /* Headings */
+  h2 { font-size: 16pt; font-weight: 700; color: #16365c; border-bottom: 2px solid #16365c;
+       padding-bottom: 4px; margin: 18px 0 10px; page-break-after: avoid; }
+  h3 { font-size: 12.5pt; font-weight: 700; color: #1f4e79; margin: 14px 0 5px; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; color: #333; margin: 10px 0 4px; font-family:"Calibri",sans-serif; }
+  p { margin: 5px 0; text-align: justify; }
+  ul, ol { margin: 5px 0 5px 22px; }
+  li { margin-bottom: 3px; }
+  b, strong { color: #16365c; }
+
+  /* Formula box */
+  .formula { background: #f4f7fb; border-left: 4px solid #1f4e79; padding: 8px 12px; margin: 8px 0;
+             font-family: "Cambria Math","Cambria",serif; page-break-inside: avoid; }
+  .formula b { color: #16365c; }
+  .formula .where { font-size: 9.3pt; color: #555; margin-top: 3px; font-family:"Calibri",sans-serif; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 9px 0; font-size: 9.6pt; page-break-inside: avoid; }
+  th { background: #16365c; color: #fff; text-align: left; padding: 5px 8px; font-size: 9.6pt; }
+  td { border: 1px solid #cbd5e1; padding: 4px 8px; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f4f7fb; }
+
+  /* Worked example */
+  .example { border: 1px solid #b7c7dd; border-radius: 4px; padding: 9px 12px; margin: 10px 0;
+             background: #fbfdff; page-break-inside: avoid; }
+  .ex-h { font-weight: 700; color: #1f4e79; font-size: 10.5pt; margin-bottom: 4px; }
+
+  /* Q&A */
+  .qa { margin: 8px 0; page-break-inside: avoid; }
+  .qa .q { font-weight: 700; color: #16365c; }
+  .qa .a { margin-top: 2px; }
+
+  /* Trap / takeaway callouts */
+  .trap { background: #fff6f0; border-left: 4px solid #c26a2c; padding: 6px 11px; margin: 8px 0; font-size: 10pt; }
+  .keytake { background: #f0f7f1; border-left: 4px solid #3f7d45; padding: 8px 12px; margin: 12px 0; }
+
+  .sec { page-break-before: always; }   /* put on an <h2> to force a fresh page */
+</style></head><body>
+
+<div class="cover">
+  <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+  <h1 class="cover-title">Valuation</h1>
+  <div class="cover-sub">DCF, Comparable Companies &amp; Precedent Transactions — the intrinsic and relative toolkit, end to end.</div>
+  <div class="cover-foot">
+    Target roles: Equity Research · Investment Banking · Investor Relations (India)<br>
+    Audience: MBA Finance fresher · engineering background · derivatives-desk experience · NISM Series-XV<br>
+    Currency: INR · Concepts timeless-first, Indian market context where relevant
+  </div>
+</div>
+
+<div class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li>Valuation Overview: Intrinsic, Relative &amp; Asset-Based</li>
+    <li>Enterprise Value vs Equity Value — the Bridge</li>
+    <li>Discounted Cash Flow (DCF): The Full Machine</li>
+    <li>Building Free Cash Flow (FCFF and FCFE)</li>
+    <li>Forecasting the Explicit Period</li>
+    <li>The Discount Rate: WACC and Cost of Equity</li>
+    <li>Terminal Value: Gordon Growth vs Exit Multiple</li>
+    <li>Discounting, Mid-Year Convention &amp; the Equity Bridge</li>
+    <li>DCF Sensitivity &amp; When DCF Breaks Down</li>
+    <li>Trading Comparables (Comps)</li>
+    <li>The Multiples Toolkit: EV/EBITDA, P/E, P/B and Friends</li>
+    <li>Precedent Transactions</li>
+    <li>Football Field, Sum-of-the-Parts &amp; Reconciling Methods</li>
+    <li>Special Cases: Banks, Loss-Makers &amp; High-Growth</li>
+    <li>Dividend Discount Models &amp; the H-Model</li>
+    <li>Residual Income &amp; EVA Valuation</li>
+    <li>Cost-of-Equity Refinements: Size &amp; Country Risk</li>
+    <li>FCF Refinements: Stock-Based Comp &amp; Leases</li>
+    <li>Justified (Fundamental) Multiples</li>
+    <li>The Wider Multiples Toolkit: EV/FCF, P/CF, Dividend Yield</li>
+    <li>Asset-Based Valuation: NAV, Liquidation &amp; Replacement</li>
+    <li>Private Companies, Insurance &amp; Cyclicals</li>
+    <li>Interview Q&amp;A Bank (80 questions)</li>
+    <li>Rapid Revision Cheat-Sheet</li>
+  </ol>
+</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">1. Valuation Overview: Intrinsic, Relative &amp; Asset-Based</h2>
+
+<p>Valuation is the discipline of attaching a defensible number to a business, a security, or an asset. In an interview, the examiner is rarely testing whether you can memorise a formula — they are testing whether you understand <b>what a number means, where it comes from, and when it lies</b>. Every valuation you will ever build falls into one of three families.</p>
+
+<h3>1.1 The three families of valuation</h3>
+<ul>
+  <li><b>Intrinsic valuation</b> — value a business by the cash it will generate for its investors over its life, discounted to today. The flagship method is the <b>Discounted Cash Flow (DCF)</b>. Dividend Discount Models (DDM) and Residual Income models are cousins. The philosophy: a business is worth the present value of its future cash flows, independent of what the market says today.</li>
+  <li><b>Relative valuation</b> — value a business by what the market is paying for <i>similar</i> businesses right now. This is the world of <b>Comparable Companies ("trading comps")</b> and <b>Precedent Transactions ("deal comps")</b>. The philosophy: similar assets should trade at similar multiples of a common value driver (earnings, EBITDA, book value, sales).</li>
+  <li><b>Asset-based (cost) valuation</b> — value a business as the sum of its assets minus its liabilities, at market or replacement value rather than book. Used for holding companies, real-estate-heavy firms, liquidation scenarios, and financial institutions where the balance sheet <i>is</i> the business. Net Asset Value (NAV) and liquidation value sit here.</li>
+</ul>
+
+<div class="keytake"><b>Key takeaways:</b> Intrinsic asks "what is it worth on its own fundamentals?" Relative asks "what are similar things selling for?" Asset-based asks "what would it cost to rebuild or what would it fetch broken up?" A credible valuation triangulates across at least two families and explains any large gap between them.</div>
+
+<h3>1.2 When each approach is appropriate</h3>
+<table>
+  <thead><tr><th>Approach</th><th>Best suited to</th><th>Struggles with</th></tr></thead>
+  <tbody>
+    <tr><td>DCF (intrinsic)</td><td>Stable, cash-generative, forecastable firms (FMCG, utilities, mature IT services); situations where you have a thesis on fundamentals; long-horizon investors</td><td>Early-stage / pre-revenue firms; highly cyclical or commodity names; anything where the terminal value dominates and inputs are guesses</td></tr>
+    <tr><td>Trading comps (relative)</td><td>Sectors with several genuinely comparable listed peers; quick market-based reads; sanity-checking a DCF</td><td>Firms with no clean peers; when the whole sector is mis-priced (comps inherit the market's mood)</td></tr>
+    <tr><td>Precedent transactions</td><td>M&amp;A / control situations; establishing what an acquirer would pay including a premium</td><td>Thin deal history; stale deals struck in different market conditions; disclosure gaps in India</td></tr>
+    <tr><td>Asset-based / NAV</td><td>Holding companies, REITs / real estate, investment companies, distressed / liquidation, banks &amp; NBFCs (adjusted book)</td><td>Asset-light, brand- or IP-driven businesses where value is not on the balance sheet</td></tr>
+  </tbody>
+</table>
+
+<div class="trap"><b>Common trap:</b> Treating one method as "the answer." Sell-side research and bankers present a <i>range</i> from multiple methods (the football field). If your DCF says INR 1,200 and comps say INR 700, the interviewer wants to hear <i>why</i> — not a single point estimate delivered with false confidence.</div>
+
+<h3>1.3 A vocabulary you must be fluent in</h3>
+<ul>
+  <li><b>Enterprise Value (EV)</b> — the value of the entire operating business, available to <i>all</i> capital providers (debt + equity). Capital-structure independent in principle.</li>
+  <li><b>Equity Value (market cap for a listed firm)</b> — the value belonging to shareholders only, after debt-holders are paid.</li>
+  <li><b>Unlevered vs levered cash flow</b> — unlevered (FCFF) is before financing (available to everyone); levered (FCFE) is after interest and debt movements (available to equity only).</li>
+  <li><b>Multiple</b> — a ratio of value (EV or Equity) to a value driver (EBITDA, EBIT, earnings, sales, book). A shorthand for the market's implied growth and risk expectations.</li>
+  <li><b>Control premium</b> — the extra a buyer pays over the traded price to own and direct the whole company.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 class="sec">2. Enterprise Value vs Equity Value — the Bridge</h2>
+
+<p>This is the single most tested concept in valuation interviews, because almost every mistake candidates make downstream traces back to confusing the two. Learn the bridge cold.</p>
+
+<h3>2.1 The definitions</h3>
+<p><b>Equity Value</b> is what the owners of the shares own. For a listed company it is simply the share price times the fully diluted share count — the <b>market capitalisation</b>. It is a claim that sits <i>behind</i> the debt: equity holders are paid last.</p>
+<p><b>Enterprise Value</b> is the value of the core operating business as a whole. Think of it as the takeover value: if you bought the entire company, EV is the total you'd effectively fund to own the operations free and clear — you'd pay for the equity, take on (repay) the debt, but you'd get to keep the cash on the balance sheet.</p>
+
+<div class="formula"><b>The EV ↔ Equity Bridge</b><br>
+EV = Equity Value + Total Debt + Preferred Stock + Minority Interest − Cash &amp; Cash Equivalents
+<div class="where">where: Total Debt = short- + long-term interest-bearing debt (incl. finance leases); Preferred = preference share capital; Minority (Non-Controlling) Interest = value of the portion of consolidated subsidiaries the parent does not own; Cash = cash + liquid investments not needed for operations. The bundle "Total Debt + Preferred + Minority − Cash" is called <b>Net Debt (broadly defined)</b> or the <b>net debt-like items</b>.</div>
+</div>
+
+<div class="formula"><b>Rearranged (the direction you use in a DCF)</b><br>
+Equity Value = EV − Total Debt − Preferred − Minority Interest + Cash
+<div class="where">This is the per-share bridge: a DCF of FCFF gives you EV, then you subtract net debt-like items to reach equity value, then divide by shares.</div>
+</div>
+
+<h3>2.2 Why add debt and subtract cash?</h3>
+<ul>
+  <li><b>Add debt:</b> a buyer of the whole firm inherits the obligation to repay lenders, so that claim is part of the total price of the enterprise. Debt is value that belongs to lenders, not the equity, but it is still part of the enterprise.</li>
+  <li><b>Subtract cash:</b> cash is not part of the <i>operating</i> business — it could be paid out to the buyer on day one, effectively reducing the net cost of the acquisition. Two identical operating businesses, one holding INR 100 cr more cash, should have the same EV but the cash-rich one has INR 100 cr more equity value.</li>
+  <li><b>Add minority interest:</b> under consolidation the parent reports 100% of a subsidiary's EBITDA/revenue even if it owns, say, 70%. To keep the numerator (EV) and denominator (fully-consolidated EBITDA) consistent, you add back the value of the 30% it doesn't own.</li>
+  <li><b>Subtract associates / investments in unconsolidated entities</b> (a refinement): their earnings are <i>not</i> in consolidated EBITDA, so their value should be stripped out of EV when comparing to consolidated operating metrics.</li>
+</ul>
+
+<div class="example">
+  <div class="ex-h">Worked Example 1 — Building EV from the market</div>
+  <p>Company A (listed on NSE): share price INR 500, fully diluted shares 20 crore. On the balance sheet: term loans INR 1,500 cr, cash &amp; liquid mutual funds INR 400 cr, preference shares INR 100 cr, minority interest INR 200 cr.</p>
+  <p><b>Equity Value (market cap)</b> = 500 × 20 cr = INR 10,000 cr</p>
+  <p><b>EV</b> = 10,000 + 1,500 (debt) + 100 (pref) + 200 (minority) − 400 (cash) = <b>INR 11,400 cr</b></p>
+  <p>Interpretation: the market values the equity at INR 10,000 cr, but to own the whole operating enterprise you effectively "pay" INR 11,400 cr because you take on net debt-like claims of INR 1,400 cr.</p>
+</div>
+
+<h3>2.3 Which multiples pair with which value</h3>
+<p>The cardinal rule: <b>the numerator and denominator must be claimed by the same investors.</b> EV is claimed by all capital providers, so EV pairs with metrics computed <i>before</i> any payment to debt or equity (EBITDA, EBIT, revenue, unlevered FCF). Equity value is claimed by shareholders only, so it pairs with metrics computed <i>after</i> interest (net income, EPS, book value of equity, levered FCF).</p>
+
+<table>
+  <thead><tr><th>Enterprise Value multiples (pre-financing metrics)</th><th>Equity Value multiples (post-financing metrics)</th></tr></thead>
+  <tbody>
+    <tr><td>EV / Revenue (Sales)</td><td>P / E (Price ÷ EPS)</td></tr>
+    <tr><td>EV / EBITDA</td><td>P / B (Price ÷ Book Value per share)</td></tr>
+    <tr><td>EV / EBIT</td><td>P / S (rare; use EV/Sales instead — see trap)</td></tr>
+    <tr><td>EV / (unlevered) FCF</td><td>P / (levered) FCF, Dividend Yield, PEG</td></tr>
+  </tbody>
+</table>
+
+<div class="trap"><b>Common trap — the mismatch error:</b> Putting an equity metric under EV (e.g. <b>EV/Net Income</b> or <b>EV/EPS</b>) or an enterprise metric under price (e.g. <b>P/EBITDA</b>). This double-counts or omits the debt claim and is instantly wrong. Net income is <i>after</i> interest — it belongs to equity — so it can never sit under EV. EBITDA is <i>before</i> interest — it belongs to everyone — so it can never sit under price. If an interviewer offers you a multiple, silently check: "Is the top and bottom claimed by the same people?"</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">3. Discounted Cash Flow (DCF): The Full Machine</h2>
+
+<p>The DCF is the purest expression of intrinsic value: a business is worth the sum of the cash it will hand its investors, each future rupee discounted back to today because a rupee tomorrow is worth less than a rupee now (time value + risk). Everything else in this section is mechanics in service of that one idea.</p>
+
+<h3>3.1 The master equation</h3>
+<div class="formula"><b>DCF — general form</b><br>
+Value = &Sigma;<sub>t=1..n</sub> [ CF<sub>t</sub> / (1 + r)<sup>t</sup> ] + [ TV<sub>n</sub> / (1 + r)<sup>n</sup> ]
+<div class="where">where: CF<sub>t</sub> = free cash flow in year t of the explicit forecast; r = discount rate appropriate to that cash flow (WACC for FCFF, cost of equity for FCFE); n = length of explicit forecast (typically 5–10 years); TV<sub>n</sub> = terminal value capturing all cash flows beyond year n.</div>
+</div>
+
+<h3>3.2 The two flavours — the choice that governs everything</h3>
+<p>There are two internally-consistent ways to run a DCF, and you must never mix them:</p>
+<table>
+  <thead><tr><th></th><th>FCFF (Unlevered) DCF</th><th>FCFE (Levered) DCF</th></tr></thead>
+  <tbody>
+    <tr><td>Cash flow discounted</td><td>Free Cash Flow to the <b>Firm</b> — before financing, available to debt + equity</td><td>Free Cash Flow to <b>Equity</b> — after interest &amp; debt movements, for shareholders only</td></tr>
+    <tr><td>Discount rate</td><td><b>WACC</b> (blended cost of debt + equity)</td><td><b>Cost of Equity</b> only</td></tr>
+    <tr><td>Output of the sum</td><td><b>Enterprise Value</b> → then bridge to equity</td><td><b>Equity Value</b> directly</td></tr>
+    <tr><td>When preferred</td><td>Default for corporates; capital-structure-neutral; industry standard</td><td>Banks, financials, and cases where leverage is the whole story</td></tr>
+  </tbody>
+</table>
+
+<div class="trap"><b>The cardinal DCF trap:</b> discounting FCFF at the cost of equity, or FCFE at WACC. FCFF is claimed by everyone → discount at everyone's blended cost (WACC). FCFE is claimed by equity only → discount at equity's cost. Mixing them either double-counts the tax shield or mis-states risk. Interviewers set this trap constantly; if you take nothing else from this guide, take this.</div>
+
+<h3>3.3 The seven steps of a DCF (the "walk me through it" skeleton)</h3>
+<ol>
+  <li><b>Project unlevered free cash flow</b> (FCFF) for an explicit period, usually 5–10 years, off a revenue and margin forecast.</li>
+  <li><b>Estimate the discount rate</b> (WACC) reflecting the riskiness and capital mix of the firm.</li>
+  <li><b>Discount each year's FCFF</b> to present value using WACC (optionally with the mid-year convention).</li>
+  <li><b>Estimate terminal value</b> at the end of the explicit period, via Gordon growth or an exit multiple.</li>
+  <li><b>Discount the terminal value</b> back to today.</li>
+  <li><b>Sum</b> the PV of explicit FCFF + PV of terminal value = <b>Enterprise Value</b>.</li>
+  <li><b>Bridge EV to equity value</b> (subtract net debt, preferred, minorities; add cash), then divide by diluted shares for <b>intrinsic value per share</b>. Finish with a <b>sensitivity</b> on WACC and growth.</li>
+</ol>
+
+<div class="keytake"><b>Key takeaways:</b> The DCF is only ever as good as its assumptions — "garbage in, garbage out." Two figures usually dominate the answer: the <b>discount rate</b> and the <b>terminal value assumption</b> (terminal growth or exit multiple). Expect every serious interviewer to probe those two.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">4. Building Free Cash Flow (FCFF and FCFE)</h2>
+
+<p>Free cash flow is the cash a business throws off after paying to keep itself running and growing — not accounting profit, but genuinely distributable cash. You can build it from several starting points; know all of them because interviewers pick whichever line item they hand you.</p>
+
+<h3>4.1 FCFF — the canonical build from EBIT</h3>
+<div class="formula"><b>FCFF from EBIT</b><br>
+FCFF = EBIT × (1 − Tax rate) + D&amp;A − Capex − &Delta;NWC
+<div class="where">where: EBIT = operating profit (earnings before interest &amp; tax); EBIT × (1 − t) = <b>NOPAT</b> (net operating profit after tax) — note we tax EBIT directly so no interest tax-shield leaks in; D&amp;A = depreciation &amp; amortisation (non-cash, added back); Capex = capital expenditure (cash out); &Delta;NWC = increase in non-cash net working capital (cash tied up in receivables + inventory − payables). An <i>increase</i> in NWC consumes cash, hence the minus sign.</div>
+</div>
+
+<h3>4.2 FCFF from EBITDA and from Net Income</h3>
+<div class="formula"><b>FCFF from EBITDA</b><br>
+FCFF = EBITDA − Taxes on EBIT − Capex − &Delta;NWC
+<div class="where">Because EBITDA already includes D&amp;A add-back implicitly (EBITDA = EBIT + D&amp;A), you don't add D&amp;A again; you only subtract the cash taxes (computed on EBIT, i.e. after D&amp;A as a tax deduction). Cross-check: EBITDA − D&amp;A = EBIT.</div>
+</div>
+<div class="formula"><b>FCFF from Net Income (unlever it back up)</b><br>
+FCFF = Net Income + Interest × (1 − t) + D&amp;A − Capex − &Delta;NWC
+<div class="where">Start from net income (which is <i>after</i> interest), then add back the after-tax interest to remove the effect of financing and return to a firm-level (unlevered) number.</div>
+</div>
+
+<h3>4.3 FCFE — the equity-only build</h3>
+<div class="formula"><b>FCFE from Net Income</b><br>
+FCFE = Net Income + D&amp;A − Capex − &Delta;NWC + Net Borrowing
+<div class="where">where: Net Borrowing = new debt raised − debt repaid. Because FCFE is what's left for equity <i>after</i> lenders are served, interest is already deducted (it's inside net income) and we add back net new debt (cash in from lenders) / subtract repayments (cash out to lenders).</div>
+</div>
+<div class="formula"><b>FCFE from FCFF (the link)</b><br>
+FCFE = FCFF − Interest × (1 − t) + Net Borrowing
+<div class="where">Take the firm cash flow, pay lenders their after-tax interest, then adjust for net new debt. If a firm has no debt, FCFF = FCFE and WACC = cost of equity.</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 2 — FCFF three ways (they must agree)</div>
+  <p>Given for FY26 (INR cr): EBIT 1,000; tax rate 25%; D&amp;A 200; Capex 300; increase in NWC 50; interest expense 120; net income = (EBIT − interest) × (1 − t) = (1,000 − 120) × 0.75 = 660.</p>
+  <p><b>From EBIT:</b> 1,000 × 0.75 + 200 − 300 − 50 = 750 + 200 − 300 − 50 = <b>600</b></p>
+  <p><b>From Net Income:</b> 660 + 120 × 0.75 + 200 − 300 − 50 = 660 + 90 + 200 − 300 − 50 = <b>600</b> ✓</p>
+  <p><b>From EBITDA:</b> EBITDA = EBIT + D&amp;A = 1,200. Taxes on EBIT = 1,000 × 25% = 250. FCFF = 1,200 − 250 − 300 − 50 = <b>600</b> ✓</p>
+  <p>All three routes reconcile to FCFF = INR 600 cr, as they must. The FCFE for the same year (say net borrowing = +80): FCFE = 600 − 90 + 80 = INR 590 cr.</p>
+</div>
+
+<div class="trap"><b>Common trap — the interest tax shield:</b> When building FCFF, tax EBIT directly (EBIT × (1−t)). Do <i>not</i> use the actual tax bill from the P&amp;L, because that reflects the tax saved on interest (the "tax shield"). In an FCFF/WACC valuation, the tax shield is captured inside WACC via the after-tax cost of debt. Counting it in both the cash flow <i>and</i> the discount rate double-counts it.</div>
+
+<h3>4.4 Working capital and capex — where cash hides</h3>
+<ul>
+  <li><b>&Delta;NWC:</b> Growing firms tie up cash in receivables and inventory faster than they stretch payables — so growth <i>consumes</i> working capital, dragging FCF below profit. This is why a fast-growing company can be highly profitable yet cash-hungry.</li>
+  <li><b>Capex:</b> Split conceptually into <i>maintenance</i> capex (keeps the lights on) and <i>growth</i> capex (expands capacity). In steady state, capex should roughly track D&amp;A; if your terminal year has capex far below D&amp;A, you are implicitly assuming the asset base shrinks — usually a red flag.</li>
+  <li><b>D&amp;A:</b> A non-cash charge; added back because it reduced accounting profit but no cash left the building. But it is a proxy for the real cost of asset consumption, which capex ultimately funds.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 class="sec">5. Forecasting the Explicit Period</h2>
+
+<p>The explicit period (usually 5, sometimes 10 years) is where you encode your actual view of the business. Beyond it, you trust the terminal value. The art is building a forecast that is <b>internally consistent</b> and <b>converges to a sustainable steady state</b> by the final year.</p>
+
+<h3>5.1 The revenue-to-FCF build order</h3>
+<ol>
+  <li><b>Revenue</b> — the top of the funnel. Drive it with volume × price, or growth rates, or a market-size × share approach. Ground it: a firm cannot grow 30% forever; growth should decay toward GDP-like rates by the terminal year.</li>
+  <li><b>EBIT / EBITDA margin</b> — apply an operating margin, ideally trending toward a defensible long-run level (operating leverage may lift it early; competition erodes it late).</li>
+  <li><b>Taxes</b> — on EBIT, at the marginal/effective rate (India headline corporate rate for a domestic manufacturer under the concessional regime is illustratively ~25% all-in; confirm the regime the company uses).</li>
+  <li><b>Reinvestment</b> — capex and &Delta;NWC, tied to growth. A useful discipline: reinvestment rate = (Capex − D&amp;A + &Delta;NWC) / NOPAT, and growth ≈ reinvestment rate × return on capital.</li>
+</ol>
+
+<div class="formula"><b>The growth–reinvestment–return identity</b><br>
+Expected growth in NOPAT = Reinvestment Rate × Return on Invested Capital (ROIC)
+<div class="where">where: Reinvestment Rate = net reinvestment / NOPAT; ROIC = NOPAT / Invested Capital. This ties your growth assumption to how much you reinvest and how well you deploy it — a firm cannot grow fast <i>and</i> reinvest little <i>and</i> earn low returns. Interviewers love catching forecasts that violate this.</div>
+</div>
+
+<h3>5.2 Length of the explicit period</h3>
+<ul>
+  <li><b>5 years</b> — default for a mature, stable business.</li>
+  <li><b>10 years (or a two-stage / three-stage model)</b> — for high-growth firms that need time to fade to a steady state. If you cut off at year 5 while the firm is still growing 20%, the terminal value will be absurd.</li>
+  <li>The rule: extend the explicit period until the firm reaches a <b>sustainable, mature state</b> — stable margins, growth near the long-run economy rate, capex ≈ D&amp;A. Only then is the terminal-value math valid.</li>
+</ul>
+
+<div class="trap"><b>Common trap — terminal year not in steady state:</b> The Gordon growth formula assumes the terminal-year cash flow is <i>normalised and sustainable forever</i>. If your terminal year still has 15% growth, depressed margins, or capex below D&amp;A, the perpetuity built on it is nonsense. Always "normalise" the final explicit year before capitalising it.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">6. The Discount Rate: WACC and Cost of Equity</h2>
+
+<p>The discount rate converts future rupees to today's rupees and bakes in risk. Higher risk → higher rate → lower value. For an FCFF DCF you use WACC; for FCFE you use the cost of equity.</p>
+
+<h3>6.1 WACC</h3>
+<div class="formula"><b>Weighted Average Cost of Capital</b><br>
+WACC = (E / V) × K<sub>e</sub> + (D / V) × K<sub>d</sub> × (1 − t)
+<div class="where">where: E = market value of equity; D = market value of debt; V = E + D; K<sub>e</sub> = cost of equity; K<sub>d</sub> = pre-tax cost of debt; t = marginal tax rate. The (1 − t) makes debt cheaper because interest is tax-deductible — the <b>tax shield</b>. Weights should be <b>target/market-value</b> weights, not book.</div>
+</div>
+
+<h3>6.2 Cost of equity via CAPM</h3>
+<div class="formula"><b>Capital Asset Pricing Model (CAPM)</b><br>
+K<sub>e</sub> = R<sub>f</sub> + &beta; × (R<sub>m</sub> − R<sub>f</sub>)
+<div class="where">where: R<sub>f</sub> = risk-free rate (in India, the ~10-year G-Sec yield); &beta; = beta, the stock's sensitivity to market moves (1.0 = moves with the market); (R<sub>m</sub> − R<sub>f</sub>) = equity risk premium (ERP), the extra return demanded over the risk-free rate for bearing equity risk. For India an ERP in the region of 5.5%–7.5% is commonly used illustratively — confirm the number, don't assert it as fact.</div>
+</div>
+
+<h3>6.3 Cost of debt and levering beta</h3>
+<ul>
+  <li><b>Cost of debt (K<sub>d</sub>):</b> the rate the firm actually borrows at today — use the yield on its outstanding bonds, or the risk-free rate + a credit spread reflecting its rating. Then tax-affect it: after-tax K<sub>d</sub> = K<sub>d</sub> × (1 − t).</li>
+  <li><b>Beta:</b> a levered stock's observed (equity) beta reflects both business risk and financial risk. To value with a different capital structure, you <b>unlever</b> the beta (strip out financial risk) and <b>relever</b> at the target structure.</li>
+</ul>
+<div class="formula"><b>Hamada — unlevering / relevering beta</b><br>
+&beta;<sub>unlevered</sub> = &beta;<sub>levered</sub> / [ 1 + (1 − t) × (D / E) ]
+<div class="where">Relever with the target D/E: &beta;<sub>levered</sub> = &beta;<sub>unlevered</sub> × [1 + (1 − t) × (D/E)]. Use this when a company's current leverage differs from the peer-derived beta or its target structure. More debt → higher levered beta → higher cost of equity.</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 3 — Computing WACC</div>
+  <p>Assume (illustratively): R<sub>f</sub> = 7.0% (10-yr G-Sec), ERP = 6.0%, levered β = 1.1, pre-tax K<sub>d</sub> = 9.0%, tax = 25%. Capital structure at market: equity INR 8,000 cr, debt INR 2,000 cr (so E/V = 80%, D/V = 20%).</p>
+  <p><b>Cost of equity</b> = 7.0% + 1.1 × 6.0% = 7.0% + 6.6% = <b>13.6%</b></p>
+  <p><b>After-tax cost of debt</b> = 9.0% × (1 − 0.25) = <b>6.75%</b></p>
+  <p><b>WACC</b> = 0.80 × 13.6% + 0.20 × 6.75% = 10.88% + 1.35% = <b>12.23%</b></p>
+  <p>We'll use ~12% as the discount rate for the mini-DCF in Example 5.</p>
+</div>
+
+<div class="trap"><b>Common trap — book weights &amp; stale betas:</b> Using book value of equity in WACC weights (use <i>market</i> cap), or plugging a raw regression beta without sanity-checking it against peers. Also: a firm with <i>net cash</i> can have a WACC very close to its cost of equity — don't force a debt weight that isn't there.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">7. Terminal Value: Gordon Growth vs Exit Multiple</h2>
+
+<p>The terminal value (TV) captures every cash flow beyond the explicit forecast — and in most DCFs it is the <b>majority of total value</b> (often 60–80%). Because it dominates, interviewers probe it hard. There are two standard methods; a good analyst computes both and checks they roughly agree.</p>
+
+<h3>7.1 Method 1 — Gordon Growth (perpetuity growth)</h3>
+<div class="formula"><b>Terminal Value — Gordon Growth</b><br>
+TV<sub>n</sub> = [ FCFF<sub>n</sub> × (1 + g) ] / (WACC − g)
+<div class="where">where: FCFF<sub>n</sub> = normalised final-year free cash flow; g = perpetual growth rate of FCF forever after year n; WACC − g = the "capitalisation rate." For FCFE, replace WACC with cost of equity and FCFF with FCFE. TV<sub>n</sub> is a value <i>as at year n</i> and must still be discounted back n years.</div>
+</div>
+<p><b>Choosing g:</b> the perpetual growth rate cannot exceed the long-run growth rate of the economy the firm operates in — otherwise the firm eventually becomes larger than the whole economy, which is impossible. In practice g is anchored to expected long-run nominal GDP growth (for India, illustratively a mid-single-digit real rate plus inflation; many analysts use a terminal g in the ~4%–6% region — confirm, don't assert). A common conservative choice is inflation-only or GDP-minus.</p>
+
+<h3>7.2 Method 2 — Exit Multiple</h3>
+<div class="formula"><b>Terminal Value — Exit Multiple</b><br>
+TV<sub>n</sub> = Terminal-year metric × Exit multiple &nbsp;(e.g. EBITDA<sub>n</sub> × EV/EBITDA)
+<div class="where">Apply a sensible steady-state EV/EBITDA (or EV/EBIT) multiple — usually the current trading multiple of mature peers — to the terminal-year metric. This produces an EV directly at year n, again discounted back n years. Because you used EBITDA (an EV metric), the TV is an enterprise-level figure, consistent with an FCFF DCF.</div>
+</div>
+
+<h3>7.3 Cross-checking the two — the implied check</h3>
+<p>The disciplined move: compute TV both ways and back out the implied assumption of each.</p>
+<ul>
+  <li>From an exit multiple, back out the <i>implied g</i> (rearrange Gordon growth). If it implies g = 9% when GDP grows 6%, your exit multiple is too rich.</li>
+  <li>From a Gordon-growth TV, back out the <i>implied exit multiple</i> (TV ÷ terminal EBITDA). If it implies 30× when peers trade at 12×, your g is too high.</li>
+</ul>
+
+<div class="example">
+  <div class="ex-h">Worked Example 4 — Terminal value both ways, and the reconciliation</div>
+  <p>Terminal-year (year 5) figures: FCFF₅ = INR 900 cr; EBITDA₅ = INR 1,800 cr. WACC = 12%. Assume g = 5%; assume mature-peer exit multiple = 10× EV/EBITDA.</p>
+  <p><b>Gordon growth TV:</b> = 900 × (1.05) / (0.12 − 0.05) = 945 / 0.07 = <b>INR 13,500 cr</b></p>
+  <p><b>Exit multiple TV:</b> = 1,800 × 10 = <b>INR 18,000 cr</b></p>
+  <p><b>Reconcile — implied g from the exit multiple:</b> Set 18,000 = 900 × (1+g)/(0.12 − g). Solving: 18,000 × (0.12 − g) = 900 + 900g → 2,160 − 18,000g = 900 + 900g → 1,260 = 18,900g → g ≈ <b>6.7%</b>. So the 10× exit multiple implies ~6.7% perpetual growth vs our 5% assumption — the exit multiple is a touch more optimistic. </p>
+  <p><b>Implied exit multiple from Gordon:</b> 13,500 / 1,800 = <b>7.5×</b>. So a 5% perpetual growth assumption is equivalent to buying the terminal business at 7.5× EBITDA. The two methods bracket a range; a defensible TV sits between them, and you'd discuss which anchor you trust more given the sector.</p>
+</div>
+
+<div class="trap"><b>Common trap — the terminal value tail wagging the dog:</b> If TV is 85%+ of EV, your DCF is really just a bet on one perpetuity assumption dressed up as a five-year model. Interviewers ask: "What % of your value is terminal?" A high number isn't automatically wrong (real businesses do have long lives), but you must acknowledge it and stress-test g / the exit multiple.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">8. Discounting, Mid-Year Convention &amp; the Equity Bridge</h2>
+
+<h3>8.1 Discount factors</h3>
+<div class="formula"><b>Discount factor and present value</b><br>
+DF<sub>t</sub> = 1 / (1 + r)<sup>t</sup> &nbsp; ; &nbsp; PV = CF<sub>t</sub> × DF<sub>t</sub>
+<div class="where">Each year's cash flow and the terminal value are multiplied by the discount factor for their period. Standard convention assumes cash flows arrive at year-<i>end</i>.</div>
+</div>
+
+<h3>8.2 Mid-year convention</h3>
+<p>In reality cash flows dribble in throughout the year, not in a lump on 31 March. The <b>mid-year convention</b> assumes cash arrives at the <i>middle</i> of each year, so you discount for half a year less: use exponents 0.5, 1.5, 2.5, … instead of 1, 2, 3, …</p>
+<div class="formula"><b>Mid-year discount factor</b><br>
+DF<sub>t</sub> = 1 / (1 + r)<sup>(t − 0.5)</sup>
+<div class="where">Because you discount for less time, mid-year convention <b>raises</b> the valuation modestly vs year-end. The terminal value's treatment depends on the TV method: a Gordon-growth TV is typically discounted at t − 0.5 as well; an exit-multiple TV is often discounted at full period t (this is a modelling-convention nuance interviewers occasionally probe).</div>
+</div>
+
+<h3>8.3 The full bridge to per-share value</h3>
+<p>Once you sum PV(explicit FCFF) + PV(TV) you have <b>Enterprise Value</b>. Walk it down:</p>
+<div class="formula"><b>EV → Equity Value → per share</b><br>
+Equity Value = EV − Net Debt − Preferred − Minority Interest + Investments/Associates<br>
+Value per share = Equity Value / Fully Diluted Shares
+<div class="where">Net Debt = total debt − cash. Add back the market value of non-operating assets (surplus land, associate stakes, strategic investments) not captured in operating FCF. Use fully diluted shares (treasury-stock method for options/warrants; include convertibles as appropriate).</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 5 — A complete mini-DCF (FCFF), end to end</div>
+  <p><b>Assumptions.</b> Explicit FCFF (INR cr): Y1 500, Y2 560, Y3 620, Y4 680, Y5 740. WACC = 12%. Terminal growth g = 5%. Year-end discounting. Balance sheet: total debt INR 1,200 cr, cash INR 300 cr, minority interest INR 100 cr, no preferred. Diluted shares = 40 cr.</p>
+  <p><b>Step 1 — discount the explicit FCFF (DF = 1/1.12^t):</b></p>
+  <table>
+    <thead><tr><th>Year</th><th>FCFF</th><th>DF @12%</th><th>PV</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>500</td><td>0.8929</td><td>446.4</td></tr>
+      <tr><td>2</td><td>560</td><td>0.7972</td><td>446.4</td></tr>
+      <tr><td>3</td><td>620</td><td>0.7118</td><td>441.3</td></tr>
+      <tr><td>4</td><td>680</td><td>0.6355</td><td>432.1</td></tr>
+      <tr><td>5</td><td>740</td><td>0.5674</td><td>419.9</td></tr>
+      <tr><td colspan="3"><b>Sum PV of explicit FCFF</b></td><td><b>2,186.1</b></td></tr>
+    </tbody>
+  </table>
+  <p><b>Step 2 — terminal value (Gordon):</b> TV₅ = 740 × 1.05 / (0.12 − 0.05) = 777 / 0.07 = INR 11,100 cr.</p>
+  <p><b>Step 3 — discount TV back 5 years:</b> PV(TV) = 11,100 × 0.5674 = INR 6,298.1 cr.</p>
+  <p><b>Step 4 — Enterprise Value:</b> EV = 2,186.1 + 6,298.1 = <b>INR 8,484 cr</b>. (Terminal value is 6,298 / 8,484 ≈ <b>74%</b> of EV — high but not unusual; flag it.)</p>
+  <p><b>Step 5 — bridge to equity:</b> Equity = 8,484 − 1,200 (debt) + 300 (cash) − 100 (minority) = <b>INR 7,484 cr</b>.</p>
+  <p><b>Step 6 — per share:</b> 7,484 / 40 = <b>INR 187 per share</b>. Compare to the market price to form a view (upside / downside), then run a sensitivity (next section).</p>
+</div>
+
+<div class="trap"><b>Common trap — forgetting to discount the terminal value:</b> TV computed by Gordon growth is a lump sum <i>as at year n</i>, not today. You must still multiply it by the year-n discount factor. Adding an undiscounted TV to discounted explicit flows over-values the firm massively. Equally common: discounting the TV by n+1 years, or by n years when using mid-year on the explicit period — keep the period consistent.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">9. DCF Sensitivity &amp; When DCF Breaks Down</h2>
+
+<h3>9.1 Sensitivity analysis — the mandatory finish</h3>
+<p>Because value pivots on WACC and g, you never present a single number — you present a grid. Small moves in the capitalisation rate (WACC − g) swing value a lot, precisely because the terminal value's denominator is small.</p>
+
+<div class="example">
+  <div class="ex-h">Worked Example 6 — Sensitivity grid (per-share value, INR)</div>
+  <p>Re-running the Example 5 DCF while flexing WACC (columns) and terminal g (rows) produces a table like the one below (illustrative values, same structure and bridge as Example 5):</p>
+  <table>
+    <thead><tr><th>g ↓ / WACC →</th><th>11.0%</th><th>12.0%</th><th>13.0%</th></tr></thead>
+    <tbody>
+      <tr><td>4.0%</td><td>195</td><td>171</td><td>152</td></tr>
+      <tr><td>5.0%</td><td>216</td><td>187</td><td>164</td></tr>
+      <tr><td>6.0%</td><td>244</td><td>207</td><td>179</td></tr>
+    </tbody>
+  </table>
+  <p><b>Read it:</b> a 1% change in either WACC or g moves the value by roughly INR 15–30 per share — that is the whole point of showing the grid. The base case (12% / 5%) gives INR 187; the "sensible range" is perhaps INR 164–216. Notice value rises as g rises and as WACC falls, and the cells are most sensitive where WACC − g is smallest (top-left region).</p>
+</div>
+
+<div class="trap"><b>Common trap — a WACC−g spread that is too tight:</b> If WACC = 11% and g = 9%, the denominator is 2% and the TV explodes; a 0.5% error in either input can double or halve the value. Keep a sane spread (commonly the denominator stays comfortably above ~4–5%). If your model needs a razor-thin spread to justify the price, the model — not the market — is probably wrong.</div>
+
+<h3>9.2 When is DCF unreliable?</h3>
+<ul>
+  <li><b>Early-stage / pre-profit firms:</b> no positive FCF for years; value is almost all terminal and speculative.</li>
+  <li><b>Cyclicals &amp; commodities:</b> earnings swing wildly; the terminal year is impossible to "normalise" honestly. Comps on mid-cycle earnings often beat a DCF here.</li>
+  <li><b>Financial institutions (banks/NBFCs):</b> debt <i>is</i> raw material, FCFF is ill-defined; use FCFE / DDM / adjusted book instead.</li>
+  <li><b>Firms in distress or rapid structural change:</b> the past does not forecast the future; going-concern assumptions may fail.</li>
+  <li><b>Anything where TV is ~90%+ of value:</b> the DCF is a terminal-value guess with decorative early years.</li>
+</ul>
+
+<div class="keytake"><b>Key takeaways:</b> DCF is theoretically the "right" method — it values the business on its own cash — but it is only as trustworthy as its inputs, and it concentrates risk in two assumptions (discount rate, terminal value). Use it where cash flows are forecastable, cross-check with comps, and always show a sensitivity range rather than a false-precision point estimate.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">10. Trading Comparables (Comps)</h2>
+
+<p>Relative valuation asks a simpler question than DCF: "What is the market paying for businesses like this one, right now?" You build a peer set, compute their multiples, and apply a representative multiple to your target's metric.</p>
+
+<h3>10.1 The four steps of a comps analysis</h3>
+<ol>
+  <li><b>Select the peer set</b> — companies genuinely comparable in business model, sector, size, growth, margins, geography, and capital intensity. Quality beats quantity: five true peers beat fifteen loose ones.</li>
+  <li><b>Spread the financials</b> — gather each peer's EV, equity value, and the metrics (EBITDA, EBIT, revenue, EPS, book value), on a <b>consistent basis</b> (see calendarisation and LTM below). Clean for one-offs / exceptionals.</li>
+  <li><b>Compute the multiples</b> and summarise the set — typically the <b>median</b> and the interquartile range (the mean is distorted by outliers).</li>
+  <li><b>Apply</b> a chosen multiple (median, or a premium/discount reflecting the target's relative quality) to the target's metric to derive implied EV or equity value.</li>
+</ol>
+
+<h3>10.2 Calendarisation and LTM</h3>
+<ul>
+  <li><b>LTM / TTM (Last / Trailing Twelve Months):</b> to value on actual recent performance rather than a stale fiscal year, compute LTM = most recent full year + latest interim stub − corresponding prior-year stub. This gives a rolling 12-month figure.</li>
+  <li><b>Calendarisation:</b> Indian firms with a March year-end can't be compared apples-to-apples with a December year-end peer. Adjust each to a common period (e.g. calendar year) by weighting the relevant fiscal years, so all multiples reflect the same window.</li>
+  <li><b>Forward multiples:</b> markets are forward-looking, so EV/EBITDA (FY+1) or forward P/E are widely quoted. A forward multiple embeds expected growth and is often more meaningful than trailing.</li>
+</ul>
+
+<div class="example">
+  <div class="ex-h">Worked Example 7 — Building and applying a comps table</div>
+  <p>Peer set for a mid-cap Indian consumer firm (illustrative figures, INR cr):</p>
+  <table>
+    <thead><tr><th>Peer</th><th>EV</th><th>EBITDA</th><th>EV/EBITDA</th><th>Equity Val</th><th>Net Income</th><th>P/E</th></tr></thead>
+    <tbody>
+      <tr><td>Peer A</td><td>12,000</td><td>1,000</td><td>12.0×</td><td>10,500</td><td>525</td><td>20.0×</td></tr>
+      <tr><td>Peer B</td><td>18,000</td><td>1,400</td><td>12.9×</td><td>16,000</td><td>640</td><td>25.0×</td></tr>
+      <tr><td>Peer C</td><td>9,000</td><td>820</td><td>11.0×</td><td>7,800</td><td>360</td><td>21.7×</td></tr>
+      <tr><td>Peer D</td><td>15,000</td><td>1,150</td><td>13.0×</td><td>13,200</td><td>600</td><td>22.0×</td></tr>
+      <tr><td colspan="2"><b>Median</b></td><td></td><td><b>12.5×</b></td><td></td><td></td><td><b>21.9×</b></td></tr>
+    </tbody>
+  </table>
+  <p><b>Target</b> (to be valued): EBITDA INR 900 cr, net income INR 450 cr, net debt INR 800 cr, shares 30 cr.</p>
+  <p><b>Via EV/EBITDA (median 12.5×):</b> Implied EV = 900 × 12.5 = 11,250 cr → Equity = 11,250 − 800 = 10,450 cr → per share = 10,450 / 30 = <b>INR 348</b>.</p>
+  <p><b>Via P/E (median 21.9×):</b> Implied equity = 450 × 21.9 = 9,855 cr → per share = 9,855 / 30 = <b>INR 329</b>.</p>
+  <p>The two multiples bracket INR 329–348. The gap reflects the target's capital structure and tax vs peers; you'd lean on EV/EBITDA if leverage differs materially (next section explains why), and perhaps apply a small discount to the median if the target is smaller / slower-growing.</p>
+</div>
+
+<div class="trap"><b>Common trap — mean vs median &amp; dirty inputs:</b> Reporting the <i>mean</i> multiple (one 40× outlier drags the whole set up) instead of the median; or comparing a peer's <i>reported</i> EBITDA that includes a one-time gain against your target's clean EBITDA. Always scrub for exceptionals and prefer the median with a stated range.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">11. The Multiples Toolkit: EV/EBITDA, P/E, P/B and Friends</h2>
+
+<h3>11.1 Definitions and formulae</h3>
+<div class="formula"><b>Core multiples</b><br>
+EV/EBITDA = Enterprise Value / EBITDA<br>
+EV/EBIT = Enterprise Value / EBIT<br>
+EV/Sales = Enterprise Value / Revenue<br>
+P/E = Share Price / EPS = Equity Value / Net Income<br>
+P/B = Share Price / Book Value per Share = Equity Value / Shareholders' Equity<br>
+P/S = Share Price / Sales per Share (equity-side sales multiple)<br>
+PEG = P/E ÷ (expected EPS growth rate in %)
+<div class="where">EV multiples value the whole firm on pre-financing metrics; price multiples value the equity on post-financing metrics. PEG normalises P/E for growth: a PEG near 1.0 is often read as "fairly priced for its growth," though this is a heuristic, not a law.</div>
+</div>
+
+<h3>11.2 Why EV/EBITDA is capital-structure neutral (and P/E is not)</h3>
+<p>This is a flagship interview point. <b>EBITDA is calculated before interest</b>, and <b>EV includes debt</b>. So both the numerator and denominator of EV/EBITDA ignore how the firm is financed — the multiple is (largely) independent of leverage. Two firms with identical operations but different debt loads should have similar EV/EBITDA.</p>
+<p><b>P/E, by contrast, is levered on both ends:</b> the "E" (net income) is <i>after</i> interest, and "P" (equity value) is a residual claim behind debt. Add debt and net income falls (more interest) while financial risk rises — so P/E is distorted by capital structure, one-off items, D&amp;A policy, and tax. That's why EV/EBITDA is the workhorse for cross-company and cross-border comparison.</p>
+
+<div class="example">
+  <div class="ex-h">Worked Example 8 — Two identical firms, different debt</div>
+  <p>Firms X and Y have identical operations: EBIT = 500, D&amp;A = 100, so EBITDA = 600; tax 25%. Assume both have the same EV of 6,000 (identical operating businesses ⇒ identical enterprise value). X is all-equity; Y has 2,000 of debt at 10% (interest = 200).</p>
+  <table>
+    <thead><tr><th></th><th>X (no debt)</th><th>Y (₹2,000 debt)</th></tr></thead>
+    <tbody>
+      <tr><td>EBIT</td><td>500</td><td>500</td></tr>
+      <tr><td>− Interest</td><td>0</td><td>200</td></tr>
+      <tr><td>Pre-tax profit</td><td>500</td><td>300</td></tr>
+      <tr><td>Net income (×0.75)</td><td>375</td><td>225</td></tr>
+      <tr><td>EV</td><td>6,000</td><td>6,000</td></tr>
+      <tr><td>Equity value (EV − net debt)</td><td>6,000</td><td>4,000</td></tr>
+      <tr><td><b>EV/EBITDA</b></td><td><b>10.0×</b></td><td><b>10.0×</b></td></tr>
+      <tr><td><b>P/E</b> (Equity ÷ NI)</td><td>6,000/375 = <b>16.0×</b></td><td>4,000/225 = <b>17.8×</b></td></tr>
+    </tbody>
+  </table>
+  <p><b>The punchline:</b> EV/EBITDA is identical (10.0×) for both — it sees through the capital structure. P/E differs (16.0× vs 17.8×): the levered firm Y shows a <i>higher</i> P/E here because its lower net income (denominator) shrinks faster in proportion than its equity value, given these numbers. The direction of the P/E gap depends on the cost of debt vs the earnings yield, but the key exam takeaway is that <b>leverage leaves EV/EBITDA unchanged and moves P/E.</b></p>
+</div>
+
+<h3>11.3 When to use which multiple</h3>
+<table>
+  <thead><tr><th>Multiple</th><th>Best used for / when</th><th>Watch-outs</th></tr></thead>
+  <tbody>
+    <tr><td><b>EV/EBITDA</b></td><td>The default all-rounder; cross-company &amp; cross-border comparison; capital-intensive firms; different leverage; M&amp;A</td><td>Ignores capex &amp; D&amp;A differences (a capex-heavy firm looks cheap); meaningless if EBITDA is negative</td></tr>
+    <tr><td><b>EV/EBIT</b></td><td>When D&amp;A / capex intensity differs across peers (EBIT captures depreciation); comparing asset-heavy vs asset-light</td><td>Sensitive to depreciation policy differences</td></tr>
+    <tr><td><b>EV/Sales</b></td><td>Loss-making or early-stage firms with no EBITDA/earnings; when margins are converging or being normalised</td><td>Ignores profitability entirely — a high-revenue, loss-making firm can look deceptively valuable</td></tr>
+    <tr><td><b>P/E</b></td><td>Mature, profitable firms with comparable capital structures; quick market shorthand; consumer names</td><td>Distorted by leverage, one-offs, tax, D&amp;A; useless if earnings are negative or volatile</td></tr>
+    <tr><td><b>P/B</b></td><td><b>Banks, NBFCs, insurers</b> and asset-heavy financials where book value approximates economic value; often paired with ROE</td><td>Meaningless for asset-light / brand-driven firms; book value can be stale or distorted by write-offs</td></tr>
+    <tr><td><b>P/S</b></td><td>Retail, early-stage, or when earnings are unreliable; revenue is harder to manipulate than earnings</td><td>Same blindness to profitability as EV/Sales; prefer EV/Sales for cross-leverage comparison</td></tr>
+    <tr><td><b>PEG</b></td><td>Comparing growth stocks with very different growth rates; contextualising a high P/E</td><td>Growth estimate is subjective; breaks for low/negative growth; a rule of thumb, not a valuation</td></tr>
+  </tbody>
+</table>
+
+<h3>11.4 Sector conventions (Indian market context)</h3>
+<ul>
+  <li><b>Banks &amp; NBFCs:</b> <b>P/B paired with ROE</b> (and sometimes P/ABV — price to adjusted book value, netting off bad loans). P/E secondary. EV/EBITDA is <i>not</i> used — interest is core revenue, not a financing cost.</li>
+  <li><b>IT services (Nifty IT):</b> P/E and EV/EBITDA; margins and dollar-revenue growth drive them.</li>
+  <li><b>FMCG / consumer (Nifty FMCG):</b> typically high P/E and EV/EBITDA reflecting brand strength, low capital intensity, and steady growth — often among the richer multiples on the index.</li>
+  <li><b>Capital goods / infrastructure / cement:</b> EV/EBITDA, EV/EBIT, and sometimes EV per tonne of capacity (a sector-specific operating metric).</li>
+  <li><b>Telecom:</b> EV/EBITDA and EV per subscriber.</li>
+  <li><b>Real estate:</b> NAV / price-to-NAV, given asset-heavy balance sheets.</li>
+  <li><b>Oil &amp; gas / commodities:</b> EV/EBITDA on mid-cycle earnings; P/E can be misleading at cyclical peaks/troughs.</li>
+</ul>
+<p>Treat any specific multiple ranges as <i>illustrative and time-varying</i> — Nifty and sector multiples move with the cycle and interest rates; never quote a number as a permanent fact.</p>
+
+<!-- ============================================================ -->
+<h2 class="sec">12. Precedent Transactions</h2>
+
+<p>Precedent transaction analysis ("deal comps," "transaction comps") values a company by reference to the multiples <i>paid in past M&amp;A deals</i> for similar businesses. It answers a different question from trading comps: not "what does the market pay for a share?" but "what does an <b>acquirer</b> pay to <b>own the whole company</b>?"</p>
+
+<h3>12.1 The control premium</h3>
+<p>Deal multiples are almost always <b>higher than trading multiples</b>, because an acquirer pays a <b>control premium</b> over the undisturbed market price to obtain: (a) control of the board and strategy, (b) 100% of the cash flows, and (c) <b>synergies</b> — cost savings or revenue upside the buyer can extract that a passive shareholder cannot.</p>
+<div class="formula"><b>Control premium</b><br>
+Control premium % = (Offer price per share − Undisturbed price per share) / Undisturbed price per share
+<div class="where">"Undisturbed" price = the share price before news of the deal leaked (to strip out run-up). Premiums vary widely by deal, sector, and competitive tension; treat any specific range as illustrative.</div>
+</div>
+
+<h3>12.2 Deal multiples vs trading multiples</h3>
+<table>
+  <thead><tr><th></th><th>Trading comps</th><th>Precedent transactions</th></tr></thead>
+  <tbody>
+    <tr><td>Question answered</td><td>Minority / market value of a share</td><td>Control value an acquirer pays</td></tr>
+    <tr><td>Includes control premium?</td><td>No</td><td>Yes (premium + synergies embedded)</td></tr>
+    <tr><td>Typical level</td><td>Lower</td><td>Higher</td></tr>
+    <tr><td>Data timing</td><td>Live, current market</td><td>Historical — struck under past conditions</td></tr>
+    <tr><td>Best for</td><td>Valuing a going concern / minority stake, quick market read</td><td>Valuing a company in an M&amp;A / takeover context, setting a bid</td></tr>
+  </tbody>
+</table>
+
+<h3>12.3 Limitations (say these before the interviewer does)</h3>
+<ul>
+  <li><b>Stale data:</b> a deal struck three years ago reflects that era's market, rates, and sentiment — not today's. Multiples paid in a boom overstate; in a bust, understate.</li>
+  <li><b>Synergy contamination:</b> the multiple paid embeds the <i>specific</i> buyer's synergies, which may not exist for a different buyer or for a standalone valuation.</li>
+  <li><b>Disclosure gaps (acute in India):</b> private-target deals often don't disclose price or financials, so the sample is thin and biased toward listed / large deals.</li>
+  <li><b>Deal-specific dynamics:</b> a bidding war, a distressed forced sale, or a strategic must-have inflate/deflate the multiple in ways that don't generalise.</li>
+  <li><b>Apples-to-oranges structures:</b> cash vs stock deals, earn-outs, and assumed liabilities complicate the "true" price.</li>
+</ul>
+
+<div class="keytake"><b>Key takeaways:</b> Precedent transactions typically set the <b>top of the valuation range</b> (they include a control premium), trading comps sit below, and a DCF lands somewhere in between depending on assumptions. If you're advising a seller, you lean on precedents; a buyer stresses trading comps and standalone DCF to avoid overpaying.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">13. Football Field, Sum-of-the-Parts &amp; Reconciling Methods</h2>
+
+<h3>13.1 The football field</h3>
+<p>No single method is "truth." Practitioners present a <b>football field</b>: a horizontal bar chart showing the valuation <i>range</i> implied by each method (52-week trading range, trading comps, precedent transactions, DCF at a range of WACC/g, LBO analysis for PE contexts). The overlap of the bars frames a defensible value corridor, and outliers prompt a "why?" discussion.</p>
+<p>Typical ordering (context-dependent): the <b>52-week range</b> and <b>trading comps</b> anchor the lower/middle; <b>DCF</b> spans a wide band driven by assumptions; <b>precedent transactions</b> usually sit highest (control premium). Where the bars converge is your headline range.</p>
+
+<h3>13.2 Sum-of-the-parts (SOTP)</h3>
+<p>For a <b>conglomerate or multi-segment group</b>, one blended multiple hides value — a slow cement division and a fast digital arm shouldn't share one EV/EBITDA. SOTP values <i>each</i> business unit separately (with its own peer multiple or its own DCF), sums them, then adjusts for the centre.</p>
+<div class="formula"><b>Sum-of-the-parts</b><br>
+Equity Value = &Sigma; (EV of each segment) + Non-operating assets − Net Debt − Minority − (Holding-co discount, if any)
+<div class="where">Value each segment on the multiple/method that fits it, add stakes in listed subsidiaries at market (often at a discount), then bridge from the aggregate EV to equity. Indian holding companies frequently trade at a <b>holdco discount</b> to their look-through NAV — worth flagging.</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 9 — A quick SOTP</div>
+  <p>Group with three segments (illustrative, INR cr): Consumer EBITDA 800 @ 15× = 12,000; Industrial EBITDA 600 @ 8× = 4,800; a 40% stake in a listed subsidiary worth INR 5,000 cr at market (apply 20% holdco discount → 4,000). Group net debt = 3,000; minority interest = 500.</p>
+  <p>Operating EV = 12,000 + 4,800 = 16,800. Add stake (post-discount) 4,000 = 20,800 gross. Equity = 20,800 − 3,000 (net debt) − 500 (minority) = <b>INR 17,300 cr</b>. A single blended multiple would have mis-priced the mix — the consumer arm alone carries most of the value.</p>
+</div>
+
+<h3>13.3 When each method breaks down — and reconciling them</h3>
+<ul>
+  <li><b>DCF breaks down</b> for cyclicals, financials, pre-profit firms, and when TV dominates — see Section 9.</li>
+  <li><b>Trading comps break down</b> when there are no clean peers, or when the whole sector is mispriced (comps import the market's error).</li>
+  <li><b>Precedent transactions break down</b> with thin/stale deal data and buyer-specific synergies.</li>
+  <li><b>Asset/NAV breaks down</b> for asset-light, IP-driven firms where value isn't on the balance sheet.</li>
+</ul>
+<p><b>Reconciling:</b> when methods disagree, don't average blindly — <i>explain the gap</i>. A DCF far above comps says the market is more pessimistic on growth/margins than you are; a DCF far below says the opposite. State which method you weight most for <i>this</i> company and why (e.g. "cyclical steel → I trust mid-cycle EV/EBITDA over a DCF whose terminal year I can't normalise").</p>
+
+<!-- ============================================================ -->
+<h2 class="sec">14. Special Cases: Banks, Loss-Makers &amp; High-Growth</h2>
+
+<h3>14.1 Valuing banks &amp; financial institutions</h3>
+<p>For a bank, <b>debt is raw material, not financing</b> — deposits and borrowings fund the lending business, and interest is the core revenue line, not a cost to be added back. This breaks the standard toolkit:</p>
+<ul>
+  <li><b>Enterprise Value is meaningless</b> — you can't cleanly separate "operating" from "financing," so EV/EBITDA and FCFF DCF don't apply.</li>
+  <li><b>Use equity-side methods:</b> <b>P/B (or P/ABV)</b> paired with <b>ROE</b>, and <b>P/E</b>; for intrinsic value, a <b>Dividend Discount Model</b> or an <b>excess-return / residual income</b> model, or an <b>FCFE</b> approach.</li>
+  <li><b>The P/B–ROE link:</b> a bank earning ROE above its cost of equity should trade above 1× book; below, at a discount. This is the single most useful lens for Indian banks/NBFCs.</li>
+  <li><b>Watch:</b> asset quality (GNPA/NNPA), provisioning, capital adequacy (CAR), and net interest margin (NIM) — these drive whether book value is "real."</li>
+</ul>
+<div class="formula"><b>Justified P/B (Gordon-based)</b><br>
+P/B = (ROE − g) / (K<sub>e</sub> − g)
+<div class="where">A bank with ROE &gt; cost of equity (K<sub>e</sub>) earns a P/B &gt; 1; ROE = K<sub>e</sub> gives P/B = 1; ROE &lt; K<sub>e</sub> gives a discount to book. Ties valuation directly to returns vs the cost of capital.</div>
+</div>
+
+<h3>14.2 Loss-making and high-growth firms</h3>
+<ul>
+  <li><b>No earnings, no EBITDA:</b> P/E and EV/EBITDA are undefined or negative and useless. Fall back to <b>EV/Sales</b>, <b>EV/Gross Profit</b>, or sector-specific operating metrics (EV per subscriber, per GMV, per active user).</li>
+  <li><b>DCF on a long horizon:</b> use a multi-stage model that lets the firm reach profitability and a steady state — but recognise the value is heavily terminal and speculative; show a wide range.</li>
+  <li><b>Path-to-profitability framing:</b> value on <i>normalised</i> future margins ("what will this earn at scale?") and discount for execution risk. Beware "story multiples" untethered from cash.</li>
+  <li><b>Unit economics:</b> for new-age Indian listings, contribution margin, CAC/LTV, and cohort retention often matter more than any headline multiple.</li>
+</ul>
+
+<div class="trap"><b>Common trap — applying the wrong toolkit to a bank:</b> Quoting EV/EBITDA or a WACC-based FCFF DCF for a bank/NBFC signals you don't understand the business. Switch immediately to P/B, ROE, P/E, and DDM/FCFE. Likewise, don't slap a P/E on a pre-profit company — pivot to EV/Sales or operating metrics.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">15. Dividend Discount Models &amp; the H-Model</h2>
+
+<p>The Dividend Discount Model (DDM) is the oldest intrinsic method: since a share ultimately returns cash to its owner only as dividends (plus a terminal sale, which is itself a claim on future dividends), the value of the equity is the present value of expected future dividends, discounted at the <b>cost of equity</b>. It is a levered, equity-side model — a cousin of the FCFE DCF where the cash flow is the actual dividend rather than the full free cash flow to equity.</p>
+
+<h3>15.1 Single-stage — the Gordon Growth Model</h3>
+<div class="formula"><b>Gordon Growth (constant-growth) DDM</b><br>
+P<sub>0</sub> = D<sub>1</sub> / (K<sub>e</sub> − g) = D<sub>0</sub> × (1 + g) / (K<sub>e</sub> − g)
+<div class="where">where: D<sub>1</sub> = next year's expected dividend per share; D<sub>0</sub> = current dividend; K<sub>e</sub> = cost of equity; g = constant perpetual dividend growth rate (&lt; K<sub>e</sub>, and ≤ long-run nominal GDP). Also: g = retention ratio (b) × ROE — the sustainable growth rate.</div>
+</div>
+<p><b>When preferred:</b> stable, mature, reliable dividend payers whose payout is representative of their earnings power — regulated utilities, mature FMCG, and (in a modified form) banks. It is transparent and hard to game, but it says nothing useful about a firm that pays no dividend.</p>
+
+<div class="example">
+  <div class="ex-h">Worked Example 10 — Gordon Growth DDM</div>
+  <p>A mature Indian FMCG name pays D<sub>0</sub> = INR 12/share, expected to grow 5% forever; cost of equity 12%.</p>
+  <p>P<sub>0</sub> = 12 × 1.05 / (0.12 − 0.05) = 12.6 / 0.07 = <b>INR 180/share</b>. If the stock trades at INR 150, the model flags it as undervalued <i>given these inputs</i> — the whole answer hinges on g and K<sub>e</sub>.</p>
+</div>
+
+<h3>15.2 Two-stage DDM</h3>
+<p>Most firms are not in steady state today: they grow fast for a while, then fade. A two-stage model discounts an explicit high-growth dividend stream, then caps it with a Gordon-growth terminal value at the stable rate.</p>
+<div class="formula"><b>Two-stage DDM</b><br>
+P<sub>0</sub> = &Sigma;<sub>t=1..n</sub> [ D<sub>t</sub> / (1 + K<sub>e</sub>)<sup>t</sup> ] + [ D<sub>n+1</sub> / (K<sub>e</sub> − g<sub>L</sub>) ] / (1 + K<sub>e</sub>)<sup>n</sup>
+<div class="where">where: D<sub>t</sub> grows at the high rate g<sub>S</sub> for n years; g<sub>L</sub> = stable long-run growth thereafter; the bracketed terminal term is a value <i>as at year n</i> and is discounted back n years.</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 11 — Two-stage DDM</div>
+  <p>D<sub>0</sub> = INR 10; dividends grow 15% for 3 years, then 5% forever; K<sub>e</sub> = 12%.</p>
+  <p>D<sub>1</sub> = 11.50, D<sub>2</sub> = 13.225, D<sub>3</sub> = 15.209. Terminal: D<sub>4</sub> = 15.209 × 1.05 = 15.969; TV<sub>3</sub> = 15.969 / (0.12 − 0.05) = INR 228.13.</p>
+  <p>Discount at 12%: PV(D<sub>1</sub>) = 11.50/1.12 = 10.27; PV(D<sub>2</sub>) = 13.225/1.2544 = 10.54; PV(D<sub>3</sub>) = 15.209/1.4049 = 10.83; PV(TV<sub>3</sub>) = 228.13/1.4049 = 162.38.</p>
+  <p><b>P<sub>0</sub> = 10.27 + 10.54 + 10.83 + 162.38 = INR 194/share.</b> Note the terminal value is ~84% of the total — same tail-wagging-the-dog caveat as any DCF.</p>
+</div>
+
+<h3>15.3 Three-stage DDM</h3>
+<p>A three-stage model inserts a <b>transition</b> phase between high growth and maturity, in which growth <i>declines</i> (usually linearly) from g<sub>S</sub> to g<sub>L</sub>. It suits firms with a long but eroding competitive advantage — the growth doesn't cliff-edge from 20% to 5% in one year, it decays. Mechanically it is the two-stage model with an extra middle block of explicitly forecast, fading dividends before the terminal perpetuity.</p>
+
+<h3>15.4 The H-Model</h3>
+<p>The H-model is a neat closed-form <i>approximation</i> of a linearly declining growth path, avoiding the year-by-year transition arithmetic.</p>
+<div class="formula"><b>H-Model</b><br>
+P<sub>0</sub> = [ D<sub>0</sub>(1 + g<sub>L</sub>) + D<sub>0</sub> × H × (g<sub>S</sub> − g<sub>L</sub>) ] / (K<sub>e</sub> − g<sub>L</sub>)
+<div class="where">where: g<sub>S</sub> = initial (high) growth rate; g<sub>L</sub> = long-run stable growth; H = <i>half</i> the length of the high-growth-to-stable transition period (so if growth fades over 6 years, H = 3). The first term is the stable-growth value; the second is the extra value from the above-normal growth that fades away.</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 12 — H-Model as a cross-check</div>
+  <p>Same inputs as Example 11: D<sub>0</sub> = 10, g<sub>S</sub> = 15%, g<sub>L</sub> = 5%, growth fades over 6 years (H = 3), K<sub>e</sub> = 12%.</p>
+  <p>P<sub>0</sub> = [10 × 1.05 + 10 × 3 × (0.15 − 0.05)] / (0.12 − 0.05) = [10.5 + 3.0] / 0.07 = 13.5 / 0.07 = <b>INR 192.9/share</b>.</p>
+  <p>Reassuringly close to the two-stage INR 194 — the H-model is a fast sanity check when you don't want to build a full transition schedule.</p>
+</div>
+
+<h3>15.5 When to prefer DDM vs FCFE vs FCFF</h3>
+<ul>
+  <li><b>DDM</b> — stable dividend payers where dividends ≈ capacity to pay (utilities, mature consumer, banks). Cleanest and least manipulable, but blind to firms that return cash via buybacks or hoard it.</li>
+  <li><b>FCFE</b> — when payout policy is erratic or the firm pays little despite strong cash generation; values the cash <i>available</i> to equity regardless of whether it's paid out.</li>
+  <li><b>FCFF</b> — the corporate default; capital-structure-neutral; used when leverage is changing or you want an enterprise view.</li>
+</ul>
+
+<div class="trap"><b>Common trap — DDM on a non-dividend payer:</b> Applying a DDM to a high-growth firm that pays no dividend gives a value near zero — obviously wrong. The fix is FCFE (cash the firm <i>could</i> pay) or FCFF. Use DDM only when the dividend genuinely reflects distributable earnings.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">16. Residual Income &amp; EVA Valuation</h2>
+
+<p>Residual income (RI) and Economic Value Added (EVA) attack a weakness of the DCF: in a DCF, most of the value sits in a distant, assumption-heavy terminal value. RI/EVA instead <b>anchor value to today's book value (or invested capital)</b> and add only the present value of the <i>excess</i> returns the firm earns above its cost of capital. Less of the answer rides on the far future.</p>
+
+<h3>16.1 Residual income (equity-side)</h3>
+<div class="formula"><b>Residual Income model</b><br>
+V<sub>0</sub> = B<sub>0</sub> + &Sigma;<sub>t=1..∞</sub> [ RI<sub>t</sub> / (1 + K<sub>e</sub>)<sup>t</sup> ], &nbsp; RI<sub>t</sub> = NI<sub>t</sub> − K<sub>e</sub> × B<sub>t−1</sub> = (ROE − K<sub>e</sub>) × B<sub>t−1</sub>
+<div class="where">where: B<sub>0</sub> = current book value of equity; RI = net income minus an <b>equity charge</b> (the return shareholders required on the capital they had tied up). Only returns <i>above</i> K<sub>e</sub> create value; a firm earning exactly its cost of equity is worth book.</div>
+</div>
+
+<h3>16.2 EVA (enterprise-side)</h3>
+<div class="formula"><b>Economic Value Added</b><br>
+EVA = NOPAT − WACC × Invested Capital = (ROIC − WACC) × Invested Capital<br>
+Enterprise Value = Invested Capital + &Sigma; PV(future EVA) &nbsp;(the PV term = <b>MVA</b>, market value added)
+<div class="where">EVA is the firm-level twin of residual income: it charges NOPAT for the full cost of all capital (WACC × invested capital). Positive EVA ⇒ ROIC &gt; WACC ⇒ value creation.</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 13 — RI and EVA, and the tie to justified P/B</div>
+  <p><b>EVA:</b> NOPAT = INR 500 cr, invested capital = INR 3,000 cr, WACC = 12%. Capital charge = 0.12 × 3,000 = 360. EVA = 500 − 360 = <b>INR 140 cr</b>. Equivalently ROIC = 500/3,000 = 16.7% &gt; 12%, so the firm creates value.</p>
+  <p><b>RI:</b> Book equity B<sub>0</sub> = INR 1,000 cr, ROE = 18%, K<sub>e</sub> = 12%, residual income grows at g = 4% forever. RI<sub>1</sub> = (0.18 − 0.12) × 1,000 = 60. PV of the growing RI = 60/(0.12 − 0.04) = 750. V<sub>0</sub> = 1,000 + 750 = <b>INR 1,750 cr</b>, i.e. an implied P/B of 1.75×.</p>
+  <p><b>Cross-check:</b> justified P/B = (ROE − g)/(K<sub>e</sub> − g) = (0.18 − 0.04)/(0.12 − 0.04) = 0.14/0.08 = <b>1.75×</b> — identical, as it must be. RI valuation and the justified-P/B multiple are the same idea in two languages.</p>
+</div>
+
+<h3>16.3 When RI/EVA is preferred</h3>
+<ul>
+  <li>When <b>terminal value in a DCF is uncomfortably large</b> — RI front-loads value into today's book, shrinking the guess-work.</li>
+  <li>For <b>financials</b>, where FCFF is ill-defined — the "excess-return model" used for banks is simply residual income (ROE vs K<sub>e</sub> on book equity).</li>
+  <li>When cash flows are volatile or negative but book value and returns are meaningful.</li>
+</ul>
+<div class="trap"><b>Common trap — dirty book value:</b> RI/EVA are only as clean as the accounting. Goodwill, one-off write-offs, capitalised vs expensed R&amp;D, and off-balance-sheet items distort both book value and NOPAT. Analysts make "equity-equivalent" adjustments before trusting an EVA figure — otherwise value creation is an accounting artefact.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">17. Cost-of-Equity Refinements: Size &amp; Country Risk</h2>
+
+<p>Plain CAPM often under-states the return investors actually demand for small, illiquid, or emerging-market firms. Practitioners therefore use a <b>build-up (expanded CAPM)</b> that layers extra premia onto the CAPM base.</p>
+<div class="formula"><b>Expanded cost of equity (build-up)</b><br>
+K<sub>e</sub> = R<sub>f</sub> + β × ERP + Size Premium + Country Risk Premium (+ Company-Specific Premium)
+<div class="where">Each add-on captures a risk that the single-factor CAPM beta misses. Treat all magnitudes as illustrative — they vary by source, period, and method.</div>
+</div>
+<ul>
+  <li><b>Size premium (SP):</b> historically, small-cap stocks have earned returns above what their beta predicts. A size premium of a few percentage points is commonly added for small/mid-caps (concept, not a fixed number).</li>
+  <li><b>Country risk premium (CRP):</b> for emerging markets, extra return for political, currency, and sovereign risk. A common estimate: CRP ≈ sovereign default spread × (equity-market volatility ÷ bond-market volatility). Add it when building a cost of equity from a <i>developed-market</i> base (e.g. a US investor valuing an Indian firm).</li>
+  <li><b>Company-specific / specific-risk premium:</b> for concentration, key-person dependence, or a private firm with idiosyncratic risk not diversified away in a public-market beta.</li>
+</ul>
+<div class="trap"><b>Common trap — double-counting country risk:</b> If you already discount in INR using the Indian 10-year G-Sec as your risk-free rate and a local (India) ERP, the local risk is largely embedded — bolting on a <i>full</i> CRP on top double-counts it. A separate CRP is for converting a US-dollar / developed-market build-up to an emerging-market cost of equity, not for a fully domestic build-up.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">18. FCF Refinements: Stock-Based Comp &amp; Leases</h2>
+
+<p>Three real-world adjustments trip up candidates because the accounting hides the economics: stock-based compensation, leases, and other debt-like items.</p>
+
+<h3>18.1 Stock-based compensation (SBC)</h3>
+<p>SBC is a <b>non-cash expense but a very real cost</b> — it transfers value from existing shareholders to employees via dilution. The lazy treatment is to add SBC back to net income like depreciation (because it's non-cash) and then ignore the extra shares — this <b>double-flatters</b> FCF and per-share value.</p>
+<ul>
+  <li><b>Cleanest:</b> treat SBC as if it were a cash operating expense — do <i>not</i> add it back — so the cash flow reflects the true cost of paying people in stock.</li>
+  <li><b>Or:</b> add it back but then fully capture the resulting dilution in a growing, fully-diluted share count. Pick one method; never take the add-back <i>and</i> ignore dilution.</li>
+</ul>
+
+<h3>18.2 Leases (Ind AS 116 / IFRS 16)</h3>
+<p>Under Ind AS 116 / IFRS 16, most operating leases are capitalised: a <b>right-of-use asset</b> and a <b>lease liability</b> sit on the balance sheet, and the old rent expense splits into depreciation (in EBITDA) plus interest (below EBITDA).</p>
+<ul>
+  <li><b>EBITDA rises</b> post-capitalisation (rent no longer hits EBITDA), so EV/EBITDA looks optically lower. For consistency, the <b>lease liability must be included in net debt / EV</b> when you pair EV with post-IFRS16 EBITDA.</li>
+  <li><b>Comparability:</b> peers on different regimes (older Indian GAAP, US operating-lease treatment) need normalising — historically analysts used EV/EBITDAR (adding rent back and capitalising it) for lease-heavy sectors (retail, airlines, hotels).</li>
+  <li>The lease liability is a <b>debt-like claim</b> in the equity bridge.</li>
+</ul>
+
+<h3>18.3 Other debt-like and non-operating items</h3>
+<table>
+  <thead><tr><th>Treat as DEBT-like (subtract in bridge)</th><th>Treat as CASH/asset-like (add in bridge)</th></tr></thead>
+  <tbody>
+    <tr><td>Underfunded pension / gratuity liability</td><td>Surplus cash &amp; liquid investments</td></tr>
+    <tr><td>Capitalised lease liabilities</td><td>Investments in associates / listed stakes (at market)</td></tr>
+    <tr><td>Preferred stock; minority interest</td><td>Surplus non-operating land / property</td></tr>
+    <tr><td>Deferred / contingent consideration, litigation provisions</td><td>Tax assets / carry-forward losses (if realisable)</td></tr>
+  </tbody>
+</table>
+<div class="trap"><b>Common trap — lease inconsistency:</b> Using post-IFRS16 EBITDA (inflated) but forgetting to add the lease liability to EV understates EV/EBITDA and makes the firm look artificially cheap. Numerator and denominator must both be on the same lease basis.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">19. Justified (Fundamental) Multiples</h2>
+
+<p>A "justified" or "fundamental" multiple is the multiple a firm <i>should</i> trade at given its fundamentals — derived by rearranging a DDM/DCF. This is powerful in interviews because it explains <b>why</b> some firms deserve high multiples (high returns, high growth, low risk) rather than just quoting peers.</p>
+
+<div class="formula"><b>Justified P/E</b><br>
+Leading P/E = P<sub>0</sub>/E<sub>1</sub> = payout / (K<sub>e</sub> − g) &nbsp;;&nbsp; Trailing P/E = P<sub>0</sub>/E<sub>0</sub> = payout × (1 + g) / (K<sub>e</sub> − g)
+<div class="where">payout = 1 − retention (b); g = ROE × b. Higher growth and lower risk (lower K<sub>e</sub>) justify a higher P/E; a high payout helps only if it doesn't starve growth.</div>
+</div>
+<div class="formula"><b>Justified P/B and P/S</b><br>
+P/B = (ROE − g) / (K<sub>e</sub> − g) &nbsp;;&nbsp; Leading P/S = (net margin × payout) / (K<sub>e</sub> − g)
+<div class="where">P/B is driven by the spread of ROE over K<sub>e</sub>. P/S scales with <b>net margin</b> — which is why comparing P/S across firms with different margins is meaningless without adjusting for it.</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 14 — Justified P/E and P/S</div>
+  <p><b>Justified leading P/E:</b> ROE = 15%, retention b = 60% (so payout = 40%), K<sub>e</sub> = 12%. Then g = 0.15 × 0.60 = 9%. Leading P/E = 0.40 / (0.12 − 0.09) = 0.40 / 0.03 = <b>13.3×</b>. If the market pays 20×, either it expects higher growth/ROE than you, or the stock is rich.</p>
+  <p><b>Justified P/S:</b> net margin = 10%, payout = 40%, K<sub>e</sub> = 12%, g = 6%. Leading P/S = (0.10 × 0.40) / (0.12 − 0.06) = 0.04 / 0.06 = <b>0.67×</b>. Double the margin to 20% and the justified P/S doubles to 1.33× — proof that P/S is a margin story.</p>
+</div>
+<div class="trap"><b>Common trap — comparing P/S across different margins:</b> A software firm at 25% net margin <i>should</i> trade at a far higher P/S than a distributor at 2% margin. Ranking them on raw P/S ("the distributor is cheaper!") is meaningless — the justified formula shows P/S is proportional to margin.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">20. The Wider Multiples Toolkit: EV/FCF, P/CF, Dividend Yield</h2>
+
+<p>Beyond the core six multiples, a few more earn their keep in specific situations.</p>
+<table>
+  <thead><tr><th>Multiple</th><th>Definition</th><th>Reach for it when…</th></tr></thead>
+  <tbody>
+    <tr><td><b>EV/FCF</b> (unlevered FCF)</td><td>EV ÷ FCFF</td><td>The cleanest cash multiple — unlike EV/EBITDA it <i>captures capex and working capital</i>, so a capex-heavy firm no longer looks deceptively cheap</td></tr>
+    <tr><td><b>P/CF or P/FCFE</b></td><td>Price ÷ operating cash flow (or cash EPS)</td><td>Capital-heavy firms where D&amp;A policy distorts EPS; a quicker, harder-to-game read than P/E</td></tr>
+    <tr><td><b>Dividend Yield</b></td><td>DPS ÷ Price</td><td>Income stocks — utilities, mature high-payers; part of total-return thinking; inversely related to price</td></tr>
+    <tr><td><b>EV/EBITDAR</b></td><td>EV ÷ (EBITDA + Rent)</td><td>Lease-heavy sectors (airlines, retail, hotels) to neutralise own-vs-lease differences</td></tr>
+    <tr><td><b>P/AUM, EV/subscriber, EV/tonne, EV/MW</b></td><td>Value ÷ sector operating unit</td><td>Asset managers (P/AUM), telecom (per subscriber), cement (per tonne), power (per MW) — when a physical/operating driver leads earnings</td></tr>
+  </tbody>
+</table>
+<p>All follow the same discipline: an EV multiple pairs with a pre-financing driver; a price/yield multiple pairs with a post-financing one. Sector-specific "per-unit" multiples are shorthand the market uses when reported earnings are noisy or lumpy.</p>
+
+<!-- ============================================================ -->
+<h2 class="sec">21. Asset-Based Valuation: NAV, Liquidation &amp; Replacement</h2>
+
+<p>Asset-based methods value a firm from its balance sheet rather than its cash flows — essential for holding companies, real estate, investment companies, and distressed situations.</p>
+
+<h3>21.1 Net Asset Value (NAV) / adjusted book</h3>
+<p>Restate each asset and liability from book to <b>market/fair value</b>, then net: NAV = fair value of assets − fair value of liabilities. For a bank/NBFC this becomes <b>adjusted book value</b> (book equity minus the shortfall in under-provisioned bad loans). For an investment company or holdco, NAV is the look-through market value of the portfolio.</p>
+
+<h3>21.2 Liquidation value</h3>
+<p>What the assets would fetch if sold and the liabilities settled — a <b>floor</b> value, used in distress. <b>Orderly liquidation</b> (time to find buyers) yields more than a <b>forced/fire sale</b>. Intangibles and goodwill usually realise little.</p>
+
+<h3>21.3 Replacement value</h3>
+<p>The cost to recreate the asset base from scratch — an <b>economic ceiling</b> a rational buyer won't much exceed (they'd build instead). Ratio of market value to replacement cost is <b>Tobin's Q</b>; Q &gt; 1 signals the market credits intangible/franchise value beyond the physical assets.</p>
+
+<h3>21.4 Real estate — the cap-rate / NAV method</h3>
+<div class="formula"><b>Income-capitalisation (cap rate)</b><br>
+Property Value = Net Operating Income (NOI) / Capitalisation Rate
+<div class="where">NOI = rental income − operating costs (before financing &amp; tax); cap rate = the market's required income yield on comparable property. A <i>lower</i> cap rate ⇒ higher value (like a lower discount rate). REITs are also valued on <b>P/FFO</b> (funds from operations = net income + D&amp;A − property gains) and price-to-NAV.</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 15 — NAV, cap rate &amp; liquidation</div>
+  <p><b>Real estate (cap rate):</b> a commercial property earns NOI = INR 120 cr; comparable cap rate = 8%. Value = 120 / 0.08 = <b>INR 1,500 cr</b>. Net of INR 400 cr property debt, equity NAV = INR 1,100 cr.</p>
+  <p><b>Liquidation:</b> book assets INR 2,000 cr realise 60% in an orderly sale = INR 1,200 cr; liabilities INR 900 cr. Liquidation value to equity = 1,200 − 900 = <b>INR 300 cr</b> — the downside floor if the going concern fails.</p>
+</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">22. Private Companies, Insurance &amp; Cyclicals</h2>
+
+<h3>22.1 Valuing private companies</h3>
+<p>A private firm has no observable share price, so you value it by comps or DCF and then <b>adjust for the frictions a public firm doesn't have</b>:</p>
+<ul>
+  <li><b>DLOM — discount for lack of marketability:</b> a private stake can't be sold quickly on an exchange, so buyers demand a discount (illustratively 10–30%). The illiquidity discount.</li>
+  <li><b>DLOC — discount for lack of control:</b> a <i>minority</i> stake can't direct strategy or dividends, so it's worth less than a pro-rata share of the controlling value; it is the mirror image of a control premium.</li>
+  <li><b>Higher cost of equity:</b> add a size and/or company-specific premium; derive beta by unlevering listed-peer betas and relevering at the target's structure (a "bottom-up beta").</li>
+  <li><b>Normalise the accounts:</b> strip out above-market owner salaries, related-party transactions, and personal expenses to find true earning power. Flag <b>key-person risk</b>.</li>
+</ul>
+<div class="example">
+  <div class="ex-h">Worked Example 16 — Stacking private-company discounts</div>
+  <p>Comps imply INR 100/share for a controlling, liquid interest. You're valuing a <i>minority</i> stake in a <i>private</i> firm. Apply DLOC 15% then DLOM 20%: 100 × (1 − 0.15) × (1 − 0.20) = 100 × 0.85 × 0.80 = <b>INR 68/share</b>. Discounts are applied multiplicatively (sequentially), not added.</p>
+</div>
+
+<h3>22.2 Valuing insurers</h3>
+<ul>
+  <li>Like banks, insurers can't be valued on EV/EBITDA or FCFF — "float", reserves, and investment income dominate. Use <b>equity-side</b> methods.</li>
+  <li><b>Life insurers</b> are valued on <b>Embedded Value (EV<sub>ins</sub>)</b> = adjusted net worth + present value of in-force business; <b>Appraisal Value</b> = embedded value + value of expected new business. The market multiple is <b>P/EV</b>, and ROEV (return on embedded value) is the quality gauge.</li>
+  <li><b>General (P&amp;C) insurers</b> lean on <b>P/B with ROE</b> and the combined ratio (claims + expenses ÷ premiums; below 100% = underwriting profit).</li>
+</ul>
+
+<h3>22.3 Valuing cyclicals — normalise, don't snapshot</h3>
+<ul>
+  <li>Point-in-time earnings mislead: a steel, auto, or cement firm looks cheapest on <i>peak</i> earnings (low trailing P/E at the top of the cycle) and dearest at the trough — the opposite of reality.</li>
+  <li><b>Normalise to mid-cycle:</b> value on through-the-cycle average margins/earnings, or a mid-cycle EV/EBITDA, rather than the latest year.</li>
+  <li>If running a DCF, model the cycle explicitly across the explicit period and set the <b>terminal year at a mid-cycle state</b>. Use <b>replacement value</b> as a floor.</li>
+</ul>
+<div class="trap"><b>Common trap — the low P/E cyclical "value trap":</b> A cyclical on a 5× trailing P/E at the top of its cycle is not cheap — earnings are about to fall. On mid-cycle earnings the same stock might be 15×. Normalise before judging "cheap" or "dear."</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">23. Interview Q&amp;A Bank</h2>
+
+<p>Model answers below. Aim to answer crisply first, then add one layer of nuance — that's what separates a "knows the formula" candidate from a "thinks like an analyst" one.</p>
+
+<div class="qa"><div class="q">Q1. Walk me through a DCF.</div>
+<div class="a">A: "You value a business as the present value of its future free cash flows. Step one, project unlevered free cash flow — FCFF — for an explicit period, usually five to ten years, off a revenue and margin forecast: FCFF = EBIT×(1−tax) + D&amp;A − capex − change in working capital. Step two, estimate the discount rate — WACC, since FCFF is available to all capital providers. Step three, discount each year's FCFF to today. Step four, compute a terminal value at the end of the forecast, either Gordon growth or an exit multiple, and discount it back. Step five, sum the discounted flows and terminal value to get enterprise value. Finally, bridge to equity — subtract net debt, preferred and minorities, add back non-operating assets — and divide by diluted shares for intrinsic value per share, then run a sensitivity on WACC and growth."</div></div>
+
+<div class="qa"><div class="q">Q2. What's the biggest driver of a DCF / the most sensitive assumption?</div>
+<div class="a">A: "The terminal value and the discount rate. Terminal value is usually 60–80% of total enterprise value, so the perpetual growth rate or exit multiple you pick dominates the answer; and because value is discounted by (WACC − g), small changes in either swing the number a lot. That's exactly why you always present a WACC-versus-g sensitivity grid rather than a single point estimate. Among the cash-flow inputs, revenue growth and operating margin matter most in the early years, but the two levers with the most torque are the discount rate and terminal assumption."</div></div>
+
+<div class="qa"><div class="q">Q3. Why would you use EV/EBITDA over P/E?</div>
+<div class="a">A: "Because EV/EBITDA is capital-structure neutral. EBITDA is measured before interest and EV includes debt, so the multiple ignores how the firm is financed — you can compare two companies, or the same company across time or borders, without leverage distorting it. P/E uses net income, which is after interest, and equity value, a residual behind debt, so it's sensitive to capital structure, one-off items, D&amp;A policy and tax. EV/EBITDA also still works when a firm is loss-making at the net-income line but EBITDA-positive. The caveat is EV/EBITDA ignores capex and D&amp;A differences, so for very capital-intensive firms I'd cross-check with EV/EBIT."</div></div>
+
+<div class="qa"><div class="q">Q4. Two companies are identical except one has more debt. Which has the higher EV/EBITDA, and which the higher P/E?</div>
+<div class="a">A: "EV/EBITDA should be essentially the <i>same</i> for both — identical operations mean identical enterprise value and identical EBITDA, and the multiple sees through leverage. P/E differs because the levered firm has lower net income (interest expense) and a smaller, riskier equity base. Which P/E is higher depends on the cost of debt relative to the firm's earnings yield: cheap debt that boosts EPS can lower the levered firm's P/E, while the added financial risk pushes the other way. The clean exam point is: leverage leaves EV/EBITDA unchanged and moves P/E."</div></div>
+
+<div class="qa"><div class="q">Q5. What discount rate do you use for FCFF versus FCFE?</div>
+<div class="a">A: "FCFF is the cash available to all capital providers, so you discount it at the blended cost of all capital — WACC — and you get enterprise value. FCFE is the cash left for equity holders after interest and debt movements, so you discount it at the cost of equity alone, and you get equity value directly. The golden rule is to match the cash flow to the claimant: firm cash flow with firm cost of capital, equity cash flow with equity cost of capital. Mixing them — say discounting FCFF at cost of equity — double-counts or mis-states the tax shield and is a classic error."</div></div>
+
+<div class="qa"><div class="q">Q6. How do you calculate terminal value?</div>
+<div class="a">A: "Two ways. Gordon growth capitalises the normalised final-year cash flow into a perpetuity: TV = FCFF in the final year × (1 + g) divided by (WACC − g), where g is a sustainable long-run growth rate that can't exceed nominal GDP growth. The exit-multiple method applies a steady-state EV/EBITDA — usually mature peers' current multiple — to the terminal-year EBITDA. I compute both and reconcile: I back out the growth rate implied by my exit multiple, and the multiple implied by my growth rate, to check neither is absurd. Then I discount the terminal value back to today — people forget it's a value as at the final year, not today."</div></div>
+
+<div class="qa"><div class="q">Q7. When is a DCF unreliable or the wrong tool?</div>
+<div class="a">A: "When cash flows aren't forecastable or the terminal value swamps everything. Early-stage and pre-profit firms have no near-term FCF and are almost pure terminal value — speculative. Cyclicals and commodities have earnings that swing so hard you can't honestly normalise a terminal year — mid-cycle comps often beat a DCF there. Banks and NBFCs break FCFF entirely because debt is raw material, so you use P/B, ROE and DDM/FCFE instead. And any DCF where terminal value is ninety-plus percent of value is really just a bet on one perpetuity assumption. In those cases I lean on relative valuation and disclose the DCF's fragility."</div></div>
+
+<div class="qa"><div class="q">Q8. What is the difference between enterprise value and equity value?</div>
+<div class="a">A: "Equity value is what belongs to shareholders — market cap for a listed firm, a claim behind the debt. Enterprise value is the value of the whole operating business available to all capital providers: EV = equity value + total debt + preferred + minority interest − cash. You add debt because a buyer inherits it, and subtract cash because it could be paid out and reduce the effective purchase price. EV pairs with pre-financing metrics like EBITDA and revenue; equity value pairs with post-financing metrics like net income and book value."</div></div>
+
+<div class="qa"><div class="q">Q9. Why do you add debt and subtract cash to get from equity value to EV?</div>
+<div class="a">A: "Add debt because it's a claim on the enterprise that an acquirer must repay or assume — it's part of the total funding of the business. Subtract cash because it's a non-operating asset the buyer effectively gets back on day one; two otherwise-identical firms should have the same EV, but the cash-rich one has more equity value. Put differently, EV isolates the operating business by stripping out the financing and the surplus cash."</div></div>
+
+<div class="qa"><div class="q">Q10. Why is EBITDA a proxy for cash flow, and what are its flaws?</div>
+<div class="a">A: "EBITDA strips out interest, tax, and the two big non-cash charges — depreciation and amortisation — so it approximates operating cash generation before financing and reinvestment, which is why it's popular for comparing firms. But it's not free cash flow: it ignores capex, which for a capital-heavy firm is a very real cash cost; it ignores working-capital changes; and it ignores taxes. Charlie Munger famously derided it as 'bulls—t earnings.' For an asset-heavy business, EV/EBIT or actual FCF gives a truer picture because it accounts for the cost of maintaining the asset base."</div></div>
+
+<div class="qa"><div class="q">Q11. Why tax EBIT directly when building FCFF instead of using the actual tax bill?</div>
+<div class="a">A: "Because FCFF must be unlevered — independent of financing. The actual tax bill reflects the tax deduction on interest, the 'tax shield,' which is a financing effect. In an FCFF/WACC valuation, that shield is already captured in the discount rate through the after-tax cost of debt. If I also let it reduce the cash flow, I'd double-count the benefit. So I use EBIT × (1 − tax) — NOPAT — which taxes the operating profit as if the firm had no debt."</div></div>
+
+<div class="qa"><div class="q">Q12. What is WACC and how do you compute it?</div>
+<div class="a">A: "WACC is the blended after-tax cost of a firm's capital, weighted by market values: (E/V)×cost of equity + (D/V)×cost of debt×(1−tax). Cost of equity usually comes from CAPM — risk-free rate plus beta times the equity risk premium. Cost of debt is the firm's current borrowing rate, tax-affected because interest is deductible. Weights should be market-value, ideally target weights. WACC is the rate at which FCFF is discounted, so it represents the minimum return all the firm's investors collectively require."</div></div>
+
+<div class="qa"><div class="q">Q13. What is CAPM and what are its inputs?</div>
+<div class="a">A: "CAPM gives the cost of equity: risk-free rate + beta × equity risk premium. The risk-free rate in India is typically the ten-year G-Sec yield; beta measures the stock's sensitivity to market movements, above or below 1; and the equity risk premium is the extra return investors demand for holding equities over the risk-free asset. It's a single-factor model, so it's imperfect — beta is noisy and backward-looking — but it's the market standard for the cost of equity."</div></div>
+
+<div class="qa"><div class="q">Q14. If a company has no debt, what is its WACC?</div>
+<div class="a">A: "Its WACC equals its cost of equity, because there's no debt weight. And in that all-equity case FCFF equals FCFE, since there's no interest or net borrowing — so discounting FCFF at WACC and FCFE at cost of equity give the same answer, as they should."</div></div>
+
+<div class="qa"><div class="q">Q15. Does WACC go up or down as a company adds debt?</div>
+<div class="a">A: "Initially it usually falls, because debt is cheaper than equity — it's senior, and the interest is tax-deductible. But as leverage keeps rising, both the cost of debt and the cost of equity climb because financial risk increases and default becomes possible. So WACC is typically U-shaped: it declines to an optimal capital structure, then rises. That's the trade-off theory of capital structure in one sentence."</div></div>
+
+<div class="qa"><div class="q">Q16. Why do you unlever and relever beta?</div>
+<div class="a">A: "An observed equity beta reflects both business risk and the financial risk from that firm's specific leverage. If I'm valuing a company with a different capital structure — or building a beta from peers with varied leverage — I strip out the financial risk to get the unlevered (asset) beta, then relever at my target D/E. Hamada's equation handles it: unlevered beta = levered beta ÷ [1 + (1−t)(D/E)]. This isolates pure business risk so I'm comparing like with like."</div></div>
+
+<div class="qa"><div class="q">Q17. What's the difference between FCFF and FCFE?</div>
+<div class="a">A: "FCFF is free cash flow to the firm — before financing, available to both debt and equity holders. FCFE is free cash flow to equity — after interest and after net debt repayments, available to shareholders only. The link is FCFE = FCFF − interest×(1−tax) + net borrowing. FCFF is discounted at WACC to give enterprise value; FCFE at cost of equity to give equity value directly. FCFF is the corporate default; FCFE suits banks and cases where leverage is central to the story."</div></div>
+
+<div class="qa"><div class="q">Q18. How do you get from FCFF-based enterprise value to per-share value?</div>
+<div class="a">A: "I subtract net debt-like claims and add non-operating assets: equity value = EV − total debt − preferred − minority interest + cash and investments in associates. Then divide by fully diluted shares — using the treasury-stock method for in-the-money options and warrants — to get intrinsic value per share, which I compare to the market price."</div></div>
+
+<div class="qa"><div class="q">Q19. What is the mid-year convention and why use it?</div>
+<div class="a">A: "It assumes cash flows arrive in the middle of each year rather than at year-end, because in reality cash comes in throughout the year. So you discount using exponents of 0.5, 1.5, 2.5 and so on instead of whole years. Because you're discounting for half a year less, it raises the valuation slightly and is more realistic. It's standard in banking models; you just have to be consistent about how you treat the terminal value's timing."</div></div>
+
+<div class="qa"><div class="q">Q20. Your terminal growth rate is 8%. What's wrong?</div>
+<div class="a">A: "It's almost certainly too high. The perpetual growth rate can't exceed the long-run nominal growth rate of the economy, because otherwise the firm eventually becomes larger than the entire economy — impossible. Terminal g should be anchored to long-run nominal GDP, often mid-single-digits, and frequently set at or below the inflation rate for conservatism. An 8% perpetual rate implies the firm outgrows the economy forever."</div></div>
+
+<div class="qa"><div class="q">Q21. What percentage of your DCF value is the terminal value, and is that a problem?</div>
+<div class="a">A: "Usually 60–80%, which is normal because a healthy business has a long life and most of its value lies beyond the explicit forecast. It becomes a problem above roughly 85–90%, because then the DCF is essentially one perpetuity assumption with decorative early years. When it's that high I stress-test the terminal inputs harder and lean more on relative valuation as a cross-check."</div></div>
+
+<div class="qa"><div class="q">Q22. How do you choose an exit multiple for the terminal value?</div>
+<div class="a">A: "I use a steady-state multiple — typically the current EV/EBITDA of mature, comparable peers, since by the terminal year the firm should itself be mature. Then I sanity-check it by backing out the implied perpetual growth rate: if a 12× exit multiple implies 8% growth forever when GDP grows 6%, the multiple's too rich and I'd trim it. The two terminal methods should roughly agree; if they diverge widely, one assumption is off."</div></div>
+
+<div class="qa"><div class="q">Q23. Which gives a higher valuation — Gordon growth or exit multiple?</div>
+<div class="a">A: "There's no fixed answer; it depends on the inputs. If the exit multiple implies a higher perpetual growth than your Gordon g, the exit-multiple method gives more; if lower, less. The discipline is to compute both, translate each into the other's language, and pick a defensible middle — not to assume one is always higher."</div></div>
+
+<div class="qa"><div class="q">Q24. What is a control premium and why does it exist?</div>
+<div class="a">A: "It's the amount an acquirer pays above the undisturbed market price to gain control of the company — typically because control lets them direct strategy, capture 100% of the cash flows, and extract synergies a passive minority shareholder can't. It's why precedent-transaction multiples run higher than trading multiples; the premium and expected synergies are baked into the price paid."</div></div>
+
+<div class="qa"><div class="q">Q25. Why are precedent-transaction multiples usually higher than trading multiples?</div>
+<div class="a">A: "Because they include a control premium and often buyer-specific synergies. Trading multiples reflect the price of a minority share in the public market; deal multiples reflect the price of owning and controlling the whole business, which an acquirer pays up for. That's why precedents typically set the top of a football-field range."</div></div>
+
+<div class="qa"><div class="q">Q26. What are the limitations of precedent transactions?</div>
+<div class="a">A: "Data is often stale — deals reflect the market conditions when they were struck, which may be very different today. The multiples embed specific buyers' synergies that may not generalise. In India especially, private-target deals frequently don't disclose price or financials, so the sample is thin and biased. And one-off dynamics — bidding wars, distressed sales, cash-versus-stock structures — distort individual multiples. So I use them as a directional, control-value reference, not gospel."</div></div>
+
+<div class="qa"><div class="q">Q27. How do you select a set of comparable companies?</div>
+<div class="a">A: "I look for genuine business comparability — same industry and business model, then similar size, growth, margins, capital intensity, and geography. Quality over quantity: a handful of true peers beats a long list of loose ones. I then spread them on a consistent basis — same LTM or forward period, calendarised for different year-ends, cleaned of one-off items — and summarise with the median and interquartile range rather than the mean, which outliers distort."</div></div>
+
+<div class="qa"><div class="q">Q28. What is LTM and calendarisation?</div>
+<div class="a">A: "LTM — last twelve months — is a rolling twelve-month figure: the latest full year plus the recent interim stub minus the prior-year stub, so the multiple reflects current performance rather than a stale fiscal year. Calendarisation adjusts firms with different fiscal year-ends to a common period — important in India where many firms close in March but some peers or global comps close in December — so every multiple covers the same window and the comparison is apples-to-apples."</div></div>
+
+<div class="qa"><div class="q">Q29. Why prefer the median over the mean in a comps set?</div>
+<div class="a">A: "Because the mean is distorted by outliers — a single company trading at 40× drags the average up and misrepresents the typical peer. The median is robust to those extremes, so it better reflects the central tendency of the set. I usually show the median alongside the 25th–75th percentile range to convey the spread."</div></div>
+
+<div class="qa"><div class="q">Q30. When would you use P/B, and for which sector?</div>
+<div class="a">A: "Primarily for banks, NBFCs, and insurers — financials where the balance sheet is the business and book value approximates economic value. I pair it with ROE, because a bank earning a return on equity above its cost of equity deserves to trade above one times book, and below it, at a discount. P/B is largely useless for asset-light, brand- or IP-driven firms, where value isn't on the balance sheet."</div></div>
+
+<div class="qa"><div class="q">Q31. How do you value a bank, and why is it different?</div>
+<div class="a">A: "Differently, because for a bank debt is raw material, not financing — deposits fund lending and interest is core revenue. So enterprise value and EV/EBITDA are meaningless, and an FCFF/WACC DCF doesn't apply. I use equity-side methods: P/B against ROE and P/E for relative value, and a dividend discount model or excess-return model for intrinsic value, discounting at the cost of equity. I'd focus on asset quality — GNPA and NNPA — provisioning, net interest margin, and capital adequacy, because those determine whether the book value is real."</div></div>
+
+<div class="qa"><div class="q">Q32. How do you value a loss-making or pre-profit company?</div>
+<div class="a">A: "Since P/E and EV/EBITDA are undefined, I move up the income statement to EV/Sales or EV/Gross Profit, or to sector-specific operating metrics like EV per subscriber, per active user, or per unit of GMV. For intrinsic value I use a multi-stage DCF that lets the firm reach profitability and a steady state, valuing it on normalised future margins and discounting for execution risk — while being honest that the value is heavily terminal and speculative and showing a wide range. For new-age firms I'd anchor to unit economics: contribution margin, CAC versus LTV, cohort retention."</div></div>
+
+<div class="qa"><div class="q">Q33. What is a football field?</div>
+<div class="a">A: "It's a bar chart showing the valuation range implied by each method side by side — the 52-week trading range, trading comps, precedent transactions, and a DCF at a range of assumptions, plus an LBO range in private-equity contexts. Where the bars overlap frames a defensible value corridor. Precedents usually sit highest because of the control premium; the DCF spans a wide band. It communicates that valuation is a range, not a single number."</div></div>
+
+<div class="qa"><div class="q">Q34. What is sum-of-the-parts and when do you use it?</div>
+<div class="a">A: "SOTP values each business segment of a conglomerate separately — with its own peer multiple or its own DCF — then sums them and bridges to equity by subtracting net debt and minorities and adding non-operating stakes. You use it when a single blended multiple would hide value, because the segments have very different growth, margins, and risk. Indian holding companies often trade at a holdco discount to their look-through NAV, which I'd flag."</div></div>
+
+<div class="qa"><div class="q">Q35. Which valuation method gives the highest value, generally?</div>
+<div class="a">A: "There's no ironclad rule, but as a rough ordering: precedent transactions often sit highest because they include a control premium and synergies; a DCF can be highest or lowest depending on assumptions since it's assumption-driven; trading comps reflect current minority-market pricing and often sit lower. The honest answer is 'it depends on the inputs,' and the useful skill is explaining why they differ for a given company rather than reciting an ordering."</div></div>
+
+<div class="qa"><div class="q">Q36. A company's share price doubles. What happens to its EV/EBITDA and P/E?</div>
+<div class="a">A: "Both rise, all else equal. A higher share price raises equity value directly — P/E goes up — and raises EV too (EV = equity + net debt), so EV/EBITDA goes up. But EV/EBITDA moves proportionally less than P/E, because EV also contains the debt, which didn't change — so the percentage increase in EV is smaller than the doubling of equity. The gearing of the equity means P/E is more sensitive to the price move."</div></div>
+
+<div class="qa"><div class="q">Q37. If you could pick only one method to value a stable, cash-generative company, which and why?</div>
+<div class="a">A: "A DCF, because it values the business on its own fundamentals — the cash it actually generates — rather than importing whatever mood the market is in, which comps do. For a stable, forecastable, cash-generative firm the DCF inputs are reliable, so it's at its most trustworthy. That said, I'd never present it alone; I'd cross-check against EV/EBITDA comps to make sure my assumptions aren't wildly out of line with the market."</div></div>
+
+<div class="qa"><div class="q">Q38. What's the link between growth, reinvestment, and returns in a forecast?</div>
+<div class="a">A: "Growth isn't free — you have to reinvest to achieve it, and the payoff depends on your return on capital. Expected growth roughly equals the reinvestment rate times the return on invested capital. So a forecast that shows high growth with low reinvestment and low returns is internally inconsistent. This identity keeps a DCF honest: if I want to assume faster growth, I must fund it with more capex and working capital, which drags free cash flow."</div></div>
+
+<div class="qa"><div class="q">Q39. Why can EV/EBITDA make a capital-intensive company look cheap?</div>
+<div class="a">A: "Because EBITDA ignores capex and depreciation. A capital-heavy firm — say cement or telecom — spends enormous sums maintaining and expanding its asset base, but none of that shows up in EBITDA, so its EV/EBITDA can look low while its actual free cash flow is thin. That's exactly why I'd cross-check with EV/EBIT, which captures depreciation as a proxy for that asset consumption, or look at free cash flow directly."</div></div>
+
+<div class="qa"><div class="q">Q40. What is PEG and when is it useful?</div>
+<div class="a">A: "PEG is the P/E divided by the expected earnings growth rate in percent. It normalises the P/E for growth, so you can compare a fast grower on a high P/E against a slow grower on a low one — a PEG around 1 is a rough 'fairly priced for growth' benchmark. It's useful for growth stocks, but it's a heuristic, not a valuation: the growth input is subjective and it breaks down for low or negative growth."</div></div>
+
+<div class="qa"><div class="q">Q41. What are the biggest traps when computing a multiple?</div>
+<div class="a">A: "First, mismatching numerator and denominator — putting net income under EV, or EBITDA under price; both ends must be claimed by the same investors. Second, dirty metrics — comparing a peer's EBITDA that includes a one-time gain against a clean number, so I always adjust for exceptionals. Third, inconsistent periods — mixing trailing and forward, or different fiscal year-ends without calendarising. Fourth, using the mean instead of the median. And fifth, forgetting fully diluted shares when moving to a per-share number."</div></div>
+
+<div class="qa"><div class="q">Q42. Why might a DCF and comps give very different answers, and what do you do?</div>
+<div class="a">A: "Because they answer different questions. A DCF reflects my specific assumptions about growth, margins, and discount rate; comps reflect what the market currently pays for peers. If my DCF is well above comps, I'm more optimistic on fundamentals than the market — or my assumptions are too aggressive. If it's below, the reverse. I don't just average them; I investigate the gap, decide which method I trust more for this company and why, and present a range that acknowledges both."</div></div>
+
+<div class="qa"><div class="q">Q43. What is net working capital and how does it affect free cash flow?</div>
+<div class="a">A: "Net working capital is roughly receivables plus inventory minus payables — the cash tied up in day-to-day operations. An increase in NWC consumes cash, so it's subtracted in free cash flow; a decrease releases cash. This is why growing companies are cash-hungry: expanding sales tie up more in receivables and inventory faster than payables stretch, so a profitable, fast-growing firm can still be short of cash. In the terminal year, NWC growth should settle to a sustainable level."</div></div>
+
+<div class="qa"><div class="q">Q44. Should you use the company's current capital structure or a target one in WACC?</div>
+<div class="a">A: "Ideally the target or optimal capital structure the firm is expected to operate at over the long run, at market values — because a DCF is a long-horizon exercise and today's structure may be temporary. If the current structure is roughly stable and representative, I use it; if it's abnormal — say the firm is temporarily over-levered post-acquisition and plans to de-lever — I'd use the target structure and reflect it consistently in beta via unlevering and relevering."</div></div>
+
+<div class="qa"><div class="q">Q45. What non-operating items adjust the EV-to-equity bridge beyond net debt?</div>
+<div class="a">A: "Preferred stock and minority (non-controlling) interest are added on the way from equity to EV, because they're other claims on the enterprise. Coming back the other way, I also add non-operating assets that aren't captured in operating cash flow — surplus cash, investments in associates and strategic stakes, surplus land or property — since a DCF of operating FCF misses them. Underfunded pensions or contingent liabilities can be treated as debt-like and subtracted."</div></div>
+
+<div class="qa"><div class="q">Q46. Why is a higher WACC associated with a lower valuation?</div>
+<div class="a">A: "Because WACC is the rate at which future cash flows are discounted, and it embeds risk. A higher discount rate means each future rupee is worth less today, and it shrinks the terminal value by widening the (WACC − g) denominator. So riskier firms, which have higher discount rates, are worth less per rupee of expected cash flow — value and risk trade off directly."</div></div>
+
+<div class="qa"><div class="q">Q47. How does an increase in the tax rate affect a DCF?</div>
+<div class="a">A: "It lowers value on two fronts. It reduces NOPAT — EBIT×(1−tax) — so free cash flows fall. And while a higher tax rate makes the after-tax cost of debt cheaper, slightly lowering WACC, the cash-flow hit typically dominates, so net value falls. The relative size depends on leverage, but for most firms a tax increase is a valuation negative."</div></div>
+
+<div class="qa"><div class="q">Q48. What's the difference between a forward and a trailing multiple, and which is better?</div>
+<div class="a">A: "A trailing multiple uses the last twelve months' actuals; a forward multiple uses next year's estimate. Forward multiples are usually more meaningful because markets are forward-looking and price expected performance, and they smooth out recent one-offs. But they depend on the reliability of the estimates. I typically look at both, and for a fast-changing or recovering business I'd weight the forward multiple more."</div></div>
+
+<div class="qa"><div class="q">Q49. Can EV be lower than equity value? What does that imply?</div>
+<div class="a">A: "Yes — when a company has net cash, i.e. cash exceeds debt plus other claims. Then EV = equity value − net cash, which is below equity value. It's common for cash-rich, debt-free firms, some IT and consumer names. It signals a strong balance sheet, though a very large cash pile can also flag inefficient capital allocation if it's not being deployed or returned."</div></div>
+
+<div class="qa"><div class="q">Q50. Walk me through how an increase in depreciation flows through a DCF.</div>
+<div class="a">A: "Higher depreciation lowers EBIT, and therefore lowers the cash taxes computed on EBIT, which is a genuine cash saving — the depreciation tax shield. But depreciation itself is non-cash and added back in the FCFF build, so the only real cash effect is the lower tax. So in FCFF terms, more depreciation slightly increases free cash flow via reduced taxes, all else equal. It's a favourite question because it tests whether you know depreciation is non-cash but tax-relevant."</div></div>
+
+<div class="qa"><div class="q">Q51. Why might two analysts get very different DCF values for the same company?</div>
+<div class="a">A: "Because a DCF is assumption-driven, and small differences compound. Different revenue growth and margin paths, different discount rates — a percentage point on WACC moves value a lot — and above all different terminal assumptions, since terminal value is most of the answer. That subjectivity is precisely why the output is a sensitivity range and why you cross-check against market-based comps, rather than treating any single DCF number as precise truth."</div></div>
+
+<div class="qa"><div class="q">Q52. What is the equity risk premium and roughly what's used for India?</div>
+<div class="a">A: "It's the extra return investors demand for holding equities over the risk-free asset — the reward for bearing market risk — and it's the slope term in CAPM. For India, analysts commonly use something in the region of 5.5% to 7.5%, reflecting a higher premium than developed markets because of country and market risk, but I'd stress that it's an estimate that varies by source and over time, not a fixed constant. I'd state my assumption rather than assert a precise number as fact."</div></div>
+
+<div class="qa"><div class="q">Q53. How do you value a cyclical company?</div>
+<div class="a">A: "Carefully, because point-in-time earnings mislead — a steel or auto firm looks cheap on peak-cycle earnings and expensive at the trough. I'd normalise to mid-cycle earnings or margins rather than use the latest year, and lean on through-the-cycle EV/EBITDA rather than a DCF whose terminal year I can't honestly normalise. If I do run a DCF, I'd model the cycle explicitly over the explicit period and set the terminal year at a mid-cycle state. I'd also look at replacement value or asset-based measures as a floor."</div></div>
+
+<div class="qa"><div class="q">Q54. What's the intuition for the Gordon growth formula?</div>
+<div class="a">A: "It's the present value of a growing perpetuity. If a cash flow grows forever at rate g and you discount at r, its value today is the next year's cash flow divided by (r − g). The (r − g) denominator is the 'net' discount rate after crediting growth — the closer g gets to r, the larger the value, because you're subtracting less. It only works when r is greater than g; if g were greater, the value would be infinite, which is why g can't exceed the economy's growth rate."</div></div>
+
+<div class="qa"><div class="q">Q55. Free cash flow versus net income — which matters more and why?</div>
+<div class="a">A: "For valuation, free cash flow, because it's the actual distributable cash and it's harder to manipulate than accounting earnings. Net income includes non-cash items like depreciation and is affected by accounting choices; a company can report rising profits while burning cash if working capital and capex are ballooning. Cash flow captures reinvestment needs that the income statement hides. That said, net income drives P/E and matters for market perception, so I'd track both — but a DCF is built on cash, not earnings."</div></div>
+
+<div class="qa"><div class="q">Q56. Walk me through a dividend discount model.</div>
+<div class="a">A: "You value the equity as the present value of expected future dividends, discounted at the cost of equity, because dividends are the cash a shareholder actually receives. In the simplest single-stage Gordon form, price equals next year's dividend divided by (cost of equity minus a constant growth rate). For firms not yet in steady state you use a two- or three-stage model — explicit high-growth dividends, then a Gordon terminal value at a sustainable rate. It's transparent and hard to manipulate, but it only works when dividends genuinely reflect earning power; for a firm that pays little but generates cash, I'd switch to FCFE."</div></div>
+
+<div class="qa"><div class="q">Q57. Numerical — Gordon DDM. D₀ = INR 20, g = 6%, Kₑ = 13%. Value?</div>
+<div class="a">A: "P₀ = D₀(1+g)/(Kₑ − g) = 20 × 1.06 / (0.13 − 0.06) = 21.2 / 0.07 = about INR 303 per share. I'd note the answer is highly sensitive to the 7% denominator — a one-point change in Kₑ or g moves it materially, which is why I'd sensitise it."</div></div>
+
+<div class="qa"><div class="q">Q58. Numerical — two-stage DDM. D₀ = 10, grows 15% for 3 years then 5% forever, Kₑ = 12%.</div>
+<div class="a">A: "Dividends: D₁ = 11.5, D₂ = 13.23, D₃ = 15.21. Terminal at year 3: D₄ = 15.21 × 1.05 = 15.97, TV₃ = 15.97/(0.12 − 0.05) = 228.1. Discount everything at 12%: PVs are 10.27, 10.54, 10.83 for the dividends and 162.4 for the terminal — total about INR 194 per share. Notice the terminal value is roughly 84% of the total, so the 5% long-run growth is doing most of the work."</div></div>
+
+<div class="qa"><div class="q">Q59. What is the H-model?</div>
+<div class="a">A: "It's a closed-form approximation for a company whose growth fades <i>linearly</i> from a high initial rate to a stable long-run rate, so you don't have to model the transition year by year. Price = [D₀(1+g_L) + D₀ × H × (g_S − g_L)] / (Kₑ − g_L), where H is half the length of the fade period. The first term is the stable-growth value and the second is the bonus from the excess growth that decays away. For a 15%-to-5% fade over six years at a 12% cost of equity it gives about INR 193 on D₀ = 10 — a quick check against the full two-stage INR 194."</div></div>
+
+<div class="qa"><div class="q">Q60. When does a DDM badly understate value?</div>
+<div class="a">A: "When the payout doesn't reflect the firm's capacity to pay — a growth company that reinvests everything and pays no dividend, or a firm returning cash primarily through buybacks rather than dividends. A strict DDM would value the non-payer near zero, which is obviously wrong. The fix is FCFE, which values the cash available to shareholders whether or not it's distributed."</div></div>
+
+<div class="qa"><div class="q">Q61. What is the residual income model and when is it useful?</div>
+<div class="a">A: "Residual income values equity as today's book value plus the present value of future 'residual income' — net income minus a charge for the cost of the equity capital employed, which equals (ROE − Kₑ) × book equity. Only returns above the cost of equity add value. It's useful when a DCF's terminal value is uncomfortably large, because RI anchors most of the value in current book value; and for financials, where the 'excess-return model' is just residual income on book equity. It ties directly to justified P/B = (ROE − g)/(Kₑ − g)."</div></div>
+
+<div class="qa"><div class="q">Q62. Numerical — EVA. NOPAT = 720, invested capital = 4,000, WACC = 11%. Is value being created?</div>
+<div class="a">A: "Capital charge = 0.11 × 4,000 = 440. EVA = NOPAT − capital charge = 720 − 440 = INR 280 cr, positive — so yes. Equivalently ROIC = 720/4,000 = 18%, comfortably above the 11% WACC, so the firm earns more than the cost of the capital it uses and creates value. Enterprise value would be invested capital plus the present value of future EVA."</div></div>
+
+<div class="qa"><div class="q">Q63. Numerical — justified leading P/E. Payout 50%, g = 8%, Kₑ = 13%.</div>
+<div class="a">A: "Justified leading P/E = payout/(Kₑ − g) = 0.50/(0.13 − 0.08) = 0.50/0.05 = 10×. So on these fundamentals the stock deserves about 10 times forward earnings. If it trades at 16×, the market is implying higher growth, higher ROE, or lower risk than my inputs — that gap is the conversation."</div></div>
+
+<div class="qa"><div class="q">Q64. Why is comparing two firms on raw P/S misleading?</div>
+<div class="a">A: "Because the justified P/S is proportional to net margin: P/S ≈ net margin × payout / (Kₑ − g). A 20%-margin software firm should trade at a much higher P/S than a 2%-margin distributor, so saying 'the distributor is cheaper on P/S' is meaningless. You can only compare P/S across firms with similar margins, or after adjusting for the margin difference. The same logic makes EV/Sales a margin story."</div></div>
+
+<div class="qa"><div class="q">Q65. What are DLOM and DLOC?</div>
+<div class="a">A: "Two discounts you apply when valuing private or minority interests. DLOM — discount for lack of marketability — reflects that a private stake can't be sold quickly on an exchange, so buyers demand a discount, illustratively 10–30%. DLOC — discount for lack of control — reflects that a minority holder can't set strategy or dividends, so the stake is worth less than a pro-rata share of the controlling value; it's the mirror image of a control premium. They're applied multiplicatively, not added."</div></div>
+
+<div class="qa"><div class="q">Q66. Numerical — private minority stake. Comps imply INR 100/share (controlling, liquid). Apply 15% DLOC and 20% DLOM.</div>
+<div class="a">A: "100 × (1 − 0.15) × (1 − 0.20) = 100 × 0.85 × 0.80 = INR 68 per share. The discounts stack multiplicatively, so the combined effect (32%) is a bit less than simply adding 15% and 20%. I'd also sanity-check the underlying comps-based value and consider a size premium in the cost of equity."</div></div>
+
+<div class="qa"><div class="q">Q67. How do you value a life insurance company?</div>
+<div class="a">A: "Not on EV/EBITDA or FCFF — float, reserves, and investment income dominate. Life insurers are valued on embedded value: adjusted net worth plus the present value of the in-force book of policies. Appraisal value adds the value of expected new business. The headline multiple is price-to-embedded-value, P/EV, and I'd look at ROEV — return on embedded value — as the quality gauge, plus the value of new business margin. A general insurer I'd value on P/B with ROE and watch the combined ratio."</div></div>
+
+<div class="qa"><div class="q">Q68. How do IFRS 16 / Ind AS 116 leases affect valuation?</div>
+<div class="a">A: "Capitalising operating leases puts a right-of-use asset and a lease liability on the balance sheet and moves rent out of EBITDA into depreciation and interest. So EBITDA rises and EV/EBITDA looks optically lower. The key is consistency: if I use post-standard EBITDA, I must include the lease liability in net debt and therefore in EV, otherwise the firm looks artificially cheap. For lease-heavy sectors like airlines or retail, and for peers on different regimes, I'd normalise — historically using EV/EBITDAR by adding rent back."</div></div>
+
+<div class="qa"><div class="q">Q69. How should stock-based compensation be handled in a DCF?</div>
+<div class="a">A: "SBC is non-cash but a real economic cost — it dilutes shareholders. The mistake is to add it back like depreciation and then ignore the extra shares, which double-flatters value. I either treat SBC as a cash operating expense and don't add it back, or add it back but fully reflect the dilution in a growing diluted share count. One or the other — never the add-back with no dilution. For richly-paying tech names this materially changes the answer."</div></div>
+
+<div class="qa"><div class="q">Q70. What does EV/FCF capture that EV/EBITDA misses?</div>
+<div class="a">A: "Capex and working capital. EBITDA is before capex and before changes in working capital, so a capital-intensive firm can show a low, cheap-looking EV/EBITDA while its actual free cash flow is thin. EV/FCF uses unlevered free cash flow, which already subtracts capex and working-capital investment, so it reflects the real cash the enterprise throws off. It's the cleaner multiple for asset-heavy businesses; the trade-off is FCF is lumpier year to year, so I'd normalise capex."</div></div>
+
+<div class="qa"><div class="q">Q71. What's the difference between liquidation value and replacement value?</div>
+<div class="a">A: "Liquidation value is what the assets would fetch if sold off and liabilities settled — a downside floor, lower in a forced fire-sale than an orderly wind-down, with intangibles realising little. Replacement value is the cost to rebuild the asset base from scratch — an economic ceiling, since a rational buyer would build rather than pay much more. The ratio of market value to replacement cost is Tobin's Q; a Q above 1 means the market is paying for franchise or intangible value beyond the physical assets."</div></div>
+
+<div class="qa"><div class="q">Q72. Numerical — value a property on a cap rate. NOI = INR 200 cr, market cap rate = 7.5%.</div>
+<div class="a">A: "Value = NOI / cap rate = 200 / 0.075 = about INR 2,667 cr. The cap rate behaves like a discount rate on a perpetuity of net operating income — a lower cap rate means investors accept a lower yield, which implies a higher value. For a REIT I'd cross-check with P/FFO and price-to-NAV."</div></div>
+
+<div class="qa"><div class="q">Q73. When do you add a country risk premium, and what's the double-counting trap?</div>
+<div class="a">A: "You add a country risk premium when building a cost of equity from a developed-market base to value an emerging-market firm — for instance a US investor valuing an Indian company — to compensate for sovereign, political, and currency risk, often estimated as the sovereign default spread scaled by relative equity-to-bond volatility. The trap is double-counting: if I'm already discounting in rupees using the Indian G-Sec as my risk-free rate and a local India equity risk premium, that country risk is largely embedded, so bolting on a full CRP on top would penalise it twice."</div></div>
+
+<div class="qa"><div class="q">Q74. What is the size premium and why is it added?</div>
+<div class="a">A: "Empirically, small-cap stocks have historically earned returns above what their CAPM beta alone predicts — the size effect. So in a build-up cost of equity, analysts add a size premium of a few percentage points for small and mid-caps to reflect their higher risk and illiquidity. It's an illustrative, source-dependent adjustment, not a fixed constant, and I'd state it as an assumption rather than a fact."</div></div>
+
+<div class="qa"><div class="q">Q75. Numerical — implied growth from a P/E. Stock trades at 25× earnings, payout 40%, Kₑ = 12%. What perpetual growth is implied?</div>
+<div class="a">A: "Using leading P/E = payout/(Kₑ − g): 25 = 0.40/(0.12 − g), so 0.12 − g = 0.40/25 = 0.016, giving g ≈ 10.4%. That's the market's implied perpetual growth on these inputs — and it's very high relative to long-run GDP, so either the market expects a long above-trend runway or the stock is priced for perfection. Reverse-engineering the implied assumption is how I'd challenge a rich multiple."</div></div>
+
+<div class="qa"><div class="q">Q76. Numerical — EV bridge. Market cap 6,000, debt 1,500, cash 500, preferred 100, minority 200, associates 300. What's EV?</div>
+<div class="a">A: "EV = equity + debt + preferred + minority − cash − associates = 6,000 + 1,500 + 100 + 200 − 500 − 300 = INR 7,000 cr. Debt, preferred and minority are added as other claims on the enterprise; cash is subtracted as a non-operating asset; and I strip out associates because their earnings aren't in consolidated operating metrics, so their value shouldn't sit in an EV I compare to consolidated EBITDA."</div></div>
+
+<div class="qa"><div class="q">Q77. Numerical — value a target off comps. Target EBITDA 400, peer median EV/EBITDA 11×, net debt 600, shares 25 cr.</div>
+<div class="a">A: "Implied EV = 400 × 11 = 4,400. Equity value = EV − net debt = 4,400 − 600 = 3,800. Per share = 3,800 / 25 = INR 152. I'd present it as a range around the median — say the 25th-to-75th-percentile multiples — and consider a small discount if the target is smaller or slower-growing than the peer set."</div></div>
+
+<div class="qa"><div class="q">Q78. Numerical — reconcile the two terminal-value methods. Terminal FCFF 900, EBITDA 1,800, WACC 12%, g = 5%. Compare to a 10× exit multiple.</div>
+<div class="a">A: "Gordon TV = 900 × 1.05/(0.12 − 0.05) = 945/0.07 = INR 13,500 cr, which is an implied exit multiple of 13,500/1,800 = 7.5× EBITDA. The 10× exit multiple gives 18,000, and backing out its implied growth — 18,000 = 900(1+g)/(0.12 − g) — solves to about 6.7%. So the 10× multiple is a touch more optimistic than my 5% growth; a defensible terminal value sits between the two, and I'd pick based on how mature and comparable the peer set really is."</div></div>
+
+<div class="qa"><div class="q">Q79. Numerical — does the mid-year convention raise or lower value, and by how much roughly?</div>
+<div class="a">A: "It raises it, because you discount each cash flow for half a year less — exponents of 0.5, 1.5, 2.5 instead of 1, 2, 3. Roughly, every cash flow is multiplied by about (1 + r)^0.5 more value; at a 12% discount rate that's about a 5.8% uplift on the discounted flows. So mid-year typically lifts a DCF by low-to-mid single digits versus year-end. The nuance is being consistent about how you time the terminal value."</div></div>
+
+<div class="qa"><div class="q">Q80. Two methods disagree sharply — DCF INR 300, comps INR 180. What do you do?</div>
+<div class="a">A: "I don't average them blindly; I explain the gap. A DCF well above comps means I'm more optimistic on growth, margins, or the terminal assumption than the market is pricing into peers — so I'd pressure-test my terminal value and discount rate, and check my forecast against the growth-reinvestment-return identity. If they survive scrutiny, the stock may genuinely be undervalued; if not, my assumptions are too aggressive. I'd present a football field showing both, state which method I weight more for this specific company and why, and give a range rather than a false-precision point."</div></div>
+
+<!-- ============================================================ -->
+<h2 class="sec">24. Rapid Revision Cheat-Sheet</h2>
+
+<h3>16.1 Formula recall card</h3>
+<table>
+  <thead><tr><th>Concept</th><th>Formula</th></tr></thead>
+  <tbody>
+    <tr><td>EV bridge</td><td>EV = Equity + Debt + Pref + Minority − Cash</td></tr>
+    <tr><td>FCFF (from EBIT)</td><td>EBIT×(1−t) + D&amp;A − Capex − &Delta;NWC</td></tr>
+    <tr><td>FCFE (from NI)</td><td>NI + D&amp;A − Capex − &Delta;NWC + Net Borrowing</td></tr>
+    <tr><td>FCFE from FCFF</td><td>FCFF − Interest×(1−t) + Net Borrowing</td></tr>
+    <tr><td>WACC</td><td>(E/V)K<sub>e</sub> + (D/V)K<sub>d</sub>(1−t)</td></tr>
+    <tr><td>CAPM (K<sub>e</sub>)</td><td>R<sub>f</sub> + β(R<sub>m</sub> − R<sub>f</sub>)</td></tr>
+    <tr><td>TV — Gordon</td><td>FCFF<sub>n</sub>(1+g) / (WACC − g)</td></tr>
+    <tr><td>TV — exit multiple</td><td>Metric<sub>n</sub> × exit multiple</td></tr>
+    <tr><td>Unlever beta</td><td>β<sub>L</sub> / [1 + (1−t)(D/E)]</td></tr>
+    <tr><td>Justified P/B</td><td>(ROE − g) / (K<sub>e</sub> − g)</td></tr>
+    <tr><td>Justified leading P/E</td><td>payout / (K<sub>e</sub> − g)</td></tr>
+    <tr><td>Justified leading P/S</td><td>net margin × payout / (K<sub>e</sub> − g)</td></tr>
+    <tr><td>Gordon DDM</td><td>D<sub>0</sub>(1+g) / (K<sub>e</sub> − g)</td></tr>
+    <tr><td>H-model</td><td>[D<sub>0</sub>(1+g<sub>L</sub>) + D<sub>0</sub>H(g<sub>S</sub>−g<sub>L</sub>)] / (K<sub>e</sub> − g<sub>L</sub>)</td></tr>
+    <tr><td>Residual income</td><td>V = B<sub>0</sub> + &Sigma;(ROE−K<sub>e</sub>)B<sub>t−1</sub> / (1+K<sub>e</sub>)<sup>t</sup></td></tr>
+    <tr><td>EVA</td><td>(ROIC − WACC) × Invested Capital</td></tr>
+    <tr><td>Sustainable growth</td><td>g = retention (b) × ROE</td></tr>
+    <tr><td>Growth identity (firm)</td><td>g ≈ Reinvestment rate × ROIC</td></tr>
+    <tr><td>Real estate (cap rate)</td><td>Value = NOI / cap rate</td></tr>
+    <tr><td>Private stake</td><td>Value × (1−DLOC) × (1−DLOM)</td></tr>
+    <tr><td>Control premium</td><td>(Offer − Undisturbed) / Undisturbed</td></tr>
+  </tbody>
+</table>
+
+<h3>16.4 Common valuation mistakes — the interview kill-list</h3>
+<table>
+  <thead><tr><th>Mistake</th><th>Why it's wrong / the fix</th></tr></thead>
+  <tbody>
+    <tr><td>EV/Net Income or P/EBITDA</td><td>Claimant mismatch — EV pairs with pre-interest metrics, Price with post-interest. Match top and bottom.</td></tr>
+    <tr><td>Discounting FCFF at K<sub>e</sub> (or FCFE at WACC)</td><td>Double-counts / mis-states the tax shield. FCFF↔WACC, FCFE↔K<sub>e</sub>.</td></tr>
+    <tr><td>Using the actual tax bill in FCFF</td><td>Leaks the interest tax shield into cash flow <i>and</i> WACC. Tax EBIT directly.</td></tr>
+    <tr><td>Not discounting the terminal value</td><td>TV is a value <i>as at</i> year n — discount it back n years.</td></tr>
+    <tr><td>Terminal g &gt; long-run GDP</td><td>Firm eventually exceeds the whole economy. Anchor g to nominal GDP.</td></tr>
+    <tr><td>Terminal year not normalised</td><td>Capitalising a non-steady-state year (capex ≠ D&amp;A, still high growth) breaks Gordon.</td></tr>
+    <tr><td>Book weights / stale beta in WACC</td><td>Use market-value weights; sanity-check beta vs peers (bottom-up).</td></tr>
+    <tr><td>SBC add-back with no dilution</td><td>Double-flatters FCF. Expense SBC or capture dilution.</td></tr>
+    <tr><td>Post-IFRS16 EBITDA, no lease liability in EV</td><td>Inconsistent lease basis makes the firm look cheap.</td></tr>
+    <tr><td>Mean instead of median in comps</td><td>One outlier drags the set; use median + IQR.</td></tr>
+    <tr><td>Cheap-looking low-P/E cyclical at the peak</td><td>Peak earnings collapse; normalise to mid-cycle.</td></tr>
+    <tr><td>DDM on a non-dividend payer</td><td>Values it near zero. Use FCFE.</td></tr>
+    <tr><td>Double-counting country risk</td><td>Local G-Sec + local ERP already embeds it; don't add a full CRP too.</td></tr>
+  </tbody>
+</table>
+
+<h3>16.2 Multiple → when to use (one-liners)</h3>
+<table>
+  <thead><tr><th>Multiple</th><th>Reach for it when…</th></tr></thead>
+  <tbody>
+    <tr><td>EV/EBITDA</td><td>Default; different leverage; cross-border; M&amp;A</td></tr>
+    <tr><td>EV/EBIT</td><td>Capex/depreciation intensity differs across peers</td></tr>
+    <tr><td>EV/Sales</td><td>Loss-making / pre-profit; margins normalising</td></tr>
+    <tr><td>P/E</td><td>Mature, profitable, similar capital structures</td></tr>
+    <tr><td>P/B (+ ROE)</td><td>Banks, NBFCs, insurers, asset-heavy financials</td></tr>
+    <tr><td>PEG</td><td>Comparing growth stocks; contextualising a high P/E</td></tr>
+  </tbody>
+</table>
+
+<h3>16.3 The five reflexes that prevent 90% of mistakes</h3>
+<ol>
+  <li><b>Match claimant to metric:</b> EV with pre-interest metrics; Price with post-interest metrics. Never EV/Net-Income or P/EBITDA.</li>
+  <li><b>Match cash flow to discount rate:</b> FCFF↔WACC↔EV; FCFE↔Cost of equity↔Equity value.</li>
+  <li><b>Tax EBIT directly in FCFF</b> — the tax shield lives in WACC; don't double-count.</li>
+  <li><b>Always discount the terminal value</b> back to today, and check what % of value it is.</li>
+  <li><b>Present a range, not a point</b> — sensitivity grid for DCF, median-plus-IQR for comps, football field to reconcile.</li>
+</ol>
+
+<div class="keytake"><b>Final word:</b> Valuation interviews reward <i>judgement</i> over recall. Know the formulae cold, but win the conversation by explaining <b>why</b> a method fits the business, <b>what</b> assumption drives the answer, and <b>where</b> the number could be wrong. State assumptions as assumptions ("I'd assume a WACC around 12% and terminal growth near long-run GDP"), never as facts — that intellectual honesty is exactly what a good desk is hiring for.</div>
+
+</body></html>

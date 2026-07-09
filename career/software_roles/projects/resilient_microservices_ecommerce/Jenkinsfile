@@ -1,0 +1,101 @@
+// Declarative Jenkins pipeline for the resilient microservices e-commerce stack.
+// Stages: checkout -> install -> test -> docker build -> deploy (kubectl apply).
+// The deploy stage only runs on the main branch and is guarded so the pipeline
+// stays green in environments without a live cluster.
+
+pipeline {
+    agent any
+
+    options {
+        timestamps()
+        buildDiscarder(logRotator(numToKeepStr: '20'))
+        timeout(time: 30, unit: 'MINUTES')
+    }
+
+    environment {
+        REGISTRY   = 'resilient-ecommerce'
+        IMAGE_TAG  = "${env.BUILD_NUMBER ?: 'local'}"
+        // The three services + gateway share the same build recipe.
+        SERVICES   = 'product-service order-service user-service'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Install & Lint') {
+            steps {
+                sh '''
+                    python3 -m venv .venv
+                    . .venv/bin/activate
+                    pip install --upgrade pip
+                    pip install -r services/product-service/requirements.txt
+                    # Fail fast on any syntax error across the repo.
+                    python -m compileall services gateway
+                '''
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh '''
+                    . .venv/bin/activate
+                    for svc in ${SERVICES}; do
+                        echo "=== pytest ${svc} ==="
+                        ( cd services/${svc} && python -m pytest -q )
+                    done
+                '''
+            }
+            post {
+                always {
+                    echo 'Unit tests complete.'
+                }
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                sh '''
+                    for svc in ${SERVICES}; do
+                        docker build -t ${REGISTRY}/${svc}:${IMAGE_TAG} services/${svc}
+                        docker tag  ${REGISTRY}/${svc}:${IMAGE_TAG} ${REGISTRY}/${svc}:latest
+                    done
+                    docker build -t ${REGISTRY}/gateway:${IMAGE_TAG} gateway
+                    docker tag  ${REGISTRY}/gateway:${IMAGE_TAG} ${REGISTRY}/gateway:latest
+                '''
+            }
+        }
+
+        stage('Deploy to k8s') {
+            when {
+                branch 'main'
+            }
+            steps {
+                // Requires a configured kubeconfig on the Jenkins agent.
+                sh '''
+                    kubectl apply -f k8s/configmap.yaml
+                    kubectl apply -f k8s/secret.yaml
+                    kubectl apply -f k8s/product-service.yaml
+                    kubectl apply -f k8s/order-service.yaml
+                    kubectl apply -f k8s/user-service.yaml
+                    kubectl apply -f k8s/gateway.yaml
+                    kubectl apply -f k8s/ingress.yaml
+                    kubectl apply -f k8s/hpa.yaml
+                    kubectl rollout status deployment/product-service --timeout=120s
+                    kubectl rollout status deployment/order-service   --timeout=120s
+                    kubectl rollout status deployment/user-service    --timeout=120s
+                    kubectl rollout status deployment/gateway         --timeout=120s
+                '''
+            }
+        }
+    }
+
+    post {
+        success { echo "Pipeline succeeded: build ${IMAGE_TAG}" }
+        failure { echo 'Pipeline failed — check the stage logs above.' }
+        always  { cleanWs() }
+    }
+}

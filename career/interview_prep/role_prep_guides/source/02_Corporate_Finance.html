@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<!--
+  SHARED STUDY-GUIDE TEMPLATE — do not change the <style> block.
+  Each subject guide must reuse this exact <head> so all PDFs look consistent.
+  Fill <body> with the guide content using the classes documented below.
+
+  STRUCTURE TO USE INSIDE <body>:
+    <div class="cover">                              (title page)
+      <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+      <h1 class="cover-title">Subject Name</h1>
+      <div class="cover-sub">One-line scope. Roles: ...</div>
+    </div>
+    <div class="toc">...contents list...</div>       (optional)
+    <h2>1. Section</h2>            (major section, starts near top; use page-break as needed)
+    <h3>1.1 Subsection</h3>
+    <p>...</p>
+    <ul><li>...</li></ul>
+    <div class="formula"><b>Name</b><br> equation <div class="where">where: ...</div></div>
+    <table><thead><tr><th>..</th></tr></thead><tbody><tr><td>..</td></tr></tbody></table>
+    <div class="example"><div class="ex-h">Worked Example</div> ...steps... </div>
+    <div class="qa"><div class="q">Q: ...</div><div class="a">A: ...</div></div>
+    <div class="trap"><b>Common trap:</b> ...</div>
+    <div class="keytake"><b>Key takeaways:</b> ...</div>
+-->
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Georgia","Cambria",serif; font-size: 10.5pt; line-height: 1.5; color: #1a1a1a; }
+  h1,h2,h3,.cover-kicker,.cover-sub,.ex-h,.q,th { font-family: "Calibri","Segoe UI",sans-serif; }
+
+  /* Cover */
+  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+  .cover-kicker { font-size: 11pt; font-weight: 700; letter-spacing: 2px; color: #1f4e79; text-transform: uppercase; }
+  .cover-title { font-size: 34pt; font-weight: 800; color: #16365c; margin: 10px 0 6px; line-height: 1.1; }
+  .cover-sub { font-size: 12pt; color: #444; font-style: italic; }
+  .cover-foot { margin-top: 22px; font-size: 10pt; color: #666; font-family:"Calibri",sans-serif; }
+
+  /* TOC */
+  .toc { page-break-after: always; }
+  .toc h2 { border: none; }
+  .toc ol { margin-left: 20px; font-family:"Calibri",sans-serif; font-size: 11pt; line-height: 1.9; }
+
+  /* Headings */
+  h2 { font-size: 16pt; font-weight: 700; color: #16365c; border-bottom: 2px solid #16365c;
+       padding-bottom: 4px; margin: 18px 0 10px; page-break-after: avoid; }
+  h3 { font-size: 12.5pt; font-weight: 700; color: #1f4e79; margin: 14px 0 5px; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; color: #333; margin: 10px 0 4px; font-family:"Calibri",sans-serif; }
+  p { margin: 5px 0; text-align: justify; }
+  ul, ol { margin: 5px 0 5px 22px; }
+  li { margin-bottom: 3px; }
+  b, strong { color: #16365c; }
+
+  /* Formula box */
+  .formula { background: #f4f7fb; border-left: 4px solid #1f4e79; padding: 8px 12px; margin: 8px 0;
+             font-family: "Cambria Math","Cambria",serif; page-break-inside: avoid; }
+  .formula b { color: #16365c; }
+  .formula .where { font-size: 9.3pt; color: #555; margin-top: 3px; font-family:"Calibri",sans-serif; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 9px 0; font-size: 9.6pt; page-break-inside: avoid; }
+  th { background: #16365c; color: #fff; text-align: left; padding: 5px 8px; font-size: 9.6pt; }
+  td { border: 1px solid #cbd5e1; padding: 4px 8px; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f4f7fb; }
+
+  /* Worked example */
+  .example { border: 1px solid #b7c7dd; border-radius: 4px; padding: 9px 12px; margin: 10px 0;
+             background: #fbfdff; page-break-inside: avoid; }
+  .ex-h { font-weight: 700; color: #1f4e79; font-size: 10.5pt; margin-bottom: 4px; }
+
+  /* Q&A */
+  .qa { margin: 8px 0; page-break-inside: avoid; }
+  .qa .q { font-weight: 700; color: #16365c; }
+  .qa .a { margin-top: 2px; }
+
+  /* Trap / takeaway callouts */
+  .trap { background: #fff6f0; border-left: 4px solid #c26a2c; padding: 6px 11px; margin: 8px 0; font-size: 10pt; }
+  .keytake { background: #f0f7f1; border-left: 4px solid #3f7d45; padding: 8px 12px; margin: 12px 0; }
+
+  .sec { page-break-before: always; }   /* put on an <h2> to force a fresh page */
+</style></head><body>
+
+<div class="cover">
+  <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+  <h1 class="cover-title">Corporate Finance</h1>
+  <div class="cover-sub">Time value of money, capital budgeting, cost of capital, capital structure, leverage, dividend policy, working capital &amp; value creation.</div>
+  <div class="cover-foot">Roles: Equity Research · Investment Banking · Credit · FP&amp;A · Treasury<br>
+  Target: Indian MBA (Finance) freshers · All figures in INR · Concepts first, numbers illustrative</div>
+</div>
+
+<div class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li>The Big Picture: What Corporate Finance Is About</li>
+    <li>Time Value of Money (PV, FV, Annuities, Perpetuities, Amortisation)</li>
+    <li>Interest Rates: Nominal, Effective, Real &amp; Compounding</li>
+    <li>Capital Budgeting: NPV, IRR, MIRR, Payback, PI, EAA, Replacement, Rationing, Project Risk</li>
+    <li>Relevant Cash Flows: Incremental, Sunk, Opportunity, Real vs Nominal</li>
+    <li>NPV vs IRR: Conflicts, Multiple IRR, Reinvestment</li>
+    <li>Cost of Capital: Equity, Debt, Preference, APT, Bottom-up Beta, Country Risk, Flotation, MCC</li>
+    <li>Beta: Levered vs Unlevered &amp; Re-levering</li>
+    <li>WACC: Weights, Tax Shield, Full Walkthrough</li>
+    <li>Capital Structure: MM, Trade-off, Pecking Order, EBIT-EPS Indifference</li>
+    <li>Leverage: DOL, DFL, DCL &amp; Breakeven</li>
+    <li>Dividend Policy: Relevance, Walter, Gordon, Residual, Bonus/Split, Buybacks</li>
+    <li>Working Capital Management: CCC, EOQ, Baumol, Miller-Orr, Over/Under-trading</li>
+    <li>Value Creation: EVA, MVA, ROIC vs WACC, Value Drivers, Governance</li>
+    <li>Corporate Restructuring: M&amp;A, Synergies, LBO, Demerger, Buy vs Lease</li>
+    <li>Master Interview Q&amp;A Bank (70+ questions)</li>
+    <li>Formula Cheat-Sheet &amp; Final Checklist</li>
+  </ol>
+</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">1. The Big Picture: What Corporate Finance Is About</h2>
+
+<p>Corporate finance answers three linked questions that a firm faces every day:</p>
+<ul>
+  <li><b>The investment (capital budgeting) decision</b> — which long-term projects and assets should the firm buy? Answered mainly by <b>NPV</b>.</li>
+  <li><b>The financing (capital structure) decision</b> — what mix of debt and equity should fund those assets? Answered by <b>capital-structure theory</b> and minimising <b>WACC</b>.</li>
+  <li><b>The dividend (payout) decision</b> — how much cash should be returned to shareholders versus reinvested? Answered by <b>dividend / payout policy</b>.</li>
+</ul>
+
+<p>The unifying objective in modern finance is to <b>maximise the wealth of shareholders</b>, which is equivalent to maximising the intrinsic value of the firm's equity. Note this is <em>not</em> the same as maximising accounting profit: profit ignores the <b>timing</b> of cash flows, the <b>risk</b> attached to them, and the <b>cash</b> versus accrual distinction. A project can grow EPS yet destroy value if it earns less than the cost of the capital it consumes.</p>
+
+<p>Three ideas thread through everything below and are worth stating up front because interviewers keep coming back to them:</p>
+<ul>
+  <li><b>A rupee today is worth more than a rupee tomorrow</b> (time value of money) — because today's rupee can be invested and earns a return.</li>
+  <li><b>Risk must be rewarded</b> — riskier cash flows are discounted at higher rates, so they are worth less today.</li>
+  <li><b>Value is created only when return on capital exceeds the cost of that capital</b> (ROIC &gt; WACC). This single inequality is the spine of the entire subject.</li>
+</ul>
+
+<div class="keytake"><b>Key takeaways:</b> Corporate finance = investment + financing + dividend decisions, all serving shareholder-wealth maximisation. Cash flows, timing, and risk beat accounting profit. Value is created only when returns exceed the cost of capital.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">2. Time Value of Money (TVM)</h2>
+
+<p>Every valuation in finance — a bond, a share, a project, a company — is ultimately a time-value-of-money exercise: take future cash flows and translate them into today's rupees. Master this section and half of corporate finance follows mechanically.</p>
+
+<h3>2.1 Future Value and Present Value of a single sum</h3>
+
+<div class="formula"><b>Future Value (single sum)</b><br>
+FV = PV × (1 + r)<sup>n</sup>
+<div class="where">where: PV = amount today; r = interest rate per period (decimal); n = number of periods; FV = value at end of n periods. (1+r)<sup>n</sup> is the <b>compound factor</b>.</div></div>
+
+<div class="formula"><b>Present Value (single sum)</b><br>
+PV = FV / (1 + r)<sup>n</sup> = FV × (1 + r)<sup>&minus;n</sup>
+<div class="where">where: 1 / (1+r)<sup>n</sup> is the <b>discount factor</b>. Discounting is simply compounding run in reverse. r here is the <b>discount rate</b> = required return / opportunity cost of capital.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 1 — Single-sum PV and FV</div>
+<p>You deposit ₹1,00,000 for 3 years at 8% p.a. compounded annually.</p>
+<p><b>FV</b> = 1,00,000 × (1.08)<sup>3</sup> = 1,00,000 × 1.259712 = <b>₹1,25,971</b>.</p>
+<p>Reverse question: what is ₹1,25,971 receivable in 3 years worth today at 8%?<br>
+<b>PV</b> = 1,25,971 / (1.08)<sup>3</sup> = 1,25,971 / 1.259712 = <b>₹1,00,000</b>. The two operations are mirror images.</p>
+<p><b>Rule of 72 (mental check):</b> money doubles in roughly 72 ÷ interest rate years. At 8%, ≈ 72/8 = 9 years to double. Handy for sanity-checking on the spot.</p>
+</div>
+
+<h3>2.2 Annuities — level cash flows for a fixed period</h3>
+
+<p>An <b>annuity</b> is a stream of <b>equal</b> cash flows at <b>regular</b> intervals for a <b>finite</b> number of periods (an EMI, a bond's coupon stream, a lease). An <b>ordinary annuity</b> pays at the <b>end</b> of each period; an <b>annuity due</b> pays at the <b>beginning</b>.</p>
+
+<div class="formula"><b>PV of an ordinary annuity</b><br>
+PV = C × [ 1 &minus; (1 + r)<sup>&minus;n</sup> ] / r
+<div class="where">where: C = cash flow per period; r = rate per period; n = number of payments. The bracket is the <b>annuity PV factor</b> (PVIFA).</div></div>
+
+<div class="formula"><b>FV of an ordinary annuity</b><br>
+FV = C × [ (1 + r)<sup>n</sup> &minus; 1 ] / r
+<div class="where">where: the bracket is the <b>annuity FV factor</b> (FVIFA). Useful for SIP / recurring-deposit maturity values.</div></div>
+
+<div class="formula"><b>Annuity due (payments at start of period)</b><br>
+PV<sub>due</sub> = PV<sub>ordinary</sub> × (1 + r) &nbsp;&nbsp; ; &nbsp;&nbsp; FV<sub>due</sub> = FV<sub>ordinary</sub> × (1 + r)
+<div class="where">Each cash flow arrives one period earlier, so multiply by (1+r) to compound it forward one extra period.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 2 — Loan EMI (annuity)</div>
+<p>You borrow ₹20,00,000 (home-loan style) at 9% p.a. compounded monthly for 20 years. Find the monthly EMI.</p>
+<p>Monthly rate r = 9%/12 = 0.75% = 0.0075. Periods n = 20 × 12 = 240.</p>
+<p>PV = C × [1 &minus; (1+r)<sup>&minus;n</sup>] / r → rearrange for C: C = PV × r / [1 &minus; (1+r)<sup>&minus;n</sup>].</p>
+<p>(1.0075)<sup>240</sup> ≈ 6.0092, so (1.0075)<sup>&minus;240</sup> ≈ 0.16641.<br>
+Denominator = 1 &minus; 0.16641 = 0.83359. Numerator factor = 0.0075 / 0.83359 = 0.008998.<br>
+<b>EMI</b> = 20,00,000 × 0.008998 ≈ <b>₹17,995 per month</b>.</p>
+<p>Total paid = 17,995 × 240 ≈ ₹43.19 lakh, of which ₹23.19 lakh is interest — a vivid demonstration of the time value of money.</p>
+</div>
+
+<h3>2.2a Loan amortisation schedule</h3>
+<p>An amortising loan is repaid in equal instalments; each instalment is part <b>interest</b> (on the outstanding balance) and part <b>principal</b>. Because the balance falls over time, the interest portion <b>shrinks</b> and the principal portion <b>grows</b> — even though the total instalment is constant. Building the schedule is a standard credit / treasury task.</p>
+
+<div class="formula"><b>Amortisation instalment &amp; split</b><br>
+Instalment A = P × r / [1 &minus; (1+r)<sup>&minus;n</sup>] ; &nbsp; Interest<sub>t</sub> = r × Balance<sub>t&minus;1</sub> ; &nbsp; Principal<sub>t</sub> = A &minus; Interest<sub>t</sub>
+<div class="where">P = loan principal; r = rate per period; n = number of instalments; Balance<sub>t</sub> = Balance<sub>t&minus;1</sub> &minus; Principal<sub>t</sub>.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 2a — Amortisation schedule</div>
+<p>Loan ₹10,00,000; 10% p.a.; 5 equal annual instalments. Instalment = 10,00,000 × 0.10 / [1 − 1.10<sup>−5</sup>] = 10,00,000 × 0.10/0.37908 = <b>₹2,63,797</b>.</p>
+<table><thead><tr><th>Year</th><th>Opening balance</th><th>Instalment</th><th>Interest (10%)</th><th>Principal</th><th>Closing balance</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>10,00,000</td><td>2,63,797</td><td>1,00,000</td><td>1,63,797</td><td>8,36,203</td></tr>
+<tr><td>2</td><td>8,36,203</td><td>2,63,797</td><td>83,620</td><td>1,80,177</td><td>6,56,026</td></tr>
+<tr><td>3</td><td>6,56,026</td><td>2,63,797</td><td>65,603</td><td>1,98,194</td><td>4,57,832</td></tr>
+<tr><td>4</td><td>4,57,832</td><td>2,63,797</td><td>45,783</td><td>2,18,014</td><td>2,39,818</td></tr>
+<tr><td>5</td><td>2,39,818</td><td>2,63,797</td><td>23,982</td><td>2,39,815</td><td>~0</td></tr>
+</tbody></table>
+<p>Notice interest falls (₹1,00,000 → ₹23,982) while principal repaid rises (₹1,63,797 → ₹2,39,815). Early instalments are mostly interest — which is why prepaying a loan early saves the most interest.</p>
+</div>
+
+<h3>2.3 Perpetuities — level cash flows forever</h3>
+
+<div class="formula"><b>PV of a perpetuity</b><br>
+PV = C / r
+<div class="where">C = constant cash flow each period; r = discount rate. The formula assumes the first cash flow arrives one period from now (an ordinary perpetuity).</div></div>
+
+<div class="formula"><b>PV of a growing perpetuity (Gordon form)</b><br>
+PV = C<sub>1</sub> / (r &minus; g)
+<div class="where">C<sub>1</sub> = cash flow one period from now (the <em>next</em> cash flow); r = discount rate; g = constant growth rate; requires <b>r &gt; g</b> or the formula explodes / turns negative and is meaningless.</div></div>
+
+<div class="formula"><b>PV of a growing annuity (finite, growing)</b><br>
+PV = [ C<sub>1</sub> / (r &minus; g) ] × [ 1 &minus; ((1 + g)/(1 + r))<sup>n</sup> ]
+<div class="where">A stream that grows at g for n periods then stops. When n → ∞ and r &gt; g, the bracket → 1 and it collapses to the growing perpetuity C<sub>1</sub>/(r&minus;g).</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 3 — Perpetuity &amp; growing perpetuity</div>
+<p>(a) A perpetual bond pays ₹8,000 per year forever; required return 10%. PV = 8,000 / 0.10 = <b>₹80,000</b>.</p>
+<p>(b) Dividends are ₹10 next year, growing 5% forever; required return 12%.<br>
+PV = 10 / (0.12 &minus; 0.05) = 10 / 0.07 = <b>₹142.86</b>. This is exactly the Gordon Growth (dividend discount) share price.</p>
+<p><b>Sensitivity trap:</b> raise g to 6% and price = 10/0.06 = ₹166.67 — a 1-point growth change moves value ~17%. Small denominators (r&minus;g) make growing-perpetuity values violently sensitive; this is why terminal-value assumptions dominate DCF outputs.</p>
+</div>
+
+<div class="trap"><b>Common trap — which cash flow goes on top?</b> In the growing perpetuity, the numerator is <b>next</b> period's cash flow C<sub>1</sub> = C<sub>0</sub>(1+g), <em>not</em> today's C<sub>0</sub>. Forgetting to grow the base dividend by one year is the single most common DDM/terminal-value error in interviews.</div>
+
+<div class="keytake"><b>Key takeaways:</b> PV and FV are inverses. Annuity = finite level stream; perpetuity = infinite level stream (C/r); growing perpetuity = C<sub>1</sub>/(r&minus;g) with r&gt;g. Annuity-due multiplies the ordinary result by (1+r). Terminal values are hyper-sensitive to (r&minus;g).</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">3. Interest Rates: Nominal, Effective, Real &amp; Compounding</h2>
+
+<h3>3.1 Nominal (stated) vs Effective Annual Rate</h3>
+
+<p>A rate quoted as "12% per annum, compounded monthly" is a <b>nominal annual rate (APR)</b>. Because interest is credited 12 times and itself earns interest, the <b>effective annual rate (EAR)</b> you actually earn is higher.</p>
+
+<div class="formula"><b>Effective Annual Rate</b><br>
+EAR = (1 + i/m)<sup>m</sup> &minus; 1
+<div class="where">i = nominal annual rate; m = compounding periods per year (12 monthly, 4 quarterly, 365 daily). As m → ∞, EAR → e<sup>i</sup> &minus; 1 (continuous compounding).</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 4 — Nominal vs Effective</div>
+<p>12% nominal, compounded: annually, quarterly, monthly, daily.</p>
+<table><thead><tr><th>Compounding</th><th>m</th><th>EAR = (1 + 0.12/m)<sup>m</sup> − 1</th></tr></thead>
+<tbody>
+<tr><td>Annual</td><td>1</td><td>12.000%</td></tr>
+<tr><td>Quarterly</td><td>4</td><td>12.551%</td></tr>
+<tr><td>Monthly</td><td>12</td><td>12.683%</td></tr>
+<tr><td>Daily</td><td>365</td><td>12.747%</td></tr>
+<tr><td>Continuous</td><td>∞</td><td>e<sup>0.12</sup> − 1 = 12.750%</td></tr>
+</tbody></table>
+<p>More frequent compounding always raises the effective rate, but with diminishing marginal effect — the jump from annual to quarterly is large; quarterly to continuous is tiny.</p>
+</div>
+
+<h3>3.2 Real vs Nominal rates — the Fisher relation</h3>
+
+<div class="formula"><b>Fisher equation</b><br>
+(1 + nominal) = (1 + real) × (1 + inflation) &nbsp;&nbsp;⟹&nbsp;&nbsp; real ≈ nominal &minus; inflation
+<div class="where">The exact form divides out inflation; the approximation (subtraction) is fine for small rates but understates the gap at high inflation.</div></div>
+
+<p>Example: nominal 12%, inflation 6%. Exact real rate = 1.12/1.06 &minus; 1 = 5.66%; the quick approximation gives 6%. In an inflationary economy like India's, this gap matters for treasury and long-horizon valuation.</p>
+
+<div class="trap"><b>Consistency trap:</b> discount <b>nominal cash flows</b> with a <b>nominal rate</b>, and <b>real cash flows</b> with a <b>real rate</b>. Mixing them — e.g. inflating your revenue but discounting at a real rate — double-counts or omits inflation and is a classic modelling error. In practice most Indian DCFs are built entirely in nominal terms.</p></div>
+
+<div class="keytake"><b>Key takeaways:</b> EAR &gt; nominal whenever compounding is more frequent than the quoting period. Fisher links nominal, real and inflation. Always match the "flavour" of the cash flow to the flavour of the discount rate.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">4. Capital Budgeting: Evaluating Long-Term Investments</h2>
+
+<p>Capital budgeting is the process of deciding which long-term projects to accept. The gold standard is <b>NPV</b>; the others are either communication tools (IRR, PI) or crude screens (payback).</p>
+
+<h3>4.1 Net Present Value (NPV)</h3>
+
+<div class="formula"><b>Net Present Value</b><br>
+NPV = &minus;CF<sub>0</sub> + Σ<sub>t=1..n</sub> CF<sub>t</sub> / (1 + r)<sup>t</sup>
+<div class="where">CF<sub>0</sub> = initial outlay (a positive number subtracted, i.e. cash outflow at t=0); CF<sub>t</sub> = expected free cash flow in year t; r = discount rate = cost of capital / hurdle rate; n = project life.</div></div>
+
+<p><b>Decision rule:</b> accept if NPV &gt; 0; for mutually exclusive projects, pick the highest positive NPV. NPV directly measures <b>rupees of value created</b> for shareholders today — an NPV of ₹50 crore means the project is expected to add ₹50 crore to firm value right now. This is why it is the theoretically correct rule.</p>
+
+<h3>4.2 Internal Rate of Return (IRR)</h3>
+
+<div class="formula"><b>Internal Rate of Return</b><br>
+IRR = the rate r* that makes NPV = 0: &nbsp; &minus;CF<sub>0</sub> + Σ CF<sub>t</sub> / (1 + r*)<sup>t</sup> = 0
+<div class="where">IRR is the project's own compound annual return. There is no closed-form solution for n&gt;2; it is found by trial-and-error / interpolation / Excel's IRR().</div></div>
+
+<p><b>Decision rule:</b> accept if IRR &gt; cost of capital (the hurdle rate). IRR is intuitive ("this project yields 18%") which is why bankers love quoting it, but it hides several traps covered in Section 6.</p>
+
+<div class="formula"><b>IRR by linear interpolation (exam trick)</b><br>
+IRR ≈ r<sub>L</sub> + [ NPV<sub>L</sub> / (NPV<sub>L</sub> &minus; NPV<sub>H</sub>) ] × (r<sub>H</sub> &minus; r<sub>L</sub>)
+<div class="where">r<sub>L</sub>, r<sub>H</sub> = a low and high trial rate giving a positive (NPV<sub>L</sub>) and negative (NPV<sub>H</sub>) NPV respectively. Accurate only when the two rates bracket IRR closely.</div></div>
+
+<h3>4.3 Modified IRR (MIRR)</h3>
+
+<p>MIRR fixes IRR's unrealistic assumption that interim cash flows are reinvested at the IRR itself. Instead it reinvests them at the <b>cost of capital</b> (or a stated reinvestment rate), giving a single, more conservative rate.</p>
+
+<div class="formula"><b>Modified IRR</b><br>
+MIRR = [ FV of inflows (compounded at reinvestment rate) / PV of outflows (discounted at finance rate) ]<sup>1/n</sup> &minus; 1
+<div class="where">FV of inflows uses the reinvestment rate (usually WACC); PV of outflows uses the finance/discount rate; n = project life. MIRR always gives one unique value.</div></div>
+
+<h3>4.4 Payback and Discounted Payback</h3>
+
+<p><b>Payback period</b> = the time to recover the initial outlay from (undiscounted) cash flows. <b>Discounted payback</b> uses discounted cash flows, so it is always longer. Both are liquidity/risk screens, not value measures.</p>
+<ul>
+  <li><b>Pros:</b> simple; favours quick cash recovery; a rough risk filter (shorter = less exposed).</li>
+  <li><b>Cons:</b> plain payback ignores the time value of money entirely; both ignore <b>all cash flows after the cut-off</b>; the cut-off is arbitrary. A long-gestation project (e.g. infrastructure) can be hugely value-accretive yet fail a payback screen.</li>
+</ul>
+
+<h3>4.5 Profitability Index (PI)</h3>
+
+<div class="formula"><b>Profitability Index (Benefit–Cost ratio)</b><br>
+PI = PV of future cash flows / Initial investment = 1 + (NPV / Initial investment)
+<div class="where">Accept if PI &gt; 1 (equivalent to NPV &gt; 0). PI measures value created <b>per rupee invested</b> — useful under <b>capital rationing</b> when the budget is fixed.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 5 — Full capital-budgeting on one project</div>
+<p>Project "Vendor Automation": initial outlay ₹100 lakh; cash inflows ₹40 / 40 / 40 / 30 lakh in years 1–4; cost of capital 12%.</p>
+<table><thead><tr><th>Year</th><th>CF (₹ lakh)</th><th>DF @12%</th><th>PV (₹ lakh)</th><th>Cumulative PV</th></tr></thead>
+<tbody>
+<tr><td>0</td><td>−100.0</td><td>1.0000</td><td>−100.00</td><td>−100.00</td></tr>
+<tr><td>1</td><td>40.0</td><td>0.8929</td><td>35.71</td><td>−64.29</td></tr>
+<tr><td>2</td><td>40.0</td><td>0.7972</td><td>31.89</td><td>−32.40</td></tr>
+<tr><td>3</td><td>40.0</td><td>0.7118</td><td>28.47</td><td>−3.93</td></tr>
+<tr><td>4</td><td>30.0</td><td>0.6355</td><td>19.07</td><td>+15.14</td></tr>
+</tbody></table>
+<p><b>NPV</b> = +₹15.14 lakh &gt; 0 → accept.<br>
+<b>PI</b> = (100 + 15.14)/100 = 115.14/100 = <b>1.15</b> → accept.<br>
+<b>Plain payback</b>: cumulative undiscounted = −100, −60, −20, +20 → recovered during year 3; payback = 2 + 20/40 = <b>2.5 years</b>.<br>
+<b>Discounted payback</b>: cumulative PV turns positive during year 4; = 3 + 3.93/19.07 ≈ <b>3.21 years</b> (longer, as expected).<br>
+<b>IRR</b>: NPV is +15.14 at 12%. Try 18%: PVs ≈ 33.9+28.7+24.4+15.5 = 102.5 → NPV ≈ +2.5. Try 20%: NPV ≈ −1.5. Interpolate: IRR ≈ 18% + [2.5/(2.5+1.5)]×2% ≈ <b>~18.8%</b> &gt; 12% → accept. All five methods agree here because the project is "conventional".</p>
+</div>
+
+<h3>4.6 MIRR — a worked number</h3>
+<div class="example"><div class="ex-h">Worked Example 5a — MIRR vs IRR</div>
+<p>Same project as WE5: outlay ₹100 lakh; inflows 40/40/40/30; reinvestment/finance rate = WACC = 12%.</p>
+<p><b>Step 1 — compound each inflow forward to year 4 at 12%:</b><br>
+40×1.12<sup>3</sup>=56.20; 40×1.12<sup>2</sup>=50.18; 40×1.12<sup>1</sup>=44.80; 30×1.12<sup>0</sup>=30.00 → terminal value = <b>₹181.17 lakh</b>.</p>
+<p><b>Step 2 — PV of outflows</b> = ₹100 lakh (at t=0).</p>
+<p><b>Step 3 — MIRR</b> = (181.17/100)<sup>1/4</sup> − 1 = (1.8117)<sup>0.25</sup> − 1 = <b>~16.0%</b>.</p>
+<p>MIRR (16.0%) sits <em>below</em> the IRR (~18.8%) because it reinvests interim cash at 12%, not at the flattering 18.8%. Both exceed WACC 12%, so accept — but MIRR is the more honest return figure.</p>
+</div>
+
+<h3>4.7 Equivalent Annual Annuity / Cost (unequal lives)</h3>
+<p>You cannot compare the raw NPVs of two mutually exclusive projects with <b>different lives</b> — a 5-year project has more time to accumulate value than a 3-year one. Convert each NPV into a level annual cash flow (its <b>EAA</b>), then compare per-year. For pure-cost decisions (e.g. which machine to buy), use the same idea on costs — the <b>Equivalent Annual Cost (EAC)</b>.</p>
+<div class="formula"><b>Equivalent Annual Annuity</b><br>
+EAA = NPV / Annuity factor(r, n) &nbsp; where Annuity factor = [1 &minus; (1+r)<sup>&minus;n</sup>]/r
+<div class="where">Assumes the project can be repeated indefinitely (replacement chain). Pick the highest EAA (or lowest EAC).</div></div>
+<div class="example"><div class="ex-h">Worked Example 5b — Choosing between unequal lives</div>
+<p>Machine A: NPV ₹50 lakh, life 3 yrs. Machine B: NPV ₹65 lakh, life 5 yrs. WACC 10%.</p>
+<p>Annuity factor(10%,3) = 2.4869 → <b>EAA<sub>A</sub></b> = 50/2.4869 = <b>₹20.11 lakh/yr</b>.<br>
+Annuity factor(10%,5) = 3.7908 → <b>EAA<sub>B</sub></b> = 65/3.7908 = <b>₹17.15 lakh/yr</b>.</p>
+<p>Although B has the higher <em>total</em> NPV, A delivers more value <b>per year</b> and can be replaced sooner — <b>choose A</b>. Ranking by raw NPV here would be a mistake.</p>
+</div>
+
+<h3>4.8 Replacement decisions</h3>
+<p>"Replace now or run the old asset another year?" Analyse only <b>incremental</b> flows: cost of the new asset, salvage of the old one now (and lost future salvage), the difference in operating costs, and the difference in depreciation tax shields. When comparing assets of different lives, decide on an <b>EAC</b> basis. The optimal replacement age is where the EAC of running the asset one more year starts to rise (rising maintenance vs falling capital-recovery cost).</p>
+
+<h3>4.9 Capital rationing</h3>
+<p>When the capital budget is <b>fixed</b> and there are more positive-NPV projects than money, you cannot take them all. <b>Soft rationing</b> is self-imposed (internal budget limits); <b>hard rationing</b> is market-imposed (cannot raise more capital). For divisible independent projects, rank by <b>PI</b> and fill the budget top-down to maximise total NPV per rupee. For indivisible or interdependent projects, examine feasible <b>combinations</b> and pick the bundle with the highest total NPV within the constraint.</p>
+
+<h3>4.10 Risk analysis in projects</h3>
+<p>A single NPV hides the uncertainty around the inputs. Four standard techniques probe it, plus the "option" lens:</p>
+<ul>
+  <li><b>Sensitivity analysis:</b> flex <em>one</em> variable at a time (price, volume, cost, WACC) and see how NPV moves. Identifies the variables the outcome is most sensitive to (the "value drivers" to manage), but ignores interactions and probabilities.</li>
+  <li><b>Scenario analysis:</b> flex a <em>consistent set</em> of variables together — e.g. Best / Base / Worst case — to see NPV under coherent states of the world. Captures correlations that sensitivity misses.</li>
+  <li><b>Break-even / accounting &amp; NPV break-even:</b> find the level of a variable (e.g. sales units) at which NPV = 0. A large safety margin above break-even means lower risk.</li>
+  <li><b>Simulation (Monte Carlo):</b> assign probability distributions to inputs and simulate thousands of outcomes to get a <em>distribution</em> of NPV (mean, probability of loss).</li>
+  <li><b>Decision trees:</b> map sequential decisions and chance events with probabilities; fold back expected values to value staged/contingent projects (e.g. pilot then full roll-out).</li>
+  <li><b>Real options:</b> managerial flexibility has value that a static NPV ignores — the option to <b>expand</b> (if it succeeds), <b>abandon</b> (if it fails), <b>delay/time</b>, or <b>switch</b> inputs/outputs. Expanded (strategic) NPV = static NPV + value of the embedded options. This is why some negative-NPV pilots are still worth doing — they buy a valuable option.</li>
+</ul>
+<div class="trap"><b>Sensitivity ≠ scenario:</b> sensitivity moves one variable in isolation and can badly understate risk when variables are correlated (a demand slump usually hits both price <em>and</em> volume). Scenario analysis flexes them together; don't present a one-variable sensitivity as if it captured total project risk.</div>
+
+<div class="keytake"><b>Key takeaways:</b> NPV (₹ of value) is the decision rule; IRR (%) is the communication rule; PI (value per ₹) rations capital; payback screens liquidity. MIRR fixes IRR's reinvestment flaw. Use EAA/EAC for unequal lives and replacement timing. Under capital rationing rank by PI. Probe uncertainty with sensitivity, scenario, break-even, simulation, decision trees — and remember managerial flexibility (real options) adds value a static NPV omits.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">5. Relevant Cash Flows: What Goes Into an NPV</h2>
+
+<p>The discount rate gets all the glory, but wrong <b>cash flows</b> sink more valuations than wrong rates. The rule: use <b>incremental, after-tax, cash</b> flows attributable to the decision — nothing more, nothing less.</p>
+
+<h3>5.1 The incremental principle</h3>
+<p>Count only cash flows that <b>change</b> because of the project (the "with vs without" test). This immediately generates a checklist of what to include and exclude:</p>
+
+<table><thead><tr><th>Item</th><th>Include?</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><b>Sunk costs</b> (money already spent, e.g. a completed feasibility study)</td><td>NO</td><td>Not incremental — unaffected by accept/reject. Ignoring them is hard psychologically but correct.</td></tr>
+<tr><td><b>Opportunity costs</b> (e.g. rent forgone on land you'd otherwise lease out)</td><td>YES</td><td>A real economic cost of using the resource in this project.</td></tr>
+<tr><td><b>Incidental / side effects &amp; cannibalisation</b> (new product steals sales from an old one)</td><td>YES</td><td>Erosion is an incremental loss caused by the project; positive synergies count too.</td></tr>
+<tr><td><b>Working-capital investment</b> (extra inventory + receivables − payables)</td><td>YES</td><td>Cash tied up; recovered at project end as a terminal inflow.</td></tr>
+<tr><td><b>Financing costs</b> (interest, dividends)</td><td>NO (in cash flows)</td><td>Already captured in the discount rate (WACC). Including them double-counts.</td></tr>
+<tr><td><b>Non-cash charges</b> (depreciation)</td><td>Only via its tax shield</td><td>Depreciation isn't a cash outflow, but it reduces tax — add back the depreciation tax shield.</td></tr>
+</tbody></table>
+
+<div class="formula"><b>Free Cash Flow to the project (FCFF logic)</b><br>
+FCF = EBIT × (1 &minus; t) + Depreciation &minus; Capex &minus; Δ Net Working Capital
+<div class="where">EBIT = operating profit; t = tax rate; add back depreciation (non-cash); subtract capex and the increase in working capital. Note: no interest is subtracted — financing is in the discount rate.</div></div>
+
+<div class="formula"><b>Depreciation tax shield</b><br>
+Tax shield = Depreciation × tax rate
+<div class="where">The cash saved on taxes because depreciation is deductible. Higher depreciation → more tax saved → higher FCF, even though depreciation itself is non-cash.</div></div>
+
+<div class="trap"><b>Interest double-count trap:</b> never subtract interest in project cash flows when you discount at WACC. WACC already reflects the cost of debt (after tax). Subtracting interest <em>and</em> discounting at WACC penalises debt twice. Project FCF is deliberately <b>capital-structure-neutral</b>.</div>
+
+<div class="keytake"><b>Key takeaways:</b> Include incremental after-tax cash flows, opportunity costs, working-capital changes, and the depreciation tax shield. Exclude sunk costs and financing flows. FCF is unlevered — leverage lives in the discount rate.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">6. NPV vs IRR: Conflicts, Multiple IRR, Reinvestment</h2>
+
+<p>For a single conventional project, NPV and IRR give the same accept/reject answer. They can <b>disagree on ranking</b> when comparing <b>mutually exclusive</b> projects, and IRR can misbehave outright with unconventional cash flows.</p>
+
+<h3>6.1 Why the ranking conflict arises</h3>
+<p>Two projects' NPV profiles (NPV plotted against discount rate) can <b>cross</b> at a "crossover rate". Below the crossover rate one project has higher NPV; above it, the other. IRR ignores this because it is a single point (where NPV=0). Conflicts stem from differences in:</p>
+<ul>
+  <li><b>Scale</b> — a small project can have a higher IRR% but a smaller NPV (fewer absolute rupees). Would you rather earn 50% on ₹1 lakh or 20% on ₹10 crore?</li>
+  <li><b>Timing</b> — a project with early-loaded cash flows has a higher IRR; one with late-loaded flows benefits more when discount rates are low, giving higher NPV.</li>
+  <li><b>Reinvestment assumption</b> — IRR implicitly reinvests interim cash at the IRR (often unrealistically high); NPV reinvests at the cost of capital (realistic).</li>
+</ul>
+
+<div class="example"><div class="ex-h">Worked Example 6 — NPV vs IRR ranking conflict</div>
+<p>Two mutually exclusive projects, cost of capital 10% (₹ lakh):</p>
+<table><thead><tr><th>Project</th><th>t=0</th><th>t=1</th><th>t=2</th><th>IRR</th><th>NPV @10%</th></tr></thead>
+<tbody>
+<tr><td>S (small, early)</td><td>−100</td><td>120</td><td>10</td><td>~26.4%</td><td>+17.36</td></tr>
+<tr><td>L (large, late)</td><td>−100</td><td>10</td><td>140</td><td>~22.7%</td><td>+24.79</td></tr>
+</tbody></table>
+<p>IRR prefers <b>S</b> (26.4% &gt; 22.7%); NPV prefers <b>L</b> (₹24.79 lakh &gt; ₹17.36 lakh). <b>Trust NPV</b>: L creates more shareholder wealth at the firm's actual 10% reinvestment reality. Choosing by IRR here would leave ~₹7.4 lakh of value on the table.</p>
+</div>
+
+<h3>6.2 The multiple-IRR (and no-IRR) problem</h3>
+<p>By Descartes' rule of signs, a project can have as many IRRs as there are <b>sign changes</b> in its cash-flow stream. A <b>conventional</b> project (one sign change: outflow then all inflows) has exactly one IRR. An <b>unconventional</b> project — e.g. a mine or oil field with a large clean-up/decommissioning cost at the end (−, +, +, −) — has two sign changes and can have <b>two IRRs</b>, or none that is meaningful. IRR then becomes uninterpretable; use <b>NPV or MIRR</b>.</p>
+
+<table><thead><tr><th>Dimension</th><th>NPV</th><th>IRR</th></tr></thead>
+<tbody>
+<tr><td>Output unit</td><td>Absolute ₹ of value created</td><td>Percentage return</td></tr>
+<tr><td>Decision rule</td><td>Accept if NPV &gt; 0</td><td>Accept if IRR &gt; cost of capital</td></tr>
+<tr><td>Reinvestment assumption</td><td>At cost of capital (realistic)</td><td>At IRR itself (often unrealistic)</td></tr>
+<tr><td>Multiple values possible?</td><td>No — always unique</td><td>Yes, with non-conventional flows</td></tr>
+<tr><td>Handles scale differences?</td><td>Yes</td><td>No (percentage hides scale)</td></tr>
+<tr><td>Assumes flat discount rate?</td><td>Can use different rate each year</td><td>Single rate only</td></tr>
+<tr><td>Intuitive to non-finance people?</td><td>Less ("₹ of value")</td><td>More ("we earn 20%")</td></tr>
+<tr><td>Verdict for ranking</td><td><b>Theoretically correct</b></td><td>Good communicator, unreliable ranker</td></tr>
+</tbody></table>
+
+<div class="keytake"><b>Key takeaways:</b> NPV and IRR agree on single conventional projects but can conflict on mutually exclusive ones due to scale, timing and reinvestment. Multiple sign changes → multiple IRRs. When in doubt, <b>trust NPV</b> (or MIRR to keep a % that behaves).</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">7. Cost of Capital: Equity, Debt &amp; Preference</h2>
+
+<p>The discount rate in an NPV is the firm's <b>cost of capital</b> — the minimum return investors demand for the risk they bear. It is a <b>weighted average</b> (WACC) of the returns required by each type of financier: equity holders, debt holders, and preference shareholders. First, each component.</p>
+
+<h3>7.1 Cost of equity — CAPM</h3>
+
+<div class="formula"><b>Capital Asset Pricing Model (CAPM)</b><br>
+K<sub>e</sub> = R<sub>f</sub> + β × (R<sub>m</sub> &minus; R<sub>f</sub>)
+<div class="where">K<sub>e</sub> = cost of equity (required return on the stock); R<sub>f</sub> = risk-free rate; β = beta = sensitivity of the stock to market moves; (R<sub>m</sub> − R<sub>f</sub>) = equity/market risk premium (ERP/MRP), the extra return demanded for holding equities over the risk-free asset.</div></div>
+
+<p><b>Indian context for the inputs:</b></p>
+<ul>
+  <li><b>R<sub>f</sub></b> — proxied by the yield on a long-dated <b>Government of India security</b> (e.g. the 10-year G-sec), since sovereign local-currency debt is treated as (near) default-free. Use a maturity roughly matching the cash-flow horizon.</li>
+  <li><b>Equity risk premium</b> — for India this is <em>typically</em> quoted in a range of around <b>6%–8%</b> in practitioner work; it is an estimate, not a fixed number, so state it as a range and cite your assumption rather than a false-precision figure.</li>
+  <li><b>β</b> — regress the stock's returns on a broad index (Nifty/Sensex), or use an industry beta. β = 1 moves with the market; β &gt; 1 is more volatile (cyclicals, high operating leverage); β &lt; 1 is defensive (FMCG, utilities).</li>
+</ul>
+
+<h3>7.2 Cost of equity — Dividend Discount (Gordon) approach</h3>
+
+<div class="formula"><b>Dividend growth model for K<sub>e</sub></b><br>
+K<sub>e</sub> = (D<sub>1</sub> / P<sub>0</sub>) + g
+<div class="where">D<sub>1</sub> = expected dividend next year = D<sub>0</sub>(1+g); P<sub>0</sub> = current share price; g = sustainable growth rate. This rearranges the Gordon price P<sub>0</sub> = D<sub>1</sub>/(K<sub>e</sub>−g). Best for stable, dividend-paying firms.</div></div>
+
+<div class="formula"><b>Sustainable growth rate</b><br>
+g = retention ratio × ROE = b × ROE
+<div class="where">b = fraction of earnings retained (1 − payout ratio); ROE = return on equity. Growth funded internally without new equity.</div></div>
+
+<h3>7.3 Cost of debt</h3>
+
+<div class="formula"><b>Cost of debt (after tax)</b><br>
+K<sub>d</sub><sup>after-tax</sup> = K<sub>d</sub> × (1 &minus; t)
+<div class="where">K<sub>d</sub> = pre-tax cost of debt = yield to maturity on the firm's bonds / effective interest rate on borrowings (NOT the coupon rate on old debt — use the current market yield). t = marginal corporate tax rate. The (1−t) factor is the <b>tax shield</b>: interest is tax-deductible, so the government subsidises borrowing.</div></div>
+
+<p>Use <b>yield to maturity</b> (or the rate at which the firm can borrow <em>today</em>), not the historical coupon. For an unrated private firm, build K<sub>d</sub> = R<sub>f</sub> + a credit spread appropriate to its rating/risk.</p>
+
+<h3>7.4 Cost of preference shares</h3>
+
+<div class="formula"><b>Cost of (irredeemable) preference capital</b><br>
+K<sub>p</sub> = D<sub>p</sub> / P<sub>0</sub>
+<div class="where">D<sub>p</sub> = fixed annual preference dividend; P<sub>0</sub> = net proceeds / current price of the preference share. No tax adjustment — preference dividends are paid out of after-tax profit and are NOT tax-deductible (unlike interest).</div></div>
+
+<div class="trap"><b>Preference ≠ debt on tax:</b> a common slip is to apply (1−t) to preference dividends. Don't — they aren't deductible. That is precisely why preference capital is usually costlier than debt for the issuer despite both being "fixed-return" instruments.</div>
+
+<h3>7.5 Cost of equity — bond-yield-plus-risk-premium</h3>
+<div class="formula"><b>Bond-yield-plus-risk-premium</b><br>
+K<sub>e</sub> = firm's own K<sub>d</sub> (pre-tax) + equity risk premium over its own debt (typically ~3%–5%)
+<div class="where">A quick, judgemental method: equity must yield more than the same firm's debt because it is riskier. Useful sanity check when β is unreliable or the firm is unlisted; the premium is a rule-of-thumb range, not a precise figure.</div></div>
+
+<h3>7.6 Arbitrage Pricing Theory (APT) — the concept</h3>
+<p>CAPM uses a <b>single</b> factor (the market). <b>APT</b> (Ross) generalises this to <b>multiple</b> systematic factors — e.g. unexpected inflation, GDP/industrial-production growth, interest-rate/term-spread shifts, credit spreads. Expected return is the risk-free rate plus a sum of factor betas times factor risk premia:</p>
+<div class="formula"><b>APT (multi-factor)</b><br>
+E(R) = R<sub>f</sub> + β<sub>1</sub>·λ<sub>1</sub> + β<sub>2</sub>·λ<sub>2</sub> + … + β<sub>k</sub>·λ<sub>k</sub>
+<div class="where">β<sub>i</sub> = sensitivity to factor i; λ<sub>i</sub> = risk premium for factor i. APT is more flexible than CAPM but does not tell you <em>which</em> factors to use — that is chosen empirically. The Fama-French model is a practical cousin (market, size, value factors).</div></div>
+
+<h3>7.7 Bottom-up (industry) beta</h3>
+<p>A single company's regression beta is noisy and reflects its own leverage. A <b>bottom-up beta</b> is built from a sector: (1) take a set of comparable firms, (2) unlever each firm's beta by its own D/E and tax rate, (3) average the unlevered (asset) betas — this averages away regression noise and gives a cleaner read of pure business risk, (4) re-lever to the target firm's D/E. Preferred in practice, and essential for valuing <b>unlisted</b> firms and divisions that have no traded beta of their own.</p>
+
+<h3>7.8 Country-risk premium (CRP)</h3>
+<p>When applying CAPM to an emerging market, analysts often add a <b>country-risk premium</b> to reflect additional sovereign/political/currency risk not captured by a developed-market ERP. A common approach: CRP ≈ sovereign default spread (from the country's rating / USD bond spread) scaled up for equity-vs-bond volatility.</p>
+<div class="formula"><b>CAPM with country risk</b><br>
+K<sub>e</sub> = R<sub>f</sub> + β × (mature-market ERP) + CRP
+<div class="where">For a purely domestic Indian analysis using a rupee G-sec R<sub>f</sub> and an India-specific ERP, the CRP is usually <em>already embedded</em> — don't double-count it. Add an explicit CRP mainly when you start from a US/global ERP.</div></div>
+
+<h3>7.9 Flotation costs &amp; the Marginal Cost of Capital (MCC)</h3>
+<p><b>Flotation (issue) costs</b> — underwriting fees, legal and listing costs — reduce the net proceeds of new securities and so raise their effective cost. Best practice is to treat them as an <b>up-front cash outflow</b> in the project's NPV (added to the initial outlay), rather than baking them into a higher discount rate, because they are a one-off cost, not an annual one.</p>
+<p>The <b>Marginal Cost of Capital</b> is the cost of the <b>next</b> rupee raised. As a firm exhausts cheap internal equity (retained earnings) and must issue new equity (with flotation costs) or move to costlier tranches of debt, the MCC <b>rises in steps</b> — the "break points" in the MCC schedule. Projects are accepted where the <b>Investment Opportunity Schedule</b> (projects ranked by IRR) meets the rising MCC schedule.</p>
+
+<div class="example"><div class="ex-h">Worked Example 7 — Cost of equity two ways</div>
+<p>Stock: price ₹500; expected dividend next year ₹15; sustainable growth 8%. Also β = 1.2, R<sub>f</sub> = 7% (10-yr G-sec), ERP = 7%.</p>
+<p><b>Gordon:</b> K<sub>e</sub> = 15/500 + 0.08 = 0.03 + 0.08 = <b>11.0%</b>.<br>
+<b>CAPM:</b> K<sub>e</sub> = 7% + 1.2 × 7% = 7% + 8.4% = <b>15.4%</b>.</p>
+<p>The two disagree — normal in practice. CAPM is forward-looking on risk; Gordon is anchored to current price and growth assumptions. Interviewers want you to <em>show both, state your preferred method, and explain the gap</em> (here, either the market prices in higher growth than 8%, or β overstates risk). Never present a single number as gospel.</p>
+</div>
+
+<div class="keytake"><b>Key takeaways:</b> K<sub>e</sub> via CAPM (R<sub>f</sub> + β·ERP) or Gordon (D<sub>1</sub>/P<sub>0</sub> + g). K<sub>d</sub> is after-tax = YTM×(1−t) — interest is deductible. Preference K<sub>p</sub> = D<sub>p</sub>/P<sub>0</sub> with NO tax shield. Use current market yields and Indian G-sec for R<sub>f</sub>.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">8. Beta: Levered vs Unlevered &amp; Re-levering</h2>
+
+<p>A company's equity beta reflects <b>two</b> risks bundled together: <b>business risk</b> (how cyclical the underlying operations are) and <b>financial risk</b> (how much debt magnifies equity returns). To value a project or a private company, you often borrow a comparable's beta — but you must first strip out the comparable's leverage, then re-apply your own.</p>
+
+<div class="formula"><b>Unlever (asset) beta — Hamada relation</b><br>
+β<sub>u</sub> = β<sub>L</sub> / [ 1 + (1 &minus; t) × (D/E) ]
+<div class="where">β<sub>L</sub> = observed levered/equity beta; β<sub>u</sub> = unlevered/asset beta (business risk only); t = tax rate; D/E = debt-to-equity ratio of the comparable. Assumes debt beta ≈ 0.</div></div>
+
+<div class="formula"><b>Re-lever to target capital structure</b><br>
+β<sub>L</sub> = β<sub>u</sub> × [ 1 + (1 &minus; t) × (D/E)<sub>target</sub> ]
+<div class="where">Apply YOUR firm's / the project's target D/E. More leverage → higher levered beta → higher cost of equity. The (1−t) reflects the tax shield cushioning the added risk.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 8 — Re-levering beta for a comparable</div>
+<p>You value an unlisted auto-components maker. A listed comparable has equity β = 1.30, D/E = 0.60, tax = 25%. Your target D/E = 1.00.</p>
+<p><b>Step 1 — unlever the comp:</b><br>
+β<sub>u</sub> = 1.30 / [1 + (1−0.25)(0.60)] = 1.30 / [1 + 0.45] = 1.30 / 1.45 = <b>0.897</b>.</p>
+<p><b>Step 2 — re-lever to your D/E = 1.0:</b><br>
+β<sub>L</sub> = 0.897 × [1 + (1−0.25)(1.00)] = 0.897 × 1.75 = <b>1.569</b>.</p>
+<p><b>Step 3 — cost of equity (R<sub>f</sub> 7%, ERP 7%):</b><br>
+K<sub>e</sub> = 7% + 1.569 × 7% = 7% + 10.98% = <b>~17.98%</b>.</p>
+<p>Your firm, being more leveraged than the comp, has a higher equity beta and therefore a higher cost of equity — exactly the intuition that financial risk raises the return equity holders demand.</p>
+</div>
+
+<div class="trap"><b>Re-levering trap:</b> always unlever using the <b>comparable's</b> D/E and re-lever using <b>your</b> target D/E. Using the same D/E for both (or forgetting to unlever at all) imports the comp's leverage into your valuation — a frequent IB-interview stumble.</div>
+
+<div class="keytake"><b>Key takeaways:</b> Equity beta = business risk + financial risk. Unlever a comp's beta (strip its leverage), then re-lever to your target D/E. More leverage → higher β<sub>L</sub> → higher K<sub>e</sub>. Hamada assumes debt beta ≈ 0.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">9. WACC: The Blended Cost of Capital</h2>
+
+<p>WACC is the single most-asked corporate-finance concept in interviews. It is the average rate of return the firm must earn on its assets to satisfy <b>all</b> its capital providers, weighted by how much of each it uses.</p>
+
+<div class="formula"><b>Weighted Average Cost of Capital</b><br>
+WACC = (E/V)·K<sub>e</sub> + (D/V)·K<sub>d</sub>·(1 &minus; t) + (P/V)·K<sub>p</sub>
+<div class="where">E, D, P = market values of equity, debt, preference; V = E + D + P (total capital); K<sub>e</sub>, K<sub>d</sub>, K<sub>p</sub> = component costs; t = tax rate applied ONLY to debt (interest is deductible). Weights must sum to 1.</div></div>
+
+<h3>9.1 Why we use WACC</h3>
+<p>WACC is the firm's <b>opportunity cost of capital</b> and the <b>hurdle rate</b> for average-risk projects. A project must beat WACC to add value; discounting unlevered free cash flows at WACC gives enterprise value. It blends the cheaper (but risk-adding) debt with the costlier equity into one number that reflects the firm's overall financing mix and risk.</p>
+
+<h3>9.2 Weights — use MARKET values, not book</h3>
+<div class="trap"><b>Book vs market weights trap:</b> WACC weights should be <b>market values</b>, because that is what investors could sell for today and what reflects current required returns. Equity's market cap is usually far above its book value; using book equity understates equity's weight and gives an artificially low WACC — flattering NPVs. Debt is often closer to book, but use market/fair value where it differs materially. Target (long-run) weights are preferred over spot weights that swing with the share price.</div>
+
+<div class="example"><div class="ex-h">Worked Example 9 — Full WACC walkthrough</div>
+<p>Firm capital structure (market values): Equity ₹600 crore, Debt ₹300 crore, Preference ₹100 crore → V = ₹1,000 crore.<br>
+K<sub>e</sub> = 15% (CAPM); K<sub>d</sub> (pre-tax YTM) = 9%; K<sub>p</sub> = 11%; tax t = 25%.</p>
+<p><b>Weights:</b> E/V = 0.60; D/V = 0.30; P/V = 0.10.<br>
+<b>After-tax K<sub>d</sub></b> = 9% × (1 − 0.25) = 6.75%.</p>
+<p><b>WACC</b> = 0.60×15% + 0.30×6.75% + 0.10×11%<br>
+= 9.00% + 2.025% + 1.10% = <b>12.125% ≈ 12.1%</b>.</p>
+<p><b>Interpretation:</b> every rupee of capital costs the firm ~12.1% per year. Any average-risk project returning more than 12.1% creates value; less destroys it. Notice debt (6.75% after tax) drags the average down versus equity (15%) — the visible pull of cheaper, tax-shielded debt.</p>
+</div>
+
+<h3>9.3 When NOT to use the company WACC</h3>
+<ul>
+  <li><b>Divisional / project risk differs from the firm.</b> A conglomerate's blended WACC is wrong for a low-risk utility arm and a high-risk tech arm — use a divisional WACC built from pure-play betas.</li>
+  <li><b>The project changes the capital structure.</b> If financing mix shifts materially, weights (and beta) change.</li>
+  <li><b>Cross-border / different currency cash flows</b> need a matching risk-free rate and premium.</li>
+</ul>
+
+<div class="keytake"><b>Key takeaways:</b> WACC = market-value-weighted blend of after-tax K<sub>d</sub>, K<sub>e</sub> and K<sub>p</sub>; it is the hurdle rate and the discount rate for unlevered FCF. Use market weights and current costs. Adjust WACC for project/divisional risk — don't apply one firm-wide number to everything.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">10. Capital Structure: Does the Debt/Equity Mix Matter?</h2>
+
+<p>Capital structure is the mix of debt, equity and hybrids used to finance the firm. The central question: is there an <b>optimal</b> mix that maximises firm value / minimises WACC? Theory has evolved through four big ideas.</p>
+
+<h3>10.1 Modigliani–Miller (MM) Proposition I &amp; II — no taxes</h3>
+<p>In a world of perfect markets — no taxes, no bankruptcy costs, no transaction costs, symmetric information — MM (1958) proved that <b>capital structure is irrelevant</b>: firm value depends only on the earning power and risk of its assets, not on how those assets are financed.</p>
+
+<div class="formula"><b>MM Proposition I (no tax)</b><br>
+V<sub>L</sub> = V<sub>U</sub>
+<div class="where">V<sub>L</sub> = value of the levered firm; V<sub>U</sub> = value of the unlevered firm. "The size of the pizza doesn't change with how you slice it." WACC is constant regardless of leverage.</div></div>
+
+<div class="formula"><b>MM Proposition II (no tax)</b><br>
+K<sub>e</sub> = K<sub>0</sub> + (K<sub>0</sub> &minus; K<sub>d</sub>) × (D/E)
+<div class="where">K<sub>0</sub> = unlevered cost of capital (= constant WACC); as leverage (D/E) rises, K<sub>e</sub> rises <b>linearly</b> to exactly offset the cheaper debt — so WACC stays flat. There is no free lunch from adding "cheap" debt.</div></div>
+
+<p><b>The key MM insight:</b> debt looks cheap, but adding it raises the risk (and hence required return) of the remaining equity by exactly enough to cancel the benefit. Leverage merely reshuffles risk between debt and equity; it doesn't create value in a frictionless world.</p>
+
+<h3>10.2 MM with corporate taxes</h3>
+<p>Introduce corporate tax and debt gains an edge: interest is tax-deductible, creating a <b>tax shield</b> that is a real cash transfer from the government to the firm. Now value <em>rises</em> with leverage.</p>
+
+<div class="formula"><b>MM Proposition I (with tax)</b><br>
+V<sub>L</sub> = V<sub>U</sub> + (t × D)
+<div class="where">t × D = present value of the interest tax shield (for perpetual debt). Firm value increases ₹ for ₹ by the PV of tax shields. Taken literally, this implies 100% debt is optimal — which is why the theory needs the next refinements.</div></div>
+
+<h3>10.3 Trade-off theory — the missing brake</h3>
+<p>Pure MM-with-tax absurdly recommends near-100% debt. <b>Trade-off theory</b> adds the counterweight: as debt rises, so does the probability and cost of <b>financial distress</b> — direct costs (legal/administrative fees of bankruptcy) and, larger, <b>indirect costs</b> (lost customers and suppliers, forced asset sales, managers firefighting instead of investing, higher input costs). Optimal leverage is where the <b>marginal tax benefit = marginal distress cost</b>.</p>
+
+<div class="formula"><b>Trade-off theory (firm value)</b><br>
+V<sub>L</sub> = V<sub>U</sub> + PV(tax shields) &minus; PV(financial distress costs) &minus; PV(agency costs)
+<div class="where">The optimal D/E maximises V<sub>L</sub>; equivalently it minimises WACC. WACC is U-shaped in leverage: it falls as cheap debt is added, then rises as distress and rising K<sub>e</sub> dominate.</div></div>
+
+<h3>10.4 Pecking-order theory — information asymmetry</h3>
+<p>Myers &amp; Majluf argue managers know more than investors (asymmetric information). Issuing equity signals the stock may be overvalued, so the market marks it down. Firms therefore follow a <b>pecking order</b> of financing:</p>
+<ol>
+  <li><b>Internal funds</b> (retained earnings) first — no signalling, no issue costs.</li>
+  <li><b>Debt</b> next — modest signalling, tax-advantaged.</li>
+  <li><b>Equity</b> as a <b>last resort</b> — most adverse signalling and highest issue cost.</li>
+</ol>
+<p>Pecking order explains why highly profitable firms (e.g. cash-rich FMCG names) often carry <em>little</em> debt — they simply fund from internal cash and rarely need external capital, which trade-off theory alone struggles to explain. It implies there is no well-defined optimal ratio; leverage is just the cumulative result of past financing needs.</p>
+
+<table><thead><tr><th>Theory</th><th>Core idea</th><th>Optimal structure?</th><th>Predicts</th></tr></thead>
+<tbody>
+<tr><td><b>MM (no tax)</b></td><td>Structure irrelevant; value = asset earning power</td><td>Any mix; indifferent</td><td>WACC flat; K<sub>e</sub> rises linearly with D/E</td></tr>
+<tr><td><b>MM (with tax)</b></td><td>Interest tax shield adds value</td><td>≈100% debt (unrealistic)</td><td>V<sub>L</sub> = V<sub>U</sub> + tD; WACC falls with debt</td></tr>
+<tr><td><b>Trade-off</b></td><td>Tax shield vs distress cost balance</td><td>Interior optimum (target D/E)</td><td>U-shaped WACC; firms have a leverage target</td></tr>
+<tr><td><b>Pecking order</b></td><td>Asymmetric info → finance internal &gt; debt &gt; equity</td><td>No fixed target</td><td>Profitable firms use less debt; equity is last resort</td></tr>
+</tbody></table>
+
+<h3>10.5 Agency costs &amp; signalling</h3>
+<p>Two more frictions shape the real-world optimum. <b>Agency costs of debt:</b> highly-levered equity holders may take excessive risk ("asset substitution"/risk-shifting — they keep the upside, lenders bear the downside) or pass up good projects because gains accrue to lenders ("debt overhang"); lenders anticipate this and impose covenants and higher rates. <b>Agency costs of equity:</b> managers with too much free cash may empire-build or over-consume perks; debt's fixed repayment disciplines them ("free-cash-flow" benefit of debt — Jensen). <b>Signalling:</b> because managers know more than the market, <em>taking on debt</em> can signal confidence in stable future cash flows, while <em>issuing equity</em> signals possible overvaluation — reinforcing the pecking order.</p>
+
+<h3>10.6 EBIT–EPS indifference analysis</h3>
+<p>A practical financing tool: at what EBIT do two financing plans (say all-equity vs debt-and-equity) give the <b>same EPS</b>? Above that EBIT, the more-levered plan gives higher EPS (leverage helps); below it, the less-levered plan wins (leverage hurts).</p>
+<div class="formula"><b>EBIT–EPS indifference point</b><br>
+(EBIT* &minus; I<sub>1</sub>)(1 &minus; t) / N<sub>1</sub> = (EBIT* &minus; I<sub>2</sub>)(1 &minus; t) / N<sub>2</sub>
+<div class="where">I = interest under each plan; N = number of shares under each plan; t = tax; solve for EBIT*. (Add grossed-up preference dividend to I where present.)</div></div>
+<div class="example"><div class="ex-h">Worked Example 9a — EBIT–EPS indifference</div>
+<p>Firm needs ₹20 lakh, tax 30%. <b>Plan E (all equity):</b> issue 2,00,000 shares (I₁ = 0). <b>Plan D (debt):</b> ₹10 lakh debt at 10% (I₂ = ₹1,00,000) + 1,00,000 shares.</p>
+<p>Set EPS equal: EBIT*(0.7)/2,00,000 = (EBIT* − 1,00,000)(0.7)/1,00,000.<br>
+Cancel 0.7: EBIT*/2,00,000 = (EBIT* − 1,00,000)/1,00,000 → 1,00,000·EBIT* = 2,00,000·(EBIT* − 1,00,000).<br>
+→ EBIT* = <b>₹2,00,000</b>; EPS at that point = 2,00,000×0.7/2,00,000 = <b>₹0.70</b> (identical under both plans).</p>
+<p>If the firm expects EBIT comfortably <b>above</b> ₹2,00,000, the debt plan lifts EPS; if EBIT is likely to fall <b>below</b> it, the equity plan is safer. This links leverage choice to the firm's expected EBIT and its volatility.</p>
+</div>
+
+<div class="trap"><b>"Debt is cheaper so more debt is always better" — WRONG.</b> Debt's lower cost is a fact, but beyond a point it raises K<sub>e</sub> (financial risk), then adds distress and agency costs. The relationship between value and leverage is not monotonic — it's a trade-off with an interior optimum. Also, higher EPS from leverage is not the same as higher value — it comes bundled with higher risk (higher K<sub>e</sub>).</div>
+
+<div class="keytake"><b>Key takeaways:</b> MM (no tax): structure irrelevant, WACC flat. MM (tax): debt adds V via tax shield. Trade-off: optimum balances tax shield vs distress costs → target D/E, U-shaped WACC. Pecking order: internal &gt; debt &gt; equity due to signalling. Real firms behave like a blend of trade-off and pecking-order.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">11. Leverage: Operating, Financial &amp; Combined</h2>
+
+<p>"Leverage" measures how a change at one level of the income statement <b>magnifies</b> the change at a level below it. Operating leverage magnifies from sales to EBIT; financial leverage from EBIT to EPS; combined leverage from sales all the way to EPS.</p>
+
+<h3>11.1 Degree of Operating Leverage (DOL)</h3>
+
+<div class="formula"><b>Degree of Operating Leverage</b><br>
+DOL = % change in EBIT / % change in Sales = Contribution / EBIT
+<div class="where">Contribution = Sales − Variable costs; EBIT = Contribution − Fixed costs. High fixed costs → high DOL → EBIT swings hard when sales move. Business/operating risk.</div></div>
+
+<h3>11.2 Degree of Financial Leverage (DFL)</h3>
+
+<div class="formula"><b>Degree of Financial Leverage</b><br>
+DFL = % change in EPS / % change in EBIT = EBIT / (EBIT &minus; Interest)
+<div class="where">Interest = fixed financing charge (add preference dividend grossed up for tax if present). More debt → larger fixed interest → higher DFL → EPS swings hard when EBIT moves. Financial risk.</div></div>
+
+<h3>11.3 Degree of Combined Leverage (DCL)</h3>
+
+<div class="formula"><b>Degree of Combined Leverage</b><br>
+DCL = DOL × DFL = % change in EPS / % change in Sales = Contribution / (EBIT &minus; Interest)
+<div class="where">The total magnification from a sales change to EPS. A firm with both high operating AND high financial leverage is extremely risky — a small sales dip can wipe out EPS.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 10 — DOL, DFL, DCL</div>
+<p>Sales ₹100 lakh; variable costs ₹60 lakh; fixed costs ₹20 lakh; interest ₹10 lakh.</p>
+<p>Contribution = 100 − 60 = ₹40 lakh; EBIT = 40 − 20 = ₹20 lakh; EBT = 20 − 10 = ₹10 lakh.</p>
+<p><b>DOL</b> = Contribution/EBIT = 40/20 = <b>2.0</b> → a 10% rise in sales lifts EBIT by 20%.<br>
+<b>DFL</b> = EBIT/(EBIT−Int) = 20/10 = <b>2.0</b> → a 10% rise in EBIT lifts EPS by 20%.<br>
+<b>DCL</b> = 2.0 × 2.0 = <b>4.0</b> → a 10% rise in sales lifts EPS by 40%.</p>
+<p><b>Cuts both ways:</b> a 10% <em>fall</em> in sales would slash EPS by 40%. Verify: sales −10% → contribution ₹36 → EBIT ₹16 (−20%) → EBT ₹6 (−40%). Combined leverage of 4 means this firm's earnings are four times as volatile as its top line.</p>
+</div>
+
+<h3>11.4 Breakeven analysis</h3>
+
+<div class="formula"><b>Breakeven point (units)</b><br>
+BEP (units) = Fixed costs / (Price per unit &minus; Variable cost per unit) = Fixed costs / Contribution margin per unit
+<div class="where">The sales volume at which EBIT = 0 (total contribution just covers fixed costs). Above BEP, operating leverage works for you; below it, against you.</div></div>
+
+<div class="formula"><b>Financial breakeven (EBIT level)</b><br>
+Financial BEP = Interest + [ Preference dividend / (1 &minus; t) ]
+<div class="where">The minimum EBIT needed to cover fixed financial charges (so EPS = 0). Preference dividend is grossed up because it's paid from after-tax profit.</div></div>
+
+<div class="keytake"><b>Key takeaways:</b> DOL (Contribution/EBIT) = operating/business risk from fixed costs; DFL (EBIT/EBT) = financial risk from fixed interest; DCL = DOL×DFL = total earnings volatility per unit of sales change. High combined leverage amplifies both gains and losses — a red flag for credit and equity analysts alike.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">12. Dividend Policy</h2>
+
+<p>Once a firm earns cash, it must decide how much to pay out and how much to reinvest. Does the split affect value? Theory splits into "irrelevance" and "relevance" camps.</p>
+
+<h3>12.1 Dividend irrelevance (MM, 1961)</h3>
+<p>In perfect markets (no taxes, no transaction costs, fixed investment policy), MM argued dividend policy is <b>irrelevant</b>: value comes from investment/earning power, not from the payout split. A shareholder wanting cash can sell shares ("homemade dividends"); one not wanting cash can reinvest a dividend. Paying a dividend just moves value from share price to cash in hand — total wealth unchanged.</p>
+
+<h3>12.2 Walter's model (relevance)</h3>
+<p>Walter argues payout <b>does</b> matter and depends on the relationship between the firm's return on investment (r) and its cost of equity (K<sub>e</sub>):</p>
+<ul>
+  <li><b>Growth firm (r &gt; K<sub>e</sub>):</b> reinvesting beats paying out → optimal payout = <b>0%</b> (retain everything).</li>
+  <li><b>Declining firm (r &lt; K<sub>e</sub>):</b> shareholders redeploy cash better than the firm → optimal payout = <b>100%</b>.</li>
+  <li><b>Normal firm (r = K<sub>e</sub>):</b> payout is irrelevant to value.</li>
+</ul>
+
+<div class="formula"><b>Walter's valuation model</b><br>
+P = [ D + (r/K<sub>e</sub>)(E &minus; D) ] / K<sub>e</sub>
+<div class="where">P = share price; D = dividend per share; E = EPS; r = firm's return on retained earnings; K<sub>e</sub> = cost of equity. (E−D) is retained earnings reinvested at r.</div></div>
+
+<h3>12.3 Gordon's model (relevance / "bird-in-hand")</h3>
+<p>Gordon links price to dividends and growth, and argues investors prefer <b>certain near-term dividends</b> to uncertain future capital gains (the "bird-in-hand" argument), so higher payout can lift value / lower the required return for risk-averse investors.</p>
+
+<div class="formula"><b>Gordon growth model</b><br>
+P<sub>0</sub> = D<sub>1</sub> / (K<sub>e</sub> &minus; g), &nbsp; with g = b × r
+<div class="where">D<sub>1</sub> = next year's dividend; K<sub>e</sub> = cost of equity; g = growth = retention (b) × return (r). Requires K<sub>e</sub> &gt; g.</div></div>
+
+<h3>12.4 Signalling, clientele and taxes</h3>
+<ul>
+  <li><b>Signalling:</b> a dividend increase signals management's confidence in sustainable future earnings; a cut signals distress. Markets react sharply — firms are reluctant to cut, so dividends are "sticky".</li>
+  <li><b>Clientele effect:</b> different investors prefer different payouts (retirees want income; young/high-tax investors prefer capital gains). Firms attract a matching clientele.</li>
+  <li><b>Taxes:</b> the relative tax treatment of dividends vs capital gains shapes preferences and can change with regulation — in India the taxation of dividends has changed over time, so treat the specific regime as time-sensitive rather than memorising a rate.</li>
+</ul>
+
+<h3>12.5 Buybacks vs dividends</h3>
+<p>A share buyback (repurchase) is an alternative payout. Compared with dividends:</p>
+<ul>
+  <li><b>Flexibility:</b> buybacks are one-off/opportunistic; dividends set a sticky expectation. Managers use buybacks for "temporary" surplus cash, dividends for durable cash flow.</li>
+  <li><b>EPS &amp; signalling:</b> buybacks reduce share count, raising EPS; often signal management believes the stock is undervalued.</li>
+  <li><b>Shareholder choice:</b> in a buyback, only sellers receive cash (and only they trigger a tax event), whereas a dividend goes to everyone.</li>
+  <li><b>Tax:</b> the dividend-vs-buyback tax comparison depends on the prevailing tax regime, which in India has shifted (both dividend distribution and buyback taxation have been revised over the years) — so frame it conceptually.</li>
+</ul>
+
+<div class="trap"><b>Buybacks don't create value by themselves.</b> Retiring shares doesn't change operating cash flows or asset value; it just repackages them. A buyback adds value only if shares are bought <b>below</b> intrinsic value (transferring wealth to remaining holders) or if it prevents value-destroying empire-building. "EPS went up" is not the same as "value went up".</div>
+
+<h3>12.6 Residual dividend policy</h3>
+<p>Under a strict <b>residual</b> policy the firm pays as a dividend only the cash <em>left over</em> after funding all positive-NPV projects at the target capital structure: (1) set the capital budget, (2) fund the equity portion first from retained earnings, (3) pay out whatever remains. This maximises value (no positive-NPV project is starved, no costly external equity is raised) but produces <b>volatile</b> dividends that swing with the investment schedule — which conflicts with investors' preference for stability. In practice firms follow a <em>smoothed</em> version.</p>
+
+<h3>12.7 Dividend stability &amp; Lintner's model</h3>
+<p>Managers <b>smooth</b> dividends: they set a <b>target payout ratio</b> and move the dividend only <em>partway</em> toward the target each year, raising it only when higher earnings look permanent (Lintner). Stability is prized because a stable/growing dividend signals confidence and attracts income clienteles, while a cut is punished severely. Common patterns: constant payout ratio, constant/steadily-growing DPS, or a low <b>regular</b> dividend plus occasional <b>special</b> dividends.</p>
+
+<h3>12.8 Bonus issue vs stock split</h3>
+<p>Both increase share count and mechanically cut the price per share <b>without changing total value or a shareholder's proportional stake</b> — they are cosmetic, improving liquidity/affordability and signalling confidence.</p>
+<table><thead><tr><th>Aspect</th><th>Bonus issue (scrip / stock dividend)</th><th>Stock split</th></tr></thead>
+<tbody>
+<tr><td>Mechanism</td><td>Free shares from capitalising reserves</td><td>Face value subdivided (e.g. ₹10 → ₹2)</td></tr>
+<tr><td>Face value per share</td><td>Unchanged</td><td>Reduced proportionally</td></tr>
+<tr><td>Reserves</td><td>Reduced (transferred to share capital)</td><td>Unchanged</td></tr>
+<tr><td>Total share capital (₹)</td><td>Increases</td><td>Unchanged</td></tr>
+<tr><td>Effect on wealth</td><td>Nil (more shares × lower price)</td><td>Nil (more shares × lower price)</td></tr>
+</tbody></table>
+
+<h3>12.9 Buyback methods</h3>
+<ul>
+  <li><b>Tender offer (fixed price):</b> the company offers to buy a set number of shares at a stated price (usually a premium) within a window; shareholders tender. Fast, treats all equally, but the premium is a cost.</li>
+  <li><b>Open-market purchase:</b> the company buys its own shares on the exchange over time at market prices. Flexible and cheaper, but slower and less certain.</li>
+  <li><b>Dutch-auction tender:</b> the company specifies a price <em>range</em>; shareholders indicate how many shares they'll sell at various prices; the firm buys at the lowest clearing price that fills the order.</li>
+</ul>
+
+<div class="keytake"><b>Key takeaways:</b> MM say payout is irrelevant in perfect markets; Walter/Gordon say it matters (retain if r&gt;K<sub>e</sub>, pay out if r&lt;K<sub>e</sub>; bird-in-hand). In the real world, signalling, clientele and taxes make payout matter. Residual policy maximises value but is volatile, so firms smooth dividends (Lintner). Bonus issues and splits are cosmetic — no wealth change. Buybacks (tender / open-market / Dutch auction) are flexible and EPS-accretive but create value only when shares are cheap.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">13. Working-Capital Management</h2>
+
+<p>Capital budgeting is about long-term assets; working-capital management is about the day-to-day liquidity that keeps operations running. It is a constant balancing act: too little working capital risks stock-outs and default; too much ties up cash that earns no return.</p>
+
+<div class="formula"><b>Net Working Capital</b><br>
+NWC = Current Assets &minus; Current Liabilities
+<div class="where">A gross measure of short-term liquidity cushion. "Operating" working capital typically excludes cash and short-term debt to focus on inventory + receivables − payables.</div></div>
+
+<h3>13.1 The Cash Conversion Cycle (CCC)</h3>
+<p>The CCC measures how long cash is tied up in operations — from paying suppliers to collecting from customers. Shorter is better: less financing needed, higher return on capital.</p>
+
+<div class="formula"><b>Cash Conversion Cycle</b><br>
+CCC = DIO + DSO &minus; DPO
+<div class="where">DIO = Days Inventory Outstanding = (Avg inventory / COGS) × 365; DSO = Days Sales Outstanding = (Avg receivables / Credit sales) × 365; DPO = Days Payable Outstanding = (Avg payables / COGS) × 365. CCC = time from cash-out (paying suppliers) to cash-in (collecting from customers).</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 11 — Cash Conversion Cycle</div>
+<p>DIO = 60 days (inventory held 2 months), DSO = 45 days (customers pay in ~1.5 months), DPO = 30 days (firm pays suppliers in 1 month).</p>
+<p><b>CCC</b> = 60 + 45 − 30 = <b>75 days</b>. The firm funds 75 days of operations out of its own (or borrowed) cash. If daily COGS-linked cash need is, say, ₹2 lakh, that's roughly ₹1.5 crore of working-capital financing. <b>Levers to shorten CCC:</b> reduce inventory (DIO↓ via better forecasting/JIT), collect faster (DSO↓ via discounts/tighter credit), or stretch payables (DPO↑ — but not so far as to damage supplier relationships). Cutting CCC from 75 to 60 days directly releases cash.</p>
+</div>
+
+<h3>13.2 Managing the three components</h3>
+<ul>
+  <li><b>Cash management:</b> hold enough for transactions and precaution, invest the rest in liquid instruments (liquid mutual funds, treasury bills, short-term deposits). Models like Baumol (deterministic) and Miller-Orr (stochastic, with upper/lower control limits) formalise the cash-vs-securities trade-off.</li>
+  <li><b>Inventory management:</b> balance ordering cost vs holding cost (EOQ model), maintain safety stock against demand/supply variability, use ABC analysis to prioritise high-value items.</li>
+  <li><b>Receivables management:</b> set a credit policy (terms, credit standards, collection effort). Offer early-payment discounts (e.g. "2/10 net 30") to speed collection; weigh the discount cost against faster cash and lower bad debts.</li>
+</ul>
+
+<h3>13.3 Sources of short-term finance (Indian context)</h3>
+<ul>
+  <li><b>Trade credit</b> from suppliers — the most common and often "free" (until a discount is forgone).</li>
+  <li><b>Bank working-capital finance</b> — <b>cash credit</b> / <b>overdraft</b> against a drawing power computed on inventory and receivables; <b>working-capital demand loans</b>.</li>
+  <li><b>Bill discounting / factoring</b> — converting receivables into immediate cash.</li>
+  <li><b>Commercial paper (CP)</b> — unsecured short-term promissory notes issued by strong-rated corporates, usually cheaper than bank credit.</li>
+  <li><b>Inter-corporate deposits, accruals</b> (wages/taxes payable) as spontaneous financing.</li>
+</ul>
+
+<div class="trap"><b>Aggressive vs conservative policy:</b> financing long-term/permanent working capital with short-term debt (aggressive) is cheaper but risky — it must be rolled over and exposes the firm to rate spikes and refinancing risk (a classic cause of liquidity crises). A conservative policy funds even part of temporary needs with long-term capital — safer but costlier. The "matching/hedging principle" says: match the maturity of financing to the life of the asset.</div>
+
+<h3>13.4 Inventory: Economic Order Quantity (EOQ)</h3>
+<div class="formula"><b>Economic Order Quantity</b><br>
+EOQ = √( 2 × A × O / C )
+<div class="where">A = annual demand (units); O = ordering cost per order; C = carrying/holding cost per unit per year. EOQ is the order size that minimises total (ordering + carrying) cost — at EOQ, ordering cost = carrying cost. Larger orders cut ordering cost but raise carrying cost, and vice-versa.</div></div>
+<div class="example"><div class="ex-h">Worked Example 11a — EOQ</div>
+<p>A = 40,000 units/yr; O = ₹500/order; C = ₹4/unit/yr. EOQ = √(2×40,000×500/4) = √(10,00,00,00... ) = √(1,00,00,000) = <b>~3,162 units</b> per order. Number of orders ≈ 40,000/3,162 ≈ 12.6 per year.</p>
+</div>
+
+<h3>13.5 Cash management models — Baumol &amp; Miller-Orr</h3>
+<p>These decide how much cash to hold versus keep in marketable securities.</p>
+<div class="formula"><b>Baumol model (deterministic cash use)</b><br>
+Optimal cash lot C* = √( 2 × T × F / i )
+<div class="where">T = total cash needed over the period; F = fixed cost per conversion (security→cash transaction); i = interest rate forgone on cash. Same square-root logic as EOQ (cash is the "inventory"). Assumes steady, predictable cash outflow.</div></div>
+<div class="formula"><b>Miller-Orr model (stochastic cash flows)</b><br>
+Set a lower limit (L), a return point (Z) and an upper limit (H = 3Z − 2L); Spread = 3 × (¾ × F × σ² / i)<sup>1/3</sup>
+<div class="where">σ² = variance of daily cash flows; F = transaction cost; i = daily interest rate. When cash hits H, invest down to Z; when it hits L, sell securities up to Z. Used when cash flows are random rather than steady.</div></div>
+
+<h3>13.6 Over-trading and under-trading</h3>
+<ul>
+  <li><b>Over-trading (under-capitalisation):</b> a firm expands sales/turnover too fast for its working-capital base — it books orders it cannot fund. Symptoms: rising sales but falling liquidity, stretched payables, no cash despite "profits," heavy reliance on short-term borrowing. A frequent cause of the paradox where profitable, fast-growing firms go bust. Cure: slow growth, inject long-term capital, tighten the CCC.</li>
+  <li><b>Under-trading:</b> the opposite — excessive working capital and idle cash relative to sales; over-cautious, ties up capital, depresses ROCE. Cure: deploy the surplus (invest, return to shareholders) or grow sales on the existing base.</li>
+</ul>
+
+<div class="keytake"><b>Key takeaways:</b> Working capital = liquidity vs profitability trade-off. CCC = DIO + DSO − DPO; shorten it to free cash. EOQ = √(2AO/C) sizes inventory orders; Baumol (steady) and Miller-Orr (random) size cash balances. Fund short-term needs with short-term sources but respect maturity-matching. Beware over-trading — growing sales faster than the working-capital base can bankrupt a "profitable" firm.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">14. Value Creation: EVA and ROIC vs WACC</h2>
+
+<p>Accounting profit can be positive while the firm still destroys value — because it charges for debt (interest) but not for equity. Value-based metrics fix this by charging for <b>all</b> capital.</p>
+
+<div class="formula"><b>Economic Value Added (EVA)</b><br>
+EVA = NOPAT &minus; (Invested Capital × WACC)
+<div class="where">NOPAT = Net Operating Profit After Tax = EBIT × (1 − t); Invested Capital = debt + equity employed (net operating assets); WACC = weighted average cost of capital. The bracket is the "capital charge" — the rupee cost of ALL capital, including equity.</div></div>
+
+<div class="formula"><b>EVA via ROIC spread (equivalent form)</b><br>
+EVA = (ROIC &minus; WACC) × Invested Capital
+<div class="where">ROIC = NOPAT / Invested Capital = Return On Invested Capital. Value is created only when the <b>spread</b> (ROIC − WACC) is positive. This single inequality — <b>ROIC &gt; WACC</b> — is the essence of value creation.</div></div>
+
+<div class="example"><div class="ex-h">Worked Example 12 — EVA and the ROIC–WACC spread</div>
+<p>Firm: EBIT ₹200 crore; tax 25%; Invested Capital ₹1,000 crore; WACC 12%.</p>
+<p><b>NOPAT</b> = 200 × (1 − 0.25) = ₹150 crore.<br>
+<b>ROIC</b> = 150 / 1,000 = <b>15%</b>.<br>
+<b>Capital charge</b> = 1,000 × 12% = ₹120 crore.<br>
+<b>EVA</b> = 150 − 120 = <b>+₹30 crore</b>. Equivalently: (15% − 12%) × 1,000 = +₹30 crore.</p>
+<p>The firm earns a 3-point positive spread over its cost of capital and creates ₹30 crore of economic value this year — genuine wealth creation, invisible on a normal P&amp;L which would just show ₹150 crore "profit" without charging for the ₹600-odd crore of equity.</p>
+</div>
+
+<div class="trap"><b>Profit ≠ value:</b> a business can report healthy accounting profit yet have negative EVA if ROIC &lt; WACC. Growth funded at returns below WACC <b>destroys</b> value even as revenue and EPS climb — one reason analysts prize ROIC and EVA over raw EPS growth. Conversely, a shrinking business that lifts ROIC above WACC can create value.</div>
+
+<h3>14.1 Market Value Added (MVA)</h3>
+<div class="formula"><b>Market Value Added</b><br>
+MVA = Market value of the firm &minus; Capital invested = Σ PV(future EVA)
+<div class="where">MVA is the cumulative wealth a firm has created above the capital shareholders and lenders put in. Whereas EVA is a single-period measure, MVA is the market's verdict on <em>all</em> expected future EVAs, discounted. Positive MVA = value creator.</div></div>
+
+<h3>14.2 Value drivers</h3>
+<p>Working backward from EVA/DCF, only a handful of levers create value. Managing them is "value-based management":</p>
+<ul>
+  <li><b>Sales growth</b> — but only if incremental capital earns above WACC (growth is value-neutral at ROIC = WACC).</li>
+  <li><b>Operating margin (NOPAT margin)</b> — higher operating efficiency.</li>
+  <li><b>Capital efficiency</b> — higher asset/working-capital turnover (less capital per rupee of sales → higher ROIC).</li>
+  <li><b>Cash tax rate</b> — legitimate tax efficiency lifts NOPAT.</li>
+  <li><b>WACC</b> — optimal capital structure and lower risk shrink the capital charge.</li>
+  <li><b>Competitive-advantage period</b> — how long the firm can sustain ROIC &gt; WACC before competition erodes the spread.</li>
+</ul>
+
+<h3>14.3 Corporate governance &amp; agency theory</h3>
+<p><b>Agency theory:</b> shareholders (principals) hire managers (agents) who may pursue their own interests — empire-building, excessive perks, risk-aversion to protect their jobs, or short-termism. The resulting <b>agency costs</b> are (i) monitoring costs, (ii) bonding costs, and (iii) the residual loss from imperfect alignment. <b>Corporate governance</b> is the system of controls that aligns the two:</p>
+<ul>
+  <li><b>Board of directors</b> — independent directors, audit / nomination / remuneration committees, separation of chair and CEO.</li>
+  <li><b>Incentive alignment</b> — performance-linked pay, ESOPs, long-term incentives tied to EVA/TSR.</li>
+  <li><b>Disclosure &amp; audit</b> — transparent reporting, external audit, minority-shareholder protection (a live issue in promoter-dominated Indian firms; SEBI's LODR and Companies Act, 2013 set the framework).</li>
+  <li><b>Market discipline</b> — the threat of takeover, activist investors, and debt covenants curb value destruction.</li>
+</ul>
+
+<div class="keytake"><b>Key takeaways:</b> EVA charges for equity as well as debt, exposing whether profit truly exceeds the cost of capital. Value is created iff ROIC &gt; WACC (positive spread); MVA = PV of all future EVAs = the market's cumulative verdict. Manage the value drivers — growth (only above WACC), margins, capital efficiency, tax, WACC and the advantage period. Sound corporate governance aligns managers with owners and curbs agency costs.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">15. Corporate Restructuring: M&amp;A, LBO, Demerger &amp; Leasing</h2>
+
+<p>Restructuring changes the ownership, asset base or capital structure of a firm to create (or unlock) value. The finance question is always the same: does the deal make the combined entity worth more than the parts, and at what price?</p>
+
+<h3>15.1 M&amp;A rationale &amp; synergies</h3>
+<p>An acquisition creates value only if it generates <b>synergy</b> — the combined firm is worth more than the two standalone. Sources of synergy:</p>
+<ul>
+  <li><b>Operating (revenue) synergy:</b> cross-selling, wider distribution, pricing power, new markets.</li>
+  <li><b>Operating (cost) synergy:</b> economies of scale, removing duplicate overheads, better capacity utilisation, purchasing power.</li>
+  <li><b>Financial synergy:</b> lower cost of capital, greater debt capacity (coinsurance of cash flows), use of tax losses, deploying surplus cash.</li>
+  <li><b>Managerial:</b> replacing an under-performing management team.</li>
+</ul>
+<p><b>Types:</b> <em>horizontal</em> (same industry — scale/market power), <em>vertical</em> (supplier or customer — supply-chain control), <em>conglomerate</em> (unrelated — diversification, often the weakest rationale). Beware value-<b>destroying</b> motives: managerial empire-building, hubris (over-paying), and pure diversification (which shareholders can do themselves more cheaply).</p>
+
+<h3>15.2 Valuing synergy &amp; the price of a deal</h3>
+<div class="formula"><b>Synergy &amp; value to acquirer</b><br>
+Synergy = V<sub>combined</sub> &minus; (V<sub>acquirer</sub> + V<sub>target</sub>) ; &nbsp; NPV to acquirer = Synergy &minus; Premium paid
+<div class="where">Premium = price paid over the target's standalone value. The acquirer keeps value only if it does <b>not</b> pay away the entire synergy as premium. Synergies should be valued as incremental DCF (extra FCF, discounted, net of integration costs) — and heavily haircut, since most deals over-estimate them.</div></div>
+<div class="example"><div class="ex-h">Worked Example 13 — Synergy and premium</div>
+<p>Acquirer standalone value ₹1,000 cr; Target standalone ₹400 cr. Management estimates PV of synergies ₹150 cr, so V<sub>combined</sub> = 1,000 + 400 + 150 = ₹1,550 cr. To win the target the acquirer offers ₹480 cr (a ₹80 cr premium).</p>
+<p><b>NPV to acquirer</b> = Synergy − Premium = 150 − 80 = <b>+₹70 cr</b>. Value created for the acquirer's shareholders; target shareholders capture ₹80 cr of the ₹150 cr synergy as the premium. Had the acquirer paid a ₹160 cr premium (₹560 cr), NPV would be −₹10 cr — the classic "winner's curse."</p>
+</div>
+
+<h3>15.3 Leveraged buyout (LBO) — the concept</h3>
+<p>In an LBO a financial sponsor (PE firm) acquires a company using a large slug of <b>debt</b> secured on the target's own assets and cash flows, with a thin equity cheque. Returns come from three levers: (1) <b>deleveraging</b> — using the target's free cash flow to pay down debt, so equity value grows even if enterprise value is flat; (2) <b>operational improvement</b> — margin and growth gains; (3) <b>multiple expansion</b> — exiting at a higher EV/EBITDA than entry. Ideal LBO targets have <b>stable, predictable cash flows</b>, low existing debt, hard assets to pledge, and scope for efficiency gains. The high leverage magnifies equity IRR — and the risk.</p>
+
+<h3>15.4 Demerger / spin-off &amp; other divestitures</h3>
+<ul>
+  <li><b>Demerger / spin-off:</b> a division is separated into an independently-listed company; existing shareholders receive its shares pro-rata. Unlocks value by removing the <b>conglomerate discount</b>, sharpening management focus, enabling cleaner valuation, and letting each business pursue its own capital structure.</li>
+  <li><b>Carve-out:</b> a minority stake in a subsidiary is sold via IPO for cash, while the parent retains control.</li>
+  <li><b>Divestiture / slump sale:</b> outright sale of a division to another company for cash.</li>
+</ul>
+
+<h3>15.5 Buy vs lease</h3>
+<p>A financing choice: borrow-and-buy an asset, or lease it. Analyse on incremental after-tax cash flows discounted at the <b>after-tax cost of debt</b> (leasing is a debt substitute, so use a debt-like rate, not WACC).</p>
+<ul>
+  <li><b>Buy (borrow):</b> you own the asset, claim <b>depreciation</b> tax shields and any salvage value, but bear obsolescence risk and tie up debt capacity.</li>
+  <li><b>Lease:</b> lease rentals are tax-deductible; conserves cash, transfers obsolescence risk (operating lease), but forgoes depreciation and salvage. A <b>finance lease</b> transfers substantially all risks/rewards and is capitalised on the balance sheet; an <b>operating lease</b> is shorter and more service-like.</li>
+</ul>
+<div class="formula"><b>Net Advantage of Leasing (NAL)</b><br>
+NAL = PV(cost of owning) &minus; PV(cost of leasing) &nbsp; ⟹ &nbsp; lease if NAL &gt; 0
+<div class="where">Cost of owning = purchase price − PV(depreciation tax shields) − PV(after-tax salvage); Cost of leasing = PV(after-tax lease rentals). Discount everything at the after-tax cost of debt.</div></div>
+
+<div class="keytake"><b>Key takeaways:</b> M&amp;A creates value only through genuine synergy (operating, financial, managerial); the acquirer keeps value only if premium &lt; synergy — don't overpay (winner's curse). LBOs earn returns via deleveraging, operating gains and multiple expansion, and need stable cash flows. Demergers unlock the conglomerate discount. Buy-vs-lease is a debt-substitute decision — discount at the after-tax cost of debt.</div>
+
+<!-- ============================================================= -->
+<h2 class="sec">16. Master Interview Q&amp;A Bank</h2>
+
+<h3>16.1 Core concepts &amp; time value</h3>
+
+<div class="qa"><div class="q">Q1: What is the time value of money and why does it matter?</div>
+<div class="a">A: A rupee today is worth more than a rupee tomorrow because today's rupee can be invested to earn a return, is certain (vs uncertain future cash), and inflation erodes future purchasing power. It matters because every valuation — bonds, shares, projects — discounts future cash flows to present value; ignoring timing would treat ₹100 today and ₹100 in ten years as equal, which is wrong.</div></div>
+
+<div class="qa"><div class="q">Q2: Difference between nominal and effective interest rate?</div>
+<div class="a">A: The nominal (stated) rate ignores intra-year compounding; the effective annual rate (EAR = (1+i/m)<sup>m</sup>−1) captures interest-on-interest. 12% compounded monthly is really 12.68% effective. When comparing instruments with different compounding frequencies, always compare EARs.</div></div>
+
+<div class="qa"><div class="q">Q3: How do you value a growing perpetuity, and what's the key constraint?</div>
+<div class="a">A: PV = C<sub>1</sub>/(r−g), where C<sub>1</sub> is next period's cash flow. The constraint is r &gt; g — otherwise the value is infinite or negative and meaningless. It's the backbone of the Gordon dividend model and DCF terminal value, and it's extremely sensitive to the (r−g) denominator, so small changes in g swing value materially.</div></div>
+
+<div class="qa"><div class="q">Q4: Real vs nominal cash flows — how do you keep them consistent?</div>
+<div class="a">A: Discount nominal cash flows at a nominal rate and real cash flows at a real rate (Fisher: 1+nominal = (1+real)(1+inflation)). Mixing them double-counts or omits inflation. In practice most models are built in nominal terms because tax, depreciation and debt are all nominal.</div></div>
+
+<h3>16.2 Capital budgeting</h3>
+
+<div class="qa"><div class="q">Q5: What is NPV and why is it the preferred decision rule?</div>
+<div class="a">A: NPV is the present value of a project's future cash flows minus its initial outlay, discounted at the cost of capital. It's preferred because it measures the actual rupees of value added to shareholders, uses all cash flows and their timing, reflects risk via the discount rate, is always unique, and assumes realistic reinvestment at the cost of capital. Decision: accept if NPV &gt; 0.</div></div>
+
+<div class="qa"><div class="q">Q6: NPV vs IRR — which do you trust and why?</div>
+<div class="a">A: NPV. For a single conventional project they agree, but for mutually exclusive projects IRR can rank wrongly because of scale and timing differences and its unrealistic assumption that interim cash is reinvested at the IRR. IRR can also produce multiple or no values with non-conventional cash flows. IRR is a great communication tool ("we earn 22%") but for the accept/rank decision, trust NPV. MIRR is a compromise that keeps a percentage but fixes the reinvestment flaw.</div></div>
+
+<div class="qa"><div class="q">Q7: Explain the multiple-IRR problem.</div>
+<div class="a">A: By Descartes' rule of signs, a cash-flow stream can have as many IRRs as sign changes. A conventional project (− then all +) has one. But a project with a large terminal outflow — a mine's clean-up cost, say (−,+,+,−) — has two sign changes and can have two IRRs, or none. The IRR then can't be interpreted; use NPV or MIRR instead.</div></div>
+
+<div class="qa"><div class="q">Q8: What's the reinvestment-rate assumption in IRR vs NPV?</div>
+<div class="a">A: IRR implicitly assumes interim cash flows are reinvested at the IRR itself — unrealistic if the IRR is high (you rarely have unlimited projects at that return). NPV assumes reinvestment at the cost of capital, which is realistic because that's the firm's opportunity cost. MIRR makes the reinvestment rate explicit (usually WACC).</div></div>
+
+<div class="qa"><div class="q">Q9: What is MIRR and when is it useful?</div>
+<div class="a">A: Modified IRR compounds all inflows forward at the reinvestment rate (WACC) and discounts outflows at the finance rate, then takes the n-th root minus 1. It gives a single, more conservative percentage return, fixing IRR's reinvestment flaw and multiple-IRR problem — useful when stakeholders insist on a % but you need it to behave.</div></div>
+
+<div class="qa"><div class="q">Q10: Payback period — strengths and fatal flaws?</div>
+<div class="a">A: Strength: simple, intuitive, a rough liquidity/risk screen (short payback = quick recovery, less exposure). Fatal flaws: plain payback ignores the time value of money and — critically — ignores all cash flows after the cut-off, so it can reject highly value-accretive long-gestation projects. The cut-off is arbitrary. Use it only as a supplementary screen, never as the primary rule.</div></div>
+
+<div class="qa"><div class="q">Q11: When would you use the Profitability Index?</div>
+<div class="a">A: Under capital rationing — a fixed budget across many positive-NPV projects. PI = PV of inflows / initial investment measures value per rupee invested, so you rank by PI to squeeze the most NPV out of a limited budget. Without rationing, PI and NPV give the same accept/reject answer (PI&gt;1 ⟺ NPV&gt;0).</div></div>
+
+<div class="qa"><div class="q">Q12: Mutually exclusive vs independent projects?</div>
+<div class="a">A: Independent projects can all be accepted if each has NPV&gt;0 (accepting one doesn't affect another). Mutually exclusive means choosing one precludes the others (e.g. two designs for the same factory) — you pick the single highest-NPV option. Ranking conflicts between NPV and IRR only matter for mutually exclusive choices.</div></div>
+
+<div class="qa"><div class="q">Q13: What is a sunk cost and how does it affect a decision?</div>
+<div class="a">A: A cost already incurred and unrecoverable — e.g. a ₹50 lakh feasibility study already paid. It's irrelevant to the accept/reject decision because it doesn't change with the choice. Only incremental future cash flows matter. Psychologically people cling to sunk costs ("we've spent so much already"), but that's the sunk-cost fallacy.</div></div>
+
+<div class="qa"><div class="q">Q14: Give an example of an opportunity cost in capital budgeting.</div>
+<div class="a">A: Using a piece of company-owned land for a new plant. Even though no cash is paid, the firm forgoes the rent or sale proceeds it could have earned — that forgone value is a real incremental cost of the project and must be included in the cash flows.</div></div>
+
+<div class="qa"><div class="q">Q15: Why don't we subtract interest in project free cash flows?</div>
+<div class="a">A: Because financing cost is captured in the discount rate (WACC), which already includes after-tax cost of debt. Subtracting interest in the cash flows AND discounting at WACC would double-count the cost of debt. Project FCF is deliberately unlevered/capital-structure-neutral; leverage lives in the rate, not the numerator.</div></div>
+
+<div class="qa"><div class="q">Q16: How does depreciation affect project cash flows if it's non-cash?</div>
+<div class="a">A: Through the tax shield. Depreciation isn't a cash outflow, but it's tax-deductible, so it reduces taxes payable by (depreciation × tax rate). We add depreciation back after computing after-tax operating profit, capturing that cash tax saving. Higher depreciation → more tax saved → higher FCF.</div></div>
+
+<h3>16.3 Cost of capital &amp; WACC</h3>
+
+<div class="qa"><div class="q">Q17: What is WACC and why do we use it?</div>
+<div class="a">A: WACC is the weighted average of the after-tax costs of all the firm's capital sources — equity, debt, preference — weighted by their market values. We use it as (a) the hurdle rate: a project must beat WACC to add value, and (b) the discount rate for unlevered free cash flows to get enterprise value. It represents the firm's overall opportunity cost of capital and blends cheaper tax-shielded debt with costlier equity into one risk-adjusted rate.</div></div>
+
+<div class="qa"><div class="q">Q18: Walk me through calculating WACC.</div>
+<div class="a">A: (1) Determine the market values of equity (E), debt (D) and preference (P); V = E+D+P. (2) Compute weights E/V, D/V, P/V. (3) Cost of equity K<sub>e</sub> via CAPM = R<sub>f</sub> + β(R<sub>m</sub>−R<sub>f</sub>). (4) After-tax cost of debt = YTM × (1−t). (5) Cost of preference K<sub>p</sub> = D<sub>p</sub>/P<sub>0</sub> (no tax adjustment). (6) WACC = (E/V)K<sub>e</sub> + (D/V)K<sub>d</sub>(1−t) + (P/V)K<sub>p</sub>. For example, 60% equity at 15%, 30% debt at 9% pre-tax (25% tax), 10% preference at 11% gives 9% + 2.025% + 1.1% = ~12.1%.</div></div>
+
+<div class="qa"><div class="q">Q19: Why is equity more expensive than debt?</div>
+<div class="a">A: Three reasons. (1) Priority: debt holders are paid first — interest and principal are contractual; equity is the residual claimant, bearing more risk, so it demands a higher return. (2) Tax: interest is tax-deductible (the tax shield lowers effective debt cost), dividends are not. (3) Certainty: debt has fixed, predictable cash flows; equity returns are volatile and uncertain. Higher risk → higher required return → equity is costlier.</div></div>
+
+<div class="qa"><div class="q">Q20: Should WACC use book or market weights? Why?</div>
+<div class="a">A: Market weights. WACC reflects the return investors currently require on what they could sell their claims for today. Book equity (historical) is usually far below market cap, so book weights overweight debt and understate WACC, flattering NPVs. Debt is often near book but use market/fair value if it diverges. Ideally use target (long-run) weights rather than volatile spot weights.</div></div>
+
+<div class="qa"><div class="q">Q21: Explain CAPM and its inputs in the Indian context.</div>
+<div class="a">A: K<sub>e</sub> = R<sub>f</sub> + β(R<sub>m</sub>−R<sub>f</sub>). R<sub>f</sub> is proxied by a long-dated Government of India security yield (e.g. the 10-year G-sec) since sovereign local-currency debt is treated as near default-free. β measures the stock's sensitivity to the market (Nifty/Sensex). The equity risk premium (R<sub>m</sub>−R<sub>f</sub>) for India is typically estimated in a range around 6–8% — an estimate, not a fixed figure, so I'd state it as a range and note my assumption.</div></div>
+
+<div class="qa"><div class="q">Q22: What does beta measure, and what's the difference between levered and unlevered beta?</div>
+<div class="a">A: Beta measures systematic (non-diversifiable) risk — the stock's sensitivity to market moves. Levered (equity) beta reflects both business risk and financial risk (from debt). Unlevered (asset) beta strips out leverage to isolate pure business risk. To value a company using a comparable, you unlever the comp's beta (β<sub>u</sub> = β<sub>L</sub>/[1+(1−t)D/E]) then re-lever to your target D/E. More leverage → higher equity beta → higher cost of equity.</div></div>
+
+<div class="qa"><div class="q">Q23: Why do we re-lever beta, and can you walk through it?</div>
+<div class="a">A: Because a comparable's equity beta embeds its capital structure, which usually differs from ours. Steps: unlever the comp's beta using its D/E and tax rate; then re-lever using our target D/E. E.g. comp β=1.30, D/E=0.6, t=25% → β<sub>u</sub>=1.30/1.45=0.897; re-lever to D/E=1.0 → β<sub>L</sub>=0.897×1.75=1.57. This gives a beta consistent with our own financial risk.</div></div>
+
+<div class="qa"><div class="q">Q24: Why is the cost of preference capital not tax-adjusted?</div>
+<div class="a">A: Because preference dividends are paid out of after-tax profit and are not tax-deductible, unlike interest. So K<sub>p</sub> = D<sub>p</sub>/P<sub>0</sub> with no (1−t) factor. This is why preference capital is often more expensive to the issuer than debt despite both being fixed-return.</div></div>
+
+<div class="qa"><div class="q">Q25: Which cost of debt do you use — the coupon or the current yield?</div>
+<div class="a">A: The current market yield (YTM) or the rate at which the firm can borrow today — not the historical coupon on old bonds. WACC is a forward-looking, marginal cost of capital: it should reflect what new capital costs now, not what legacy debt happened to cost when issued.</div></div>
+
+<div class="qa"><div class="q">Q26: When is it wrong to use the company-wide WACC for a project?</div>
+<div class="a">A: When the project's risk differs from the firm's average. A single WACC applied to a low-risk utility division and a high-risk tech division misprices both — accepting bad high-risk projects and rejecting good low-risk ones. Use a project/divisional WACC built from pure-play (comparable) betas. Also adjust if the project materially changes the capital structure or is in a different currency.</div></div>
+
+<div class="qa"><div class="q">Q27: What happens to WACC as you add debt?</div>
+<div class="a">A: Initially WACC falls because debt is cheaper and tax-shielded, and equity's required return rises only gradually. Beyond an optimal point, rising financial risk pushes up both K<sub>e</sub> and K<sub>d</sub>, and financial-distress and agency costs kick in, so WACC rises. The result is a U-shaped WACC curve; the bottom is the optimal capital structure (trade-off theory). Under strict MM-no-tax, WACC would stay flat.</div></div>
+
+<h3>16.4 Capital structure</h3>
+
+<div class="qa"><div class="q">Q28: Does capital structure affect firm value?</div>
+<div class="a">A: It depends on market frictions. In perfect markets (MM 1958, no tax), no — value comes only from asset earning power; leverage just reshuffles risk between debt and equity (WACC is flat). Add corporate tax and debt's tax shield raises value (V<sub>L</sub>=V<sub>U</sub>+tD). But financial-distress and agency costs eventually offset the shield (trade-off theory), giving an optimal, interior D/E. So in the real world, yes — up to a point.</div></div>
+
+<div class="qa"><div class="q">Q29: State MM Proposition I and II (no tax) in plain English.</div>
+<div class="a">A: Prop I: the value of a firm is independent of its capital structure — "the size of the pizza doesn't change with how you slice it." Prop II: the cost of equity rises linearly with the debt-to-equity ratio, exactly offsetting the benefit of cheaper debt, so WACC stays constant. The lesson: there's no free lunch from "cheap" debt in a frictionless world.</div></div>
+
+<div class="qa"><div class="q">Q30: How does adding corporate tax change the MM conclusion?</div>
+<div class="a">A: Interest becomes tax-deductible, creating a tax shield worth (tax rate × debt) in present value for perpetual debt. So V<sub>L</sub> = V<sub>U</sub> + tD — value rises with leverage, and WACC falls. Taken literally this implies ~100% debt is optimal, which is why we need distress costs to get a realistic answer.</div></div>
+
+<div class="qa"><div class="q">Q31: Explain trade-off theory.</div>
+<div class="a">A: The optimal capital structure balances the marginal tax benefit of more debt against the marginal cost of financial distress (and agency costs). As leverage rises, the tax shield adds value but the probability and cost of distress — direct bankruptcy costs plus indirect costs like lost customers, forced asset sales, higher supplier terms — grow faster. The optimum is where marginal benefit equals marginal cost, giving a target D/E and a U-shaped WACC.</div></div>
+
+<div class="qa"><div class="q">Q32: Explain pecking-order theory and what it predicts.</div>
+<div class="a">A: Due to information asymmetry, managers prefer financing that signals least about overvaluation: internal funds first, then debt, then equity as a last resort (issuing equity is read as a negative signal, so the market marks it down). It predicts that highly profitable firms use less debt — they fund from internal cash and rarely tap external markets — which trade-off theory alone struggles to explain. It implies no fixed target ratio; leverage is just the accumulated history of financing needs.</div></div>
+
+<div class="qa"><div class="q">Q33: What are financial distress costs — direct and indirect?</div>
+<div class="a">A: Direct costs are the legal, administrative and advisory fees of bankruptcy/restructuring. Indirect costs are usually larger and harder to see: lost sales as customers worry about warranties/continuity, suppliers tightening credit, key employees leaving, forced fire-sales of assets, and management distracted from running the business. These costs make high leverage risky even before actual default.</div></div>
+
+<div class="qa"><div class="q">Q34: Why might a very profitable company carry little debt?</div>
+<div class="a">A: Pecking-order logic: it generates enough internal cash to fund investment without external financing, so it never needs much debt. It may also want to preserve financial flexibility/debt capacity for future opportunities and avoid distress risk. This is common among cash-rich FMCG and IT firms.</div></div>
+
+<h3>16.5 Leverage</h3>
+
+<div class="qa"><div class="q">Q35: Distinguish operating, financial and combined leverage.</div>
+<div class="a">A: Operating leverage (DOL = Contribution/EBIT) measures how fixed operating costs magnify a sales change into a bigger EBIT change — business risk. Financial leverage (DFL = EBIT/EBT) measures how fixed interest magnifies an EBIT change into a bigger EPS change — financial risk. Combined leverage (DCL = DOL×DFL = Contribution/EBT) is the total magnification from sales to EPS. High DCL means earnings are very volatile — a red flag.</div></div>
+
+<div class="qa"><div class="q">Q36: A firm has DOL 2 and DFL 2.5. Sales fall 10% — what happens to EPS?</div>
+<div class="a">A: DCL = 2 × 2.5 = 5. EPS changes by 5 × (−10%) = −50%. A modest 10% sales decline halves EPS — that's the danger of stacking high operating and financial leverage. The same works in reverse on the upside, but downside risk is what worries credit analysts.</div></div>
+
+<div class="qa"><div class="q">Q37: What is the breakeven point and financial breakeven?</div>
+<div class="a">A: Operating breakeven (units) = Fixed costs / contribution margin per unit — the sales volume where EBIT = 0. Financial breakeven is the EBIT level that just covers fixed financial charges (interest + grossed-up preference dividend) so EPS = 0. Above operating breakeven, operating leverage works in your favour; a firm must clear financial breakeven before equity holders earn anything.</div></div>
+
+<div class="qa"><div class="q">Q38: Would a highly cyclical business want high financial leverage?</div>
+<div class="a">A: Generally no. Cyclical businesses already have high operating leverage and volatile EBIT (high business risk). Piling on financial leverage multiplies that volatility (high DCL), raising the chance EBIT falls below interest obligations in a downturn — default risk. Stable, defensive businesses (utilities, consumer staples) can safely carry more debt; cyclicals should keep leverage lower.</div></div>
+
+<h3>16.6 Dividend policy</h3>
+
+<div class="qa"><div class="q">Q39: Is dividend policy relevant to firm value?</div>
+<div class="a">A: In perfect markets, MM (1961) say it's irrelevant — value comes from investment policy, and investors can create "homemade dividends" by selling shares. In the real world, frictions make it relevant: signalling (dividend changes convey information), clientele effects, taxes, and behavioural preference for certain income (Gordon's bird-in-hand). Most practitioners treat payout as a signalling and capital-allocation tool rather than a pure value driver.</div></div>
+
+<div class="qa"><div class="q">Q40: Explain Walter's model conclusion.</div>
+<div class="a">A: Walter links optimal payout to the relationship between return on investment (r) and cost of equity (K<sub>e</sub>). If r &gt; K<sub>e</sub> (growth firm), retain everything — optimal payout 0%. If r &lt; K<sub>e</sub> (declining firm), pay out everything — 100%. If r = K<sub>e</sub>, payout is irrelevant. Intuition: keep cash only if the firm can reinvest it at a return above what shareholders require.</div></div>
+
+<div class="qa"><div class="q">Q41: What does a dividend increase signal to the market?</div>
+<div class="a">A: Management's confidence that higher earnings are sustainable — dividends are "sticky," so firms only raise them when they believe the higher level can be maintained. A cut signals distress and usually triggers a sharp price fall. This signalling content is why dividends carry information beyond the cash itself.</div></div>
+
+<div class="qa"><div class="q">Q42: Buyback vs dividend — how would you advise a company with surplus cash?</div>
+<div class="a">A: If the cash surplus is durable and the firm wants to set a payout expectation, a regular dividend suits. If it's a one-off surplus or the stock looks undervalued, a buyback is better — it's flexible, doesn't create a sticky commitment, raises EPS by cutting share count, and signals the shares are cheap. I'd also weigh the prevailing tax treatment of dividends vs buybacks (which has changed in India over time) and whether the firm has better internal investment opportunities first. Crucially, a buyback creates value only if shares are bought below intrinsic value.</div></div>
+
+<div class="qa"><div class="q">Q43: Does a buyback create value by increasing EPS?</div>
+<div class="a">A: Not by itself. A buyback doesn't change operating cash flows or asset value — it just reduces share count and cash. EPS rises mechanically, but that's a repackaging, not value creation. Real value is created only if shares are repurchased below intrinsic value (benefiting remaining holders) or if returning cash prevents value-destroying overinvestment.</div></div>
+
+<h3>16.7 Working capital &amp; value creation</h3>
+
+<div class="qa"><div class="q">Q44: What is the cash conversion cycle and how do you shorten it?</div>
+<div class="a">A: CCC = DIO + DSO − DPO — the days between paying suppliers and collecting from customers, i.e. how long cash is tied up in operations. Shorten it by holding less inventory (better forecasting, JIT), collecting receivables faster (tighter credit terms, early-payment discounts), and reasonably stretching payables — without harming supplier relationships. A shorter CCC frees cash and reduces working-capital financing.</div></div>
+
+<div class="qa"><div class="q">Q45: What's the trade-off in working-capital policy?</div>
+<div class="a">A: Liquidity vs profitability. Holding lots of working capital (high inventory, generous credit, big cash buffer) is safe but ties up capital that earns nothing, dragging returns. Running lean boosts returns but risks stock-outs, lost sales and liquidity crises. An aggressive financing policy (funding permanent needs with short-term debt) is cheaper but exposes the firm to refinancing/rate risk — the maturity-matching (hedging) principle says match financing life to asset life.</div></div>
+
+<div class="qa"><div class="q">Q46: Name common sources of short-term finance in India.</div>
+<div class="a">A: Trade credit from suppliers; bank cash credit / overdraft and working-capital demand loans (drawing power on inventory and receivables); bill discounting and factoring of receivables; commercial paper for strong-rated corporates; inter-corporate deposits; and spontaneous accruals like wages and taxes payable. Trade credit and bank cash credit are the workhorses for most Indian firms.</div></div>
+
+<div class="qa"><div class="q">Q47: What is EVA and why is it better than accounting profit?</div>
+<div class="a">A: EVA = NOPAT − (Invested Capital × WACC). It charges for ALL capital, including equity, which the P&amp;L ignores. A firm can show accounting profit yet have negative EVA if it isn't earning above its cost of capital. EVA reveals true economic value creation and aligns managers with shareholders — you only get positive EVA when ROIC exceeds WACC.</div></div>
+
+<div class="qa"><div class="q">Q48: Explain ROIC vs WACC as a value test.</div>
+<div class="a">A: ROIC = NOPAT/Invested Capital is the return the business earns on the capital deployed; WACC is what that capital costs. Value is created only when ROIC &gt; WACC — the "spread." EVA = (ROIC − WACC) × Invested Capital. Growth is only good if it earns above WACC; growing at returns below WACC destroys value even while revenue and EPS rise. This one inequality unifies investment, financing and payout decisions.</div></div>
+
+<div class="qa"><div class="q">Q49: A company grows earnings 20% a year but the stock is flat. How is that possible?</div>
+<div class="a">A: If the growth is funded at returns below WACC, it destroys value even as EPS climbs — negative EVA. The market sees through accounting growth to economic value: capital-hungry expansion earning less than the cost of capital, rising financial risk, or poor cash conversion can all keep the stock flat despite headline earnings growth. Always check ROIC vs WACC and free cash flow, not just EPS.</div></div>
+
+<div class="qa"><div class="q">Q50: If you could use only one metric to evaluate a project, which and why?</div>
+<div class="a">A: NPV. It captures cash flows, timing, and risk in one number, is measured in rupees of shareholder value, is always unique, and directly answers "does this make us richer?" IRR, payback and PI each illuminate an angle (return %, liquidity, capital efficiency), but NPV is the decision rule everything else supports.</div></div>
+
+<div class="qa"><div class="q">Q51: How do interest rates rising affect capital budgeting and valuation?</div>
+<div class="a">A: A higher risk-free rate lifts the cost of equity (CAPM) and cost of debt, so WACC rises. Higher discount rates lower the present value of future cash flows — NPVs fall, especially for long-duration, back-loaded projects (like infrastructure or growth stocks whose value sits far in the future). Fewer projects clear the higher hurdle rate. This is why rate cycles drive valuations and deal activity.</div></div>
+
+<div class="qa"><div class="q">Q52: What's the difference between business risk and financial risk?</div>
+<div class="a">A: Business risk is the inherent variability of operating income (EBIT) from the nature of the business — demand cyclicality, cost structure, operating leverage. It exists even with zero debt. Financial risk is the additional variability in returns to equity holders caused by fixed financing charges (debt/preference) — it's created purely by the capital-structure choice and is captured by financial leverage (DFL) and the debt portion of levered beta.</div></div>
+
+<h3>16.8 Advanced: MIRR, EAA, restructuring, risk &amp; cost of capital</h3>
+
+<div class="qa"><div class="q">Q53: Two projects have different lives — how do you compare them?</div>
+<div class="a">A: You cannot compare raw NPVs directly because the longer project has more time to create value. Convert each NPV to an Equivalent Annual Annuity (EAA = NPV ÷ annuity factor) and compare the per-year figures — assuming each can be replaced at the end of its life. For pure-cost choices (which machine), use the Equivalent Annual Cost and pick the lowest. E.g. a 3-yr project with NPV ₹50 lakh can beat a 5-yr project with NPV ₹65 lakh once annualised (₹20.1 vs ₹17.2 lakh/yr).</div></div>
+
+<div class="qa"><div class="q">Q54: How is MIRR calculated and why is it lower than IRR here?</div>
+<div class="a">A: Compound all inflows forward to the final year at the reinvestment rate (WACC), sum to a terminal value, then MIRR = (Terminal value ÷ PV of outflows)<sup>1/n</sup> − 1. For inflows 40/40/40/30 on a ₹100 outlay at 12%, terminal value ≈ ₹181 lakh, MIRR = (1.81)<sup>0.25</sup> − 1 ≈ 16%, below the IRR of ~18.8% because MIRR reinvests at 12% not at the IRR. It's the more realistic return.</div></div>
+
+<div class="qa"><div class="q">Q55: What is capital rationing and how do you allocate under it?</div>
+<div class="a">A: When the capital budget is fixed and there are more positive-NPV projects than funds. Soft rationing is self-imposed; hard rationing is market-imposed. For divisible independent projects, rank by Profitability Index and fill the budget top-down to maximise NPV per rupee. For indivisible/interdependent projects, test feasible combinations and choose the bundle with the highest total NPV within the constraint.</div></div>
+
+<div class="qa"><div class="q">Q56: Sensitivity vs scenario analysis — what's the difference?</div>
+<div class="a">A: Sensitivity flexes one variable at a time to see which inputs NPV is most sensitive to — good for spotting key value drivers but it ignores correlations. Scenario analysis flexes a consistent set of variables together (best/base/worst) to reflect coherent states of the world, capturing the fact that a downturn hits price and volume simultaneously. Simulation (Monte Carlo) goes further, giving a full probability distribution of NPV.</div></div>
+
+<div class="qa"><div class="q">Q57: What are real options in capital budgeting?</div>
+<div class="a">A: The value of managerial flexibility that a static NPV ignores — the option to expand a project if it succeeds, abandon it if it fails, delay/time the investment, or switch inputs/outputs. Expanded NPV = static NPV + option value. It explains why firms undertake pilots or negative-NPV footholds: they buy a valuable option on a bigger opportunity.</div></div>
+
+<div class="qa"><div class="q">Q58: How do you handle inflation in a project — real or nominal?</div>
+<div class="a">A: Be consistent. Either build nominal cash flows (revenues and costs inflated) and discount at a nominal WACC, or build real cash flows and discount at a real rate (Fisher: 1+nominal = (1+real)(1+inflation)). Most Indian models are nominal because tax, depreciation and debt are all in nominal rupees. Mixing — inflating cash flows but discounting at a real rate — overstates NPV.</div></div>
+
+<div class="qa"><div class="q">Q59: Name a cost-of-equity method other than CAPM.</div>
+<div class="a">A: The dividend-growth (Gordon) model, K<sub>e</sub> = D<sub>1</sub>/P<sub>0</sub> + g, for stable dividend payers; and the bond-yield-plus-risk-premium approach, K<sub>e</sub> = the firm's own cost of debt + an equity premium of roughly 3–5%. APT is a multi-factor generalisation of CAPM. In practice I'd triangulate, present a range, and state my preferred estimate.</div></div>
+
+<div class="qa"><div class="q">Q60: What is a bottom-up beta and why use it?</div>
+<div class="a">A: Instead of one noisy regression beta, take several comparable firms, unlever each by its own D/E and tax, average the unlevered (asset) betas to cancel regression noise, then re-lever to the target's D/E. It gives a more reliable read of business risk and is essential for unlisted firms and divisions that have no traded beta.</div></div>
+
+<div class="qa"><div class="q">Q61: How do flotation costs enter a project appraisal?</div>
+<div class="a">A: Best practice is to add them as an up-front cash outflow to the initial investment, since they're a one-off issue cost, rather than inflating the discount rate (which would wrongly penalise every future year). They reduce the net proceeds of new securities and so raise the effective cost of newly-raised capital.</div></div>
+
+<div class="qa"><div class="q">Q62: What is the marginal cost of capital and the MCC schedule?</div>
+<div class="a">A: The cost of the next rupee raised. As a firm exhausts cheap retained earnings and must issue new equity (flotation costs) or costlier debt tranches, the MCC rises in steps at "break points." You accept projects where the investment opportunity schedule (projects ranked by IRR) sits above the rising MCC — the intersection sets the optimal capital budget.</div></div>
+
+<div class="qa"><div class="q">Q63: What's the EBIT–EPS indifference point and why does it matter?</div>
+<div class="a">A: The EBIT level at which two financing plans give identical EPS. Above it, the more-levered plan gives higher EPS (leverage helps); below it, the less-levered plan is better. It links the financing choice to expected EBIT and its volatility — if you're confident EBIT will stay well above the indifference point, debt boosts EPS; if EBIT could dip below, equity is safer. But higher EPS ≠ higher value, since leverage also raises K<sub>e</sub>.</div></div>
+
+<div class="qa"><div class="q">Q64: Explain agency costs of debt and of equity.</div>
+<div class="a">A: Agency cost of debt: over-levered shareholders may take excessive risk (asset substitution — upside to them, downside to lenders) or forgo good projects whose gains go to lenders (debt overhang); lenders price this in via covenants and higher rates. Agency cost of equity: managers with abundant free cash may empire-build or over-consume perks — debt's fixed repayments discipline them (Jensen's free-cash-flow hypothesis). Good governance and incentive design reduce both.</div></div>
+
+<div class="qa"><div class="q">Q65: What is a residual dividend policy?</div>
+<div class="a">A: Pay out only the cash left after funding all positive-NPV projects at the target capital structure — equity portion funded from retained earnings first, residue paid as dividend. It's value-optimal (no good project starved, no costly external equity) but produces volatile dividends. Because investors prize stability, firms follow a smoothed version (Lintner: move partway to a target payout, raise only when the increase looks permanent).</div></div>
+
+<div class="qa"><div class="q">Q66: Bonus issue vs stock split — do they create value?</div>
+<div class="a">A: Neither changes total value or a holder's proportional stake — both just increase share count and cut price per share, improving liquidity/affordability and signalling confidence. Difference: a bonus issue capitalises reserves into share capital (face value unchanged), while a split subdivides face value (e.g. ₹10 → ₹2) with reserves unchanged. Any price pop is signalling, not fundamentals.</div></div>
+
+<div class="qa"><div class="q">Q67: Tender offer vs open-market buyback?</div>
+<div class="a">A: A tender offer buys a set number of shares at a stated (usually premium) price within a window — fast and even-handed but costs a premium; a Dutch-auction tender lets shareholders name prices and the firm buys at the lowest clearing price. An open-market buyback purchases shares on the exchange over time at market prices — flexible and cheaper but slower and less certain. Choice depends on urgency, size and how undervalued the stock is.</div></div>
+
+<div class="qa"><div class="q">Q68: What makes a good LBO target and where do returns come from?</div>
+<div class="a">A: Stable, predictable cash flows to service heavy debt, low existing leverage, hard assets to pledge, and scope for operational improvement. Returns come from three levers: deleveraging (cash flow pays down debt, growing the equity slice), operational gains (margin/growth), and multiple expansion (exit at a higher EV/EBITDA than entry). High leverage magnifies equity IRR — and risk.</div></div>
+
+<div class="qa"><div class="q">Q69: How do you value synergies in an M&amp;A deal, and what's the winner's curse?</div>
+<div class="a">A: Synergy = combined value − (acquirer + target) standalone values, estimated as the PV of incremental free cash flows (extra revenue/cost savings/tax/financing benefits) net of integration costs, then haircut for optimism. The acquirer keeps value only if the premium paid is less than the synergy. The winner's curse is over-paying in a competitive auction — the "winner" transfers all (or more than all) the synergy to target shareholders and destroys its own value.</div></div>
+
+<div class="qa"><div class="q">Q70: Why does a demerger/spin-off create value?</div>
+<div class="a">A: It removes the conglomerate discount — the market often values a diversified group below the sum of its parts due to opacity, cross-subsidy and lack of focus. Separating a division into an independently-listed entity sharpens management focus and accountability, allows cleaner valuation and its own optimal capital structure, and lets investors choose their exposure. It's value unlocking, not value creation from operations.</div></div>
+
+<div class="qa"><div class="q">Q71: Buy vs lease — how do you decide and what discount rate do you use?</div>
+<div class="a">A: Compare the PV of the after-tax cash flows of owning (purchase price, depreciation tax shields, salvage) versus leasing (after-tax rentals, no depreciation, no salvage), and pick the lower cost / positive Net Advantage of Leasing. Discount at the after-tax cost of debt, not WACC, because leasing is a debt substitute with fairly certain, contractual cash flows. Leasing also conserves cash and can shift obsolescence risk (operating lease).</div></div>
+
+<div class="qa"><div class="q">Q72: What is over-trading and why can it bankrupt a profitable firm?</div>
+<div class="a">A: Over-trading (under-capitalisation) is expanding sales faster than the working-capital base can support — booking orders the firm can't fund. Cash drains into inventory and receivables while payables stretch; the firm shows accounting profit but runs out of cash and can't meet obligations. It's a leading cause of the "profitable but insolvent" paradox. Cure: slow growth, inject long-term capital, and tighten the cash conversion cycle.</div></div>
+
+<div class="qa"><div class="q">Q73: What's the difference between EVA and MVA?</div>
+<div class="a">A: EVA is a single-period measure — NOPAT minus a capital charge (Invested Capital × WACC) — showing whether the firm beat its cost of capital this year. MVA is cumulative: market value of the firm minus capital invested, which equals the present value of all expected future EVAs. Positive EVA each year builds positive MVA; MVA is the market's verdict on the whole stream of value creation.</div></div>
+
+<div class="qa"><div class="q">Q74: A private manufacturer wants its cost of equity — walk me through it.</div>
+<div class="a">A: It has no traded beta, so use a bottom-up beta: take listed comparables, unlever each by its D/E and tax, average the asset betas, then re-lever to the target's D/E. Plug into CAPM with R<sub>f</sub> = 10-year G-sec yield and an India ERP stated as a range (~6–8%). Cross-check with the bond-yield-plus-premium method (its borrowing rate + ~3–5%). Present a range, state assumptions, and note that being unlisted may warrant an additional illiquidity/size premium.</div></div>
+
+<!-- ============================================================= -->
+<h2 class="sec">17. Formula Cheat-Sheet &amp; Final Checklist</h2>
+
+<h3>17.1 One-page formula recall</h3>
+<table><thead><tr><th>Concept</th><th>Formula</th></tr></thead>
+<tbody>
+<tr><td>Future value</td><td>FV = PV(1+r)<sup>n</sup></td></tr>
+<tr><td>Present value</td><td>PV = FV/(1+r)<sup>n</sup></td></tr>
+<tr><td>PV ordinary annuity</td><td>C×[1−(1+r)<sup>−n</sup>]/r</td></tr>
+<tr><td>FV ordinary annuity</td><td>C×[(1+r)<sup>n</sup>−1]/r</td></tr>
+<tr><td>Perpetuity</td><td>C/r</td></tr>
+<tr><td>Growing perpetuity</td><td>C<sub>1</sub>/(r−g), r&gt;g</td></tr>
+<tr><td>Effective annual rate</td><td>(1+i/m)<sup>m</sup>−1</td></tr>
+<tr><td>Fisher</td><td>(1+nom)=(1+real)(1+infl)</td></tr>
+<tr><td>NPV</td><td>−CF<sub>0</sub>+ΣCF<sub>t</sub>/(1+r)<sup>t</sup></td></tr>
+<tr><td>Profitability index</td><td>PV inflows / initial outlay = 1+NPV/outlay</td></tr>
+<tr><td>Loan instalment</td><td>P·r/[1−(1+r)<sup>−n</sup>]</td></tr>
+<tr><td>MIRR</td><td>(FV inflows / PV outflows)<sup>1/n</sup>−1</td></tr>
+<tr><td>Equivalent annual annuity</td><td>NPV / annuity factor(r,n)</td></tr>
+<tr><td>Project FCF</td><td>EBIT(1−t)+Dep−Capex−ΔNWC</td></tr>
+<tr><td>Cost of equity (CAPM)</td><td>R<sub>f</sub>+β(R<sub>m</sub>−R<sub>f</sub>)</td></tr>
+<tr><td>Cost of equity (Gordon)</td><td>D<sub>1</sub>/P<sub>0</sub>+g; g=b×ROE</td></tr>
+<tr><td>After-tax cost of debt</td><td>K<sub>d</sub>(1−t)</td></tr>
+<tr><td>Cost of preference</td><td>D<sub>p</sub>/P<sub>0</sub> (no tax)</td></tr>
+<tr><td>WACC</td><td>(E/V)K<sub>e</sub>+(D/V)K<sub>d</sub>(1−t)+(P/V)K<sub>p</sub></td></tr>
+<tr><td>Unlever beta</td><td>β<sub>u</sub>=β<sub>L</sub>/[1+(1−t)D/E]</td></tr>
+<tr><td>Re-lever beta</td><td>β<sub>L</sub>=β<sub>u</sub>[1+(1−t)D/E]</td></tr>
+<tr><td>MM I (tax)</td><td>V<sub>L</sub>=V<sub>U</sub>+tD</td></tr>
+<tr><td>MM II (no tax)</td><td>K<sub>e</sub>=K<sub>0</sub>+(K<sub>0</sub>−K<sub>d</sub>)D/E</td></tr>
+<tr><td>DOL</td><td>Contribution/EBIT</td></tr>
+<tr><td>DFL</td><td>EBIT/(EBIT−Interest)</td></tr>
+<tr><td>DCL</td><td>DOL×DFL=Contribution/EBT</td></tr>
+<tr><td>Breakeven units</td><td>Fixed cost / contribution per unit</td></tr>
+<tr><td>Walter</td><td>P=[D+(r/K<sub>e</sub>)(E−D)]/K<sub>e</sub></td></tr>
+<tr><td>Gordon price</td><td>P<sub>0</sub>=D<sub>1</sub>/(K<sub>e</sub>−g)</td></tr>
+<tr><td>EBIT–EPS indifference</td><td>(EBIT−I₁)(1−t)/N₁=(EBIT−I₂)(1−t)/N₂</td></tr>
+<tr><td>Cash conversion cycle</td><td>DIO+DSO−DPO</td></tr>
+<tr><td>EOQ</td><td>√(2·A·O/C)</td></tr>
+<tr><td>Baumol cash lot</td><td>√(2·T·F/i)</td></tr>
+<tr><td>EVA</td><td>NOPAT−(IC×WACC)=(ROIC−WACC)×IC</td></tr>
+<tr><td>MVA</td><td>Market value − Capital invested = ΣPV(EVA)</td></tr>
+<tr><td>ROIC</td><td>NOPAT/Invested Capital</td></tr>
+<tr><td>Synergy (M&amp;A)</td><td>V<sub>combined</sub>−(V<sub>acq</sub>+V<sub>tgt</sub>); NPV=Synergy−Premium</td></tr>
+</tbody></table>
+
+<h3>17.2 Interview-day mental checklist</h3>
+<ul>
+  <li><b>Default to NPV</b> for any accept/reject or ranking question; mention IRR's caveats.</li>
+  <li><b>WACC:</b> market weights, after-tax debt only, current costs, adjust for project risk.</li>
+  <li><b>Cash flows:</b> incremental, after-tax, unlevered; add depreciation tax shield; include ΔNWC and opportunity costs; exclude sunk costs and interest.</li>
+  <li><b>Equity &gt; debt cost</b> because of priority, tax deductibility of interest, and certainty.</li>
+  <li><b>Capital structure:</b> know all four theories and that reality is a trade-off/pecking-order blend; no infinite-debt answer.</li>
+  <li><b>Value test:</b> everything reduces to ROIC &gt; WACC. If asked "did this create value?", check the spread, not EPS.</li>
+  <li><b>Numbers:</b> state Indian inputs as ranges (ERP ~6–8%, R<sub>f</sub> = 10-yr G-sec), never invent false-precision figures or current tax rates.</li>
+  <li><b>Show your assumptions</b> out loud — interviewers grade reasoning, not just the final number.</li>
+</ul>
+
+<div class="keytake"><b>Final word:</b> Corporate finance is one idea wearing many hats — <b>create value by earning more than your capital costs</b>. Invest where NPV &gt; 0 (ROIC &gt; WACC), finance to keep WACC low without courting distress, and return cash when you can't reinvest above the hurdle. Master the formulas, but win the interview by explaining the <em>why</em>.</div>
+
+</body></html>

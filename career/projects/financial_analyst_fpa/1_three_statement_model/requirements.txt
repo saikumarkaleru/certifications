@@ -1,0 +1,7 @@
+# Runtime dependencies (pinned for reproducible runs)
+matplotlib==3.10.5
+pandas==2.3.2
+yfinance==0.2.65
+
+# Dev / testing
+pytest==8.4.2

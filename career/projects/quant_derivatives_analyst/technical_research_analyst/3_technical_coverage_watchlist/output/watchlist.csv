@@ -1,0 +1,22 @@
+Asset,Last,Daily,Weekly,RSI,MACD,Candle,Signal,Strength,Stop-loss
+Bank Nifty,58150.4,Up,Sideways,78,Bull,Bull engulf,BUY,★★★,56996.3
+Nifty 50,24021.7,Sideways,Sideways,64,Bull,-,BUY,★★☆,23637.5
+Axis Bank,1384.5,Up,Up,87,Bull,-,HOLD,★★★,-
+HDFC Bank,793.2,Sideways,Sideways,71,Bull,Bull engulf,BUY,★★☆,769.2
+ICICI Bank,1373.6,Up,Sideways,80,Bull,-,HOLD,★★☆,-
+Kotak Bank,406.0,Up,Sideways,74,Bull,-,BUY,★★☆,394.6
+SBI,1034.6,Sideways,Sideways,73,Bull,-,HOLD,★☆☆,-
+Infosys,1056.6,Down,Down,29,Bear,-,SELL,★★★,1107.3
+Wipro,174.5,Down,Down,16,Bear,-,HOLD,★★★,-
+TCS,2109.0,Down,Down,34,Bear,-,SELL,★★★,2190.1
+HCL Tech,1113.9,Down,Down,35,Bear,-,SELL,★★★,1159.4
+Reliance,1313.6,Sideways,Down,54,Bull,-,HOLD,★☆☆,-
+ONGC,240.0,Down,Sideways,16,Bear,-,HOLD,★★☆,-
+Tata Steel,190.2,Down,Sideways,26,Bear,-,SELL,★★☆,196.8
+Hind. Unilever,2157.8,Sideways,Down,67,Bull,Hammer,HOLD,☆☆☆,-
+M&M,3064.5,Sideways,Down,55,Bull,-,HOLD,★☆☆,-
+Maruti,13248.0,Down,Down,55,Bull,-,SELL,★★☆,13633.7
+ITC,290.4,Sideways,Down,73,Bull,Shooting star,SELL,★★★,296.5
+Gold (COMEX),4039.5,Down,Sideways,30,Bear,Hammer,HOLD,★☆☆,-
+Silver,57.8,Down,Sideways,23,Bear,Hammer,HOLD,★☆☆,-
+Crude Oil (WTI),71.9,Down,Sideways,16,Bear,-,HOLD,★★☆,-

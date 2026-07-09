@@ -1,0 +1,23 @@
+# Ingress: exposes the gateway to the outside world. All external traffic enters
+# through the gateway, which fans out to the internal ClusterIP services.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ecommerce-ingress
+  labels:
+    app.kubernetes.io/part-of: resilient-ecommerce
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: ecommerce.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: gateway
+                port:
+                  number: 8000

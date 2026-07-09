@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<!--
+  SHARED STUDY-GUIDE TEMPLATE — do not change the <style> block.
+  Each subject guide must reuse this exact <head> so all PDFs look consistent.
+  Fill <body> with the guide content using the classes documented below.
+
+  STRUCTURE TO USE INSIDE <body>:
+    <div class="cover">                              (title page)
+      <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+      <h1 class="cover-title">Subject Name</h1>
+      <div class="cover-sub">One-line scope. Roles: ...</div>
+    </div>
+    <div class="toc">...contents list...</div>       (optional)
+    <h2>1. Section</h2>            (major section, starts near top; use page-break as needed)
+    <h3>1.1 Subsection</h3>
+    <p>...</p>
+    <ul><li>...</li></ul>
+    <div class="formula"><b>Name</b><br> equation <div class="where">where: ...</div></div>
+    <table><thead><tr><th>..</th></tr></thead><tbody><tr><td>..</td></tr></tbody></table>
+    <div class="example"><div class="ex-h">Worked Example</div> ...steps... </div>
+    <div class="qa"><div class="q">Q: ...</div><div class="a">A: ...</div></div>
+    <div class="trap"><b>Common trap:</b> ...</div>
+    <div class="keytake"><b>Key takeaways:</b> ...</div>
+-->
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Georgia","Cambria",serif; font-size: 10.5pt; line-height: 1.5; color: #1a1a1a; }
+  h1,h2,h3,.cover-kicker,.cover-sub,.ex-h,.q,th { font-family: "Calibri","Segoe UI",sans-serif; }
+
+  /* Cover */
+  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+  .cover-kicker { font-size: 11pt; font-weight: 700; letter-spacing: 2px; color: #1f4e79; text-transform: uppercase; }
+  .cover-title { font-size: 34pt; font-weight: 800; color: #16365c; margin: 10px 0 6px; line-height: 1.1; }
+  .cover-sub { font-size: 12pt; color: #444; font-style: italic; }
+  .cover-foot { margin-top: 22px; font-size: 10pt; color: #666; font-family:"Calibri",sans-serif; }
+
+  /* TOC */
+  .toc { page-break-after: always; }
+  .toc h2 { border: none; }
+  .toc ol { margin-left: 20px; font-family:"Calibri",sans-serif; font-size: 11pt; line-height: 1.9; }
+
+  /* Headings */
+  h2 { font-size: 16pt; font-weight: 700; color: #16365c; border-bottom: 2px solid #16365c;
+       padding-bottom: 4px; margin: 18px 0 10px; page-break-after: avoid; }
+  h3 { font-size: 12.5pt; font-weight: 700; color: #1f4e79; margin: 14px 0 5px; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; color: #333; margin: 10px 0 4px; font-family:"Calibri",sans-serif; }
+  p { margin: 5px 0; text-align: justify; }
+  ul, ol { margin: 5px 0 5px 22px; }
+  li { margin-bottom: 3px; }
+  b, strong { color: #16365c; }
+
+  /* Formula box */
+  .formula { background: #f4f7fb; border-left: 4px solid #1f4e79; padding: 8px 12px; margin: 8px 0;
+             font-family: "Cambria Math","Cambria",serif; page-break-inside: avoid; }
+  .formula b { color: #16365c; }
+  .formula .where { font-size: 9.3pt; color: #555; margin-top: 3px; font-family:"Calibri",sans-serif; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 9px 0; font-size: 9.6pt; page-break-inside: avoid; }
+  th { background: #16365c; color: #fff; text-align: left; padding: 5px 8px; font-size: 9.6pt; }
+  td { border: 1px solid #cbd5e1; padding: 4px 8px; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f4f7fb; }
+
+  /* Worked example */
+  .example { border: 1px solid #b7c7dd; border-radius: 4px; padding: 9px 12px; margin: 10px 0;
+             background: #fbfdff; page-break-inside: avoid; }
+  .ex-h { font-weight: 700; color: #1f4e79; font-size: 10.5pt; margin-bottom: 4px; }
+
+  /* Q&A */
+  .qa { margin: 8px 0; page-break-inside: avoid; }
+  .qa .q { font-weight: 700; color: #16365c; }
+  .qa .a { margin-top: 2px; }
+
+  /* Trap / takeaway callouts */
+  .trap { background: #fff6f0; border-left: 4px solid #c26a2c; padding: 6px 11px; margin: 8px 0; font-size: 10pt; }
+  .keytake { background: #f0f7f1; border-left: 4px solid #3f7d45; padding: 8px 12px; margin: 12px 0; }
+
+  .sec { page-break-before: always; }   /* put on an <h2> to force a fresh page */
+</style></head><body>
+
+<div class="cover">
+  <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+  <h1 class="cover-title">Derivatives, Risk &amp; Quant</h1>
+  <div class="cover-sub">Futures, options, the Greeks, volatility, Value-at-Risk, risk-adjusted performance and the statistics that underpin them. Roles: Quant / Derivatives, Market Risk, Product Control.</div>
+  <div class="cover-foot">A dense, exam-ready reference with formulas, worked examples in INR, Indian F&amp;O context (Nifty / Bank Nifty), summary tables, traps and 75+ interview Q&amp;A.</div>
+</div>
+
+<div class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li>Forwards &amp; Futures — payoff, pricing, margining, basis</li>
+    <li>Options — payoffs, moneyness, intrinsic vs time value</li>
+    <li>Put–Call Parity</li>
+    <li>Option Pricing — Black–Scholes–Merton &amp; the Binomial Model</li>
+    <li>The Greeks — delta, gamma, theta, vega, rho &amp; delta-hedging</li>
+    <li>Volatility — historical vs implied, smile/skew, vega exposure</li>
+    <li>Option Strategies — spreads, straddles, condors, payoffs</li>
+    <li>Market Risk &amp; Value-at-Risk — historical, parametric, Monte Carlo, ES, backtesting</li>
+    <li>Volatility Modelling — EWMA &amp; GARCH</li>
+    <li>Risk-Adjusted Performance — Sharpe, Sortino, Treynor, IR, drawdown, beta</li>
+    <li>Other Risks — credit, liquidity, operational; stress testing; correlation</li>
+    <li>Quant &amp; Statistics — distributions, moments, regression, Monte Carlo, time series</li>
+    <li>Swaps, FRAs &amp; Interest-Rate Options — IRS, currency swaps, caps/floors, exotics</li>
+    <li>Portfolio Theory &amp; CAPM — Markowitz, efficient frontier, CML, SML, alpha/beta</li>
+    <li>Rapid-Fire Interview Q&amp;A (75+)</li>
+    <li>Final Cheat-Sheet &amp; Formula Recap</li>
+  </ol>
+</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">1. Forwards &amp; Futures</h2>
+
+<h3>1.1 What a derivative is</h3>
+<p>A <b>derivative</b> is a contract whose value is <i>derived</i> from an underlying asset, rate or index — a stock, an index like Nifty 50, a commodity, a currency pair, or an interest rate. Derivatives let you take a view, hedge an exposure, or arbitrage a price discrepancy without necessarily owning the underlying. The four building blocks you will be asked about are <b>forwards, futures, options and swaps</b>; this guide focuses on the first three, which dominate exchange-traded desks and the Indian F&amp;O market.</p>
+
+<h3>1.2 Forwards vs futures</h3>
+<p>A <b>forward contract</b> is a private (over-the-counter, OTC) agreement to buy or sell an asset at a fixed price on a future date. A <b>futures contract</b> is the exchange-traded, standardised cousin of the forward: same economic idea, but standardised in size, expiry and quality, guaranteed by a clearing house, and settled daily. On Indian markets, index futures (Nifty, Bank Nifty) and single-stock futures trade on the NSE with a central counterparty guaranteeing performance.</p>
+
+<table>
+  <thead><tr><th>Feature</th><th>Forward</th><th>Future</th></tr></thead>
+  <tbody>
+    <tr><td>Venue</td><td>OTC, bilateral</td><td>Exchange-traded</td></tr>
+    <tr><td>Standardisation</td><td>Custom (size, date)</td><td>Standard lots &amp; expiries</td></tr>
+    <tr><td>Counterparty risk</td><td>Borne by the two parties</td><td>Novated to a clearing house</td></tr>
+    <tr><td>Settlement of gains/losses</td><td>At maturity only</td><td>Daily mark-to-market (MTM)</td></tr>
+    <tr><td>Margin</td><td>Usually none (or negotiated CSA)</td><td>Initial + variation margin</td></tr>
+    <tr><td>Liquidity / exit</td><td>Hard to unwind</td><td>Easy — offset in the market</td></tr>
+    <tr><td>Default risk</td><td>High</td><td>Very low (clearing + margin)</td></tr>
+  </tbody>
+</table>
+
+<h3>1.3 Payoff at expiry</h3>
+<p>Both forwards and futures are <b>linear</b> (also called <i>delta-one</i>) instruments — payoff moves one-for-one with the underlying. If you are <b>long</b> a forward/future struck at price <i>K</i> and the underlying settles at <i>S<sub>T</sub></i>, your payoff is <i>S<sub>T</sub> − K</i>. If you are <b>short</b>, it is <i>K − S<sub>T</sub></i>. There is no optionality: losses are symmetric and unbounded on both sides.</p>
+
+<div class="formula"><b>Long forward/future payoff</b><br>
+Payoff = S<sub>T</sub> − K
+<div class="where">where: S<sub>T</sub> = underlying price at expiry; K = agreed delivery / futures price. Short payoff = K − S<sub>T</sub>.</div>
+</div>
+
+<h3>1.4 Pricing — cost of carry</h3>
+<p>The fair forward/futures price is set by <b>no-arbitrage</b>: if you could buy the asset today with borrowed money, hold it to the delivery date, and lock in a sale via the forward, the forward price must exactly cover your financing cost minus any income the asset throws off (dividends, coupons) plus any storage cost. That relationship is the <b>cost-of-carry</b> model.</p>
+
+<div class="formula"><b>Cost-of-carry (continuous compounding)</b><br>
+F<sub>0</sub> = S<sub>0</sub> · e<sup>(r − q + u) · T</sup>
+<div class="where">where: F<sub>0</sub> = forward/futures price today; S<sub>0</sub> = spot price; r = risk-free rate; q = dividend/income yield; u = storage cost yield; T = time to maturity in years. For a non-dividend equity index, u = 0.</div>
+</div>
+
+<div class="formula"><b>Discrete version (equity index)</b><br>
+F<sub>0</sub> = (S<sub>0</sub> − I) · (1 + r·T)   or   F<sub>0</sub> = S<sub>0</sub> · (1 + (r − q)·T)
+<div class="where">where: I = present value of dividends paid before expiry. The higher the interest rate, the higher the futures price above spot; the higher the dividend yield, the lower it is.</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 1 — Fair value of a Nifty future</div>
+  <p>Nifty spot S<sub>0</sub> = 22,000. Risk-free rate r = 7% p.a. Dividend yield q = 1.5% p.a. Time to expiry = 1 month = 1/12 year (≈0.0833).</p>
+  <p>Using the simple discrete form: F<sub>0</sub> = 22,000 × (1 + (0.07 − 0.015) × 0.0833)</p>
+  <p>= 22,000 × (1 + 0.055 × 0.0833) = 22,000 × (1 + 0.004583) = 22,000 × 1.004583 <b>≈ 22,101</b>.</p>
+  <p>So the one-month future should trade about <b>101 points above spot</b>. If it trades at 22,150 it is "rich" (expensive) and a cash-and-carry arbitrage — buy the basket, sell the future — becomes attractive, ignoring transaction costs.</p>
+</div>
+
+<h3>1.5 Basis, contango and backwardation</h3>
+<p>The <b>basis</b> is the difference between spot and futures. Definitions vary by desk, so state yours: here we use <i>Basis = Futures − Spot</i>. As expiry approaches, the carry shrinks and the basis converges to zero — futures and spot must meet at settlement (<b>convergence</b>).</p>
+
+<div class="formula"><b>Basis</b><br>
+Basis = F − S
+<div class="where">where: F = futures price, S = spot. Some commodity desks define Basis = Spot − Futures — always confirm the convention.</div>
+</div>
+
+<ul>
+  <li><b>Contango:</b> futures &gt; spot (positive carry markets — equities usually, when r &gt; q). The forward curve slopes upward.</li>
+  <li><b>Backwardation:</b> futures &lt; spot. Common when the asset yields a high income or "convenience yield" (e.g. a supply-squeezed commodity, or an index with a very high dividend yield, or when borrowing the stock is expensive/hard).</li>
+</ul>
+
+<h3>1.6 Margining &amp; mark-to-market</h3>
+<p>Because a clearing house guarantees futures, it collects <b>initial margin</b> (a good-faith deposit sized to a worst-plausible daily move, in India via the SPAN + exposure margin system) and then re-settles positions every evening. Daily gains are credited and losses debited from your margin account — this is <b>mark-to-market (MTM)</b>. If your balance falls below the <b>maintenance level</b> you get a <b>margin call</b> to top up. MTM is what keeps counterparty risk tiny: no one is allowed to run up a large unpaid loss.</p>
+
+<div class="example">
+  <div class="ex-h">Worked Example 2 — Daily MTM on a long stock future</div>
+  <p>You go long 1 lot (assume 500 shares, conceptual) of a stock future at ₹1,000. Contract value = ₹5,00,000.</p>
+  <ul>
+    <li>Day 1 close ₹1,020: gain (1,020 − 1,000) × 500 = <b>+₹10,000</b> credited.</li>
+    <li>Day 2 close ₹990: loss (990 − 1,020) × 500 = <b>−₹15,000</b> debited (may trigger a margin call).</li>
+    <li>Day 3 you close at ₹1,005: gain (1,005 − 990) × 500 = <b>+₹7,500</b>.</li>
+  </ul>
+  <p>Net over three days = 10,000 − 15,000 + 7,500 = <b>+₹2,500</b>, which equals (1,005 − 1,000) × 500 — the same as a single settlement, but realised in daily slices.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> "Futures and forwards are priced identically." Only approximately. With <i>deterministic</i> interest rates they have the same value; with stochastic rates, daily MTM creates a small correlation effect between the futures gain and the reinvestment rate, so futures and forward prices can differ slightly. For interviews, know the intuition, not the convexity maths.</div>
+
+<h3>1.7 Indian F&amp;O context</h3>
+<p>On the NSE, the flagship equity derivatives are <b>index futures and options on Nifty 50 and Bank Nifty</b>, plus single-stock futures and options on a defined set of large caps. A few practical points a desk expects you to know conceptually (avoid quoting exact numbers, as lot sizes and margins are revised periodically by SEBI/exchanges):</p>
+<ul>
+  <li><b>Lot size:</b> derivatives trade in fixed <i>lots</i> (a bundle of underlying units), not single shares, so notional per contract is sizeable. The exchange revises lot sizes to keep contract value within a target band.</li>
+  <li><b>Expiry cycle:</b> index options have <b>weekly and monthly expiries</b>; the huge weekly-options turnover in Nifty/Bank Nifty is a defining feature of the Indian market. Monthly contracts expire on a scheduled day; the near-month is the most liquid.</li>
+  <li><b>Settlement:</b> index F&amp;O is <b>cash-settled</b> (no delivery); stock derivatives are <b>physically settled</b> on expiry if held to expiry.</li>
+  <li><b>Style:</b> index options are <b>European</b>; stock options are American-style.</li>
+  <li><b>Margins:</b> collected via the <b>SPAN + exposure</b> framework, with additional margins for short options; the clearing corporation (NSE Clearing) is the central counterparty.</li>
+  <li><b>India VIX:</b> the exchange's volatility index, derived from Nifty option prices — effectively the market's near-term implied volatility and a barometer of fear.</li>
+</ul>
+<p>Your day-to-day workflow — tracking implied vol, open interest and the Greeks across the Nifty/Bank Nifty option chain — is exactly the practical application of Sections 5 and 6. <b>Open interest (OI)</b>, the number of outstanding contracts, is a positioning signal: rising price with rising OI suggests fresh longs; rising price with falling OI suggests short covering. Combine OI shifts with IV to read whether a move is being driven by new option buying (IV up) or writing (IV down).</p>
+
+<h3>1.8 Hedging with futures — hedge ratio, minimum-variance &amp; basis risk</h3>
+<p>Futures are the workhorse of hedging because they are cheap, liquid and delta-one. To hedge a cash position you take an offsetting futures position sized by a <b>hedge ratio</b>. If you can hedge with a future on the <i>same</i> asset the natural ratio is 1 (one future per unit of exposure). When you must hedge with a <i>different but related</i> future (a <b>cross-hedge</b> — e.g. hedging a mid-cap basket with Nifty futures), the right size is the <b>minimum-variance hedge ratio</b>.</p>
+<div class="formula"><b>Minimum-variance hedge ratio &amp; number of contracts</b><br>
+h* = ρ · (σ<sub>S</sub> / σ<sub>F</sub>) = Cov(ΔS, ΔF) / Var(ΔF)<br>
+N* = h* · (V<sub>A</sub> / V<sub>F</sub>)  (rounded to whole contracts)
+<div class="where">where: h* = optimal hedge ratio; ρ = correlation of spot and futures price changes; σ<sub>S</sub>, σ<sub>F</sub> = std dev of spot &amp; futures changes; N* = number of futures contracts; V<sub>A</sub> = value of the position being hedged; V<sub>F</sub> = value of one futures contract. h* is exactly the slope (beta) of a regression of ΔS on ΔF.</div>
+</div>
+<p>For an <b>equity portfolio</b> the same logic uses <b>beta</b>: to hedge (or shift beta) with index futures, N* = (β<sub>target</sub> − β<sub>portfolio</sub>) · V<sub>portfolio</sub> / V<sub>future</sub>. To fully hedge, β<sub>target</sub> = 0, so you short β · V/V<sub>future</sub> index futures.</p>
+<div class="example">
+  <div class="ex-h">Worked Example 2b — Beta hedge with Nifty futures</div>
+  <p>You hold a ₹5 crore equity portfolio with β = 1.2 vs Nifty. One Nifty future = 22,000 points × ₹50 lot multiplier (conceptual) = ₹11,00,000 notional. To fully hedge: N* = 1.2 × 5,00,00,000 / 11,00,000 ≈ 1.2 × 45.5 ≈ <b>55 contracts short</b>. Now a −1% Nifty move (portfolio loses ≈1.2% = ₹6 lakh) is offset by a gain on 55 short futures. Residual is <b>basis risk</b>, not directional risk.</p>
+</div>
+<p><b>Basis risk</b> is the risk that spot and futures do not move perfectly together, so the hedge is imperfect — the P&amp;L of a hedged position is driven by how the <i>basis</i> (F − S) changes over the hedge's life. It arises from cross-hedging (different underlying), a mismatch between the hedge horizon and futures expiry (requiring a <b>rollover</b>), or supply/demand distortions in the future. A perfect same-asset, same-date hedge has zero basis risk; every other hedge trades directional risk for the smaller basis risk.</p>
+
+<h3>1.9 Index arbitrage &amp; cash-and-carry</h3>
+<p><b>Index arbitrage</b> enforces the cost-of-carry relation between the index future and the basket of underlying stocks. If the future is <b>rich</b> (above fair value), arbitrageurs do a <b>cash-and-carry</b>: buy the stock basket, short the future, and unwind at convergence, locking in the mispricing minus costs. If the future is <b>cheap</b>, they do a <b>reverse cash-and-carry</b>: short the basket, buy the future. In practice frictions (transaction costs, the stock-borrow cost, dividends uncertainty, and the difficulty of trading the whole basket) create a <b>no-arbitrage band</b> around fair value inside which the future can wander.</p>
+
+<div class="keytake"><b>Key takeaways:</b> Forwards = OTC &amp; custom; futures = exchange, margined, MTM daily. Both are linear/delta-one. Fair price = spot grown at cost of carry (r − q). Basis converges to zero at expiry; contango = futures above spot, backwardation = below. In India: Nifty/Bank Nifty weekly &amp; monthly expiries, index options European &amp; cash-settled, SPAN margins, India VIX = implied vol.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">2. Options</h2>
+
+<h3>2.1 The two basic contracts</h3>
+<p>An <b>option</b> gives the buyer a <i>right, not an obligation</i>. A <b>call</b> is the right to <i>buy</i> the underlying at the strike K; a <b>put</b> is the right to <i>sell</i> at K. The buyer pays a <b>premium</b> up front. The seller (<b>writer</b>) receives the premium and takes on the obligation to deliver if the buyer exercises. <b>European</b> options exercise only at expiry; <b>American</b> options any time up to expiry. Indian index options (Nifty, Bank Nifty) are <b>European and cash-settled</b>; Indian stock options are American-style (though most are traded, not exercised early).</p>
+
+<h3>2.2 Payoffs at expiry</h3>
+<div class="formula"><b>Option payoffs at expiry (before premium)</b><br>
+Long call payoff = max(S<sub>T</sub> − K, 0)<br>
+Long put payoff = max(K − S<sub>T</sub>, 0)
+<div class="where">where: S<sub>T</sub> = underlying at expiry; K = strike. The writer's payoff is the negative of the buyer's. P&amp;L subtracts (adds) the premium paid (received).</div>
+</div>
+
+<p>Because payoffs are <b>non-linear</b> (a "kinked" hockey-stick), options are the primary tool for shaping asymmetric risk. The buyer's loss is capped at the premium; the buyer's gain can be large (unlimited for a call). The writer's profit is capped at the premium; the writer's loss can be large — this asymmetry is central to risk on an options desk.</p>
+
+<table>
+  <thead><tr><th>Position</th><th>Max profit</th><th>Max loss</th><th>Break-even at expiry</th><th>View</th></tr></thead>
+  <tbody>
+    <tr><td>Long call</td><td>Unlimited</td><td>Premium paid</td><td>K + premium</td><td>Bullish, wants vol</td></tr>
+    <tr><td>Short call</td><td>Premium received</td><td>Unlimited</td><td>K + premium</td><td>Neutral-to-bearish</td></tr>
+    <tr><td>Long put</td><td>K − premium (S→0)</td><td>Premium paid</td><td>K − premium</td><td>Bearish, wants vol</td></tr>
+    <tr><td>Short put</td><td>Premium received</td><td>K − premium (S→0)</td><td>K − premium</td><td>Neutral-to-bullish</td></tr>
+  </tbody>
+</table>
+
+<div class="example">
+  <div class="ex-h">Worked Example 3 — Call and put P&amp;L at expiry</div>
+  <p>Nifty 22,000 <b>call</b> bought for a premium of ₹150 (per unit; ignore lot multiplier).</p>
+  <ul>
+    <li>Nifty expires at 22,000: payoff max(22,000 − 22,000, 0) = 0. P&amp;L = 0 − 150 = <b>−₹150</b> (lose the premium).</li>
+    <li>Nifty at 22,100: payoff 100. P&amp;L = 100 − 150 = <b>−₹50</b>. (In-the-money but not yet past break-even 22,150.)</li>
+    <li>Nifty at 22,400: payoff 400. P&amp;L = 400 − 150 = <b>+₹250</b>.</li>
+  </ul>
+  <p>Now a Nifty 22,000 <b>put</b> bought for ₹130:</p>
+  <ul>
+    <li>Nifty at 21,700: payoff max(22,000 − 21,700, 0) = 300. P&amp;L = 300 − 130 = <b>+₹170</b>.</li>
+    <li>Nifty at 22,000 or above: payoff 0. P&amp;L = <b>−₹130</b> (full premium lost). Break-even = 22,000 − 130 = 21,870.</li>
+  </ul>
+</div>
+
+<h3>2.3 Moneyness</h3>
+<p><b>Moneyness</b> describes where the strike sits relative to spot:</p>
+<table>
+  <thead><tr><th>Term</th><th>Call</th><th>Put</th></tr></thead>
+  <tbody>
+    <tr><td><b>ITM</b> (in-the-money)</td><td>S &gt; K</td><td>S &lt; K</td></tr>
+    <tr><td><b>ATM</b> (at-the-money)</td><td>S ≈ K</td><td>S ≈ K</td></tr>
+    <tr><td><b>OTM</b> (out-of-the-money)</td><td>S &lt; K</td><td>S &gt; K</td></tr>
+  </tbody>
+</table>
+
+<h3>2.4 Intrinsic value vs time value</h3>
+<p>An option premium splits into two parts:</p>
+<div class="formula"><b>Premium decomposition</b><br>
+Option premium = Intrinsic value + Time value<br>
+Intrinsic value (call) = max(S − K, 0);  Intrinsic value (put) = max(K − S, 0)
+<div class="where">Time value = premium − intrinsic. It reflects the chance the option moves further ITM before expiry, and is largest for ATM options. At expiry, time value = 0 and the option is worth only intrinsic value.</div>
+</div>
+<p>OTM options have <b>zero intrinsic value</b> — their whole premium is time value. Time value decays as expiry nears (this decay is <b>theta</b>, Section 5). ATM options carry the most time value because their outcome is most uncertain.</p>
+
+<div class="trap"><b>Common trap:</b> "Intrinsic value can be negative." No. Intrinsic value is floored at zero by the max(·,0). An OTM option has zero intrinsic value, never negative — you would simply not exercise.</div>
+
+<h3>2.5 No-arbitrage price bounds</h3>
+<p>Even without a pricing model, option prices are boxed in by no-arbitrage. These bounds are a favourite interview test of first principles.</p>
+<div class="formula"><b>Bounds (non-dividend, European)</b><br>
+Lower: c ≥ max(S<sub>0</sub> − K·e<sup>−rT</sup>, 0);  p ≥ max(K·e<sup>−rT</sup> − S<sub>0</sub>, 0)<br>
+Upper: c ≤ S<sub>0</sub>;  p ≤ K·e<sup>−rT</sup>  (European);  p ≤ K (American)
+<div class="where">A call can never be worth more than the stock (else buy the stock instead). A put can never exceed the PV of the strike. The lower bound says a call is worth at least its "forward intrinsic" S<sub>0</sub> − PV(K). Violations create riskless arbitrage.</div>
+</div>
+<p>A key corollary: because the European call lower bound c ≥ S<sub>0</sub> − K·e<sup>−rT</sup> exceeds the intrinsic value S<sub>0</sub> − K (since e<sup>−rT</sup> &lt; 1), a call always carries positive time value — which is why it is never optimal to exercise an American call on a non-dividend stock early (see below).</p>
+
+<h3>2.6 American vs European &amp; early exercise</h3>
+<p><b>European</b> options exercise only at expiry; <b>American</b> options any time up to expiry, so an American option is worth at least as much as its European twin (more optionality). When is early exercise actually optimal?</p>
+<ul>
+  <li><b>American call on a non-dividend stock:</b> never optimal to exercise early. You would throw away remaining time value and pay the strike sooner (losing interest). Better to sell the call. So C<sub>American</sub> = C<sub>European</sub> here.</li>
+  <li><b>American call on a dividend-paying stock:</b> can be optimal to exercise <i>just before</i> a large dividend (to capture the dividend that would otherwise drop the stock).</li>
+  <li><b>American put:</b> can be optimal to exercise early even without dividends — deep in-the-money, you would rather have K in cash now (earning interest) than wait, since the put's upside is capped at K.</li>
+</ul>
+<div class="trap"><b>Common trap:</b> "Always exercise an in-the-money American option early." Wrong for calls on non-dividend stocks — you sacrifice time value and interest on the strike. Early exercise is mainly a put phenomenon (and a call phenomenon only around dividends).</div>
+
+<div class="keytake"><b>Key takeaways:</b> Call = right to buy, put = right to sell. Buyer risk = premium (capped); writer risk = large. Payoffs are non-linear. Premium = intrinsic + time value; time value peaks ATM and decays to zero at expiry.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">3. Put–Call Parity</h2>
+
+<h3>3.1 The relationship</h3>
+<p><b>Put–call parity</b> is a no-arbitrage identity linking the prices of a European call and put with the <i>same strike and expiry</i> on the same underlying. It says a long call plus cash equal to the present value of the strike replicates a long put plus the stock. If it does not hold, a riskless arbitrage exists.</p>
+
+<div class="formula"><b>Put–call parity (no dividends)</b><br>
+C + K·e<sup>−rT</sup> = P + S<sub>0</sub>
+<div class="where">where: C = European call price; P = European put price (same K, T); K = strike; S<sub>0</sub> = spot; r = risk-free rate; T = time to expiry. K·e<sup>−rT</sup> = present value of the strike. With dividends of PV I: C + K·e<sup>−rT</sup> + I = P + S<sub>0</sub>.</div>
+</div>
+
+<p>The intuition: a "<b>fiduciary call</b>" (long call + cash PV(K) invested to grow to K) and a "<b>protective put</b>" (long stock + long put) both give you exactly max(S<sub>T</sub>, K) at expiry, so today they must cost the same.</p>
+
+<h3>3.2 Rearrangements you should be able to quote</h3>
+<ul>
+  <li>Price a put from a call: <b>P = C − S<sub>0</sub> + K·e<sup>−rT</sup></b></li>
+  <li>Synthetic long stock: <b>S<sub>0</sub> = C − P + K·e<sup>−rT</sup></b> (long call + short put + cash)</li>
+  <li>Synthetic forward: <b>C − P = S<sub>0</sub> − K·e<sup>−rT</sup></b> (long call + short put = long forward)</li>
+</ul>
+
+<div class="example">
+  <div class="ex-h">Worked Example 4 — Put–call parity check &amp; arbitrage</div>
+  <p>S<sub>0</sub> = 100, K = 100, r = 6% p.a., T = 0.5 yr. A call trades at ₹7. What should the put be?</p>
+  <p>PV(K) = 100 × e<sup>−0.06×0.5</sup> = 100 × e<sup>−0.03</sup> = 100 × 0.97045 = 97.045.</p>
+  <p>Fair put P = C − S<sub>0</sub> + PV(K) = 7 − 100 + 97.045 = <b>₹4.045</b>.</p>
+  <p>Suppose the put actually trades at ₹5 (too expensive). Parity is violated: P + S = 105 vs C + PV(K) = 104.045. Arbitrage: <b>sell the put, sell the stock, buy the call, invest PV(K)</b>. You collect 105, spend 104.045, pocket ≈₹0.955 risk-free per unit; the position self-liquidates to zero payoff at expiry regardless of S<sub>T</sub>.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> Put–call parity in its clean form holds for <b>European</b> options only. For American options (which can be exercised early), it becomes a pair of inequalities, not an equality. Also remember to add the present value of dividends on the correct side.</div>
+
+<div class="keytake"><b>Key takeaways:</b> C + PV(K) = P + S. It is a no-arbitrage identity, model-free (no Black–Scholes needed). Use it to derive synthetics, to price a put from a call, and to spot mispricings.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">4. Option Pricing — Black–Scholes–Merton &amp; Binomial</h2>
+
+<h3>4.1 Black–Scholes–Merton intuition</h3>
+<p>The <b>Black–Scholes–Merton (BSM)</b> model gives a closed-form fair value for a European option. Its key insight is <b>risk-neutral replication</b>: you can continuously trade the stock and cash to build a portfolio that exactly mimics the option's payoff. Because that replication is riskless, the option must earn the risk-free rate — so the expected return of the stock <i>drops out</i> of the pricing, and only volatility, rates, and time matter. This is why the formula does not contain the stock's expected return.</p>
+
+<div class="formula"><b>Black–Scholes (European call, no dividends)</b><br>
+C = S<sub>0</sub>·N(d<sub>1</sub>) − K·e<sup>−rT</sup>·N(d<sub>2</sub>)<br>
+P = K·e<sup>−rT</sup>·N(−d<sub>2</sub>) − S<sub>0</sub>·N(−d<sub>1</sub>)<br>
+d<sub>1</sub> = [ln(S<sub>0</sub>/K) + (r + σ²/2)·T] / (σ√T),  d<sub>2</sub> = d<sub>1</sub> − σ√T
+<div class="where">where: N(·) = cumulative standard normal distribution; S<sub>0</sub> = spot; K = strike; r = risk-free rate; σ = volatility; T = time to expiry. N(d<sub>2</sub>) = risk-neutral probability the call finishes ITM; N(d<sub>1</sub>) = the call's delta.</div>
+</div>
+
+<h4>The six inputs and how the call value reacts</h4>
+<table>
+  <thead><tr><th>Input</th><th>Symbol</th><th>Call value ↑ when input ↑?</th><th>Put value ↑ when input ↑?</th></tr></thead>
+  <tbody>
+    <tr><td>Spot price</td><td>S</td><td>Yes</td><td>No</td></tr>
+    <tr><td>Strike</td><td>K</td><td>No</td><td>Yes</td></tr>
+    <tr><td>Volatility</td><td>σ</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Time to expiry</td><td>T</td><td>Yes (usually)</td><td>Yes (usually)</td></tr>
+    <tr><td>Risk-free rate</td><td>r</td><td>Yes</td><td>No</td></tr>
+    <tr><td>Dividend yield</td><td>q</td><td>No</td><td>Yes</td></tr>
+  </tbody>
+</table>
+<p>Note the only input that is <b>not directly observable</b> is volatility — everything else is quoted in the market. That single unknown is what makes volatility the "price" of an option (see Section 6).</p>
+
+<h4>BSM assumptions (and why they matter)</h4>
+<ul>
+  <li>Log-returns are normally distributed; price is <b>lognormal</b> — real markets have <b>fat tails</b>.</li>
+  <li>Constant, known volatility — real vol changes and is itself volatile (hence the smile).</li>
+  <li>Continuous trading, no transaction costs, no jumps — real hedging is discrete and costly.</li>
+  <li>Constant risk-free rate; European exercise.</li>
+</ul>
+
+<h3>4.2 The binomial model</h3>
+<p>The <b>binomial (Cox–Ross–Rubinstein) model</b> prices options by chopping time into small steps. In each step the stock can move <b>up</b> by factor <i>u</i> or <b>down</b> by factor <i>d</i>. You compute the option payoff at the final nodes, then work backwards, at each node discounting the risk-neutral expected value. As the number of steps → ∞, the binomial price converges to Black–Scholes. Its great virtue is flexibility: it naturally handles <b>American</b> early exercise (at each node, take max of "hold" vs "exercise now").</p>
+
+<div class="formula"><b>Risk-neutral probability (one step)</b><br>
+p = (e<sup>rΔt</sup> − d) / (u − d),   option value = e<sup>−rΔt</sup>·[p·V<sub>up</sub> + (1−p)·V<sub>down</sub>]
+<div class="where">where: u, d = up/down move factors (often u = e<sup>σ√Δt</sup>, d = 1/u); Δt = step length; p = risk-neutral (not real-world) up probability; V<sub>up</sub>, V<sub>down</sub> = option values at the next nodes.</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 5 — One-step binomial call</div>
+  <p>S<sub>0</sub> = 100, one step of 1 year. Up: S = 120 (u = 1.2). Down: S = 90 (d = 0.9). r = 5%. Call strike K = 105.</p>
+  <p>Payoffs: V<sub>up</sub> = max(120 − 105, 0) = 15; V<sub>down</sub> = max(90 − 105, 0) = 0.</p>
+  <p>p = (e<sup>0.05</sup> − 0.9)/(1.2 − 0.9) = (1.05127 − 0.9)/0.3 = 0.15127/0.3 = 0.5042.</p>
+  <p>Call = e<sup>−0.05</sup> × [0.5042 × 15 + 0.4958 × 0] = 0.95123 × 7.563 = <b>₹7.19</b>.</p>
+  <p>Note we never used the <i>real</i> probability of an up move — risk-neutral valuation only needs p.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> The p in the binomial model is the <b>risk-neutral</b> probability, an artificial pricing device, not the market's true expectation of an up move. Candidates often call it "the probability the stock rises" — flag that it is not.</div>
+
+<h3>4.3 Two-step binomial &amp; backward induction</h3>
+<p>Extend the tree to two steps and you value by <b>backward induction</b>: price the option at the final (terminal) nodes, discount back one layer at a time using the same risk-neutral p at every node. For an American option, at each intermediate node you also compare the discounted "hold" value with the immediate "exercise" value and keep the larger.</p>
+<div class="example">
+  <div class="ex-h">Worked Example 5b — Two-step binomial call</div>
+  <p>S<sub>0</sub> = 100, two steps of 6 months each (T = 1 yr total). u = 1.2, d = 0.9 per step, r = 5% p.a., K = 105. Per-step discount factor e<sup>−0.05×0.5</sup> = e<sup>−0.025</sup> = 0.97531; risk-neutral p = (e<sup>0.05×0.5</sup> − 0.9)/(1.2 − 0.9) = (1.02532 − 0.9)/0.3 = 0.4177.</p>
+  <p>Terminal stock values: S<sub>uu</sub> = 144, S<sub>ud</sub> = 108, S<sub>dd</sub> = 81. Payoffs: V<sub>uu</sub> = 39, V<sub>ud</sub> = 3, V<sub>dd</sub> = 0.</p>
+  <p>Node up: V<sub>u</sub> = 0.97531 × [0.4177×39 + 0.5823×3] = 0.97531 × [16.29 + 1.747] = 0.97531 × 18.037 = 17.59.</p>
+  <p>Node down: V<sub>d</sub> = 0.97531 × [0.4177×3 + 0.5823×0] = 0.97531 × 1.253 = 1.222.</p>
+  <p>Today: C = 0.97531 × [0.4177×17.59 + 0.5823×1.222] = 0.97531 × [7.347 + 0.712] = 0.97531 × 8.059 = <b>≈ ₹7.86</b>. More steps → the price converges to Black–Scholes.</p>
+</div>
+
+<div class="keytake"><b>Key takeaways:</b> BSM prices European options via risk-neutral replication; the stock's expected return drops out; volatility is the only unobservable input. Binomial = discrete, converges to BSM, and handles American exercise. Both rest on no-arbitrage.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">5. The Greeks</h2>
+
+<p>The <b>Greeks</b> measure the sensitivity of an option's value to each input. They are the working language of an options desk: they tell you what you are exposed to and how to hedge it. Learn the <b>signs</b> cold — they are the most commonly tested facts.</p>
+
+<h3>5.1 Delta (Δ)</h3>
+<div class="formula"><b>Delta</b><br>
+Δ = ∂V/∂S
+<div class="where">Rate of change of option value per ₹1 change in the underlying. Long call Δ ∈ (0, +1); long put Δ ∈ (−1, 0). ATM call ≈ +0.5, ATM put ≈ −0.5. Also the hedge ratio and ≈ risk-neutral probability of finishing ITM (for a call, N(d<sub>1</sub>)).</div>
+</div>
+<p>Delta is the <b>first-order</b> price sensitivity and the number one Greek for hedging. A delta of +0.5 means the option gains ₹0.50 for a ₹1 rise in the underlying. As a call goes deep ITM, delta → +1 (behaves like the stock); deep OTM, delta → 0.</p>
+
+<h3>5.2 Gamma (Γ)</h3>
+<div class="formula"><b>Gamma</b><br>
+Γ = ∂²V/∂S² = ∂Δ/∂S
+<div class="where">Rate of change of delta per ₹1 move in the underlying — the "acceleration". Always <b>positive for long options</b> (calls and puts), negative for short options. Largest for ATM options near expiry.</div>
+</div>
+<p>Gamma tells you how fast your delta hedge goes stale. <b>Long gamma</b> is a comfortable place: as the market rises your delta rises (you get longer into a rally) and as it falls your delta falls — you automatically "buy low, sell high" when re-hedging. <b>Short gamma</b> is the opposite and dangerous: you are forced to buy high and sell low to stay hedged, bleeding money in choppy markets. Option sellers are short gamma.</p>
+
+<h3>5.3 Theta (Θ)</h3>
+<div class="formula"><b>Theta</b><br>
+Θ = ∂V/∂t  (change in value per unit of calendar time passing)
+<div class="where">Time decay. <b>Negative for long options</b> (value erodes as expiry approaches — you are "paying rent"), positive for short options. Most negative for ATM options close to expiry.</div>
+</div>
+<p>Gamma and theta trade off: being long gamma (owning options) means paying theta; being short gamma (selling options) means collecting theta but carrying tail risk. "You get paid theta for being short gamma" is the core risk-reward of an options book.</p>
+
+<h3>5.4 Vega (ν)</h3>
+<div class="formula"><b>Vega</b><br>
+ν = ∂V/∂σ
+<div class="where">Change in option value per 1 percentage-point change in volatility. <b>Positive for long options</b> (both calls and puts) — more vol = more valuable optionality. Largest for ATM options with long time to expiry.</div>
+</div>
+<div class="trap"><b>Common trap:</b> "Vega is the Greek letter for volatility sensitivity." Vega is <i>not</i> a letter in the Greek alphabet (there is no "vega"). It is desk jargon, often written with the symbol ν (nu). Interviewers love this. Also: vega is <b>positive for both long calls and long puts</b> — buying either gets you long volatility.</div>
+
+<h3>5.5 Rho (ρ)</h3>
+<div class="formula"><b>Rho</b><br>
+ρ = ∂V/∂r
+<div class="where">Change in option value per 1 percentage-point change in the risk-free rate. Positive for calls, negative for puts. Usually the least important Greek for short-dated equity options; matters more for long-dated options and rates products.</div>
+</div>
+
+<h3>5.6 Signs summary table</h3>
+<table>
+  <thead><tr><th>Greek</th><th>Measures ∂V/∂ …</th><th>Long call</th><th>Long put</th><th>Peaks when</th></tr></thead>
+  <tbody>
+    <tr><td>Delta (Δ)</td><td>Spot S</td><td>+ (0 to +1)</td><td>− (−1 to 0)</td><td>Deep ITM → ±1</td></tr>
+    <tr><td>Gamma (Γ)</td><td>Delta (S²)</td><td>+</td><td>+</td><td>ATM, near expiry</td></tr>
+    <tr><td>Theta (Θ)</td><td>Time</td><td>− (usually)</td><td>− (usually)</td><td>ATM, near expiry (most negative)</td></tr>
+    <tr><td>Vega (ν)</td><td>Volatility σ</td><td>+</td><td>+</td><td>ATM, long-dated</td></tr>
+    <tr><td>Rho (ρ)</td><td>Rate r</td><td>+</td><td>−</td><td>Deep ITM, long-dated</td></tr>
+  </tbody>
+</table>
+<p><b>Memory hook:</b> Long options are <i>long gamma, long vega, short theta</i>. You pay time decay (theta) for the privilege of owning convexity (gamma) and volatility exposure (vega). Short options flip all three signs.</p>
+
+<h3>5.7 Delta hedging</h3>
+<p><b>Delta hedging</b> neutralises directional risk. If you are long a call with delta +0.5 on 1,000 units, you are long 500 "delta-equivalent" shares; you sell 500 shares (or short futures) to make the book <b>delta-neutral</b>. Now small moves in the underlying do not change your P&amp;L — to first order. But delta changes as the underlying moves (that is gamma), so you must <b>re-hedge dynamically</b>. A delta-neutral, long-gamma book profits from big moves in either direction but bleeds theta if the market sits still; that is the essence of volatility trading.</p>
+
+<div class="example">
+  <div class="ex-h">Worked Example 6 — Delta of a hedge</div>
+  <p>You are long 200 Nifty ATM calls (delta +0.52 each, contract multiplier ignored). Portfolio delta = 200 × 0.52 = <b>+104</b> units long.</p>
+  <p>To be delta-neutral you short 104 units of Nifty futures (delta of a future ≈ +1). Now net delta ≈ 0.</p>
+  <p>Nifty rallies; call delta rises to 0.60 (gamma effect). New option delta = 200 × 0.60 = +120; you are short only 104 futures, so net delta = +16 — you are now <b>net long</b> into the rally (long gamma working for you). You sell 16 more futures to re-hedge, locking in the gain from the move. Had you been short the calls, the same move would have left you net short into a rising market — the pain of short gamma.</p>
+</div>
+
+<div class="keytake"><b>Key takeaways:</b> Delta = direction/hedge ratio; gamma = convexity/how fast delta moves; theta = time decay; vega = vol sensitivity; rho = rate sensitivity. Long options: +gamma, +vega, −theta. Delta-hedge to kill direction, then manage the residual gamma/vega/theta.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">6. Volatility</h2>
+
+<h3>6.1 Historical vs implied volatility</h3>
+<p><b>Historical (realised) volatility</b> is the standard deviation of <i>past</i> returns — a backward-looking, statistical measurement of how much the asset actually moved. <b>Implied volatility (IV)</b> is the volatility figure that, plugged into Black–Scholes, reproduces the option's <i>current market price</i>. It is forward-looking — the market's expectation of future volatility, backed out from prices. You cannot observe it directly; you invert the pricing formula to find it.</p>
+
+<div class="formula"><b>Annualising historical volatility</b><br>
+σ<sub>annual</sub> = σ<sub>daily</sub> × √252
+<div class="where">252 = trading days per year. σ<sub>daily</sub> = standard deviation of daily log-returns. Volatility scales with the square root of time — the same √t rule used in VaR scaling.</div>
+</div>
+
+<table>
+  <thead><tr><th>Aspect</th><th>Historical vol</th><th>Implied vol</th></tr></thead>
+  <tbody>
+    <tr><td>Direction</td><td>Backward-looking</td><td>Forward-looking</td></tr>
+    <tr><td>Source</td><td>Past price data</td><td>Inverted from option prices</td></tr>
+    <tr><td>Uses</td><td>Risk models, realised-vol comparison</td><td>Option pricing, market sentiment</td></tr>
+    <tr><td>Nature</td><td>A measurement</td><td>An expectation / "the option's price"</td></tr>
+  </tbody>
+</table>
+
+<div class="trap"><b>Common trap:</b> Confusing the two. Historical vol is <i>measured</i> from returns; implied vol is <i>extracted</i> from prices and is the market's view of the future. When IV &gt; realised, options look "expensive" (sellers favoured); when IV &lt; realised, "cheap" (buyers favoured). On your F&amp;O desk, the India VIX is essentially the market's implied vol on Nifty options.</div>
+
+<h3>6.2 The volatility smile / skew</h3>
+<p>Black–Scholes assumes a single constant volatility, so every strike should imply the same IV. In reality, if you plot IV against strike you get a <b>smile</b> (IV higher for deep OTM and ITM strikes than ATM) or, in equity indices, a <b>skew / smirk</b> (OTM puts carry higher IV than OTM calls). Why? Markets crash down faster than they rally up, so downside protection (puts) is bid up; and real return distributions have <b>fat tails</b> that BSM's normal assumption ignores. The skew is the market's correction to the model.</p>
+
+<h3>6.3 Vega exposure &amp; the term structure</h3>
+<p>A book's <b>vega exposure</b> is its P&amp;L sensitivity to a shift in implied volatility. Long options = long vega (profits if IV rises); short options = short vega. Vol also has a <b>term structure</b> (IV varies by expiry) and you can trade the smile itself (skew trades, calendar spreads). As a vol trader you separate three things: <i>realised</i> vol (what happens), <i>implied</i> vol (what you pay/receive), and the <i>P&amp;L</i> of the gamma/theta grind between them.</p>
+
+<h3>6.4 Realised vs implied on the desk — the vol trader's edge</h3>
+<p>The central bet in volatility trading is <b>realised versus implied</b>. If you buy an ATM option and delta-hedge it continuously, your P&amp;L (before costs) is driven by the gap between how much the underlying <i>actually</i> moves (realised vol) and the implied vol you paid. Buy options when you think realised will exceed implied; sell when you think implied is too rich versus what will realise. On Indian weekly expiries, option writers are effectively short realised vol and collect theta; buyers pay theta hoping for a large realised move (an event, a gap). The vol smile then tells you the <i>price</i> of that bet is not uniform across strikes — downside puts cost more in vol terms because of skew.</p>
+
+<div class="keytake"><b>Key takeaways:</b> Historical vol = measured from the past; implied vol = the market's forward-looking vol embedded in option prices (India VIX for Nifty). The smile/skew shows IV varies by strike — a sign that real distributions have fat tails and downside is feared. Long options = long vega. The trader's edge is realised-vs-implied: delta-hedge and profit if realised vol beats the implied you paid.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">7. Option Strategies</h2>
+
+<p>Strategies combine options (and sometimes the underlying) to express a specific view on <b>direction</b> and/or <b>volatility</b>. Below, "max profit/loss" are at expiry and ignore commissions; net premium is debit (you pay) or credit (you receive).</p>
+
+<h3>7.1 Covered call</h3>
+<p>Long stock + short one OTM call. You collect premium and cap your upside at the strike; you keep downside exposure (cushioned only by the premium). Used when mildly bullish/neutral and happy to sell at the strike — an income strategy.</p>
+<ul><li><b>Max profit:</b> (K − purchase price) + premium. <b>Max loss:</b> stock can fall to zero, less the premium cushion. <b>View:</b> neutral-to-mildly-bullish, low vol.</li></ul>
+
+<h3>7.2 Protective put</h3>
+<p>Long stock + long put. The put is insurance — it caps your downside at K while leaving upside open. Cost = the premium. Used to hedge a long position through an uncertain event (results, budget, election).</p>
+<ul><li><b>Max loss:</b> (purchase price − K) + premium. <b>Max profit:</b> unlimited (stock upside) − premium. <b>View:</b> bullish but wants a floor.</li></ul>
+
+<h3>7.3 Straddle</h3>
+<p>Long a call + long a put at the <b>same strike</b> (usually ATM) and expiry. A pure <b>volatility</b> bet: you profit from a big move in <i>either</i> direction; you lose if the underlying sits still. Used ahead of high-uncertainty events (RBI policy, budget, earnings). A <b>short straddle</b> is the reverse — sell both — betting on calm; big theta income, but unlimited risk.</p>
+<ul><li><b>Cost:</b> call premium + put premium (a debit). <b>Break-evens:</b> K ± total premium. <b>Max loss (long):</b> total premium if S = K at expiry. <b>Max profit:</b> large (unlimited on the upside).</li></ul>
+
+<div class="example">
+  <div class="ex-h">Worked Example 7 — Long straddle P&amp;L</div>
+  <p>Bank Nifty at 48,000. Buy the 48,000 call for ₹400 and the 48,000 put for ₹380. Total debit = ₹780.</p>
+  <p>Break-evens: 48,000 + 780 = <b>48,780</b> (upside) and 48,000 − 780 = <b>47,220</b> (downside).</p>
+  <ul>
+    <li>Expiry 48,000: both expire near worthless. P&amp;L = 0 − 780 = <b>−₹780</b> (max loss).</li>
+    <li>Expiry 49,000: call worth 1,000, put 0. P&amp;L = 1,000 − 780 = <b>+₹220</b>.</li>
+    <li>Expiry 46,500: put worth 1,500, call 0. P&amp;L = 1,500 − 780 = <b>+₹720</b>.</li>
+  </ul>
+  <p>You need a move greater than 780 points (≈1.6%) either way to profit. If IV was high going in, the premium is expensive and the move must be even larger — this is the "buy the rumour" trap where IV collapses after the event (<b>vol crush</b>) and a correct directional call still loses.</p>
+</div>
+
+<h3>7.4 Strangle</h3>
+<p>Long an OTM call + long an OTM put (different strikes, call strike &gt; put strike). Cheaper than a straddle (both legs OTM) but needs a bigger move to pay off. Same volatility view; wider break-evens.</p>
+<ul><li><b>Cost:</b> lower than a straddle. <b>Break-evens:</b> upper strike + premium, lower strike − premium. <b>Max loss:</b> total premium. <b>View:</b> big move expected, cheaper entry.</li></ul>
+
+<h3>7.5 Vertical spreads (bull / bear)</h3>
+<p>Buy one option and sell another of the same type and expiry but different strike. Caps both profit and loss — a defined-risk directional bet, cheaper than a naked option.</p>
+<ul>
+  <li><b>Bull call spread:</b> buy lower-strike call, sell higher-strike call (net debit). Bullish, capped. Max profit = strike difference − net debit; max loss = net debit.</li>
+  <li><b>Bear put spread:</b> buy higher-strike put, sell lower-strike put (net debit). Bearish, capped. Max profit = strike difference − net debit; max loss = net debit.</li>
+  <li>(Credit versions: bull put spread and bear call spread collect premium up front.)</li>
+</ul>
+
+<div class="example">
+  <div class="ex-h">Worked Example 8 — Bull call spread</div>
+  <p>Nifty at 22,000. Buy 22,000 call for ₹200, sell 22,300 call for ₹80. Net debit = 200 − 80 = ₹120.</p>
+  <p>Strike difference = 300. <b>Max profit</b> = 300 − 120 = <b>₹180</b> (if Nifty ≥ 22,300 at expiry). <b>Max loss</b> = <b>₹120</b> (if Nifty ≤ 22,000). Break-even = 22,000 + 120 = <b>22,120</b>.</p>
+  <p>Versus buying the naked 22,000 call (risking ₹200 for unlimited upside), the spread halves the cost and defines the risk — you sacrifice the upside beyond 22,300.</p>
+</div>
+
+<h3>7.6 Iron condor</h3>
+<p>Sell an OTM put spread and an OTM call spread simultaneously (four legs, all same expiry): short OTM put, long further-OTM put, short OTM call, long further-OTM call. A <b>net credit, range-bound</b> strategy — you profit if the underlying stays between the two short strikes; both spreads cap the risk. Popular on Bank Nifty/Nifty weekly expiries to harvest theta with defined risk.</p>
+<ul><li><b>Max profit:</b> net credit received (underlying finishes between the short strikes). <b>Max loss:</b> (width of one spread) − net credit. <b>View:</b> low volatility, range-bound, short vega, positive theta.</li></ul>
+
+<h3>7.7 Collar</h3>
+<p>Long stock + long OTM put (a floor) + short OTM call (finances the put). A protective put made cheaper — often <b>zero-cost</b> if the call premium exactly funds the put. You cap both downside (at the put strike) and upside (at the call strike). Widely used to lock in gains on a holding at little or no cash outlay.</p>
+<ul><li><b>Max profit:</b> (call strike − stock cost) ± net premium. <b>Max loss:</b> (stock cost − put strike) ± net premium. <b>View:</b> protect a gain, willing to cap upside.</li></ul>
+
+<h3>7.8 Butterfly spread</h3>
+<p>A defined-risk, <b>low-volatility</b> bet that the underlying pins a central strike. A long call butterfly = buy 1 low-strike call, sell 2 middle-strike calls, buy 1 high-strike call (strikes equally spaced, net debit). Maximum profit if the underlying finishes exactly at the middle strike; small, capped loss otherwise. It is like a cheaper, tighter iron condor with a single sweet spot.</p>
+<ul><li><b>Max profit:</b> (strike gap) − net debit, at the middle strike. <b>Max loss:</b> net debit. <b>View:</b> underlying stays near a specific level; short vega.</li></ul>
+
+<h3>7.9 Calendar (horizontal) spread</h3>
+<p>Sell a near-dated option and buy a longer-dated option at the <b>same strike</b>. It profits from <b>time decay</b> (the near leg decays faster) and from a <b>rise in implied vol</b> (the long-dated leg has more vega). A net-debit, positive-theta, long-vega structure — the classic way to be long vol term-structure while collecting front-month theta. Best when the underlying sits near the strike and IV is expected to rise.</p>
+<ul><li><b>Max profit:</b> around the strike at the near expiry (not a fixed formula — depends on IV). <b>Max loss:</b> net debit. <b>View:</b> range-bound short-term, long vega.</li></ul>
+
+<h3>7.10 Ratio spread &amp; backspread</h3>
+<p>A <b>ratio spread</b> buys and sells unequal quantities — e.g. buy 1 ATM call, sell 2 further-OTM calls (a call ratio spread). It is cheap or a small credit and profits from a modest move, but the extra short options leave <b>unlimited risk</b> if the underlying runs far. The <b>backspread</b> reverses it (sell 1, buy 2) for defined limited risk and unlimited upside on a big move — a long-volatility, convex structure.</p>
+<ul><li><b>Ratio (short-heavy):</b> limited profit, unlimited risk beyond the far strike, short net vega. <b>Backspread (long-heavy):</b> limited loss, large profit on a big move, long vega. <b>View:</b> a directional-plus-volatility bet.</li></ul>
+
+<h3>7.11 Strategy summary table</h3>
+<table>
+  <thead><tr><th>Strategy</th><th>Construction</th><th>Market view</th><th>Max profit</th><th>Max loss</th></tr></thead>
+  <tbody>
+    <tr><td>Covered call</td><td>Long stock + short call</td><td>Neutral/mild bull, low vol</td><td>(K − cost) + premium</td><td>Large (stock → 0), minus premium</td></tr>
+    <tr><td>Protective put</td><td>Long stock + long put</td><td>Bullish, wants floor</td><td>Unlimited − premium</td><td>(cost − K) + premium</td></tr>
+    <tr><td>Long straddle</td><td>Long call + long put, same K</td><td>Big move, either way</td><td>Large / unlimited</td><td>Total premium</td></tr>
+    <tr><td>Short straddle</td><td>Short call + short put, same K</td><td>Calm, range-bound</td><td>Total premium</td><td>Unlimited</td></tr>
+    <tr><td>Long strangle</td><td>Long OTM call + OTM put</td><td>Big move, cheaper entry</td><td>Large / unlimited</td><td>Total premium</td></tr>
+    <tr><td>Bull call spread</td><td>Long low-K call, short high-K call</td><td>Moderately bullish</td><td>ΔK − net debit</td><td>Net debit</td></tr>
+    <tr><td>Bear put spread</td><td>Long high-K put, short low-K put</td><td>Moderately bearish</td><td>ΔK − net debit</td><td>Net debit</td></tr>
+    <tr><td>Iron condor</td><td>Short call spread + short put spread</td><td>Range-bound, low vol</td><td>Net credit</td><td>Spread width − net credit</td></tr>
+    <tr><td>Collar</td><td>Long stock + long put + short call</td><td>Protect a gain, cap upside</td><td>(call K − cost) ± premium</td><td>(cost − put K) ± premium</td></tr>
+    <tr><td>Long butterfly</td><td>+1 low, −2 mid, +1 high (calls)</td><td>Pins the middle strike</td><td>Strike gap − net debit</td><td>Net debit</td></tr>
+    <tr><td>Calendar spread</td><td>Short near + long far, same K</td><td>Range-bound, long vega</td><td>Depends on IV (around K)</td><td>Net debit</td></tr>
+    <tr><td>Call ratio spread</td><td>+1 near-K, −2 far-K calls</td><td>Mild up move; short vega</td><td>Limited (at far strike)</td><td>Unlimited (upside)</td></tr>
+  </tbody>
+</table>
+
+<div class="trap"><b>Common trap:</b> "A straddle is a directional bet." It is not — a long straddle is <b>direction-neutral</b> and a bet on <b>volatility</b>. You can be dead right on the size of the move and still lose money if implied vol was too high going in and collapses (vol crush).</div>
+
+<div class="keytake"><b>Key takeaways:</b> Match the structure to the view. Directional &amp; defined-risk → vertical spreads. Volatility up → straddle/strangle. Volatility down / range → short straddle or iron condor. Income on a holding → covered call. Insurance → protective put.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">8. Market Risk &amp; Value-at-Risk</h2>
+
+<h3>8.1 What VaR is</h3>
+<p><b>Value-at-Risk (VaR)</b> answers: "Over a given horizon, at a given confidence level, what loss will not be exceeded?" A <b>1-day 99% VaR of ₹10 lakh</b> means: on 99% of days the loss should be no worse than ₹10 lakh; on the remaining 1% of days (roughly 2–3 days a year) it may be worse. VaR is a single-number summary of downside market risk, used for limits, capital and reporting.</p>
+
+<div class="trap"><b>Common trap (the big one):</b> "VaR is the maximum loss." <b>No.</b> VaR is a <i>threshold</i>, not a worst case. It says nothing about how bad losses get <i>beyond</i> the cut-off — the tail. A 99% VaR of ₹10 lakh is silent about whether the 1% tail loss is ₹12 lakh or ₹2 crore. That is precisely what Expected Shortfall fixes.</p></div>
+
+<h3>8.2 Parametric (variance–covariance) VaR</h3>
+<p>Assume returns are normally distributed. Then VaR is just a multiple of the portfolio's standard deviation.</p>
+<div class="formula"><b>Parametric VaR (1 day)</b><br>
+VaR = z<sub>α</sub> · σ · V
+<div class="where">where: z<sub>α</sub> = normal quantile for confidence α (1.645 for 95%, 2.326 for 99%); σ = 1-day return standard deviation (volatility); V = portfolio market value. (If mean return μ is included: VaR = (z<sub>α</sub>·σ − μ)·V; for 1-day horizons μ is usually set to 0.)</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 9 — Parametric 1-day VaR</div>
+  <p>Portfolio value V = ₹10,00,00,000 (₹10 crore). Daily volatility σ = 1.2%. Confidence 99% (z = 2.326).</p>
+  <p>1-day 99% VaR = 2.326 × 0.012 × 10,00,00,000 = 2.326 × 0.012 = 0.027912 → × 10 crore = <b>₹27,91,200 ≈ ₹27.9 lakh</b>.</p>
+  <p>At 95% (z = 1.645): VaR = 1.645 × 0.012 × 10 crore = <b>₹19,74,000 ≈ ₹19.7 lakh</b>. Higher confidence → larger VaR, as expected.</p>
+</div>
+
+<h3>8.3 Scaling VaR across horizons</h3>
+<div class="formula"><b>Square-root-of-time scaling</b><br>
+VaR<sub>T-day</sub> = VaR<sub>1-day</sub> × √T
+<div class="where">Valid only if returns are i.i.d. (independent, identically distributed) with zero autocorrelation and constant vol. T = number of days.</div>
+</div>
+<div class="example">
+  <div class="ex-h">Worked Example 10 — Scaling VaR by √t</div>
+  <p>From Example 9, the 1-day 99% VaR is ₹27.9 lakh. The 10-day 99% VaR (a common regulatory horizon) is:</p>
+  <p>VaR<sub>10</sub> = 27.9 × √10 = 27.9 × 3.162 = <b>₹88.2 lakh</b>. Note it grows with √10, not ×10 — diversification of time, provided returns don't trend.</p>
+</div>
+<div class="trap"><b>Common trap:</b> √t scaling assumes returns are independent with constant volatility. In real markets with volatility clustering and autocorrelation (trends, momentum), √t scaling <i>understates</i> risk during stress. It is a convenient approximation, not a law.</div>
+
+<h3>8.4 Historical simulation VaR</h3>
+<p>No distribution assumed. Take the last N days of actual returns, apply each to today's portfolio, sort the simulated P&amp;Ls, and read off the loss at the chosen percentile. For 99% VaR with 500 days, it is roughly the 5th-worst loss. <b>Pros:</b> captures fat tails and real correlations, no normality assumption. <b>Cons:</b> assumes the past window represents the future; slow to react to new regimes; a quiet look-back understates risk.</p>
+
+<h3>8.5 Monte Carlo VaR</h3>
+<p>Assume a stochastic model for risk-factor returns (e.g. multivariate normal, or with fat tails / jumps), simulate thousands of scenarios, revalue the portfolio in each, sort the P&amp;Ls, and read the percentile. <b>Pros:</b> flexible, handles non-linear portfolios (options) and any distribution. <b>Cons:</b> computationally heavy; results are only as good as the assumed model (model risk).</p>
+
+<h3>8.6 Comparison of the three methods</h3>
+<table>
+  <thead><tr><th>Method</th><th>Key assumption</th><th>Handles options/non-linearity?</th><th>Fat tails?</th><th>Main weakness</th></tr></thead>
+  <tbody>
+    <tr><td>Parametric (var–cov)</td><td>Normal returns</td><td>Poorly (delta-only)</td><td>No</td><td>Understates tail risk</td></tr>
+    <tr><td>Historical sim.</td><td>Past = future</td><td>Yes (full reval.)</td><td>Yes, if in window</td><td>Window-dependent, backward-looking</td></tr>
+    <tr><td>Monte Carlo</td><td>A chosen return model</td><td>Yes (full reval.)</td><td>Yes, if modelled</td><td>Model risk, compute cost</td></tr>
+  </tbody>
+</table>
+
+<h3>8.7 Expected Shortfall (CVaR)</h3>
+<p><b>Expected Shortfall (ES)</b>, also called <b>Conditional VaR (CVaR)</b> or <b>Expected Tail Loss</b>, is the <i>average</i> loss <b>given</b> that you are in the tail beyond VaR. Where VaR says "the loss you won't exceed 99% of the time", ES says "and when you do exceed it, this is how bad it is on average". ES is always ≥ VaR. Basel's Fundamental Review of the Trading Book (FRTB) replaced VaR with 97.5% ES precisely because ES captures tail severity and is a <b>coherent</b> risk measure (VaR is not — it can violate sub-additivity, i.e. it can say a diversified portfolio is riskier than the sum of its parts).</p>
+<div class="formula"><b>Expected Shortfall</b><br>
+ES<sub>α</sub> = E[ Loss | Loss &gt; VaR<sub>α</sub> ]
+<div class="where">The expected (average) loss conditional on the loss exceeding the VaR threshold at confidence α. Also = probability-weighted average of all tail losses beyond VaR.</div>
+</div>
+
+<h3>8.8 Backtesting</h3>
+<p><b>Backtesting</b> validates a VaR model by comparing predicted VaR against actual daily P&amp;L. A day where the loss exceeds VaR is an <b>exception (breach)</b>. For 99% 1-day VaR you expect about 1% of days to breach — roughly 2–3 in a year of 250 days. Regulators use the Basel <b>traffic-light</b> approach: green (0–4 breaches/year, model fine), amber (5–9, add a capital multiplier), red (10+, model rejected). Too many breaches = model understates risk; too few can mean it is overly conservative (wasting capital).</p>
+
+<h3>8.9 Marginal, incremental &amp; component VaR</h3>
+<p>Total VaR does not tell you <i>where</i> the risk comes from. Three decompositions answer that — essential for setting limits and allocating risk capital across a desk.</p>
+<ul>
+  <li><b>Marginal VaR:</b> the change in portfolio VaR for a small (one-unit) increase in a position — the sensitivity ∂VaR/∂w<sub>i</sub>. It tells you which position is adding or diversifying risk at the margin.</li>
+  <li><b>Incremental VaR:</b> the change in total VaR from adding or removing an <i>entire</i> position or trade. Used to decide "does this new trade increase our risk, and by how much?"</li>
+  <li><b>Component VaR:</b> the part of total VaR attributable to each position, constructed so the components <b>sum to total VaR</b> (Component VaR<sub>i</sub> = Marginal VaR<sub>i</sub> × position<sub>i</sub>). It is the standard way to report "who owns the risk". A negative component means the position is a net hedge/diversifier.</li>
+</ul>
+
+<h3>8.10 Stressed VaR &amp; coherent risk measures</h3>
+<p><b>Stressed VaR (sVaR)</b> re-runs the VaR model using data from a historical <b>stress period</b> (e.g. the 2008 crisis) instead of the recent calm window. Basel II.5 added it precisely because a VaR calibrated to a quiet period collapses just when markets blow up; total capital became VaR + sVaR.</p>
+<p>A risk measure is <b>coherent</b> if it satisfies four axioms (Artzner et al.): <b>monotonicity</b> (more loss in every state ⇒ more risk), <b>translation invariance</b> (adding cash reduces risk one-for-one), <b>positive homogeneity</b> (scaling the book scales the risk), and <b>sub-additivity</b> (a merged portfolio is no riskier than the sum of its parts — diversification never increases risk). <b>VaR fails sub-additivity</b> (it can say a diversified book is riskier than its pieces), so it is <i>not</i> coherent; <b>Expected Shortfall satisfies all four</b> and is coherent — a core reason FRTB moved to ES.</p>
+<div class="trap"><b>Common trap:</b> "VaR is a coherent risk measure." No — VaR generally violates sub-additivity, so it can penalise diversification. Expected Shortfall is the coherent alternative.</div>
+
+<div class="keytake"><b>Key takeaways:</b> VaR = loss threshold at a confidence level over a horizon — NOT the worst case. Three methods: parametric (normal, simple, thin-tailed), historical (real data, window-bound), Monte Carlo (flexible, model-dependent). ES/CVaR averages the tail beyond VaR and is coherent. Backtest with breach counts; scale by √t only under i.i.d.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">9. Volatility Modelling — EWMA &amp; GARCH</h2>
+
+<p>VaR needs a volatility estimate, and volatility is not constant — it <b>clusters</b> (calm follows calm, storms follow storms). Two models capture this.</p>
+
+<h3>9.0 ARCH — the starting point</h3>
+<p><b>ARCH</b> (Autoregressive Conditional Heteroskedasticity, Engle 1982) was the first model to make variance time-varying: today's variance is a function of recent <i>squared</i> returns, σ²<sub>t</sub> = ω + Σα<sub>i</sub>·r²<sub>t−i</sub>. "Conditional heteroskedasticity" just means the variance changes over time conditional on the past. Its weakness is that capturing persistent vol needs many lags (many α terms). <b>GARCH</b> fixes this elegantly by adding lagged <i>variance</i> — one β term replaces a long string of α's — which is why GARCH(1,1) is the workhorse.</p>
+
+<h3>9.1 EWMA (Exponentially Weighted Moving Average)</h3>
+<p>A simple moving average weights every past day equally and forgets old data abruptly. <b>EWMA</b> instead weights recent returns more heavily, with weights decaying geometrically by a factor λ (RiskMetrics famously used λ = 0.94 for daily data). It reacts faster to new shocks — a big move today immediately lifts tomorrow's vol estimate.</p>
+<div class="formula"><b>EWMA variance update</b><br>
+σ²<sub>t</sub> = λ·σ²<sub>t−1</sub> + (1 − λ)·r²<sub>t−1</sub>
+<div class="where">where: σ²<sub>t</sub> = today's variance estimate; λ = decay factor (0 &lt; λ &lt; 1, typically 0.94); r<sub>t−1</sub> = yesterday's return. Lower λ = more responsive, noisier; higher λ = smoother, slower.</div>
+</div>
+
+<h3>9.2 GARCH(1,1)</h3>
+<p><b>GARCH</b> (Generalised Autoregressive Conditional Heteroskedasticity) adds a crucial feature EWMA lacks: <b>mean reversion</b> to a long-run average variance. Tomorrow's variance is a weighted mix of a long-run level, yesterday's squared shock, and yesterday's variance. This matches how vol spikes after a shock and then decays back to normal.</p>
+<div class="formula"><b>GARCH(1,1) variance</b><br>
+σ²<sub>t</sub> = ω + α·r²<sub>t−1</sub> + β·σ²<sub>t−1</sub>
+<div class="where">where: ω = constant (sets the long-run variance = ω/(1−α−β)); α = weight on the latest squared return (reaction to shocks); β = weight on previous variance (persistence). Requires α + β &lt; 1 for stationarity. EWMA is the special case ω = 0, α = 1−λ, β = λ.</div>
+</div>
+<p>Intuition to state in interview: <b>α</b> controls how sharply vol reacts to a new shock; <b>β</b> controls how long the elevated vol persists; α + β close to 1 means vol shocks are very persistent (typical of equities). GARCH's mean reversion is why long-horizon vol forecasts pull toward the long-run average — something EWMA cannot do.</p>
+
+<div class="keytake"><b>Key takeaways:</b> Volatility clusters, so use adaptive estimators. EWMA weights recent data more (fast, no mean reversion). GARCH(1,1) adds a long-run variance and mean reversion; EWMA is a special case of it. Both feed better VaR and option-vol estimates.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">10. Risk-Adjusted Performance</h2>
+
+<p>Return alone is meaningless without the risk taken to earn it. These ratios standardise "return per unit of risk" so strategies can be compared fairly.</p>
+
+<h3>10.1 Sharpe ratio</h3>
+<div class="formula"><b>Sharpe ratio</b><br>
+Sharpe = (R<sub>p</sub> − R<sub>f</sub>) / σ<sub>p</sub>
+<div class="where">where: R<sub>p</sub> = portfolio return; R<sub>f</sub> = risk-free rate; σ<sub>p</sub> = standard deviation of portfolio returns (total volatility). Excess return per unit of total risk. Higher is better; typically annualised.</div>
+</div>
+
+<h3>10.2 Sortino ratio</h3>
+<p>The Sharpe ratio penalises <i>all</i> volatility, including upside. The <b>Sortino ratio</b> divides excess return only by <b>downside deviation</b> — the volatility of returns <i>below</i> a target (often 0 or R<sub>f</sub>). It rewards strategies whose volatility is mostly to the upside.</p>
+<div class="formula"><b>Sortino ratio</b><br>
+Sortino = (R<sub>p</sub> − R<sub>f</sub>) / σ<sub>down</sub>
+<div class="where">where: σ<sub>down</sub> = downside deviation = standard deviation of only the negative (below-target) returns. Always ≥ Sharpe's denominator behaviour: for a given series σ<sub>down</sub> ≤ σ<sub>p</sub>, so Sortino ≥ Sharpe.</div>
+</div>
+
+<h3>10.3 Treynor ratio</h3>
+<div class="formula"><b>Treynor ratio</b><br>
+Treynor = (R<sub>p</sub> − R<sub>f</sub>) / β<sub>p</sub>
+<div class="where">where: β<sub>p</sub> = portfolio beta (systematic/market risk). Excess return per unit of market risk. Use when the portfolio is well-diversified so only systematic risk matters.</div>
+</div>
+
+<h3>10.4 Information ratio</h3>
+<div class="formula"><b>Information ratio</b><br>
+IR = (R<sub>p</sub> − R<sub>b</sub>) / TE
+<div class="where">where: R<sub>b</sub> = benchmark return; TE = tracking error = standard deviation of (R<sub>p</sub> − R<sub>b</sub>). Measures active return per unit of active risk — the consistency of a manager's outperformance versus a benchmark.</div>
+</div>
+
+<h3>10.5 Beta</h3>
+<div class="formula"><b>Beta</b><br>
+β = Cov(R<sub>p</sub>, R<sub>m</sub>) / Var(R<sub>m</sub>) = ρ<sub>p,m</sub> · (σ<sub>p</sub> / σ<sub>m</sub>)
+<div class="where">where: R<sub>m</sub> = market return; ρ<sub>p,m</sub> = correlation of portfolio and market. β = 1 moves with the market; β &gt; 1 amplifies it; β &lt; 1 dampens; β &lt; 0 moves opposite. Beta is the slope of a regression of portfolio returns on market returns.</div>
+</div>
+
+<h3>10.6 Maximum drawdown</h3>
+<p><b>Maximum drawdown (MDD)</b> is the largest peak-to-trough decline in portfolio value over a period, expressed as a percentage. It captures the worst pain an investor would have felt — the depth of the deepest hole — and, unlike volatility, focuses purely on downside path risk. The <b>Calmar ratio</b> (annual return ÷ MDD) rewards return per unit of drawdown.</p>
+<div class="formula"><b>Maximum drawdown</b><br>
+MDD = (Trough value − Peak value) / Peak value
+<div class="where">The most negative peak-to-trough return before a new peak is made. A −40% MDD means the portfolio fell 40% from its high before recovering.</div>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 11 — Sharpe &amp; Sortino computation</div>
+  <p>A strategy returns (annualised) R<sub>p</sub> = 18%, with total volatility σ<sub>p</sub> = 20%. Risk-free R<sub>f</sub> = 6%. Suppose downside deviation σ<sub>down</sub> = 12%.</p>
+  <p><b>Sharpe</b> = (18 − 6) / 20 = 12 / 20 = <b>0.60</b>.</p>
+  <p><b>Sortino</b> = (18 − 6) / 12 = 12 / 12 = <b>1.00</b>.</p>
+  <p>The Sortino is higher because it ignores upside volatility — this strategy's swings are disproportionately on the upside, which Sharpe unfairly punished. A Sharpe near or above 1.0 is generally considered good; above 2.0 excellent (though beware overfitting on backtests).</p>
+</div>
+
+<div class="example">
+  <div class="ex-h">Worked Example 12 — Beta from covariance</div>
+  <p>Cov(portfolio, market) = 0.018; Var(market) = 0.015. β = 0.018 / 0.015 = <b>1.20</b>.</p>
+  <p>Interpretation: the portfolio is 20% more volatile than the market in the systematic sense — for a +1% market move, expect roughly +1.2%. With R<sub>f</sub> = 6% and the same 18% return, Treynor = (18 − 6)/1.20 = <b>10.0</b> (i.e. 10% excess return per unit of beta).</p>
+</div>
+
+<table>
+  <thead><tr><th>Ratio</th><th>Numerator</th><th>Risk in denominator</th><th>Use when</th></tr></thead>
+  <tbody>
+    <tr><td>Sharpe</td><td>R<sub>p</sub> − R<sub>f</sub></td><td>Total volatility σ</td><td>General purpose, standalone</td></tr>
+    <tr><td>Sortino</td><td>R<sub>p</sub> − R<sub>f</sub></td><td>Downside deviation</td><td>Asymmetric / skewed returns</td></tr>
+    <tr><td>Treynor</td><td>R<sub>p</sub> − R<sub>f</sub></td><td>Beta (systematic)</td><td>Diversified portfolios</td></tr>
+    <tr><td>Information</td><td>R<sub>p</sub> − R<sub>b</sub></td><td>Tracking error</td><td>Active vs a benchmark</td></tr>
+    <tr><td>Calmar</td><td>Annual return</td><td>Max drawdown</td><td>Path/drawdown-sensitive</td></tr>
+  </tbody>
+</table>
+
+<h3>10.7 Jensen's alpha</h3>
+<p><b>Jensen's alpha</b> is the return a portfolio earned <i>above</i> what CAPM says it should have earned for its beta — the intercept of the CAPM regression, and the cleanest single measure of manager skill. Positive alpha = genuine outperformance after adjusting for market risk; zero alpha = the manager only delivered beta (which you could buy cheaply via an index fund).</p>
+<div class="formula"><b>Jensen's alpha</b><br>
+α<sub>J</sub> = R<sub>p</sub> − [ R<sub>f</sub> + β<sub>p</sub>·(R<sub>m</sub> − R<sub>f</sub>) ]
+<div class="where">where: the bracketed term is the CAPM-required return for the portfolio's beta. α<sub>J</sub> &gt; 0 means the manager beat the risk-adjusted benchmark. It is the intercept when excess portfolio returns are regressed on excess market returns.</div>
+</div>
+<div class="example">
+  <div class="ex-h">Worked Example 12b — Jensen's alpha</div>
+  <p>R<sub>p</sub> = 18%, R<sub>f</sub> = 6%, β = 1.2, market R<sub>m</sub> = 14%. CAPM-required = 6 + 1.2×(14 − 6) = 6 + 9.6 = 15.6%. Alpha = 18 − 15.6 = <b>+2.4%</b> — the manager added 2.4% beyond what the beta exposure alone justified.</p>
+</div>
+
+<div class="keytake"><b>Key takeaways:</b> Sharpe = excess return per total risk; Sortino swaps in downside deviation; Treynor uses beta (systematic risk); Information ratio measures active skill vs benchmark; beta = covariance/variance = regression slope; MDD = worst peak-to-trough fall.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">11. Other Risks, Stress Testing &amp; Diversification</h2>
+
+<h3>11.1 The main risk types</h3>
+<ul>
+  <li><b>Market risk:</b> loss from moves in prices, rates, FX, vol (covered by VaR/ES).</li>
+  <li><b>Credit risk:</b> loss if a counterparty or borrower defaults or is downgraded. Key measures: Probability of Default (PD), Loss Given Default (LGD), Exposure at Default (EAD); <b>Expected Loss = PD × LGD × EAD</b>. Counterparty credit risk on derivatives is captured via CVA (credit valuation adjustment).</li>
+  <li><b>Liquidity risk:</b> two flavours — <i>market</i> liquidity (can't exit a position without moving the price) and <i>funding</i> liquidity (can't raise cash / meet margin calls). Widened bid-ask spreads and margin spirals are the classic symptoms.</li>
+  <li><b>Operational risk:</b> loss from failed processes, people, systems or external events — fat-finger trades, settlement fails, fraud, cyber, model errors. Managed with controls, reconciliation and audit, not with market hedges.</li>
+</ul>
+<p>A word on <b>product control</b>, since it is one of your target roles: the product control function owns the <i>independent</i> daily P&amp;L and its explanation. Each day's trading P&amp;L is decomposed into a <b>P&amp;L attribution (or "P&amp;L explain")</b> — how much came from delta (spot moves), gamma (convexity), vega (vol moves), theta (time decay), and carry/rates — reconciled against the front-office number. A large <b>unexplained residual</b> is a red flag for a booking error, a stale mark, or a model issue. Product control also validates <b>independent price verification (IPV)</b>, checking traders' marks against independent sources, and reports fair-value adjustments. In short: the Greeks you track on the desk are the same sensitivities product control uses to explain and validate P&amp;L.</p>
+
+<h3>11.2 Stress testing &amp; scenario analysis</h3>
+<p>VaR describes normal days; <b>stress testing</b> asks "what if the abnormal happens?". You revalue the book under severe but plausible scenarios — historical (2008 GFC, March 2020 COVID crash, the 2013 taper tantrum) or hypothetical (rates +200bp, equity −30%, INR devaluation, a vol spike to 40). <b>Reverse stress testing</b> flips the question: what scenario would break us? Stress tests deliberately capture the tail that VaR's confidence cut-off ignores, and are a regulatory requirement.</p>
+
+<h3>11.3 Correlation &amp; diversification</h3>
+<p>Diversification works because combining assets that are not perfectly correlated lowers portfolio variance without necessarily lowering expected return — "the only free lunch in finance". The maths:</p>
+<div class="formula"><b>Two-asset portfolio variance</b><br>
+σ²<sub>p</sub> = w<sub>1</sub>²σ<sub>1</sub>² + w<sub>2</sub>²σ<sub>2</sub>² + 2·w<sub>1</sub>w<sub>2</sub>·ρ<sub>12</sub>·σ<sub>1</sub>σ<sub>2</sub>
+<div class="where">where: w = weights; σ = volatilities; ρ<sub>12</sub> = correlation. The lower ρ, the greater the variance reduction. At ρ = −1 risk can be driven to zero; at ρ = +1 there is no diversification benefit.</div>
+</div>
+<div class="trap"><b>Common trap:</b> "Diversification protects you in a crash." Correlations tend to spike toward +1 in a crisis ("all correlations go to one"), so diversification benefits shrink exactly when you need them most. This is why stress testing assumes elevated correlations.</div>
+
+<h3>11.4 Counterparty credit risk — CVA &amp; DVA</h3>
+<p>On OTC derivatives (swaps, forwards) each side faces <b>counterparty credit risk</b>: the risk the other party defaults while the trade is in-the-money to you. <b>CVA (Credit Valuation Adjustment)</b> is the market price of that risk — the amount by which you mark down a derivative's value to reflect the counterparty's chance of default. <b>DVA (Debit Valuation Adjustment)</b> is the mirror image: an adjustment for <i>your own</i> default risk, which (perversely) becomes a gain to you as your own credit worsens. Together with funding (FVA) and capital (KVA) these are the "<b>xVA</b>" adjustments a modern derivatives desk manages.</p>
+<div class="formula"><b>CVA (intuition)</b><br>
+CVA ≈ (1 − Recovery) · Σ PD(t) · EE(t) · DF(t)
+<div class="where">where: PD(t) = counterparty default probability in each future period; EE(t) = expected positive exposure (how in-the-money the trade is expected to be); DF(t) = discount factor; (1 − Recovery) = loss given default. Central clearing and collateral (margin) reduce CVA by cutting exposure.</div>
+</div>
+
+<h3>11.5 Model risk</h3>
+<p><b>Model risk</b> is the risk of loss from using a flawed or misapplied model — wrong assumptions, calibration errors, bugs, or a model used outside the regime it was built for (e.g. Gaussian VaR in a fat-tailed crash, or a copula that assumed low correlation). It is managed through independent <b>model validation</b>, back-testing, reserves/adjustments for model uncertainty, and clear documentation of limitations. LTCM (1998) and the 2008 mispricing of structured credit are the textbook cautionary tales: the map was mistaken for the territory.</p>
+
+<div class="keytake"><b>Key takeaways:</b> Beyond market risk, know credit (EL = PD×LGD×EAD), liquidity (market vs funding) and operational risk. Stress/scenario testing covers the tail VaR misses. Diversification lowers variance via low correlation — but correlations rise in crises.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">12. Quant &amp; Statistics Foundations</h2>
+
+<h3>12.1 Distributions in finance</h3>
+<ul>
+  <li><b>Normal (Gaussian):</b> symmetric bell curve, defined by mean and variance. Used for <i>returns</i> in many models. Tractable but thin-tailed.</li>
+  <li><b>Lognormal:</b> a variable whose logarithm is normal. Used for <i>prices</i> (they can't go negative and returns compound). Black–Scholes assumes lognormal prices / normal log-returns.</li>
+  <li><b>Fat tails (leptokurtosis):</b> real return distributions have more mass in the extremes than the normal predicts — big moves happen more often than a bell curve says. This is why VaR under normality understates tail risk and why the vol smile exists.</li>
+  <li><b>Student-t:</b> a bell-shaped but <b>fat-tailed</b> distribution controlled by a "degrees of freedom" parameter — low df = fat tails, high df → normal. It is the standard fix for modelling returns/VaR when the normal understates extremes, and also the distribution of the t-statistic in regression and hypothesis testing.</li>
+</ul>
+
+<h3>12.2 The four moments</h3>
+<table>
+  <thead><tr><th>Moment</th><th>Measures</th><th>Finance meaning</th></tr></thead>
+  <tbody>
+    <tr><td>1st — Mean</td><td>Central tendency</td><td>Expected / average return</td></tr>
+    <tr><td>2nd — Variance / SD</td><td>Dispersion</td><td>Volatility / risk</td></tr>
+    <tr><td>3rd — Skewness</td><td>Asymmetry</td><td>Negative skew = crash-prone (long left tail); equities are typically negatively skewed</td></tr>
+    <tr><td>4th — Kurtosis</td><td>Tail heaviness / peakedness</td><td>Excess kurtosis &gt; 0 = fat tails; normal has kurtosis 3 (excess 0)</td></tr>
+  </tbody>
+</table>
+
+<div class="formula"><b>Variance, covariance &amp; correlation</b><br>
+Var(X) = E[(X − μ)²];  Cov(X,Y) = E[(X − μ<sub>X</sub>)(Y − μ<sub>Y</sub>)];  ρ<sub>X,Y</sub> = Cov(X,Y) / (σ<sub>X</sub>σ<sub>Y</sub>)
+<div class="where">Correlation ρ ∈ [−1, +1] is the standardised, unit-free version of covariance. ρ = 0 means linearly uncorrelated (not necessarily independent).</div>
+</div>
+<div class="trap"><b>Common trap:</b> "Zero correlation means independent." Correlation only measures <i>linear</i> association. Two variables can be strongly related non-linearly (e.g. Y = X²) yet have zero correlation. Independence implies zero correlation, not the reverse.</div>
+
+<h3>12.3 Hypothesis testing, p-values &amp; confidence intervals</h3>
+<p>A <b>hypothesis test</b> weighs a null hypothesis H<sub>0</sub> (e.g. "this strategy's true alpha is zero") against an alternative. The <b>p-value</b> is the probability of observing data at least as extreme as yours <i>if H<sub>0</sub> were true</i>. Small p (&lt; 0.05 typically) → reject H<sub>0</sub>: the result is "statistically significant". A <b>confidence interval</b> gives a range that, over repeated sampling, would contain the true parameter a stated proportion of the time (e.g. a 95% CI).</p>
+<div class="trap"><b>Common trap:</b> "The p-value is the probability the null is true" or "there's a 95% chance the true value is in this CI." Both wrong. The p-value is P(data | H<sub>0</sub>), not P(H<sub>0</sub> | data). And a 95% CI is a statement about the <i>procedure's</i> long-run coverage, not a probability about one fixed interval.</div>
+<p><b>Type I and Type II errors</b> are the two ways a test can be wrong:</p>
+<table>
+  <thead><tr><th>&nbsp;</th><th>H<sub>0</sub> is true</th><th>H<sub>0</sub> is false</th></tr></thead>
+  <tbody>
+    <tr><td><b>Reject H<sub>0</sub></b></td><td>Type I error (false positive), prob = α</td><td>Correct (power = 1 − β)</td></tr>
+    <tr><td><b>Fail to reject H<sub>0</sub></b></td><td>Correct</td><td>Type II error (false negative), prob = β</td></tr>
+  </tbody>
+</table>
+<p><b>Type I</b> = concluding an effect exists when it does not (its probability is the significance level α, e.g. 5%). <b>Type II</b> = missing a real effect (probability β; <b>power</b> = 1 − β). Lowering α (being stricter) raises β for a fixed sample — the classic trade-off; more data lowers both. In trading terms: a Type I error is trusting a strategy that is really just noise (overfitting); a Type II error is discarding one that genuinely works.</p>
+
+<h3>12.4 Linear regression (beta &amp; R²)</h3>
+<p><b>Ordinary least squares</b> fits a line minimising squared residuals. In finance the canonical use is the <b>market model</b>: regress a stock's excess returns on the market's excess returns; the slope is <b>beta</b> (systematic risk) and the intercept is <b>alpha</b> (skill/mispricing).</p>
+<div class="formula"><b>Simple linear regression</b><br>
+Y = α + β·X + ε,   β = Cov(X,Y)/Var(X),   R² = explained variance / total variance
+<div class="where">where: β = slope (sensitivity of Y to X); α = intercept (alpha); ε = residual; R² ∈ [0,1] = fraction of Y's variance explained by X. In the market model R² ≈ how much of a stock's movement is market-driven vs idiosyncratic.</div>
+</div>
+<p>A high R² in a CAPM regression means the stock is mostly driven by the market (systematic); a low R² means idiosyncratic risk dominates (diversifiable). R² is also the square of the correlation between X and Y in a simple regression.</p>
+<p><b>t-statistic &amp; significance of coefficients.</b> Each estimated coefficient has a <b>t-stat</b> = estimate / standard error; if |t| &gt; ~2 the coefficient is significant at 5% (its confidence interval excludes zero). For a beta estimate, a high t-stat says the market exposure is reliably different from zero. <b>Adjusted R²</b> penalises R² for the number of regressors so that adding useless variables no longer inflates the fit — always compare models on adjusted R², not raw R², because raw R² can only ever rise as you add variables.</p>
+<h4>OLS assumptions &amp; their violations</h4>
+<p>OLS is "best" (BLUE — best linear unbiased estimator) only if its assumptions hold. The three most-tested violations:</p>
+<ul>
+  <li><b>Heteroskedasticity:</b> the residual variance is not constant (common in finance — vol clusters). Coefficients stay unbiased but standard errors are wrong, so t-stats mislead. Fix: robust (White/Newey-West) standard errors. Test: Breusch–Pagan, White.</li>
+  <li><b>Autocorrelation (serial correlation):</b> residuals are correlated across time (common in time-series regressions). Again biases the standard errors, not the coefficients. Detect with the <b>Durbin–Watson</b> statistic (≈2 = no autocorrelation). Fix: Newey–West errors.</li>
+  <li><b>Multicollinearity:</b> regressors are highly correlated with each other, so the model cannot separate their effects — coefficients become unstable with huge standard errors (though the overall fit/prediction can still be fine). Detect with the <b>Variance Inflation Factor (VIF)</b>. Fix: drop/combine variables or use PCA.</li>
+</ul>
+<div class="trap"><b>Common trap (R² pitfalls):</b> A high R² does not mean the model is "good" or causal — you can get high R² from a <b>spurious regression</b> of two unrelated trending (non-stationary) series. And raw R² always rises when you add regressors, so it cannot be used to choose model complexity — use adjusted R² and out-of-sample tests. High R² ≠ good forecasts.</div>
+
+<h3>12.5 Monte Carlo simulation</h3>
+<p><b>Monte Carlo</b> uses repeated random sampling to estimate quantities that are hard to compute analytically. Simulate thousands of price paths from an assumed process (e.g. geometric Brownian motion, dS = μS dt + σS dW), compute the payoff/P&amp;L in each, and average or take percentiles. It powers exotic option pricing, VaR (Section 8.5), and any problem where the distribution of an outcome is needed but a closed form is unavailable. Accuracy improves with the square root of the number of paths (so 4× the paths ≈ 2× the precision).</p>
+
+<h3>12.6 Time series basics</h3>
+<ul>
+  <li><b>Stationarity:</b> a series is stationary if its statistical properties (mean, variance, autocovariance) don't change over time. Prices are typically <i>non</i>-stationary (they trend/random-walk); returns are usually treated as (roughly) stationary. Most time-series models require stationarity — hence we model returns, not prices.</li>
+  <li><b>Autocorrelation:</b> correlation of a series with its own lagged values. Returns show little linear autocorrelation (weak-form efficiency), but <i>squared</i> or <i>absolute</i> returns are strongly autocorrelated — that is volatility clustering, the very thing GARCH models.</li>
+  <li><b>Random walk / unit root:</b> a price random walk means tomorrow's best forecast is today's price; tested with the augmented Dickey–Fuller (ADF) test for a unit root.</li>
+  <li><b>ARIMA:</b> a general model for a single stationary series combining <b>AR</b> (autoregression on past values), <b>I</b> (differencing d times to induce stationarity — prices need d=1) and <b>MA</b> (moving average of past shocks). ARIMA(p,d,q) forecasts the <i>level</i>; add a GARCH error to model the changing <i>variance</i>. Used for mean/return forecasting.</li>
+</ul>
+<h3>12.7 Cointegration &amp; pairs trading</h3>
+<p>Two price series can each be non-stationary (random walks) yet a <b>linear combination</b> of them is stationary — then they are <b>cointegrated</b>, tied together by a long-run equilibrium they keep reverting to. This is the statistical engine of <b>pairs trading</b> / statistical arbitrage: find two related instruments (e.g. two banks, or a stock and its futures), estimate the hedge ratio, and trade the <b>spread</b> — short it when it is stretched wide, long it when compressed, betting it reverts to the mean. Test with Engle–Granger (ADF on the residual) or Johansen.</p>
+<div class="trap"><b>Common trap:</b> "Correlation is enough for a pairs trade." No — high correlation of <i>returns</i> does not guarantee the <i>spread</i> is mean-reverting; two series can be correlated day-to-day yet drift apart forever. Cointegration (a stationary spread), not correlation, is what makes a pair tradeable. And beware: cointegration can break (a structural regime change), so pairs trades carry the risk the relationship simply stops holding.</div>
+<h3>12.8 Principal Component Analysis (PCA)</h3>
+<p><b>PCA</b> is a dimension-reduction technique: it re-expresses many correlated variables as a few uncorrelated <b>principal components</b> ordered by how much variance they explain. Classic finance use — the <b>yield curve</b>: three components explain almost all its movement, interpreted as <b>level</b> (parallel shift, ~PC1), <b>slope</b> (steepening/flattening, PC2) and <b>curvature</b> (PC3). PCA also compresses large correlation matrices for risk models and factor construction, and cures multicollinearity by replacing correlated regressors with orthogonal components.</p>
+
+<div class="keytake"><b>Key takeaways:</b> Prices lognormal, log-returns roughly normal but fat-tailed and negatively skewed. Know the four moments. Correlation is linear only. p-value = P(data|H<sub>0</sub>), not P(H<sub>0</sub>). Regression slope = beta, R² = variance explained. Monte Carlo = random sampling for intractable problems. Model stationary returns, not trending prices; volatility clusters (autocorrelated squared returns).</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">13. Swaps, FRAs &amp; Interest-Rate Options</h2>
+
+<h3>13.1 Interest-rate swaps (IRS)</h3>
+<p>An <b>interest-rate swap</b> is an OTC agreement to exchange interest cash flows on a <b>notional</b> principal (the notional is never exchanged). The <b>plain-vanilla</b> IRS swaps a <b>fixed</b> rate for a <b>floating</b> rate (e.g. an overnight index like MIBOR/SOFR). A firm with a floating-rate loan that fears rising rates can "pay fixed / receive floating" to lock its cost — converting floating exposure into fixed. Swaps are the largest derivatives market in the world.</p>
+<div class="formula"><b>Swap valuation (concept)</b><br>
+V<sub>swap</sub> = PV(floating leg) − PV(fixed leg)
+<div class="where">A swap is a portfolio of forward rate agreements, or equivalently a long/short pair of bonds (one fixed-coupon, one floating). At inception the fixed rate (the "swap rate") is set so V = 0. As rates move the swap gains value to one side. The floating leg resets to par at each reset date, which simplifies its valuation.</div>
+</div>
+<p>A swap's rate sensitivity is measured by <b>DV01 / PV01</b> — the P&amp;L for a 1-basis-point parallel move in rates — the rates-desk analogue of delta.</p>
+
+<h3>13.2 Currency swaps</h3>
+<p>A <b>currency swap</b> exchanges principal <i>and</i> interest in two different currencies (e.g. pay INR fixed, receive USD fixed). Unlike an IRS, the <b>notional principals are exchanged</b> at the start and re-exchanged at maturity (at a pre-agreed FX rate). Used to fund cheaply in one currency while needing another, and to hedge long-dated FX exposure.</p>
+
+<h3>13.3 Forward rate agreements (FRAs)</h3>
+<p>An <b>FRA</b> locks in an interest rate for a single future period on a notional — the interest-rate equivalent of a forward. A "3×6 FRA" fixes the rate for a 3-month period starting in 3 months. The buyer (who locks a borrowing rate) profits if rates rise above the agreed rate; settlement is a single cash payment at the start of the period (discounted). A swap is essentially a strip of FRAs.</p>
+
+<h3>13.4 Caps, floors &amp; collars (rate options)</h3>
+<p>These are <i>options</i> on rates, giving asymmetric protection:</p>
+<ul>
+  <li><b>Cap:</b> a series of call options on a floating rate (each one a "caplet"). It pays out whenever the rate exceeds the cap strike — insurance for a floating-rate borrower against rising rates, while keeping the benefit if rates fall.</li>
+  <li><b>Floor:</b> a series of put options on the rate ("floorlets") — protects a floating-rate <i>lender/investor</i> against falling rates.</li>
+  <li><b>Interest-rate collar:</b> buy a cap and sell a floor (or vice versa) to cheapen the protection — same idea as an equity collar.</li>
+</ul>
+
+<h3>13.5 Exotic options (concept)</h3>
+<p>"<b>Exotics</b>" are options with non-standard payoffs beyond vanilla calls/puts, usually OTC and priced by Monte Carlo or trees. Know the names and one line each:</p>
+<ul>
+  <li><b>Barrier options:</b> knock-in / knock-out only if the underlying touches a barrier (cheaper than vanillas).</li>
+  <li><b>Asian options:</b> payoff on the <i>average</i> price over the life — less sensitive to expiry-day manipulation, lower vol.</li>
+  <li><b>Digital / binary:</b> pay a fixed amount if in-the-money, nothing otherwise.</li>
+  <li><b>Lookback:</b> payoff uses the best/worst price over the life.</li>
+  <li><b>Bermudan:</b> exercisable on a set of specified dates (between European and American).</li>
+</ul>
+
+<div class="keytake"><b>Key takeaways:</b> IRS swaps fixed for floating on a notional (never exchanged); value = PV(floating) − PV(fixed), zero at inception, sensitivity = DV01. Currency swaps exchange principal in two currencies. FRA = forward on a single rate; a swap = a strip of FRAs. Caps/floors = options on rates (borrower/lender insurance). Exotics (barrier, Asian, digital, lookback, Bermudan) = non-standard payoffs, priced by simulation/trees.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">14. Portfolio Theory &amp; CAPM</h2>
+
+<h3>14.1 Systematic vs unsystematic risk</h3>
+<p>Total risk splits into two parts. <b>Systematic (market) risk</b> is undiversifiable — it hits the whole market (rates, growth, geopolitics) and is measured by <b>beta</b>. <b>Unsystematic (idiosyncratic/specific) risk</b> is firm-specific (a fraud, a product recall) and is <b>diversifiable</b> — it washes out as you add uncorrelated names. Because only systematic risk cannot be diversified away, the market only pays you (a risk premium) for bearing <i>that</i> — the central idea behind CAPM.</p>
+
+<h3>14.2 Markowitz mean–variance &amp; the efficient frontier</h3>
+<p><b>Markowitz mean–variance optimisation</b> chooses portfolio weights to get the highest expected return for a given variance (or lowest variance for a given return). Because assets are imperfectly correlated, combining them curves the risk–return set into a bullet shape. The <b>efficient frontier</b> is its upper edge — the set of portfolios that are not dominated (no other portfolio offers more return for the same risk). Rational investors hold only frontier portfolios.</p>
+
+<h3>14.3 Capital Market Line (CML) &amp; the tangency portfolio</h3>
+<p>Introduce a <b>risk-free asset</b> and you can combine it with any risky portfolio along a straight line. The best such line — tangent to the efficient frontier — is the <b>Capital Market Line</b>; its tangency point is the <b>market portfolio</b>. Every investor holds a mix of the risk-free asset and the same market portfolio, differing only in the proportion (the <b>two-fund separation theorem</b>).</p>
+<div class="formula"><b>Capital Market Line</b><br>
+E(R<sub>p</sub>) = R<sub>f</sub> + [ (E(R<sub>m</sub>) − R<sub>f</sub>) / σ<sub>m</sub> ] · σ<sub>p</sub>
+<div class="where">The CML prices <b>efficient</b> portfolios by <b>total risk</b> σ<sub>p</sub>. Its slope, (E(R<sub>m</sub>) − R<sub>f</sub>)/σ<sub>m</sub>, is the market Sharpe ratio — the "price of risk".</div>
+</div>
+
+<h3>14.4 CAPM &amp; the Security Market Line (SML)</h3>
+<p>The <b>Capital Asset Pricing Model</b> prices <i>any</i> asset (not just efficient portfolios) by its <b>beta</b> — its systematic risk only. The relationship, plotted as expected return against beta, is the <b>Security Market Line</b>.</p>
+<div class="formula"><b>CAPM / Security Market Line</b><br>
+E(R<sub>i</sub>) = R<sub>f</sub> + β<sub>i</sub> · (E(R<sub>m</sub>) − R<sub>f</sub>)
+<div class="where">where: (E(R<sub>m</sub>) − R<sub>f</sub>) = market risk premium; β<sub>i</sub> = asset's systematic risk. Assets on the SML are fairly priced; <b>above</b> the SML = underpriced (positive alpha, buy); <b>below</b> = overpriced. Alpha is the vertical distance from the SML.</div>
+</div>
+<div class="example">
+  <div class="ex-h">Worked Example 13 — CAPM required return</div>
+  <p>R<sub>f</sub> = 6%, market premium (R<sub>m</sub> − R<sub>f</sub>) = 8%, stock β = 1.3. Required return = 6 + 1.3×8 = 6 + 10.4 = <b>16.4%</b>. If you actually expect the stock to return 19%, it plots above the SML — a positive alpha of 2.6%, i.e. a buy.</p>
+</div>
+<div class="trap"><b>Common trap:</b> Confusing the CML and the SML. The <b>CML</b> uses <i>total risk (σ)</i> and only holds for efficient portfolios; the <b>SML</b> uses <i>beta</i> and holds for every asset. A single inefficient stock lies <i>below</i> the CML but <i>on</i> the SML (if fairly priced). Also: CAPM assumes one factor (the market); reality shows multiple factors (size, value, momentum — the Fama–French extensions).</div>
+
+<div class="keytake"><b>Key takeaways:</b> Total risk = systematic (beta, undiversifiable, paid for) + unsystematic (diversifiable, not paid for). Markowitz → efficient frontier of best risk/return portfolios. Add a risk-free asset → CML through the market portfolio (prices efficient portfolios by total risk). CAPM/SML prices any asset by beta: E(R)=R<sub>f</sub>+β(R<sub>m</sub>−R<sub>f</sub>); alpha = distance above the SML.</div>
+
+<!-- ============================================================ -->
+<h2 class="sec">15. Rapid-Fire Interview Q&amp;A</h2>
+
+<div class="qa"><div class="q">Q1: What is the difference between a future and a forward?</div>
+<div class="a">A: Both lock in a price for future delivery. A forward is OTC, customised, settled once at maturity, and carries counterparty risk. A future is exchange-traded, standardised, guaranteed by a clearing house, and marked-to-market daily with margin. Futures are far more liquid and have negligible default risk.</div></div>
+
+<div class="qa"><div class="q">Q2: How is a futures price determined?</div>
+<div class="a">A: By no-arbitrage cost-of-carry: F = S·e^((r−q)T). It's the spot grown at the financing cost, net of any income (dividends) the asset pays. If the market future deviates, cash-and-carry (or reverse) arbitrage forces it back.</div></div>
+
+<div class="qa"><div class="q">Q3: What is basis, and what are contango and backwardation?</div>
+<div class="a">A: Basis = futures − spot; it converges to zero at expiry. Contango is futures above spot (normal for equities when r &gt; q); backwardation is futures below spot (high income/convenience yield or costly borrow).</div></div>
+
+<div class="qa"><div class="q">Q4: What is mark-to-market and why does it matter?</div>
+<div class="a">A: Daily settlement of gains and losses on a futures position against the closing price, debited/credited to the margin account. It prevents large unpaid losses from accumulating, which is how the clearing house keeps counterparty risk minimal.</div></div>
+
+<div class="qa"><div class="q">Q5: Explain a call and a put option.</div>
+<div class="a">A: A call is the right (not obligation) to buy the underlying at the strike; a put is the right to sell at the strike. The buyer pays a premium; max loss is that premium. The writer receives it and takes on the obligation, with much larger potential loss.</div></div>
+
+<div class="qa"><div class="q">Q6: What is moneyness?</div>
+<div class="a">A: Where the strike sits vs spot. A call is ITM if S &gt; K, ATM if S ≈ K, OTM if S &lt; K (puts reversed). ITM options have intrinsic value; OTM options are pure time value.</div></div>
+
+<div class="qa"><div class="q">Q7: What is intrinsic value versus time value?</div>
+<div class="a">A: Intrinsic = max(S−K,0) for a call — the immediate exercise value, floored at zero. Time value = premium − intrinsic, reflecting the chance of finishing further ITM. Time value is largest ATM and decays to zero by expiry.</div></div>
+
+<div class="qa"><div class="q">Q8: Explain put–call parity and why it holds.</div>
+<div class="a">A: C + PV(K) = P + S for European options on the same strike/expiry. A fiduciary call (call + cash) and a protective put (stock + put) both deliver max(S_T, K) at expiry, so by no-arbitrage they must cost the same today. If violated, you can lock in a riskless profit.</div></div>
+
+<div class="qa"><div class="q">Q9: What does Black–Scholes assume, and what are its weaknesses?</div>
+<div class="a">A: It assumes lognormal prices (normal log-returns), constant known volatility, continuous frictionless trading, no jumps, constant rates, European exercise. Weaknesses: real returns have fat tails and skew, volatility is stochastic (hence the smile), hedging is discrete and costly, and markets jump.</div></div>
+
+<div class="qa"><div class="q">Q10: Why doesn't the stock's expected return appear in Black–Scholes?</div>
+<div class="a">A: Because of risk-neutral replication — you can hedge the option with the stock and cash, making the position riskless, so it must earn the risk-free rate. The real-world drift cancels out; only volatility, rate and time remain.</div></div>
+
+<div class="qa"><div class="q">Q11: What is the binomial model and when is it preferred?</div>
+<div class="a">A: It models the stock as moving up or down each step, prices by backward induction using risk-neutral probabilities, and converges to Black–Scholes as steps increase. It's preferred for American options because at each node you can compare holding vs early exercise.</div></div>
+
+<div class="qa"><div class="q">Q12: What is delta?</div>
+<div class="a">A: The rate of change of option value per ₹1 move in the underlying — the first-order price sensitivity and the hedge ratio. Long call delta 0 to +1, long put −1 to 0, ATM ≈ ±0.5. It's also approximately the risk-neutral probability of finishing ITM.</div></div>
+
+<div class="qa"><div class="q">Q13: What does gamma tell you?</div>
+<div class="a">A: Gamma is the rate of change of delta per unit move — the convexity or "acceleration" of the option. It tells you how fast your delta hedge decays. Long options are long gamma (comfortable: re-hedging buys low/sells high); short options are short gamma (dangerous in choppy markets). Gamma peaks ATM near expiry.</div></div>
+
+<div class="qa"><div class="q">Q14: What is theta and what sign is it for a long option?</div>
+<div class="a">A: Theta is time decay — the value lost per day as expiry nears. It is negative for long options (you pay for the passage of time) and positive for short options. It is most negative for ATM options close to expiry.</div></div>
+
+<div class="qa"><div class="q">Q15: What is vega? Is "vega" a Greek letter?</div>
+<div class="a">A: Vega is sensitivity of option value to a 1-point change in implied volatility, positive for both long calls and long puts. "Vega" is NOT actually a Greek letter — it's desk jargon, often written ν (nu). Vega peaks for ATM, long-dated options.</div></div>
+
+<div class="qa"><div class="q">Q16: How do the Greeks behave with moneyness and time?</div>
+<div class="a">A: Delta → ±1 deep ITM, → 0 deep OTM, ±0.5 ATM. Gamma and theta both peak ATM and grow sharply as expiry approaches. Vega peaks ATM but grows with time to expiry (longer-dated = more vega). Rho matters most for long-dated options.</div></div>
+
+<div class="qa"><div class="q">Q17: Explain delta hedging.</div>
+<div class="a">A: Offset an option's directional exposure by taking an opposite position in the underlying equal to the option's delta, making the book delta-neutral. Because delta changes with the underlying (gamma), you must re-hedge dynamically. It isolates volatility/gamma/theta from pure direction.</div></div>
+
+<div class="qa"><div class="q">Q18: What is the gamma–theta trade-off?</div>
+<div class="a">A: Owning options gives positive gamma but costs theta (you pay time decay hoping for movement). Selling options collects theta but is short gamma (you profit if the market is calm but suffer in big moves). "You get paid theta to be short gamma."</div></div>
+
+<div class="qa"><div class="q">Q19: What is implied volatility?</div>
+<div class="a">A: The volatility that, put into Black–Scholes, reproduces the option's current market price. It's forward-looking — the market's expectation of future volatility — and the only BSM input you can't directly observe, which is why traders quote options in vol terms. India VIX is implied vol on Nifty options.</div></div>
+
+<div class="qa"><div class="q">Q20: Historical vs implied volatility — what's the difference?</div>
+<div class="a">A: Historical (realised) vol is the standard deviation of past returns — a backward-looking measurement. Implied vol is extracted from current option prices — forward-looking, the market's expectation. When implied &gt; realised, options are richly priced; when implied &lt; realised, cheap.</div></div>
+
+<div class="qa"><div class="q">Q21: What is the volatility smile/skew and why does it exist?</div>
+<div class="a">A: Plotting implied vol against strike gives a smile (or, for equity indices, a downward skew where OTM puts have higher IV). It exists because real return distributions have fat tails and downside crashes are feared, so puts are bid up. It's the market correcting BSM's flawed constant-normal-vol assumption.</div></div>
+
+<div class="qa"><div class="q">Q22: What is a straddle and when do you use it?</div>
+<div class="a">A: Buy a call and a put at the same strike and expiry (usually ATM). It's a volatility bet — you profit from a large move in either direction and lose the premium if the underlying stays put. Use it before high-uncertainty events (RBI policy, budget, earnings) when you expect a big move but aren't sure of direction.</div></div>
+
+<div class="qa"><div class="q">Q23: Straddle vs strangle?</div>
+<div class="a">A: A straddle uses the same strike (usually ATM) for both legs; a strangle uses OTM strikes (call strike above, put strike below). The strangle is cheaper but needs a bigger move to profit — wider break-evens.</div></div>
+
+<div class="qa"><div class="q">Q24: A trader buys a straddle before earnings, the stock moves a lot, but he loses money. How?</div>
+<div class="a">A: Vol crush. Implied vol was elevated before the event, making the straddle expensive; after the announcement uncertainty resolves and IV collapses, so both options lose vega value. If the realised move is smaller than the priced-in move, the straddle loses despite a real move.</div></div>
+
+<div class="qa"><div class="q">Q25: What is a covered call?</div>
+<div class="a">A: Long the stock plus a short OTM call. You earn the premium as income and cap upside at the strike; downside is the stock's (cushioned by the premium). It's a neutral-to-mildly-bullish, low-vol income strategy.</div></div>
+
+<div class="qa"><div class="q">Q26: What is a protective put?</div>
+<div class="a">A: Long stock plus a long put — insurance. The put floors your loss at the strike while leaving upside open; cost is the premium. Used to hedge a holding through an uncertain period.</div></div>
+
+<div class="qa"><div class="q">Q27: Explain a bull call spread and its P/L.</div>
+<div class="a">A: Buy a lower-strike call, sell a higher-strike call, same expiry (net debit). Moderately bullish with defined risk. Max profit = strike difference − net debit; max loss = net debit; break-even = lower strike + net debit. Cheaper than a naked call, but upside is capped.</div></div>
+
+<div class="qa"><div class="q">Q28: What is an iron condor?</div>
+<div class="a">A: Sell an OTM put spread and an OTM call spread (four legs, net credit). You profit if the underlying stays between the short strikes; both spreads cap the risk. It's a range-bound, short-vega, positive-theta strategy — popular for harvesting premium on weekly Nifty/Bank Nifty expiries.</div></div>
+
+<div class="qa"><div class="q">Q29: What is Value-at-Risk?</div>
+<div class="a">A: The loss over a given horizon at a given confidence level that won't be exceeded. E.g. a 1-day 99% VaR of ₹10 lakh means losses stay within ₹10 lakh on 99% of days. It's a standard single-number market-risk summary for limits and capital.</div></div>
+
+<div class="qa"><div class="q">Q30: Is VaR the maximum possible loss?</div>
+<div class="a">A: No — that's the classic trap. VaR is a threshold/quantile, not a worst case. It says nothing about the size of losses beyond the confidence level. On the ~1% of breach days, the loss can be far larger. Expected Shortfall addresses this.</div></div>
+
+<div class="qa"><div class="q">Q31: How would you compute a parametric 1-day VaR?</div>
+<div class="a">A: Assume normal returns: VaR = z × σ × V, where z is the confidence quantile (1.645 for 95%, 2.326 for 99%), σ is 1-day volatility and V is portfolio value. E.g. ₹10 crore, σ=1.2%, 99%: 2.326 × 0.012 × 10cr ≈ ₹27.9 lakh.</div></div>
+
+<div class="qa"><div class="q">Q32: Compare the three VaR methods.</div>
+<div class="a">A: Parametric (variance–covariance) assumes normality — simple and fast but thin-tailed and poor for options. Historical simulation replays actual past returns — captures fat tails and real correlations but is window-dependent and backward-looking. Monte Carlo simulates from a chosen model — flexible for non-linear books but carries model risk and compute cost.</div></div>
+
+<div class="qa"><div class="q">Q33: What are the limitations of VaR?</div>
+<div class="a">A: It ignores tail severity beyond the cut-off; it's not sub-additive (not coherent — can penalise diversification); it's backward-looking / assumption-dependent; it can be gamed; and √t scaling and normality break down in stressed, fat-tailed, correlated markets. Complement it with ES and stress testing.</div></div>
+
+<div class="qa"><div class="q">Q34: What is Expected Shortfall / CVaR and why is it better?</div>
+<div class="a">A: ES is the average loss given that the loss exceeds VaR — it measures tail severity, not just the threshold. It's always ≥ VaR, is coherent (sub-additive, rewards diversification), and is what Basel FRTB adopted (97.5% ES) in place of VaR.</div></div>
+
+<div class="qa"><div class="q">Q35: How do you scale VaR from 1 day to 10 days?</div>
+<div class="a">A: Multiply by √10 (square-root-of-time rule), valid only if returns are i.i.d. with constant vol. It understates risk when there's autocorrelation or volatility clustering, so it's an approximation, not exact.</div></div>
+
+<div class="qa"><div class="q">Q36: What is backtesting a VaR model?</div>
+<div class="a">A: Comparing predicted VaR to realised daily P&amp;L and counting breaches (days the loss exceeds VaR). For 99% VaR you expect ~1% breaches (~2–3/year). Basel's traffic-light system flags too many breaches (model understates risk) via green/amber/red zones and capital multipliers.</div></div>
+
+<div class="qa"><div class="q">Q37: Explain EWMA and how it differs from a simple moving average.</div>
+<div class="a">A: EWMA weights recent returns more heavily with geometric decay (σ²_t = λσ²_{t−1} + (1−λ)r²_{t−1}, λ≈0.94), so it reacts faster to shocks. A simple moving average weights all window days equally and drops old data abruptly, reacting slower and showing "ghosting".</div></div>
+
+<div class="qa"><div class="q">Q38: What does GARCH add over EWMA?</div>
+<div class="a">A: Mean reversion to a long-run variance. GARCH(1,1): σ²_t = ω + α·r²_{t−1} + β·σ²_{t−1}. α controls reaction to shocks, β controls persistence, and ω anchors the long-run level. EWMA is the special case ω=0, α=1−λ, β=λ (no mean reversion).</div></div>
+
+<div class="qa"><div class="q">Q39: What is the Sharpe ratio?</div>
+<div class="a">A: Excess return per unit of total risk: (R_p − R_f)/σ_p. It standardises reward-for-risk so strategies are comparable. Higher is better; ~1 is good, &gt;2 excellent — but beware backtest overfitting and non-normal returns.</div></div>
+
+<div class="qa"><div class="q">Q40: Sharpe vs Sortino — when prefer Sortino?</div>
+<div class="a">A: Sharpe penalises all volatility including upside; Sortino divides only by downside deviation. Prefer Sortino for strategies with asymmetric/skewed returns (e.g. option-selling or trend strategies) where upside volatility shouldn't be punished. Sortino ≥ Sharpe for the same series.</div></div>
+
+<div class="qa"><div class="q">Q41: What is beta and how is it computed?</div>
+<div class="a">A: Beta measures systematic (market) risk: β = Cov(R_p, R_m)/Var(R_m), the slope of a regression of portfolio returns on market returns. β=1 moves with the market, &gt;1 amplifies, &lt;1 dampens, &lt;0 inverse.</div></div>
+
+<div class="qa"><div class="q">Q42: What is the Treynor ratio and how does it differ from Sharpe?</div>
+<div class="a">A: Treynor = (R_p − R_f)/β — excess return per unit of systematic risk. Sharpe uses total risk (σ). Treynor is appropriate for well-diversified portfolios where idiosyncratic risk is already diversified away, so only beta matters.</div></div>
+
+<div class="qa"><div class="q">Q43: What is the information ratio?</div>
+<div class="a">A: Active return over active risk: (R_p − R_b)/tracking error. It measures the consistency of a manager's outperformance vs a benchmark — a key metric for active managers.</div></div>
+
+<div class="qa"><div class="q">Q44: What is maximum drawdown?</div>
+<div class="a">A: The largest peak-to-trough percentage decline in portfolio value over a period. It captures worst-case path pain and downside path-dependence, which volatility misses. The Calmar ratio uses it as the risk denominator.</div></div>
+
+<div class="qa"><div class="q">Q45: Name the main risk types besides market risk.</div>
+<div class="a">A: Credit risk (default/downgrade; Expected Loss = PD×LGD×EAD), liquidity risk (market — can't exit; and funding — can't raise cash/meet margin), and operational risk (failed processes, people, systems, external events — fat-fingers, fraud, cyber, model error).</div></div>
+
+<div class="qa"><div class="q">Q46: Why do we stress test if we already have VaR?</div>
+<div class="a">A: VaR describes normal days up to a confidence cut-off; it ignores the tail. Stress testing revalues the book under severe but plausible scenarios (2008, COVID, rate shocks) — including elevated correlations — to size losses in the regime VaR excludes. It's also regulatorily required.</div></div>
+
+<div class="qa"><div class="q">Q47: What happens to correlations in a crisis?</div>
+<div class="a">A: They spike toward +1 — "all correlations go to one" — so diversification benefits collapse precisely when you need them. That's why stress scenarios assume higher correlations than the calm-period estimates in a VaR model.</div></div>
+
+<div class="qa"><div class="q">Q48: Why do we model prices as lognormal and returns as normal?</div>
+<div class="a">A: Prices can't go negative and compound multiplicatively, which the lognormal captures; log-returns are then additive and roughly normal, making the maths tractable. Reality departs via fat tails and negative skew, which is why models are adjusted (smile, jumps).</div></div>
+
+<div class="qa"><div class="q">Q49: Explain skewness and kurtosis in a return distribution.</div>
+<div class="a">A: Skewness is asymmetry — equities are typically negatively skewed (long left tail, crash-prone). Kurtosis measures tail heaviness; excess kurtosis &gt; 0 means fat tails (extreme moves more frequent than normal predicts). Both mean the normal distribution understates real risk.</div></div>
+
+<div class="qa"><div class="q">Q50: What's the difference between correlation and covariance? Does zero correlation mean independence?</div>
+<div class="a">A: Covariance measures co-movement in raw units; correlation is the standardised, unit-free version in [−1,+1]. Zero correlation means no <i>linear</i> relationship, not independence — a non-linear relationship (e.g. Y=X²) can have zero correlation. Independence implies zero correlation, but not vice versa.</div></div>
+
+<div class="qa"><div class="q">Q51: What does a p-value actually mean?</div>
+<div class="a">A: The probability of observing data at least as extreme as yours if the null hypothesis were true — P(data | H₀). It is NOT the probability the null is true. A small p-value (&lt;0.05) leads us to reject H₀ as statistically significant.</div></div>
+
+<div class="qa"><div class="q">Q52: In a market-model regression, what do beta, alpha and R² tell you?</div>
+<div class="a">A: Beta (slope) is sensitivity to the market — systematic risk. Alpha (intercept) is return unexplained by the market — skill or mispricing. R² is the fraction of the stock's variance explained by the market; high R² = market-driven, low R² = idiosyncratic.</div></div>
+
+<div class="qa"><div class="q">Q53: What is Monte Carlo simulation used for in finance?</div>
+<div class="a">A: Estimating outcomes with no closed form — pricing exotic/path-dependent options, computing VaR for non-linear portfolios, projecting P&amp;L distributions. Simulate many random paths, evaluate the payoff/loss in each, and average or take percentiles. Precision grows with √(number of paths).</div></div>
+
+<div class="qa"><div class="q">Q54: What is stationarity and why model returns instead of prices?</div>
+<div class="a">A: A stationary series has stable mean, variance and autocovariance over time. Prices trend/random-walk (non-stationary); returns are roughly stationary. Most time-series models (and statistical inference) require stationarity, so we model returns.</div></div>
+
+<div class="qa"><div class="q">Q55: Returns show little autocorrelation, yet volatility clusters — how?</div>
+<div class="a">A: Raw returns have near-zero linear autocorrelation (weak-form efficiency), but squared or absolute returns are strongly autocorrelated: big moves follow big moves. That is volatility clustering — the phenomenon EWMA and GARCH are built to capture.</div></div>
+
+<div class="qa"><div class="q">Q56: A book is delta-neutral but long gamma and short theta. What is the trader betting on?</div>
+<div class="a">A: On realised volatility exceeding what he's paying in time decay. Long gamma means big moves (either direction) let him re-hedge profitably (buy low/sell high); short theta means he bleeds if the market sits still. He wins if realised vol &gt; the implied vol embedded in the options' cost.</div></div>
+
+<div class="qa"><div class="q">Q57: How do you hedge a ₹5 crore equity portfolio with beta 1.2 using Nifty futures?</div>
+<div class="a">A: Short N = β × portfolio value / futures notional index contracts. If a Nifty future is worth ₹11 lakh notional, N ≈ 1.2 × 5,00,00,000 / 11,00,000 ≈ 55 contracts short. This neutralises market (systematic) risk; what remains is basis risk and the portfolio's idiosyncratic (alpha) risk.</div></div>
+
+<div class="qa"><div class="q">Q58: What is the minimum-variance hedge ratio, and what is basis risk?</div>
+<div class="a">A: h* = ρ·(σ_S/σ_F) = Cov(ΔS,ΔF)/Var(ΔF) — the regression slope of spot changes on futures changes; it minimises the variance of the hedged position. Basis risk is the residual risk that spot and futures don't move perfectly together (cross-hedge, expiry mismatch/rollover), so the hedge is imperfect — you've swapped larger directional risk for smaller basis risk.</div></div>
+
+<div class="qa"><div class="q">Q59: When is it optimal to exercise an American option early?</div>
+<div class="a">A: Never for a call on a non-dividend stock (you'd forfeit time value and interest on the strike — better to sell it). It can be optimal for a call just before a large dividend, and for a deep-ITM put even without dividends (you'd rather hold K in cash earning interest, since the put's upside is capped). So early exercise is mainly a put phenomenon.</div></div>
+
+<div class="qa"><div class="q">Q60: State the no-arbitrage lower bound for a European call and the intuition.</div>
+<div class="a">A: c ≥ max(S₀ − K·e^(−rT), 0). If the call traded below S₀ − PV(K), you'd buy the call, short the stock, invest PV(K), and lock a riskless profit. Because this bound exceeds intrinsic value S₀ − K, a European call always has positive time value — the reason not to exercise a non-dividend call early.</div></div>
+
+<div class="qa"><div class="q">Q61: Price a two-step binomial call quickly — what's the method?</div>
+<div class="a">A: Backward induction. Compute payoffs at the three terminal nodes, discount back one layer using the risk-neutral p = (e^(rΔt) − d)/(u − d) at every node, then discount that to today. For an American option, at each node take max(hold value, immediate exercise). More steps converge to Black–Scholes.</div></div>
+
+<div class="qa"><div class="q">Q62: What is a collar and why use it?</div>
+<div class="a">A: Long stock + long OTM put + short OTM call. The short call finances the protective put — often making it zero-cost — in exchange for capping upside at the call strike. Used to lock in a gain cheaply while staying invested.</div></div>
+
+<div class="qa"><div class="q">Q63: Butterfly vs iron condor — what's the difference?</div>
+<div class="a">A: Both are defined-risk, short-vol, range strategies. A butterfly (+1/−2/+1) peaks at a single central strike — narrow sweet spot, cheap. An iron condor has a flat profit <i>zone</i> between two short strikes — a wider profit range but usually lower max profit. Butterfly bets on a pin; condor bets on a range.</div></div>
+
+<div class="qa"><div class="q">Q64: What does a calendar spread bet on?</div>
+<div class="a">A: Sell near-dated, buy longer-dated at the same strike. It's long theta (front leg decays faster) and long vega (back leg has more vol sensitivity) — a bet the underlying stays near the strike short-term while implied vol rises or the term structure steepens. Max loss = net debit.</div></div>
+
+<div class="qa"><div class="q">Q65: Explain marginal, incremental and component VaR.</div>
+<div class="a">A: Marginal VaR = the sensitivity of total VaR to a small increase in a position (∂VaR/∂w). Incremental VaR = the change in total VaR from adding/removing an entire trade — used for pre-trade checks. Component VaR = each position's share of total VaR, built to sum to total VaR — the standard risk-attribution report; a negative component means the position is a diversifier.</div></div>
+
+<div class="qa"><div class="q">Q66: Is VaR a coherent risk measure? What are the four axioms?</div>
+<div class="a">A: No — VaR generally violates sub-additivity, so it can penalise diversification. Coherence requires monotonicity, translation invariance, positive homogeneity and sub-additivity. Expected Shortfall satisfies all four and is coherent — a key reason Basel FRTB replaced 99% VaR with 97.5% ES.</div></div>
+
+<div class="qa"><div class="q">Q67: What is stressed VaR?</div>
+<div class="a">A: VaR recomputed using data from a severe historical stress window (e.g. 2008) rather than the recent calm period. Basel II.5 requires capital = VaR + stressed VaR, because a VaR calibrated to quiet markets understates risk exactly when a crisis hits.</div></div>
+
+<div class="qa"><div class="q">Q68: What are CVA and DVA?</div>
+<div class="a">A: CVA (Credit Valuation Adjustment) is the price of a counterparty's default risk on an OTC derivative — you mark the trade down by the expected loss from their default. DVA is the mirror for your own default risk (a "gain" as your credit worsens). With FVA/KVA they form the xVA suite. Collateral and central clearing reduce CVA by cutting exposure.</div></div>
+
+<div class="qa"><div class="q">Q69: Distinguish systematic from unsystematic risk.</div>
+<div class="a">A: Systematic (market) risk hits everything and can't be diversified away — measured by beta and compensated with a risk premium. Unsystematic (firm-specific) risk is diversifiable and, per CAPM, earns no premium because a diversified investor can eliminate it for free. Only beta is priced.</div></div>
+
+<div class="qa"><div class="q">Q70: State CAPM and compute a required return.</div>
+<div class="a">A: E(R) = R_f + β(R_m − R_f). With R_f = 6%, market premium 8%, β = 1.3: required = 6 + 1.3×8 = 16.4%. If you expect more than that, the stock has positive alpha (plots above the SML) — a buy.</div></div>
+
+<div class="qa"><div class="q">Q71: What's the difference between the CML and the SML?</div>
+<div class="a">A: The CML plots expected return against total risk (σ) and only prices efficient portfolios (combinations of the risk-free asset and the market portfolio). The SML plots expected return against beta and prices every asset by its systematic risk. An inefficient single stock sits below the CML but on the SML if fairly priced.</div></div>
+
+<div class="qa"><div class="q">Q72: Compute the variance of a two-asset portfolio.</div>
+<div class="a">A: σ²_p = w₁²σ₁² + w₂²σ₂² + 2w₁w₂ρσ₁σ₂. Example: 50/50 weights, σ₁=20%, σ₂=30%, ρ=0.2: σ²_p = 0.25×0.04 + 0.25×0.09 + 2×0.25×0.2×0.2×0.3 = 0.01 + 0.0225 + 0.006 = 0.0385, so σ_p = √0.0385 ≈ 19.6% — below the 25% weighted-average vol, the diversification benefit from ρ &lt; 1.</div></div>
+
+<div class="qa"><div class="q">Q73: What is Jensen's alpha?</div>
+<div class="a">A: The return above the CAPM-required return for the portfolio's beta: α = R_p − [R_f + β(R_m − R_f)]. It's the CAPM regression intercept — the cleanest measure of skill after adjusting for market exposure. Positive alpha = genuine outperformance, not just leverage on beta.</div></div>
+
+<div class="qa"><div class="q">Q74: Explain Type I and Type II errors in the context of testing a trading strategy.</div>
+<div class="a">A: Type I (false positive, prob α) = concluding a strategy has edge when it's really noise — the overfitting trap. Type II (false negative, prob β) = discarding a strategy that genuinely works. Lowering α raises β for fixed data; more data reduces both. Power = 1 − β.</div></div>
+
+<div class="qa"><div class="q">Q75: What is cointegration and how does it differ from correlation for a pairs trade?</div>
+<div class="a">A: Two non-stationary price series are cointegrated if a linear combination (the spread) is stationary — mean-reverting to a long-run equilibrium. Pairs trading needs a <i>stationary spread</i>, not just correlated returns: two series can be highly correlated yet drift apart forever. Cointegration, tested via Engle–Granger/Johansen, is what makes the spread tradeable — but it can break in a regime shift.</div></div>
+
+<div class="qa"><div class="q">Q76: Your CAPM regression has R² = 0.9. Is that good? Any pitfalls?</div>
+<div class="a">A: It means 90% of the stock's variance is market-driven (high systematic exposure) — fine as a description, but R² alone doesn't validate a model. Raw R² only rises as you add regressors (use adjusted R²), and a high R² can be spurious if you regress non-stationary trending series. High R² ≠ good forecasts or causation.</div></div>
+
+<div class="qa"><div class="q">Q77: Name the three OLS-violation problems and their effect.</div>
+<div class="a">A: Heteroskedasticity (non-constant residual variance) and autocorrelation (correlated residuals) both leave coefficients unbiased but make standard errors — and thus t-stats — wrong; fix with robust/Newey–West errors. Multicollinearity (correlated regressors) inflates coefficient standard errors and destabilises estimates; detect with VIF, fix by dropping variables or using PCA.</div></div>
+
+<div class="qa"><div class="q">Q78: What does PCA reveal about the yield curve?</div>
+<div class="a">A: PCA reduces the correlated set of maturity rates to a few orthogonal components. For the yield curve, three explain almost all variation: level (parallel shift), slope (steepening/flattening) and curvature. It's used for dimension reduction in risk models, factor building, and to cure multicollinearity.</div></div>
+
+<div class="qa"><div class="q">Q79: What is an interest-rate swap and how is it valued?</div>
+<div class="a">A: An OTC exchange of fixed-for-floating interest on a notional (notional never exchanged). Value = PV(floating leg) − PV(fixed leg); it's zero at inception (the swap rate is set to make it so) and drifts as rates move. Equivalently a strip of FRAs, or a long/short pair of bonds. Rate sensitivity is the DV01.</div></div>
+
+<div class="qa"><div class="q">Q80: Cap vs floor — who buys which?</div>
+<div class="a">A: A cap is a strip of call options on a floating rate — a floating-rate <i>borrower</i> buys it to cap rising funding costs while keeping the benefit if rates fall. A floor is a strip of puts — a floating-rate <i>lender/investor</i> buys it to protect against falling rates. Buy a cap and sell a floor to get a cheaper collar.</div></div>
+
+<!-- ============================================================ -->
+<h2 class="sec">16. Final Cheat-Sheet &amp; Formula Recap</h2>
+
+<h3>14.1 One-line formula recap</h3>
+<div class="formula"><b>Core formulas</b><br>
+Forward: F = S·e<sup>(r−q)T</sup> &nbsp;|&nbsp; Basis = F − S<br>
+Call payoff = max(S−K,0); Put payoff = max(K−S,0)<br>
+Put–call parity: C + K·e<sup>−rT</sup> = P + S<br>
+Premium = Intrinsic + Time value<br>
+Binomial p = (e<sup>rΔt</sup> − d)/(u − d)<br>
+Greeks: Δ=∂V/∂S, Γ=∂²V/∂S², Θ=∂V/∂t, ν=∂V/∂σ, ρ=∂V/∂r<br>
+Parametric VaR = z·σ·V &nbsp;|&nbsp; VaR<sub>T</sub> = VaR<sub>1</sub>·√T &nbsp;|&nbsp; ES = E[Loss | Loss &gt; VaR]<br>
+EWMA: σ²<sub>t</sub> = λσ²<sub>t−1</sub> + (1−λ)r²<sub>t−1</sub> &nbsp;|&nbsp; GARCH: σ²<sub>t</sub> = ω + αr²<sub>t−1</sub> + βσ²<sub>t−1</sub><br>
+Sharpe = (R<sub>p</sub>−R<sub>f</sub>)/σ &nbsp;|&nbsp; Sortino = (R<sub>p</sub>−R<sub>f</sub>)/σ<sub>down</sub> &nbsp;|&nbsp; Treynor = (R<sub>p</sub>−R<sub>f</sub>)/β<br>
+β = Cov(R<sub>p</sub>,R<sub>m</sub>)/Var(R<sub>m</sub>) &nbsp;|&nbsp; ρ = Cov(X,Y)/(σ<sub>X</sub>σ<sub>Y</sub>) &nbsp;|&nbsp; EL = PD·LGD·EAD<br>
+Min-var hedge: h* = ρ·σ<sub>S</sub>/σ<sub>F</sub> &nbsp;|&nbsp; Beta hedge: N = β·V/V<sub>fut</sub><br>
+Call bound: c ≥ max(S−K·e<sup>−rT</sup>, 0) &nbsp;|&nbsp; c ≤ S; p ≤ K·e<sup>−rT</sup><br>
+CAPM/SML: E(R<sub>i</sub>) = R<sub>f</sub> + β<sub>i</sub>(R<sub>m</sub>−R<sub>f</sub>) &nbsp;|&nbsp; Jensen α = R<sub>p</sub> − [R<sub>f</sub>+β(R<sub>m</sub>−R<sub>f</sub>)]<br>
+CML: E(R<sub>p</sub>) = R<sub>f</sub> + [(R<sub>m</sub>−R<sub>f</sub>)/σ<sub>m</sub>]·σ<sub>p</sub><br>
+2-asset var: σ²<sub>p</sub> = w<sub>1</sub>²σ<sub>1</sub>² + w<sub>2</sub>²σ<sub>2</sub>² + 2w<sub>1</sub>w<sub>2</sub>ρσ<sub>1</sub>σ<sub>2</sub><br>
+Swap value = PV(float) − PV(fixed) &nbsp;|&nbsp; Component VaR sums to total VaR
+</div>
+
+<h3>14.2 Sign board you must never get wrong</h3>
+<table>
+  <thead><tr><th>Position</th><th>Delta</th><th>Gamma</th><th>Theta</th><th>Vega</th></tr></thead>
+  <tbody>
+    <tr><td>Long call</td><td>+</td><td>+</td><td>−</td><td>+</td></tr>
+    <tr><td>Long put</td><td>−</td><td>+</td><td>−</td><td>+</td></tr>
+    <tr><td>Short call</td><td>−</td><td>−</td><td>+</td><td>−</td></tr>
+    <tr><td>Short put</td><td>+</td><td>−</td><td>+</td><td>−</td></tr>
+  </tbody>
+</table>
+<p><b>Rule of thumb:</b> <i>owning</i> any option = long gamma, long vega, short theta. <i>Selling</i> any option flips all three. Delta depends on call (+) vs put (−) and long vs short.</p>
+
+<h3>14.3 Traps checklist (say these before the interviewer asks)</h3>
+<ul>
+  <li>VaR is a threshold, <b>not</b> the maximum loss.</li>
+  <li>"Vega" is <b>not</b> a Greek letter; it's positive for long calls <i>and</i> long puts.</li>
+  <li>Theta is <b>negative</b> for long options (you pay time decay).</li>
+  <li>Historical vol is measured from the past; implied vol is the market's forward-looking view.</li>
+  <li>A long straddle is a <b>volatility</b> bet, not a directional one; watch out for vol crush.</li>
+  <li>Put–call parity equality holds for <b>European</b> options only.</li>
+  <li>√t VaR scaling assumes i.i.d. returns — it understates risk in trending/clustered markets.</li>
+  <li>Zero correlation ≠ independence; p-value ≠ probability the null is true.</li>
+  <li>Diversification benefits shrink in a crisis as correlations rise toward +1.</li>
+  <li>The binomial "p" is a risk-neutral probability, not the real chance of an up move.</li>
+  <li>VaR is <b>not coherent</b> (fails sub-additivity); Expected Shortfall is.</li>
+  <li>Never early-exercise an American call on a non-dividend stock; early exercise is mainly a put phenomenon.</li>
+  <li>CML uses total risk σ (efficient portfolios only); SML uses beta (every asset) — don't mix them up.</li>
+  <li>Correlation ≠ cointegration: a pairs trade needs a stationary (mean-reverting) spread, not just correlated returns.</li>
+  <li>High R² ≠ good/causal model; raw R² always rises with more regressors — use adjusted R² and beware spurious regressions.</li>
+</ul>
+
+<div class="keytake"><b>Final word:</b> On a derivatives/risk/product-control desk the recurring theme is <b>separating what you're exposed to from what you're paid for</b>: direction (delta) vs convexity (gamma) vs volatility (vega) vs time (theta); and expected losses (VaR) vs tail losses (ES/stress). Master the signs, the parity relation, the cost-of-carry, and the VaR/ES distinction, and you can reason through almost any question they throw at you.</div>
+
+</body></html>

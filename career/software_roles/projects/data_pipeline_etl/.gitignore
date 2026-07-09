@@ -1,0 +1,7 @@
+# Generated warehouse (produced by `python etl/pipeline.py`)
+warehouse/*.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/

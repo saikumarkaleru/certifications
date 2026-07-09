@@ -1,0 +1,13 @@
+# The core pipeline runs on the Python STANDARD LIBRARY ONLY.
+# Nothing below is required to run `python etl/pipeline.py` or the test suite.
+#
+# These are OPTIONAL extras that unlock the pandas showcase path and the
+# example Airflow DAG. Install only if you want them:
+#
+#   pip install -r requirements.txt
+#
+# ---- optional: pandas transform showcase (guarded by try/except in code) ----
+pandas>=2.0 ; python_version >= "3.9"
+
+# ---- optional: run the example orchestration DAG (airflow_dag_example.py) ----
+# apache-airflow>=2.7   # heavy; uncomment only in a dedicated environment

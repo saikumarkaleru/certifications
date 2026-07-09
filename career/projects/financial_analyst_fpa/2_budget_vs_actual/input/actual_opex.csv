@@ -1,0 +1,49 @@
+cost_centre,month,month_num,opex
+Manufacturing,Jan,1,72767.18
+Manufacturing,Feb,2,73656.81
+Manufacturing,Mar,3,94135.61
+Manufacturing,Apr,4,106101.68
+Manufacturing,May,5,120955.1
+Manufacturing,Jun,6,107053.74
+Manufacturing,Jul,7,84835.71
+Manufacturing,Aug,8,82592.96
+Manufacturing,Sep,9,111318.36
+Manufacturing,Oct,10,125996.66
+Manufacturing,Nov,11,106379.81
+Manufacturing,Dec,12,145863.91
+Sales & Marketing,Jan,1,154117.23
+Sales & Marketing,Feb,2,158043.27
+Sales & Marketing,Mar,3,194422.8
+Sales & Marketing,Apr,4,211514.23
+Sales & Marketing,May,5,234256.6
+Sales & Marketing,Jun,6,214538.86
+Sales & Marketing,Jul,7,186651.36
+Sales & Marketing,Aug,8,171124.95
+Sales & Marketing,Sep,9,247309.73
+Sales & Marketing,Oct,10,256043.65
+Sales & Marketing,Nov,11,225439.45
+Sales & Marketing,Dec,12,288395.98
+G&A,Jan,1,88290.05
+G&A,Feb,2,88598.42
+G&A,Mar,3,111811.33
+G&A,Apr,4,128419.98
+G&A,May,5,137493.86
+G&A,Jun,6,122064.72
+G&A,Jul,7,97492.62
+G&A,Aug,8,101904.22
+G&A,Sep,9,146000.15
+G&A,Oct,10,152798.85
+G&A,Nov,11,126273.1
+G&A,Dec,12,166154.0
+R&D,Jan,1,114005.22
+R&D,Feb,2,110428.93
+R&D,Mar,3,139312.86
+R&D,Apr,4,161925.6
+R&D,May,5,174614.04
+R&D,Jun,6,163944.83
+R&D,Jul,7,126068.52
+R&D,Aug,8,120773.62
+R&D,Sep,9,165320.58
+R&D,Oct,10,197383.62
+R&D,Nov,11,164828.33
+R&D,Dec,12,202644.12

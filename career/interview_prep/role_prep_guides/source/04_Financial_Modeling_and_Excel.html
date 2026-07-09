@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<!--
+  SHARED STUDY-GUIDE TEMPLATE — do not change the <style> block.
+  Each subject guide must reuse this exact <head> so all PDFs look consistent.
+  Fill <body> with the guide content using the classes documented below.
+
+  STRUCTURE TO USE INSIDE <body>:
+    <div class="cover">                              (title page)
+      <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+      <h1 class="cover-title">Subject Name</h1>
+      <div class="cover-sub">One-line scope. Roles: ...</div>
+    </div>
+    <div class="toc">...contents list...</div>       (optional)
+    <h2>1. Section</h2>            (major section, starts near top; use page-break as needed)
+    <h3>1.1 Subsection</h3>
+    <p>...</p>
+    <ul><li>...</li></ul>
+    <div class="formula"><b>Name</b><br> equation <div class="where">where: ...</div></div>
+    <table><thead><tr><th>..</th></tr></thead><tbody><tr><td>..</td></tr></tbody></table>
+    <div class="example"><div class="ex-h">Worked Example</div> ...steps... </div>
+    <div class="qa"><div class="q">Q: ...</div><div class="a">A: ...</div></div>
+    <div class="trap"><b>Common trap:</b> ...</div>
+    <div class="keytake"><b>Key takeaways:</b> ...</div>
+-->
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Georgia","Cambria",serif; font-size: 10.5pt; line-height: 1.5; color: #1a1a1a; }
+  h1,h2,h3,.cover-kicker,.cover-sub,.ex-h,.q,th { font-family: "Calibri","Segoe UI",sans-serif; }
+
+  /* Cover */
+  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+  .cover-kicker { font-size: 11pt; font-weight: 700; letter-spacing: 2px; color: #1f4e79; text-transform: uppercase; }
+  .cover-title { font-size: 34pt; font-weight: 800; color: #16365c; margin: 10px 0 6px; line-height: 1.1; }
+  .cover-sub { font-size: 12pt; color: #444; font-style: italic; }
+  .cover-foot { margin-top: 22px; font-size: 10pt; color: #666; font-family:"Calibri",sans-serif; }
+
+  /* TOC */
+  .toc { page-break-after: always; }
+  .toc h2 { border: none; }
+  .toc ol { margin-left: 20px; font-family:"Calibri",sans-serif; font-size: 11pt; line-height: 1.9; }
+
+  /* Headings */
+  h2 { font-size: 16pt; font-weight: 700; color: #16365c; border-bottom: 2px solid #16365c;
+       padding-bottom: 4px; margin: 18px 0 10px; page-break-after: avoid; }
+  h3 { font-size: 12.5pt; font-weight: 700; color: #1f4e79; margin: 14px 0 5px; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; color: #333; margin: 10px 0 4px; font-family:"Calibri",sans-serif; }
+  p { margin: 5px 0; text-align: justify; }
+  ul, ol { margin: 5px 0 5px 22px; }
+  li { margin-bottom: 3px; }
+  b, strong { color: #16365c; }
+
+  /* Formula box */
+  .formula { background: #f4f7fb; border-left: 4px solid #1f4e79; padding: 8px 12px; margin: 8px 0;
+             font-family: "Cambria Math","Cambria",serif; page-break-inside: avoid; }
+  .formula b { color: #16365c; }
+  .formula .where { font-size: 9.3pt; color: #555; margin-top: 3px; font-family:"Calibri",sans-serif; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 9px 0; font-size: 9.6pt; page-break-inside: avoid; }
+  th { background: #16365c; color: #fff; text-align: left; padding: 5px 8px; font-size: 9.6pt; }
+  td { border: 1px solid #cbd5e1; padding: 4px 8px; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f4f7fb; }
+
+  /* Worked example */
+  .example { border: 1px solid #b7c7dd; border-radius: 4px; padding: 9px 12px; margin: 10px 0;
+             background: #fbfdff; page-break-inside: avoid; }
+  .ex-h { font-weight: 700; color: #1f4e79; font-size: 10.5pt; margin-bottom: 4px; }
+
+  /* Q&A */
+  .qa { margin: 8px 0; page-break-inside: avoid; }
+  .qa .q { font-weight: 700; color: #16365c; }
+  .qa .a { margin-top: 2px; }
+
+  /* Trap / takeaway callouts */
+  .trap { background: #fff6f0; border-left: 4px solid #c26a2c; padding: 6px 11px; margin: 8px 0; font-size: 10pt; }
+  .keytake { background: #f0f7f1; border-left: 4px solid #3f7d45; padding: 8px 12px; margin: 12px 0; }
+
+  .sec { page-break-before: always; }   /* put on an <h2> to force a fresh page */
+</style></head><body>
+
+  <div class="cover">
+    <div class="cover-kicker">INTERVIEW PREP · FINANCE ROLES</div>
+    <h1 class="cover-title">Financial Modeling &amp; Excel</h1>
+    <div class="cover-sub">The three-statement model, supporting schedules, circularity, scenarios, Excel mastery, and LBO/DCF/M&amp;A model types.</div>
+    <div class="cover-foot">
+      Subject 04 of the Finance Interview Series &nbsp;·&nbsp; Target roles: Equity Research · Investment Banking · FP&amp;A · Product Control<br>
+      Audience: MBA (Finance) fresher — B.E. Computer Science, ~2 years on a derivatives desk, NISM Series-XV certified
+    </div>
+  </div>
+
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li>Why Modeling Matters &amp; How Interviews Test It</li>
+      <li>The Three-Statement Model — Architecture</li>
+      <li>Linking P&amp;L → Balance Sheet → Cash Flow</li>
+      <li>The Cash &amp; Revolver Plug — How the Model Balances</li>
+      <li>Why the Balance Sheet Must Balance (and Debugging It)</li>
+      <li>Supporting Schedules (Revenue, Cost, Depreciation, Debt, Working Capital, Equity)</li>
+      <li>Circular References &amp; Iterative Calculation</li>
+      <li>Scenario &amp; Sensitivity Analysis (Data Tables, Scenario Manager, Toggles)</li>
+      <li>Modeling Best Practices &amp; Conventions</li>
+      <li>Key Excel Functions — Syntax &amp; When to Use</li>
+      <li>Keyboard Shortcuts Reference</li>
+      <li>DCF Model Basics</li>
+      <li>LBO Model Basics</li>
+      <li>M&amp;A / Accretion–Dilution</li>
+      <li>Types of Models — Comparison</li>
+      <li>Interview Q&amp;A Bank (76)</li>
+      <li>Final Checklist &amp; Key Takeaways</li>
+    </ol>
+  </div>
+
+  <!-- ============================================================= -->
+  <h2>1. Why Modeling Matters &amp; How Interviews Test It</h2>
+  <p>A financial model is a spreadsheet that projects a company's financial performance into the future so that a decision — a buy/sell rating, a valuation, a financing package, a budget, or an acquisition price — can be made on numbers rather than intuition. In equity research it feeds a target price; in investment banking it supports a pitch, an LBO, or a merger; in FP&amp;A it becomes the annual operating plan and rolling forecast; in product control it validates the P&amp;L that a trading desk booked. Across all four of your target roles the same core artefact appears again and again: the <b>integrated three-statement model</b>.</p>
+  <p>Interviewers rarely ask you to build a full model on the spot (that is what modeling tests and case studies are for). Instead they probe whether you <i>understand the plumbing</i>: how a change in one number ripples through all three statements, why the balance sheet balances, how you would find a mistake, and whether your Excel is disciplined. If you can walk fluently through the mechanics — depreciation flowing from the fixed-asset schedule into the P&amp;L, into accumulated depreciation on the balance sheet, and back out as a non-cash add-back in the cash flow — you signal that you have actually built models, not just watched a video.</p>
+  <p>This guide is written to make you fluent in exactly that plumbing, and to give you crisp, correct Excel syntax you can quote under pressure. Everything is expressed in a way that transfers directly to Indian companies and INR, because your interviews will likely reference Nifty/BSE names, Ind AS financials, and rupee figures in crore (₹ crore = ₹10 million) and lakh (₹1 lakh = ₹100,000).</p>
+
+  <div class="keytake"><b>Key takeaways:</b> A model exists to support a decision. The three-statement model is the backbone of DCF, LBO, and M&amp;A models alike. Interviews test your understanding of the <i>links</i> and your Excel discipline far more than your typing speed.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">2. The Three-Statement Model — Architecture</h2>
+  <p>The three-statement model integrates the <b>Income Statement (P&amp;L)</b>, the <b>Balance Sheet</b>, and the <b>Cash Flow Statement</b> into a single, dynamically linked workbook. "Integrated" means that when you change one assumption — say revenue growth from 12% to 15% — every dependent line on all three statements updates automatically, and the balance sheet still balances. That property is the entire point; a model where the statements are typed independently is not a model, it is three disconnected tables.</p>
+
+  <h3>2.1 The standard layout</h3>
+  <p>A clean model separates <b>inputs</b>, <b>calculations</b>, and <b>outputs</b>. A typical tab structure:</p>
+  <ul>
+    <li><b>Cover / Contents</b> — model name, author, version, currency (INR crore), units, and a change log.</li>
+    <li><b>Assumptions / Drivers</b> — every hardcoded input in one place, colour-coded blue.</li>
+    <li><b>Income Statement</b> — revenue down to net income.</li>
+    <li><b>Balance Sheet</b> — assets, liabilities, equity.</li>
+    <li><b>Cash Flow Statement</b> — operating, investing, financing.</li>
+    <li><b>Supporting schedules</b> — revenue build, depreciation (PP&amp;E), debt &amp; interest, working capital, equity roll-forward. Often each on its own tab or in a clearly boxed section.</li>
+    <li><b>Outputs</b> — ratios, DCF/valuation, scenario summary, charts.</li>
+  </ul>
+  <p>Columns run left-to-right in time: historical actuals (usually 3 years) followed by forecast years (usually 5). A common convention is to shade historical columns differently and to place a single-cell "years of history / years of forecast" control near the top.</p>
+
+  <h3>2.2 The build order</h3>
+  <p>You do not build the three statements top-to-bottom in isolation. The professional order is:</p>
+  <ol>
+    <li><b>Input the historicals</b> for all three statements from the annual report / Ind AS financials. Make them tie out first.</li>
+    <li><b>Build the supporting schedules</b> off the assumptions: revenue build, cost build, depreciation, debt, working capital.</li>
+    <li><b>Project the Income Statement</b> down to EBIT, then pause — interest depends on the debt schedule.</li>
+    <li><b>Project the Balance Sheet</b> line items that are driven by schedules (PP&amp;E from the depreciation schedule, working capital from the WC schedule, debt from the debt schedule, equity from the roll-forward).</li>
+    <li><b>Build the Cash Flow Statement</b>, which pulls from the P&amp;L (net income, D&amp;A) and from the change in balance sheet items.</li>
+    <li><b>Link the ending cash</b> from the cash flow into the balance sheet cash line; link the revolver/interest back into the P&amp;L. This closes the loop and typically creates the intended circularity.</li>
+    <li><b>Check the balance</b>: Total Assets − (Total Liabilities + Equity) must equal zero in every column.</li>
+  </ol>
+
+  <div class="trap"><b>Common trap:</b> Building the cash flow statement by typing numbers instead of <i>deriving</i> it from the P&amp;L and the change in balance-sheet accounts. If your cash flow is not mechanically linked to the other two statements, the model will never self-check and you have lost the single most valuable diagnostic in the whole workbook.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">3. Linking P&amp;L → Balance Sheet → Cash Flow</h2>
+  <p>The three statements are welded together at specific, memorisable joints. Master these and you can answer almost any "how are the statements linked" question.</p>
+
+  <h3>3.1 The core links</h3>
+  <table>
+    <thead><tr><th>Link</th><th>From</th><th>To</th><th>Mechanics</th></tr></thead>
+    <tbody>
+      <tr><td>Net income</td><td>P&amp;L (bottom line)</td><td>Cash Flow (top of CFO) &amp; Retained Earnings (BS equity)</td><td>Net income starts the indirect cash flow and rolls into retained earnings.</td></tr>
+      <tr><td>Depreciation &amp; Amortisation</td><td>Depreciation schedule → P&amp;L expense</td><td>Cash Flow (add-back) &amp; Accumulated Depreciation (BS)</td><td>Non-cash: reduces P&amp;L profit, added back in CFO, reduces net PP&amp;E on BS.</td></tr>
+      <tr><td>Capex</td><td>Assumptions / capex schedule</td><td>Cash Flow (CFI outflow) &amp; Gross PP&amp;E (BS)</td><td>Cash out in investing; increases gross fixed assets.</td></tr>
+      <tr><td>Change in working capital</td><td>Working-capital schedule (Δ receivables, inventory, payables)</td><td>Cash Flow (CFO)</td><td>Increase in an asset uses cash; increase in a liability is a source of cash.</td></tr>
+      <tr><td>Debt drawdowns / repayments</td><td>Debt schedule</td><td>Cash Flow (CFF) &amp; Debt (BS)</td><td>Draw = cash in + debt up; repay = cash out + debt down.</td></tr>
+      <tr><td>Interest expense</td><td>Debt schedule (rate × balance)</td><td>P&amp;L (below EBIT)</td><td>Reduces pre-tax income; source of the classic circularity.</td></tr>
+      <tr><td>Interest income</td><td>Cash / investments × rate</td><td>P&amp;L</td><td>Also feeds circularity via the cash balance.</td></tr>
+      <tr><td>Dividends / buybacks</td><td>Assumptions / equity schedule</td><td>Cash Flow (CFF) &amp; Retained Earnings / Share capital (BS)</td><td>Cash out; reduces equity.</td></tr>
+      <tr><td>Ending cash</td><td>Cash Flow (last line)</td><td>Balance Sheet (cash line)</td><td>The single most important link — the cash flow's ending cash <i>is</i> the balance sheet's cash.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>3.2 The mental model: the cash flow statement is the bridge</h3>
+  <p>The cleanest way to remember the linkages is that the cash flow statement <b>reconciles the beginning and ending balance sheet</b>. Net income comes from the P&amp;L. Every other line of the cash flow statement is either a non-cash item from the P&amp;L that must be reversed (D&amp;A, stock-based comp), or the <i>change</i> in a balance-sheet account (receivables, inventory, payables, debt, equity). Add net income to all those adjustments and you get the change in cash — which, added to opening cash, gives closing cash, which flows straight into the balance sheet.</p>
+
+  <div class="formula"><b>Indirect-method Cash Flow (skeleton)</b><br>
+    CFO = Net income + D&amp;A + other non-cash − Δ(operating assets) + Δ(operating liabilities)<br>
+    CFI = − Capex + asset sales − acquisitions + Δ(investments)<br>
+    CFF = + Debt drawn − Debt repaid + Equity issued − Buybacks − Dividends<br>
+    Δ Cash = CFO + CFI + CFF<br>
+    Ending cash = Beginning cash + Δ Cash
+    <div class="where">Sign rule: an increase in an <i>asset</i> uses cash (negative); an increase in a <i>liability or equity</i> is a source of cash (positive).</div>
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 1 — One assumption ripples through all three statements</div>
+    <p>Suppose you increase forecast depreciation by ₹100 (crore), tax rate 25%. Trace it:</p>
+    <ul>
+      <li><b>P&amp;L:</b> EBIT falls by ₹100. Pre-tax income falls ₹100. Tax falls by ₹25 (25% × 100). Net income falls by ₹75.</li>
+      <li><b>Cash Flow (CFO):</b> Net income −₹75, but we add back the full ₹100 of D&amp;A. Net effect on CFO = +₹25 (the tax shield). Cash rises ₹25.</li>
+      <li><b>Balance Sheet:</b> Accumulated depreciation up ₹100 → net PP&amp;E down ₹100. Retained earnings down ₹75. Cash up ₹25.</li>
+      <li><b>Balance check:</b> Assets change = −100 (PP&amp;E) + 25 (cash) = −75. Equity change = −75. Liabilities unchanged. Both sides move by −75 → still balances. ✔</li>
+    </ul>
+    <p>This "trace it through" drill is the single most common technical modeling question. Practise it for depreciation, an inventory purchase, a debt draw, and a dividend until it is automatic.</p>
+  </div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">4. The Cash &amp; Revolver Plug — How the Model Balances</h2>
+  <p>Once revenue, costs, capex, working capital, and scheduled debt are all projected, the model produces a forecast cash balance. But two problems arise: (1) what if the company generates more cash than it needs? (2) what if it runs short and cannot fund its obligations? The <b>cash sweep and revolver</b> mechanism handles both and is the device that makes the model self-balance in the financing section.</p>
+
+  <h3>4.1 The revolving credit facility (revolver) as the plug</h3>
+  <p>A revolver is a flexible line of credit. In the model it acts as the <b>plug</b>: if the company has a cash shortfall (cash would fall below a required minimum), it <i>draws</i> on the revolver; if it has surplus cash, it <i>repays</i> the revolver (a "cash sweep") before letting cash pile up. The logic:</p>
+
+  <div class="formula"><b>Revolver logic</b><br>
+    Cash available before revolver = Beginning cash + CFO + CFI + CFF(excl. revolver)<br>
+    If (Cash available &lt; Minimum cash) → <b>Draw</b> = Minimum cash − Cash available<br>
+    If (Cash available &gt; Minimum cash) → <b>Repay</b> = min(Cash surplus, Revolver balance outstanding)<br>
+    Ending cash = max(Cash available, Minimum cash) after the draw/repay
+    <div class="where">Minimum cash is a policy assumption (e.g. ₹50 crore operating buffer). The revolver can never be repaid below zero.</div>
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 2 — Excel revolver formulas</div>
+    <p>Assume: <code>B10</code> = cash available before revolver, <code>B11</code> = minimum cash, <code>B12</code> = beginning revolver balance.</p>
+    <p><b>Revolver draw</b> (only when short of the minimum):</p>
+    <p><code>=MAX(0, B11 - B10)</code></p>
+    <p><b>Revolver repayment</b> (sweep surplus, but never more than what is outstanding):</p>
+    <p><code>=MIN(B12, MAX(0, B10 - B11))</code></p>
+    <p><b>Ending revolver balance</b>:</p>
+    <p><code>=B12 + Draw - Repayment</code></p>
+    <p><b>Ending cash</b>:</p>
+    <p><code>=B10 + Draw - Repayment</code></p>
+    <p>Interest on the revolver then feeds back into the P&amp;L — that is the classic circular reference discussed in Section 7.</p>
+  </div>
+
+  <div class="trap"><b>Common trap:</b> Plugging cash the wrong way — hardcoding a number into the balance-sheet cash line to force it to balance. That masks a real error. Cash must always come from the cash flow statement's ending balance. The revolver, not a hardcode, is the legitimate financing plug.</div>
+
+  <h3>4.2 What "plug" means and does not mean</h3>
+  <p>"Plug" is banker slang for the item that absorbs whatever is left over so the model closes. The <i>legitimate</i> plugs are cash (asset side) and the revolver/short-term debt (liability side). An <i>illegitimate</i> plug is any balancing figure you jam into an unrelated line just to make the two sides equal — that is hiding a mistake, not modeling.</p>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">5. Why the Balance Sheet Must Balance (and Debugging It)</h2>
+  <h3>5.1 Why it balances at all</h3>
+  <p>The balance sheet balances because of the fundamental accounting identity and double-entry bookkeeping:</p>
+  <div class="formula"><b>The accounting identity</b><br>
+    Assets = Liabilities + Shareholders' Equity
+    <div class="where">Every transaction affects at least two accounts such that the identity is preserved. Equity is the residual claim on assets after liabilities.</div>
+  </div>
+  <p>In a correctly linked model the identity is preserved <i>automatically</i> because of the way the cash flow statement reconciles the two statements. Each cash-flow line is either a P&amp;L non-cash reversal or the change in a balance-sheet account. When ending cash (which incorporates all those changes) flows into the balance sheet, and retained earnings absorbs net income minus dividends, the two sides move in lockstep. If your model does <i>not</i> balance, you have a linking error — not a fundamental accounting impossibility.</p>
+
+  <h3>5.2 A disciplined balance check</h3>
+  <p>Every model should have a permanent <b>balance check row</b>: <code>= Total Assets − Total Liabilities − Total Equity</code>, formatted to flash red if it is not zero (use conditional formatting on <code>ABS(check) &gt; 0.5</code>). Build it once and watch it as you extend the model.</p>
+
+  <h3>5.3 Debugging an out-of-balance model — systematic method</h3>
+  <p>When the balance check is non-zero, do not randomly poke cells. Work methodically:</p>
+  <ol>
+    <li><b>Find the first year that breaks.</b> If years 1–2 balance and year 3 breaks, the error was introduced in year 3's formulas.</li>
+    <li><b>Note the size and sign of the imbalance.</b> The exact amount is a huge clue — search the model for that number (Ctrl+F). If assets exceed L+E by ₹75 and depreciation this year is ₹75, you have a depreciation link problem.</li>
+    <li><b>Check the cash flow statement first.</b> The most common cause is a balance-sheet line that changed but whose change was not captured in the cash flow (e.g. you added "other assets" on the BS but forgot the corresponding CFO line). Ensure every non-cash BS line has a corresponding cash-flow line.</li>
+    <li><b>Verify sign conventions.</b> An increase in receivables should <i>reduce</i> cash. A flipped sign typically produces an imbalance of exactly twice the change.</li>
+    <li><b>Confirm ending cash links.</b> The BS cash line must equal the cash flow statement's ending cash, not a stale reference.</li>
+    <li><b>Check retained earnings roll-forward.</b> RE(t) = RE(t−1) + Net income − Dividends. A common bug is linking to the wrong year or omitting dividends.</li>
+    <li><b>Check that each schedule ties back.</b> PP&amp;E on the BS = ending net PP&amp;E from the depreciation schedule; debt on the BS = ending debt from the debt schedule.</li>
+  </ol>
+
+  <div class="trap"><b>Common trap:</b> An imbalance of exactly 2× some line item almost always means a <b>sign error</b> (you added where you should have subtracted). An imbalance equal to a single line item usually means a <b>missing link</b> (a BS change with no matching cash-flow entry).</div>
+
+  <div class="keytake"><b>Key takeaways:</b> The balance sheet balances by construction when links are correct. Keep a permanent balance-check row. Debug by finding the first broken year, matching the imbalance amount to a line item, and confirming that every balance-sheet change has a matching cash-flow entry with the right sign.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">6. Supporting Schedules</h2>
+  <p>Supporting schedules are the engine room. They convert clean assumptions into the detailed line items the three statements consume. Building schedules separately keeps the statements themselves simple (each cell just references a schedule) and makes the logic auditable.</p>
+
+  <h3>6.1 Revenue build (the driver tree)</h3>
+  <p>Never forecast revenue as a single "grows 10%" line if you can decompose it. A driver-based build ties revenue to <b>volume × price</b>, or <b>units × ASP</b>, or <b>customers × ARPU</b>, or for a bank, <b>average assets × yield</b>. This lets you flex the real levers in scenarios.</p>
+  <p>There are two directions to a revenue build, and a good analyst reconciles them:</p>
+  <ul>
+    <li><b>Top-down:</b> start from the total addressable market (TAM), apply a market-share assumption, and work down to the company's revenue. Example: Indian two-wheeler market ≈ 18 million units × company market share 15% × ASP ₹75,000. Good for framing a growth story and for early-stage or new-market forecasts, but share assumptions can be hand-wavy.</li>
+    <li><b>Bottom-up:</b> build from the company's own capacity and operations — stores × sales-per-store, plants × utilisation × output, salesforce × deals × ticket size, or existing customers + net adds. More grounded and defensible; the preferred method when you have segment disclosure.</li>
+  </ul>
+  <p>Best practice: build bottom-up, then cross-check the implied market share top-down for a sanity test. If your bottom-up forecast implies the company captures 60% of a market it holds 15% of today, the forecast is too aggressive.</p>
+
+  <div class="formula"><b>Revenue driver examples</b><br>
+    Manufacturer: Revenue = Units sold × Average selling price<br>
+    SaaS: Revenue = Customers × ARPU (or Beginning ARR + New − Churn)<br>
+    Retail/QSR: Revenue = Number of stores × Sales per store<br>
+    Bank NII: Net interest income = Average interest-earning assets × Net interest margin
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 3 — A small revenue driver build</div>
+    <p>A two-wheeler maker. Assumptions in column C (year 1): units <code>C5 = 1,000,000</code>, ASP <code>C6 = ₹75,000</code>. Volume grows 8% p.a., ASP grows 4% p.a.</p>
+    <ul>
+      <li>Year-1 revenue (in ₹): <code>=C5*C6</code> → ₹75,000 crore-equivalent (scale as needed). Keep units consistent.</li>
+      <li>Year-2 units: <code>=C5*(1+$B$8)</code> where <code>B8</code> = 8% volume growth (absolute reference so it copies across).</li>
+      <li>Year-2 ASP: <code>=C6*(1+$B$9)</code> where <code>B9</code> = 4% price growth.</li>
+      <li>Year-2 revenue: <code>=D5*D6</code> — one formula pattern copied across every forecast column.</li>
+    </ul>
+    <p>Now a scenario can flex volume growth and ASP independently — far more insightful than a blanket revenue growth rate.</p>
+  </div>
+
+  <h3>6.2 Cost build</h3>
+  <p>Split costs into <b>variable</b> (scale with revenue or volume — e.g. raw material as % of sales) and <b>fixed</b> (grow with inflation or step up with capacity). Model COGS often as a % of revenue (gross-margin driven); model employee cost as headcount × average cost; model other opex with an inflation escalator. Keep each cost line referencing an explicit driver on the assumptions tab.</p>
+
+  <div class="formula"><b>Cost build patterns</b><br>
+    COGS = Revenue × (1 − Gross margin %)  &nbsp; or &nbsp; Units × cost per unit<br>
+    Employee cost = Headcount × average cost per employee × (1 + increment %)<br>
+    Other opex = Prior-year opex × (1 + inflation %)  &nbsp; [semi-fixed]
+  </div>
+
+  <h3>6.3 Depreciation schedule (existing + new capex)</h3>
+  <p>Depreciation must be split between <b>existing assets</b> (depreciate the opening net book value on a declining or remaining-life basis) and <b>new capex</b> (each year's additions depreciate over their useful life). The schedule outputs (a) total depreciation → P&amp;L and CFO add-back, and (b) ending net PP&amp;E → balance sheet.</p>
+
+  <div class="formula"><b>PP&amp;E roll-forward</b><br>
+    Ending gross PP&amp;E = Beginning gross PP&amp;E + Capex − Disposals (at cost)<br>
+    Ending accumulated dep. = Beginning acc. dep. + Depreciation − Disposal dep.<br>
+    Ending net PP&amp;E = Ending gross − Ending accumulated depreciation<br>
+    Simplified (net basis): Ending net PP&amp;E = Beginning net PP&amp;E + Capex − Depreciation
+    <div class="where">The simplified net-basis roll-forward is the one most commonly used in a first pass and in interviews.</div>
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 4 — A straight-line depreciation schedule</div>
+    <p>Existing net PP&amp;E ₹1,000 crore, remaining life 10 years → existing depreciation ₹100/yr. New capex ₹200/yr, useful life 5 years → ₹40/yr per vintage, applied from the year of spend.</p>
+    <table>
+      <thead><tr><th>Item (₹ cr)</th><th>Yr 1</th><th>Yr 2</th><th>Yr 3</th></tr></thead>
+      <tbody>
+        <tr><td>Dep. on existing</td><td>100</td><td>100</td><td>100</td></tr>
+        <tr><td>Dep. on Yr-1 capex</td><td>40</td><td>40</td><td>40</td></tr>
+        <tr><td>Dep. on Yr-2 capex</td><td>—</td><td>40</td><td>40</td></tr>
+        <tr><td>Dep. on Yr-3 capex</td><td>—</td><td>—</td><td>40</td></tr>
+        <tr><td><b>Total depreciation</b></td><td><b>140</b></td><td><b>180</b></td><td><b>220</b></td></tr>
+        <tr><td>Beginning net PP&amp;E</td><td>1,000</td><td>1,060</td><td>1,080</td></tr>
+        <tr><td>+ Capex</td><td>200</td><td>200</td><td>200</td></tr>
+        <tr><td>− Depreciation</td><td>140</td><td>180</td><td>220</td></tr>
+        <tr><td><b>Ending net PP&amp;E</b></td><td><b>1,060</b></td><td><b>1,080</b></td><td><b>1,060</b></td></tr>
+      </tbody>
+    </table>
+    <p>A quick shortcut when you cannot build a full vintage schedule: model depreciation as a % of opening gross block or as a % of revenue, calibrated to the historical ratio. Interviewers accept this if you state the simplification.</p>
+  </div>
+
+  <h3>6.4 Debt &amp; interest schedule</h3>
+  <p>For each tranche (term loan, bonds, revolver), roll the balance forward: beginning + drawdowns − scheduled repayments (amortisation) − optional prepayments = ending. Interest = rate × balance. Best practice is to charge interest on the <b>average</b> of beginning and ending balance, which is more accurate but creates circularity (Section 7).</p>
+
+  <div class="formula"><b>Debt &amp; interest</b><br>
+    Ending debt = Beginning debt + Draws − Mandatory repayments − Optional prepayments<br>
+    Interest expense = Interest rate × Average debt = Rate × (Beginning + Ending) / 2<br>
+    (Non-circular alternative) Interest = Rate × Beginning balance
+    <div class="where">Charging on beginning balance avoids circularity at a small cost in precision — a common interview-safe choice.</div>
+  </div>
+
+  <h3>6.5 Working-capital schedule</h3>
+  <p>Working capital is driven off activity ratios (days). Forecast each item using its ratio, then the <i>change</i> in each flows to the cash flow statement.</p>
+  <div class="formula"><b>Working-capital drivers (days method)</b><br>
+    Receivables = (DSO / 365) × Revenue &nbsp;&nbsp; [DSO = days sales outstanding]<br>
+    Inventory = (DIO / 365) × COGS &nbsp;&nbsp; [DIO = days inventory outstanding]<br>
+    Payables = (DPO / 365) × COGS &nbsp;&nbsp; [DPO = days payables outstanding]<br>
+    Cash conversion cycle = DSO + DIO − DPO<br>
+    Δ Net working capital → cash flow (an increase in NWC uses cash)
+  </div>
+
+  <h3>6.6 Equity / retained-earnings roll-forward</h3>
+  <div class="formula"><b>Equity roll-forward</b><br>
+    Ending retained earnings = Beginning RE + Net income − Dividends − Buybacks (RE portion)<br>
+    Ending share capital = Beginning + New issuance − Buybacks (par portion)<br>
+    Total equity = Share capital + Reserves &amp; surplus (incl. RE) + Other comprehensive income
+    <div class="where">Under Ind AS, "Reserves &amp; Surplus" houses retained earnings; dividends reduce it in the period declared.</div>
+  </div>
+
+  <div class="keytake"><b>Key takeaways:</b> Schedules turn assumptions into statement line items. Build revenue and cost off real drivers; split depreciation into existing vs new capex; roll debt and equity forward; drive working capital off days ratios. Each statement line should reference a schedule, not a hardcode.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">7. Circular References &amp; Iterative Calculation</h2>
+  <h3>7.1 Where circularity comes from</h3>
+  <p>The classic circular reference in a three-statement model runs through <b>interest</b>:</p>
+  <p>Interest expense depends on the debt balance and cash balance → interest affects net income → net income affects cash flow → cash flow affects the cash and revolver balances → which affect interest. The loop closes on itself. The same loop appears when interest is charged on <i>average</i> debt (ending balance depends on the cash generated, which depends on interest, which depends on the ending balance).</p>
+
+  <div class="formula"><b>The interest circularity</b><br>
+    Interest → Net income → Cash flow → Cash / Revolver balance → Average debt → Interest → …
+    <div class="where">A legitimate, intentional circularity. Excel resolves it by iterating until the numbers converge.</div>
+  </div>
+
+  <h3>7.2 Iterative calculation</h3>
+  <p>Excel normally forbids circular references and shows a warning. To let the interest loop resolve, enable iterative calculation: <b>File → Options → Formulas → Enable iterative calculation</b> (set Maximum Iterations ~100, Maximum Change 0.001). Excel then recomputes the loop repeatedly until values stop changing — they <i>converge</i> to the consistent answer.</p>
+
+  <h3>7.3 The problem with leaving iteration on</h3>
+  <p>Iterative calc is fragile. If any cell in the loop ever returns an error (e.g. a <code>#DIV/0!</code> during editing), the error propagates around the circle and can freeze the whole model at <code>#REF!</code> or <code>0</code>, and turning iteration off then on may not clear it. Models can also become slow. Professionals therefore build a <b>circularity switch</b>.</p>
+
+  <h3>7.4 The circularity switch (circuit breaker)</h3>
+  <p>Add a single input cell, e.g. <code>Circ_Switch</code> = 1 (on) or 0 (off). Wrap the interest calculation so that when the switch is 0, interest is forced to zero (or to a hardcoded prior value), breaking the loop and clearing any propagated error. Flip it back to 1 to restore live calculation.</p>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 5 — Circularity switch &amp; average-debt interest</div>
+    <p>Let <code>$B$2</code> = circularity switch (1/0), interest rate in <code>$B$3</code>, beginning debt in <code>C10</code>, ending debt in <code>C11</code>.</p>
+    <p><b>Interest on average debt, protected by the switch:</b></p>
+    <p><code>=IF($B$2=1, $B$3*(C10+C11)/2, 0)</code></p>
+    <p>When the model breaks (an error races round the loop), set <code>B2 = 0</code>: interest becomes 0, the loop opens, errors clear, and the model recalculates. Set <code>B2 = 1</code> to resume the live average-debt interest. Wrapping with <code>IFERROR</code> as a second layer is also common:</p>
+    <p><code>=IFERROR(IF($B$2=1, $B$3*(C10+C11)/2, 0), 0)</code></p>
+  </div>
+
+  <h3>7.5 Alternatives to iteration</h3>
+  <ul>
+    <li><b>Charge interest on the opening balance</b> only — removes the circularity entirely at the cost of minor precision. Many buy-side and interview models do exactly this.</li>
+    <li><b>Copy-paste values</b> — compute interest once with iteration on, then paste the resulting interest figures as hardcoded values and turn iteration off. Fast and stable, but the interest no longer updates when assumptions change (you must repeat the paste). Acceptable for a one-off; risky in a live model.</li>
+    <li><b>Macro / VBA copy-paste loop</b> — a button that runs the iteration in code and pastes values. Robust but adds complexity.</li>
+  </ul>
+
+  <div class="trap"><b>Common trap:</b> Forgetting to switch iterative calculation back on after opening a colleague's model, then panicking at a circular-reference warning. Also: leaving a "copy-paste values" interest hardcode in place and wondering why interest never changes when you flex leverage. Always know whether your interest is live or pasted.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">8. Scenario &amp; Sensitivity Analysis</h2>
+  <p>A model's value multiplies when it can answer "what if?". Three tools: <b>toggles/scenarios</b>, <b>data tables</b>, and the <b>Scenario Manager</b>.</p>
+
+  <h3>8.1 Scenario toggles with CHOOSE / INDEX</h3>
+  <p>Build Base / Bull / Bear assumption sets in three rows, then a single <b>scenario selector cell</b> (1, 2, or 3) that picks the live set. <code>CHOOSE</code> or <code>INDEX</code> reads the selector and returns the matching assumption; every driver references the selected row so the whole model flips with one cell.</p>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 6 — Scenario toggle</div>
+    <p>Selector in <code>$B$1</code> (1 = Base, 2 = Bull, 3 = Bear). Revenue growth for the three cases sits in <code>C5</code> (Base), <code>C6</code> (Bull), <code>C7</code> (Bear).</p>
+    <p>Live revenue growth:</p>
+    <p><code>=CHOOSE($B$1, C5, C6, C7)</code></p>
+    <p>Equivalent with INDEX (scales better to many drivers — put the selector as the row offset):</p>
+    <p><code>=INDEX(C5:C7, $B$1)</code></p>
+    <p>Combine with a Form Control drop-down (Developer → Insert → Combo/Spin) linked to <code>B1</code> so a user just picks "Bull" from a menu.</p>
+  </div>
+
+  <h3>8.2 Data tables — one-variable and two-variable</h3>
+  <p>A <b>Data Table</b> (Data → What-If Analysis → Data Table) recalculates a chosen output for a grid of input values, all at once. It is the standard tool for a sensitivity matrix (e.g. share price vs WACC and terminal growth).</p>
+  <ul>
+    <li><b>One-variable data table:</b> list the input values down a column (or across a row). Put the output formula one cell up and to the right (for a column input) referencing the model output. In the dialog, set <b>Column input cell</b> to the model's input cell.</li>
+    <li><b>Two-variable data table:</b> input values run down the left column <i>and</i> across the top row; the output formula sits in the top-left corner cell of the grid. Set both <b>Row input cell</b> and <b>Column input cell</b>.</li>
+  </ul>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 7 — Two-variable data table (DCF share price vs WACC &amp; g)</div>
+    <p>Say your DCF outputs a per-share value in <code>B2</code>, driven by WACC in <code>B3</code> and terminal growth <code>g</code> in <code>B4</code>.</p>
+    <ol>
+      <li>Pick a blank area. In the <b>top-left corner cell</b> of the grid, type <code>=B2</code> (a link to the output — this cell must reference the result).</li>
+      <li>Down the left column below that corner, list WACC values: 10%, 11%, 12%, 13%.</li>
+      <li>Across the top row to the right of the corner, list g values: 3%, 4%, 5%.</li>
+      <li>Select the whole rectangle (corner + row headers + column headers + empty body).</li>
+      <li>Data → What-If Analysis → Data Table. Set <b>Row input cell = B4</b> (g, since g runs across the row) and <b>Column input cell = B3</b> (WACC, since it runs down the column).</li>
+      <li>Excel fills every cell with the recomputed share price for that WACC/g pair. It writes an array <code>{=TABLE(B4,B3)}</code> — you cannot edit individual result cells.</li>
+    </ol>
+    <p>Read it like a football-field: the price rises as WACC falls and as g rises. This grid is the single most-used exhibit in an equity research valuation.</p>
+  </div>
+
+  <div class="trap"><b>Common trap:</b> Getting the row/column input cells backwards, or forgetting that the output-link cell goes in the <i>top-left corner</i>. Also: data tables recalculate on every workbook calc and can make large models crawl — set calculation to "Automatic Except for Data Tables" (Formulas → Calculation Options) if the model is slow.</div>
+
+  <h3>8.3 Scenario Manager</h3>
+  <p>Data → What-If Analysis → Scenario Manager stores named sets of input values (e.g. "Recession", "Base", "Boom") and swaps them in on demand, and can produce a summary report. It is handy for a handful of discrete scenarios but less flexible than a CHOOSE/INDEX toggle for a live, driver-based model; most modelers prefer the toggle approach for its transparency.</p>
+
+  <h3>8.4 Sensitivity vs scenario — the distinction</h3>
+  <table>
+    <thead><tr><th>Aspect</th><th>Sensitivity analysis</th><th>Scenario analysis</th></tr></thead>
+    <tbody>
+      <tr><td>Varies</td><td>One or two inputs at a time, holding all else constant</td><td>A coherent set of inputs together (a "story")</td></tr>
+      <tr><td>Tool</td><td>Data table</td><td>Toggle / Scenario Manager</td></tr>
+      <tr><td>Answers</td><td>"How sensitive is value to WACC?"</td><td>"What happens in a recession?"</td></tr>
+      <tr><td>Output</td><td>A grid / tornado chart</td><td>A set of full model outputs per case</td></tr>
+    </tbody>
+  </table>
+
+  <h3>8.5 Goal Seek</h3>
+  <p><b>Goal Seek</b> (Data → What-If Analysis → Goal Seek) answers the inverse question: "what input value makes this output hit a target?" It solves for <i>one</i> input to reach <i>one</i> target. You specify three things: <b>Set cell</b> (the output/formula cell), <b>To value</b> (the target number, a hardcode), and <b>By changing cell</b> (the single input to solve for — must be a hardcoded value, not a formula).</p>
+  <div class="example">
+    <div class="ex-h">Worked Example 7A — Goal Seek uses</div>
+    <ul>
+      <li><b>DCF:</b> "What WACC makes the DCF value equal the current share price?" Set cell = per-share value, To value = market price, By changing cell = WACC input. The answer is the market-implied cost of capital.</li>
+      <li><b>LBO:</b> "What entry multiple gives exactly a 25% IRR?" Set cell = IRR, To value = 25%, By changing cell = entry EV/EBITDA. This finds the maximum price the sponsor can pay.</li>
+      <li><b>M&amp;A:</b> "How much synergy makes a dilutive deal breakeven?" Set cell = accretion/dilution %, To value = 0%, By changing cell = synergy input. That is breakeven synergies (Section 14).</li>
+    </ul>
+    <p>Goal Seek <i>overwrites</i> the input cell with the solved value — note the original first, or work on a copy. It also needs a numeric, continuous relationship; it can fail on step functions or when no solution exists.</p>
+  </div>
+
+  <h3>8.6 Solver</h3>
+  <p><b>Solver</b> (an add-in: File → Options → Add-ins → Excel Add-ins → Solver) is Goal Seek's heavyweight cousin. It optimises an objective (maximise, minimise, or hit a value) by changing <i>multiple</i> input cells <i>subject to constraints</i>. Use it for genuine optimisation: maximise IRR subject to a leverage cap and a minimum DSCR; minimise funding cost across debt tranches subject to a total-debt limit; or portfolio weight optimisation. For everyday three-statement work Goal Seek is usually enough — Solver is reserved for constrained multi-variable problems.</p>
+
+  <table>
+    <thead><tr><th>Tool</th><th>Changes</th><th>Solves for</th><th>Constraints?</th></tr></thead>
+    <tbody>
+      <tr><td>Goal Seek</td><td>1 input</td><td>1 output = target</td><td>No</td></tr>
+      <tr><td>Solver</td><td>Many inputs</td><td>Max / min / target of an objective</td><td>Yes</td></tr>
+      <tr><td>Data table</td><td>1–2 inputs (grid)</td><td>Output across every combination</td><td>No</td></tr>
+      <tr><td>Scenario Manager</td><td>Many inputs (named sets)</td><td>Output per stored scenario</td><td>No</td></tr>
+    </tbody>
+  </table>
+  <div class="trap"><b>Common trap:</b> Pointing Goal Seek's "By changing cell" at a formula cell — it only works on a hardcoded input. Also forgetting that Goal Seek permanently changes that input; if you Goal-Seek WACC you have now moved your WACC assumption, which cascades through the whole model.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">9. Modeling Best Practices &amp; Conventions</h2>
+  <h3>9.1 Colour conventions</h3>
+  <p>The near-universal convention, understood by every banker and analyst:</p>
+  <table>
+    <thead><tr><th>Colour</th><th>Means</th></tr></thead>
+    <tbody>
+      <tr><td><b>Blue font</b></td><td>Hardcoded input / assumption (a number you type)</td></tr>
+      <tr><td><b>Black font</b></td><td>Formula / calculation within the same sheet</td></tr>
+      <tr><td><b>Green font</b></td><td>Link to another worksheet (same workbook)</td></tr>
+      <tr><td><b>Red font</b></td><td>Link to another workbook / external file (fragile — flag it)</td></tr>
+    </tbody>
+  </table>
+  <p>This lets anyone open your model and instantly see what is an assumption they can change (blue) versus a calculation they should not overtype (black).</p>
+
+  <h3>9.2 The cardinal rules</h3>
+  <ul>
+    <li><b>No hardcoding inside formulas.</b> Never write <code>=Revenue*1.25</code> to apply a tax rate — put 25% in a labelled input cell and reference it. Hardcodes buried in formulas are invisible and un-auditable.</li>
+    <li><b>One formula across a row.</b> A forecast row should contain the <i>same</i> formula copied across every period. If column F differs from column E, that is a red flag (either an error or a deliberate, documented exception).</li>
+    <li><b>Separate inputs, calculations, outputs.</b> Ideally on different tabs or clearly boxed. A user should be able to change any blue cell without hunting.</li>
+    <li><b>Consistent sign convention.</b> Decide up front: are expenses negative or positive? Model consistently. Most models keep the P&amp;L with positive revenue and positive expenses subtracted; the cash flow uses signed conventions (uses of cash negative).</li>
+    <li><b>Build error checks.</b> Balance check, cash-flow-to-balance-sheet cash tie, sum-of-parts checks, and a master "checks" cell that is TRUE only if all sub-checks pass.</li>
+    <li><b>No naked constants for time.</b> Use one units/period assumption, not 365 typed in ten places.</li>
+    <li><b>Document.</b> A comments column, an assumptions log, and a version/change history. Row labels should be self-explanatory.</li>
+    <li><b>Keep it simple &amp; transparent.</b> A model others cannot follow is a liability. Favour clear structure over clever mega-formulas.</li>
+  </ul>
+
+  <h3>9.3 Formatting discipline</h3>
+  <ul>
+    <li>Units stated explicitly (₹ crore) and consistent throughout.</li>
+    <li>Historicals vs forecasts visually distinguished.</li>
+    <li>Negative numbers in parentheses or red, consistently.</li>
+    <li>Freeze panes so labels stay visible; group/outline schedules.</li>
+    <li>No merged cells in calculation ranges (they break navigation and formulas).</li>
+  </ul>
+
+  <div class="trap"><b>Common trap:</b> Hardcoding a growth rate or tax rate directly into a formula "just this once". Six months later nobody — including you — can find why the forecast behaves oddly. Every number that could change belongs in a blue input cell.</div>
+
+  <div class="keytake"><b>Key takeaways:</b> Blue = input, black = formula, green = cross-sheet link. No hardcodes in formulas. One formula across the row. Separate inputs/calcs/outputs. Build checks. Document. These conventions are how interviewers judge whether you have real modeling hygiene.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">10. Key Excel Functions — Syntax &amp; When to Use</h2>
+  <p>Quote these with correct syntax; interviewers do ask. Excel arguments are comma-separated in the English/US locale (Indian Excel installs typically use the comma too).</p>
+
+  <h3>10.1 Lookups</h3>
+  <div class="formula"><b>INDEX + MATCH</b> (the professional's lookup)<br>
+    <code>INDEX(return_range, MATCH(lookup_value, lookup_range, 0))</code>
+    <div class="where">MATCH returns the <i>position</i> of the lookup value; INDEX returns the value at that position. match_type 0 = exact match. Two-way: <code>INDEX(matrix, MATCH(row_val, rows, 0), MATCH(col_val, cols, 0))</code>.</div>
+  </div>
+  <div class="formula"><b>VLOOKUP</b><br>
+    <code>VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code>
+    <div class="where">Searches the <i>first</i> column of table_array; returns the value in column col_index_num. Use FALSE (or 0) for exact match. Cannot look to the left of the key column.</div>
+  </div>
+  <div class="formula"><b>XLOOKUP</b> (modern; Excel 365 / 2021+)<br>
+    <code>XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</code>
+    <div class="where">Looks up in any direction, defaults to exact match, and has a built-in "if not found" argument. Replaces both VLOOKUP and HLOOKUP.</div>
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 8 — INDEX/MATCH lookup</div>
+    <p>You have company names in <code>A2:A50</code> and their EBITDA margins in <code>D2:D50</code>. You want the margin for "Tata Motors" typed in <code>G1</code>:</p>
+    <p><code>=INDEX(D2:D50, MATCH(G1, A2:A50, 0))</code></p>
+    <p>MATCH finds "Tata Motors" at, say, position 12; INDEX returns the 12th value of <code>D2:D50</code>. If the name might be missing, wrap it: <code>=IFERROR(INDEX(D2:D50,MATCH(G1,A2:A50,0)),"Not found")</code>.</p>
+    <p><b>Why not VLOOKUP?</b> If EBITDA margin were in column D and the name in column A, VLOOKUP works only because A is left of D. But if you needed to return a value in column A while looking up by column D, VLOOKUP cannot look left — INDEX/MATCH can. INDEX/MATCH also does not break when columns are inserted (VLOOKUP's hardcoded col_index_num shifts).</p>
+  </div>
+
+  <h3>10.2 Conditional aggregation</h3>
+  <div class="formula"><b>SUMIFS / COUNTIFS / AVERAGEIFS</b><br>
+    <code>SUMIFS(sum_range, criteria_range1, criteria1, [criteria_range2, criteria2], …)</code><br>
+    <code>COUNTIFS(criteria_range1, criteria1, …)</code><br>
+    <code>AVERAGEIFS(average_range, criteria_range1, criteria1, …)</code>
+    <div class="where">Note the argument order: SUMIFS puts the sum_range <i>first</i>; the older SUMIF puts it last: <code>SUMIF(range, criteria, [sum_range])</code>. Criteria can use operators in quotes, e.g. <code>"&gt;1000"</code>, <code>"&lt;="&amp;B1</code>.</div>
+  </div>
+  <p>Use SUMIFS to total revenue for a segment, a region, or a date range from a flat data dump — the workhorse of building drivers from raw transaction or trial-balance data.</p>
+
+  <h3>10.3 Logic &amp; error handling</h3>
+  <div class="formula"><b>IF / nested IF / IFS</b><br>
+    <code>IF(logical_test, value_if_true, value_if_false)</code><br>
+    <code>IFS(test1, val1, test2, val2, …)</code> (365/2019+) avoids deep nesting.
+  </div>
+  <div class="formula"><b>IFERROR</b><br>
+    <code>IFERROR(value, value_if_error)</code>
+    <div class="where">Returns value_if_error only if value evaluates to an error (#DIV/0!, #N/A, #REF!, …). Cleaner than <code>IF(ISERROR(...),...)</code>. Do not over-use — it can hide genuine problems.</div>
+  </div>
+
+  <h3>10.4 Selection &amp; dynamic references</h3>
+  <div class="formula"><b>CHOOSE</b><br>
+    <code>CHOOSE(index_num, value1, value2, …)</code> — returns the value at position index_num. Ideal for scenario toggles.
+  </div>
+  <div class="formula"><b>OFFSET</b> (volatile — use sparingly)<br>
+    <code>OFFSET(reference, rows, cols, [height], [width])</code> — returns a range shifted from a reference. Useful for rolling ranges but recalculates on every change (slows big models).
+  </div>
+  <div class="formula"><b>INDIRECT</b> (volatile)<br>
+    <code>INDIRECT(ref_text, [a1])</code> — turns a text string into a cell/range reference, e.g. build a sheet name dynamically. Powerful but volatile and hard to audit; prefer INDEX where possible.
+  </div>
+
+  <h3>10.5 Time value of money</h3>
+  <div class="formula"><b>NPV / XNPV</b><br>
+    <code>NPV(rate, value1, value2, …)</code> — discounts a series of <i>equally spaced</i> cash flows, assuming the first cash flow is one period away.<br>
+    <code>XNPV(rate, values, dates)</code> — discounts cash flows on their actual dates (handles irregular timing).
+    <div class="where">Trap: NPV assumes the first value occurs at the end of period 1. A time-0 cash flow must be added <i>outside</i> NPV: <code>=C0 + NPV(rate, C1:Cn)</code>.</div>
+  </div>
+  <div class="formula"><b>IRR / XIRR / MIRR</b><br>
+    <code>IRR(values, [guess])</code> — rate where NPV = 0 for equally spaced flows (first value usually the negative outlay).<br>
+    <code>XIRR(values, dates, [guess])</code> — IRR for cash flows on actual dates (the correct tool for real, irregularly timed flows).<br>
+    <code>MIRR(values, finance_rate, reinvest_rate)</code> — reinvests interim flows at a specified rate.
+  </div>
+  <div class="formula"><b>PMT</b> (loan/annuity payment)<br>
+    <code>PMT(rate, nper, pv, [fv], [type])</code>
+    <div class="where">rate is <i>per period</i> (divide annual by 12 for monthly). Returns a negative number (a payment out). type = 0 (end of period, default) or 1 (beginning).</div>
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 9 — IRR vs XIRR</div>
+    <p>A PE-style cash flow: invest ₹100 cr today, receive ₹0, ₹0, ₹0, ₹0, ₹250 cr in year 5.</p>
+    <p>Flows in <code>B1:B6</code> = −100, 0, 0, 0, 0, 250. Annual, equally spaced:</p>
+    <p><code>=IRR(B1:B6)</code> → about 20.1% (since 250/100 = 2.5× over 5 years, IRR = 2.5^(1/5) − 1 ≈ 20.1%).</p>
+    <p>Now the same cash flows on real dates in <code>A1:A6</code> (e.g. deal closes 15-Apr-2026, exit 30-Jun-2031). Use:</p>
+    <p><code>=XIRR(B1:B6, A1:A6)</code> — this accounts for the exact 5.2-year holding period, giving a slightly different (more accurate) rate. XIRR is what PE and real-estate models use because deal cash flows never land on tidy annual boundaries.</p>
+    <p><b>EMI check with PMT:</b> a ₹50 lakh home loan at 9% p.a. for 20 years: <code>=PMT(9%/12, 20*12, 5000000)</code> → about −₹44,986/month.</p>
+  </div>
+
+  <div class="formula"><b>IPMT / PPMT</b> (splitting a loan payment)<br>
+    <code>IPMT(rate, per, nper, pv, [fv], [type])</code> — the <i>interest</i> portion of payment number <code>per</code>.<br>
+    <code>PPMT(rate, per, nper, pv, [fv], [type])</code> — the <i>principal</i> portion of that same payment.
+    <div class="where">IPMT + PPMT = PMT for every period. Use them to build an amortisation schedule (interest falls, principal rises over the loan's life). Essential for a debt schedule with an amortising term loan.</div>
+  </div>
+  <div class="formula"><b>RATE</b> (solve for the implied rate)<br>
+    <code>RATE(nper, pmt, pv, [fv], [type], [guess])</code> — returns the periodic interest rate given the payment stream. Multiply by periods/year to annualise. Useful for backing out the effective rate on a lease or structured loan.
+  </div>
+  <div class="formula"><b>EFFECT / NOMINAL</b> (rate conversion)<br>
+    <code>EFFECT(nominal_rate, npery)</code> — converts a nominal annual rate compounded <code>npery</code> times into the effective annual rate (EAR).<br>
+    <code>NOMINAL(effect_rate, npery)</code> — the reverse.
+    <div class="where">Example: <code>=EFFECT(12%, 12)</code> → 12.68% EAR for 12% nominal compounded monthly. Lets you compare loans quoted on different compounding bases apples-to-apples.</div>
+  </div>
+  <div class="formula"><b>MIRR</b> (modified IRR)<br>
+    <code>MIRR(values, finance_rate, reinvest_rate)</code> — reinvests interim positive flows at <code>reinvest_rate</code> and finances negatives at <code>finance_rate</code>.
+    <div class="where">Fixes two IRR flaws: the unrealistic assumption that interim cash is reinvested at the IRR itself, and the multiple-IRR problem when cash flows change sign more than once.</div>
+  </div>
+
+  <h3>10.6 Dynamic arrays (Excel 365)</h3>
+  <p>Modern Excel "spills" a whole array from one formula. These are increasingly expected and worth quoting.</p>
+  <div class="formula"><b>FILTER / SORT / UNIQUE</b><br>
+    <code>FILTER(array, include, [if_empty])</code> — returns only rows meeting a condition, e.g. <code>=FILTER(A2:D50, C2:C50="Auto")</code> pulls every auto-segment row.<br>
+    <code>SORT(array, [sort_index], [sort_order], [by_col])</code> — sorts an array in a formula.<br>
+    <code>UNIQUE(array)</code> — the distinct values in a range (great for building a driver list from a data dump).<br>
+    <code>SEQUENCE(rows, [cols], [start], [step])</code> — generates a number series (e.g. forecast period numbers).
+    <div class="where">These "spill" into neighbouring cells and update live. Reference the whole spilled range with the <code>#</code> operator, e.g. <code>=SUM(F2#)</code>.</div>
+  </div>
+
+  <h3>10.7 LET and LAMBDA (concept)</h3>
+  <div class="formula"><b>LET</b> — name intermediate results inside one formula<br>
+    <code>LET(name1, value1, [name2, value2, …], calculation)</code>
+    <div class="where">Example: <code>=LET(rev, A1*A2, marg, 0.2, rev*marg)</code>. Improves readability and speed (each named part is computed once).</div>
+  </div>
+  <div class="formula"><b>LAMBDA</b> — build a reusable custom function with no VBA<br>
+    <code>LAMBDA(parameter1, …, calculation)</code>, saved via Name Manager to become a callable function.
+    <div class="where">Conceptually lets you define, say, a <code>DEPRECIATE()</code> or <code>GORDONTV()</code> function once and reuse it everywhere. Powerful but newer; know it exists and that it replaces repetitive VBA UDFs.</div>
+  </div>
+
+  <h3>10.8 Text &amp; date functions</h3>
+  <div class="formula"><b>Text</b><br>
+    <code>LEFT / RIGHT / MID(text, num)</code>, <code>LEN(text)</code>, <code>TRIM(text)</code> (strip stray spaces), <code>&amp;</code> or <code>CONCAT / TEXTJOIN(delim, ignore_empty, …)</code> to join, <code>TEXT(value, format)</code> to format a number as text (e.g. <code>=TEXT(A1,"₹#,##0")</code>).
+    <div class="where">TRIM and CLEAN are lifesavers when importing broker or exchange data with hidden spaces that break lookups.</div>
+  </div>
+  <div class="formula"><b>Date</b><br>
+    <code>EOMONTH(start, months)</code> — last day of a month N months out (roll monthly model periods).<br>
+    <code>EDATE(start, months)</code> — same date N months out.<br>
+    <code>YEARFRAC(start, end, [basis])</code> — the fraction of a year between two dates (day-count for accrued interest / XIRR-style timing).<br>
+    <code>DATE / YEAR / MONTH / DAY</code>, <code>TODAY()</code> (volatile).
+  </div>
+
+  <h3>10.9 Power Query (concept)</h3>
+  <p><b>Power Query</b> (Data → Get &amp; Transform) is Excel's ETL tool: it connects to files, folders, databases, or the web, then <i>records a repeatable sequence of cleaning steps</i> (remove columns, unpivot, merge, filter, change types). When the source refreshes, you click Refresh and the whole cleaned table rebuilds — no re-doing the manual clean. It is the professional way to feed a model from messy trial-balance exports, trade blotters, or multiple monthly files, and it keeps raw data out of your calculation sheets. Know it as the tool that automates data prep; it does not do the modeling itself.</p>
+
+  <h3>10.10 Data &amp; presentation tools</h3>
+  <ul>
+    <li><b>Pivot tables</b> (Insert → PivotTable): summarise large flat datasets by dragging fields into Rows/Columns/Values/Filters — indispensable for slicing trial-balance or trade-blotter data before it enters a model. Refresh after source changes.</li>
+    <li><b>Conditional formatting</b> (Home → Conditional Formatting): colour cells by rule — flag the balance check red when non-zero, highlight covenant breaches, build heat-maps on sensitivity tables.</li>
+    <li><b>Named ranges</b> (Formulas → Name Manager / Ctrl+F3): give a cell a name like <code>TaxRate</code> so formulas read <code>=EBT*TaxRate</code>. Improves readability; use judiciously (too many names become their own maintenance burden).</li>
+    <li><b>Data validation</b> (Data → Data Validation): restrict an input cell to a list (e.g. scenario selector 1/2/3) to prevent bad entries.</li>
+  </ul>
+
+  <h3>10.11 Function reference summary</h3>
+  <table>
+    <thead><tr><th>Function</th><th>Syntax (key args)</th><th>Use it when…</th></tr></thead>
+    <tbody>
+      <tr><td>INDEX/MATCH</td><td><code>INDEX(rng, MATCH(val, rng, 0))</code></td><td>Flexible two-way lookup; look left; robust to column inserts</td></tr>
+      <tr><td>VLOOKUP</td><td><code>VLOOKUP(val, tbl, col, FALSE)</code></td><td>Quick left-to-right lookup on a fixed table</td></tr>
+      <tr><td>XLOOKUP</td><td><code>XLOOKUP(val, look, return, [nf])</code></td><td>Modern replacement; any direction; built-in not-found</td></tr>
+      <tr><td>SUMIFS</td><td><code>SUMIFS(sum, crit_rng, crit, …)</code></td><td>Total values meeting multiple conditions</td></tr>
+      <tr><td>COUNTIFS / AVERAGEIFS</td><td>Same pattern</td><td>Count / average with conditions</td></tr>
+      <tr><td>IF / IFS</td><td><code>IF(test, a, b)</code></td><td>Branching logic; IFS avoids deep nesting</td></tr>
+      <tr><td>IFERROR</td><td><code>IFERROR(val, alt)</code></td><td>Trap #DIV/0!, #N/A gracefully</td></tr>
+      <tr><td>CHOOSE</td><td><code>CHOOSE(n, v1, v2, …)</code></td><td>Scenario toggles; pick the n-th option</td></tr>
+      <tr><td>OFFSET</td><td><code>OFFSET(ref, r, c, [h], [w])</code></td><td>Rolling/dynamic ranges (volatile — sparingly)</td></tr>
+      <tr><td>INDIRECT</td><td><code>INDIRECT(text)</code></td><td>Reference built from text/sheet name (volatile)</td></tr>
+      <tr><td>NPV / XNPV</td><td><code>NPV(rate, flows)</code> / <code>XNPV(rate, flows, dates)</code></td><td>Discount future cash flows (regular / dated)</td></tr>
+      <tr><td>IRR / XIRR</td><td><code>IRR(flows)</code> / <code>XIRR(flows, dates)</code></td><td>Return that sets NPV = 0 (regular / dated)</td></tr>
+      <tr><td>PMT</td><td><code>PMT(rate, nper, pv)</code></td><td>Loan/annuity payment (EMI)</td></tr>
+      <tr><td>EOMONTH / EDATE</td><td><code>EOMONTH(start, months)</code></td><td>Roll dates for monthly models</td></tr>
+      <tr><td>ROUND</td><td><code>ROUND(num, digits)</code></td><td>Control precision (never ROUND inside live links carelessly)</td></tr>
+      <tr><td>IPMT / PPMT</td><td><code>IPMT(rate, per, nper, pv)</code></td><td>Interest / principal split of an amortising payment</td></tr>
+      <tr><td>RATE</td><td><code>RATE(nper, pmt, pv)</code></td><td>Back out the implied periodic interest rate</td></tr>
+      <tr><td>EFFECT</td><td><code>EFFECT(nominal, npery)</code></td><td>Nominal → effective annual rate (compare loans)</td></tr>
+      <tr><td>MIRR</td><td><code>MIRR(vals, fin, reinv)</code></td><td>IRR with realistic reinvestment; avoids multiple-IRR</td></tr>
+      <tr><td>FILTER / UNIQUE / SORT</td><td><code>FILTER(arr, include)</code></td><td>Dynamic-array slice / distinct / sort (365)</td></tr>
+      <tr><td>LET / LAMBDA</td><td><code>LET(name, val, calc)</code></td><td>Name sub-results; build reusable functions (365)</td></tr>
+      <tr><td>TEXTJOIN / TEXT</td><td><code>TEXT(val, "₹#,##0")</code></td><td>Join / format text and labels</td></tr>
+      <tr><td>YEARFRAC</td><td><code>YEARFRAC(start, end)</code></td><td>Day-count fraction between dates</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">11. Keyboard Shortcuts Reference</h2>
+  <p>Fluency with keyboard shortcuts is a visible signal of experience in a modeling test. Learn these cold. (Windows Excel; the interviewer's machine will be Windows.)</p>
+  <table>
+    <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td>F2</td><td>Edit the active cell (enter edit mode)</td></tr>
+      <tr><td>F4</td><td>Toggle absolute/relative reference ($) while editing; repeat last action otherwise</td></tr>
+      <tr><td>F9</td><td>Recalculate all; on a selected formula part, evaluate just that part</td></tr>
+      <tr><td>Ctrl + arrow</td><td>Jump to the edge of a data region</td></tr>
+      <tr><td>Ctrl + Shift + arrow</td><td>Select to the edge of a data region</td></tr>
+      <tr><td>Ctrl + Space / Shift + Space</td><td>Select entire column / entire row</td></tr>
+      <tr><td>Ctrl + C / X / V</td><td>Copy / Cut / Paste</td></tr>
+      <tr><td>Ctrl + Alt + V</td><td>Paste Special (then V = values, F = formulas, T = formats)</td></tr>
+      <tr><td>Alt + = </td><td>AutoSum</td></tr>
+      <tr><td>Ctrl + D / Ctrl + R</td><td>Fill down / Fill right (copy formula across the row — enforces "one formula")</td></tr>
+      <tr><td>Ctrl + ; </td><td>Insert today's date (static)</td></tr>
+      <tr><td>Ctrl + 1</td><td>Format Cells dialog</td></tr>
+      <tr><td>Ctrl + Shift + 4 / 5 / 1</td><td>Currency / Percent / Number (comma) format</td></tr>
+      <tr><td>Ctrl + Page Up / Page Down</td><td>Move between worksheet tabs</td></tr>
+      <tr><td>Ctrl + F3 / F3</td><td>Name Manager / paste a name</td></tr>
+      <tr><td>Ctrl + [ (open bracket)</td><td>Trace precedents (go to cells this formula depends on)</td></tr>
+      <tr><td>Ctrl + ` (grave)</td><td>Toggle show formulas / show values</td></tr>
+      <tr><td>Alt + Enter</td><td>New line within a cell</td></tr>
+      <tr><td>Ctrl + Shift + L</td><td>Toggle AutoFilter</td></tr>
+      <tr><td>Ctrl + Z / Ctrl + Y</td><td>Undo / Redo</td></tr>
+      <tr><td>Ctrl + PgDn then Alt+E+S</td><td>Common paste-special muscle memory (legacy)</td></tr>
+      <tr><td>Alt (then ribbon letters)</td><td>Keyboard access to every ribbon command (e.g. Alt+A+W+T = Data Table)</td></tr>
+      <tr><td>F5 / Ctrl+G → Special</td><td>Go To Special (select constants, formulas, blanks — great for auditing hardcodes)</td></tr>
+    </tbody>
+  </table>
+  <div class="keytake"><b>Key takeaways:</b> F2, F4, Ctrl+arrows, Ctrl+Shift+arrows, Alt+=, Ctrl+D/R, Ctrl+Alt+V, and the Alt-ribbon chords are the highest-leverage. Using <b>Go To Special → Constants</b> to hunt down every hardcoded number in the calculation area is a pro auditing move worth mentioning in interviews.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">12. DCF Model Basics</h2>
+  <p>A discounted cash flow model values a company as the present value of its future free cash flows. It sits on top of the three-statement model, which supplies the cash flows.</p>
+  <div class="formula"><b>Unlevered DCF (enterprise value)</b><br>
+    FCFF = EBIT × (1 − tax) + D&amp;A − Capex − Δ Net working capital<br>
+    Enterprise value = Σ [ FCFFₜ / (1 + WACC)ᵗ ] + Terminal value / (1 + WACC)ⁿ<br>
+    Terminal value (Gordon growth) = FCFFₙ × (1 + g) / (WACC − g)<br>
+    Equity value = Enterprise value − Net debt; &nbsp; Per share = Equity value / shares
+    <div class="where">WACC = weighted average cost of capital; g = perpetual growth rate (&lt; long-run GDP growth). Terminal value often exceeds 60–75% of total — sanity-check it with an exit-multiple cross-check.</div>
+  </div>
+  <p>In Excel: build FCFF as a row off the three-statement model; discount with explicit period factors <code>=1/(1+WACC)^t</code> or <code>XNPV</code> for dated flows; compute terminal value both ways (Gordon growth and exit EV/EBITDA multiple) and compare; then run the two-variable data table (WACC × g) from Worked Example 7.</p>
+  <div class="trap"><b>Common trap:</b> Using <code>NPV</code> for the mid-year convention or for the terminal value without care. <code>NPV</code> assumes year-end flows one period out; if you discount terminal value, discount it by the <i>same</i> n as the final explicit year, and remember NPV excludes any time-0 cash flow.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">13. LBO Model Basics</h2>
+  <p>A leveraged buyout model evaluates buying a company using a large slug of debt, running it for ~3–5 years, and selling it. Returns come from (a) paying down debt with the company's cash (deleveraging), (b) EBITDA growth, and (c) multiple expansion. Private equity firms live in this model.</p>
+
+  <h3>13.1 Sources &amp; Uses</h3>
+  <p>The transaction structure starts with a Sources &amp; Uses table — where the money comes from and where it goes. The two sides must equal.</p>
+  <div class="formula"><b>Sources &amp; Uses</b><br>
+    <b>Uses:</b> Purchase of equity (Enterprise value = EV/EBITDA × EBITDA) + refinance existing debt + transaction fees<br>
+    <b>Sources:</b> New debt (term loans + bonds) + sponsor equity (the plug) + cash on hand<br>
+    Sponsor equity = Total uses − Total debt − Cash used
+    <div class="where">Sponsor equity is the plug on the sources side: whatever debt and cash cannot fund, the PE fund writes as an equity cheque.</div>
+  </div>
+
+  <h3>13.2 Debt paydown &amp; returns</h3>
+  <p>Each year the company's free cash flow (after interest and mandatory amortisation) sweeps down the debt. Lower debt → lower interest → more cash to sweep — a virtuous deleveraging cycle. At exit, you sell at an assumed EV/EBITDA multiple, repay remaining debt, and the residual is the equity proceeds.</p>
+  <div class="formula"><b>LBO returns</b><br>
+    Exit enterprise value = Exit EV/EBITDA multiple × Exit-year EBITDA<br>
+    Exit equity value = Exit EV − Net debt at exit<br>
+    MOIC (money multiple) = Exit equity value / Initial sponsor equity<br>
+    IRR = MOIC^(1 / holding years) − 1 &nbsp; (for a single-in, single-out cash flow)
+    <div class="where">MOIC = Multiple On Invested Capital (also "cash-on-cash"). IRR is time-weighted; compute precisely with XIRR on dated equity flows.</div>
+  </div>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 10 — Quick LBO returns</div>
+    <p>Buy a company for 8.0× EBITDA of ₹500 cr → EV ₹4,000 cr. Fund with ₹2,400 cr debt (4.8×) and ₹1,600 cr sponsor equity. Over 5 years EBITDA grows to ₹700 cr and net debt is paid down to ₹1,000 cr. Exit at 8.0× (no multiple expansion).</p>
+    <ul>
+      <li>Exit EV = 8.0 × 700 = ₹5,600 cr.</li>
+      <li>Exit equity = 5,600 − 1,000 = ₹4,600 cr.</li>
+      <li>MOIC = 4,600 / 1,600 = <b>2.875×</b>.</li>
+      <li>IRR ≈ 2.875^(1/5) − 1 = <b>~23.5%</b>.</li>
+    </ul>
+    <p>Notice all three levers at work: EBITDA grew (500→700), debt fell (2,400→1,000 net), even with a flat exit multiple. This is the intuition PE interviewers want.</p>
+  </div>
+
+  <h3>13.3 The debt tranches (capital structure)</h3>
+  <p>LBO debt is layered. Each tranche sits at a different point in the risk/return and repayment hierarchy — senior/secured debt is cheapest and gets repaid first; subordinated debt is dearer and repaid last. Know the stack:</p>
+  <table>
+    <thead><tr><th>Tranche</th><th>Rank</th><th>Cost / features</th><th>Amortisation</th></tr></thead>
+    <tbody>
+      <tr><td>Revolver (RCF)</td><td>Senior secured</td><td>Cheapest; undrawn line for working-capital swings; commitment fee on undrawn portion</td><td>Drawn/repaid flexibly; the plug</td></tr>
+      <tr><td>Term Loan A (TLA)</td><td>Senior secured</td><td>Bank-held, floating rate; amortising</td><td>Straight-line (e.g. 5–10%/yr) + sweep</td></tr>
+      <tr><td>Term Loan B (TLB)</td><td>Senior secured</td><td>Institutional (funds/CLOs), floating; longer tenor</td><td>Tiny mandatory (~1%/yr) "bullet"; cash sweep</td></tr>
+      <tr><td>High-yield bonds</td><td>Senior/sub unsecured</td><td>Fixed coupon, higher rate; often non-call for a period</td><td>Bullet at maturity (no amortisation)</td></tr>
+      <tr><td>Mezzanine</td><td>Subordinated</td><td>Highest cost; may carry PIK interest and equity warrants</td><td>Bullet; repaid last</td></tr>
+    </tbody>
+  </table>
+  <p>Leverage is quoted in turns of EBITDA (e.g. "4.8× total, 3.0× senior"). More debt magnifies equity returns but raises interest and default risk — the central LBO trade-off. <b>PIK</b> (payment-in-kind) interest accrues onto the principal rather than being paid in cash, preserving near-term cash flow at the cost of a larger balance later.</p>
+
+  <h3>13.4 The cash sweep &amp; debt paydown</h3>
+  <p>After paying mandatory amortisation and interest, the LBO directs surplus cash to prepay debt — the <b>cash sweep</b> — in strict seniority order (revolver, then TLA, then TLB, then bonds). A "100% cash sweep" applies all free cash; sponsors sometimes model a partial sweep to retain a cash cushion.</p>
+  <div class="formula"><b>Cash sweep waterfall (per year)</b><br>
+    Cash available for sweep = Beginning cash + CFO − Capex − Mandatory amortisation − Min. cash<br>
+    Sweep tranche 1 (revolver) = min(Cash available, Revolver balance)<br>
+    Remaining cash → next tranche, and so on down the seniority ladder<br>
+    Ending debt (each tranche) = Beginning − Mandatory − Sweep prepayment
+    <div class="where">Lower debt → lower interest next year → more cash to sweep: the deleveraging flywheel. The sweep interacts with interest, creating the same circularity as the three-statement model.</div>
+  </div>
+
+  <h3>13.5 The returns bridge (value-creation attribution)</h3>
+  <p>A returns (or value-creation) bridge decomposes the equity gain into its three sources, so you can see <i>where</i> the money came from. From the Worked Example 10 deal (entry equity ₹1,600 cr → exit equity ₹4,600 cr, a ₹3,000 cr gain):</p>
+  <div class="formula"><b>Returns bridge components</b><br>
+    EBITDA growth = ΔEBITDA × entry multiple = (700 − 500) × 8.0 = <b>+₹1,600 cr</b><br>
+    Multiple expansion = ΔMultiple × exit EBITDA = (8.0 − 8.0) × 700 = <b>₹0</b><br>
+    Debt paydown / FCF = Δ Net debt = (2,400 − 1,000) = <b>+₹1,400 cr</b><br>
+    Total equity gain = 1,600 + 0 + 1,400 = <b>₹3,000 cr</b> ✔
+    <div class="where">A "good" LBO earns most of its return from operational EBITDA growth and deleveraging, not from betting on multiple expansion (which the sponsor does not control).</div>
+  </div>
+
+  <h3>13.6 Sensitivity in an LBO</h3>
+  <p>The standard LBO output is a data-table matrix of <b>IRR (and MOIC)</b> against the levers that matter most:</p>
+  <ul>
+    <li><b>Entry multiple × Exit multiple</b> — the single most-shown LBO sensitivity; shows how much return depends on multiple expansion vs paying up.</li>
+    <li><b>Leverage (entry Debt/EBITDA) × Exit multiple</b> — more leverage lifts IRR when the deal works but craters it if the exit multiple compresses.</li>
+    <li><b>EBITDA growth (or exit EBITDA) × Exit multiple.</b></li>
+  </ul>
+  <p>Build these with the two-variable data table from Worked Example 7 (output-link in the corner, one lever down the column, one across the row). Interviewers love: "if you pay one turn more at entry but exit at the same multiple, what happens to IRR?" — it falls, because you invested more equity for the same exit.</p>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">14. M&amp;A / Accretion–Dilution</h2>
+  <p>An M&amp;A model tests whether an acquisition increases (accretive) or decreases (dilutive) the acquirer's earnings per share. A quick accretion/dilution check is a favourite interview drill.</p>
+  <div class="formula"><b>Accretion / Dilution logic</b><br>
+    Pro-forma net income = Acquirer NI + Target NI + after-tax synergies − after-tax new interest (on acquisition debt) − foregone interest on cash used<br>
+    Pro-forma shares = Acquirer shares + new shares issued to fund the deal<br>
+    Pro-forma EPS = Pro-forma net income / Pro-forma shares<br>
+    Accretive if Pro-forma EPS &gt; Acquirer standalone EPS; dilutive if lower.
+  </div>
+  <p><b>Rule of thumb (all-stock deal):</b> if the acquirer's P/E is <i>higher</i> than the target's P/E, the deal is accretive; if lower, dilutive. Cash/debt-funded deals turn on whether the target's earnings yield (E/P) exceeds the after-tax cost of the debt/cash used.</p>
+
+  <div class="example">
+    <div class="ex-h">Worked Example 11 — Accretion/dilution quick check</div>
+    <p>Acquirer: net income ₹1,000 cr, 100 cr shares → EPS ₹10; trades at P/E 20 (price ₹200). Target: net income ₹200 cr, offered ₹4,000 cr, funded entirely by issuing new acquirer shares at ₹200.</p>
+    <ul>
+      <li>New shares issued = 4,000 / 200 = 20 cr shares.</li>
+      <li>Pro-forma NI = 1,000 + 200 = ₹1,200 cr (ignore synergies).</li>
+      <li>Pro-forma shares = 100 + 20 = 120 cr.</li>
+      <li>Pro-forma EPS = 1,200 / 120 = <b>₹10.00</b> → exactly neutral.</li>
+    </ul>
+    <p>Cross-check with the P/E rule: target implied P/E = 4,000 / 200 = 20, equal to the acquirer's P/E of 20 → neutral. If the acquirer instead paid only ₹3,000 cr (target P/E 15 &lt; 20) the deal would be accretive; paying ₹5,000 cr (P/E 25 &gt; 20) would be dilutive.</p>
+  </div>
+
+  <h3>14.1 Purchase price &amp; funding mix</h3>
+  <p>The <b>offer price</b> is usually quoted per share at a premium (20–40%) to the target's undisturbed price; multiply by shares (plus in-the-money options, the treasury-stock method) for equity purchase price. Add net debt assumed for the enterprise value. The acquirer then chooses a <b>funding mix</b> — cash on hand, new debt, and/or new equity (stock). Each source has a cost: cash foregoes interest income, debt costs after-tax interest, stock dilutes by adding shares. The mix drives accretion/dilution.</p>
+
+  <h3>14.2 Purchase accounting &amp; goodwill creation</h3>
+  <p>Under acquisition accounting (Ind AS 103 / IFRS 3), the acquirer records the target's assets and liabilities at <b>fair value</b>, not book value. This "step-up" often writes up PP&amp;E and recognises previously unrecorded <b>intangibles</b> (brands, customer relationships). Whatever the purchase price exceeds the fair value of net identifiable assets becomes <b>goodwill</b> — the residual plug on the pro-forma balance sheet.</p>
+  <div class="formula"><b>Goodwill created</b><br>
+    Goodwill = Equity purchase price − Fair value of net identifiable assets acquired<br>
+    Fair value of net identifiable assets = FV assets (incl. asset step-ups &amp; new intangibles) − FV liabilities (incl. deferred tax liability on step-ups)
+    <div class="where">Under Ind AS/IFRS, goodwill is <i>not</i> amortised — it is tested annually for impairment. Identifiable intangibles with finite lives <i>are</i> amortised, which creates incremental (often tax-deductible or non-deductible) expense that hits pro-forma EPS. A DTL arises because the fair-value step-up is booked for accounting but not for tax.</div>
+  </div>
+  <div class="example">
+    <div class="ex-h">Worked Example 11A — Goodwill calculation</div>
+    <p>Acquirer pays ₹4,000 cr equity for a target whose book equity is ₹1,500 cr. Fair-value review steps PP&amp;E up by ₹400 cr and identifies a ₹600 cr brand intangible; a deferred tax liability of ₹250 cr arises on the step-ups.</p>
+    <ul>
+      <li>Fair value of net identifiable assets = 1,500 + 400 + 600 − 250 = ₹2,250 cr.</li>
+      <li>Goodwill = 4,000 − 2,250 = <b>₹1,750 cr</b>, recorded as an asset on the pro-forma balance sheet.</li>
+    </ul>
+    <p>The ₹600 cr brand, if amortised over 10 years, adds ₹60 cr/yr of amortisation that depresses pro-forma net income (and EPS) even though it is a non-cash charge.</p>
+  </div>
+
+  <h3>14.3 Synergies</h3>
+  <p><b>Synergies</b> are the extra value from combining the two firms and are what justify the control premium. Two kinds: <b>cost synergies</b> (headcount, procurement scale, closing duplicate facilities — the credible, modellable kind) and <b>revenue synergies</b> (cross-selling, wider distribution — real but softer, so analysts haircut them). Model synergies net of the one-time <b>cost to achieve</b> (restructuring, integration) and phase them in over 2–3 years. In accretion/dilution, add <i>after-tax</i> synergies to pro-forma net income.</p>
+
+  <h3>14.4 Breakeven synergies</h3>
+  <p>For a dilutive deal, the key question is: "how much synergy makes it breakeven (EPS-neutral)?" Solve for the pre-tax synergy that lifts pro-forma EPS back to the standalone EPS — either algebraically or with Goal Seek (Set pro-forma EPS = standalone EPS, By changing = synergy cell).</p>
+  <div class="formula"><b>Breakeven synergies</b><br>
+    Required after-tax synergy = (Standalone EPS × Pro-forma shares) − Pro-forma NI before synergies<br>
+    Required pre-tax synergy = After-tax synergy / (1 − tax rate)
+  </div>
+  <div class="example">
+    <div class="ex-h">Worked Example 11B — Breakeven synergies</div>
+    <p>Acquirer standalone: NI ₹1,000 cr, 100 cr shares → EPS ₹10. It buys a target for ₹3,000 cr of new debt at 8% pre-tax; target NI ₹150 cr; no new shares; tax 25%.</p>
+    <ul>
+      <li>After-tax new interest = 3,000 × 8% × (1 − 25%) = ₹180 cr.</li>
+      <li>Pro-forma NI before synergies = 1,000 + 150 − 180 = ₹970 cr; shares stay 100 cr → EPS ₹9.70 → <b>dilutive by ₹0.30</b>.</li>
+      <li>Required after-tax synergy = (10 × 100) − 970 = ₹30 cr.</li>
+      <li>Required pre-tax synergy = 30 / (1 − 0.25) = <b>₹40 cr</b>. If management can credibly deliver more than ₹40 cr of pre-tax synergies, the deal turns accretive.</li>
+    </ul>
+  </div>
+
+  <h3>14.5 Building the pro-forma combination</h3>
+  <p>A full merger model combines the two three-statement models line by line: add the income statements (then layer synergies and the incremental D&amp;A from intangibles and new interest), and combine the balance sheets with the purchase-accounting adjustments (eliminate target equity, add goodwill and step-ups, add acquisition debt, reduce cash used, add new shares to equity). The pro-forma balance sheet must still balance — goodwill is precisely the plug that makes it so.</p>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">15. Types of Models — Comparison</h2>
+  <table>
+    <thead><tr><th>Model</th><th>Purpose</th><th>Core output</th><th>Who uses it</th></tr></thead>
+    <tbody>
+      <tr><td>Three-statement</td><td>Project P&amp;L, BS, CF in an integrated way</td><td>Forecast financials; the base for all others</td><td>Everyone (ER, IB, FP&amp;A, PC)</td></tr>
+      <tr><td>DCF</td><td>Intrinsic valuation from future cash flows</td><td>Enterprise/equity value, per-share value</td><td>Equity research, IB valuation</td></tr>
+      <tr><td>LBO</td><td>Test a debt-funded buyout's returns</td><td>IRR, MOIC, max purchase price</td><td>Private equity, IB leveraged finance</td></tr>
+      <tr><td>M&amp;A / accretion-dilution</td><td>Test EPS impact of an acquisition</td><td>Accretive/dilutive, pro-forma EPS, synergies needed</td><td>IB M&amp;A, corp dev</td></tr>
+      <tr><td>Comparable companies / precedent transactions</td><td>Relative valuation via multiples</td><td>Valuation range (EV/EBITDA, P/E)</td><td>ER, IB</td></tr>
+      <tr><td>Budget / operating model (FP&amp;A)</td><td>Annual plan, rolling forecast, variance</td><td>Budget vs actual, driver-based plan</td><td>FP&amp;A, corporate finance</td></tr>
+      <tr><td>Sum-of-the-parts (SOTP)</td><td>Value a conglomerate by segment</td><td>Segment-level EV summed to group value</td><td>ER (e.g. valuing a diversified group)</td></tr>
+    </tbody>
+  </table>
+  <div class="keytake"><b>Key takeaways:</b> The three-statement model is the foundation; DCF, LBO, and M&amp;A models bolt onto it. Know each model's <i>purpose</i> and <i>headline output</i> — that is what interviewers probe when they ask "what model would you build for X?".</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">16. Interview Q&amp;A Bank</h2>
+
+  <h3>16.1 Three-statement mechanics</h3>
+
+  <div class="qa"><div class="q">Q1: Walk me through a three-statement model.</div>
+  <div class="a">A: Start with historical financials and clean them up so they tie out. Build assumption-driven supporting schedules — revenue build, cost build, depreciation, debt &amp; interest, working capital, and an equity roll-forward. Project the income statement down to EBIT. Then project balance-sheet items driven by the schedules: PP&amp;E from the depreciation schedule, working capital from days ratios, debt from the debt schedule, equity from the roll-forward. Build the cash flow statement by starting from net income, adding back non-cash items like D&amp;A, adjusting for changes in working capital (CFO), subtracting capex and adding asset sales (CFI), and adding debt draws and equity issuance less repayments and dividends (CFF). The cash flow's ending cash links into the balance-sheet cash line; interest from the debt/cash balances feeds back into the P&amp;L, creating an intentional circularity resolved by iterative calc or a beginning-balance convention. Finally, the balance-check row (Assets − Liabilities − Equity) must read zero in every year.</div></div>
+
+  <div class="qa"><div class="q">Q2: How are the three statements linked?</div>
+  <div class="a">A: Net income flows from the P&amp;L into the top of the cash flow statement and into retained earnings on the balance sheet. D&amp;A is a P&amp;L expense, a cash-flow add-back, and reduces net PP&amp;E on the balance sheet. Capex is a cash outflow in investing and increases gross PP&amp;E. Changes in working-capital accounts and in debt/equity move between the balance sheet and the cash flow. The single most important link is that the cash flow statement's ending cash becomes the balance-sheet cash. In short, the cash flow statement is the bridge that reconciles the opening and closing balance sheet.</div></div>
+
+  <div class="qa"><div class="q">Q3: What makes the balance sheet balance?</div>
+  <div class="a">A: The accounting identity, Assets = Liabilities + Equity, enforced by double-entry bookkeeping — every transaction hits two places that preserve the identity. In a model it balances automatically when the links are correct: the cash flow statement captures every change in every balance-sheet account (as either a non-cash P&amp;L reversal or the change in an account), so ending cash plus retained earnings move exactly in step with the rest of the balance sheet. If a model doesn't balance, it's a linking error, not an accounting impossibility.</div></div>
+
+  <div class="qa"><div class="q">Q4: If you could use only one statement to evaluate a company, which and why?</div>
+  <div class="a">A: The cash flow statement. It shows the actual cash the business generates, is harder to manipulate than accrual-based earnings, and reveals whether reported profits are converting into cash. That said, in practice you need all three — the cash flow statement is itself derived from the P&amp;L and the change in the balance sheet.</div></div>
+
+  <div class="qa"><div class="q">Q5: Depreciation goes up by ₹100 with a 25% tax rate. Walk through all three statements.</div>
+  <div class="a">A: P&amp;L: pre-tax income falls ₹100, tax falls ₹25, net income falls ₹75. Cash flow: net income −₹75 but add back ₹100 of D&amp;A → CFO up ₹25, so cash rises ₹25. Balance sheet: net PP&amp;E down ₹100, cash up ₹25 (assets −75); retained earnings down ₹75 (equity −75). Both sides fall ₹75 — it balances. The +₹25 is the depreciation tax shield.</div></div>
+
+  <div class="qa"><div class="q">Q6: You buy ₹100 of inventory with cash. Walk through the statements.</div>
+  <div class="a">A: No P&amp;L impact yet (inventory is capitalised, not expensed until sold). Balance sheet: inventory +₹100, cash −₹100 — assets unchanged in total, so it balances. Cash flow: an increase in inventory is a use of cash, so CFO −₹100, reducing cash ₹100. When the inventory is later sold, COGS hits the P&amp;L and the cycle reverses.</div></div>
+
+  <div class="qa"><div class="q">Q7: A company raises ₹500 of debt. Walk through the statements.</div>
+  <div class="a">A: No immediate P&amp;L effect (interest comes later). Cash flow: +₹500 financing inflow → cash up ₹500. Balance sheet: cash +₹500 (asset), debt +₹500 (liability) — both sides up ₹500, balances. In subsequent periods interest expense hits the P&amp;L, reducing net income and cash.</div></div>
+
+  <div class="qa"><div class="q">Q8: Why do we add back depreciation in the cash flow statement?</div>
+  <div class="a">A: Because it's a non-cash expense. It reduced accounting profit but no cash actually left the business in that period (the cash left earlier, when the asset was bought, and shows up as capex in investing). The indirect method starts from net income, which already subtracted D&amp;A, so we add it back to get to cash generated.</div></div>
+
+  <div class="qa"><div class="q">Q9: What's the difference between the direct and indirect cash flow methods?</div>
+  <div class="a">A: The direct method lists actual cash receipts and payments (cash from customers, cash to suppliers). The indirect method starts from net income and adjusts for non-cash items and changes in working capital. Models almost always use the indirect method because it links cleanly to the P&amp;L and balance sheet and is what most companies report.</div></div>
+
+  <h3>16.2 Balancing, plugs, and debugging</h3>
+
+  <div class="qa"><div class="q">Q10: Your model doesn't balance. How do you debug it?</div>
+  <div class="a">A: Systematically. First find the earliest year that breaks — the error was introduced there. Note the imbalance's size and sign and Ctrl+F for that number; it often equals a specific line item. Check the cash flow statement first: the usual culprit is a balance-sheet item that changed without a matching cash-flow line. Verify sign conventions — an imbalance of exactly 2× a line item signals a flipped sign. Confirm ending cash links from the cash flow into the balance sheet, and that retained earnings rolls forward correctly (prior RE + net income − dividends). Finally check each schedule ties to its balance-sheet line.</div></div>
+
+  <div class="qa"><div class="q">Q11: What is the "plug" in a model?</div>
+  <div class="a">A: The item that absorbs the residual so the model closes. The legitimate plugs are cash (asset side) and the revolver or short-term debt (liability side): surplus cash sweeps the revolver, a shortfall draws on it. An illegitimate plug is hardcoding a balancing number into an unrelated line to force a balance — that hides an error rather than fixing it.</div></div>
+
+  <div class="qa"><div class="q">Q12: How does the revolver work in a model?</div>
+  <div class="a">A: It's a flexible credit line acting as the financing plug. Compute cash available before the revolver. If it's below the minimum cash policy, draw the shortfall; if above, sweep the surplus to repay the outstanding revolver, but never below zero. Ending cash then sits at or above the minimum. Interest on the revolver feeds back into the P&amp;L, which is the main source of circularity.</div></div>
+
+  <div class="qa"><div class="q">Q13: An imbalance is exactly twice a line item. What does that tell you?</div>
+  <div class="a">A: Almost certainly a sign error — you added something that should have been subtracted (or vice versa), so the item is counted with the wrong sign and the miss is 2× its value. An imbalance equal to one line item usually means a missing link (a balance-sheet change with no matching cash-flow entry).</div></div>
+
+  <div class="qa"><div class="q">Q14: How would you check a model for errors generally?</div>
+  <div class="a">A: Build explicit checks: a balance check (Assets − L − E = 0), a tie between cash-flow ending cash and balance-sheet cash, schedule roll-forwards that tie to their statement lines, and a master "all checks pass" cell. Use Go To Special → Constants to hunt hardcodes buried in the calculation area. Trace precedents (Ctrl+[) on suspicious cells. Sanity-check outputs against reality (margins, growth, terminal value share). Confirm one consistent formula across each forecast row. Stress the model with extreme inputs and see if it still balances.</div></div>
+
+  <div class="qa"><div class="q">Q15: Where should cash come from on the balance sheet?</div>
+  <div class="a">A: Always from the cash flow statement's ending cash balance — never a hardcode. Beginning cash + change in cash (CFO+CFI+CFF) = ending cash, and that cell is what the balance sheet references. Hardcoding cash to force a balance is the classic plugging-cash-wrongly mistake.</div></div>
+
+  <h3>16.3 Circular references</h3>
+
+  <div class="qa"><div class="q">Q16: What causes circular references in a model, and how do you handle them?</div>
+  <div class="a">A: The classic one runs through interest: interest depends on the debt and cash balances → interest hits net income → net income drives cash flow → cash flow changes the cash/revolver balances → which change interest. It's a legitimate, intentional loop. Handle it by enabling iterative calculation (File → Options → Formulas), which lets Excel iterate to convergence, and by building a circularity switch — a 1/0 cell that forces interest to zero to break the loop and clear any propagated error. Alternatively, charge interest on the opening balance to avoid the circularity entirely, or compute once and paste values.</div></div>
+
+  <div class="qa"><div class="q">Q17: What is a circularity switch and why build one?</div>
+  <div class="a">A: A single input cell (1 = on, 0 = off) wrapped around the interest calc: <code>=IF(switch=1, rate*avg_debt, 0)</code>. If an error ever races around the circular loop and freezes the model, flip the switch to 0 — interest becomes zero, the loop opens, the error clears, and the model recalculates cleanly; then flip back to 1. It's a circuit breaker for the fragility of iterative calculation.</div></div>
+
+  <div class="qa"><div class="q">Q18: What are the downsides of iterative calculation?</div>
+  <div class="a">A: Fragility and speed. If any cell in the loop returns an error, it propagates around the circle and can freeze the whole model, and toggling iteration may not clear it without a switch. Large iterative models also recalc slowly. And results depend on convergence settings — set enough iterations and a small max-change threshold.</div></div>
+
+  <div class="qa"><div class="q">Q19: How can you avoid circularity altogether?</div>
+  <div class="a">A: Charge interest on the beginning debt balance instead of the average — the interest no longer depends on this period's cash generation, so the loop is broken. It costs a little precision but is common in interview-safe and buy-side models. Copy-paste-values on the interest line is another way, but then interest is static until you repeat the paste.</div></div>
+
+  <h3>16.4 Excel functions</h3>
+
+  <div class="qa"><div class="q">Q20: INDEX/MATCH vs VLOOKUP — which and why?</div>
+  <div class="a">A: I prefer INDEX/MATCH. VLOOKUP can only look to the right of its key column and uses a hardcoded column-index number that silently breaks when you insert or delete columns. INDEX/MATCH looks in any direction, is more robust to structural changes, and is faster on large sheets because it only scans the lookup and return columns. Syntax: <code>=INDEX(return_range, MATCH(lookup_value, lookup_range, 0))</code>. On Excel 365 I'd use XLOOKUP, which combines the best of both with a built-in not-found argument.</div></div>
+
+  <div class="qa"><div class="q">Q21: What does the 0 (or FALSE) in MATCH/VLOOKUP do?</div>
+  <div class="a">A: It forces an exact match. MATCH's third argument 0 means exact; 1 (or omitted) assumes the data is sorted ascending and finds the largest value ≤ lookup; −1 assumes descending. VLOOKUP's last argument FALSE (0) is exact match; TRUE (1) is approximate and requires a sorted first column. In modeling you almost always want exact match, so use 0/FALSE.</div></div>
+
+  <div class="qa"><div class="q">Q22: Explain SUMIFS and how its argument order differs from SUMIF.</div>
+  <div class="a">A: <code>SUMIFS(sum_range, criteria_range1, criteria1, …)</code> totals the sum_range for rows meeting all the criteria; it supports multiple conditions. Crucially the sum_range comes <i>first</i>. The older <code>SUMIF(range, criteria, [sum_range])</code> puts the sum_range <i>last</i>. Mixing them up is a common error. Criteria can embed operators, e.g. <code>"&gt;="&amp;B1</code>.</div></div>
+
+  <div class="qa"><div class="q">Q23: When would you use IFERROR, and what's the risk?</div>
+  <div class="a">A: <code>IFERROR(value, value_if_error)</code> traps errors like #DIV/0! or #N/A and returns a fallback — useful for clean lookups or ratios that might divide by zero. The risk is masking genuine problems: if you wrap everything in IFERROR you can hide a broken link that should be investigated. Use it deliberately, not as a blanket.</div></div>
+
+  <div class="qa"><div class="q">Q24: NPV in Excel — what's the common mistake?</div>
+  <div class="a">A: <code>NPV(rate, values)</code> assumes the first value is one period in the future (end of year 1) and that flows are equally spaced. So a time-0 cash flow (like an upfront investment) must be added outside the function: <code>=CF0 + NPV(rate, CF1:CFn)</code>. Putting CF0 inside NPV over-discounts everything by one period. For irregular dates use XNPV, which takes explicit dates.</div></div>
+
+  <div class="qa"><div class="q">Q25: IRR vs XIRR?</div>
+  <div class="a">A: IRR assumes equally spaced periods; XIRR takes actual dates and is correct for real cash flows that don't land on annual boundaries — the standard for PE, real estate, and deal cash flows. <code>=XIRR(values, dates, [guess])</code>. Both find the rate that sets NPV to zero. IRR can also mislead with non-conventional cash flows (multiple sign changes give multiple IRRs), where MIRR or NPV is safer.</div></div>
+
+  <div class="qa"><div class="q">Q26: What's the difference between OFFSET/INDIRECT and INDEX for dynamic references?</div>
+  <div class="a">A: OFFSET and INDIRECT are <i>volatile</i> — they recalculate on every change anywhere in the workbook, which slows large models, and they're harder to audit (INDIRECT builds references from text, so trace-precedents can't follow them). INDEX is non-volatile and usually achieves the same dynamic behaviour, so prefer INDEX/MATCH where possible; reserve OFFSET/INDIRECT for genuine cases like variable sheet names.</div></div>
+
+  <div class="qa"><div class="q">Q27: How do you build a scenario toggle in Excel?</div>
+  <div class="a">A: Lay out Base/Bull/Bear assumption rows, add a selector cell (1/2/3), and have each driver read the selected case with <code>=CHOOSE(selector, base, bull, bear)</code> or <code>=INDEX(cases_range, selector)</code>. Optionally link a Form Control drop-down and use Data Validation to restrict the selector. One cell then flips the entire model.</div></div>
+
+  <div class="qa"><div class="q">Q28: Explain a two-variable data table.</div>
+  <div class="a">A: It recalculates one output across a grid of two inputs. Put a link to the output in the top-left corner cell, list one input's values down the left column and the other's across the top row, select the whole rectangle, then Data → What-If → Data Table and set the Row input cell (for the top-row variable) and Column input cell (for the left-column variable). Excel fills the grid with <code>{=TABLE(...)}</code> — a classic WACC × terminal-growth sensitivity for a DCF.</div></div>
+
+  <div class="qa"><div class="q">Q29: What is F4 used for in modeling?</div>
+  <div class="a">A: While editing a formula, F4 cycles a reference through absolute and relative forms — A1 → $A$1 → A$1 → $A1 → A1. You use it constantly to lock rows/columns before copying a formula across a row or down a column so the right references stay fixed. Outside edit mode, F4 repeats the last action.</div></div>
+
+  <div class="qa"><div class="q">Q30: How do you quickly find all hardcoded numbers in a model?</div>
+  <div class="a">A: Select the calculation area, press F5 (or Ctrl+G) → Special → Constants → Numbers only. Excel selects every cell containing a typed number rather than a formula, so you can spot hardcodes hidden in what should be formula rows. Colour-coding (blue inputs, black formulas) plus this check keeps a model clean.</div></div>
+
+  <h3>16.5 Schedules &amp; drivers</h3>
+
+  <div class="qa"><div class="q">Q31: How do you forecast revenue?</div>
+  <div class="a">A: Prefer a driver-based build over a blanket growth rate: decompose into volume × price, units × ASP, customers × ARPU, stores × sales-per-store, or (for a bank) average earning assets × net interest margin. This ties the forecast to real business levers and lets scenarios flex each driver independently. Use a simple growth rate only when data or materiality doesn't justify more detail, and always state the assumption.</div></div>
+
+  <div class="qa"><div class="q">Q32: How do you build a depreciation schedule?</div>
+  <div class="a">A: Split it into depreciation on existing assets (depreciate the opening net book value over its remaining life) and depreciation on new capex (each year's additions depreciate over their useful life, starting the year spent). Sum to total depreciation, which hits the P&amp;L and is added back in CFO; roll net PP&amp;E forward as beginning + capex − depreciation. If a full vintage schedule isn't warranted, approximate depreciation as a % of gross block or revenue, calibrated to history.</div></div>
+
+  <div class="qa"><div class="q">Q33: How do you forecast working capital?</div>
+  <div class="a">A: Use activity ratios in days: receivables = DSO/365 × revenue, inventory = DIO/365 × COGS, payables = DPO/365 × COGS. The change in net working capital flows to the cash flow statement — an increase in NWC uses cash. The cash conversion cycle (DSO + DIO − DPO) is a useful summary; deteriorating days is a cash-flow warning.</div></div>
+
+  <div class="qa"><div class="q">Q34: How does the debt schedule connect to the rest of the model?</div>
+  <div class="a">A: It rolls each tranche forward (beginning + draws − repayments = ending) and computes interest = rate × balance. Ending debt links to the balance sheet; interest expense links into the P&amp;L below EBIT; draws and repayments hit financing cash flow. Charging interest on the average balance is more accurate but creates circularity; on the beginning balance avoids it.</div></div>
+
+  <div class="qa"><div class="q">Q35: How does retained earnings roll forward?</div>
+  <div class="a">A: Ending retained earnings = beginning RE + net income − dividends (− any buyback charged to RE). It's the link that carries P&amp;L profit onto the balance sheet's equity. A common bug is omitting dividends or referencing the wrong year, which throws the balance off by exactly the dividend or the prior-year profit.</div></div>
+
+  <div class="qa"><div class="q">Q36: What drives capex in a forecast?</div>
+  <div class="a">A: Either a maintenance + growth split, a % of revenue (calibrated to history), or an explicit project pipeline. Capex hits investing cash flow and increases gross PP&amp;E; it should be at least maintenance capex ≈ depreciation to keep the asset base intact, and higher if the business is expanding capacity.</div></div>
+
+  <h3>16.6 Valuation &amp; model types</h3>
+
+  <div class="qa"><div class="q">Q37: What is a DCF and how does it relate to the three-statement model?</div>
+  <div class="a">A: A DCF values a business as the present value of its future free cash flows plus a discounted terminal value, using WACC as the discount rate. It sits on top of a three-statement model, which produces the free cash flows (FCFF = EBIT×(1−tax) + D&amp;A − capex − ΔNWC). Enterprise value = PV of explicit FCFF + PV of terminal value; subtract net debt for equity value, divide by shares for per-share value.</div></div>
+
+  <div class="qa"><div class="q">Q38: How do you calculate terminal value?</div>
+  <div class="a">A: Two ways. Gordon growth (perpetuity): TV = FCFF_final × (1+g)/(WACC − g), with g below long-run GDP growth. Exit multiple: TV = exit EV/EBITDA × terminal-year EBITDA. Best practice is to compute both and cross-check; terminal value often exceeds two-thirds of total value, so it deserves scrutiny.</div></div>
+
+  <div class="qa"><div class="q">Q39: Walk me through an LBO.</div>
+  <div class="a">A: A PE firm buys a company mostly with debt, improves it, and exits in 3–5 years. Set up Sources &amp; Uses: uses = purchase EV + refinanced debt + fees; sources = new debt + sponsor equity (the plug) + cash. Project the three-statement model; each year free cash flow after interest and mandatory amortisation sweeps the debt, deleveraging the company. At exit, apply an EV/EBITDA multiple to exit EBITDA, subtract remaining net debt for exit equity. Returns: MOIC = exit equity / initial equity; IRR from the dated equity flows. Value comes from deleveraging, EBITDA growth, and multiple expansion.</div></div>
+
+  <div class="qa"><div class="q">Q40: What are the three ways an LBO creates value?</div>
+  <div class="a">A: (1) Debt paydown/deleveraging — using the company's cash flow to reduce debt, so a larger share of a stable enterprise value accrues to equity; (2) EBITDA growth — via revenue growth and margin improvement; (3) multiple expansion — exiting at a higher EV/EBITDA than entry (the least controllable and least relied-upon lever).</div></div>
+
+  <div class="qa"><div class="q">Q41: What's the difference between MOIC and IRR?</div>
+  <div class="a">A: MOIC (money multiple, cash-on-cash) = total cash returned ÷ cash invested — it ignores timing. IRR is the time-weighted annualised return that sets NPV to zero. A 3× MOIC over 3 years is a far better IRR than 3× over 8 years. PE firms quote both because MOIC shows absolute profit and IRR shows speed; a quick fund needs both to be strong.</div></div>
+
+  <div class="qa"><div class="q">Q42: Is an all-stock acquisition accretive or dilutive — how do you tell quickly?</div>
+  <div class="a">A: Compare P/E multiples. If the acquirer's P/E is higher than the price-to-earnings it pays for the target, the deal is accretive to EPS; if lower, dilutive; if equal, neutral. Intuitively, a high-P/E acquirer is issuing "expensive" shares to buy "cheaper" earnings. For cash/debt deals, compare the target's earnings yield to the after-tax cost of the cash or debt used.</div></div>
+
+  <div class="qa"><div class="q">Q43: What models would you build to value and pitch an acquisition?</div>
+  <div class="a">A: A three-statement model for both companies, a DCF and a comparable-companies/precedent-transactions analysis for standalone valuation, an accretion/dilution model to test EPS impact and synergy requirements, and often an LBO to establish a floor value (what a financial sponsor could pay). Together these triangulate a value range and the deal's strategic and financial merits.</div></div>
+
+  <div class="qa"><div class="q">Q44: What's the difference between sensitivity and scenario analysis?</div>
+  <div class="a">A: Sensitivity varies one or two inputs at a time, holding everything else constant, to see how responsive an output is — typically via a data table (e.g. value vs WACC). Scenario analysis changes a coherent bundle of inputs together to represent a story (recession, base, boom) — typically via a toggle or Scenario Manager. Sensitivity answers "how fragile is my answer to this one lever"; scenarios answer "what happens under this whole worldview".</div></div>
+
+  <h3>16.7 Best practice &amp; behavioural</h3>
+
+  <div class="qa"><div class="q">Q45: What are your top modeling best practices?</div>
+  <div class="a">A: Colour-code (blue inputs, black formulas, green cross-sheet links); never hardcode inside a formula — every number lives in a labelled input; one consistent formula across each forecast row; separate inputs, calculations, and outputs; build error checks including a balance check and a master checks cell; consistent sign conventions and units; and clear documentation with an assumptions log and version history. The goal is a model anyone can open, understand, and trust.</div></div>
+
+  <div class="qa"><div class="q">Q46: Why is hardcoding inside formulas bad?</div>
+  <div class="a">A: It hides assumptions where no one can find or audit them, so changing a rate means hunting through formulas instead of editing one input cell; it breaks the "one formula across the row" discipline; and it makes scenarios and sensitivities impossible because the driver isn't a referenceable cell. Put every changeable number in a blue input and reference it.</div></div>
+
+  <div class="qa"><div class="q">Q47: What colour conventions do you use and why?</div>
+  <div class="a">A: Blue font for hardcoded inputs, black for formulas within the sheet, green for links to other sheets in the same workbook, and red for external-workbook links (which are fragile and worth flagging). It lets any reviewer instantly see what they can safely change (blue) versus what is calculated (black), which is essential for collaboration and error-spotting.</div></div>
+
+  <div class="qa"><div class="q">Q48: How do you make a large model calculate faster?</div>
+  <div class="a">A: Minimise volatile functions (OFFSET, INDIRECT, NOW, TODAY, RAND); prefer INDEX/MATCH over full-column array formulas; avoid excessive data tables or set calculation to "Automatic Except Data Tables"; replace huge nested IFs with lookups; break unnecessary cross-workbook links; and switch to manual calculation (F9 to recalc) while building. Keep ranges tight rather than referencing entire columns.</div></div>
+
+  <div class="qa"><div class="q">Q49: A managing director says the model output "looks wrong". How do you respond?</div>
+  <div class="a">A: Stay calm and investigate rather than defend. Check the assumptions driving the output first, run the balance and error checks, sanity-check margins/growth/terminal-value share against comparables and history, and trace precedents on the suspect number. Reproduce their expectation to see where the divergence starts. Then explain the driver behind the result — often the model is right but an assumption is aggressive, or there's a genuine link error to fix. Show the work transparently.</div></div>
+
+  <div class="qa"><div class="q">Q50: What units and conventions would you use for an Indian company model?</div>
+  <div class="a">A: Typically ₹ crore for a large-cap (₹1 crore = ₹10 million), stated explicitly at the top, with per-share figures in rupees. Financials follow Ind AS; note items like reserves &amp; surplus for retained earnings, and be careful with GST, and with consolidated vs standalone statements. Fiscal year usually ends 31 March, so label columns FY26E, FY27E, etc., and align with the company's reporting calendar.</div></div>
+
+  <div class="qa"><div class="q">Q51: What is the difference between EBIT, EBITDA, and free cash flow?</div>
+  <div class="a">A: EBIT is operating profit after depreciation and amortisation. EBITDA adds D&amp;A back to EBIT — a rough proxy for operating cash generation before capital-structure and non-cash items. Free cash flow goes further: FCFF = EBIT×(1−tax) + D&amp;A − capex − ΔNWC, i.e. the cash available to all capital providers after reinvestment. EBITDA ignores capex and working capital, which is why it can overstate real cash flow for capital-intensive businesses.</div></div>
+
+  <div class="qa"><div class="q">Q52: How do you sanity-check a completed model?</div>
+  <div class="a">A: Compare forecast margins, growth rates, returns (ROE/ROIC), and leverage against history and peers — a forecast that drifts far from the company's track record without a reason is suspect. Check that terminal value isn't an implausible share of DCF value, that revenue growth fades toward GDP over time, that the balance sheet balances in every year, and that the model behaves sensibly under stress inputs. Numbers should tell a coherent business story.</div></div>
+
+  <div class="qa"><div class="q">Q53: What's the difference between a budget/FP&amp;A model and a valuation model?</div>
+  <div class="a">A: An FP&amp;A budget model is internal and operational — a detailed, driver-based annual plan and rolling forecast built for budget-vs-actual variance tracking and management decisions, usually monthly and bottom-up. A valuation model (DCF/LBO/M&amp;A) is decision-specific and often annual, aimed at an external transaction or rating. The FP&amp;A model prizes granularity and actuals integration; the valuation model prizes clean assumptions and clear outputs.</div></div>
+
+  <div class="qa"><div class="q">Q54: What does "one formula across the row" mean and why does it matter?</div>
+  <div class="a">A: Every cell in a forecast row should contain the identical formula, just copied across periods, so the logic is consistent and auditable. If one column's formula differs, it's either a bug or an undocumented exception — both dangerous. It also makes the model easy to extend (drag right) and lets a reviewer check one cell and trust the whole row.</div></div>
+
+  <div class="qa"><div class="q">Q55: How do you handle taxes in a model, including deferred tax and NOLs?</div>
+  <div class="a">A: At a basic level, tax = pre-tax income × effective tax rate. More precisely, book tax differs from cash tax due to timing differences (e.g. accelerated depreciation for tax), captured in deferred tax assets/liabilities on the balance sheet. Net operating losses (carried-forward losses) shield future taxable income until exhausted, so you track an NOL balance and apply it before charging cash tax. In India, note MAT (minimum alternate tax) and the ability to carry forward business losses for eight years.</div></div>
+
+  <div class="qa"><div class="q">Q56: If net income is positive but the company is running out of cash, what could explain it?</div>
+  <div class="a">A: Accrual profit isn't cash. Possible causes: rapid growth tying up cash in receivables and inventory (rising working capital), heavy capex exceeding operating cash flow, large debt repayments, aggressive revenue recognition booking sales before cash collection, or one-off non-cash gains inflating net income. The cash flow statement will reveal which — this is exactly why cash flow matters more than reported profit.</div></div>
+
+  <div class="qa"><div class="q">Q57: Why might interest be modelled on the beginning debt balance rather than the average?</div>
+  <div class="a">A: To avoid circularity. Interest on the average balance depends on the ending balance, which depends on the cash generated, which depends on interest — a loop. Interest on the beginning balance depends only on last period's known number, breaking the loop, at the cost of slightly understating (or overstating) interest when debt changes materially within the year. It's a common, defensible simplification, especially in interviews.</div></div>
+
+  <div class="qa"><div class="q">Q58: What error checks would you hard-wire into every model?</div>
+  <div class="a">A: A balance check (Assets − Liabilities − Equity = 0 each year); a cash tie (balance-sheet cash = cash-flow ending cash); schedule ties (PP&amp;E, debt, equity roll-forwards equal their statement lines); sources = uses in a transaction; a "sum of segments = total" check for driver builds; and a single master cell that is TRUE only if all sub-checks pass, formatted red/green with conditional formatting so a problem is impossible to miss.</div></div>
+
+  <h3>16.8 LBO, M&amp;A &amp; advanced Excel</h3>
+
+  <div class="qa"><div class="q">Q59: Walk through the debt tranches in an LBO.</div>
+  <div class="a">A: From senior to junior: the revolver (cheapest, secured, flexible, used for working-capital swings and as the plug); Term Loan A (bank-held, floating, amortising straight-line); Term Loan B (institutional, floating, longer tenor, minimal ~1%/yr mandatory amortisation with the rest swept); high-yield bonds (fixed coupon, higher cost, bullet at maturity, often non-call for a period); and mezzanine/subordinated (most expensive, sometimes PIK plus equity warrants, repaid last). Senior secured debt is cheapest and repaid first; junior debt costs more and is repaid last, reflecting its risk.</div></div>
+
+  <div class="qa"><div class="q">Q60: What is a cash sweep?</div>
+  <div class="a">A: A mechanism that directs the company's surplus free cash flow — after interest and mandatory amortisation — to prepay debt early, in seniority order (revolver, then TLA, TLB, bonds). A 100% sweep applies all excess cash. It accelerates deleveraging: less debt means less interest next year, freeing even more cash to sweep — the deleveraging flywheel that drives LBO equity returns. It also interacts with interest, producing circularity like the three-statement model.</div></div>
+
+  <div class="qa"><div class="q">Q61: What is PIK interest and why use it?</div>
+  <div class="a">A: Payment-in-kind interest accrues onto the loan principal instead of being paid in cash. It preserves near-term cash flow (helpful for a highly levered company or to fund growth) at the cost of a compounding, larger balance repaid later. Common on mezzanine and holdco notes. In the model, PIK increases the debt balance each period rather than hitting the cash flow.</div></div>
+
+  <div class="qa"><div class="q">Q62: Explain a returns/value-creation bridge in an LBO.</div>
+  <div class="a">A: It attributes the equity gain to three sources: EBITDA growth (ΔEBITDA × entry multiple), multiple expansion (ΔMultiple × exit EBITDA), and debt paydown/free-cash-flow generation (Δ net debt). They sum to the total equity value gain. A high-quality deal earns most of its return from operational EBITDA growth and deleveraging rather than betting on a higher exit multiple, which the sponsor cannot control.</div></div>
+
+  <div class="qa"><div class="q">Q63: Buy at 8× EBITDA of ₹500 cr with ₹2,400 cr debt; in 5 years EBITDA is ₹700 cr, net debt ₹1,000 cr, exit at 8×. IRR and MOIC?</div>
+  <div class="a">A: Entry EV = 8 × 500 = ₹4,000 cr; entry equity = 4,000 − 2,400 = ₹1,600 cr. Exit EV = 8 × 700 = ₹5,600 cr; exit equity = 5,600 − 1,000 = ₹4,600 cr. MOIC = 4,600 / 1,600 = 2.875×. IRR = 2.875^(1/5) − 1 ≈ 23.5%. Bridge: EBITDA growth (200×8)=₹1,600; multiple 0; debt paydown (2,400−1,000)=₹1,400; total ₹3,000 cr gain.</div></div>
+
+  <div class="qa"><div class="q">Q64: How is goodwill created in an acquisition?</div>
+  <div class="a">A: Under acquisition accounting (Ind AS 103/IFRS 3), the acquirer records the target's assets and liabilities at fair value, stepping up PP&amp;E and recognising new intangibles (brands, customer lists). Goodwill = equity purchase price − fair value of net identifiable assets acquired. It is the residual that makes the pro-forma balance sheet balance. Under Ind AS/IFRS goodwill isn't amortised but is tested annually for impairment; finite-life intangibles are amortised, adding expense that dents pro-forma EPS.</div></div>
+
+  <div class="qa"><div class="q">Q65: A target has ₹1,500 cr book equity; you pay ₹4,000 cr; step-ups add ₹1,000 cr of assets and create a ₹250 cr DTL. Goodwill?</div>
+  <div class="a">A: Fair value of net identifiable assets = 1,500 + 1,000 − 250 = ₹2,250 cr. Goodwill = 4,000 − 2,250 = ₹1,750 cr. The deferred tax liability arises because the step-up is recognised for book but not for tax, so future book depreciation/amortisation on the step-up isn't tax-deductible.</div></div>
+
+  <div class="qa"><div class="q">Q66: What are synergies, and how do cost and revenue synergies differ?</div>
+  <div class="a">A: Synergies are the incremental value from combining two firms, justifying the control premium. Cost synergies (removing duplicate headcount, procurement scale, closing facilities) are credible and readily modelled. Revenue synergies (cross-selling, wider distribution) are real but softer, so analysts haircut them heavily. Model both net of the one-time cost-to-achieve and phase them in over 2–3 years; add after-tax synergies to pro-forma net income in an accretion/dilution analysis.</div></div>
+
+  <div class="qa"><div class="q">Q67: A ₹3,000 cr all-debt deal at 8% (25% tax) adds ₹150 cr target NI; acquirer EPS is ₹10 on 100 cr shares. Accretive? Breakeven synergies?</div>
+  <div class="a">A: After-tax interest = 3,000 × 8% × 0.75 = ₹180 cr. Pro-forma NI = 1,000 + 150 − 180 = ₹970 cr on 100 cr shares → EPS ₹9.70, dilutive by ₹0.30. Required after-tax synergy = (10 × 100) − 970 = ₹30 cr; pre-tax = 30/0.75 = ₹40 cr. Above ₹40 cr pre-tax synergies the deal turns accretive. You can also solve this with Goal Seek on the synergy cell.</div></div>
+
+  <div class="qa"><div class="q">Q68: When is a cash- or debt-funded deal accretive?</div>
+  <div class="a">A: When the target's after-tax earnings yield exceeds the after-tax cost of the funding. For cash, the "cost" is the foregone after-tax interest income on that cash; for debt, it's the after-tax interest rate. If the incremental earnings you buy exceed the incremental cost you incur, EPS rises. Because cash and debt are usually "cheaper" than equity, cash/debt deals are more often accretive than all-stock deals — but they add leverage/reduce liquidity.</div></div>
+
+  <div class="qa"><div class="q">Q69: How does Goal Seek differ from Solver?</div>
+  <div class="a">A: Goal Seek changes one input to make one output hit a target, with no constraints (e.g. find the WACC that makes DCF value = market price, or the entry multiple that gives a 25% IRR). Solver is an add-in that optimises an objective — maximise, minimise, or target — by changing multiple inputs subject to constraints (e.g. maximise IRR subject to a leverage cap and a minimum DSCR). Use Goal Seek for simple back-solves, Solver for constrained multi-variable optimisation.</div></div>
+
+  <div class="qa"><div class="q">Q70: Set up a two-variable data table for a DCF share price vs WACC and terminal growth.</div>
+  <div class="a">A: In the top-left corner cell of a blank grid, put a link to the output: <code>=SharePriceCell</code>. List WACC values down the left column below the corner, and g values across the top row to the right. Select the whole rectangle, then Data → What-If Analysis → Data Table; set Row input cell = the g input (it runs across the row) and Column input cell = the WACC input (it runs down the column). Excel fills the grid with <code>{=TABLE(g, WACC)}</code>. Getting the row/column inputs backwards is the classic mistake.</div></div>
+
+  <div class="qa"><div class="q">Q71: What are dynamic array functions, and when would you use FILTER or UNIQUE?</div>
+  <div class="a">A: Excel 365 functions that "spill" a whole result array from one formula. <code>UNIQUE(range)</code> returns the distinct values — handy to build a driver or segment list from a raw data dump. <code>FILTER(array, condition)</code> returns only the rows meeting a condition, e.g. all transactions for one segment. <code>SORT</code> and <code>SEQUENCE</code> round out the set. You reference the spilled range with the <code>#</code> operator, e.g. <code>=SUM(F2#)</code>. They replace many array-formula and helper-column hacks.</div></div>
+
+  <div class="qa"><div class="q">Q72: What do LET and LAMBDA do?</div>
+  <div class="a">A: <code>LET</code> lets you name intermediate results inside a single formula — <code>=LET(rev, A1*A2, marg, 0.2, rev*marg)</code> — improving readability and speed since each named part computes once. <code>LAMBDA</code> lets you define a reusable custom function without VBA; saved via Name Manager it becomes callable like a built-in. Together they bring lightweight programming into the grid; know them conceptually as the modern alternative to sprawling nested formulas and VBA UDFs.</div></div>
+
+  <div class="qa"><div class="q">Q73: What is Power Query and why use it?</div>
+  <div class="a">A: Power Query (Data → Get &amp; Transform) is Excel's ETL tool. It connects to files, folders, databases or the web and records a repeatable sequence of cleaning steps — remove columns, unpivot, merge, change types, filter. When the source updates you just click Refresh and the cleaned table rebuilds, so you never re-do a manual clean. It's the professional way to feed a model from messy trial-balance or blotter exports and keeps raw data out of the calculation sheets.</div></div>
+
+  <div class="qa"><div class="q">Q74: How would you build a loan amortisation schedule in Excel?</div>
+  <div class="a">A: Compute the level payment with <code>PMT(rate, nper, pv)</code>, then for each period split it with <code>IPMT(rate, per, nper, pv)</code> (interest portion) and <code>PPMT(rate, per, nper, pv)</code> (principal portion) — IPMT + PPMT = PMT. Roll the balance: ending = beginning − principal paid. Interest falls and principal rises over the life. This is exactly how you'd model an amortising term loan in a debt schedule, feeding interest to the P&amp;L and principal to financing cash flow.</div></div>
+
+  <div class="qa"><div class="q">Q75: What's the difference between IRR and MIRR, and when does IRR mislead?</div>
+  <div class="a">A: IRR assumes interim cash flows are reinvested at the IRR itself, which is often unrealistic, and it can return multiple values when cash flows change sign more than once. MIRR fixes both: <code>MIRR(values, finance_rate, reinvest_rate)</code> reinvests positives at a stated reinvestment rate and discounts negatives at a financing rate, giving a single, more realistic figure. For dated, irregular flows, XIRR is the right tool; for conventional single-sign-change flows, plain IRR is fine.</div></div>
+
+  <div class="qa"><div class="q">Q76: Convert a 12% nominal rate compounded monthly to an effective annual rate.</div>
+  <div class="a">A: <code>=EFFECT(12%, 12)</code> → 12.68%. Formula: EAR = (1 + 0.12/12)^12 − 1 = 12.68%. EFFECT/NOMINAL let you compare loans quoted on different compounding bases apples-to-apples — essential before deciding which financing is genuinely cheaper.</div></div>
+
+  <div class="keytake"><b>Key takeaways for the interview:</b> Be able to (1) walk through a three-statement model end-to-end, (2) trace any single transaction through all three statements, (3) explain balancing, plugs, and debugging, (4) discuss circularity and the switch, (5) quote correct syntax for INDEX/MATCH, SUMIFS, NPV/XNPV, IRR/XIRR, and data tables, and (6) give the intuition behind DCF, LBO, and accretion/dilution. Precision and calm structure beat speed.</div>
+
+  <!-- ============================================================= -->
+  <h2 class="sec">17. Final Checklist &amp; Key Takeaways</h2>
+  <h3>17.1 The 60-second model walkthrough (memorise)</h3>
+  <ol>
+    <li>Historicals in and tied out → schedules built off assumptions.</li>
+    <li>P&amp;L to EBIT; balance-sheet items from schedules; cash flow derived from NI + non-cash − Δ balance-sheet accounts.</li>
+    <li>Ending cash → balance-sheet cash; interest → P&amp;L (circularity); revolver as the plug.</li>
+    <li>Balance check = 0 every year; master checks cell TRUE.</li>
+  </ol>
+
+  <h3>17.2 Non-negotiable disciplines</h3>
+  <ul>
+    <li>Blue inputs, black formulas, green links. No hardcodes in formulas. One formula per row.</li>
+    <li>Cash comes from the cash flow statement — never a hardcode.</li>
+    <li>Watch for 2×-a-line-item imbalance (sign error) and 1×-a-line-item imbalance (missing link).</li>
+    <li>Know your interest convention (average = circular, beginning = clean) and keep a circularity switch.</li>
+    <li>NPV excludes time-0 flow; use XNPV/XIRR for dated cash flows.</li>
+    <li>Data table: output link in the corner; row-input for the top-row variable, column-input for the left-column variable.</li>
+  </ul>
+
+  <h3>17.3 The one-line summaries per model</h3>
+  <ul>
+    <li><b>Three-statement:</b> integrated forecast; the foundation of everything.</li>
+    <li><b>DCF:</b> value = PV of future free cash flows + PV of terminal value.</li>
+    <li><b>LBO:</b> buy with debt, deleverage, exit; returns from paydown + growth + multiple.</li>
+    <li><b>M&amp;A:</b> accretive if you pay a lower P/E than your own (all-stock).</li>
+    <li><b>Budget/FP&amp;A:</b> operational plan for variance tracking.</li>
+  </ul>
+
+  <div class="keytake"><b>Final word:</b> The interviewer is testing whether you understand the plumbing and whether your Excel is disciplined. Explain links precisely, trace transactions calmly, quote function syntax correctly, and always come back to the balance check. Do that and you will present as someone who has genuinely built models — which, after two years on a derivatives desk and with NISM Series-XV behind you, you can absolutely be.</div>
+
+</body></html>

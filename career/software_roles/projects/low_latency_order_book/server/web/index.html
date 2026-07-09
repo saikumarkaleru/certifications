@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Live Order Book</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --bid: #26a641;
+    --bid-bar: rgba(38, 166, 65, 0.18);
+    --ask: #f85149;
+    --ask-bar: rgba(248, 81, 73, 0.18);
+    --accent: #58a6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 14px/1.5 "SF Mono", "Consolas", "Menlo", monospace;
+    padding: 24px;
+  }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 12px; margin-bottom: 16px; }
+  .status { display: inline-block; padding: 2px 8px; border-radius: 10px;
+            font-size: 11px; border: 1px solid var(--border); }
+  .status.on  { color: var(--bid); border-color: var(--bid); }
+  .status.off { color: var(--ask); border-color: var(--ask); }
+  .book {
+    max-width: 460px; background: var(--panel);
+    border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+  }
+  .row {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    padding: 3px 12px; position: relative; z-index: 0;
+  }
+  .head {
+    color: var(--muted); font-size: 11px; text-transform: uppercase;
+    letter-spacing: .05em; border-bottom: 1px solid var(--border);
+  }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .ask .price { color: var(--ask); }
+  .bid .price { color: var(--bid); }
+  /* depth bar drawn as a background layer */
+  .bar { position: absolute; top: 0; bottom: 0; right: 0; z-index: -1; }
+  .ask .bar { background: var(--ask-bar); }
+  .bid .bar { background: var(--bid-bar); }
+  .spread-row {
+    text-align: center; color: var(--muted); font-size: 12px;
+    padding: 6px; border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border); background: #0d1117;
+  }
+  .spread-row b { color: var(--accent); }
+</style>
+</head>
+<body>
+  <h1>Live Limit Order Book</h1>
+  <div class="sub">
+    streaming from <code id="url"></code>
+    &nbsp;·&nbsp; backend: <span id="backend">?</span>
+    &nbsp;·&nbsp; <span id="status" class="status off">disconnected</span>
+  </div>
+
+  <div class="book">
+    <div class="row head"><div>Price</div><div class="num">Qty</div><div class="num">Orders</div></div>
+    <div id="asks"></div>
+    <div class="spread-row" id="spread">spread: —</div>
+    <div id="bids"></div>
+  </div>
+
+<script>
+// ---------------------------------------------------------------------------
+// Minimal client: connect, parse JSON snapshots, render bid/ask ladder with
+// proportional depth bars. Auto-reconnects if the socket drops.
+// ---------------------------------------------------------------------------
+const WS_URL = "ws://localhost:8765";
+document.getElementById("url").textContent = WS_URL;
+
+const asksEl = document.getElementById("asks");
+const bidsEl = document.getElementById("bids");
+const spreadEl = document.getElementById("spread");
+const statusEl = document.getElementById("status");
+const backendEl = document.getElementById("backend");
+
+function maxQty(levels) {
+  return levels.reduce((m, l) => Math.max(m, l.qty), 1);
+}
+
+function renderSide(container, levels, cls, ascending) {
+  // Asks are shown high price at top (descending); bids high at top too.
+  const rows = ascending ? [...levels].reverse() : levels;
+  const peak = maxQty(levels);
+  container.innerHTML = rows.map(l => {
+    const pct = Math.round((l.qty / peak) * 100);
+    return `<div class="row ${cls}">
+      <div class="bar" style="width:${pct}%"></div>
+      <div class="price">${(l.price / 100).toFixed(2)}</div>
+      <div class="num">${l.qty}</div>
+      <div class="num">${l.orders}</div>
+    </div>`;
+  }).join("");
+}
+
+function render(snap) {
+  backendEl.textContent = snap.backend || "?";
+  renderSide(asksEl, snap.asks || [], "ask", true);
+  renderSide(bidsEl, snap.bids || [], "bid", false);
+  if (snap.spread != null) {
+    spreadEl.innerHTML =
+      `bid <b>${(snap.best_bid/100).toFixed(2)}</b> · ` +
+      `ask <b>${(snap.best_ask/100).toFixed(2)}</b> · ` +
+      `spread <b>${(snap.spread/100).toFixed(2)}</b>`;
+  } else {
+    spreadEl.textContent = "spread: —";
+  }
+}
+
+function setStatus(connected) {
+  statusEl.textContent = connected ? "connected" : "disconnected";
+  statusEl.className = "status " + (connected ? "on" : "off");
+}
+
+function connect() {
+  const ws = new WebSocket(WS_URL);
+  ws.onopen = () => setStatus(true);
+  ws.onclose = () => { setStatus(false); setTimeout(connect, 1500); };
+  ws.onerror = () => ws.close();
+  ws.onmessage = (ev) => {
+    try { render(JSON.parse(ev.data)); }
+    catch (e) { console.error("bad message", e); }
+  };
+}
+
+connect();
+</script>
+</body>
+</html>

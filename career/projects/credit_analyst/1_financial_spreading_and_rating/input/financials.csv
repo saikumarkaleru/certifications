@@ -1,0 +1,82 @@
+Company,Item,FY2022,FY2023,FY2024
+AARTI,Revenue,1200,1400,1650
+AARTI,COGS,780,900,1040
+AARTI,Operating Expenses,180,205,240
+AARTI,EBITDA,240,295,370
+AARTI,Depreciation & Amortization,60,68,78
+AARTI,EBIT,180,227,292
+AARTI,Interest Expense,45,42,40
+AARTI,PBT,135,185,252
+AARTI,Tax,34,46,63
+AARTI,Net Income,101,139,189
+AARTI,Cash & Equivalents,80,110,160
+AARTI,Accounts Receivable,150,175,205
+AARTI,Inventory,130,150,175
+AARTI,Current Assets,380,455,560
+AARTI,Net PPE,620,660,710
+AARTI,Total Assets,1050,1180,1330
+AARTI,Accounts Payable,95,110,130
+AARTI,Short-term Debt,90,80,70
+AARTI,Current Liabilities,220,235,255
+AARTI,Long-term Debt,320,300,280
+AARTI,Total Debt,410,380,350
+AARTI,Total Liabilities,560,555,555
+AARTI,Total Equity,490,625,775
+AARTI,Operating Cash Flow,190,235,300
+AARTI,Capex,90,108,128
+AARTI,Free Cash Flow,100,127,172
+AARTI,Scheduled Principal Repayment,40,40,45
+SUNRISE,Revenue,700,780,850
+SUNRISE,COGS,460,510,555
+SUNRISE,Operating Expenses,120,133,145
+SUNRISE,EBITDA,120,137,150
+SUNRISE,Depreciation & Amortization,35,38,42
+SUNRISE,EBIT,85,99,108
+SUNRISE,Interest Expense,38,40,42
+SUNRISE,PBT,47,59,66
+SUNRISE,Tax,12,15,17
+SUNRISE,Net Income,35,44,49
+SUNRISE,Cash & Equivalents,35,40,45
+SUNRISE,Accounts Receivable,95,105,115
+SUNRISE,Inventory,85,92,100
+SUNRISE,Current Assets,225,247,270
+SUNRISE,Net PPE,360,380,405
+SUNRISE,Total Assets,600,645,695
+SUNRISE,Accounts Payable,70,78,85
+SUNRISE,Short-term Debt,60,65,70
+SUNRISE,Current Liabilities,155,168,180
+SUNRISE,Long-term Debt,260,265,270
+SUNRISE,Total Debt,320,330,340
+SUNRISE,Total Liabilities,430,448,465
+SUNRISE,Total Equity,170,197,230
+SUNRISE,Operating Cash Flow,95,108,120
+SUNRISE,Capex,55,58,65
+SUNRISE,Free Cash Flow,40,50,55
+SUNRISE,Scheduled Principal Repayment,35,38,40
+DECCAN,Revenue,900,850,820
+DECCAN,COGS,640,620,610
+DECCAN,Operating Expenses,150,150,155
+DECCAN,EBITDA,110,80,55
+DECCAN,Depreciation & Amortization,70,72,74
+DECCAN,EBIT,40,8,-19
+DECCAN,Interest Expense,95,100,105
+DECCAN,PBT,-55,-92,-124
+DECCAN,Tax,0,0,0
+DECCAN,Net Income,-55,-92,-124
+DECCAN,Cash & Equivalents,30,22,15
+DECCAN,Accounts Receivable,180,175,170
+DECCAN,Inventory,90,95,100
+DECCAN,Current Assets,320,305,300
+DECCAN,Net PPE,880,850,820
+DECCAN,Total Assets,1230,1180,1140
+DECCAN,Accounts Payable,140,150,160
+DECCAN,Short-term Debt,180,200,230
+DECCAN,Current Liabilities,360,390,430
+DECCAN,Long-term Debt,720,700,690
+DECCAN,Total Debt,900,900,920
+DECCAN,Total Liabilities,1090,1110,1150
+DECCAN,Total Equity,140,70,-10
+DECCAN,Operating Cash Flow,70,40,20
+DECCAN,Capex,40,35,30
+DECCAN,Free Cash Flow,30,5,-10
+DECCAN,Scheduled Principal Repayment,60,65,70

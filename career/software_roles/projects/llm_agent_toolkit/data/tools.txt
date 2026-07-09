@@ -1,0 +1,13 @@
+Tool calling and function calling in LLM agents
+
+Tool calling (also called function calling) lets a language model invoke
+external functions instead of answering from memory alone. Each tool has a
+name, a description, and a schema for its arguments. The model emits a
+structured request naming the tool and a JSON argument object; the runtime
+executes the tool and returns the result as an observation.
+
+In this toolkit the available tools are: calculator for safe arithmetic,
+word_count for text statistics, datetime_tool for dates and times, and
+search_docs for keyword search over a local knowledge base. A registry maps
+tool names to implementations, and the agent validates the model's JSON input
+before dispatching the call.

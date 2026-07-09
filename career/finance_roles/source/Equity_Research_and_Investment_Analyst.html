@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 10mm 15mm 9mm 15mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Calibri","Carlito","Segoe UI",sans-serif; font-size: 10pt; line-height: 1.16;
+         color: #1a1a1a; font-variant-ligatures: none; font-feature-settings: "liga" 0,"clig" 0,"dlig" 0; }
+  .name { text-align: center; font-size: 22pt; font-weight: 700; letter-spacing: 1px; color: #16365c; }
+  .role-tag { text-align: center; font-size: 10.5pt; font-weight: 700; color: #1f4e79;
+              letter-spacing: 0.5px; text-transform: uppercase; margin-top: 1px; }
+  .contact { text-align: center; font-size: 9.6pt; margin-top: 3px; color: #333; }
+  .contact a { color: #1f4e79; text-decoration: none; }
+  h2 { font-size: 11pt; font-weight: 700; color: #16365c; text-transform: uppercase; letter-spacing: 0.6px;
+       border-bottom: 1.4px solid #16365c; padding-bottom: 2px; margin-top: 5px; margin-bottom: 3px; }
+  p, li { font-size: 10pt; }
+  .summary { text-align: justify; }
+  .skills p { margin-bottom: 2.5px; }
+  .skills b { color: #16365c; }
+  .role { display: flex; justify-content: space-between; margin-top: 4.5px; }
+  .role .title { font-weight: 700; }
+  .role .date { font-style: italic; color: #444; white-space: nowrap; }
+  .sub { font-style: italic; color: #555; font-size: 9.7pt; margin-bottom: 1px; }
+  ul { margin: 1.5px 0 1.5px 17px; }
+  li { margin-bottom: 1.2px; }
+  .proj { font-weight: 700; color: #16365c; margin-top: 4px; }
+  .cert-line { margin-bottom: 2px; }
+  .cert-line b { color: #16365c; }
+</style></head><body>
+
+<div class="name">SAIKUMAR KALERU</div>
+
+<div class="contact">Hyderabad, India &nbsp;|&nbsp; +91 9398320218 &nbsp;|&nbsp; saikumarkaleru56@gmail.com &nbsp;|&nbsp;
+<a href="https://linkedin.com/in/saikumar-kaleru">linkedin.com/in/saikumar-kaleru</a></div>
+
+<h2>Professional Summary</h2>
+<p class="summary">Equity research and investment analyst with an MBA in Finance and a B.E. in Computer Science, NISM Series-XV certified, with close to two years of capital markets experience at D. E. Shaw. Strong in valuation with DCF and comparable companies, three-statement modeling, and financial statement analysis, and fluent in Excel and Python for building models, screening ideas, and writing research. Comfortable turning research into clear investment views with a target price and risks.</p>
+
+<h2>Skills</h2>
+<div class="skills">
+<p><b>Valuation &amp; Modeling:</b> DCF (FCFF, WACC, terminal value), comparable company analysis (EV/EBITDA, EV/Sales, P/E, P/B, PEG), three-statement modeling, sensitivity and scenario analysis</p>
+<p><b>Research &amp; Analysis:</b> Financial statement analysis, ratio analysis, earnings and results analysis, sector and company research, investment thesis, target price, catalysts and risks</p>
+<p><b>Corporate Finance:</b> Cost of capital, capital structure, M&amp;A basics, accretion and dilution, ESG factors</p>
+<p><b>Data &amp; Tools:</b> Advanced Excel, PowerPoint, Python (pandas, NumPy), SQL, Power BI</p>
+<p><b>Markets:</b> Equity and derivatives markets, Nifty and Bank Nifty, capital markets</p>
+</div>
+
+<h2>Experience</h2>
+<div class="role"><span class="title">D. E. Shaw India Pvt. Ltd. &nbsp;|&nbsp; Member Technical (F&amp;O Trading Desk)</span><span class="date">May 2022 to Jan 2024</span></div>
+<ul>
+<li>Analysed company and market data across the F&amp;O universe and turned it into clear, decision ready conclusions for the desk.</li>
+<li>Tracked earnings, results, and events and how the market reacted, building a feel for what moves prices.</li>
+<li>Prepared daily and weekly research reports on market data and volatility that the desk relied on to form and test its views.</li>
+<li>Built automated Python pipelines to capture, clean, and process daily market data, cutting manual work and improving accuracy.</li>
+<li>Studied sectors, instruments, and option strategies such as straddles, strangles, and spreads to screen ideas and support the desk's views.</li>
+<li>Screened instruments on valuation and market reaction to shortlist ideas and wrote short notes on the rationale.</li>
+</ul>
+<div class="role"><span class="title">Arcesium India Pvt. Ltd. &nbsp;|&nbsp; Site Reliability Engineer (Intern)</span><span class="date">Jan 2022 to May 2022</span></div>
+<ul>
+<li>Kept AWS EC2 and RDS services highly available and resolved production database issues.</li>
+<li>Managed and optimized MS SQL and PostgreSQL databases, improved slow running queries, and evaluated Flyway for automated schema migration.</li>
+</ul>
+
+<h2>Projects</h2>
+<div class="proj">Equity Intrinsic Valuation Engine: 5 Year DCF, WACC &amp; Terminal Value Sensitivity (AAPL) &nbsp;|&nbsp; Python, Excel</div>
+<ul>
+<li>Built a five year FCFF DCF with WACC, terminal value, an equity bridge, and base and downside scenarios.</li>
+<li>Added a reverse DCF to show what growth and margins the current price implies.</li>
+<li>Ran a two-way sensitivity on WACC and terminal growth and reconciled the model to Excel.</li>
+</ul>
+<div class="proj">Relative Valuation Model: Peer Trading Multiples &amp; Implied Price Range (AAPL) &nbsp;|&nbsp; Python, Excel</div>
+<ul>
+<li>Built a trading comps set on P/E, EV/EBITDA, EV/Sales, P/B, and PEG with peer statistics and an implied valuation range.</li>
+<li>Presented the output as a football field to triangulate value against the DCF.</li>
+<li>Pulled peer financials with yfinance, computed each multiple, and set the implied price range from peer medians.</li>
+</ul>
+<div class="proj">Integrated Three Statement Model: Driver Based 5 Year Forecast with Scenarios (MSFT) &nbsp;|&nbsp; Python, Excel</div>
+<ul>
+<li>Built a linked income statement, balance sheet, and cash flow with a driver based forecast that stays balanced.</li>
+<li>Ran scenarios and a simple valuation off the forecast cash flows.</li>
+<li>Kept the balance sheet balanced each period from a small set of driver inputs.</li>
+<li>Wrote the model as a small, tested Python package with a clean Excel output for review.</li>
+</ul>
+
+<h2>Education</h2>
+<div class="role"><span class="title">MBA in Finance, University College of Commerce &amp; Business Management, Hyderabad</span><span class="date">2024 to 2026</span></div>
+<div class="sub">CGPA 8.9</div>
+<div class="role"><span class="title">B.E. Computer Science &amp; Engineering, Chaitanya Bharathi Institute of Technology, Hyderabad</span><span class="date">2018 to 2022</span></div>
+<div class="sub">CGPA 8.8</div>
+
+<h2>Relevant Coursework</h2>
+<div class="skills"><p>Security Analysis &amp; Portfolio Management, Financial Modeling &amp; Valuation, Corporate Finance, Financial Statement Analysis, Investment Banking, Managerial Economics</p></div>
+
+<h2>Certifications</h2>
+<p class="cert-line"><b>NISM Series-XV: Research Analyst</b> (SEBI/NISM), Reg. No. NISM-202600123995</p>
+
+<h2>Achievements</h2>
+<ul>
+<li>UGC NET 2025 (Management): 95.6 percentile.</li>
+</ul>
+
+</body></html>

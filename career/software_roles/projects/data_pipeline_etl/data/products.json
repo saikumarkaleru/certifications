@@ -1,0 +1,12 @@
+[
+  {"product_id": "P100", "name": "Wireless Mouse", "category": "Electronics", "unit_price": 799.00},
+  {"product_id": "P101", "name": "Mechanical Keyboard", "category": "Electronics", "unit_price": 3499.00},
+  {"product_id": "P102", "name": "USB-C Hub", "category": "Electronics", "unit_price": 1999.00},
+  {"product_id": "P103", "name": "Cotton T-Shirt", "category": "Apparel", "unit_price": 599.00},
+  {"product_id": "P104", "name": "Running Shoes", "category": "Footwear", "unit_price": 2499.00},
+  {"product_id": "P105", "name": "Stainless Water Bottle", "category": "Home", "unit_price": 449.00},
+  {"product_id": "P106", "name": "Yoga Mat", "category": "Fitness", "unit_price": 899.00},
+  {"product_id": "P107", "name": "Ceramic Coffee Mug", "category": "Home", "unit_price": 299.00},
+  {"product_id": "P108", "name": "Bluetooth Speaker", "category": "Electronics", "unit_price": 2299.00},
+  {"product_id": "P109", "name": "Notebook Pack", "category": "Stationery", "unit_price": 199.00}
+]

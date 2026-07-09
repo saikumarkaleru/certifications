@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Georgia","Cambria",serif; font-size: 10.5pt; line-height: 1.5; color: #1a1a1a; }
+  h1,h2,h3,.cover-kicker,.cover-sub,.ex-h,.q,th { font-family: "Calibri","Segoe UI",sans-serif; }
+
+  /* Cover */
+  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+  .cover-kicker { font-size: 11pt; font-weight: 700; letter-spacing: 2px; color: #1f4e79; text-transform: uppercase; }
+  .cover-title { font-size: 34pt; font-weight: 800; color: #16365c; margin: 10px 0 6px; line-height: 1.1; }
+  .cover-sub { font-size: 12pt; color: #444; font-style: italic; }
+  .cover-foot { margin-top: 22px; font-size: 10pt; color: #666; font-family:"Calibri",sans-serif; }
+
+  /* TOC */
+  .toc { page-break-after: always; }
+  .toc h2 { border: none; }
+  .toc ol { margin-left: 20px; font-family:"Calibri",sans-serif; font-size: 11pt; line-height: 1.9; }
+
+  /* Headings */
+  h2 { font-size: 16pt; font-weight: 700; color: #16365c; border-bottom: 2px solid #16365c;
+       padding-bottom: 4px; margin: 18px 0 10px; page-break-after: avoid; }
+  h3 { font-size: 12.5pt; font-weight: 700; color: #1f4e79; margin: 14px 0 5px; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; color: #333; margin: 10px 0 4px; font-family:"Calibri",sans-serif; }
+  p { margin: 5px 0; text-align: justify; }
+  ul, ol { margin: 5px 0 5px 22px; }
+  li { margin-bottom: 3px; }
+  b, strong { color: #16365c; }
+
+  /* Formula box */
+  .formula { background: #f4f7fb; border-left: 4px solid #1f4e79; padding: 8px 12px; margin: 8px 0;
+             font-family: "Cambria Math","Cambria",serif; page-break-inside: avoid; }
+  .formula b { color: #16365c; }
+  .formula .where { font-size: 9.3pt; color: #555; margin-top: 3px; font-family:"Calibri",sans-serif; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 9px 0; font-size: 9.6pt; page-break-inside: avoid; }
+  th { background: #16365c; color: #fff; text-align: left; padding: 5px 8px; font-size: 9.6pt; }
+  td { border: 1px solid #cbd5e1; padding: 4px 8px; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f4f7fb; }
+
+  /* Worked example */
+  .example { border: 1px solid #b7c7dd; border-radius: 4px; padding: 9px 12px; margin: 10px 0;
+             background: #fbfdff; page-break-inside: avoid; }
+  .ex-h { font-weight: 700; color: #1f4e79; font-size: 10.5pt; margin-bottom: 4px; }
+
+  /* Q&A */
+  .qa { margin: 8px 0; page-break-inside: avoid; }
+  .qa .q { font-weight: 700; color: #16365c; }
+  .qa .a { margin-top: 2px; }
+
+  /* Trap / takeaway callouts */
+  .trap { background: #fff6f0; border-left: 4px solid #c26a2c; padding: 6px 11px; margin: 8px 0; font-size: 10pt; }
+  .keytake { background: #f0f7f1; border-left: 4px solid #3f7d45; padding: 8px 12px; margin: 12px 0; }
+
+  .sec { page-break-before: always; }   /* put on an <h2> to force a fresh page */
+</style></head><body>
+
+<div class="cover">
+  <div class="cover-kicker">Interview Prep &middot; Finance Roles</div>
+  <h1 class="cover-title">Accounting &amp; Financial Statement Analysis</h1>
+  <div class="cover-sub">The three statements, how they articulate, the full ratio toolkit, cash flow &amp; quality of earnings — built for Indian MBA (Finance) freshers.</div>
+  <div class="cover-foot">Target roles: Equity Research &middot; Investment Banking &middot; Credit &middot; Risk &middot; FP&amp;A &middot; Product Control &middot; Fund Accounting<br>
+  Context: Ind-AS / IFRS &middot; Companies Act &middot; SEBI disclosure &middot; figures in INR</div>
+</div>
+
+<div class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li>How Accounting Works: The Language of Business</li>
+    <li>The Profit &amp; Loss Statement (Income Statement)</li>
+    <li>The Balance Sheet</li>
+    <li>The Cash Flow Statement</li>
+    <li>How the Three Statements Link (Articulation)</li>
+    <li>Accrual vs Cash Accounting; Matching; Revenue Recognition (Ind-AS 115)</li>
+    <li>Ind-AS / IFRS vs Older Indian GAAP</li>
+    <li>Depreciation &amp; Amortisation</li>
+    <li>Deferred Tax: DTA &amp; DTL</li>
+    <li>Provisions, Reserves &amp; Contingent Liabilities</li>
+    <li>Working Capital and the Operating / Cash Cycle</li>
+    <li>The Ratio Toolkit: Liquidity, Leverage, Profitability, Efficiency</li>
+    <li>DuPont Analysis (3-step &amp; 5-step)</li>
+    <li>Cash Flow Statement Analysis &amp; Free Cash Flow (FCFF / FCFE)</li>
+    <li>Quality of Earnings &amp; Accounting Red Flags</li>
+    <li>Common-Size &amp; Trend Analysis</li>
+    <li>Consolidation Basics</li>
+    <li>The Accounting Cycle: Journal &rarr; Ledger &rarr; Trial Balance &rarr; Statements</li>
+    <li>Inventory Valuation (Ind-AS 2): FIFO, Weighted Average &amp; the LIFO Ban</li>
+    <li>PP&amp;E, Intangibles &amp; R&amp;D: Capitalise vs Expense (Ind-AS 16 &amp; 38)</li>
+    <li>Impairment of Assets (Ind-AS 36)</li>
+    <li>Leases in Depth (Ind-AS 116): Finance vs Operating</li>
+    <li>Financial Instruments &amp; Expected Credit Loss (Ind-AS 109)</li>
+    <li>Employee Benefits, Borrowing Costs &amp; Foreign Exchange (Ind-AS 19, 23, 21)</li>
+    <li>Fair Value Hierarchy &amp; Business Combinations (Ind-AS 113 &amp; 103)</li>
+    <li>EPS, Dividends &amp; Share Buybacks</li>
+    <li>Segment Analysis, Benchmarking &amp; Putting FSA Together</li>
+    <li>The Classic "A Change Flows Through 3 Statements"</li>
+    <li>Interview Q&amp;A Bank (75 questions)</li>
+    <li>One-Page Rapid Revision</li>
+  </ol>
+</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">1. How Accounting Works: The Language of Business</h2>
+
+<p>Accounting is the system that records, classifies and summarises the economic events of a business and reports them to outsiders (investors, lenders, regulators) and insiders (management). In an interview, treat financial statements as a <b>story told in three chapters</b>: how much the company earned (P&amp;L), what it owns and owes at a point in time (Balance Sheet), and where the cash actually went (Cash Flow Statement).</p>
+
+<h3>1.1 The accounting equation</h3>
+<p>Every entry in double-entry bookkeeping preserves one identity. This is the single most important sentence in accounting; almost every "flows through the statements" question is just this equation staying in balance.</p>
+
+<div class="formula"><b>The Accounting Equation</b><br>
+Assets = Liabilities + Shareholders' Equity
+<div class="where">where: <b>Assets</b> = resources the firm controls that will generate future economic benefit; <b>Liabilities</b> = present obligations to outsiders; <b>Equity</b> = the residual owners' claim (also = Share Capital + Reserves &amp; Surplus).</div></div>
+
+<p>An expanded form connects the P&amp;L to the balance sheet, because profits that are not paid out as dividends accumulate in equity:</p>
+
+<div class="formula"><b>Expanded equation</b><br>
+Assets = Liabilities + Contributed Capital + (Beginning Retained Earnings + Net Income &minus; Dividends)
+<div class="where">This shows why net income is not a standalone number — it is the bridge that grows equity each period.</div></div>
+
+<h3>1.2 Debits and credits (the mechanics you should not fear)</h3>
+<p>Double-entry means every transaction hits at least two accounts and the debits equal the credits. Rules of thumb:</p>
+<ul>
+  <li><b>Assets and Expenses</b> increase with a <b>debit</b>, decrease with a credit.</li>
+  <li><b>Liabilities, Equity and Income</b> increase with a <b>credit</b>, decrease with a debit.</li>
+</ul>
+<p>You rarely need to pass journal entries in a research/IB interview, but knowing the direction lets you reason about any adjustment. Example: booking depreciation is "Debit Depreciation Expense, Credit Accumulated Depreciation" — an expense rises (profit falls) and a contra-asset rises (net assets fall).</p>
+
+<h3>1.3 The regulatory frame in India (high level)</h3>
+<ul>
+  <li><b>Companies Act, 2013</b> governs the preparation and audit of financial statements; Schedule III prescribes the format of the balance sheet and P&amp;L for Indian companies.</li>
+  <li><b>Ind-AS (Indian Accounting Standards)</b>, largely converged with <b>IFRS</b>, apply to larger listed and unlisted companies in a phased manner based on net-worth thresholds; smaller companies still follow the older <b>AS (Indian GAAP)</b>.</li>
+  <li><b>ICAI</b> issues standards and guidance; <b>SEBI (LODR) Regulations</b> mandate quarterly and annual disclosure for listed companies; <b>Ind-AS 34 / interim reporting</b> concepts apply to quarterly numbers.</li>
+  <li>Statutory audit gives an opinion on "true and fair view"; it is <b>reasonable</b>, not absolute, assurance.</li>
+</ul>
+
+<div class="keytake"><b>Key takeaways:</b> The whole subject reduces to (1) the accounting equation always balancing, (2) accrual accounting recognising economics not cash, and (3) the cash flow statement reconciling accrual profit back to real cash. Master those three ideas and every "flow-through" question becomes mechanical.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">2. The Profit &amp; Loss Statement (Income Statement)</h2>
+
+<p>The P&amp;L reports performance <b>over a period</b> (a quarter or year). It answers: did the business make a profit, and where did it come from? It is prepared on the <b>accrual</b> basis — revenue is recognised when earned and expenses when incurred, regardless of cash timing.</p>
+
+<h3>2.1 Structure, top to bottom</h3>
+<table>
+<thead><tr><th>Line item</th><th>What it captures</th></tr></thead>
+<tbody>
+<tr><td><b>Revenue from operations (Net Sales)</b></td><td>Value of goods/services sold, net of returns, discounts and GST (GST is collected on behalf of the government, not revenue).</td></tr>
+<tr><td>Other income</td><td>Interest, dividends, rent, FX gains — non-core items. Analysts often strip this out.</td></tr>
+<tr><td><b>Cost of Goods Sold (COGS) / Cost of materials</b></td><td>Direct costs of producing what was sold: raw material consumed + direct labour + manufacturing overhead.</td></tr>
+<tr><td><b>Gross Profit</b></td><td>Revenue &minus; COGS. Measures product-level profitability.</td></tr>
+<tr><td>Employee benefit expense</td><td>Salaries, wages, PF, gratuity, ESOP cost.</td></tr>
+<tr><td>Other operating expenses (SG&amp;A)</td><td>Selling, general &amp; administrative: marketing, rent, utilities, travel.</td></tr>
+<tr><td><b>EBITDA</b></td><td>Earnings Before Interest, Tax, Depreciation &amp; Amortisation — a proxy for operating cash generation.</td></tr>
+<tr><td>Depreciation &amp; Amortisation</td><td>Non-cash allocation of the cost of fixed/intangible assets.</td></tr>
+<tr><td><b>EBIT / Operating Profit</b></td><td>Earnings Before Interest &amp; Tax — profitability of core operations irrespective of financing.</td></tr>
+<tr><td>Finance costs (Interest expense)</td><td>Cost of debt.</td></tr>
+<tr><td><b>Profit Before Tax (PBT)</b></td><td>EBIT &minus; interest &plusmn; exceptional/other income.</td></tr>
+<tr><td>Tax expense (current + deferred)</td><td>Corporate income tax charged for the period.</td></tr>
+<tr><td><b>Profit After Tax (PAT) / Net Income</b></td><td>The "bottom line" attributable to shareholders.</td></tr>
+</tbody>
+</table>
+
+<h3>2.2 Key sub-totals interviewers love</h3>
+<div class="formula"><b>Gross Profit</b><br>
+Gross Profit = Net Sales &minus; COGS
+<div class="where">COGS = Opening Inventory + Purchases + Direct Costs &minus; Closing Inventory.</div></div>
+
+<div class="formula"><b>EBITDA</b><br>
+EBITDA = EBIT + Depreciation + Amortisation<br>
+(equivalently) = PBT + Interest + Depreciation + Amortisation
+<div class="where">A capital-structure-neutral, non-cash-charge-neutral measure of operating performance. Not a substitute for cash flow — it ignores working-capital changes, capex and taxes.</div></div>
+
+<div class="formula"><b>Net Income</b><br>
+Net Income (PAT) = PBT &minus; Tax Expense = EBIT &minus; Interest &minus; Tax &plusmn; Exceptional items
+</div>
+
+<h3>2.3 Exceptional, extraordinary and continuing/discontinued</h3>
+<p>One-off items (asset-sale gains, litigation provisions, restructuring, impairment) are usually shown separately as <b>exceptional items</b> so analysts can compute a "clean" or <b>normalised</b> earnings figure. Ind-AS no longer permits the label "extraordinary items". Discontinued operations are shown separately from continuing operations.</p>
+
+<h3>2.4 Other Comprehensive Income (OCI)</h3>
+<p>Under Ind-AS, the statement of profit and loss has two parts: <b>Profit or Loss</b> and <b>Other Comprehensive Income</b>. OCI captures gains/losses not routed through P&amp;L — e.g. remeasurement of defined-benefit (gratuity) plans, certain equity investments measured at FVTOCI, revaluation surpluses, and effective portions of cash-flow hedges. <b>Total Comprehensive Income = PAT + OCI.</b> Some OCI items later "recycle" to P&amp;L; others never do.</p>
+
+<h3>2.5 Reading a P&amp;L like an analyst</h3>
+<p>When you open a P&amp;L, do not read it top to bottom passively — interrogate it. First, <b>separate operating from non-operating</b>: is the profit coming from selling products (sustainable) or from one-off asset sales, FX gains and treasury income (not repeatable)? Second, <b>track the margin ladder</b>: gross margin tells you about pricing power and input costs, EBITDA margin about operating leverage and overhead discipline, and net margin about the combined drag of depreciation, interest and tax. A company whose gross margin is stable but whose EBITDA margin is falling has a cost-control problem in overheads, not a pricing problem. Third, <b>ask what "revenue" includes</b> — under Ind-AS, revenue is net of GST, trade discounts and expected returns; a jump in revenue with a jump in "returns/rebates" in the notes is a warning.</p>
+
+<p>Operating leverage is a recurring interview theme. A firm with high fixed costs (a steel plant, a telecom network) sees profits swing violently with revenue — a 10% revenue rise can lift EBIT 30% because fixed costs are already covered; the same works brutally in reverse in a downturn. A firm with mostly variable costs (a trading business, a services firm billing per hour) has stable but lower-amplitude margins. Recognising which type of business you are looking at shapes how you forecast and how much risk you assign.</p>
+
+<div class="trap"><b>Common trap:</b> Revenue &ne; cash received, and PAT &ne; cash generated. A company can report record profit and still run out of cash if customers do not pay (receivables balloon) or it over-invests in inventory and capex. Always separate the P&amp;L story from the cash story.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">3. The Balance Sheet</h2>
+
+<p>The balance sheet is a <b>snapshot at a point in time</b> (the last day of the period) of what the company owns (assets), what it owes (liabilities) and the residual owners' stake (equity). It must balance: Assets = Liabilities + Equity.</p>
+
+<h3>3.1 The asset side</h3>
+<p>Under Schedule III / Ind-AS, assets are split into <b>non-current</b> (benefit &gt; 12 months) and <b>current</b> (expected to convert to cash within the operating cycle / 12 months).</p>
+<table>
+<thead><tr><th>Non-current assets</th><th>Current assets</th></tr></thead>
+<tbody>
+<tr><td>Property, Plant &amp; Equipment (PP&amp;E), net of accumulated depreciation</td><td>Inventories (raw material, WIP, finished goods)</td></tr>
+<tr><td>Capital work-in-progress</td><td>Trade receivables (debtors)</td></tr>
+<tr><td>Goodwill &amp; other intangibles</td><td>Cash &amp; cash equivalents</td></tr>
+<tr><td>Investments (in subsidiaries, associates, others)</td><td>Short-term investments / current investments</td></tr>
+<tr><td>Deferred tax assets (net)</td><td>Loans &amp; advances, prepaid expenses, other current assets</td></tr>
+</tbody>
+</table>
+
+<h3>3.2 The liabilities &amp; equity side</h3>
+<table>
+<thead><tr><th>Equity</th><th>Non-current liabilities</th><th>Current liabilities</th></tr></thead>
+<tbody>
+<tr><td>Equity share capital (face value &times; shares)</td><td>Long-term borrowings (term loans, debentures, bonds)</td><td>Trade payables (creditors)</td></tr>
+<tr><td>Other equity: Reserves &amp; Surplus (retained earnings, securities premium, general reserve), OCI reserves</td><td>Deferred tax liabilities (net)</td><td>Short-term borrowings (working-capital loans, CC/OD)</td></tr>
+<tr><td>Non-controlling interest (in consolidated accounts)</td><td>Long-term provisions (gratuity, etc.)</td><td>Current maturities of long-term debt, accrued expenses, provisions, current tax</td></tr>
+</tbody>
+</table>
+
+<h3>3.3 Book value / net worth</h3>
+<div class="formula"><b>Shareholders' Equity (Net Worth / Book Value)</b><br>
+Equity = Share Capital + Reserves &amp; Surplus = Total Assets &minus; Total Liabilities
+<div class="where"><b>Book value per share</b> = Shareholders' Equity &divide; Number of shares outstanding. It reflects historical accounting values, not market value.</div></div>
+
+<h3>3.4 Historical cost vs fair value</h3>
+<p>Most assets are carried at <b>historical cost less depreciation/impairment</b>. Ind-AS pushes several items toward <b>fair value</b> (certain financial instruments, biological assets, investment property option, business-combination assets). This is why book value can diverge sharply from market value, especially for asset-light or brand-heavy firms.</p>
+
+<div class="trap"><b>Common trap:</b> "Reserves &amp; Surplus" are <b>not</b> a pile of cash. Retained earnings is an accounting record of cumulative undistributed profit; the actual money has usually been reinvested in inventory, receivables, PP&amp;E or used to repay debt. A company with large reserves can still have very little cash.</div>
+
+<h3>3.5 Reading a balance sheet like an analyst</h3>
+<p>Three lenses help. First, <b>the funding structure</b>: how much of the asset base is financed by equity versus debt versus "free" operating financing (payables, advances from customers)? A firm funding long-life fixed assets with short-term working-capital loans has an asset-liability mismatch — a liquidity accident waiting to happen. Second, <b>asset quality</b>: are the assets productive (plant generating sales, inventory that turns) or are they soft (large goodwill, revaluation surpluses, long-outstanding receivables, capitalised costs, deferred tax assets that depend on future profits)? A balance sheet heavy with soft assets can have a book value that overstates economic value. Third, <b>hidden and off-balance-sheet items</b>: read the notes for contingent liabilities, guarantees, pledged assets, and — pre-Ind-AS 116 — operating-lease commitments that behave like debt.</p>
+
+<p>A useful discipline is to mentally rebuild the balance sheet as <b>Invested Capital = Net Fixed Assets + Net Working Capital</b>, financed by <b>Debt + Equity</b>. This "capital employed" view strips out the operating clutter and lets you compute returns on the capital that actually funds the business, which is what ROCE and economic-value-added analysis need.</p>
+
+<div class="keytake"><b>Key takeaways:</b> P&amp;L = performance over a period; Balance Sheet = position at a point in time; the balance sheet is the cumulative result of every P&amp;L and cash flow the company has ever had. Non-current vs current classification drives most liquidity ratios. Rebuild it as Invested Capital = Debt + Equity to reason about returns.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">4. The Cash Flow Statement</h2>
+
+<p>Because the P&amp;L is on an accrual basis, it can diverge from cash. The Cash Flow Statement (CFS, governed by Ind-AS 7 / AS 3) reconciles the two by showing all cash movements over the period, split into three buckets. It explains the change in the cash &amp; cash-equivalents line on the balance sheet.</p>
+
+<h3>4.1 The three sections</h3>
+<ul>
+  <li><b>Cash Flow from Operations (CFO):</b> cash generated by the core business — collections from customers, payments to suppliers/employees, taxes and interest (classification of interest/tax can vary under Ind-AS policy choices).</li>
+  <li><b>Cash Flow from Investing (CFI):</b> buying/selling long-term assets — capex, acquisitions, purchase/sale of investments, interest/dividends received (policy dependent).</li>
+  <li><b>Cash Flow from Financing (CFF):</b> transactions with capital providers — raising/repaying debt, issuing/buying back shares, paying dividends.</li>
+</ul>
+
+<div class="formula"><b>Cash flow identity</b><br>
+Net change in cash = CFO + CFI + CFF<br>
+Closing Cash = Opening Cash + CFO + CFI + CFF
+<div class="where">This net change must equal the difference between the cash lines on the opening and closing balance sheets — the ultimate tie-out.</div></div>
+
+<h3>4.2 Direct vs indirect method (for CFO)</h3>
+<p>The <b>direct method</b> lists actual cash receipts and payments (cash from customers, cash to suppliers). The <b>indirect method</b> (far more common in practice) starts from net profit / PBT and adjusts for non-cash items and working-capital changes.</p>
+
+<div class="formula"><b>CFO — Indirect Method</b><br>
+CFO = PBT<br>
+&nbsp;&nbsp;+ Depreciation &amp; Amortisation (non-cash)<br>
+&nbsp;&nbsp;+ Interest expense &nbsp;&minus; Interest/other non-operating income<br>
+&nbsp;&nbsp;&plusmn; Other non-cash items (provisions, impairments, ESOP cost, unrealised FX)<br>
+&nbsp;&nbsp;&minus; Increase in current assets (receivables, inventory) &nbsp;+ Decrease<br>
+&nbsp;&nbsp;+ Increase in current liabilities (payables) &nbsp;&minus; Decrease<br>
+&nbsp;&nbsp;&minus; Taxes paid
+<div class="where">Add back non-cash charges; reverse working-capital moves (cash is tied up when receivables/inventory rise, released when payables rise).</div></div>
+
+<h3>4.3 Reading the signs</h3>
+<table>
+<thead><tr><th>Pattern</th><th>Typical interpretation</th></tr></thead>
+<tbody>
+<tr><td>CFO positive &amp; growing</td><td>Healthy, self-funding operations.</td></tr>
+<tr><td>CFI negative</td><td>Usually good for a growth company — it is investing (capex, acquisitions).</td></tr>
+<tr><td>CFF negative</td><td>Repaying debt / paying dividends / buybacks — mature, cash-returning firm.</td></tr>
+<tr><td>CFO negative but CFF positive</td><td>Warning: business burns cash and survives on external financing (common in early-stage; risky in a "mature" firm).</td></tr>
+<tr><td>CFO &lt;&lt; Net profit consistently</td><td>Earnings quality concern — profits not converting to cash.</td></tr>
+</tbody>
+</table>
+
+<h3>4.4 Non-cash add-backs beyond depreciation</h3>
+<p>Depreciation is only the most famous non-cash charge. When moving from PBT to CFO under the indirect method, you also add back or reverse: <b>amortisation</b> of intangibles; <b>impairment</b> losses; <b>provisions</b> created (and subtract provisions actually paid/utilised); <b>ESOP / share-based payment</b> expense (a P&amp;L cost settled in shares, not cash); <b>unrealised foreign-exchange</b> gains/losses; <b>fair-value gains/losses</b> on investments routed through P&amp;L; and <b>loss/gain on sale of assets</b> (the gain is removed from CFO because the entire sale proceeds appear in CFI, so leaving the gain in CFO would double-count it). Interest expense is typically added back in CFO and shown as a financing outflow, and interest/dividend income is removed from CFO and shown under investing — but Ind-AS allows some policy choice here, so always read the company's stated classification.</p>
+
+<h3>4.5 Why interest and tax classification matters</h3>
+<p>Under Ind-AS 7 a company may classify interest paid and dividends paid as either operating or financing, and interest/dividends received as operating or investing, provided it is consistent. This choice materially changes reported CFO. A firm that parks interest paid in financing rather than operating reports a flatteringly higher CFO. When comparing two companies, normalise for this — a genuine "operating cash after debt service" comparison should treat interest consistently across both.</p>
+
+<div class="trap"><b>Common trap:</b> Depreciation is "added back" in CFO <b>not</b> because it is a source of cash, but because it was subtracted as a non-cash expense in arriving at profit. No cash leaves the business when you record depreciation; the cash left earlier when the asset was bought (shown in CFI as capex).</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">5. How the Three Statements Link (Articulation)</h2>
+
+<p>This is the single most-asked topic. The three statements are not independent — they articulate through a handful of connections. Memorise these links cold.</p>
+
+<h3>5.1 The core links</h3>
+<ol>
+  <li><b>Net income &rarr; Balance Sheet &amp; Cash Flow.</b> PAT from the P&amp;L flows into <b>Retained Earnings</b> (equity) on the balance sheet (less dividends), and is the <b>starting line</b> of the indirect cash flow statement.</li>
+  <li><b>Depreciation.</b> Appears as an expense on the P&amp;L, is added back in CFO, and reduces <b>net PP&amp;E</b> (via accumulated depreciation) on the balance sheet.</li>
+  <li><b>Cash.</b> The closing cash from the CFS becomes the <b>cash line</b> on the balance sheet. This is the tie-out that must balance.</li>
+  <li><b>Working capital.</b> Changes in receivables, inventory and payables on the balance sheet drive the working-capital adjustments in CFO.</li>
+  <li><b>Capex.</b> Cash spent on assets appears in CFI and increases gross PP&amp;E on the balance sheet.</li>
+  <li><b>Debt &amp; equity.</b> Borrowings/repayments and share issues/buybacks flow through CFF and change the corresponding balance-sheet liability/equity lines; interest on debt hits the P&amp;L.</li>
+</ol>
+
+<div class="formula"><b>Retained Earnings roll-forward</b><br>
+Closing Retained Earnings = Opening Retained Earnings + Net Income &minus; Dividends
+<div class="where">The clean bridge between the P&amp;L and the equity section of the balance sheet.</div></div>
+
+<div class="formula"><b>Net PP&amp;E roll-forward</b><br>
+Closing Net PP&amp;E = Opening Net PP&amp;E + Capex &minus; Depreciation &minus; Net book value of disposals
+<div class="where">Lets you back out capex or depreciation if one is missing — a classic modelling shortcut.</div></div>
+
+<h3>5.2 The "walk me through" mental model</h3>
+<p>When asked to link the statements, always narrate the loop: <b>"Net income from the P&amp;L flows to the top of the cash flow statement and into retained earnings. On the cash flow statement I adjust net income for non-cash items and working-capital changes to get to the true change in cash. That change in cash updates the cash line on the balance sheet. Meanwhile capex, debt draws/repayments and share issuance from the cash flow statement update PP&amp;E, borrowings and equity. When cash, retained earnings and every other line are updated, Assets = Liabilities + Equity still holds — that is the proof the model ties out."</b></p>
+
+<div class="keytake"><b>Key takeaways:</b> Three links matter most: (1) PAT &rarr; retained earnings &amp; top of CFS; (2) depreciation added back in CFS &amp; reduces PP&amp;E; (3) closing cash from CFS &rarr; balance-sheet cash. If the balance sheet doesn't balance in a model, the error is almost always a missing link among these.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">6. Accrual vs Cash Accounting; Matching; Revenue Recognition</h2>
+
+<h3>6.1 Accrual vs cash basis</h3>
+<p>Under the <b>cash basis</b>, you record revenue when cash is received and expenses when cash is paid — simple but misleading for anything but the tiniest business. Under the <b>accrual basis</b> (required for companies), you record revenue when it is <b>earned</b> and expenses when they are <b>incurred</b>, regardless of cash timing. Accruals create balance-sheet items: earn revenue but not yet collected &rarr; a receivable; incur an expense not yet paid &rarr; a payable/accrued liability; receive cash before earning &rarr; deferred/unearned revenue (a liability).</p>
+
+<h3>6.2 The matching principle</h3>
+<p>Expenses are recognised in the same period as the revenues they help generate. COGS is matched to the sale it produced; a machine's cost is spread over the years it produces revenue (depreciation). Matching is why we have depreciation, prepaid expenses, accrued expenses and provisions.</p>
+
+<h3>6.3 Revenue recognition — Ind-AS 115 (5-step model)</h3>
+<p>Ind-AS 115 (converged with IFRS 15), <i>Revenue from Contracts with Customers</i>, replaced older rules with a single 5-step model:</p>
+<ol>
+  <li><b>Identify the contract</b> with a customer.</li>
+  <li><b>Identify the performance obligations</b> (distinct promised goods/services).</li>
+  <li><b>Determine the transaction price</b> (including variable consideration, discounts, financing).</li>
+  <li><b>Allocate the price</b> to each performance obligation based on standalone selling prices.</li>
+  <li><b>Recognise revenue</b> when (or as) each obligation is satisfied — at a point in time, or over time.</li>
+</ol>
+<p>Practical consequences: bundled deals are unbundled (e.g. hardware + service); revenue over time uses percentage-of-completion-style measures for construction/long projects; upfront cash for a subscription is deferred and recognised across the service period.</p>
+
+<div class="example">
+<div class="ex-h">Worked Example 1 — Accrual vs cash &amp; deferred revenue</div>
+<p>On 1 Jan a SaaS firm collects <b>&#8377;12,00,000</b> upfront for a 12-month subscription. Prepare the picture at 31 March (end of Q1).</p>
+<p><b>Cash basis:</b> Revenue = &#8377;12,00,000 recognised on Day 1 (overstates Q1 performance).</p>
+<p><b>Accrual basis (Ind-AS 115):</b> The performance obligation (provide access) is satisfied over time. Monthly revenue = 12,00,000 &divide; 12 = &#8377;1,00,000. For Jan–Mar, revenue recognised = 3 &times; 1,00,000 = <b>&#8377;3,00,000</b>.</p>
+<p>Balance sheet at 31 Mar: <b>Deferred (unearned) revenue liability = 12,00,000 &minus; 3,00,000 = &#8377;9,00,000</b>. Cash was &#8377;12,00,000 up front (CFO), but only &#8377;3,00,000 is in the P&amp;L. This is a case where cash &gt; revenue.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> Do not confuse deferred revenue (a <b>liability</b> — cash received, service owed) with accrued revenue / unbilled revenue (an <b>asset</b> — service delivered, cash not yet received). They sit on opposite sides of the balance sheet.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">7. Ind-AS / IFRS vs Older Indian GAAP</h2>
+
+<p>India runs a two-track system. Larger companies (by net-worth thresholds and listing status) follow <b>Ind-AS</b> (converged with IFRS); others still follow the older <b>Accounting Standards (Indian GAAP / AS)</b>. Knowing the direction of differences signals maturity in an interview.</p>
+
+<table>
+<thead><tr><th>Area</th><th>Older Indian GAAP (AS)</th><th>Ind-AS / IFRS</th></tr></thead>
+<tbody>
+<tr><td>Overall philosophy</td><td>More rules-based, historical-cost anchored</td><td>Principles-based, substance over form, more fair value</td></tr>
+<tr><td>Measurement</td><td>Predominantly historical cost</td><td>Fair value used widely for financial instruments and some assets</td></tr>
+<tr><td>Financial statements</td><td>P&amp;L, Balance Sheet, Cash Flow</td><td>Adds Statement of Changes in Equity and OCI; single "P&amp;L and OCI"</td></tr>
+<tr><td>Revenue</td><td>AS 9 (risk-and-rewards transfer)</td><td>Ind-AS 115 (5-step, performance obligations)</td></tr>
+<tr><td>Leases</td><td>Operating leases off balance sheet (lessee)</td><td>Ind-AS 116: most leases on balance sheet as right-of-use asset + lease liability</td></tr>
+<tr><td>Financial instruments</td><td>Limited guidance (AS 13/30-series)</td><td>Ind-AS 109: classification (amortised cost / FVOCI / FVTPL), expected-credit-loss model</td></tr>
+<tr><td>Business combinations / goodwill</td><td>Goodwill often amortised</td><td>Ind-AS 103: purchase method; goodwill tested for impairment, not amortised</td></tr>
+<tr><td>Proposed dividend</td><td>Historically provided for in the year proposed</td><td>Recognised only when approved (post balance-sheet event)</td></tr>
+<tr><td>Component depreciation</td><td>Not mandatory historically</td><td>Required — significant components depreciated separately</td></tr>
+</tbody>
+</table>
+
+<p><b>Ind-AS 116 (leases)</b> is a common talking point: it moved operating leases onto the balance sheet, inflating both assets and debt, and shifting the rental expense into depreciation + interest — which <b>increases EBITDA</b> (rent is no longer an operating expense). Always ask whether a company's numbers are pre- or post-Ind-AS 116 when comparing across time or peers.</p>
+
+<!-- ===================================================================== -->
+<h2 class="sec">8. Depreciation &amp; Amortisation</h2>
+
+<p><b>Depreciation</b> spreads the cost of a tangible fixed asset (machinery, buildings, vehicles) over its useful life. <b>Amortisation</b> does the same for intangible assets with finite lives (patents, software, licences). Both are non-cash expenses that embody the matching principle — the cost of a long-lived asset is charged against the revenue it helps produce.</p>
+
+<h3>8.1 Methods</h3>
+<div class="formula"><b>Straight-Line Method (SLM)</b><br>
+Annual Depreciation = (Cost &minus; Residual Value) &divide; Useful Life (years)
+<div class="where">Equal charge each year. Most common for reporting; simple and stable.</div></div>
+
+<div class="formula"><b>Written-Down Value / Diminishing Balance (WDV)</b><br>
+Annual Depreciation = Net Book Value at start of year &times; Depreciation rate
+<div class="where">Higher charge in early years, tapering off. Often used for tax; better matches assets that lose value fast.</div></div>
+
+<p><b>Units-of-production</b> ties depreciation to actual output/usage. Under the Companies Act, useful lives are guided by Schedule II. For tax, the Income-tax Act prescribes <b>block-of-assets</b> WDV depreciation, which is why <b>book depreciation and tax depreciation differ</b> — the root cause of deferred tax (Section 9).</p>
+
+<h3>8.2 Effect across the three statements</h3>
+<table>
+<thead><tr><th>Statement</th><th>Effect of recording depreciation</th></tr></thead>
+<tbody>
+<tr><td>P&amp;L</td><td>Expense &uarr; &rarr; EBIT &darr;, PBT &darr;, PAT &darr; (and tax &darr;, giving a tax shield)</td></tr>
+<tr><td>Cash Flow</td><td>Added back in CFO (non-cash); no direct cash impact, but the tax it saves is real cash</td></tr>
+<tr><td>Balance Sheet</td><td>Accumulated depreciation &uarr; &rarr; net PP&amp;E &darr;; retained earnings &darr; by the after-tax profit reduction; cash &uarr; by the tax saved &rarr; still balances</td></tr>
+</tbody>
+</table>
+
+<div class="example">
+<div class="ex-h">Worked Example 2 — SLM vs WDV depreciation</div>
+<p>Machine cost <b>&#8377;10,00,000</b>, residual value &#8377;1,00,000, useful life 5 years. WDV rate 30%.</p>
+<p><b>SLM:</b> (10,00,000 &minus; 1,00,000) &divide; 5 = <b>&#8377;1,80,000 per year</b>, every year.</p>
+<p><b>WDV (30%):</b><br>
+Year 1: 10,00,000 &times; 30% = &#8377;3,00,000 &rarr; NBV 7,00,000<br>
+Year 2: 7,00,000 &times; 30% = &#8377;2,10,000 &rarr; NBV 4,90,000<br>
+Year 3: 4,90,000 &times; 30% = &#8377;1,47,000 &rarr; NBV 3,43,000</p>
+<p><b>Insight:</b> WDV front-loads the expense (&#8377;3,00,000 vs &#8377;1,80,000 in Year 1), so early-year profit is lower and the tax shield comes sooner. Over the full life both methods expense the same total depreciable amount.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> The tax "saving" from depreciation is real cash, but the depreciation charge itself is not a cash outflow. Also, impairment (a one-time write-down when an asset's recoverable value drops below book value) is different from routine depreciation — it is usually shown as an exceptional item.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">9. Deferred Tax: DTA &amp; DTL</h2>
+
+<p>Companies keep two sets of numbers: <b>book profit</b> (per Ind-AS/GAAP) and <b>taxable profit</b> (per the Income-tax Act). Because the two use different timing rules (especially for depreciation, provisions and losses), the tax you <i>report</i> in the P&amp;L differs from the tax you <i>pay</i>. Deferred tax accounts for these <b>timing (temporary) differences</b> so the reported tax matches book profit.</p>
+
+<div class="formula"><b>Total tax expense</b><br>
+Tax Expense (P&amp;L) = Current Tax (actually payable) &plusmn; Deferred Tax
+<div class="where"><b>Current tax</b> = tax on this year's taxable income. <b>Deferred tax</b> = change in DTA/DTL from timing differences reversing in future.</div></div>
+
+<h3>9.1 DTL vs DTA</h3>
+<table>
+<thead><tr><th></th><th>Deferred Tax Liability (DTL)</th><th>Deferred Tax Asset (DTA)</th></tr></thead>
+<tbody>
+<tr><td>Arises when</td><td>You pay <b>less</b> tax now, more later (taxable income &lt; book income temporarily)</td><td>You pay <b>more</b> tax now, less later (taxable income &gt; book income temporarily)</td></tr>
+<tr><td>Classic cause</td><td>Tax depreciation (WDV, accelerated) &gt; book depreciation (SLM)</td><td>Provisions/expenses booked now but tax-deductible only when paid; carry-forward losses; unabsorbed depreciation</td></tr>
+<tr><td>Balance sheet</td><td>A liability (future tax owed)</td><td>An asset (future tax saving)</td></tr>
+<tr><td>Recognition caveat</td><td>Generally always recognised</td><td>Only to the extent future taxable profit is <b>probable</b> (prudence)</td></tr>
+</tbody>
+</table>
+
+<div class="example">
+<div class="ex-h">Worked Example 3 — Deferred Tax Liability from depreciation</div>
+<p>Book depreciation (SLM) = &#8377;1,80,000; tax depreciation (WDV) = &#8377;3,00,000 in Year 1. Tax rate 25%. Profit before depreciation &amp; tax = &#8377;10,00,000.</p>
+<p><b>Book PBT</b> = 10,00,000 &minus; 1,80,000 = &#8377;8,20,000<br>
+<b>Taxable profit</b> = 10,00,000 &minus; 3,00,000 = &#8377;7,00,000</p>
+<p><b>Current tax</b> (paid) = 7,00,000 &times; 25% = &#8377;1,75,000<br>
+<b>Tax on book profit</b> = 8,20,000 &times; 25% = &#8377;2,05,000</p>
+<p>The company pays only &#8377;1,75,000 now but the P&amp;L should reflect &#8377;2,05,000. The &#8377;30,000 gap is a <b>DTL</b> (it will reverse in later years when book depreciation exceeds tax depreciation). Timing difference = 3,00,000 &minus; 1,80,000 = 1,20,000; DTL = 1,20,000 &times; 25% = <b>&#8377;30,000</b>.</p>
+<p>P&amp;L tax expense = Current 1,75,000 + Deferred 30,000 = <b>&#8377;2,05,000</b>, matching book profit.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> A DTL is not "tax fraud" or tax not paid — it is tax legitimately deferred to future periods. And a large DTA that depends on future profits can be a red flag if the company keeps making losses (it may have to be written down).</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">10. Provisions, Reserves &amp; Contingent Liabilities</h2>
+
+<p>These three are constantly confused. Be crisp.</p>
+<table>
+<thead><tr><th>Item</th><th>What it is</th><th>Where it sits</th></tr></thead>
+<tbody>
+<tr><td><b>Provision</b></td><td>A liability of <b>uncertain timing or amount</b> for a <b>present obligation</b> that is probable and can be estimated (e.g. warranty, gratuity, doubtful debts, tax). Created by charging the P&amp;L.</td><td>Liability (reduces profit)</td></tr>
+<tr><td><b>Reserve</b></td><td>An <b>appropriation of profit</b> already earned, set aside in equity (general reserve, securities premium, retained earnings). It is <b>not</b> an expense and <b>not</b> cash.</td><td>Equity (Reserves &amp; Surplus)</td></tr>
+<tr><td><b>Contingent liability</b></td><td>A <b>possible</b> obligation depending on a future event, or a present obligation not probable/measurable (e.g. pending litigation, guarantees). <b>Not recognised</b> — only disclosed in notes.</td><td>Notes only (off balance sheet)</td></tr>
+</tbody>
+</table>
+
+<p><b>Provision reduces profit; reserve is a slice of profit already made.</b> Both may or may not have cash behind them, but a provision is a charge against P&amp;L whereas a reserve is a distribution of retained earnings within equity. Under Ind-AS 37, provisions require a present obligation from a past event, probable outflow, and a reliable estimate.</p>
+
+<div class="trap"><b>Common trap:</b> "Provision for doubtful debts" and "provision for depreciation" are <b>contra-asset</b> adjustments (they reduce receivables and PP&amp;E respectively), not free-standing liabilities — the word "provision" is used loosely in Indian accounting. Read the balance sheet placement, not just the label.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">11. Working Capital and the Operating / Cash Cycle</h2>
+
+<p>Working capital is the money tied up in day-to-day operations. Managing it well can free up huge amounts of cash without any change in profit.</p>
+
+<div class="formula"><b>Working Capital</b><br>
+Net Working Capital = Current Assets &minus; Current Liabilities
+<div class="where">For analysis, exclude cash and short-term debt to get <b>operating working capital</b> = (Receivables + Inventory) &minus; Payables. This is the cash locked in operations.</div></div>
+
+<h3>11.1 The cash conversion cycle</h3>
+<div class="formula"><b>Days Inventory Outstanding (DIO)</b><br>
+DIO = (Average Inventory &divide; COGS) &times; 365
+</div>
+<div class="formula"><b>Days Sales Outstanding (DSO)</b><br>
+DSO = (Average Receivables &divide; Net Credit Sales) &times; 365
+</div>
+<div class="formula"><b>Days Payables Outstanding (DPO)</b><br>
+DPO = (Average Payables &divide; COGS or Purchases) &times; 365
+</div>
+<div class="formula"><b>Cash Conversion Cycle (CCC)</b><br>
+CCC = DIO + DSO &minus; DPO
+<div class="where">Days between paying suppliers and collecting from customers. Lower (or negative) is better — a negative CCC means suppliers finance your operations (classic for FMCG/retail).</div></div>
+
+<div class="example">
+<div class="ex-h">Worked Example 4 — Cash Conversion Cycle</div>
+<p>A manufacturer: Average inventory &#8377;80,00,000; COGS &#8377;4,00,00,000; Average receivables &#8377;60,00,000; Sales &#8377;5,00,00,000; Average payables &#8377;50,00,000.</p>
+<p>DIO = (80 &divide; 400) &times; 365 = <b>73 days</b><br>
+DSO = (60 &divide; 500) &times; 365 = <b>43.8 days</b><br>
+DPO = (50 &divide; 400) &times; 365 = <b>45.6 days</b></p>
+<p><b>CCC = 73 + 43.8 &minus; 45.6 = 71.2 days.</b> The firm's cash is tied up for ~71 days each cycle. If it could cut DSO to 30 days (better collections), it would release roughly (43.8 &minus; 30) &divide; 365 &times; 5,00,00,000 &asymp; <b>&#8377;18.9 lakh</b> of cash — with zero change in profit.</p>
+</div>
+
+<h3>11.2 How working capital is financed</h3>
+<p>Working capital can be funded three ways, in ascending order of cost and risk: (1) <b>spontaneous financing</b> from trade payables and customer advances, which is essentially free — stretching supplier terms funds the business at zero interest; (2) <b>short-term bank finance</b> — cash-credit (CC) and overdraft (OD) limits, working-capital demand loans, bill discounting and factoring, priced at a spread over a benchmark rate; and (3) <b>long-term capital</b> (equity or term debt) for the permanent portion of working capital that never unwinds. A well-run treasury matches the permanent core of working capital with long-term funds and uses short-term lines only for the seasonal swing. Financing permanent working capital entirely with short-term rollover debt is a classic cause of distress when credit conditions tighten.</p>
+
+<p>In India, banks traditionally sized working-capital limits using methods such as the drawing-power calculation (a margin against eligible current assets like stock and receivables) and, historically, Tandon/Maximum-Permissible-Bank-Finance-style norms. You need not memorise the formulae, but understanding that a lender caps working-capital funding to a percentage of clean current assets — and that stretched receivables or dead inventory shrink that borrowing base — is exactly the kind of practical insight that impresses in a credit or banking interview.</p>
+
+<div class="keytake"><b>Key takeaways:</b> Growth eats cash through working capital: rising sales usually mean rising receivables and inventory, which is a use of cash in CFO even while profit grows. This is why fast-growing but profitable firms can face liquidity crunches. Match permanent working capital with long-term funds; use short-term lines only for the seasonal swing.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">12. The Ratio Toolkit</h2>
+
+<p>Ratios turn raw statements into comparable insight. Always interpret a ratio against (a) the company's own history (trend), (b) peers, and (c) the industry norm — a "good" number is context-dependent.</p>
+
+<h3>12.1 Liquidity ratios (short-term survival)</h3>
+<div class="formula"><b>Current Ratio</b><br>
+Current Ratio = Current Assets &divide; Current Liabilities
+<div class="where">&gt; 1 means current assets cover current liabilities. ~1.5–2 is often comfortable, but very high can mean idle assets.</div></div>
+<div class="formula"><b>Quick Ratio (Acid-Test)</b><br>
+Quick Ratio = (Current Assets &minus; Inventory &minus; Prepaids) &divide; Current Liabilities
+<div class="where">Stricter — excludes inventory (least liquid current asset). &asymp; 1 is healthy.</div></div>
+<div class="formula"><b>Cash Ratio</b><br>
+Cash Ratio = (Cash + Cash Equivalents + Marketable Securities) &divide; Current Liabilities
+<div class="where">Most conservative — only truly liquid assets.</div></div>
+
+<h3>12.2 Leverage / solvency ratios (long-term risk)</h3>
+<div class="formula"><b>Debt-to-Equity (D/E)</b><br>
+D/E = Total Debt &divide; Shareholders' Equity
+<div class="where">Debt = interest-bearing borrowings (short + long term). Higher = more financial risk. "Good" varies hugely by sector (utilities high, IT low).</div></div>
+<div class="formula"><b>Debt-to-Assets (D/A)</b><br>
+D/A = Total Debt &divide; Total Assets
+</div>
+<div class="formula"><b>Interest Coverage Ratio (ICR)</b><br>
+ICR = EBIT &divide; Interest Expense
+<div class="where">How many times operating profit covers interest. &lt; 1.5–2 is stress territory; lenders watch this closely.</div></div>
+<div class="formula"><b>Net Debt / EBITDA</b><br>
+= (Total Debt &minus; Cash) &divide; EBITDA
+<div class="where">Years of EBITDA needed to repay net debt. A key credit metric; covenants often cap it around 3&times;.</div></div>
+
+<h3>12.3 Profitability ratios</h3>
+<div class="formula"><b>Margin ratios</b><br>
+Gross Margin = Gross Profit &divide; Sales<br>
+Operating (EBIT) Margin = EBIT &divide; Sales<br>
+Net Margin = PAT &divide; Sales
+<div class="where">Show how much of each rupee of sales survives at each level.</div></div>
+<div class="formula"><b>Return on Assets (ROA)</b><br>
+ROA = Net Income &divide; Average Total Assets
+<div class="where">Efficiency of using assets to generate profit. (Some use EBIT-based ROA to remove financing effects.)</div></div>
+<div class="formula"><b>Return on Equity (ROE)</b><br>
+ROE = Net Income &divide; Average Shareholders' Equity
+<div class="where">Return to shareholders. Can be inflated by leverage — always decompose (DuPont).</div></div>
+<div class="formula"><b>Return on Capital Employed (ROCE)</b><br>
+ROCE = EBIT &divide; Capital Employed<br>
+Capital Employed = Total Assets &minus; Current Liabilities = Equity + Long-term Debt
+<div class="where">Return on all long-term capital, pre-financing/tax. Compare against WACC — ROCE &gt; WACC creates value.</div></div>
+
+<h3>12.4 Efficiency / turnover ratios</h3>
+<div class="formula"><b>Turnover ratios</b><br>
+Inventory Turnover = COGS &divide; Average Inventory<br>
+Receivables Turnover = Net Credit Sales &divide; Average Receivables<br>
+Payables Turnover = Purchases (or COGS) &divide; Average Payables<br>
+Asset Turnover = Sales &divide; Average Total Assets
+<div class="where">Higher turnover = assets working harder. DSO/DIO/DPO (Section 11) are the same ideas expressed in days.</div></div>
+
+<div class="example">
+<div class="ex-h">Worked Example 5 — A full ratio pass on a company</div>
+<p>Given (&#8377; crore): Sales 1,000; COGS 650; EBIT 150; Interest 30; PBT 120; PAT 90; Inventory 130; Receivables 110; Cash 40; Current Assets 320; Current Liabilities 180; Total Debt 300; Equity 400; Total Assets 900.</p>
+<p><b>Liquidity:</b> Current = 320/180 = <b>1.78</b>; Quick = (320&minus;130)/180 = <b>1.06</b>; Cash = 40/180 = <b>0.22</b>.</p>
+<p><b>Leverage:</b> D/E = 300/400 = <b>0.75</b>; D/A = 300/900 = <b>0.33</b>; ICR = 150/30 = <b>5.0&times;</b>.</p>
+<p><b>Profitability:</b> Gross margin = (1000&minus;650)/1000 = <b>35%</b>; EBIT margin = 150/1000 = <b>15%</b>; Net margin = 90/1000 = <b>9%</b>; ROA = 90/900 = <b>10%</b>; ROE = 90/400 = <b>22.5%</b>; ROCE = 150/(900&minus;180) = 150/720 = <b>20.8%</b>.</p>
+<p><b>Efficiency:</b> Inventory turnover = 650/130 = <b>5.0&times;</b> (DIO &asymp; 73 days); Receivables turnover = 1000/110 = <b>9.1&times;</b> (DSO &asymp; 40 days); Asset turnover = 1000/900 = <b>1.11&times;</b>.</p>
+<p><b>Read-out:</b> Comfortable liquidity, moderate leverage well covered (5&times; interest), healthy 22.5% ROE driven partly by leverage (ROA 10%). ROCE 20.8% likely exceeds WACC, so the business is value-creating.</p>
+</div>
+
+<table>
+<thead><tr><th>Category</th><th>Question it answers</th><th>Watch-outs</th></tr></thead>
+<tbody>
+<tr><td>Liquidity</td><td>Can it pay short-term bills?</td><td>Too high = idle cash; inventory-heavy current ratio can flatter</td></tr>
+<tr><td>Leverage</td><td>Can it survive its debt?</td><td>Sector-dependent; watch off-balance-sheet &amp; lease debt</td></tr>
+<tr><td>Profitability</td><td>How well does it convert sales to profit?</td><td>One-offs distort; margins vary by business model</td></tr>
+<tr><td>Efficiency</td><td>How hard do assets work?</td><td>Seasonality; use averages, not year-end snapshots</td></tr>
+</tbody>
+</table>
+
+<div class="example">
+<div class="ex-h">Worked Example 9 — A credit / leverage lens</div>
+<p>A lender is assessing a borrower (&#8377; crore): EBITDA 200; Depreciation 50 (so EBIT 150); Interest 40; Total Debt 600; Cash 100; Long-term debt due within a year 80; CFO 160; maintenance capex 60.</p>
+<p><b>Net Debt / EBITDA</b> = (600 &minus; 100) / 200 = 500/200 = <b>2.5&times;</b> — within a typical 3&times; comfort zone.</p>
+<p><b>Interest coverage (EBIT)</b> = 150 / 40 = <b>3.75&times;</b>; EBITDA/Interest = 200/40 = <b>5.0&times;</b>.</p>
+<p><b>Debt Service Coverage (rough)</b> = (CFO before interest) / (Interest + Current debt maturities). Using CFO 160 + interest 40 = 200 available, against 40 + 80 = 120 due &rarr; <b>1.67&times;</b> — the firm covers this year's debt service but with a modest cushion.</p>
+<p><b>FCF after maintenance capex</b> = CFO 160 &minus; capex 60 = <b>&#8377;100 cr</b> available to reduce debt or pay dividends.</p>
+<p><b>Credit read-out:</b> Leverage is moderate (2.5&times;), interest is well covered (3.75&times;), and the firm self-generates &#8377;100 cr of free cash — an investment-grade-style profile. Stress test: if EBITDA fell 30% to 140, Net Debt/EBITDA rises to 3.6&times; and interest coverage drops to ~2.6&times; — still serviceable, which is what a credit analyst wants to confirm.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> Never take a ratio at face value. A rising current ratio can be <b>bad</b> (piling up unsold inventory or uncollected receivables). A high ROE can be pure leverage, not operating skill. Always decompose and compare. Also, always distinguish <b>total debt</b> (interest-bearing borrowings) from <b>total liabilities</b> (which include payables, provisions, deferred tax) when computing leverage ratios — mixing them up is a classic error.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">13. DuPont Analysis (3-step &amp; 5-step)</h2>
+
+<p>DuPont breaks ROE into its drivers so you can see <b>why</b> a company earns its return — margin, efficiency or leverage. It is a favourite interview tool because it forces you to reason about the business, not just quote a number.</p>
+
+<div class="formula"><b>3-Step DuPont</b><br>
+ROE = Net Margin &times; Asset Turnover &times; Equity Multiplier<br>
+= (PAT/Sales) &times; (Sales/Assets) &times; (Assets/Equity)
+<div class="where">Profitability &times; Efficiency &times; Leverage. Equity Multiplier = Total Assets &divide; Equity (higher = more leverage).</div></div>
+
+<div class="formula"><b>5-Step DuPont</b><br>
+ROE = (PBT/Sales) &times; (Sales/Assets) &times; (Assets/Equity) &times; (PAT/PBT) &times; ... <br>
+More precisely: ROE = Tax Burden &times; Interest Burden &times; Operating Margin &times; Asset Turnover &times; Equity Multiplier<br>
+= (PAT/PBT) &times; (PBT/EBIT) &times; (EBIT/Sales) &times; (Sales/Assets) &times; (Assets/Equity)
+<div class="where"><b>Tax Burden</b> = PAT/PBT (what survives tax); <b>Interest Burden</b> = PBT/EBIT (what survives interest); <b>Operating Margin</b> = EBIT/Sales; then efficiency and leverage. Isolates the tax and financing effects.</div></div>
+
+<div class="example">
+<div class="ex-h">Worked Example 6 — 3-step and 5-step DuPont</div>
+<p>Using Worked Example 5: PAT 90, Sales 1,000, Assets 900, Equity 400, EBIT 150, PBT 120.</p>
+<p><b>3-step:</b> Net margin = 90/1000 = 9%; Asset turnover = 1000/900 = 1.111; Equity multiplier = 900/400 = 2.25.<br>
+ROE = 0.09 &times; 1.111 &times; 2.25 = <b>22.5%</b> &check; (matches direct 90/400).</p>
+<p><b>5-step:</b> Tax burden = 90/120 = 0.75; Interest burden = 120/150 = 0.80; Operating margin = 150/1000 = 0.15; Asset turnover = 1.111; Equity multiplier = 2.25.<br>
+ROE = 0.75 &times; 0.80 &times; 0.15 &times; 1.111 &times; 2.25 = <b>22.5%</b> &check;</p>
+<p><b>Interpretation:</b> The 5-step shows the firm keeps 75% of pre-tax profit after tax and 80% of EBIT after interest — moderate tax and interest drag. Its 22.5% ROE rests on a 15% operating margin amplified by 2.25&times; leverage. If two firms have the same ROE, DuPont reveals whether it comes from margins (quality) or leverage (risk).</p>
+</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">14. Cash Flow Statement Analysis &amp; Free Cash Flow</h2>
+
+<p>Beyond the three sections, analysts focus on <b>Free Cash Flow (FCF)</b> — the cash a business generates after funding the investment needed to maintain and grow it. FCF, not accounting profit, is what ultimately pays dividends, repays debt and drives valuation (DCF).</p>
+
+<div class="formula"><b>Free Cash Flow to Firm (FCFF)</b><br>
+FCFF = EBIT &times; (1 &minus; tax rate) + D&amp;A &minus; Capex &minus; &Delta; Net Working Capital<br>
+(equivalently) FCFF = CFO + Interest &times; (1 &minus; tax) &minus; Capex
+<div class="where">Cash available to <b>all</b> capital providers (debt + equity), before financing. Discounted at WACC in a DCF to value the whole firm.</div></div>
+
+<div class="formula"><b>Free Cash Flow to Equity (FCFE)</b><br>
+FCFE = FCFF &minus; Interest &times; (1 &minus; tax) + Net Borrowing<br>
+(equivalently) FCFE = CFO &minus; Capex + Net Borrowing
+<div class="where">Cash available to <b>equity holders only</b>, after debt servicing and net new borrowing. Discounted at cost of equity.</div></div>
+
+<div class="formula"><b>Simple / operating FCF</b><br>
+FCF = CFO &minus; Capex
+<div class="where">A quick, widely used proxy. Positive and growing FCF is a strong quality signal.</div></div>
+
+<div class="example">
+<div class="ex-h">Worked Example 7 — FCFF and FCFE</div>
+<p>EBIT &#8377;150 cr; tax rate 25%; D&amp;A &#8377;40 cr; Capex &#8377;70 cr; increase in net working capital &#8377;20 cr; interest &#8377;30 cr; net new borrowing &#8377;10 cr.</p>
+<p><b>FCFF</b> = 150 &times; (1&minus;0.25) + 40 &minus; 70 &minus; 20 = 112.5 + 40 &minus; 70 &minus; 20 = <b>&#8377;62.5 cr</b>.</p>
+<p><b>FCFE</b> = FCFF &minus; Interest &times; (1&minus;tax) + Net borrowing = 62.5 &minus; 30 &times; 0.75 + 10 = 62.5 &minus; 22.5 + 10 = <b>&#8377;50 cr</b>.</p>
+<p><b>Read-out:</b> The firm throws off &#8377;62.5 cr to all investors and &#8377;50 cr specifically to shareholders after servicing debt — comfortably positive, so it can fund dividends/buybacks and still deleverage.</p>
+</div>
+
+<h3>14.1 CFO vs Net Income — the quality check</h3>
+<p>Over several years, <b>cumulative CFO should track cumulative net income</b>. If profits keep rising but CFO lags, earnings may be inflated by aggressive revenue recognition, capitalising costs, or receivables/inventory build-up. The <b>accruals ratio</b> — (Net income &minus; CFO) / average assets — flags this: a high positive value means earnings are accrual-heavy and lower quality.</p>
+
+<h3>14.2 Why FCF drives valuation</h3>
+<p>Valuation ultimately rests on cash a business can return to investors, not accounting profit. In a discounted-cash-flow (DCF) model you project FCFF, discount it at the weighted average cost of capital (WACC) to get enterprise value, then subtract net debt to reach equity value; alternatively you project FCFE and discount at the cost of equity to get equity value directly. This is why analysts obsess over the sustainability of margins, the trajectory of capex (is it growth capex that adds capacity, or maintenance capex just to stand still?), and the working-capital drag. Two firms with identical PAT can be worth very different amounts if one converts profit to free cash and the other must plough everything back into receivables and plant.</p>
+
+<p>A quick sanity screen used across research desks is the <b>cash conversion ratio = CFO / EBITDA</b> (or FCF / Net Income). A healthy, cash-generative business converts a large and stable share of its EBITDA into operating cash year after year; a persistently low or volatile conversion ratio signals either heavy reinvestment needs or earnings-quality problems — both of which lower the multiple the market will pay.</p>
+
+<div class="trap"><b>Common trap:</b> EBITDA is <b>not</b> free cash flow. It ignores capex, working-capital swings, taxes and interest. A capital-intensive firm can show fat EBITDA yet negative FCF because it must constantly reinvest. "EBITDA is a proxy for cash" is a half-truth interviewers probe.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">15. Quality of Earnings &amp; Accounting Red Flags</h2>
+
+<p><b>Quality of earnings</b> asks: are reported profits <b>real, repeatable and cash-backed</b>? High-quality earnings are cash-generative, driven by core operations, conservatively estimated and sustainable. Low quality relies on one-offs, aggressive estimates or accounting choices.</p>
+
+<h3>15.1 Common red flags / manipulation signals</h3>
+<ul>
+  <li><b>CFO consistently &lt; net income</b> — profits not converting to cash.</li>
+  <li><b>Receivables (DSO) growing faster than sales</b> — possible channel stuffing / premature revenue recognition.</li>
+  <li><b>Inventory growing faster than sales</b> — obsolescence risk or hidden demand slowdown.</li>
+  <li><b>Rising "other income" / one-off gains</b> propping up PAT while operating profit stalls.</li>
+  <li><b>Capitalising operating expenses</b> (e.g. routine costs moved to the balance sheet) to inflate current profit.</li>
+  <li><b>Frequent "exceptional" or restructuring charges</b> — recurring "one-offs" are really operating costs.</li>
+  <li><b>Aggressive revenue recognition</b> — booking bill-and-hold or long-term contract revenue early.</li>
+  <li><b>Falling depreciation rate / extended useful lives</b> — lowers expense, flatters profit.</li>
+  <li><b>Related-party transactions, frequent auditor changes, delayed filings, complex/opaque subsidiaries.</b></li>
+  <li><b>Growing gap between book profit and tax paid</b> beyond what depreciation timing explains.</li>
+  <li><b>Ballooning contingent liabilities</b> or off-balance-sheet exposures in the notes.</li>
+</ul>
+
+<p>The Beneish M-score and Altman Z-score are structured screens: the M-score combines eight ratios (including days-sales-in-receivables and accruals) to flag possible manipulation, and the <b>Altman Z-score</b> combines profitability, leverage and activity ratios to gauge bankruptcy risk. You are not expected to memorise the coefficients, but knowing they exist and what they screen for is a plus.</p>
+
+<h3>15.2 The levers management uses to shape earnings</h3>
+<p>It helps to know the specific accounting choices that flatter reported profit, because good analysts reverse them:</p>
+<ul>
+  <li><b>Timing of revenue</b> — recognising too early (before performance obligations are satisfied), bill-and-hold arrangements, or booking gross vs net (agent vs principal) to inflate the revenue line.</li>
+  <li><b>Cost capitalisation</b> — moving what should be an expense (R&amp;D, software, interest, routine repairs) onto the balance sheet as an asset, deferring the cost and lifting current profit.</li>
+  <li><b>Depreciation and amortisation assumptions</b> — lengthening useful lives or raising residual values to shrink the annual charge.</li>
+  <li><b>Provisions as a "cookie jar"</b> — over-providing in good years and releasing provisions back to profit in weak years to smooth earnings.</li>
+  <li><b>One-off gains dressed as operating</b> — asset-sale profits or investment gains lifting EBIT.</li>
+  <li><b>Inventory valuation</b> — under-providing for obsolete or slow-moving stock keeps COGS low and assets high.</li>
+</ul>
+<p>The unifying tell is that almost all of these <b>widen the gap between accrual profit and cash</b>, or inflate a balance-sheet asset (receivables, inventory, capitalised costs, DTA) faster than the business justifies. That is why a multi-year comparison of cumulative PAT against cumulative CFO, plus a scan of the notes for accounting-policy changes, catches most of it.</p>
+
+<div class="example">
+<div class="ex-h">Worked Example 10 — Spotting an earnings-quality problem</div>
+<p>Three years of a company (&#8377; cr): Net Income 100, 130, 170; CFO 95, 80, 40; Receivables 200, 320, 520; Sales 1,000, 1,150, 1,300.</p>
+<p><b>Revenue growth:</b> +15% then +13%. <b>Receivables growth:</b> +60% then +63% — receivables are growing roughly 4&times; faster than sales.</p>
+<p><b>DSO:</b> Year 1 = 200/1000&times;365 = 73 days; Year 3 = 520/1300&times;365 = <b>146 days</b> — it has doubled.</p>
+<p><b>CFO vs Net Income:</b> profit is rising (100&rarr;170) while CFO collapses (95&rarr;40). Cumulative PAT = 400, cumulative CFO = 215 — a large and widening gap.</p>
+<p><b>Conclusion:</b> Classic low-earnings-quality signature. Sales are likely being pushed on ever-looser credit (or recognised prematurely), profit is not converting to cash, and the receivables build-up is unsustainable. I would haircut earnings, question the revenue-recognition policy, and check for related-party receivables in the notes.</p>
+</div>
+
+<div class="keytake"><b>Key takeaways:</b> Follow the cash. Most accounting manipulation eventually shows up as a widening gap between accrual profit and operating cash flow, or between reported revenue and receivables. Read the notes and the cash flow statement, not just the headline PAT.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">16. Common-Size &amp; Trend Analysis</h2>
+
+<p><b>Common-size analysis</b> restates statements as percentages so companies of different sizes are comparable. In a common-size <b>P&amp;L</b>, every line is a percentage of <b>sales</b>; in a common-size <b>balance sheet</b>, every line is a percentage of <b>total assets</b>. This exposes cost structure and asset mix instantly.</p>
+
+<p><b>Trend (horizontal) analysis</b> indexes each line to a base year (base = 100) to show growth trajectories and spot inflexions — e.g. if COGS grows at 12% while sales grow at 8%, margins are compressing.</p>
+
+<div class="example">
+<div class="ex-h">Worked Example 8 — Common-size &amp; trend read</div>
+<p>Firm A: Sales &#8377;500 cr, COGS &#8377;300 cr, SG&amp;A &#8377;100 cr, PAT &#8377;50 cr. Firm B: Sales &#8377;2,000 cr, COGS &#8377;1,300 cr, SG&amp;A &#8377;350 cr, PAT &#8377;180 cr.</p>
+<p><b>Common-size (% of sales):</b><br>
+A: COGS 60%, SG&amp;A 20%, PAT 10%.<br>
+B: COGS 65%, SG&amp;A 17.5%, PAT 9%.</p>
+<p><b>Read-out:</b> Despite being 4&times; larger, B has a weaker gross structure (65% vs 60% COGS) but better SG&amp;A leverage (17.5% vs 20%) from scale. Net, A converts slightly more of each sales rupee to profit (10% vs 9%). Common-sizing made two very different-sized firms directly comparable.</p>
+</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">17. Consolidation Basics</h2>
+
+<p>When a company controls other entities, it presents <b>consolidated financial statements</b> that combine the parent and its subsidiaries as a single economic entity. Control (Ind-AS 110) generally means power over the investee, exposure to variable returns, and ability to affect those returns — usually &gt;50% voting rights, but it can arise below that.</p>
+
+<table>
+<thead><tr><th>Stake / influence</th><th>Accounting treatment</th><th>What appears</th></tr></thead>
+<tbody>
+<tr><td><b>Subsidiary</b> (control, &gt;50%)</td><td>Full consolidation (line-by-line)</td><td>100% of assets/liabilities/revenue; a <b>Non-Controlling Interest (NCI)</b> for the minority's share of net assets &amp; profit</td></tr>
+<tr><td><b>Associate</b> (significant influence, ~20–50%)</td><td>Equity method</td><td>A single "investment in associate" line; share of associate's profit in P&amp;L</td></tr>
+<tr><td><b>Joint venture</b></td><td>Equity method (Ind-AS 111)</td><td>Share of JV results via equity method</td></tr>
+<tr><td>&lt;20%, no influence</td><td>Investment (fair value / cost)</td><td>Held as a financial asset; dividends/fair-value changes only</td></tr>
+</tbody>
+</table>
+
+<p><b>Goodwill</b> arises on acquisition when the purchase price exceeds the fair value of net identifiable assets acquired. Under Ind-AS it is not amortised but tested annually for <b>impairment</b>. Inter-company transactions (sales, loans, unrealised profits) are eliminated on consolidation to avoid double-counting — for example, if a subsidiary sells goods to the parent that remain unsold at year-end, the profit embedded in that inventory is stripped out until the group sells to an outside party.</p>
+
+<p>Why analysts care: consolidated numbers give the true economic scale of the group, but they can also <b>bury weak units</b> inside strong ones. A cash-rich parent can mask a loss-making, debt-laden subsidiary at the consolidated level. Good analysis therefore looks at both the consolidated and standalone statements, checks the segment disclosures, and watches whether cash actually flows freely between entities or is trapped in subsidiaries by minority interests, regulation or currency controls. A group can look comfortable on paper yet have its cash stuck in the wrong pocket.</p>
+
+<div class="formula"><b>Goodwill on acquisition</b><br>
+Goodwill = Purchase Consideration &minus; Fair Value of Net Identifiable Assets Acquired (parent's share)
+<div class="where">If negative, it is a "bargain purchase" gain recognised in P&amp;L / OCI. NCI can be measured at fair value or at proportionate share of net assets.</div></div>
+
+<div class="trap"><b>Common trap:</b> In consolidation, revenue and net assets include 100% of a subsidiary even if the parent owns, say, 60% — the other 40% is carried as NCI within equity. Do not "net off" the minority stake against revenue; it is only the <b>profit attributable to owners of the parent</b> that excludes the NCI share.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">18. The Accounting Cycle: Journal &rarr; Ledger &rarr; Trial Balance &rarr; Statements</h2>
+
+<p>Before the three statements exist, a company runs a mechanical pipeline that turns raw transactions into reports. You are unlikely to pass journal entries in an equity-research or IB interview, but understanding the pipeline lets you reason about <b>where an adjustment lives</b> and why the statements always tie out.</p>
+
+<h3>18.1 The steps in order</h3>
+<ol>
+  <li><b>Source document</b> (invoice, receipt, bank advice) evidences a transaction.</li>
+  <li><b>Journal (book of original entry):</b> the transaction is recorded as a dated journal entry with equal debits and credits.</li>
+  <li><b>Ledger (posting):</b> each journal line is posted to its individual account (Cash, Sales, Debtors, etc.), building a running balance per account.</li>
+  <li><b>Trial Balance:</b> all ledger balances are listed in one schedule; total debits must equal total credits. It is an arithmetic check, not a proof of correctness.</li>
+  <li><b>Adjusting entries:</b> period-end accruals, prepayments, depreciation, provisions and closing-stock entries convert the raw balances to the accrual basis.</li>
+  <li><b>Adjusted trial balance &rarr; Financial statements:</b> the P&amp;L, balance sheet and cash flow statement are drawn up.</li>
+  <li><b>Closing entries:</b> income and expense accounts are closed to retained earnings, resetting them to zero for the next period; balance-sheet accounts carry forward.</li>
+</ol>
+
+<h3>18.2 Adjusting entries — the accrual bridge</h3>
+<p>Adjusting entries are exactly the mechanism that makes accounting accrual rather than cash. The four classic families:</p>
+<table>
+<thead><tr><th>Adjustment</th><th>Example</th><th>Effect</th></tr></thead>
+<tbody>
+<tr><td><b>Accrued expense</b></td><td>Salaries earned in March, paid in April</td><td>Dr Expense, Cr Accrued liability &rarr; expense &uarr;, liability &uarr;</td></tr>
+<tr><td><b>Accrued / unbilled income</b></td><td>Interest earned but not yet received</td><td>Dr Accrued income (asset), Cr Income &rarr; asset &uarr;, income &uarr;</td></tr>
+<tr><td><b>Prepaid expense</b></td><td>Annual insurance paid upfront</td><td>Dr Prepaid (asset), Cr Cash; expense recognised over time</td></tr>
+<tr><td><b>Unearned / deferred income</b></td><td>Subscription collected in advance</td><td>Dr Cash, Cr Deferred revenue (liability); recognised as earned</td></tr>
+</tbody>
+</table>
+
+<div class="example">
+<div class="ex-h">Worked Example 11 — Two journal entries and the equation</div>
+<p>(a) Firm buys goods worth <b>&#8377;50,000</b> on credit. Entry: <b>Dr Inventory 50,000; Cr Trade Payables 50,000.</b> Assets +50,000, Liabilities +50,000 &rarr; equation holds, equity unchanged.</p>
+<p>(b) Firm sells those goods for <b>&#8377;80,000</b> cash. Two entries: <b>Dr Cash 80,000; Cr Sales 80,000</b> (income) and <b>Dr COGS 50,000; Cr Inventory 50,000.</b> Net effect: Cash +80,000, Inventory &minus;50,000 (assets +30,000); equity +30,000 via profit (80,000 &minus; 50,000). Balances.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> A trial balance that "tallies" does <b>not</b> mean the books are correct. Errors of principle (posting to the wrong account type), compensating errors, and errors of omission (a transaction left out entirely) all leave debits equal to credits. The trial balance only catches one-sided or unequal postings.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">19. Inventory Valuation (Ind-AS 2): FIFO, Weighted Average &amp; the LIFO Ban</h2>
+
+<p>Inventory is measured at the <b>lower of cost and net realisable value (NRV)</b>. NRV is the estimated selling price less costs to complete and sell. When identical units are bought at different prices, a <b>cost formula</b> decides which costs move to COGS and which stay in closing inventory.</p>
+
+<h3>19.1 The permitted cost formulas</h3>
+<ul>
+  <li><b>Specific identification</b> — for items that are not interchangeable (e.g. a specific car, a bespoke machine). Each item carries its actual cost.</li>
+  <li><b>First-In, First-Out (FIFO)</b> — assumes the earliest units bought are sold first, so closing inventory reflects the <b>most recent</b> (current) costs.</li>
+  <li><b>Weighted Average Cost (WAC)</b> — pools all costs and charges a blended average per unit.</li>
+</ul>
+<p><b>LIFO (Last-In, First-Out) is prohibited</b> under Ind-AS 2 / IAS 2, because in inflation it understates closing inventory to unrealistically old costs and can be used to manipulate profit. (LIFO is still permitted under US GAAP, a common comparison question.)</p>
+
+<div class="formula"><b>Net Realisable Value write-down</b><br>
+Carrying value = min(Cost, NRV); if NRV &lt; Cost, write down and charge the loss to P&amp;L (usually in COGS)
+<div class="where">NRV = Expected selling price &minus; costs to complete &minus; costs to sell. Write-downs can be reversed (unlike goodwill) if NRV later recovers.</div></div>
+
+<h3>19.2 Effect on margins and taxes in inflation</h3>
+<p>When input prices are <b>rising</b>, the cost formula changes reported profit even though the physical business is identical:</p>
+<table>
+<thead><tr><th>In an inflationary period</th><th>FIFO</th><th>Weighted Average</th></tr></thead>
+<tbody>
+<tr><td>COGS (charged to P&amp;L)</td><td>Lower (uses old, cheaper costs)</td><td>Middle (blended)</td></tr>
+<tr><td>Gross profit &amp; PAT</td><td>Higher</td><td>Middle</td></tr>
+<tr><td>Closing inventory (balance sheet)</td><td>Higher (recent, dearer costs)</td><td>Middle</td></tr>
+<tr><td>Tax paid</td><td>Higher (more profit)</td><td>Middle</td></tr>
+</tbody>
+</table>
+
+<div class="example">
+<div class="ex-h">Worked Example 12 — FIFO vs Weighted Average in inflation</div>
+<p>Opening stock nil. Purchases: 100 units @ &#8377;10 = &#8377;1,000, then 100 units @ &#8377;14 = &#8377;1,400. Sold 120 units @ &#8377;20 = &#8377;2,400. (200 bought, 120 sold, 80 in closing stock.)</p>
+<p><b>FIFO:</b> COGS = 100&times;10 + 20&times;14 = 1,000 + 280 = <b>&#8377;1,280.</b> Gross profit = 2,400 &minus; 1,280 = <b>&#8377;1,120.</b> Closing stock = 80&times;14 = <b>&#8377;1,120.</b></p>
+<p><b>Weighted Average:</b> Avg cost = 2,400 total cost &divide; 200 units = &#8377;12/unit. COGS = 120&times;12 = <b>&#8377;1,440.</b> Gross profit = 2,400 &minus; 1,440 = <b>&#8377;960.</b> Closing stock = 80&times;12 = <b>&#8377;960.</b></p>
+<p><b>Insight:</b> FIFO reports &#8377;160 more profit (and hence more tax) and a higher closing inventory in this rising-price scenario. In a deflationary period the ranking reverses.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> When comparing an Indian/IFRS firm (FIFO or WAC) with a US GAAP firm on LIFO, the LIFO firm's inventory on the balance sheet is understated (old costs) and its COGS is higher in inflation. Analysts add back the "LIFO reserve" to make the two comparable — a subtle cross-border earnings-quality point.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">20. PP&amp;E, Intangibles &amp; R&amp;D: Capitalise vs Expense (Ind-AS 16 &amp; 38)</h2>
+
+<p>The single biggest lever management has over reported profit is the <b>capitalise-versus-expense</b> decision. Capitalising puts a cost on the balance sheet as an asset (hitting the P&amp;L slowly via depreciation/amortisation); expensing hits profit immediately. Getting the boundary right is central to earnings quality.</p>
+
+<h3>20.1 Property, Plant &amp; Equipment (Ind-AS 16)</h3>
+<ul>
+  <li><b>Initial cost</b> includes purchase price, non-refundable duties, and all costs of bringing the asset to working condition (freight, installation, testing, and borrowing costs on a qualifying asset).</li>
+  <li><b>Subsequent measurement:</b> either the <b>cost model</b> (cost &minus; accumulated depreciation &minus; impairment) or the <b>revaluation model</b> (fair value, with upward revaluations routed through OCI to a revaluation reserve).</li>
+  <li><b>Componentisation:</b> significant parts with different useful lives (e.g. an aircraft's engine vs airframe) are depreciated separately.</li>
+  <li><b>Capitalise vs expense:</b> spending that enhances future benefits (a major upgrade extending life/capacity) is capitalised; routine repairs and maintenance are expensed.</li>
+</ul>
+
+<h3>20.2 Intangible assets (Ind-AS 38) and R&amp;D</h3>
+<p>An intangible is an identifiable, non-monetary asset without physical substance (patents, licences, software, brands). Key rules:</p>
+<ul>
+  <li><b>Purchased intangibles</b> are capitalised at cost; finite-life intangibles are <b>amortised</b>, indefinite-life ones (and goodwill) are <b>not amortised</b> but tested for impairment.</li>
+  <li><b>Internally generated goodwill, brands and customer lists cannot be capitalised</b> — only bought ones.</li>
+  <li><b>Research vs Development:</b> <b>research</b> costs are <b>expensed</b> as incurred; <b>development</b> costs are <b>capitalised only if</b> the firm can demonstrate technical feasibility, intention and ability to complete, probable future benefits, and reliable cost measurement (the "PIRATE"/feasibility tests).</li>
+</ul>
+
+<div class="example">
+<div class="ex-h">Worked Example 13 — Capitalising vs expensing &#8377;100 cr of software cost</div>
+<p>A firm spends &#8377;100 cr building software. If it <b>expenses</b> it: PBT falls &#8377;100 cr this year. If it <b>capitalises</b> and amortises over 5 years (SLM): only &#8377;20 cr hits this year's P&amp;L; a &#8377;100 cr asset appears, reducing to &#8377;80 cr.</p>
+<p><b>Effect:</b> Capitalising flatters current-year profit by &#8377;80 cr pre-tax and inflates assets and reported CFO (because the &#8377;100 cr spend now sits in investing/capex, not operating expense). Over the full 5 years total expense is identical — capitalising only shifts <b>timing</b>, but it can make a struggling firm look profitable now.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> Aggressive capitalisation of routine operating costs (marketing, routine software, interest) is a classic profit-inflation trick and also <b>overstates CFO</b>, because the cash outflow is reclassified from operating to investing. When a firm's CFO looks strong but capex is unusually high and rising, check whether "capex" is really disguised operating expense.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">21. Impairment of Assets (Ind-AS 36)</h2>
+
+<p>Impairment writes an asset down when its <b>carrying amount exceeds its recoverable amount</b> — i.e. the balance sheet is carrying it above what it is worth. It is a one-off, non-cash charge (usually shown as exceptional), distinct from routine depreciation.</p>
+
+<div class="formula"><b>Impairment test</b><br>
+Impairment loss = Carrying Amount &minus; Recoverable Amount<br>
+Recoverable Amount = <b>higher of</b> (Fair Value less costs of disposal) and (Value in Use)
+<div class="where"><b>Value in Use</b> = present value of the future cash flows the asset/CGU is expected to generate. A <b>Cash-Generating Unit (CGU)</b> is the smallest group of assets generating largely independent cash inflows — used when a single asset cannot be tested alone.</div></div>
+
+<h3>21.1 Key rules and goodwill</h3>
+<ul>
+  <li><b>Indicators:</b> test when there is an indicator of impairment (falling demand, obsolescence, market decline); <b>goodwill and indefinite-life intangibles are tested at least annually</b> regardless of indicators.</li>
+  <li><b>Goodwill</b> is allocated to CGUs and impaired first when a CGU is impaired.</li>
+  <li><b>Reversals:</b> impairments on most assets <b>can be reversed</b> if conditions improve — but <b>goodwill impairment is never reversed.</b></li>
+</ul>
+
+<h3>21.2 Effect across the three statements</h3>
+<table>
+<thead><tr><th>Statement</th><th>Effect of a &#8377;100 impairment (25% tax; assume tax-deductible)</th></tr></thead>
+<tbody>
+<tr><td>P&amp;L</td><td>Impairment expense +100 &rarr; PBT &minus;100 &rarr; tax &minus;25 &rarr; net income &minus;75</td></tr>
+<tr><td>Cash Flow</td><td>Added back in CFO (non-cash); only the tax shield (if deductible) is real cash. Goodwill impairment is usually not tax-deductible &rarr; no cash effect at all</td></tr>
+<tr><td>Balance Sheet</td><td>Asset (or goodwill) &minus;100; retained earnings &minus;75; DTA/tax effects &plusmn;25 &rarr; balances</td></tr>
+</tbody>
+</table>
+
+<div class="trap"><b>Common trap:</b> Goodwill impairment is a <b>non-cash</b>, often <b>non-tax-deductible</b> admission that an acquisition was overpriced. It does not directly cost cash today, but it is a powerful signal of poor capital allocation — a big goodwill write-down usually means an M&amp;A deal destroyed value.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">22. Leases in Depth (Ind-AS 116): Finance vs Operating</h2>
+
+<p>Leasing is one of the most-tested standards because Ind-AS 116 (converged with IFRS 16) fundamentally re-shaped the balance sheet and every leverage/margin ratio.</p>
+
+<h3>22.1 The lessee model — almost everything on balance sheet</h3>
+<p>Under Ind-AS 116 a lessee recognises, for virtually all leases (bar short-term and low-value), a <b>Right-of-Use (ROU) asset</b> and a matching <b>lease liability</b> equal to the present value of future lease payments. Over the term:</p>
+<ul>
+  <li>The ROU asset is <b>depreciated</b> (usually straight-line) &rarr; hits EBIT, not EBITDA.</li>
+  <li>The lease liability accrues <b>interest</b> (finance cost) &rarr; hits below EBIT.</li>
+  <li>The old single "rent expense" (an operating cost) <b>disappears</b>.</li>
+</ul>
+
+<h3>22.2 Impact on the statements and ratios</h3>
+<table>
+<thead><tr><th>Metric</th><th>Effect of capitalising an operating lease</th></tr></thead>
+<tbody>
+<tr><td>EBITDA</td><td><b>Increases</b> — rent (operating expense) is replaced by depreciation + interest, both below EBITDA</td></tr>
+<tr><td>EBIT</td><td>Roughly similar over time (depreciation now sits here instead of rent)</td></tr>
+<tr><td>Total assets &amp; total debt</td><td><b>Both increase</b> by the capitalised lease</td></tr>
+<tr><td>D/E, Net Debt/EBITDA</td><td>Leverage optically rises (more debt), partly offset by higher EBITDA</td></tr>
+<tr><td>Expense profile</td><td><b>Front-loaded</b> — interest is higher early (larger liability), so early-year total expense &gt; straight-line rent</td></tr>
+<tr><td>CFO</td><td><b>Increases</b> — the principal portion of lease payments moves to financing outflow; only interest (policy-dependent) stays in operating</td></tr>
+</tbody>
+</table>
+
+<p><b>Finance vs operating lease (the old distinction):</b> for <b>lessees</b>, Ind-AS 116 abolished the distinction — nearly all leases are capitalised. For <b>lessors</b>, the distinction survives: a <b>finance lease</b> transfers substantially all risks and rewards of ownership (lessor derecognises the asset, books a receivable), while an <b>operating lease</b> keeps the asset on the lessor's books and recognises rental income. The old test — transfer of ownership, bargain purchase option, lease term covering most of the asset's life, PV of payments &asymp; asset's fair value — still governs lessor classification.</p>
+
+<div class="example">
+<div class="ex-h">Worked Example 14 — Capitalising a lease</div>
+<p>A retailer signs a 5-year store lease with rent of <b>&#8377;1 cr/year</b>, discount rate 8%. PV of 5 payments &asymp; &#8377;1 cr &times; 3.99 = <b>&#8377;3.99 cr.</b></p>
+<p><b>Day 1:</b> ROU asset &#8377;3.99 cr and lease liability &#8377;3.99 cr appear — total assets and total "debt" both rise by ~&#8377;4 cr. <b>Year 1 P&amp;L:</b> depreciation = 3.99&divide;5 = &#8377;0.80 cr (in EBIT) + interest = 3.99&times;8% = &#8377;0.32 cr (below EBIT) = <b>&#8377;1.12 cr total</b>, versus the old &#8377;1.00 cr rent. <b>EBITDA improves by ~&#8377;1 cr</b> (the whole former rent is gone from operating costs), but early-year PBT is slightly lower due to front-loaded interest.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> Post-Ind-AS 116 EBITDA is <b>not</b> comparable to pre-116 EBITDA or to a US GAAP firm that still keeps operating leases off-EBITDA. When benchmarking, either compare EBITDA<em>after</em>-leases or add lease-related debt to net debt. "EBITDA jumped" can simply be an accounting change, not a real improvement.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">23. Financial Instruments &amp; Expected Credit Loss (Ind-AS 109)</h2>
+
+<p>Ind-AS 109 governs how financial assets/liabilities are classified, measured and impaired. It matters most for banks, NBFCs and any firm with big receivables or investment books — a frequent theme in credit and BFSI interviews.</p>
+
+<h3>23.1 Classification of financial assets</h3>
+<p>Classification depends on two tests: the <b>business model</b> (why the asset is held) and the <b>SPPI test</b> (are the contractual cash flows solely payments of principal and interest?).</p>
+<table>
+<thead><tr><th>Category</th><th>When</th><th>Measurement</th></tr></thead>
+<tbody>
+<tr><td><b>Amortised Cost</b></td><td>Held to collect contractual cash flows; passes SPPI</td><td>Cost using effective interest rate; e.g. loans, most debt held to maturity</td></tr>
+<tr><td><b>FVOCI</b> (fair value through OCI)</td><td>Held to collect <em>and</em> sell; passes SPPI</td><td>Fair value; gains/losses in OCI</td></tr>
+<tr><td><b>FVTPL</b> (fair value through P&amp;L)</td><td>Everything else — trading, derivatives, fails SPPI</td><td>Fair value; gains/losses straight to P&amp;L</td></tr>
+</tbody>
+</table>
+
+<h3>23.2 The Expected Credit Loss (ECL) model</h3>
+<p>The old "incurred loss" model recognised a provision only after a default event, which was criticised for being "too little, too late" in the 2008 crisis. Ind-AS 109 replaced it with a <b>forward-looking ECL model</b> that provisions for expected losses <b>before</b> default:</p>
+<ul>
+  <li><b>Stage 1</b> — performing assets: recognise <b>12-month ECL</b> (losses from defaults possible in the next 12 months).</li>
+  <li><b>Stage 2</b> — significant increase in credit risk since origination: recognise <b>lifetime ECL</b>.</li>
+  <li><b>Stage 3</b> — credit-impaired (default): lifetime ECL, and interest recognised on the net carrying amount.</li>
+</ul>
+<div class="formula"><b>Expected Credit Loss (concept)</b><br>
+ECL = Probability of Default (PD) &times; Loss Given Default (LGD) &times; Exposure at Default (EAD)
+<div class="where">The same PD/LGD/EAD building blocks used in credit risk and Basel capital. A rise in Stage-2/Stage-3 balances is an early warning of deteriorating asset quality at a lender.</div></div>
+
+<div class="trap"><b>Common trap:</b> Under ECL, a lender books provisions on <b>good</b> loans (Stage 1) from day one — so provisions are not proof of bad lending; they are expected, forward-looking. What matters is the <b>trend</b> in staging and coverage ratios, not the mere existence of provisions.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">24. Employee Benefits, Borrowing Costs &amp; Foreign Exchange (Ind-AS 19, 23, 21)</h2>
+
+<h3>24.1 Employee benefits (Ind-AS 19)</h3>
+<p>Distinguish two pension/retirement structures — a favourite conceptual question:</p>
+<ul>
+  <li><b>Defined Contribution (DC)</b> plan (e.g. Provident Fund contribution): the firm pays a fixed contribution and has <b>no further obligation</b>. The expense is simply the contribution — low risk to the employer.</li>
+  <li><b>Defined Benefit (DB)</b> plan (e.g. <b>gratuity</b>, some pensions): the firm promises a defined payout, so it bears actuarial and investment risk. A <b>net defined-benefit liability/asset</b> sits on the balance sheet, valued by an actuary. Service and interest cost hit P&amp;L; <b>remeasurements (actuarial gains/losses) go to OCI</b> and are not recycled.</li>
+</ul>
+
+<h3>24.2 Borrowing costs (Ind-AS 23)</h3>
+<p>Borrowing costs (interest) that are <b>directly attributable to acquiring or constructing a qualifying asset</b> (one that takes a substantial time to get ready, e.g. a factory, power plant) are <b>capitalised</b> as part of the asset's cost rather than expensed. Capitalisation stops when the asset is ready for use. All other borrowing costs are expensed. This is why a firm mid-construction can show low interest expense — some is sitting in capital work-in-progress.</p>
+
+<h3>24.3 Foreign exchange (Ind-AS 21)</h3>
+<ul>
+  <li><b>Functional currency</b> = the currency of the primary economic environment in which the entity operates; <b>presentation currency</b> = the currency the statements are presented in (they can differ).</li>
+  <li><b>Monetary items</b> (cash, receivables, payables, loans) are retranslated at the <b>closing rate</b>; exchange differences go to P&amp;L.</li>
+  <li><b>Non-monetary items</b> (PP&amp;E, inventory at cost) stay at the <b>historical rate</b>.</li>
+  <li>Translating a foreign subsidiary for consolidation: assets/liabilities at closing rate, income at average rate, and the difference accumulates in a <b>Foreign Currency Translation Reserve within OCI/equity.</b></li>
+</ul>
+
+<div class="trap"><b>Common trap:</b> Capitalised borrowing cost (Ind-AS 23) understates reported interest expense and inflates interest coverage while a project is under construction. And unrealised FX gains/losses on monetary items hit the P&amp;L even though no cash has moved — a source of "profit" volatility that has nothing to do with operations. Analysts strip both out to see underlying performance.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">25. Fair Value Hierarchy &amp; Business Combinations (Ind-AS 113 &amp; 103)</h2>
+
+<h3>25.1 The fair value hierarchy (Ind-AS 113)</h3>
+<p><b>Fair value</b> is the price to sell an asset (or transfer a liability) in an orderly transaction between market participants at the measurement date — an <b>exit price</b>. Ind-AS 113 ranks the inputs used into three levels, and the level tells you how reliable the number is:</p>
+<table>
+<thead><tr><th>Level</th><th>Inputs</th><th>Reliability</th></tr></thead>
+<tbody>
+<tr><td><b>Level 1</b></td><td>Quoted prices in active markets for identical assets (e.g. a listed share)</td><td>Most reliable — "mark to market"</td></tr>
+<tr><td><b>Level 2</b></td><td>Observable inputs other than quoted prices (e.g. comparable transactions, yield curves)</td><td>Moderately reliable</td></tr>
+<tr><td><b>Level 3</b></td><td>Unobservable inputs — the firm's own models and assumptions</td><td>Least reliable — "mark to model"; scope for manipulation</td></tr>
+</tbody>
+</table>
+<p>A balance sheet heavy with <b>Level 3</b> assets deserves scepticism: their values rest on management assumptions, not market prices.</p>
+
+<h3>25.2 Business combinations (Ind-AS 103)</h3>
+<p>An acquisition is accounted for using the <b>acquisition method</b>: identify the acquirer, measure the consideration transferred, recognise the acquiree's identifiable assets and liabilities at <b>fair value</b>, and record the residual as <b>goodwill</b>. This fair-value step-up is called <b>Purchase Price Allocation (PPA)</b> and often creates new intangibles (brands, customer relationships) that were not on the target's own books.</p>
+
+<div class="example">
+<div class="ex-h">Worked Example 15 — Purchase Price Allocation &amp; goodwill</div>
+<p>Acquirer pays <b>&#8377;500 cr</b> for 100% of a target. Target's book equity is &#8377;250 cr; on fair-value review, PP&amp;E is worth &#8377;40 cr more and an unrecognised brand worth &#8377;60 cr is identified; a &#8377;20 cr contingent liability is recognised.</p>
+<p><b>Fair value of net identifiable assets</b> = 250 + 40 + 60 &minus; 20 = <b>&#8377;330 cr.</b><br>
+<b>Goodwill</b> = 500 &minus; 330 = <b>&#8377;170 cr.</b></p>
+<p>If the acquirer had bought only 80%, and NCI is measured at proportionate net assets, NCI = 20% &times; 330 = &#8377;66 cr, and goodwill = consideration 500 + NCI 66 &minus; net assets 330 = &#8377;236 cr (full-goodwill method differs). If the price had been below &#8377;330 cr, the difference would be a <b>bargain purchase gain</b> recognised in the P&amp;L/OCI.</p>
+</div>
+
+<div class="trap"><b>Common trap:</b> Post-acquisition, the newly recognised intangibles (brand, customer lists) get <b>amortised</b>, depressing the acquirer's future EPS even though goodwill itself is not amortised. This "PPA drag" is why acquirers often quote <b>cash EPS</b> (adding back acquisition-related amortisation) — know that this is an adjusted, non-statutory measure.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">26. EPS, Dividends &amp; Share Buybacks</h2>
+
+<h3>26.1 Earnings Per Share — basic vs diluted</h3>
+<div class="formula"><b>Basic EPS</b><br>
+Basic EPS = (Net Income &minus; Preference Dividends) &divide; Weighted Average Number of Equity Shares
+<div class="where">Use the <b>weighted average</b> of shares (time-weighted for issues/buybacks during the year), not the year-end count. Bonus issues/splits are applied retrospectively to all periods shown.</div></div>
+<div class="formula"><b>Diluted EPS</b><br>
+Diluted EPS = (Adjusted Net Income) &divide; (Weighted Avg Shares + Potential Dilutive Shares)
+<div class="where">Includes the effect of <b>convertibles, ESOPs, warrants</b> — anything that could increase the share count. Only <b>dilutive</b> instruments are included; anti-dilutive ones are ignored. Options are converted via the <b>treasury stock method</b>.</div></div>
+
+<div class="example">
+<div class="ex-h">Worked Example 16 — Basic and diluted EPS</div>
+<p>PAT &#8377;100 cr; preference dividend &#8377;10 cr; weighted-average equity shares 30 cr; plus 5 cr shares issuable on conversion of debentures whose after-tax interest saving would be &#8377;6 cr.</p>
+<p><b>Basic EPS</b> = (100 &minus; 10) &divide; 30 = 90/30 = <b>&#8377;3.00.</b></p>
+<p><b>Diluted EPS</b> (assume convertibles carry no preference div; add back interest saving to numerator): = (90 + 6) &divide; (30 + 5) = 96/35 = <b>&#8377;2.74.</b> Since &#8377;2.74 &lt; &#8377;3.00 the convertible is dilutive, so it is included.</p>
+</div>
+
+<h3>26.2 Dividends and their types</h3>
+<ul>
+  <li><b>Interim dividend</b> — declared by the board during the year; <b>final dividend</b> — recommended by the board and approved by shareholders at the AGM.</li>
+  <li><b>Special dividend</b> — one-off, often from a windfall or asset sale.</li>
+  <li><b>Bonus issue (stock dividend)</b> — free shares from capitalising reserves; no cash leaves the firm, share count rises, EPS and price adjust down proportionately — economically neutral.</li>
+  <li>Under Ind-AS, a proposed dividend is recognised as a liability <b>only when approved</b> (a non-adjusting post-balance-sheet event), not when merely proposed.</li>
+  <li>In India, dividend distribution tax (DDT) was abolished (around FY2020-21); dividends are now taxable in the hands of shareholders at their slab rate, with TDS.</li>
+</ul>
+
+<h3>26.3 Share buybacks</h3>
+<p>A buyback returns cash to shareholders by repurchasing and extinguishing shares. Effects: cash &darr; and equity &darr; on the balance sheet; share count &darr;, which <b>mechanically raises EPS and can raise ROE</b> (smaller equity base). It signals management believes shares are undervalued (or lacks better investment options) and is often more tax-efficient than dividends.</p>
+
+<div class="trap"><b>Common trap:</b> A rising EPS is not automatically "growth". A buyback shrinks the share count, lifting EPS even if net income is flat or falling — and it can raise ROE simply by reducing the equity base and increasing leverage. Always check <em>why</em> EPS rose: more profit, or fewer shares?</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">27. Segment Analysis, Benchmarking &amp; Putting FSA Together</h2>
+
+<h3>27.1 Segment reporting (Ind-AS 108)</h3>
+<p>Diversified groups disclose <b>operating segments</b> — the components whose results the chief operating decision-maker reviews — usually by business line and by geography, with segment revenue, results, assets and often capex. Segment data is analytical gold: it reveals which division actually earns the group's money, which is subsidising a laggard, and where growth and margins really come from. A group with flat consolidated margins may be masking a booming segment and a collapsing one.</p>
+
+<h3>27.2 The four lenses of financial-statement analysis</h3>
+<table>
+<thead><tr><th>Technique</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><b>Vertical (common-size)</b></td><td>Each line as % of sales (P&amp;L) or total assets (BS) — exposes structure</td></tr>
+<tr><td><b>Horizontal (trend)</b></td><td>Index each line to a base year — exposes growth and inflexions</td></tr>
+<tr><td><b>Cross-sectional (peer) benchmarking</b></td><td>Compare ratios against close competitors and the industry median at the same date</td></tr>
+<tr><td><b>Ratio &amp; DuPont</b></td><td>Turn statements into liquidity/leverage/profitability/efficiency insight and decompose returns</td></tr>
+</tbody>
+</table>
+
+<h3>27.3 A repeatable framework for "analyse this company"</h3>
+<ol>
+  <li><b>Business &amp; segments</b> — what does it sell, to whom, and which segment drives profit?</li>
+  <li><b>Growth &amp; margins</b> — trend and common-size the P&amp;L; is growth profitable and is it operating or one-off?</li>
+  <li><b>Returns</b> — ROE/ROCE vs cost of capital, decomposed via DuPont.</li>
+  <li><b>Balance-sheet quality</b> — leverage, liquidity, working capital, soft assets (goodwill, DTA, Level-3, capitalised costs).</li>
+  <li><b>Cash conversion</b> — CFO vs PAT, FCF, accruals ratio; does profit become cash?</li>
+  <li><b>Quality &amp; risk</b> — earnings-quality red flags, contingent liabilities, accounting-policy choices, related parties.</li>
+  <li><b>Benchmark</b> — put every conclusion next to peers and the firm's own history.</li>
+</ol>
+
+<div class="keytake"><b>Key takeaways:</b> No ratio or standard is analysed in isolation. Combine vertical, horizontal, cross-sectional and DuPont analysis, read the segment note to find where money is really made, and always finish by asking whether accrual profit turns into cash. The standards (revenue, leases, inventory, impairment, financial instruments) matter because each one changes <em>where</em> a number sits and how comparable it is across firms and time.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">28. The Classic "A Change Flows Through 3 Statements"</h2>
+
+<p>This is the signature technical test. The recipe never changes: <b>start on the P&amp;L, flow to the cash flow statement, then update the balance sheet, and confirm it balances.</b> Assume a 25% tax rate unless told otherwise. Work through the canonical cases.</p>
+
+<h3>28.1 Depreciation increases by &#8377;100</h3>
+<ul>
+  <li><b>P&amp;L:</b> Depreciation +100 &rarr; PBT &minus;100 &rarr; tax &minus;25 (saved) &rarr; <b>net income &minus;75</b>.</li>
+  <li><b>Cash Flow:</b> Start CFO at net income &minus;75; add back the +100 non-cash depreciation &rarr; <b>cash +25</b> (the tax shield).</li>
+  <li><b>Balance Sheet:</b> Cash +25; net PP&amp;E &minus;100 (accumulated depreciation); retained earnings &minus;75. Assets change = +25 &minus;100 = &minus;75; Equity change = &minus;75. <b>Balances.</b></li>
+</ul>
+
+<h3>28.2 Inventory write-down of &#8377;100</h3>
+<ul>
+  <li><b>P&amp;L:</b> Write-down is an expense (in COGS/other) &rarr; PBT &minus;100 &rarr; tax &minus;25 &rarr; <b>net income &minus;75</b>.</li>
+  <li><b>Cash Flow:</b> CFO starts at &minus;75; add back the +100 non-cash write-down; but the inventory reduction of 100 is a working-capital <b>source</b> of +100... careful: the write-down itself reduces inventory non-cash, so the add-back and the inventory decrease are the same 100 — net CFO effect is <b>+25</b> (only the tax saving is real cash).</li>
+  <li><b>Balance Sheet:</b> Cash +25; inventory &minus;100; retained earnings &minus;75. Assets = +25 &minus;100 = &minus;75; Equity = &minus;75. <b>Balances.</b></li>
+</ul>
+
+<h3>28.3 Raise &#8377;1,000 of debt</h3>
+<ul>
+  <li><b>P&amp;L:</b> No immediate effect (interest hits in later periods).</li>
+  <li><b>Cash Flow:</b> CFF +1,000 &rarr; <b>cash +1,000</b>.</li>
+  <li><b>Balance Sheet:</b> Cash +1,000 (asset); borrowings +1,000 (liability). <b>Balances</b> — no equity change.</li>
+</ul>
+
+<h3>28.4 Buy equipment for &#8377;1,000 in cash</h3>
+<ul>
+  <li><b>P&amp;L:</b> No immediate effect (the cost is capitalised, then depreciated over time).</li>
+  <li><b>Cash Flow:</b> CFI &minus;1,000 (capex) &rarr; <b>cash &minus;1,000</b>.</li>
+  <li><b>Balance Sheet:</b> PP&amp;E +1,000; cash &minus;1,000 &rarr; total assets unchanged. <b>Balances.</b> (If funded by debt instead, add borrowings +1,000 and cash stays flat.)</li>
+</ul>
+
+<h3>28.5 Accrue &#8377;100 of revenue on credit (COGS &#8377;60)</h3>
+<ul>
+  <li><b>P&amp;L:</b> Revenue +100, COGS +60 &rarr; PBT +40 &rarr; tax +10 &rarr; <b>net income +30</b>.</li>
+  <li><b>Cash Flow:</b> CFO starts +30; receivables +100 (use of cash &minus;100); inventory &minus;60 (source +60); tax paid may differ but assume matches &rarr; net CFO = 30 &minus;100 +60 = <b>&minus;10</b>. Cash actually <b>falls</b> despite booking profit.</li>
+  <li><b>Balance Sheet:</b> Receivables +100, inventory &minus;60, cash &minus;10 (net assets +30); retained earnings +30. <b>Balances</b> — and neatly illustrates profit &ne; cash.</li>
+</ul>
+
+<h3>28.6 Share buyback of &#8377;500 in cash</h3>
+<ul>
+  <li><b>P&amp;L:</b> No effect (a buyback is a capital transaction, not an expense).</li>
+  <li><b>Cash Flow:</b> CFF &minus;500 &rarr; <b>cash &minus;500.</b></li>
+  <li><b>Balance Sheet:</b> Cash &minus;500 (asset); equity &minus;500 (shares extinguished / treasury). Assets &minus;500 = Equity &minus;500 &rarr; <b>balances.</b> Share count falls, so future EPS and ROE rise on a smaller base even with unchanged profit.</li>
+</ul>
+
+<h3>28.7 Raise &#8377;1,000 of fresh equity</h3>
+<ul>
+  <li><b>P&amp;L:</b> No effect.</li>
+  <li><b>Cash Flow:</b> CFF +1,000 &rarr; <b>cash +1,000.</b></li>
+  <li><b>Balance Sheet:</b> Cash +1,000 (asset); share capital + securities premium +1,000 (equity). <b>Balances.</b> Unlike debt, there is no future interest cost, but EPS is diluted across more shares.</li>
+</ul>
+
+<div class="trap"><b>Common trap:</b> In every flow-through, the two universal anchors are (1) apply the tax effect to any P&amp;L item, and (2) route <b>every</b> non-cash and working-capital change through the cash flow statement so the balance-sheet cash line is correct. If assets &ne; liabilities + equity at the end, you missed the tax shield or a working-capital leg.</div>
+
+<div class="keytake"><b>Key takeaways:</b> The flow-through is mechanical once you internalise: P&amp;L item &rarr; tax it &rarr; net income to retained earnings and top of CFS &rarr; add back non-cash &rarr; adjust working capital / capex / financing &rarr; new cash &rarr; balance sheet balances. Practise the depreciation +100 case until you can recite it in 30 seconds.</div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">29. Interview Q&amp;A Bank</h2>
+
+<p>Seventy-five questions spanning conceptual, "why/how", and numerical. Answers are model-length — expand with examples in the room.</p>
+
+<h3>29.1 The three statements &amp; their links</h3>
+
+<div class="qa"><div class="q">Q1. Walk me through the three financial statements.</div>
+<div class="a">A: The <b>P&amp;L</b> shows performance over a period — revenue down to net profit after subtracting COGS, operating expenses, depreciation, interest and tax. The <b>balance sheet</b> is a snapshot at a point in time of assets, liabilities and equity, and it must balance: Assets = Liabilities + Equity. The <b>cash flow statement</b> reconciles accrual profit to actual cash, split into operating, investing and financing activities, and explains the change in the cash balance. P&amp;L tells you if you made money, the balance sheet what you own and owe, and the cash flow where the cash actually went.</div></div>
+
+<div class="qa"><div class="q">Q2. How are the three statements linked?</div>
+<div class="a">A: Three key links. Net income from the P&amp;L flows into retained earnings on the balance sheet and is the starting point of the cash flow statement. Depreciation is a P&amp;L expense, is added back in operating cash flow, and reduces net PP&amp;E on the balance sheet. And the closing cash on the cash flow statement becomes the cash line on the balance sheet. Working-capital changes, capex and financing all move between the cash flow statement and balance sheet, and when everything is updated the balance sheet still balances.</div></div>
+
+<div class="qa"><div class="q">Q3. If you had only one statement to assess a company, which would you pick?</div>
+<div class="a">A: The <b>cash flow statement</b> — specifically CFO. It is hardest to manipulate and shows whether the business actually generates cash. Profit can be managed with accounting estimates; cash is cash. That said, ideally I would want all three, because CFS alone hides the balance-sheet leverage picture.</div></div>
+
+<div class="qa"><div class="q">Q4. Why must the balance sheet always balance?</div>
+<div class="a">A: Because of double-entry bookkeeping and the accounting equation: every asset is financed either by creditors (liabilities) or owners (equity). Assets = Liabilities + Equity is an identity, not a coincidence — every transaction affects at least two accounts by equal and offsetting amounts.</div></div>
+
+<div class="qa"><div class="q">Q5. Where does net income appear across the statements?</div>
+<div class="a">A: It is the bottom line of the P&amp;L, the top line of the indirect cash flow statement, and it flows (net of dividends) into retained earnings within equity on the balance sheet.</div></div>
+
+<div class="qa"><div class="q">Q6. A company is profitable but keeps running out of cash. How?</div>
+<div class="a">A: Profit is accrual-based. Cash can be trapped in growing receivables (customers not paying), rising inventory, or heavy capex — all of which reduce cash while profit looks fine. It can also be servicing debt principal (which is not a P&amp;L item). The cash flow statement, not the P&amp;L, reveals it.</div></div>
+
+<h3>29.2 Flow-through mechanics</h3>
+
+<div class="qa"><div class="q">Q7. If depreciation increases by &#8377;100, walk me through all three statements (25% tax).</div>
+<div class="a">A: P&amp;L: pre-tax profit falls 100, tax falls 25, net income falls 75. Cash flow: net income &minus;75, add back 100 non-cash depreciation, cash rises 25 (the tax shield). Balance sheet: cash +25, net PP&amp;E &minus;100, retained earnings &minus;75; assets fall 75, equity falls 75 — it balances.</div></div>
+
+<div class="qa"><div class="q">Q8. Why does higher depreciation increase cash?</div>
+<div class="a">A: Depreciation itself is non-cash, but it is tax-deductible. A higher charge lowers taxable profit and therefore lowers the cash tax paid. The net cash effect equals the tax rate times the extra depreciation — the "depreciation tax shield". So more depreciation raises cash only through the tax it saves.</div></div>
+
+<div class="qa"><div class="q">Q9. A company raises &#8377;1,000 of debt. Effect on the statements?</div>
+<div class="a">A: No P&amp;L effect initially. Cash flow: +1,000 in financing. Balance sheet: cash +1,000, borrowings +1,000. It balances with no equity change. In future periods interest expense will hit the P&amp;L.</div></div>
+
+<div class="qa"><div class="q">Q10. A company buys &#8377;1,000 of equipment in cash. Walk through it.</div>
+<div class="a">A: No immediate P&amp;L effect — it's capitalised. Cash flow: &minus;1,000 in investing (capex). Balance sheet: PP&amp;E +1,000, cash &minus;1,000, so total assets unchanged. Over the asset's life, depreciation then flows through the P&amp;L.</div></div>
+
+<div class="qa"><div class="q">Q11. Inventory is written down by &#8377;100. Walk through it (25% tax).</div>
+<div class="a">A: P&amp;L: expense +100, pre-tax profit &minus;100, tax &minus;25, net income &minus;75. Cash flow: net income &minus;75, add back 100 non-cash write-down (which equals the inventory decrease), net cash +25. Balance sheet: inventory &minus;100, cash +25, retained earnings &minus;75 — balances. Only the &#8377;25 tax saving is real cash.</div></div>
+
+<div class="qa"><div class="q">Q12. You accrue &#8377;100 of credit sales with &#8377;60 COGS. What happens to cash?</div>
+<div class="a">A: Net income rises 30 (40 pre-tax less 25% tax). But receivables rise 100 (a cash use) and inventory falls 60 (a cash source), so operating cash actually falls about 10. It's the classic demonstration that booking a profitable sale on credit can reduce cash in the short run.</div></div>
+
+<div class="qa"><div class="q">Q13. Company pays &#8377;200 of dividends. Effect?</div>
+<div class="a">A: No P&amp;L effect (dividends are a distribution, not an expense). Cash flow: &minus;200 in financing. Balance sheet: cash &minus;200, retained earnings &minus;200. Balances.</div></div>
+
+<div class="qa"><div class="q">Q14. Company collects &#8377;100 from a customer who owed it. Effect?</div>
+<div class="a">A: No P&amp;L effect (revenue was recognised earlier when earned). Cash flow: CFO +100 from the fall in receivables. Balance sheet: cash +100, receivables &minus;100 — total assets unchanged, balances.</div></div>
+
+<h3>29.3 Accrual, revenue &amp; standards</h3>
+
+<div class="qa"><div class="q">Q15. Difference between accrual and cash accounting?</div>
+<div class="a">A: Cash accounting records revenue and expenses when cash moves; accrual records them when earned or incurred, regardless of cash. Accrual gives a truer economic picture and is required for companies, but it creates receivables, payables, accruals and deferrals that the cash flow statement then reconciles.</div></div>
+
+<div class="qa"><div class="q">Q16. Explain the matching principle.</div>
+<div class="a">A: Expenses are recognised in the same period as the revenues they generate. That's why we depreciate assets over their life, carry prepaid expenses as assets, and accrue expenses not yet paid — to align cost with the revenue it produced.</div></div>
+
+<div class="qa"><div class="q">Q17. What is Ind-AS 115 and how does revenue get recognised?</div>
+<div class="a">A: It's the revenue-from-contracts standard, converged with IFRS 15. Five steps: identify the contract, identify performance obligations, determine the transaction price, allocate it to obligations, and recognise revenue as each obligation is satisfied — at a point in time or over time. It unbundles multi-element deals and defers upfront cash for services delivered later.</div></div>
+
+<div class="qa"><div class="q">Q18. Deferred revenue — asset or liability?</div>
+<div class="a">A: A liability. The company has received cash but still owes the good or service. As it delivers, deferred revenue is drawn down and recognised as revenue. Its mirror image is unbilled/accrued revenue, which is an asset — delivered but not yet billed or collected.</div></div>
+
+<div class="qa"><div class="q">Q19. Key differences between Ind-AS and older Indian GAAP?</div>
+<div class="a">A: Ind-AS is principles-based and IFRS-converged, uses fair value more widely, adds OCI and a statement of changes in equity, applies the 5-step revenue model, brings most leases on balance sheet (Ind-AS 116), uses an expected-credit-loss model for financial assets, and tests goodwill for impairment rather than amortising it. Older GAAP is more historical-cost and rules-based.</div></div>
+
+<div class="qa"><div class="q">Q20. How did Ind-AS 116 change the financials?</div>
+<div class="a">A: It put operating leases on the lessee's balance sheet as a right-of-use asset and a lease liability. The rent expense split into depreciation plus interest, which lifts EBITDA and total debt. So when comparing across years or peers, you must check whether numbers are pre- or post-Ind-AS 116.</div></div>
+
+<h3>29.4 Depreciation, tax &amp; provisions</h3>
+
+<div class="qa"><div class="q">Q21. SLM vs WDV depreciation — which and why?</div>
+<div class="a">A: Straight-line spreads cost equally over life; written-down-value front-loads the charge on the reducing book value. WDV suits assets that lose value or productivity fast and gives an earlier tax shield; SLM gives smoother reported profits. Companies often use SLM for books and WDV/block method for tax — the mismatch creates deferred tax.</div></div>
+
+<div class="qa"><div class="q">Q22. Is depreciation a source of cash?</div>
+<div class="a">A: No. It is non-cash, so it is added back to profit in the cash flow statement, but that add-back only reverses a non-cash deduction — it doesn't bring in cash. The only real cash effect of depreciation is the tax it saves.</div></div>
+
+<div class="qa"><div class="q">Q23. What is deferred tax and why does it arise?</div>
+<div class="a">A: It bridges the gap between tax on book profit and tax actually payable, caused by temporary timing differences between accounting and tax rules — mainly depreciation, provisions and carry-forward losses. Deferred tax ensures the P&amp;L tax charge matches book profit even when cash tax differs.</div></div>
+
+<div class="qa"><div class="q">Q24. DTA vs DTL — give the intuition.</div>
+<div class="a">A: A DTL means you're paying less tax now and more later — typically because tax depreciation exceeds book depreciation early on. A DTA means you've paid more tax now and will pay less later — from provisions not yet tax-deductible or carried-forward losses. DTL is a future obligation; DTA is a future saving, recognised only if future profits make it usable.</div></div>
+
+<div class="qa"><div class="q">Q25. When would you write down a DTA?</div>
+<div class="a">A: When it's no longer probable the company will earn enough future taxable profit to use it — for instance a firm with a run of losses. Prudence requires recognising a DTA only to the extent of probable future taxable income.</div></div>
+
+<div class="qa"><div class="q">Q26. Difference between a provision, a reserve and a contingent liability?</div>
+<div class="a">A: A provision is a liability of uncertain timing or amount for a present obligation, created by charging the P&amp;L (e.g. warranty, gratuity). A reserve is an appropriation of profit already earned, sitting in equity — not an expense. A contingent liability is a possible obligation dependent on a future event; it's only disclosed in the notes, not recognised.</div></div>
+
+<div class="qa"><div class="q">Q27. Are reserves the same as cash?</div>
+<div class="a">A: No — a very common misconception. Reserves are an accounting record of undistributed profit within equity. The corresponding cash has usually been reinvested in assets or used to repay debt. A company can have huge reserves and almost no cash.</div></div>
+
+<h3>29.5 Working capital &amp; cash cycle</h3>
+
+<div class="qa"><div class="q">Q28. What is working capital and why does it matter?</div>
+<div class="a">A: Net working capital is current assets minus current liabilities — the money tied up in day-to-day operations. It matters because growth consumes it (more sales usually means more receivables and inventory), so a profitable firm can still face a cash crunch. Managing it well releases cash without any change in profit.</div></div>
+
+<div class="qa"><div class="q">Q29. Explain the cash conversion cycle.</div>
+<div class="a">A: CCC = Days Inventory Outstanding + Days Sales Outstanding &minus; Days Payables Outstanding. It's the number of days cash is tied up between paying suppliers and collecting from customers. Lower is better; a negative CCC — common in FMCG and retail — means suppliers effectively fund your operations.</div></div>
+
+<div class="qa"><div class="q">Q30. A firm's DSO jumps from 40 to 70 days. What does it tell you?</div>
+<div class="a">A: Customers are taking much longer to pay. It could be looser credit terms to push sales, weaker collections, deteriorating customer quality, or channel stuffing that inflates revenue. It ties up cash, strains liquidity, and raises earnings-quality questions — I'd check if receivables are growing faster than sales.</div></div>
+
+<div class="qa"><div class="q">Q31. How can a company have a negative cash conversion cycle?</div>
+<div class="a">A: If it collects from customers before it pays suppliers — high DPO, low DSO and DIO. Retailers and FMCG firms sell for cash quickly, turn inventory fast, and pay suppliers on 60–90 day terms, so the supplier finances the working capital. It's a sign of strong bargaining power.</div></div>
+
+<h3>29.6 Ratios &amp; DuPont</h3>
+
+<div class="qa"><div class="q">Q32. Current ratio vs quick ratio?</div>
+<div class="a">A: Current ratio is current assets over current liabilities. Quick (acid-test) ratio strips out inventory and prepaids, keeping only the most liquid current assets, because inventory may not convert to cash quickly. For inventory-heavy businesses the quick ratio is the more honest liquidity test.</div></div>
+
+<div class="qa"><div class="q">Q33. Is a higher current ratio always better?</div>
+<div class="a">A: No. A very high current ratio can mean idle cash, bloated inventory or uncollected receivables — poor asset utilisation. It should be read alongside the cash conversion cycle and against industry norms. Optimal, not maximal, liquidity is the goal.</div></div>
+
+<div class="qa"><div class="q">Q34. Difference between ROE, ROA and ROCE?</div>
+<div class="a">A: ROA is net income over total assets — how well all assets generate profit. ROE is net income over equity — return to shareholders, and it can be inflated by leverage. ROCE is EBIT over capital employed (equity plus long-term debt) — a pre-financing, pre-tax return on all long-term capital, best compared with WACC. ROE reflects financing; ROCE reflects operating capital efficiency.</div></div>
+
+<div class="qa"><div class="q">Q35. Two firms both have 20% ROE. How do you tell them apart?</div>
+<div class="a">A: DuPont. ROE = net margin &times; asset turnover &times; equity multiplier. One firm might earn 20% from high margins and low leverage (high quality), another from thin margins and heavy debt (higher risk). Decomposition shows whether the return comes from operating skill or balance-sheet gearing.</div></div>
+
+<div class="qa"><div class="q">Q36. Walk me through 3-step DuPont.</div>
+<div class="a">A: ROE equals net profit margin (PAT/Sales) times asset turnover (Sales/Assets) times the equity multiplier (Assets/Equity) — profitability, efficiency and leverage. It tells you which lever drives the return: pricing/cost, asset utilisation, or debt.</div></div>
+
+<div class="qa"><div class="q">Q37. What does 5-step DuPont add?</div>
+<div class="a">A: It splits net margin into a tax burden (PAT/PBT), an interest burden (PBT/EBIT) and an operating margin (EBIT/Sales), keeping asset turnover and the equity multiplier. So it isolates how much of ROE is driven by tax efficiency and financing cost versus core operations.</div></div>
+
+<div class="qa"><div class="q">Q38. What is interest coverage and what level worries you?</div>
+<div class="a">A: EBIT divided by interest expense — how many times operating profit covers interest. Below roughly 1.5–2x is stress territory; the firm has little cushion if earnings dip. Lenders watch it closely, often alongside net debt to EBITDA.</div></div>
+
+<div class="qa"><div class="q">Q39. A company's net margin fell but ROE rose. How?</div>
+<div class="a">A: Through DuPont — if it increased leverage (higher equity multiplier) or improved asset turnover enough to offset the margin decline. Rising ROE on falling margins is usually a leverage story, which raises the risk profile even as the headline return improves.</div></div>
+
+<div class="qa"><div class="q">Q40. Why compare ROCE with WACC?</div>
+<div class="a">A: ROCE is the return the business earns on its capital; WACC is the cost of that capital. If ROCE exceeds WACC, the firm creates value on every rupee invested; if it's below, it destroys value even while reporting an accounting profit. It's the core test of economic value creation.</div></div>
+
+<h3>29.7 Cash flow &amp; free cash flow</h3>
+
+<div class="qa"><div class="q">Q41. Direct vs indirect cash flow method?</div>
+<div class="a">A: The direct method lists actual cash receipts and payments; the indirect method starts from profit and adjusts for non-cash items and working-capital changes. Both reach the same CFO. Indirect is far more common because it reconciles neatly to the P&amp;L and balance sheet.</div></div>
+
+<div class="qa"><div class="q">Q42. How do you get from net income to CFO?</div>
+<div class="a">A: Start with profit, add back non-cash charges like depreciation, amortisation and provisions, remove non-operating items like interest and gains on asset sales, adjust for working-capital changes (a rise in receivables or inventory uses cash, a rise in payables provides it), and deduct taxes paid.</div></div>
+
+<div class="qa"><div class="q">Q43. FCFF vs FCFE — what's the difference?</div>
+<div class="a">A: FCFF is cash available to all capital providers before financing — EBIT after tax plus D&amp;A minus capex minus the change in working capital; you discount it at WACC to value the whole firm. FCFE is what's left for equity after interest and net borrowing; you discount it at the cost of equity to value just the equity.</div></div>
+
+<div class="qa"><div class="q">Q44. Why isn't EBITDA the same as cash flow?</div>
+<div class="a">A: EBITDA ignores capex, working-capital swings, taxes and interest. A capital-intensive firm can post strong EBITDA yet generate little or negative free cash flow because it must keep reinvesting. EBITDA is a rough operating proxy, not cash available to investors.</div></div>
+
+<div class="qa"><div class="q">Q45. If you see CFO consistently below net income, what do you think?</div>
+<div class="a">A: An earnings-quality warning. Profit isn't converting to cash — possibly from aggressive revenue recognition, ballooning receivables or inventory, or capitalising costs. I'd compute the accruals ratio and inspect the working-capital trend and revenue-recognition policy.</div></div>
+
+<div class="qa"><div class="q">Q46. How is capex reflected across the statements?</div>
+<div class="a">A: Cash outflow in investing activities, an increase in gross PP&amp;E on the balance sheet, and no immediate P&amp;L hit — the cost is then depreciated over the asset's life, which flows through the P&amp;L and reduces net PP&amp;E over time.</div></div>
+
+<h3>29.8 Quality of earnings, consolidation &amp; judgment</h3>
+
+<div class="qa"><div class="q">Q47. What is quality of earnings?</div>
+<div class="a">A: Whether reported profits are real, repeatable and cash-backed. High-quality earnings come from core operations, are conservatively estimated and convert to cash. Low quality leans on one-offs, aggressive estimates, or accounting choices that borrow from the future.</div></div>
+
+<div class="qa"><div class="q">Q48. Name red flags of possible accounting manipulation.</div>
+<div class="a">A: CFO persistently below net income; receivables or inventory growing faster than sales; recurring "exceptional" charges; rising other income masking weak operations; capitalising operating costs; lengthening asset lives to cut depreciation; frequent auditor changes; heavy related-party dealings; and a widening gap between book profit and cash tax paid.</div></div>
+
+<div class="qa"><div class="q">Q49. How would you spot channel stuffing?</div>
+<div class="a">A: Revenue spiking near period-end with receivables and DSO rising faster than sales, followed by returns or discounts next period. I'd check the revenue-recognition policy, the trend in DSO, and whether CFO lags the reported profit growth.</div></div>
+
+<div class="qa"><div class="q">Q50. What is goodwill and how is it treated under Ind-AS?</div>
+<div class="a">A: Goodwill is the premium paid on acquisition over the fair value of net identifiable assets — it captures things like brand, synergies and workforce. Under Ind-AS it isn't amortised; it's tested annually for impairment and written down if the recoverable amount falls below carrying value.</div></div>
+
+<div class="qa"><div class="q">Q51. When do you fully consolidate versus use the equity method?</div>
+<div class="a">A: Full consolidation (line-by-line, with a non-controlling interest) when the parent controls the entity — usually more than 50% of voting rights. The equity method (a single investment line plus a share of profit) applies to associates with significant influence, roughly 20–50%, and to joint ventures.</div></div>
+
+<div class="qa"><div class="q">Q52. What is non-controlling interest?</div>
+<div class="a">A: In a consolidated subsidiary that the parent doesn't wholly own, NCI is the minority shareholders' share of the subsidiary's net assets and profit. Consolidation includes 100% of the subsidiary's assets and revenue, then carves out the NCI portion within equity and in profit attributable to non-controlling interests.</div></div>
+
+<div class="qa"><div class="q">Q53. What is other comprehensive income?</div>
+<div class="a">A: Gains and losses not routed through profit or loss — such as remeasurements of defined-benefit plans, certain equity investments at FVOCI, revaluation surpluses and effective cash-flow hedges. Total comprehensive income equals PAT plus OCI. Some OCI items later recycle to P&amp;L; others never do.</div></div>
+
+<div class="qa"><div class="q">Q54. What is a contingent liability and where does it appear?</div>
+<div class="a">A: A possible obligation that depends on an uncertain future event, or a present obligation that isn't probable or reliably measurable — for example pending litigation or guarantees given. It isn't recognised on the balance sheet; it's disclosed in the notes, and analysts watch it because it can crystallise into real liability.</div></div>
+
+<div class="qa"><div class="q">Q55. What is common-size analysis and why use it?</div>
+<div class="a">A: Restating the P&amp;L as a percentage of sales and the balance sheet as a percentage of total assets, so firms of very different sizes become directly comparable. It exposes cost structure, margin trends and asset mix at a glance, and pairs well with trend analysis that indexes each line to a base year.</div></div>
+
+<h3>29.9 Standards, inventory, leases, EPS &amp; capitalisation</h3>
+
+<div class="qa"><div class="q">Q56. Why is LIFO not allowed under Ind-AS/IFRS, and what does it do in inflation?</div>
+<div class="a">A: LIFO charges the newest, dearest costs to COGS, so in inflation it lowers reported profit and tax but leaves closing inventory carried at very old, understated costs on the balance sheet — which distorts the balance sheet and can be used to manage earnings. Ind-AS 2 permits only FIFO, weighted average or specific identification. LIFO survives only under US GAAP; to compare, analysts add back the LIFO reserve.</div></div>
+
+<div class="qa"><div class="q">Q57. In a period of rising prices, which method reports higher profit — FIFO or weighted average?</div>
+<div class="a">A: FIFO. It expenses the older, cheaper units first, so COGS is lower and gross profit, PAT and tax are higher, and closing inventory is carried at recent (higher) costs. Weighted average blends old and new costs, giving a profit between FIFO and (the disallowed) LIFO. The physical business is identical — only the accounting differs.</div></div>
+
+<div class="qa"><div class="q">Q58. At what value is inventory carried on the balance sheet?</div>
+<div class="a">A: At the lower of cost and net realisable value (NRV). NRV is the expected selling price less costs to complete and sell. If NRV falls below cost — obsolete or slow-moving stock — the firm writes it down and charges the loss to the P&amp;L. Unlike goodwill, an inventory write-down can be reversed if NRV recovers.</div></div>
+
+<div class="qa"><div class="q">Q59. Explain capitalising versus expensing a cost and why it matters.</div>
+<div class="a">A: Expensing hits the P&amp;L immediately; capitalising records an asset that is charged to the P&amp;L slowly via depreciation/amortisation. Over the asset's life total expense is identical, but capitalising flatters current-year profit and also boosts reported CFO, because the cash outflow shifts from operating to investing. Aggressive capitalisation of routine costs is a classic profit-inflation red flag.</div></div>
+
+<div class="qa"><div class="q">Q60. How are research and development costs treated?</div>
+<div class="a">A: Under Ind-AS 38, research costs are expensed as incurred. Development costs are capitalised only if the firm can demonstrate technical feasibility, intention and ability to complete, probable future economic benefits, availability of resources, and reliable measurement of cost. Internally generated goodwill and brands can never be capitalised — only purchased ones.</div></div>
+
+<div class="qa"><div class="q">Q61. What is impairment and how does it differ from depreciation?</div>
+<div class="a">A: Depreciation is the routine, systematic allocation of an asset's cost over its useful life. Impairment is a one-off write-down when the carrying amount exceeds the recoverable amount — the higher of fair value less costs of disposal and value in use. Goodwill and indefinite-life intangibles are tested for impairment at least annually; impairments (except on goodwill) can be reversed if conditions improve.</div></div>
+
+<div class="qa"><div class="q">Q62. A company takes a large goodwill impairment. What does it signal, and what is the cash effect?</div>
+<div class="a">A: It is a non-cash charge and usually not tax-deductible, so there is little or no cash effect. But it is a strong signal that a past acquisition was overpriced — an admission of poor capital allocation. It reduces equity and assets and dents reported profit, and goodwill impairment can never be reversed.</div></div>
+
+<div class="qa"><div class="q">Q63. How did Ind-AS 116 change lessee accounting, and what happens to EBITDA?</div>
+<div class="a">A: It abolished off-balance-sheet operating leases for lessees. Nearly every lease now creates a right-of-use asset and a lease liability. The old rent expense splits into depreciation (in EBIT) and interest (below EBIT), so EBITDA rises, and both assets and debt increase. The expense profile is front-loaded because interest is higher early in the term.</div></div>
+
+<div class="qa"><div class="q">Q64. Finance lease versus operating lease — is the distinction still relevant?</div>
+<div class="a">A: For lessees under Ind-AS 116, no — almost all leases are capitalised the same way. For lessors it still matters: a finance lease transfers substantially all risks and rewards, so the lessor derecognises the asset and books a receivable; an operating lease keeps the asset on the lessor's books with rental income. The tests are transfer of ownership, bargain option, lease term covering most of the asset's life, and PV of payments near fair value.</div></div>
+
+<div class="qa"><div class="q">Q65. What is the expected credit loss model and why was it introduced?</div>
+<div class="a">A: Ind-AS 109 replaced the old "incurred loss" model — criticised as too little, too late in 2008 — with a forward-looking ECL model. Lenders provide for expected losses before default: 12-month ECL for performing (Stage 1) assets, and lifetime ECL once credit risk rises significantly (Stage 2) or the asset is credit-impaired (Stage 3). Conceptually ECL = PD &times; LGD &times; EAD.</div></div>
+
+<div class="qa"><div class="q">Q66. How are financial assets classified under Ind-AS 109?</div>
+<div class="a">A: By the business model and the SPPI (solely payments of principal and interest) test. Amortised cost — held to collect and passes SPPI (e.g. loans). FVOCI — held to collect and sell. FVTPL — everything else, including trading assets and derivatives, with fair-value changes going straight to the P&amp;L.</div></div>
+
+<div class="qa"><div class="q">Q67. Defined contribution versus defined benefit plans?</div>
+<div class="a">A: In a defined-contribution plan (like PF), the employer pays a fixed contribution and has no further obligation — the expense is just the contribution. In a defined-benefit plan (like gratuity), the employer promises a set payout and bears actuarial and investment risk; a net obligation sits on the balance sheet, service and interest cost hit the P&amp;L, and actuarial remeasurements go to OCI without recycling.</div></div>
+
+<div class="qa"><div class="q">Q68. When are borrowing costs capitalised?</div>
+<div class="a">A: Under Ind-AS 23, interest directly attributable to acquiring or constructing a qualifying asset — one that takes substantial time to get ready, like a plant — is capitalised into the asset's cost until it is ready for use. All other borrowing costs are expensed. This is why a firm mid-construction can show low interest expense and flattering interest coverage.</div></div>
+
+<div class="qa"><div class="q">Q69. What is the fair value hierarchy and why care about Level 3?</div>
+<div class="a">A: Ind-AS 113 ranks fair-value inputs: Level 1 is quoted prices in active markets (most reliable), Level 2 is other observable inputs, and Level 3 is unobservable, model-based inputs. Level 3 values rest on management assumptions rather than market prices, so a balance sheet heavy with Level 3 assets warrants scepticism — it is "mark to model", with scope for optimism.</div></div>
+
+<div class="qa"><div class="q">Q70. How does goodwill arise in an acquisition, and what is purchase price allocation?</div>
+<div class="a">A: Under the acquisition method (Ind-AS 103), the acquirer measures the target's identifiable assets and liabilities at fair value — often recognising new intangibles like brands and customer relationships. Goodwill is the residual: purchase consideration (plus NCI) minus fair value of net identifiable assets. Allocating the price across those fair values is the PPA. If the price is below net assets, it is a bargain purchase gain in the P&amp;L.</div></div>
+
+<div class="qa"><div class="q">Q71. Basic versus diluted EPS?</div>
+<div class="a">A: Basic EPS is net income less preference dividends divided by the weighted-average number of equity shares. Diluted EPS additionally assumes all dilutive potential shares — convertibles, ESOPs, warrants — are converted, increasing the share count (and adjusting the numerator for saved interest). Only dilutive instruments are included; anti-dilutive ones are ignored. Diluted EPS is always less than or equal to basic.</div></div>
+
+<div class="qa"><div class="q">Q72. A company's EPS rose 15% but net income was flat. How?</div>
+<div class="a">A: Almost certainly a share buyback — fewer shares outstanding lifts EPS even with unchanged profit, and it can raise ROE by shrinking the equity base. It is financial engineering, not operating growth. I would always check whether EPS rose because of higher profit or a lower share count before crediting it as performance.</div></div>
+
+<div class="qa"><div class="q">Q73. Walk me through a share buyback across the three statements.</div>
+<div class="a">A: No P&amp;L effect — it is a capital transaction. Cash flow: an outflow in financing. Balance sheet: cash falls and equity falls by the same amount, so it balances. The share count drops, mechanically raising future EPS and ROE. It signals management sees the shares as undervalued or lacks better uses for the cash, and is often more tax-efficient than a dividend.</div></div>
+
+<div class="qa"><div class="q">Q74. Why look at segment disclosures?</div>
+<div class="a">A: Consolidated numbers can hide the real story. Segment reporting (Ind-AS 108) shows revenue, results and often assets by business line and geography, revealing which division actually earns the group's money and which is a drag. A group with flat overall margins may be masking a booming segment subsidising a collapsing one — insight you cannot get from the headline numbers.</div></div>
+
+<div class="qa"><div class="q">Q75. A firm reports rising revenue and profit, strong CFO, but capex has jumped sharply and intangible assets are ballooning. What do you suspect?</div>
+<div class="a">A: Possible aggressive capitalisation of operating costs. Moving routine expenses (software, development, even interest) into capex defers the cost, inflates current profit, and boosts CFO because the cash outflow is reclassified to investing. I would compare capitalised development against peers, check the accounting-policy note, and recompute profit and free cash flow as if those costs were expensed to see the underlying picture.</div></div>
+
+<!-- ===================================================================== -->
+<h2 class="sec">30. One-Page Rapid Revision</h2>
+
+<h3>20.1 The identities to never forget</h3>
+<ul>
+  <li>Assets = Liabilities + Equity</li>
+  <li>Closing RE = Opening RE + Net Income &minus; Dividends</li>
+  <li>Closing Net PP&amp;E = Opening + Capex &minus; Depreciation &minus; Disposals</li>
+  <li>Net change in cash = CFO + CFI + CFF</li>
+  <li>EBITDA = EBIT + D&amp;A; FCF = CFO &minus; Capex</li>
+  <li>CCC = DIO + DSO &minus; DPO</li>
+  <li>ROE = Net Margin &times; Asset Turnover &times; Equity Multiplier</li>
+  <li>Goodwill = Consideration (+ NCI) &minus; Fair Value of Net Identifiable Assets</li>
+  <li>Basic EPS = (PAT &minus; Pref Div) &divide; Weighted-Avg Shares</li>
+  <li>Recoverable Amount = higher of (Fair Value less costs to sell) and (Value in Use)</li>
+  <li>ECL = PD &times; LGD &times; EAD</li>
+  <li>Inventory = lower of Cost and Net Realisable Value</li>
+</ul>
+
+<h3>20.2 The three statements in one line each</h3>
+<ul>
+  <li><b>P&amp;L:</b> performance over a period; accrual basis; revenue &rarr; PAT.</li>
+  <li><b>Balance Sheet:</b> position at a point in time; must balance.</li>
+  <li><b>Cash Flow:</b> reconciles profit to cash; CFO + CFI + CFF.</li>
+</ul>
+
+<h3>20.3 The traps interviewers set</h3>
+<ul>
+  <li>Profit &ne; cash; revenue &ne; cash collected.</li>
+  <li>Depreciation is non-cash; only its tax shield is real cash.</li>
+  <li>Reserves &ne; cash; retained earnings is not a bank balance.</li>
+  <li>A high current ratio / ROE can be bad — decompose before judging.</li>
+  <li>EBITDA &ne; free cash flow.</li>
+  <li>Deferred revenue is a liability; unbilled revenue is an asset.</li>
+  <li>Provision reduces profit; a reserve is profit already earned.</li>
+  <li>LIFO is banned under Ind-AS; FIFO reports higher profit in inflation.</li>
+  <li>Capitalising a cost flatters profit and CFO; only timing differs from expensing.</li>
+  <li>Ind-AS 116 lifts EBITDA and debt — pre/post-116 EBITDA is not comparable.</li>
+  <li>Goodwill is not amortised (tested for impairment) and its impairment never reverses.</li>
+  <li>A buyback lifts EPS/ROE without any operating growth.</li>
+  <li>Level-3 fair values are "mark to model" — treat with caution.</li>
+</ul>
+
+<div class="keytake"><b>Final key takeaways:</b> If you can (1) recite the accounting equation, (2) walk the three statements and their three links, (3) do the depreciation +100 flow-through with the tax shield, (4) compute and interpret the core ratios plus 3-step DuPont, and (5) explain why profit &ne; cash using the cash flow statement — you will handle the accounting round of any equity research, IB, credit, risk, FP&amp;A, product control or fund accounting interview in India. Follow the cash, read the notes, and always interpret numbers in context.</div>
+
+</body></html>

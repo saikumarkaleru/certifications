@@ -1,0 +1,47 @@
+name: finance-projects-tests
+
+on:
+  push:
+    paths:
+      - 'projects/**'
+      - '.github/workflows/finance-projects-tests.yml'
+  pull_request:
+    paths:
+      - 'projects/**'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r projects/requirements.txt
+
+      - name: Run all project test suites
+        run: |
+          set -e
+          for d in \
+            projects/credit_analyst/1_financial_spreading_and_rating \
+            projects/equity_research_analyst/1_dcf_valuation \
+            projects/equity_research_analyst/2_comparable_company_analysis \
+            projects/financial_analyst_fpa/1_three_statement_model \
+            projects/financial_analyst_fpa/2_budget_vs_actual \
+            projects/financial_analyst_fpa/3_financial_ratio_analysis \
+            projects/investment_operations/1_nav_and_reconciliation \
+            projects/quant_derivatives_analyst/1_black_scholes_pricer \
+            projects/quant_derivatives_analyst/2_options_strategy_payoffs \
+            projects/risk_analyst/1_value_at_risk \
+            projects/risk_analyst/2_credit_risk_scoring ; do
+            echo "::group::pytest $d"
+            (cd "$d" && python -m pytest -q)
+            echo "::endgroup::"
+          done

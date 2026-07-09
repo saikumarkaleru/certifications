@@ -1,0 +1,15 @@
+# Non-secret configuration shared across services.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ecommerce-config
+  labels:
+    app.kubernetes.io/part-of: resilient-ecommerce
+data:
+  LOG_LEVEL: "INFO"
+  HTTP_TIMEOUT: "2.0"
+  HTTP_RETRIES: "3"
+  # In-cluster service discovery via DNS: <service>.<namespace>.svc.cluster.local
+  PRODUCT_SERVICE_URL: "http://product-service:8000"
+  ORDER_SERVICE_URL: "http://order-service:8000"
+  USER_SERVICE_URL: "http://user-service:8000"
