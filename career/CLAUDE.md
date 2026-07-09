@@ -22,8 +22,8 @@ line after reading the study guide.
 
 ## Hard Rule #2: Resumes must read as human-written, not AI-generated
 
-All resumes (in `finance_roles/`, `business_development/resumes/`,
-`software_roles/resumes/`) must follow these rules:
+All resumes (in `resumes/finance/`, `resumes/business_dev/`,
+`resumes/software/`) must follow these rules:
 
 - **Plain, human language.** No AI-tell filler or buzzwords. Ban words/phrases like
   "polyglot", "spearheaded", "leveraged", "seamlessly", "production-grade",
@@ -43,5 +43,5 @@ All resumes (in `finance_roles/`, `business_development/resumes/`,
   that space for a stronger **Projects** section instead: every project gets 2-3
   concrete, specific bullets.
 - Sources are HTML in each track's `source/` folder; render to PDF with headless
-  Chrome. `software_roles/resumes/source/Software_Engineer_SDE.html` is the reference
+  Chrome. `resumes/software/source/Software_Engineer_SDE.html` is the reference
   for the approved plain style.
