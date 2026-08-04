@@ -430,4 +430,13 @@ decision framework, inter-coder disagreement, weighting vs discarding data, live
 handling). TRA 12->19 questions, Market Research 20->28 questions — now covering every Part in
 both handbooks. Market Research 63->64pg, TRA 49->50pg. Master: 3,773 -> 3,775 pages.
 
-**Running total: 3,775 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 28 (Market Entry & Expansion
+Research to Market Research — the full 5-step entry-research structure incl. entry-mode
+recommendation, a worked metro-to-Tier2/3 geographic-expansion example, and the non-geographic
+category-entry/brand-extension-fit version of the same question) and PART 25 (Building and
+Maintaining a Personal Watchlist & Daily Workflow to TRA — tiered watchlist structure, a full
+daily workflow stitched together from earlier Parts' pre-market/intraday/EOD pieces, the trading
+journal for accountability and skill improvement, and watchlist pruning discipline). Market
+Research 64->66pg, TRA 50->52pg. Master: 3,775 -> 3,779 pages.
+
+**Running total: 3,779 pages.**

@@ -758,6 +758,29 @@ Every technical concept in this handbook applies across timeframes, but the *pra
 
 ---
 
+# PART 25 — BUILDING AND MAINTAINING A PERSONAL WATCHLIST & DAILY WORKFLOW
+
+## 25.1 Why a disciplined watchlist process is itself a distinct, testable skill
+Everything in this handbook eventually gets applied against a specific, finite set of names a TRA actually tracks daily — how that watchlist is built, maintained, and pruned is a genuinely distinct operational skill from any single analytical technique, and "how do you build and manage your watchlist" is a common, practical interview question precisely because it reveals whether a candidate has actually operated as a working analyst versus only studied the theory.
+
+## 25.2 Structuring a watchlist by tier and purpose
+A well-organised watchlist typically separates names into tiers rather than one flat list: a **core coverage tier** (the primary names a TRA tracks in depth daily, consistent with their assigned sector/mandate), a **setup-watch tier** (names showing an emerging but not-yet-triggered technical setup, checked daily for a trigger), and a **broader universe/screening tier** (a wider list scanned periodically, not daily, for new candidates entering the setup-watch tier). This tiered structure prevents the common failure mode of either tracking too few names (missing opportunities) or too many (diluting attention below the level needed for genuine conviction on any single name).
+
+## 25.3 A realistic daily workflow, stitched together from earlier Parts
+1. **Pre-market** (Part 19.2's checklist): global cues, GIFT Nifty, overnight news for core-coverage and setup-watch names specifically.
+2. **Market open**: checking core-coverage names against their key levels established the prior evening, noting any gap (Part 19.3) and its likely type.
+3. **Intraday monitoring**: for setup-watch names, checking whether a technical trigger has fired (Part 3.7's confluence check) — most of the day's actual watchlist activity is confirming triggers or the absence of them, not constant re-analysis of already-understood setups.
+4. **End-of-day review**: updating levels for the next session based on the day's actual price action, logging any trades taken (Part 25.4), and screening the broader universe tier for new candidates if time allows.
+5. **Report writing** (Part 9.1's cadence): drafting the next pre-market note or weekly review as scheduled.
+
+## 25.4 The trading/research journal — logging calls for accountability and improvement
+A disciplined TRA (or trader) maintains a log of every call/trade made — instrument, view, entry, stop, target, rationale, and eventual outcome — mirroring the "Anatomy of a good call" structure from Part 9.2 but as a *retrospective* record, not just a forward-looking recommendation. This serves two purposes: **accountability** (Part 9.3's point about tracking and owning calls — credibility with clients/RMs is built on a transparent, checkable track record, not selectively-remembered wins) and **genuine skill improvement** (periodically reviewing the journal to identify systematic patterns — e.g. consistently exiting winners too early, or a specific setup type that underperforms the others — is how a working analyst's process actually improves over time, distinct from any single trade's outcome).
+
+## 25.5 Pruning — removing names from active coverage
+A watchlist that only grows becomes unmanageable — a disciplined process for *removing* names is as important as adding them: a setup-watch name that fails to trigger within a reasonable window (per its own expected timeframe, Part 24) should be removed rather than left lingering indefinitely, and a core-coverage name whose fundamental/structural story has changed enough to fall outside the TRA's actual mandate or genuine interest should be formally rotated out rather than tracked out of habit. This pruning discipline keeps the tiered structure (Part 25.2) meaningful rather than degrading into one large, undifferentiated list over time.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
