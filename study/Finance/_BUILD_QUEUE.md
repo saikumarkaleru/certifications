@@ -289,4 +289,10 @@ quantifying a governance discount via a WACC premium in an actual DCF re-run, an
 BRSR disclosure data as a real research input rather than a compliance checkbox). 115 -> 116pg.
 Master: 3,736 -> 3,737 pages.
 
-**Running total: 3,737 pages.**
+**2026-08-05, autonomous wake-cycle**: added worked examples to ch.14 (market efficiency —
+a weak-form-efficiency backtest example showing edge disappearing after transaction costs, and
+an analyst-target-price anchoring example) and ch.17 (sell-side vs buy-side — a full worked
+"2-and-20-with-a-hurdle" fee calculation, and how MiFID-II-style research unbundling changed
+sell-side economics in practice). 116 -> 117pg. Master: 3,737 -> 3,738 pages.
+
+**Running total: 3,738 pages.**
