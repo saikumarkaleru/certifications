@@ -355,4 +355,14 @@ an in-line-but-margin-miss quarter, and a weak-note-rewritten-to-pass-the-varian
 example). 120 -> 121pg. Master: 3,752 -> 3,753 pages. Chapters with worked-example additions now:
 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20 (18 of 20). Remaining: 01, 16.
 
+**2026-08-05, autonomous wake-cycle: EquityCapitalMarkets worked-examples pass complete**: added
+the final 2 chapters — ch.01 (overview — a worked cross-country cost-of-capital comparison
+showing capital-market depth's real economic effect, and a money-market/capital-market maturity-
+matching example) and ch.16 (capital-raising — a full worked QIP dilution/EPS-accretion-vs-
+dilution calculation, and a preferential-allotment-for-strategic-partnership example). **All 20
+of 20 EquityCapitalMarkets chapters now have worked-example additions beyond their original 3**,
+on top of the earlier 20/20 qa/ coverage — this subject has had two full enrichment passes.
+121pg (content absorbed into whitespace this round, verified present via file-size growth
+2305KB->2315KB). Master: 3,753 pages (unchanged this round).
+
 **Running total: 3,753 pages.**
