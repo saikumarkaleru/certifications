@@ -402,4 +402,12 @@ flows, NSE Bhavcopy and delivery-percentage as an underused signal, and a worked
 daily-data-synthesis example). Market Research 57->59pg, TRA 43->45pg. Master: 3,761 -> 3,765
 pages.
 
-**Running total: 3,765 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 26 (Sampling Weighting &
+Post-Stratification to Market Research — a worked single-variable weighting calculation,
+multi-variable RIM/raking weighting, post-stratification vs simple weighting, and design-effect/
+unmeasured-bias limits) and PART 23 (Options Strategy Selection by Market Regime to TRA — a
+2-dimension trend×IV-level framework mapping each of the 4 regimes to the right strategy family,
+with a worked range-bound+low-IV regime example arguing for a contrarian long-volatility
+position). Market Research 59->61pg, TRA 45->47pg. Master: 3,765 -> 3,769 pages.
+
+**Running total: 3,769 pages.**

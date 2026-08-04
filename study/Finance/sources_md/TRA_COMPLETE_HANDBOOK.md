@@ -707,6 +707,29 @@ The **Bhavcopy** is NSE's official end-of-day data file, containing OHLC, volume
 
 ---
 
+# PART 23 — OPTIONS STRATEGY SELECTION BY MARKET REGIME
+
+## 23.1 Why "which options strategy should I use" always needs a regime answer, not a single fixed answer
+Parts 5.7 and 21 introduced individual option strategies and volatility trading separately. A working TRA is regularly asked, in effect, "given current conditions, what's the right strategy" — the correct answer is never a single universally-best strategy, but a mapping from the **current regime** (trend direction, volatility level, and volatility trajectory) to the strategy family suited to that regime. This Part builds that mapping explicitly.
+
+## 23.2 The two regime dimensions that matter most
+- **Directional regime**: trending (up or down, per Part 1.2's Dow Theory framing) vs range-bound/sideways.
+- **Volatility regime**: current IV level relative to its own historical range (IV Rank/Percentile, Part 5.5) — is IV currently high (options expensive) or low (options cheap) relative to where it's typically been — and separately, whether volatility itself is expected to rise or fall from here (Part 21's volatility-trading lens).
+Crossing these two dimensions gives a simple but genuinely useful 2x2-plus-volatility-trajectory framework for strategy selection.
+
+## 23.3 The strategy-selection framework, worked through each regime
+- **Trending + low IV**: directional strategies that benefit from cheap options — buying calls (uptrend) or puts (downtrend) outright, or bull/bear debit spreads (Part 5.7) to still reduce cost further while retaining defined, capped risk.
+- **Trending + high IV**: directional exposure is still the right call, but buying outright options is expensive — favour spreads that partially offset the high-IV cost (e.g. a bull call spread, buying the near strike and selling a further OTM call to fund part of the premium) over an outright long option purchase.
+- **Range-bound + high IV**: the textbook premium-selling regime — iron condors, short strangles (Part 5.7) — collecting rich premium in a market expected to stay within a range, with high IV meaning the premium collected is unusually generous relative to typical levels.
+- **Range-bound + low IV**: the hardest regime for options sellers (premium is cheap, so the reward for range-bound risk is thin) — and also unattractive for options buyers (no directional conviction to justify the purchase); many experienced options traders simply reduce position sizing or sit out this regime rather than forcing a trade, and it's often the regime where a low-cost long-volatility position (anticipating IV expanding from unusually low levels, Part 21.4's mean-reversion logic) is considered instead, betting on the *regime itself* changing rather than on the current range-bound conditions persisting.
+
+## 23.4 Worked example — selecting a strategy from a stated regime read
+*A TRA's current read: Nifty has been range-bound for six weeks (no clear trend), and India VIX is at its lowest level in 8 months (IV Rank near the 5th percentile).*
+
+**Model answer.** This is the range-bound + low-IV regime from Part 23.3 — the hardest regime to harvest premium from (options are already cheap, so short-volatility strategies offer thin reward for the range-bound risk taken) and simultaneously a regime where volatility's strong historical mean-reversion tendency (Part 21.4) makes a *long* volatility position, entered cheaply given the unusually low IV Rank, a reasonable contrarian consideration — not because a breakout is guaranteed imminently, but because being long cheap optionality ahead of a plausible regime change offers an asymmetric payoff (limited, known cost if the range persists further; meaningful payoff if either a directional breakout or a volatility spike occurs). This is exactly the kind of regime-aware reasoning — not a fixed "always sell premium" or "always buy options" rule — the framework in this Part is designed to produce.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
