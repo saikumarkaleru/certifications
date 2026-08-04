@@ -410,4 +410,13 @@ unmeasured-bias limits) and PART 23 (Options Strategy Selection by Market Regime
 with a worked range-bound+low-IV regime example arguing for a contrarian long-volatility
 position). Market Research 59->61pg, TRA 45->47pg. Master: 3,765 -> 3,769 pages.
 
-**Running total: 3,769 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 27 (Data Storytelling &
+Executive Presentation to Market Research: structuring a live findings readout for a time-
+constrained senior audience, handling real-time pushback without becoming defensive, live-
+presentation-specific visualisation principles, presentation-stage tools) and PART 24
+(Timeframe-Specific Trading Playbooks to TRA: distinct intraday/swing/positional playbooks —
+dominant tools, risk parameters, and realistic routines for each — plus a worked example showing
+the same breakout signal sized and managed completely differently across all three timeframes).
+Market Research 61->63pg, TRA 47->49pg. Master: 3,769 -> 3,773 pages.
+
+**Running total: 3,773 pages.**

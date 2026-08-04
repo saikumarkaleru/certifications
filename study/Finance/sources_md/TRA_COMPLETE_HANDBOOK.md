@@ -730,6 +730,34 @@ Crossing these two dimensions gives a simple but genuinely useful 2x2-plus-volat
 
 ---
 
+# PART 24 — TIMEFRAME-SPECIFIC TRADING PLAYBOOKS
+
+## 24.1 Why intraday, swing, and positional trading are genuinely different disciplines, not just "the same TA at different speeds"
+Every technical concept in this handbook applies across timeframes, but the *practical playbook* — which tools dominate, what risk parameters make sense, what a realistic daily/weekly routine looks like — differs enough between intraday, swing, and positional trading that treating them as interchangeable is a common mistake that shows up quickly in an interview when a candidate can't articulate the practical differences.
+
+## 24.2 Intraday trading — the compressed-timeframe playbook
+- **Dominant tools**: 1-minute to 15-minute charts, VWAP (Part 18.2) as a primary intraday reference level, opening-range breakout setups, and real-time order-flow/OI-chain monitoring (Part 4/22) rather than end-of-day data.
+- **Risk parameters**: tighter stops in absolute terms but often similar or larger stops in *volatility-adjusted* terms (ATR-based, Part 16.3), since intraday price action is inherently noisier per unit of time than daily bars; position sizing must account for the higher trade frequency (many more trades per week than swing/positional), meaning even a small per-trade risk-% compounds differently over a trading month.
+- **Realistic routine**: a pre-market checklist (Part 19.2) every single morning without exception, since intraday trading is uniquely exposed to overnight gap risk on every single position held past a session's close (or avoided entirely via a strict no-overnight-positions rule, common among purely intraday traders specifically to eliminate this risk).
+- **Psychological demand** (Part 12): intraday trading requires sustained real-time attention and rapid decision-making under time pressure for the full session, a meaningfully different cognitive demand than swing/positional trading's more occasional decision points.
+
+## 24.3 Swing trading — the multi-day-to-multi-week playbook
+- **Dominant tools**: daily charts as the primary timeframe, with weekly charts for broader trend context (Part 1.6's multiple-timeframe-analysis principle applied at this horizon specifically) — most of this handbook's worked examples (Parts 1-3, 13) default implicitly to this swing-trading timeframe.
+- **Risk parameters**: stops placed at meaningful technical levels (below a support, below a moving average) rather than tight intraday-style stops, since swing positions need room to breathe through normal daily noise without being stopped out prematurely — but this means position sizing (Part 8.3) must account for correspondingly wider stop distances.
+- **Realistic routine**: an end-of-day review (not constant real-time monitoring) checking open positions against their technical levels, scanning for new setups, and updating the research-report cadence from Part 9.1 — a fundamentally different, less time-intensive daily commitment than intraday trading.
+
+## 24.4 Positional/trend-following trading — the multi-month playbook
+- **Dominant tools**: weekly and monthly charts, the 200-day MA as a primary trend filter (Part 3.1), and much heavier weighting toward the intermarket (Part 15) and sector-rotation (Part 17.3, 20.5) frameworks, since a multi-month holding period is far more exposed to macro-cycle shifts than to any single day's price action.
+- **Risk parameters**: the widest stops of the three timeframes in absolute terms (a positional trade needs room for multi-week corrections within an intact longer-term trend without being stopped out), correspondingly requiring the smallest position sizes for a given account-risk-% target (Part 8.3's formula directly ties wider stops to smaller position sizes at a fixed risk percentage).
+- **Realistic routine**: weekly, not daily, review cadence for open positions; far less sensitive to any single day's global cues (Part 19) than intraday or even swing trading, since a genuinely well-established multi-month trend is not meaningfully altered by one day's overnight gap.
+
+## 24.5 Worked example — the same technical setup, sized and managed differently across three timeframes
+*A stock breaks above a well-established resistance level on strong volume. An intraday trader, a swing trader, and a positional trader all decide to act on this breakout.*
+
+**Model answer.** The intraday trader enters on the breakout bar itself using a tight, ATR-based intraday stop (perhaps a few rupees below the breakout level), targets a same-session move, and is flat by end of day regardless of outcome — the setup is used as a single-session trade. The swing trader enters similarly but places a wider stop below the broken resistance level (now expected to act as support, per the level-flip logic from Part 13's Example 2) or below a nearby moving average, holding for a multi-day-to-multi-week target based on the next higher resistance level. The positional trader treats the same breakout as confirmation of a much larger thesis (perhaps this breakout clears a multi-month base, Part 2.4's chart-pattern content) and sizes a smaller position with a stop set at a much wider, weekly-chart-based level, planning to hold for months if the broader trend and intermarket backdrop remain supportive. **Same technical signal, three completely different position sizes, stop distances, and holding-period expectations** — precisely the timeframe-specific translation this Part is designed to make explicit, and a strong way to demonstrate range across timeframes in an interview rather than only being able to discuss one.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
