@@ -176,10 +176,25 @@ and 6 more interview Q&A. 29 -> 37pg.
 **Running total after all 2026-08-04 stage-3 work: 3,712 pages.**
 
 **Status of all 7 sections**: Technical Analysis 1,747 (done) · Options Trading 998 (~done) ·
-Valuation 405 · Investments 320 · Equity & Capital Markets 108 · Market Research 37 · Technical
+Valuation 405 · Investments 320 · Equity & Capital Markets 109 · Market Research 37 · Technical
 Research career guide 66 + Deepening Handbook 27 = 93. Five sections still well short of 1,000.
 Every section that had a "free" structural lever (missing qa/ folder, an unused pre-built _FULL
 version) has now had it applied — all further growth from here requires genuinely new written
 content (worked examples, new sub-topics), at roughly the same pace demonstrated in this stage's
-passes (~10-40pg per deepening pass). Next: continue additively, e.g. another Equity-CM worked-
-example pass beyond qa/ coverage, or Investments/Valuation-specific new case-study additions.
+passes (~10-40pg per deepening pass).
+
+**2026-08-04, Equity-CM worked-examples pass (beyond qa/)**: added a 5th worked example to ch.18
+(4-stock portfolio construction/concentration trade-off + factor-investing diversification
+example), a 4th+5th to ch.02 (full IPO subscription/allotment mechanics incl. retail-lottery-vs-
+NII-proportionate allotment math, and a contrasting weak-demand/undersubscribed-QIB scenario), a
+4th to ch.15 (full dividend-date sequence with real dates, tender-offer-vs-open-market buyback
+comparison), and a 4th+5th to ch.06 (sized passive-flow impact of an index inclusion in ₹cr and
+days-of-volume terms, and a free-float-change-without-a-rebalance example). 108 -> 109pg.
+**Note**: page growth was smaller than the ~2,600 words added would suggest (word count confirmed
+via `wc -w`, content confirmed present in the rendered PDF via text search) — each chapter+qa
+unit apparently had trailing whitespace slack that absorbed most of the new text without adding
+full pages. Content is genuine and verified; just be aware the page-count/word-count ratio isn't
+perfectly linear when editing already-existing chapters (vs. this is much more linear when adding
+brand-new qa/ files or brand-new PART sections, which force clean page breaks).
+
+**Running total: 3,713 pages.**
