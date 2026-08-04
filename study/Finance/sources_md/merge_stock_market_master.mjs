@@ -11,7 +11,7 @@ const BASE = `${STUDY}/Finance`;
 const SOURCES = [
   `${BASE}/sources_md/_frontmatter.pdf`,
   `${BASE}/05_Equity_and_Capital_Markets.pdf`,
-  `${BASE}/03_Valuation.pdf`,
+  `${BASE}/_components/Valuation_FULL.pdf`,
   `${BASE}/_components/Investments-Portfolio-Management_FULL.pdf`,
   `${BASE}/Technical_Research_Study_Guide.pdf`,
   `${STUDY}/trading_learning/Technical-Analysis-Complete_FULL.pdf`,

@@ -100,3 +100,15 @@ produced the original PDFs — not a content change, just a re-render.
   reference: banks/NBFCs, insurance EV/VNB, cyclicals through-the-cycle EV/EBITDA, real-estate
   NAV, pre-profit tech). 18 other chapters in this subject (01-06, 08-11, 13-20) not yet touched
   — next pass on this subject should deepen those before returning to ch.07/12.
+- **Valuation, big free win (2026-08-04)**: discovered the master was using `Finance/03_Valuation.pdf`
+  (51pg, concept-chapters only) when `_components/Valuation_FULL.pdf` (405pg — same 18 chapters
+  PLUS a full `qa/*_QA.md` set per chapter that 03_Valuation.pdf's build never included) already
+  existed. Swapped the merge script to point at the FULL version. Valuation section: **51 -> 405pg,
+  zero new writing** — effectively done for the 1,000pg target once 1-2 more deepening passes land.
+  **Lesson for future passes**: before hand-writing new content for Equity/Investments/any other
+  subject, check `_components/<Subject>_FULL.pdf` page count against what's actually wired into
+  `merge_stock_market_master.mjs` — Equity & Capital Markets was checked and has no qa/ folder
+  (genuinely needs new writing, already in progress), but always verify per-subject first.
+
+**Running total after 2026-08-04 stage-3 work: 3,631 pages** (Market Research 18->29, Equity & CM
+47->63, Valuation 51->405 via the free-win swap).
