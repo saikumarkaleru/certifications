@@ -197,4 +197,11 @@ full pages. Content is genuine and verified; just be aware the page-count/word-c
 perfectly linear when editing already-existing chapters (vs. this is much more linear when adding
 brand-new qa/ files or brand-new PART sections, which force clean page breaks).
 
-**Running total: 3,713 pages.**
+**2026-08-04, autonomous wake-cycle pass 1** (user asked for continuous 10-min work cycles):
+added PART 16 (Advanced Pricing Research & Revenue Management: BPTO, price elasticity worked
+example, dynamic/revenue-management pricing, pricing-research pitfalls incl. hypothetical bias)
+and PART 17 (Syndicated Data & Panel-Based Research: retail-audit vs household-panel distinction,
+key syndicated metrics — distribution/penetration/buying-rate/source-of-growth — and limitations)
+to Market Research. 37 -> 41pg. Master: 3,713 -> 3,717 pages.
+
+**Running total: 3,717 pages.**
