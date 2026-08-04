@@ -439,4 +439,9 @@ daily workflow stitched together from earlier Parts' pre-market/intraday/EOD pie
 journal for accountability and skill improvement, and watchlist pruning discipline). Market
 Research 64->66pg, TRA 50->52pg. Master: 3,775 -> 3,779 pages.
 
-**Running total: 3,779 pages.**
+**2026-08-05, autonomous wake-cycle: frontmatter sync**: the frontmatter table had drifted badly
+stale (still showing TRA at 34pg and Market Research at 51pg after many subsequent wake-cycle
+passes pushed them to 52pg and 66pg) — resynced both rows and the total. Master: 3,779 -> 3,780
+pages (the frontmatter itself gained a page from the longer descriptions).
+
+**Running total: 3,780 pages.**
