@@ -781,6 +781,27 @@ A watchlist that only grows becomes unmanageable — a disciplined process for *
 
 ---
 
+# PART 26 — MARKET BREADTH INDICATORS IN DEPTH
+
+## 26.1 Why breadth matters beyond a single index level
+An index level alone can mask what's actually happening underneath it — a Nifty 50 index that's flat or even up can be driven by a handful of heavyweight constituents while the majority of stocks in the broader market are actually declining, a genuinely different (and often more informative) market condition than the headline index number alone suggests. **Market breadth** indicators measure this underlying participation directly, and a TRA who only watches the index level misses a whole dimension of market health.
+
+## 26.2 The advance-decline line — cumulative participation over time
+The **advance-decline (A-D) line** is a running cumulative total of (number of advancing stocks − number of declining stocks) each session, plotted over time. Its real diagnostic value comes from **divergence** against the index (the same divergence concept from Part 4.1, applied to breadth instead of a momentum oscillator): if the index makes a new high but the A-D line fails to make a corresponding new high, it signals the rally is being driven by a narrowing number of stocks — fewer stocks are actually participating in the new high even as the headline index looks strong, a well-documented early warning sign that has preceded a number of significant market tops.
+
+## 26.3 New highs / new lows — a complementary breadth measure
+Tracking the daily count of stocks making fresh 52-week highs versus fresh 52-week lows gives a different, complementary breadth read from the A-D line: a healthy, broad-based uptrend typically shows a large and growing number of new highs relative to new lows; a market where the new-highs count is shrinking even as the index grinds higher (again, a divergence) suggests the same narrowing-participation warning as a stalling A-D line, cross-confirming the signal from an independent data source rather than relying on the A-D line alone.
+
+## 26.4 The McClellan Oscillator and Summation Index — smoothed breadth momentum
+The **McClellan Oscillator** applies the same EMA-crossover logic from Part 3.1 (a fast EMA minus a slow EMA, but of the daily advance-decline *difference* rather than price) to smooth out day-to-day breadth noise into a cleaner momentum-of-breadth signal, oscillating around zero — sustained positive readings indicate broadening participation, sustained negative readings indicate narrowing participation, and the oscillator itself can show the same overbought/oversold and divergence signals as any other momentum indicator (Part 3.2), just applied to breadth data instead of price. The **McClellan Summation Index** is a running cumulative total of the Oscillator, used for longer-term breadth-trend context the way the A-D line itself is used, but with the extra smoothing the Oscillator's EMA-based construction provides.
+
+## 26.5 Worked example — using breadth divergence to flag a weakening rally
+*Nifty 50 makes a new 6-month high. The advance-decline line, however, is well below its own high from three weeks earlier, and new 52-week lows on the day (47) actually exceed new 52-week highs (31) despite the index's fresh high.*
+
+**Model answer.** This is a textbook, multiply-confirmed breadth divergence (Part 26.2's A-D line divergence, reinforced independently by Part 26.3's new-highs/new-lows count actually inverting — more stocks hitting fresh lows than fresh highs on a day the *index itself* hits a high) — a strong signal that the index-level new high is being driven by a narrow set of heavyweight constituents while the broader market is, in aggregate, actually deteriorating underneath it. A disciplined TRA would flag this explicitly as a caution signal on the rally's health, worth weighing against any purely price-based bullish read of the index's fresh high, and would specifically watch whether breadth starts confirming (A-D line and new-highs count turning back up alongside the index) or continues diverging (a stronger warning) over the following sessions — exactly the kind of "don't just look at the headline number" discipline breadth analysis is meant to enforce.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**

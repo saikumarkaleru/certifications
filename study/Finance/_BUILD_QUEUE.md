@@ -444,4 +444,13 @@ stale (still showing TRA at 34pg and Market Research at 51pg after many subseque
 passes pushed them to 52pg and 66pg) — resynced both rows and the total. Master: 3,779 -> 3,780
 pages (the frontmatter itself gained a page from the longer descriptions).
 
-**Running total: 3,780 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 29 (Advanced Statistical
+Techniques: Structural Equation Modeling to Market Research — latent variables vs single survey
+items, path models and fit indices, when SEM is worth the complexity vs when regression alone
+suffices) and PART 26 (Market Breadth Indicators in Depth to TRA — advance-decline line
+divergence, new-highs/new-lows as a complementary breadth measure, McClellan Oscillator/Summation
+Index, and a worked triple-confirmed breadth-divergence example flagging a narrow, weakening
+rally despite a fresh index high). Market Research 66->68pg, TRA 52->54pg. Master: 3,780 -> 3,784
+pages.
+
+**Running total: 3,784 pages.**
