@@ -470,4 +470,16 @@ risk, silver's dual character and the gold-silver ratio as a mean-reversion tool
 crude-oil resistance-plus-OPEC+-calendar example). Market Research 68->70pg, TRA 54->56pg.
 Master: 3,784 -> 3,788 pages.
 
-**Running total: 3,788 pages.**
+**2026-08-05, autonomous wake-cycle: frontmatter re-sync + 2 more new parts**: resynced TRA/Market
+Research frontmatter row counts and total again (34pg drift accumulates fast across cycles — worth
+checking every 2-3 passes going forward). Then added PART 31 (Commercial Due Diligence & M&A-
+Support Research to Market Research — the strongest direct crossover with equity/IB work in this
+handbook: CDD methodology incl. customer reference calls, the compressed 2-4-week deal-clock
+timeline, a worked reference-call red-flag example showing forward-looking churn risk a headline
+retention metric misses, and CDD-specific deliverable format) and PART 28 (Pairs Trading &
+Correlation-Based Technical Setups to TRA — pair selection with economic rationale vs coincidental
+correlation, cointegration, z-score mean-reversion mechanics, why "market-neutral" still carries
+pair-relationship-breakdown risk, and a full worked banking-sector pairs trade). Market Research
+70->72pg, TRA 56->58pg. Master: 3,788 -> 3,792 pages.
+
+**Running total: 3,792 pages.**

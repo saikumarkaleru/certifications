@@ -825,6 +825,30 @@ Silver, per Part 6.3's fundamental framing, is part precious-metal and part indu
 
 ---
 
+# PART 28 — PAIRS TRADING & CORRELATION-BASED TECHNICAL SETUPS
+
+## 28.1 Pairs trading as a distinct, market-neutral technical discipline
+Everything covered so far analyses instruments largely in isolation (or, in Part 15/20, against a broader index/sector). **Pairs trading** takes a fundamentally different approach: simultaneously going long one instrument and short a second, historically-correlated instrument, betting on the *relationship* between the two converging or diverging — a genuinely market-neutral technique (broad market direction matters far less than the relative performance of the pair) that extends the relative-strength/ratio-chart tool from Part 20.5 into a full standalone trading strategy.
+
+## 28.2 Selecting a pair — what makes two instruments a legitimate pairs-trading candidate
+A credible pair needs an economically sensible reason to be correlated (same sector, similar business model, shared input costs or demand drivers — e.g. two large private-sector banks, or two cement companies with overlapping geographic markets), not just a coincidentally high historical correlation coefficient with no underlying economic logic (a well-known trap: purely statistical correlation-mining without an economic rationale produces "pairs" that can decorrelate suddenly and permanently once the coincidental relationship breaks, unlike a fundamentally-linked pair that's more likely to mean-revert). **Cointegration** (a statistical property distinct from simple correlation, indicating two price series move together over the long run even if they diverge temporarily) is the more rigorous quantitative test serious pairs traders apply, beyond a simple correlation coefficient.
+
+## 28.3 The mean-reversion trade mechanics
+1. Compute the **spread** or **ratio** between the two instruments (Part 20.5's ratio-chart technique, generalised beyond sector indices to individual stocks).
+2. Establish the spread's normal historical range, often expressed in **standard deviations** from its own moving average (a z-score) — the entry trigger is the spread reaching an extreme z-score (e.g. 2 standard deviations from its mean), on the premise that an economically-linked pair's spread should mean-revert from statistical extremes.
+3. **Enter**: long the relatively underperforming instrument, short the relatively outperforming one, betting the spread narrows back toward its historical mean.
+4. **Exit**: when the spread reverts to its mean (target) or continues diverging past a further extreme (stop) — the same entry/exit/stop discipline from Part 8, applied to the spread itself rather than either instrument's outright price.
+
+## 28.4 Why pairs trading is technically "market-neutral," and what risk remains despite that
+Because the position is simultaneously long one instrument and short a correlated one, a broad market-wide move (the whole sector or market rallying or selling off together) largely cancels out across the two legs, leaving the trade's P&L driven mainly by the *relative* performance between them — this is the core appeal, isolating a specific relative-value view from broader market direction risk. The risk that remains: **pair-relationship breakdown** — company-specific news on just one leg (an earnings surprise, a management change, a regulatory action affecting only one of the two companies) can permanently alter the pair's relationship rather than the spread mean-reverting as expected, the single biggest risk in pairs trading and the reason position sizing and a hard spread-based stop (Part 28.3, step 4) remain essential even in a "market-neutral" strategy.
+
+## 28.5 Worked example — a full pairs trade setup
+*Two large private-sector banks, historically trading with a stable ratio (Bank A price ÷ Bank B price averaging 1.15 over the past year, with a standard deviation of 0.04), currently show a ratio of 1.24 — roughly 2.25 standard deviations above its mean, following Bank A outperforming on no bank-A-specific news, purely on broad sector strength Bank B participated in less.*
+
+**Model answer.** The ratio is at a statistically extreme level (>2 standard deviations) with no identified company-specific news explaining a *permanent* re-rating of the relationship (Part 28.4's key risk check) — supporting a mean-reversion pairs trade: short Bank A, long Bank B, sized so the rupee exposure on each leg is roughly equal (true market-neutrality requires balancing exposure, not just share count), targeting the ratio reverting toward its 1.15 mean, with a stop if the ratio extends further (e.g. past 1.30, indicating the divergence is continuing rather than reverting, possibly signalling a genuine relationship change the initial screen missed). This worked example demonstrates the full pairs-trading process end to end: pair selection with economic rationale (same sector, comparable business model), a statistical entry trigger (z-score extreme), a specific risk check (ruling out a fundamental reason for permanent re-rating), and a defined exit/stop — exactly the structure Part 28.2-28.4 built up to.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
