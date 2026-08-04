@@ -305,4 +305,10 @@ capstone — DII/SIP-flow offset to FPI selling, and a circuit-breaker mechanics
 14, 15, 17, 18, 19, 20 (12 of 20). Remaining untouched beyond their original 3 examples: 01, 03,
 04, 05, 08, 10, 11, 16 (8 chapters) — good candidates for the next pass.
 
-**Running total: 3,739 pages.**
+**2026-08-05, autonomous wake-cycle**: added worked examples to ch.04 (market-participants —
+hedge fund/PMS mandate-flexibility example, custodian-vs-broker settlement-failure scenario) and
+ch.05 (equity-instruments — a full worked ADR ratio/arbitrage-band calculation, and why a company
+chooses preferred shares over debt for covenant/control reasons). Page count unchanged (118, both
+absorbed into existing whitespace) but content verified present (file size grew 2272KB->2282KB).
+Master stays 3,739 pages this pass — chapters with worked-example additions now: 02, 04, 05, 06,
+07, 09, 12, 13, 14, 15, 17, 18, 19, 20 (14 of 20). Remaining: 01, 03, 08, 10, 11, 16.
