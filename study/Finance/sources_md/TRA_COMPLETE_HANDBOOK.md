@@ -686,6 +686,27 @@ India VIX and Nifty typically move inversely — Nifty selloffs are usually acco
 
 ---
 
+# PART 22 — READING DAILY FII/DII AND EXCHANGE DATA PUBLICATIONS
+
+## 22.1 Why this is a distinct, dedicated skill from the theory in earlier Parts
+Parts 4 and 20 introduced FPI/DII flows and OI/PCR conceptually. This Part covers the practical skill of actually reading the specific daily data publications a working TRA checks every single morning — the difference between knowing *what* FII/DII flow data means and being able to *find, read, and correctly interpret* the actual published numbers within minutes as part of a pre-market routine.
+
+## 22.2 FII/DII provisional data — what's published and its known limitations
+Indian exchanges/depositories publish **provisional** FII (Foreign Institutional Investor) and DII (Domestic Institutional Investor) net buy/sell figures for the cash market shortly after each session closes, with a **final, reconciled figure** released the following day (provisional and final figures can differ, sometimes meaningfully, since the provisional number is an early estimate before all custodian reporting is complete). A disciplined TRA treats the previous day's provisional figure as directional, cross-checks it against the final figure once available, and never over-reacts to a single day's provisional number in isolation — checking the trailing 5-10 day cumulative trend is far more informative than any single day's figure, which can be noisy.
+
+## 22.3 F&O data — the daily derivatives statistics beyond a single option chain
+Beyond the live option-chain OI/PCR read (Part 4.6), exchanges publish end-of-day derivatives statistics including **FII derivatives positioning** (net long/short in index futures, index options, and stock futures/options, broken out by category), which many TRAs track as a distinct sentiment gauge from the cash-market FII flow — a scenario where FII cash flows are mildly negative but FII index-futures positioning is building net-long can indicate hedging/rebalancing activity rather than genuine bearishness, a nuance a single-data-point read would miss entirely.
+
+## 22.4 NSE Bhavcopy and end-of-day market statistics
+The **Bhavcopy** is NSE's official end-of-day data file, containing OHLC, volume, and delivery-percentage data for every listed security — the authoritative source underlying most third-party charting/screening tools. The **delivery percentage** (what fraction of the day's traded volume resulted in actual shares changing hands into demat accounts, versus intraday round-trips that never settle into delivery) is a specific, underused signal: a price move on unusually high delivery percentage suggests genuine investment-driven buying/selling rather than purely speculative intraday churn, a distinction that can meaningfully change how much conviction a TRA places in a given day's price action.
+
+## 22.5 Worked example — synthesising a multi-source daily data read
+*Provisional data shows FII cash-market net selling of ₹800 cr, but FII index-futures data shows net long positioning increasing by a notional ₹1,200 cr. Nifty closed up 0.4% on the day with delivery percentage in the top constituents notably above their 20-day average.*
+
+**Model answer.** Taken in isolation, FII cash selling might suggest bearish positioning, but the simultaneous build in FII index-futures long positioning points the other way — a plausible synthesis is that FIIs are rotating exposure from the cash market into futures (a leverage-efficient way to maintain or increase market exposure without the cash outlay), rather than genuinely reducing their overall India exposure; this is exactly the kind of read that requires combining the cash-flow data (Part 22.2) with the derivatives-positioning data (Part 22.3) rather than reading either alone. The above-average delivery percentage on a day the index actually closed higher reinforces that the day's move had genuine investment-driven participation behind it, not just intraday speculative churn — three separate data sources (cash FII flow, F&O positioning, delivery %) triangulating toward the same underlying conclusion (net constructive positioning despite a headline-negative cash-flow number) is precisely the kind of multi-source synthesis that separates a TRA who reads one data point superficially from one who builds a genuinely well-supported daily market view.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**

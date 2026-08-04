@@ -391,4 +391,15 @@ a worked expected-move conversion, the VIX-Nifty inverse relationship and when i
 long/short-vega strategies, volatility mean-reversion, and a worked term-structure/backwardation
 interpretation example). Market Research 55->57pg, TRA 41->43pg. Master: 3,757 -> 3,761 pages.
 
-**Running total: 3,761 pages.**
+**2026-08-05, autonomous wake-cycle: integrity check + 2 more new parts**: verified the full
+master PDF opens cleanly and is readable end-to-end (3,761 pages at that point) after many
+consecutive rebuilds — no corruption. Then added PART 25 (Qualitative Data Analysis: From
+Transcripts to Themes, to Market Research — the full coding process step by step, inductive vs
+deductive coding, inter-coder reliability via Cohen's Kappa, what NVivo/Atlas.ti actually does)
+and PART 22 (Reading Daily FII/DII and Exchange Data Publications, to TRA — provisional vs final
+FII/DII figures and their limitations, FII derivatives positioning as a distinct signal from cash
+flows, NSE Bhavcopy and delivery-percentage as an underused signal, and a worked multi-source
+daily-data-synthesis example). Market Research 57->59pg, TRA 43->45pg. Master: 3,761 -> 3,765
+pages.
+
+**Running total: 3,765 pages.**
