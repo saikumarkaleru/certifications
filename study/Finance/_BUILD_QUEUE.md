@@ -383,4 +383,12 @@ worked-example points) embedded in 21.4. Page count unchanged (55, absorbed into
 content verified present (file size grew 1251KB->1402KB). Master: 3,757 pages (unchanged this
 round, verified via rebuild).
 
-**Running total: 3,757 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 24 (Agile & Rapid Research
+Methods to Market Research: unmoderated remote testing platforms, the rapid-vs-rigorous decision
+framework, continuous/always-on research, maintaining methodological discipline under speed
+pressure) and PART 21 (Volatility Trading & India VIX-Based Strategies to TRA: VIX mechanics with
+a worked expected-move conversion, the VIX-Nifty inverse relationship and when it decouples,
+long/short-vega strategies, volatility mean-reversion, and a worked term-structure/backwardation
+interpretation example). Market Research 55->57pg, TRA 41->43pg. Master: 3,757 -> 3,761 pages.
+
+**Running total: 3,761 pages.**
