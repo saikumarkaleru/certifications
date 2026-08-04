@@ -165,10 +165,21 @@ original 66pg file's different content) as a **separate new file**,
 `Technical_Research_Deepening_Handbook.pdf` (27pg), added as its own master section (4b) rather
 than replacing anything.
 
-**Running total after all 2026-08-04 stage-3 work: 3,703 pages.**
+**2026-08-04, Market Research deepening pass 2**: added 3 new parts — PART 13 (Digital & Social
+Research Methods: social listening, web/app analytics + A/B testing, MROCs, mobile ethnography/
+passive metering), PART 14 (Retail & Shopper Research: share of shelf, planogram testing, retail
+audits, mystery shopping, e-commerce share-of-search), PART 15 (International & Cross-Cultural
+Research: translation/back-translation, cultural response-style bias, multi-country fieldwork
+logistics, India-specific adaptation) — plus a full worked k-means segmentation case study (6.10)
+and 6 more interview Q&A. 29 -> 37pg.
 
-**Next up**: Market Research (29pg, single-file handbook, no shortcut available — needs the same
-kind of genuine deepening pass just done for TRA) is the last thin section with real remaining
-work. After that, the two large already-≥1000pg sections (Technical Analysis 1,747; Options
-Trading 998) could optionally be pushed further, and Investments/Equity-CM/Valuation could get
-additional worked-example passes beyond their current qa/ coverage if still short of 1,000 each.
+**Running total after all 2026-08-04 stage-3 work: 3,712 pages.**
+
+**Status of all 7 sections**: Technical Analysis 1,747 (done) · Options Trading 998 (~done) ·
+Valuation 405 · Investments 320 · Equity & Capital Markets 108 · Market Research 37 · Technical
+Research career guide 66 + Deepening Handbook 27 = 93. Five sections still well short of 1,000.
+Every section that had a "free" structural lever (missing qa/ folder, an unused pre-built _FULL
+version) has now had it applied — all further growth from here requires genuinely new written
+content (worked examples, new sub-topics), at roughly the same pace demonstrated in this stage's
+passes (~10-40pg per deepening pass). Next: continue additively, e.g. another Equity-CM worked-
+example pass beyond qa/ coverage, or Investments/Valuation-specific new case-study additions.
