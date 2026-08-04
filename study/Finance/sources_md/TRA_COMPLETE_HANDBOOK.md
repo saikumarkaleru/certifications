@@ -891,6 +891,28 @@ Beyond ad hoc adjustments, some options traders manage a position's **net delta*
 
 ---
 
+# PART 31 — TRADING PSYCHOLOGY: MANAGING YOUR OWN BIASES LIVE
+
+## 31.1 A distinct angle from Part 12's market-wide behavioural finance
+Part 12 covered behavioural finance as a lens for reading the *crowd's* psychology (herding, overreaction) to inform a trading view. This Part turns the lens inward — the specific cognitive biases that affect a trader's or analyst's *own* real-time decisions, and concrete practices for managing them, since being technically expert at reading charts doesn't automatically make someone immune to the same biases documented in the broader market.
+
+## 31.2 The most costly biases in live trading decisions specifically
+- **Loss aversion / the disposition effect** (Part 12's definition, applied to one's own open positions): the documented tendency to hold losing positions too long (hoping for a recovery that avoids realising the loss) while cutting winning positions too early (locking in the psychologically satisfying gain) — precisely backwards from the "cut losses quickly, let winners run" discipline Part 8.5 states as a rule, which exists specifically *because* the natural human tendency runs the opposite way.
+- **Revenge trading**: taking an oversized, poorly-planned position immediately after a loss, driven by an urge to "win it back" rather than a genuine, independently-evaluated setup — a well-documented pattern that compounds an initial loss into a much larger one, and a primary reason disciplined traders enforce a mandatory pause (even just stepping away for a defined period) after a losing trade before entering a new position.
+- **Confirmation bias in position management**: once in a position, selectively noticing information that supports keeping it and discounting information that suggests it should be closed — the same bias flagged in the research-note context (Equity & Capital Markets material) applies directly to a trader's ongoing management of their own open positions, not just to initial analysis.
+- **Overconfidence after a winning streak**: a string of successful trades can lead to progressively larger position sizes and reduced diligence on entry criteria, right before a reversion to normal (or below-normal) performance — position sizing discipline (Part 8.3's fixed-risk-% rule) exists specifically to prevent a winning streak from silently overriding the sizing rules that produced it.
+
+## 31.3 Concrete practices for managing these biases, not just naming them
+- **Pre-committing to exit criteria in writing before entering a trade** (the "Anatomy of a good call" structure from Part 9.2, applied even to a trader's own personal positions, not just published research) removes the in-the-moment decision from a psychologically compromised state (already in a losing or winning position) and anchors the exit to the earlier, clearer-headed plan.
+- **The trading journal's psychological-review function** (extending Part 25.4's accountability/improvement purpose): periodically reviewing not just *what* trades were taken but *why* — was a stop moved further away mid-trade (a loss-aversion red flag), was a position size unusually large right after a win (an overconfidence red flag) — turns the journal into a genuine bias-detection tool, not just a performance log.
+- **A mandatory cooling-off rule after a loss** (directly countering revenge trading, Part 31.2) — a fixed minimum pause, or a rule requiring the next trade to independently clear the full setup checklist (Part 25.3) rather than being entered reactively.
+- **Position-size caps that don't scale up during a winning streak** without a deliberate, separate review of whether the increased size is still consistent with the account's actual risk tolerance, specifically to counter Part 31.2's overconfidence pattern.
+
+## 31.4 Why this belongs in a technical-research-analyst's skill set, not just a personal-trading topic
+A TRA's job includes not just generating calls but maintaining the credibility and consistency of a published track record (Part 9.3's "track and own your calls") — a TRA whose calls are influenced by these same biases (holding a losing published call too long, chasing a revenge call after a bad week) damages both their own track record and the credibility of the research desk they represent, making bias-awareness a professional skill for anyone publishing research recommendations, not merely a personal-trading nice-to-have.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**

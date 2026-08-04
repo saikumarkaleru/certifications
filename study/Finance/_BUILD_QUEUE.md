@@ -507,4 +507,17 @@ adjustment, and a fully worked tested-short-strangle roll-down example with the 
 thesis still intact" branching decision). Market Research 74->76pg, TRA 60->62pg. Master: 3,796
 -> 3,800 pages.
 
-**Running total: 3,800 pages.**
+**2026-08-05, autonomous wake-cycle: integrity check + 2 more new parts**: full integrity check
+across master (3,800pg at that point) and both handbooks confirmed no corruption, valid TOCs
+(Market Research 196 entries, TRA 163 entries). Then added PART 34 (Influencer & Creator Economy
+Research to Market Research — selection research beyond follower count incl. audience-authenticity
+checks, effectiveness measurement adapted from Part 10's ad toolkit incl. brand lift studies and
+MMM integration, sponsored-content disclosure research, a worked strong-engagement-weak-
+conversion diagnostic example) and PART 31 (Trading Psychology: Managing Your Own Biases Live to
+TRA — a distinct inward-facing angle from Part 12's market-wide behavioural finance: loss
+aversion/disposition effect, revenge trading, confirmation bias in position management,
+overconfidence after a winning streak, and concrete countermeasures incl. pre-committed exit
+criteria, the journal's bias-detection function, and mandatory cooling-off rules). Market Research
+76->78pg, TRA 62->64pg. Master: 3,800 -> 3,804 pages.
+
+**Running total: 3,804 pages.**
