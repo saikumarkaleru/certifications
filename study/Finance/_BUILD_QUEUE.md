@@ -132,5 +132,20 @@ Remaining 7 chapters without qa/: 13-19 (technical-analysis-essentials, market-e
 behavioral-finance, corporate-actions, capital-raising-followons, sell-side-vs-buy-side,
 portfolio-construction-risk, esg-in-equity-analysis).
 
-**Running total after 2026-08-04 stage-3 work: 3,657 pages** (Market Research 18->29, Equity & CM
-47->89 via content + 13 qa/ files, Valuation 51->405 via the free-win swap).
+**2026-08-04, later pass 3**: added qa/ for the final 7 chapters (13 technical-analysis-essentials,
+14 market-efficiency-behavioral-finance, 15 corporate-actions, 16 capital-raising-followons, 17
+sell-side-vs-buy-side, 18 portfolio-construction-risk incl. worked Sharpe/alpha/information-ratio
+numericals, 19 esg-in-equity-analysis). **All 20/20 chapters in EquityCapitalMarkets now have
+qa/ — this subject's qa/ pass is complete.** 89 -> 108pg (47pg -> 108pg total across this whole
+stage-3 effort on this subject).
+
+**Running total after 2026-08-04 stage-3 work: 3,676 pages** (Market Research 18->29, Equity & CM
+47->108 via content + full 20/20 qa/ coverage, Valuation 51->405 via the free-win swap).
+
+**Next up**: apply the same qa/-folder check to Investments & Portfolio Management (currently
+320pg via `_components/Investments-Portfolio-Management_FULL.pdf`) — verify whether its qa/
+folder is already complete (it likely already includes qa/, unlike EquityCapitalMarkets which
+had none) before assuming it needs the same treatment; if already complete, move to genuinely
+deepening the two sections with no qa/ shortcut available: Technical Research career guide (66pg,
+no source chapter-folder found) and Market Research (29pg, single-file handbook) — these need
+real new chapters/handbook expansion, not a qa/-folder swap.
