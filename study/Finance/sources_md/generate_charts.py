@@ -269,4 +269,68 @@ ax.grid(axis="y", alpha=0.25)
 plt.xticks(fontsize=8.5)
 savefig("brand_funnel.png")
 
+# ---------------------------------------------------------------------------
+# 9. Market Research 6.7 -- regression driver analysis (standardised betas)
+# ---------------------------------------------------------------------------
+drivers = ["Trust in\nsecurity", "Ease of\nnavigation", "App\nspeed", "Support\nresponsiveness", "Feature\ncompleteness"]
+betas = [0.34, 0.28, 0.19, 0.11, 0.04]
+sig = [True, True, True, True, False]
+fig, ax = plt.subplots(figsize=(6.4, 4.2))
+colors_bar = ["#1f6098" if s else "#c9d2dc" for s in sig]
+bars = ax.barh(drivers[::-1], betas[::-1], color=colors_bar[::-1], edgecolor=NAVY, linewidth=0.5)
+for b, v, s in zip(bars, betas[::-1], sig[::-1]):
+    label = f"{v:.2f}" + ("" if s else "  (not significant)")
+    ax.text(v + 0.01, b.get_y() + b.get_height()/2, label, va="center", fontsize=9, color=NAVY)
+ax.set_xlabel("Standardised beta (driver of NPS)")
+ax.set_title("NPS driver analysis: which app attributes actually move NPS")
+ax.set_xlim(0, 0.45)
+ax.grid(axis="x", alpha=0.25)
+savefig("nps_driver_analysis.png")
+
+# ---------------------------------------------------------------------------
+# 10. Market Research 6.8 -- conjoint attribute importance
+# ---------------------------------------------------------------------------
+attrs = ["Interest rate", "Approval speed", "Credit limit"]
+importance = [45, 30, 20]
+other = 100 - sum(importance)
+if other > 0:
+    attrs.append("Brand/other")
+    importance.append(other)
+fig, ax = plt.subplots(figsize=(6, 4.2))
+colors_pie = ["#16365c", "#1f6098", "#5b8fc7", "#d8a93a"][:len(attrs)]
+wedges, texts, autotexts = ax.pie(importance, labels=attrs, autopct="%1.0f%%", startangle=90,
+                                    colors=colors_pie, textprops={"fontsize": 9.5, "color": NAVY},
+                                    wedgeprops={"edgecolor": "white", "linewidth": 1.5})
+for at in autotexts:
+    at.set_color("white")
+    at.set_fontweight("bold")
+ax.set_title("Conjoint-derived attribute importance: UPI lending feature")
+savefig("conjoint_attribute_importance.png")
+
+# ---------------------------------------------------------------------------
+# 11. TRA 5.4 -- option Greeks across strikes (Delta, Gamma, Theta)
+# ---------------------------------------------------------------------------
+from scipy.stats import norm
+S0, r, sigma, T = 24500, 0.065, 0.13, 14/365
+strikes = np.linspace(23500, 25500, 200)
+d1 = (np.log(S0/strikes) + (r + sigma**2/2)*T) / (sigma*np.sqrt(T))
+d2 = d1 - sigma*np.sqrt(T)
+call_delta = norm.cdf(d1)
+gamma = norm.pdf(d1) / (S0*sigma*np.sqrt(T))
+theta = (-(S0*norm.pdf(d1)*sigma)/(2*np.sqrt(T)) - r*strikes*np.exp(-r*T)*norm.cdf(d2)) / 365
+
+fig, axes = plt.subplots(1, 3, figsize=(9.6, 3.4))
+for ax, (data, label, color) in zip(axes, [
+        (call_delta, "Delta", BLUE), (gamma, "Gamma", GOLD), (theta, "Theta (₹/day)", "#b23b3b")]):
+    ax.plot(strikes, data, color=color, lw=2)
+    ax.axvline(S0, color=GRAY, ls=":", lw=1)
+    ax.set_title(label, fontsize=10, color=NAVY, fontweight="bold")
+    ax.set_xlabel("Strike price", fontsize=8.5)
+    ax.grid(alpha=0.25)
+    ax.tick_params(labelsize=8)
+axes[0].annotate("ATM\n(spot)", xy=(S0, 0.5), fontsize=7.5, color=GRAY, ha="center")
+fig.suptitle("Call option Greeks across strikes (Nifty-style example, 14 DTE)", fontsize=11.5,
+             color=NAVY, fontweight="bold", y=1.03)
+savefig("greeks_across_strikes.png")
+
 print("\nAll charts generated in", OUT)

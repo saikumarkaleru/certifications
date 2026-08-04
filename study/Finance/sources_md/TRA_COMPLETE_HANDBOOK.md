@@ -221,6 +221,10 @@ An **option** is the **right, not the obligation**, to buy/sell the underlying a
 - **Vega** — sensitivity to a 1% change in **implied volatility**. Long options are long vega.
 - **Rho** — sensitivity to interest rates (least important intraday).
 
+![Line charts of call option Delta, Gamma, and Theta plotted against strike price, showing Delta declining from ITM to OTM, Gamma peaking at the money, and Theta most negative at the money](charts/greeks_across_strikes.png)
+
+Read left to right: **Delta** falls smoothly from near 1 (deep ITM, behaves like the underlying) to near 0 (deep OTM, unlikely to ever pay off) as strike rises past spot. **Gamma** peaks exactly at-the-money — the point where a small underlying move can flip the option between likely-worthless and likely-valuable, so Delta itself is most sensitive there. **Theta** is most negative at-the-money too — the option with the most uncertainty (closest to a coin-flip outcome) has the most time value to lose each day, which is exactly why ATM options decay fastest as expiry approaches.
+
 ## 5.5 Implied Volatility (IV) — you worked on IV surfaces
 - **IV** is the market's **expectation of future volatility**, backed out of option prices (via Black-Scholes). High IV → expensive options.
 - **IV vs HV:** implied (forward-looking) vs historical/realised (backward-looking).

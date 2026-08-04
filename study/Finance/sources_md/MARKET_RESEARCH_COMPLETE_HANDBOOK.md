@@ -304,6 +304,8 @@ A linear regression of NPS on the five predictors yields standardised coefficien
 | Customer-support responsiveness | 0.11 | 0.04 |
 | Feature completeness | 0.04 | 0.31 |
 
+![Horizontal bar chart of standardised regression betas showing trust in security as the largest driver of NPS, with feature completeness marked not significant](charts/nps_driver_analysis.png)
+
 **Reading this table (the part interviewers actually probe)**: trust in security is the single largest driver of NPS — larger than app speed or even feature completeness, which is *not* statistically significant (p=0.31, meaning we cannot conclude it drives NPS at all in this sample). The actionable insight is not "improve everything" but "prioritise security-trust communication and navigation simplicity over adding new features" — directly answering a resource-allocation question a findings-only report would not answer. Always check **R² (variance explained)** too — a driver model with R²=0.15 means the five variables jointly explain only 15% of NPS variation, a caveat that belongs in the same slide as the driver chart, not omitted.
 
 ## 6.8 Conjoint analysis — from raw choices to attribute importance
@@ -321,6 +323,8 @@ Continuing the Part 5.7 UPI lending conjoint: after n=600 respondents each compl
 | Approval speed | 1 hour | −0.61 |
 
 **Attribute importance** is calculated from each attribute's *range* of utilities (max minus min), normalised to sum to 100% across attributes: interest rate's range (0.82 to −1.03 = 1.85) is the largest, making it the most important attribute (≈45% relative importance in this illustrative case), ahead of approval speed (range 1.22, ≈30%) and credit limit (range 0.80, ≈20% — with feature/brand making up the remainder). This is exactly how a pricing-research deliverable justifies a statement like "interest rate matters roughly 1.5x more to adoption than approval speed" to a pricing committee, and it is the calculation most likely to be asked to explain, step by step, in a technical interview for a role advertising conjoint/pricing-research experience.
+
+![Pie chart of conjoint-derived attribute importance showing interest rate at 45%, approval speed at 30%, and credit limit at 20%](charts/conjoint_attribute_importance.png)
 
 **Market simulation**: once part-worths are estimated, they can simulate **share of preference** for any hypothetical product lineup (e.g. "if we launch Plan B against two named competitor plans, what share would we capture") by summing utilities per profile and converting to choice probabilities — this simulator output, not the raw utility table, is what gets presented to a business stakeholder.
 

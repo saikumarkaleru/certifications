@@ -267,4 +267,11 @@ only). Both verified visually before rebuilding. Equity & CM 115pg (unchanged pa
 absorbed into existing chapter space), TRA 32->33pg, Market Research 46pg (unchanged). Master:
 3,733 -> 3,734 pages.
 
-**Running total: 3,734 pages.**
+**2026-08-04, autonomous wake-cycle: 3 more charts (11 total now)**: `nps_driver_analysis.png`
+(horizontal bar chart of regression betas, not-significant driver greyed out) and
+`conjoint_attribute_importance.png` (pie chart of attribute importance %) added to Market
+Research 6.7/6.8; `greeks_across_strikes.png` (Delta/Gamma/Theta curves across strikes, real
+Black-Scholes math via scipy.stats.norm) added to TRA Part 5.4. Market Research 46->47pg, TRA
+33->34pg. Master: 3,734 -> 3,736 pages.
+
+**Running total: 3,736 pages.**
