@@ -110,5 +110,16 @@ produced the original PDFs — not a content change, just a re-render.
   `merge_stock_market_master.mjs` — Equity & Capital Markets was checked and has no qa/ folder
   (genuinely needs new writing, already in progress), but always verify per-subject first.
 
-**Running total after 2026-08-04 stage-3 work: 3,631 pages** (Market Research 18->29, Equity & CM
-47->63, Valuation 51->405 via the free-win swap).
+- **Equity & Capital Markets gets a qa/ folder (2026-08-04)**: added `EquityCapitalMarkets/qa/`
+  (mirroring Valuation/Investments' structure) with 4 chapters' worth of Q&A so far (07
+  equity-research-process, 10 applied-equity-valuation, 12 stock-pitch, 20 indian-equity-markets
+  — theory + worked numerical problems, same house style as Valuation's qa/). Updated
+  `build_subject_pdf.py` to auto-include a chapter's `qa/<stem>_QA.md` sibling if present
+  (interleaved right after its chapter, own TOC level-2 entry). 63 -> 71pg. 16 chapters still
+  need qa files (01-06, 08-09, 11, 13-19) — next pass on this subject, write those before
+  anything else, since this qa/ pattern is now the highest-leverage way to grow this subject
+  (each QA file added roughly +2pg for ~20-30 min of work, matching Valuation's own ratio at
+  scale: 18 qa files roughly matched or exceeded the size of the 18 concept chapters).
+
+**Running total after 2026-08-04 stage-3 work: 3,639 pages** (Market Research 18->29, Equity & CM
+47->71 (63 from content, +8 from the qa/ folder), Valuation 51->405 via the free-win swap).

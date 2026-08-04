@@ -105,13 +105,28 @@ def chapter_files(subject_dir):
     return files
 
 
+def qa_file_for(subject_dir, chapter_fp):
+    """Optional qa/<stem>_QA.md sibling for a md/<stem>.md chapter, if present."""
+    stem = os.path.splitext(os.path.basename(chapter_fp))[0]
+    qa_fp = os.path.join(subject_dir, "qa", f"{stem}_QA.md")
+    return qa_fp if os.path.exists(qa_fp) else None
+
+
 def build_html(subject_dir, title, tmp_html):
     files = chapter_files(subject_dir)
     chapters_html = []
+    outline_files = []  # (md_path, is_qa) pairs, in render order, for TOC building
     for fp in files:
         with open(fp, encoding="utf-8") as f:
             md_text = f.read()
         chapters_html.append(f'<div class="chapter">{md_to_html(md_text)}</div>')
+        outline_files.append((fp, False))
+        qa_fp = qa_file_for(subject_dir, fp)
+        if qa_fp:
+            with open(qa_fp, encoding="utf-8") as f:
+                qa_text = f.read()
+            chapters_html.append(f'<div class="chapter">{md_to_html(qa_text)}</div>')
+            outline_files.append((qa_fp, True))
     body = "\n".join(chapters_html)
     cover = f"""<div class="cover">
 <div class="cover-kicker">Study Guide</div>
@@ -123,7 +138,7 @@ def build_html(subject_dir, title, tmp_html):
            f"<style>{CSS}</style></head><body>{cover}{body}</body></html>")
     with open(tmp_html, "w", encoding="utf-8") as f:
         f.write(doc)
-    return tmp_html, files
+    return tmp_html, outline_files
 
 
 def chrome_pdf(html_path, pdf_path):
@@ -144,7 +159,7 @@ def chrome_pdf(html_path, pdf_path):
         time.sleep(1)
 
 
-def stamp_and_outline(raw_pdf, out_pdf, title, files):
+def stamp_and_outline(raw_pdf, out_pdf, title, outline_files):
     doc = fitz.open(raw_pdf)
     n = len(doc)
     texts = [doc[i].get_text("text") for i in range(n)]
@@ -174,7 +189,7 @@ def stamp_and_outline(raw_pdf, out_pdf, title, files):
 
     merged = []
     cursor = 0
-    for fp in files:
+    for fp, is_qa in outline_files:
         with open(fp, encoding="utf-8") as f:
             md_text = f.read()
         m1 = re.search(r'^#\s+(.+)$', md_text, re.M)
@@ -186,14 +201,16 @@ def stamp_and_outline(raw_pdf, out_pdf, title, files):
             pg = find_page(t, 0)
         if pg is not None:
             cursor = pg
-            merged.append([1, t, pg + 1])
-            sub_cursor = pg
-            for m2 in re.finditer(r'^##\s+(.+)$', md_text, re.M):
-                t2 = m2.group(1).strip()
-                pg2 = find_page(t2, sub_cursor)
-                if pg2 is not None:
-                    sub_cursor = pg2
-                    merged.append([2, t2, pg2 + 1])
+            level = 2 if is_qa else 1
+            merged.append([level, t, pg + 1])
+            if not is_qa:
+                sub_cursor = pg
+                for m2 in re.finditer(r'^##\s+(.+)$', md_text, re.M):
+                    t2 = m2.group(1).strip()
+                    pg2 = find_page(t2, sub_cursor)
+                    if pg2 is not None:
+                        sub_cursor = pg2
+                        merged.append([2, t2, pg2 + 1])
     merged.sort(key=lambda x: (x[2], x[0]))
     if merged and merged[0][0] != 1:
         merged[0][0] = 1
@@ -218,8 +235,9 @@ def main():
     raw_pdf = os.path.join(ROOT, "_subject_raw.pdf")
 
     print("1/3  chapters -> HTML ...")
-    _, files = build_html(subject_dir, title, tmp_html)
-    print(f"     {len(files)} chapters")
+    _, outline_files = build_html(subject_dir, title, tmp_html)
+    n_qa = sum(1 for _, is_qa in outline_files if is_qa)
+    print(f"     {len(outline_files) - n_qa} chapters + {n_qa} qa files")
 
     print("2/3  HTML -> PDF (headless Chrome) ...")
     chrome_pdf(tmp_html, raw_pdf)
@@ -228,7 +246,7 @@ def main():
         sys.exit(1)
 
     print("3/3  stamping page numbers + outline (PyMuPDF) ...")
-    total, numbered = stamp_and_outline(raw_pdf, out_pdf, title, files)
+    total, numbered = stamp_and_outline(raw_pdf, out_pdf, title, outline_files)
     print(f"\nDONE  ->  {out_pdf}")
     print(f"      pages: {total}  (numbered: {numbered})")
     print(f"      size : {os.path.getsize(out_pdf)//1024} KB")
