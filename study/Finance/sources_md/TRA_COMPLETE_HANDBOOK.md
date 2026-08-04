@@ -796,4 +796,25 @@ Every technical concept in this handbook applies across timeframes, but the *pra
 12. **Q: Why does the handbook insist a call is unprofessional without a stated stop-loss, even for a high-conviction idea?**
     A: A stop-loss is the mechanism that bounds risk to a known, pre-decided amount *before* the trade is placed — without one, a losing trade has no defined exit discipline and can compound into a much larger loss than any reasonable position-sizing calculation assumed, silently invalidating the entire risk-management framework (Part 8) the position size itself was built on. High conviction is not a substitute for a defined worst-case exit; it should, if anything, only affect position size within the fixed-risk-% rule, never remove the stop entirely.
 
+13. **Q: A strategy backtested seasonality showing "Nifty is up 70% of Decembers over the last 15 years." Should you trade purely on this?**
+    A: No — 15 years is a small sample for a once-a-year event (effectively only 15 independent observations), and seasonal patterns are known to weaken or disappear once widely traded on (Part 17.4). Treat it as one mild, confirming input alongside trend/level/momentum confluence, never as a standalone trading trigger.
+
+14. **Q: Why does a TRA need to understand VWAP even if they never personally execute institutional-sized orders?**
+    A: A TRA's recommendations are often acted on by desks that do execute institutional size, and a call that's technically correct but impractical to execute without heavy market impact (Part 18.4) is less useful to that audience — understanding VWAP/TWAP and market-impact mechanics lets a TRA give realistic guidance on achievable entry/exit prices and position sizing for less liquid names, not just a theoretical chart level.
+
+15. **Q: GIFT Nifty is indicating a sharp gap-down open, but there's no identifiable overnight news. What's your process?**
+    A: Work through the standard pre-market checklist (Part 19.2) systematically rather than assuming the indicator is wrong — check US close, Asian markets, crude, yields, and DXY for anything missed; if genuinely nothing explains it, treat the indication cautiously (GIFT Nifty can occasionally reflect thin-liquidity noise in its own trading hours) but don't dismiss it outright, since it remains the best available real-time proxy for the likely Indian open (Part 19.2).
+
+16. **Q: Why is Bank Nifty's typically higher implied volatility relevant to sizing an options position, not just a curiosity?**
+    A: A straddle or strangle sized using assumptions calibrated to Nifty's typical IV level will be miscalibrated if applied unchanged to Bank Nifty (Part 20.2) — both the premium cost and the expected-move-vs-premium-paid math (Part 5.9's straddle logic) differ meaningfully, so position sizing and breakeven expectations must be recalculated specifically for Bank Nifty's own volatility character, not assumed to transfer from Nifty.
+
+17. **Q: What's the practical difference between trading FII cash-flow data alone versus combining it with FII derivatives-positioning data?**
+    A: Cash-flow data alone can give a misleading read when FIIs are rotating exposure between cash and futures rather than genuinely changing their overall position (Part 22.5's worked example) — combining both data sources lets a TRA distinguish "FIIs are reducing India exposure" from "FIIs are restructuring how they hold the same exposure," two very different signals that look identical if only cash-flow data is checked.
+
+18. **Q: Why would a disciplined options trader deliberately reduce position sizing or sit out a range-bound, low-IV regime rather than force a trade?**
+    A: In this regime (Part 23.3), premium-selling offers thin reward (options are already cheap) and directional buying lacks conviction (no trend to justify it) — forcing a trade in a regime poorly suited to either core strategy family typically produces a worse risk-adjusted outcome than waiting for the regime to shift, or taking a smaller, cheaply-priced long-volatility position specifically betting on that shift (Part 23.4) rather than fighting the regime with a full-sized directional or premium-selling position.
+
+19. **Q: An intraday trader and a positional trader both act on the same breakout. Why does the positional trader use a much wider stop for the "same" trade?**
+    A: The two aren't actually taking the "same" trade in any meaningful risk sense (Part 24.5) — the positional trader's holding period spans months, during which normal multi-week corrections within an intact trend are expected and must be tolerated without being stopped out, requiring a stop set on a weekly-chart basis; the intraday trader's stop only needs to survive minutes to hours of price action. Using an intraday-appropriate tight stop on a positional-timeframe thesis would result in being stopped out repeatedly by completely normal noise relative to that longer holding period.
+
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

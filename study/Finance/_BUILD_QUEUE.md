@@ -419,4 +419,15 @@ dominant tools, risk parameters, and realistic routines for each — plus a work
 the same breakout signal sized and managed completely differently across all three timeframes).
 Market Research 61->63pg, TRA 47->49pg. Master: 3,769 -> 3,773 pages.
 
-**Running total: 3,773 pages.**
+**2026-08-05, autonomous wake-cycle: filled Q&A appendix gaps**: both handbooks' Q&A appendices
+had stopped covering content once new Parts kept getting added beyond them (TRA's 12 questions
+only covered Parts 1-16, missing 17-24; Market Research's 20 questions only covered through
+Part 15, missing 16-27). Added 7 more Q&A to TRA (covering seasonality, execution/VWAP, global
+cues, sector IV differences, FII/DII data synthesis, options-by-regime, timeframe-specific
+stops) and 8 more to Market Research (covering MMM marginal-vs-average ROI, CLV non-linearity,
+implicit-measurement limits, financial-product regulatory constraints, the rapid-research
+decision framework, inter-coder disagreement, weighting vs discarding data, live-pushback
+handling). TRA 12->19 questions, Market Research 20->28 questions — now covering every Part in
+both handbooks. Market Research 63->64pg, TRA 49->50pg. Master: 3,773 -> 3,775 pages.
+
+**Running total: 3,775 pages.**
