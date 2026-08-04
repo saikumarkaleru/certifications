@@ -348,4 +348,11 @@ valuation). 118 -> 120pg. Master: 3,750 -> 3,752 pages. Chapters with worked-exa
 now: 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 17, 18, 19, 20 (16 of 20). Remaining: 01, 10,
 11, 16.
 
-**Running total: 3,752 pages.**
+**2026-08-05, autonomous wake-cycle**: added worked examples to ch.10 (applied-equity-valuation —
+a full worked football-field range across 4 methods, and why EV/EBITDA beats P/E for comparing
+differently-levered peers) and ch.11 (research-note-and-thesis — a worked update note reacting to
+an in-line-but-margin-miss quarter, and a weak-note-rewritten-to-pass-the-variant-view-test
+example). 120 -> 121pg. Master: 3,752 -> 3,753 pages. Chapters with worked-example additions now:
+02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20 (18 of 20). Remaining: 01, 16.
+
+**Running total: 3,753 pages.**
