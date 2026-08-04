@@ -1,0 +1,9 @@
+{
+  "name": "finance-pdf-tools",
+  "private": true,
+  "description": "Node deps for PDF-merge scripts in study/Finance/sources_md (e.g. merge_stock_market_master.mjs). Run `npm install` here once.",
+  "type": "module",
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}

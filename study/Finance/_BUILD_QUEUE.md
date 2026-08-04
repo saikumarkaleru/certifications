@@ -24,3 +24,29 @@ intro-risk-management, types-of-risk, market-risk, value-at-risk, expected-short
 
 ## ✅ ALL 6 SUBJECTS BUILT (first pass). PDFs: Financial-Markets (~360pg), Economics-for-Finance (~390), Investments-Portfolio-Management (~305), Fixed-Income (~295), Derivatives (~320), Risk-Management (~295). Comprehensive, all concepts. ~2000 pages total.
 ## Optional: 2x-deepen pass to lift each to ~500 pages (large spend) — pending user decision.
+
+## 7. Market Research — "Market Research Analyst Handbook" → sources_md/MARKET_RESEARCH_COMPLETE_HANDBOOK.md, Market_Research_Study_Guide.pdf
+Added 2026-08-04: the one subject in the stock-market-roles cluster this library did not
+previously cover (job_apply_agent/lib/roles.ts added a `market_research` target role).
+Stage 1 (18pg): research design (exploratory/descriptive/causal), primary vs secondary
+research, qualitative methods (IDIs/FGDs/ethnography), quantitative/survey design + sample
+size math, data analysis (cross-tabs/segmentation/significance/conjoint), market sizing
+(TAM/SAM/SOM worked example), competitive intelligence, consumer insights/reporting,
+careers + interview Q&A. Built like TRA_COMPLETE_HANDBOOK.md (single-file handbook) via the
+new generic `sources_md/build_handbook_pdf.py`. Same "build toward 2000 pages in stages"
+plan as the rest of this library — later stages can 10x-deepen each PART into full chapters
+with worked INR case studies, matching the depth of subjects 1-6 above.
+
+## Stock-Market-Roles-Master_FULL.pdf (compiled, not a new subject)
+Combines the existing Equity/Valuation/Investments-Portfolio-Management/Technical-Research
+(career guide) + Technical-Analysis-Complete (deep book, from trading_learning/) + the new
+Market Research handbook into one **2,252-page** volume for the 3 stock-market target roles
+(Senior Equity Research, Market Research, Technical Research — see
+job_apply_agent/job_search/senior_research_skills.md). Rebuild via
+`sources_md/merge_stock_market_master.mjs` (Node/pdf-lib — run `npm install` once in
+`sources_md/`, its `package.json` pins the dependency) after any component PDF changes;
+front matter source is `sources_md/_stock_market_roles_frontmatter.html`, regenerated via
+`sources_md/_render_frontmatter.py`. Deliberately still excludes the rest of
+study/trading_learning/ (Options-Trading-Complete, The-Complete-Indian-Market-Trader — trading
+mechanics, not research) and Finance-1_FULL.pdf (overlaps Investments component already merged
+in) — can be added in a later stage if the target roles need trading-mechanics depth too.

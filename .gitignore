@@ -28,4 +28,8 @@ venv/
 # Transient render artifacts (regenerable)
 _tmp_render.html
 _ihb.html
+study/Finance/sources_md/_frontmatter.pdf
+
+# Node deps (e.g. study/Finance/sources_md/package.json -> pdf-lib)
+node_modules/
 
