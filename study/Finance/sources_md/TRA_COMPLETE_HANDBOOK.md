@@ -798,6 +798,8 @@ The **McClellan Oscillator** applies the same EMA-crossover logic from Part 3.1 
 ## 26.5 Worked example — using breadth divergence to flag a weakening rally
 *Nifty 50 makes a new 6-month high. The advance-decline line, however, is well below its own high from three weeks earlier, and new 52-week lows on the day (47) actually exceed new 52-week highs (31) despite the index's fresh high.*
 
+![Two-panel chart showing an index making a fresh high in the top panel while the cumulative advance-decline line below fails to make a corresponding new high, illustrating breadth divergence](charts/breadth_divergence.png)
+
 **Model answer.** This is a textbook, multiply-confirmed breadth divergence (Part 26.2's A-D line divergence, reinforced independently by Part 26.3's new-highs/new-lows count actually inverting — more stocks hitting fresh lows than fresh highs on a day the *index itself* hits a high) — a strong signal that the index-level new high is being driven by a narrow set of heavyweight constituents while the broader market is, in aggregate, actually deteriorating underneath it. A disciplined TRA would flag this explicitly as a caution signal on the rally's health, worth weighing against any purely price-based bullish read of the index's fresh high, and would specifically watch whether breadth starts confirming (A-D line and new-highs count turning back up alongside the index) or continues diverging (a stronger warning) over the following sessions — exactly the kind of "don't just look at the headline number" discipline breadth analysis is meant to enforce.
 
 ---

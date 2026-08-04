@@ -453,4 +453,12 @@ Index, and a worked triple-confirmed breadth-divergence example flagging a narro
 rally despite a fresh index high). Market Research 66->68pg, TRA 52->54pg. Master: 3,780 -> 3,784
 pages.
 
+**2026-08-05, autonomous wake-cycle: 2 more charts (15 total)**: `breadth_divergence.png`
+(two-panel chart: index making a fresh high while the cumulative A-D line below fails to
+confirm) embedded in TRA 26.5; `sem_path_model.png` (a real SEM path diagram — product/service
+quality feeding latent Satisfaction, driving latent Loyalty and Advocacy/NPS, labelled path
+coefficients) embedded in Market Research 29.3. Page counts steady (content verified via
+file-size growth: TRA 1243KB->1352KB, Market Research 1548KB->1604KB). Master: 3,784 pages
+(unchanged this round, verified via rebuild).
+
 **Running total: 3,784 pages.**

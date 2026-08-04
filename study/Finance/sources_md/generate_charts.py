@@ -376,4 +376,70 @@ ax.set_title("CLV is highly non-linear in churn rate: small churn cuts, large CL
 ax.grid(alpha=0.25)
 savefig("clv_vs_churn.png")
 
+# ---------------------------------------------------------------------------
+# 14. TRA 26.5 -- advance-decline line divergence from index
+# ---------------------------------------------------------------------------
+np.random.seed(42)
+n_days = 130
+idx_ret = np.concatenate([np.random.normal(0.0012, 0.008, 90), np.random.normal(0.0015, 0.006, 40)])
+index_level = 100 * np.cumprod(1 + idx_ret)
+ad_daily = np.concatenate([np.random.normal(35, 220, 90), np.random.normal(-60, 200, 40)])
+ad_line = np.cumsum(ad_daily)
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(6.8, 5.6), sharex=True, gridspec_kw={"height_ratios": [1.4, 1]})
+ax1.plot(index_level, color=NAVY, lw=2)
+ax1.axvline(90, color=GRAY, ls=":", lw=1)
+ax1.annotate("Index makes\na fresh high", xy=(125, index_level[125]), xytext=(95, index_level[125]-8),
+             fontsize=8.5, color=GRAY, arrowprops=dict(arrowstyle="->", color=GRAY, lw=0.8))
+ax1.set_ylabel("Index level")
+ax1.set_title("Breadth divergence: index makes a new high, advance-decline line doesn't confirm")
+ax1.grid(alpha=0.25)
+ax2.plot(ad_line, color="#b23b3b", lw=2)
+ax2.axvline(90, color=GRAY, ls=":", lw=1)
+ax2.axhline(ad_line[85:95].max(), color=GRAY, ls="--", lw=0.8)
+ax2.annotate("A-D line fails to\nmake a new high", xy=(125, ad_line[125]), xytext=(95, ad_line[125]-900),
+             fontsize=8.5, color="#8a2b2b", arrowprops=dict(arrowstyle="->", color="#8a2b2b", lw=0.8))
+ax2.set_ylabel("Cumulative A-D line")
+ax2.set_xlabel("Trading day")
+ax2.grid(alpha=0.25)
+savefig("breadth_divergence.png")
+
+# ---------------------------------------------------------------------------
+# 15. Market Research 29.3 -- SEM path model diagram
+# ---------------------------------------------------------------------------
+fig, ax = plt.subplots(figsize=(7.2, 4.4))
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 6)
+ax.axis("off")
+boxes = {
+    "Product\nQuality": (1, 4.3),
+    "Service\nQuality": (1, 1.7),
+    "Satisfaction\n(latent)": (4.3, 3),
+    "Loyalty\n(latent)": (7.3, 4.3),
+    "Advocacy /\nNPS": (7.3, 1.7),
+}
+for label, (x, y) in boxes.items():
+    is_latent = "latent" in label
+    fc = "#eef4fb" if not is_latent else "#fdf4e3"
+    ec = BLUE if not is_latent else GOLD
+    ax.add_patch(plt.Rectangle((x-0.85, y-0.5), 1.7, 1.0, fc=fc, ec=ec, lw=1.8, zorder=2))
+    ax.text(x, y, label, ha="center", va="center", fontsize=9, color=NAVY, fontweight="bold", zorder=3)
+
+def arrow(p1, p2, label, offset=0.15):
+    x1, y1 = boxes[p1]; x2, y2 = boxes[p2]
+    ax.annotate("", xy=(x2-0.85, y2), xytext=(x1+0.85, y1),
+                arrowprops=dict(arrowstyle="-|>", color="#33445a", lw=1.6))
+    mx, my = (x1+x2)/2, (y1+y2)/2 + offset
+    ax.text(mx, my, label, ha="center", fontsize=8, color="#33445a")
+
+arrow("Product\nQuality", "Satisfaction\n(latent)", "0.41")
+arrow("Service\nQuality", "Satisfaction\n(latent)", "0.33", offset=-0.2)
+arrow("Satisfaction\n(latent)", "Loyalty\n(latent)", "0.52")
+arrow("Satisfaction\n(latent)", "Advocacy /\nNPS", "0.29", offset=-0.2)
+arrow("Loyalty\n(latent)", "Advocacy /\nNPS", "0.38")
+ax.set_title("SEM path model: product/service quality -> satisfaction -> loyalty -> advocacy",
+             fontsize=11.5, color=NAVY, fontweight="bold")
+ax.text(5, 0.3, "Boxes = constructs (gold = latent, estimated from multiple survey items) · numbers = standardised path coefficients",
+        ha="center", fontsize=7.5, color=GRAY, style="italic")
+savefig("sem_path_model.png")
+
 print("\nAll charts generated in", OUT)
