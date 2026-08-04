@@ -15,6 +15,7 @@ const SOURCES = [
   `${BASE}/_components/Investments-Portfolio-Management_FULL.pdf`,
   `${BASE}/Technical_Research_Study_Guide.pdf`,
   `${STUDY}/trading_learning/Technical-Analysis-Complete_FULL.pdf`,
+  `${STUDY}/trading_learning/Options-Trading-Complete_FULL.pdf`,
   `${BASE}/Market_Research_Study_Guide.pdf`,
 ];
 const OUT = `${BASE}/Stock-Market-Roles-Master_FULL.pdf`;

@@ -38,15 +38,24 @@ plan as the rest of this library — later stages can 10x-deepen each PART into 
 with worked INR case studies, matching the depth of subjects 1-6 above.
 
 ## Stock-Market-Roles-Master_FULL.pdf (compiled, not a new subject)
-Combines the existing Equity/Valuation/Investments-Portfolio-Management/Technical-Research
-(career guide) + Technical-Analysis-Complete (deep book, from trading_learning/) + the new
-Market Research handbook into one **2,252-page** volume for the 3 stock-market target roles
+Combines Equity & Capital Markets + Valuation + Investments-Portfolio-Management +
+Technical-Research (career guide) + Technical-Analysis-Complete (deep book) +
+Options-Trading-Complete (NSE F&O, deep book, both from trading_learning/) + the new
+Market Research handbook into one **3,250-page** volume for the 3 stock-market target roles
 (Senior Equity Research, Market Research, Technical Research — see
-job_apply_agent/job_search/senior_research_skills.md). Rebuild via
+job_apply_agent/job_search/senior_research_skills.md). Scope is deliberately strict: only
+stock-market content, not general finance — see 2026-08-04 note below. Rebuild via
 `sources_md/merge_stock_market_master.mjs` (Node/pdf-lib — run `npm install` once in
 `sources_md/`, its `package.json` pins the dependency) after any component PDF changes;
 front matter source is `sources_md/_stock_market_roles_frontmatter.html`, regenerated via
-`sources_md/_render_frontmatter.py`. Deliberately still excludes the rest of
-study/trading_learning/ (Options-Trading-Complete, The-Complete-Indian-Market-Trader — trading
-mechanics, not research) and Finance-1_FULL.pdf (overlaps Investments component already merged
-in) — can be added in a later stage if the target roles need trading-mechanics depth too.
+`sources_md/_render_frontmatter.py`. Deliberately excludes the generic multi-role finance
+subjects (01/02/04/06/07/08_*.pdf — Accounting/Corp Finance/Modeling/Credit/Derivatives-Quant/
+Economics; framed for IB/Credit/FP&A broadly, not stock-market specifically) and
+Finance-1_FULL.pdf (overlaps Investments component already merged in).
+
+**2026-08-04**: user asked to grow this toward 3,000 pages "don't repeat same topics." First
+pass added the 6 generic finance-interview subjects above (+333pg) — user corrected: "only add
+contents related to stock market." Reverted that; added Options-Trading-Complete (998pg,
+NSE F&O options — squarely stock-market, zero overlap with the charting book) instead, landing
+at 3,250. Keep this scope boundary for any future stage: stock-market/equity/derivatives-on-
+equity content only, not general corporate/credit/IB finance.
