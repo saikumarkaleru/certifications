@@ -465,6 +465,10 @@ The honest gap (see `senior_research_skills.md` in the job_apply_agent repo) is 
 - **Top-of-mind (TOM)**: the *first* brand named in an unaided-awareness question — the single strongest predictor of default/habitual purchase in low-involvement categories (FMCG especially).
 - **Consideration**: "Which brands would you consider buying?" — the funnel stage between awareness and purchase; a brand can have high awareness but low consideration (a well-known but distrusted or "not for me" brand), an important diagnostic distinction.
 
+![Brand funnel bar chart showing unaided awareness, aided awareness, consideration, trial, repeat purchase, and loyal NPS-promoter stages](charts/brand_funnel.png)
+
+An illustrative funnel across all the stages this Part covers: note aided awareness (61%) sits well above unaided (22%), exactly as Section 10.2 describes — always report both, never aided alone. The steep consideration-to-trial drop (38% to 24%) is a common, diagnostic pattern: it usually signals a distribution, price, or trust barrier rather than an awareness problem, since these people already know and would consider the brand but haven't yet bought it — precisely the kind of funnel-stage diagnosis that turns a topline number into an actionable insight (Part 8.1).
+
 ## 10.3 Ad/copy testing
 - **Pre-testing** (before a campaign airs): concept boards or animatics shown to a sample, measured on message takeaway (did they understand the intended message, unprompted), likeability, brand linkage (do they correctly attribute the ad to the right brand, without prompting — a real and common failure, especially in cluttered categories), and purchase-intent shift pre/post exposure.
 - **Post-testing / tracking**: measuring actual campaign recall and brand-metric movement after a campaign has run in-market, via periodic (monthly/quarterly) brand-tracker waves.

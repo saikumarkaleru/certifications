@@ -160,4 +160,113 @@ ax2.set_xlabel("Trading day")
 ax2.grid(alpha=0.25)
 savefig("backtest_equity_drawdown.png")
 
+# ---------------------------------------------------------------------------
+# 6. Equity & Capital Markets ch.18 -- efficient frontier + CML
+# ---------------------------------------------------------------------------
+np.random.seed(11)
+n_assets, n_port = 6, 4000
+asset_ret = np.random.uniform(0.06, 0.16, n_assets)
+asset_vol = np.random.uniform(0.12, 0.30, n_assets)
+corr = np.full((n_assets, n_assets), 0.35)
+np.fill_diagonal(corr, 1.0)
+cov = np.outer(asset_vol, asset_vol) * corr
+weights = np.random.dirichlet(np.ones(n_assets), n_port)
+port_ret = weights @ asset_ret
+port_vol = np.sqrt(np.einsum('ij,jk,ik->i', weights, cov, weights))
+rf = 0.06
+sharpe = (port_ret - rf) / port_vol
+best = np.argmax(sharpe)
+fig, ax = plt.subplots(figsize=(6.6, 4.8))
+sc = ax.scatter(port_vol * 100, port_ret * 100, c=sharpe, cmap="viridis", s=6, alpha=0.55)
+cbar = plt.colorbar(sc, ax=ax)
+cbar.set_label("Sharpe ratio", fontsize=9)
+ax.scatter(asset_vol * 100, asset_ret * 100, color=GOLD, s=55, edgecolors=NAVY, zorder=5,
+           label="Individual assets")
+ax.scatter([port_vol[best] * 100], [port_ret[best] * 100], color="#b23b3b", s=90, marker="*",
+           zorder=6, label="Max-Sharpe (tangency) portfolio")
+xmax = port_vol.max() * 100 * 1.08
+ymax = port_ret.max() * 100 * 1.12
+cml_x = np.linspace(0, xmax, 20)
+cml_y = rf * 100 + sharpe[best] * cml_x
+ax.plot(cml_x, cml_y, color="#b23b3b", ls="--", lw=1.4, label="Capital Market Line")
+ax.set_xlim(0, xmax)
+ax.set_ylim(port_ret.min() * 100 * 0.9, ymax)
+ax.set_xlabel("Portfolio volatility, annualised (%)")
+ax.set_ylabel("Expected return, annualised (%)")
+ax.set_title("Simulated efficient frontier: 4,000 random portfolios of 6 assets")
+ax.legend(loc="lower right", fontsize=8, frameon=False)
+ax.grid(alpha=0.25)
+savefig("efficient_frontier.png")
+
+# ---------------------------------------------------------------------------
+# 7. TRA -- candlestick chart with 50/200-day MA and RSI (multi-timeframe trend example)
+# ---------------------------------------------------------------------------
+np.random.seed(21)
+n = 260
+drift = np.concatenate([np.full(150, 0.0009), np.full(60, -0.0012), np.full(50, 0.0015)])
+noise = np.random.normal(0, 0.013, n)
+close = 100 * np.cumprod(1 + drift + noise)
+open_ = close * (1 + np.random.normal(0, 0.004, n))
+high = np.maximum(open_, close) * (1 + np.abs(np.random.normal(0, 0.006, n)))
+low = np.minimum(open_, close) * (1 - np.abs(np.random.normal(0, 0.006, n)))
+def trailing_ma(arr, window):
+    """Proper trailing (backward-looking) moving average, NaN-padded at the
+    front where a full window isn't yet available -- avoids the edge
+    artifacts np.convolve(..., mode='same') produces at both ends."""
+    valid = np.convolve(arr, np.ones(window) / window, mode="valid")
+    return np.concatenate([np.full(window - 1, np.nan), valid])
+
+ema50 = trailing_ma(close, 50)
+ema200 = trailing_ma(close, 200)
+delta = np.diff(close, prepend=close[0])
+gain = np.where(delta > 0, delta, 0.0)
+loss = np.where(delta < 0, -delta, 0.0)
+avg_gain = trailing_ma(gain, 14)
+avg_loss = trailing_ma(loss, 14)
+rs = avg_gain / np.where((avg_loss == 0) | np.isnan(avg_loss), 1e-9, avg_loss)
+rsi = 100 - 100 / (1 + rs)
+
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(7, 5.6), sharex=True, gridspec_kw={"height_ratios": [3, 1]})
+width = 0.6
+up = close >= open_
+ax1.vlines(np.arange(n), low, high, color=np.where(up, "#2e8b57", "#b23b3b"), lw=0.6)
+ax1.bar(np.arange(n)[up], (close-open_)[up], bottom=open_[up], width=width, color="#2e8b57")
+ax1.bar(np.arange(n)[~up], (close-open_)[~up], bottom=close[~up], width=width, color="#b23b3b")
+ax1.plot(ema50, color=BLUE, lw=1.3, label="50-day MA")
+ax1.plot(ema200, color=GOLD, lw=1.6, label="200-day MA")
+ax1.axvline(150, color=GRAY, ls=":", lw=1)
+ax1.annotate("Trend weakens", xy=(150, close[150]), xytext=(160, close[150]*1.15),
+             fontsize=8, color=GRAY, arrowprops=dict(arrowstyle="->", color=GRAY, lw=0.8))
+ax1.set_ylabel("Price (₹)")
+ax1.set_title("Candlestick chart with 50/200-day MA and RSI(14)")
+ax1.legend(loc="upper left", fontsize=8, frameon=False)
+ax1.grid(alpha=0.2)
+ax2.plot(rsi, color=NAVY, lw=1.2)
+ax2.axhline(70, color="#b23b3b", ls="--", lw=0.9)
+ax2.axhline(30, color="#2e8b57", ls="--", lw=0.9)
+ax2.fill_between(np.arange(n), 70, 100, color="#b23b3b", alpha=0.08)
+ax2.fill_between(np.arange(n), 0, 30, color="#2e8b57", alpha=0.08)
+ax2.set_ylim(0, 100)
+ax2.set_ylabel("RSI(14)")
+ax2.set_xlabel("Trading day")
+ax2.grid(alpha=0.2)
+savefig("candlestick_ma_rsi.png")
+
+# ---------------------------------------------------------------------------
+# 8. Market Research -- awareness-to-purchase brand funnel
+# ---------------------------------------------------------------------------
+stages = ["Unaided\nawareness", "Aided\nawareness", "Consideration", "Trial", "Repeat\npurchase", "Loyal\n(NPS promoter)"]
+values = [22, 61, 38, 24, 15, 9]
+fig, ax = plt.subplots(figsize=(6.6, 4.4))
+colors_funnel = plt.cm.Blues(np.linspace(0.9, 0.35, len(stages)))
+bars = ax.bar(stages, values, color=colors_funnel, edgecolor=NAVY, linewidth=0.6)
+for b, v in zip(bars, values):
+    ax.text(b.get_x() + b.get_width()/2, v + 1.5, f"{v}%", ha="center", fontsize=9, color=NAVY, fontweight="bold")
+ax.set_ylabel("% of target population")
+ax.set_title("Brand funnel: unaided awareness through to loyal/promoter")
+ax.set_ylim(0, 70)
+ax.grid(axis="y", alpha=0.25)
+plt.xticks(fontsize=8.5)
+savefig("brand_funnel.png")
+
 print("\nAll charts generated in", OUT)

@@ -119,6 +119,10 @@ Indicators are math applied to price/volume to make a signal clearer. They fall 
 - **ADX / DMI (Average Directional Index):** measures **trend strength** (0–100), not direction. **ADX > 25 = strong trend; < 20 = weak/range.** +DI and −DI lines show direction. *Crucial because indicators like RSI work differently in trends vs ranges.*
 - **Parabolic SAR:** dots that flip above/below price; trailing-stop and trend-direction tool.
 - **Supertrend:** ATR-based trend line, very popular in Indian markets for intraday F&O.
+
+![Candlestick price chart with 50-day and 200-day moving averages above, and RSI(14) with overbought/oversold zones below](charts/candlestick_ma_rsi.png)
+
+Reading this chart top to bottom: the 50-day MA (blue) tracks the shorter-term trend and reacts faster to price than the flatter 200-day MA (gold) once it appears after enough history accumulates — a golden/death cross is exactly the 50-day line crossing the 200-day line. Around the marked point the uptrend loses momentum: price stops making clean higher highs, the 50-day MA flattens and rolls over. The RSI panel below shows the same story from a momentum angle — RSI oscillates into the overbought zone (>70, red shading) during the strongest leg of the uptrend and into oversold (<30, green shading) during the subsequent pullback, exactly the confluence (trend + moving average + momentum) Part 3.7's "golden rule of indicators" asks for.
 - **Ichimoku Cloud:** an all-in-one system (trend, S/R, momentum) using a "cloud" (Kumo); price above the cloud = bullish.
 
 ## 3.2 Momentum indicators (oscillators)

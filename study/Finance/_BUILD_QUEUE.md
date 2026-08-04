@@ -254,4 +254,17 @@ Master: 3,724 -> 3,733 pages.
 immediately after a bold label will now render correctly automatically — no special handling
 needed, both fixes are baked into the two shared builder scripts.
 
-**Running total: 3,733 pages.**
+**2026-08-04, autonomous wake-cycle: 3 more charts**: added `efficient_frontier.png` (4,000
+simulated portfolios, individual assets, max-Sharpe tangency portfolio, Capital Market Line) to
+Equity & Capital Markets ch.18; `candlestick_ma_rsi.png` (candlestick chart with 50/200-day MA
+and RSI panel) to TRA handbook Part 3.1; `brand_funnel.png` (unaided->aided->consideration->
+trial->repeat->loyal funnel) to Market Research Part 10.2. Caught and fixed two chart-generation
+bugs before committing: the efficient-frontier chart's axis was dominated by the CML line's
+extrapolation (fixed with explicit xlim/ylim based on the portfolio cloud, not the line), and the
+candlestick chart's moving averages had edge-artifact spikes from `np.convolve(mode='same')`
+(fixed with a proper trailing/backward-looking `trailing_ma()` helper, NaN-padded at the front
+only). Both verified visually before rebuilding. Equity & CM 115pg (unchanged page count, image
+absorbed into existing chapter space), TRA 32->33pg, Market Research 46pg (unchanged). Master:
+3,733 -> 3,734 pages.
+
+**Running total: 3,734 pages.**

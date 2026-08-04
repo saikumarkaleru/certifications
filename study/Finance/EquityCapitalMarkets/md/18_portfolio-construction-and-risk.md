@@ -28,6 +28,10 @@ graph TD
 
 **Modern Portfolio Theory (Markowitz).** For a given return, there's a minimum-variance portfolio; the set of best risk-return combinations is the **efficient frontier**. Adding a risk-free asset gives the **Capital Market Line**; the best risky portfolio is the market portfolio (→ CAPM).
 
+![Simulated efficient frontier showing thousands of random portfolios, the individual assets, the max-Sharpe tangency portfolio, and the Capital Market Line](charts/efficient_frontier.png)
+
+The chart above simulates 4,000 random-weight portfolios of 6 assets, coloured by Sharpe ratio. The individual assets (gold dots) all sit *inside* the cloud of possible portfolios — no single asset is as efficient as a well-diversified combination, the visual proof of Example 1's diversification math. The star marks the max-Sharpe (tangency) portfolio, and the dashed Capital Market Line shows the best achievable risk-return trade-off once a risk-free asset is available to blend with it — exactly the CAPM intuition this section describes.
+
 **Position sizing & construction approaches:**
 - **Concentration vs diversification** — high-conviction concentrated books (fewer, larger positions) vs broadly diversified books; a trade-off between idiosyncratic risk and edge.
 - **Active vs passive** — active tries to beat a benchmark (higher fees, tracking error); passive replicates it cheaply.
