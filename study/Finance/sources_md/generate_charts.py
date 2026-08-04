@@ -333,4 +333,47 @@ fig.suptitle("Call option Greeks across strikes (Nifty-style example, 14 DTE)", 
              color=NAVY, fontweight="bold", y=1.03)
 savefig("greeks_across_strikes.png")
 
+# ---------------------------------------------------------------------------
+# 12. Market Research 20.4 -- MMM saturation curves (TV vs Digital diminishing returns)
+# ---------------------------------------------------------------------------
+spend = np.linspace(0, 60, 200)
+def saturation(x, scale, k):
+    return scale * (1 - np.exp(-x / k))
+tv_response = saturation(spend, 18, 12)
+digital_response = saturation(spend, 22, 30)
+fig, ax = plt.subplots(figsize=(6.6, 4.4))
+ax.plot(spend, tv_response, color=BLUE, lw=2.2, label="TV response curve")
+ax.plot(spend, digital_response, color=GOLD, lw=2.2, label="Digital response curve")
+ax.scatter([40], [saturation(40, 18, 12)], color=BLUE, s=70, zorder=5, edgecolors=NAVY)
+ax.scatter([15], [saturation(15, 22, 30)], color=GOLD, s=70, zorder=5, edgecolors=NAVY)
+ax.annotate("TV: ₹40cr spend\n(deep in saturation\n-- low marginal ROI)", xy=(40, saturation(40,18,12)),
+            xytext=(42, saturation(40,18,12)-6), fontsize=8, color=GRAY)
+ax.annotate("Digital: ₹15cr spend\n(still steep --\nhigh marginal ROI)", xy=(15, saturation(15,22,30)),
+            xytext=(17, saturation(15,22,30)-5), fontsize=8, color=GRAY)
+ax.set_xlabel("Annual channel spend (₹ cr)")
+ax.set_ylabel("Sales contribution (indexed)")
+ax.set_title("MMM saturation curves: why marginal ROI differs from average ROI")
+ax.legend(loc="lower right", fontsize=8.5, frameon=False)
+ax.grid(alpha=0.25)
+savefig("mmm_saturation_curves.png")
+
+# ---------------------------------------------------------------------------
+# 13. Market Research 21.4 -- CLV sensitivity to churn rate
+# ---------------------------------------------------------------------------
+churn = np.linspace(0.05, 0.40, 100)
+arpu, margin = 2400, 0.65
+clv = (arpu * margin) / churn
+fig, ax = plt.subplots(figsize=(6.4, 4.2))
+ax.plot(churn * 100, clv, color=NAVY, lw=2.4)
+for cr, label_color in [(0.20, "#b23b3b"), (0.15, "#2e8b57")]:
+    val = (arpu * margin) / cr
+    ax.scatter([cr*100], [val], color=label_color, s=70, zorder=5, edgecolors=NAVY)
+    ax.annotate(f"{int(cr*100)}% churn\nCLV = Rs.{val:,.0f}", xy=(cr*100, val),
+                xytext=(cr*100+2, val+400), fontsize=8.5, color=label_color, fontweight="bold")
+ax.set_xlabel("Annual churn rate (%)")
+ax.set_ylabel("Customer Lifetime Value (₹)")
+ax.set_title("CLV is highly non-linear in churn rate: small churn cuts, large CLV gains")
+ax.grid(alpha=0.25)
+savefig("clv_vs_churn.png")
+
 print("\nAll charts generated in", OUT)

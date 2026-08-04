@@ -375,4 +375,12 @@ TRA — Bank Nifty's concentration/rate-sensitivity/higher-IV character, Nifty I
 US-tech-cycle sensitivity, factor/thematic indices, and a worked relative-strength sector-
 rotation example). Market Research 53->55pg, TRA 39->41pg. Master: 3,753 -> 3,757 pages.
 
+**2026-08-05, autonomous wake-cycle: 2 more charts (13 total)**: `mmm_saturation_curves.png`
+(TV vs Digital diminishing-returns curves, marked at their worked-example spend levels, visually
+showing why marginal ROI differs from average ROI) embedded in Market Research 20.4;
+`clv_vs_churn.png` (CLV plotted against churn rate, a steep 1/churn curve marked at the 15%/20%
+worked-example points) embedded in 21.4. Page count unchanged (55, absorbed into whitespace) but
+content verified present (file size grew 1251KB->1402KB). Master: 3,757 pages (unchanged this
+round, verified via rebuild).
+
 **Running total: 3,757 pages.**
