@@ -213,4 +213,13 @@ to the Technical Research Deepening Handbook. 27 -> 31pg. Also fixed two more st
 row page-counts (TRA deepening handbook, Market Research) that were still showing pre-update
 numbers. Master: 3,717 -> 3,720 pages.
 
-**Running total: 3,720 pages.**
+**2026-08-04, autonomous wake-cycle pass 3**: added PART 18 (New Product Development & Concept
+Testing: NPD funnel, concept screening vs testing, the standard concept-test measurement battery,
+monadic/sequential-monadic/comparative designs, a worked top-box-score interpretation example
+incl. norms-database benchmarking, product/sensory testing incl. blind-vs-branded and JAR scales)
+and PART 19 (Category Management & Trade Marketing Research: assortment/incrementality analysis,
+trade-promotion-effectiveness research incl. the pull-forward/pantry-loading effect and ROI
+calculation, the retailer-relationship angle) to Market Research — genuine, previously-uncovered
+topics (NPD/concept testing especially was a real gap). 41 -> 45pg. Master: 3,720 -> 3,724 pages.
+
+**Running total: 3,724 pages.**
