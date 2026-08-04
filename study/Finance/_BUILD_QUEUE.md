@@ -142,10 +142,33 @@ stage-3 effort on this subject).
 **Running total after 2026-08-04 stage-3 work: 3,676 pages** (Market Research 18->29, Equity & CM
 47->108 via content + full 20/20 qa/ coverage, Valuation 51->405 via the free-win swap).
 
-**Next up**: apply the same qa/-folder check to Investments & Portfolio Management (currently
-320pg via `_components/Investments-Portfolio-Management_FULL.pdf`) — verify whether its qa/
-folder is already complete (it likely already includes qa/, unlike EquityCapitalMarkets which
-had none) before assuming it needs the same treatment; if already complete, move to genuinely
-deepening the two sections with no qa/ shortcut available: Technical Research career guide (66pg,
-no source chapter-folder found) and Market Research (29pg, single-file handbook) — these need
-real new chapters/handbook expansion, not a qa/-folder swap.
+**Checked Investments**: already has full 18/18 qa/ coverage (matches its 320pg build) — no
+further qa/-folder work needed there.
+
+**2026-08-04, TRA handbook near-miss (important lesson)**: attempted to deepen
+`Technical_Research_Study_Guide.pdf` (66pg) by expanding `sources_md/TRA_COMPLETE_HANDBOOK.md`
+and rebuilding via `build_handbook_pdf.py` — the rebuild produced only 27pg, LESS than the
+existing 66pg file. Investigated: the committed 66pg PDF was **not actually built from
+TRA_COMPLETE_HANDBOOK.md at all** — it came from a richer, illustrated pipeline
+(`study/trading_learning/learn/build_illustrated_handbook.py`, diagram+what-it-is+why-it-works+
+psychology+trade-plan format) whose markdown source no longer exists in this repo (the PDF was
+merged in from a prior workspace as a pre-built artifact — see `git log --follow` on the file).
+**Restored the original 66pg file via `git checkout`** rather than overwriting it with the
+thinner rebuild. Lesson for any future file: before rebuilding ANY existing PDF from a source
+file, sample-compare the current committed PDF's actual text against the source you're about to
+build from — matching filenames/topics doesn't guarantee they're actually linked, especially
+after repo reorganisations.
+Instead, built the enriched TRA_COMPLETE_HANDBOOK.md (worked Greeks/straddle numericals,
+position-sizing/R-multiple worked trade, backtested-strategy-metrics worked example, two full
+worked trade setups, 12-Q interview appendix — all genuinely new, non-overlapping with the
+original 66pg file's different content) as a **separate new file**,
+`Technical_Research_Deepening_Handbook.pdf` (27pg), added as its own master section (4b) rather
+than replacing anything.
+
+**Running total after all 2026-08-04 stage-3 work: 3,703 pages.**
+
+**Next up**: Market Research (29pg, single-file handbook, no shortcut available — needs the same
+kind of genuine deepening pass just done for TRA) is the last thin section with real remaining
+work. After that, the two large already-≥1000pg sections (Technical Analysis 1,747; Options
+Trading 998) could optionally be pushed further, and Investments/Equity-CM/Valuation could get
+additional worked-example passes beyond their current qa/ coverage if still short of 1,000 each.
