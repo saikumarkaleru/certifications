@@ -121,5 +121,10 @@ produced the original PDFs — not a content change, just a re-render.
   (each QA file added roughly +2pg for ~20-30 min of work, matching Valuation's own ratio at
   scale: 18 qa files roughly matched or exceeded the size of the 18 concept chapters).
 
-**Running total after 2026-08-04 stage-3 work: 3,639 pages** (Market Research 18->29, Equity & CM
-47->71 (63 from content, +8 from the qa/ folder), Valuation 51->405 via the free-win swap).
+**2026-08-04, later pass**: added qa/ files for 5 more EquityCapitalMarkets chapters (02
+primary-markets-IPO, 03 secondary-markets-trading, 04 market-participants, 05 equity-instruments,
+06 market-indices — 9 of 20 chapters now have qa/). 71 -> 81pg. Remaining 11 chapters without
+qa/: 01, 08, 09, 11, 13-19.
+
+**Running total after 2026-08-04 stage-3 work: 3,649 pages** (Market Research 18->29, Equity & CM
+47->81 via content + 9 qa/ files, Valuation 51->405 via the free-win swap).
