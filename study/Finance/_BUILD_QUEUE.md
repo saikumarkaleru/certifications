@@ -59,3 +59,24 @@ contents related to stock market." Reverted that; added Options-Trading-Complete
 NSE F&O options — squarely stock-market, zero overlap with the charting book) instead, landing
 at 3,250. Keep this scope boundary for any future stage: stock-market/equity/derivatives-on-
 equity content only, not general corporate/credit/IB finance.
+
+## Stage 3 (in progress): "each topic 1,000 pages minimum"
+User's next ask: every section of the master ≥1,000 pages. Current per-section page counts:
+Equity & Capital Markets 47 · Valuation 51 · Investments-Portfolio-Mgmt 320 · Technical Research
+career guide 66 · **Technical Analysis Complete 1,747 (done)** · **Options Trading Complete 998
+(~done)** · Market Research 18→**29** (first deepening pass, 2026-08-04: added research-brief/
+objective-translation, 6 industry-worked design examples, full worked questionnaire incl. Van
+Westendorp + choice-based conjoint task, panel data-quality checks, regression + conjoint
+worked numeric examples, 4 more sector sizing examples, win-loss worked example, brand/ad-
+research part, B2B research part, research-ops/vendor/ethics/DPDP-Act part, +14 Q&A). Still
+~970pg short of 1,000 for this section alone.
+
+**Honest scope note**: closing the remaining gap (Equity&CM +953, Valuation +949,
+Investments +680, Technical-career +934, Market Research +971 ≈ **3,500+ more pages**) is a
+multi-session undertaking — each pass like the 2026-08-04 one adds roughly 10-15pg per section
+per session. Continue additively: pick the thinnest section, add genuinely new sub-sections
+(worked examples, case studies, deeper frameworks — never restate existing content), rebuild via
+`build_handbook_pdf.py` (for the Market Research single-file handbook) or the numbered-subject
+pattern (for Equity/Valuation/Investments, which are separate multi-file `Finance/0X_*` sources —
+check each subject's own source markdown location before editing), then
+`sources_md/merge_stock_market_master.mjs` to refresh the master.
