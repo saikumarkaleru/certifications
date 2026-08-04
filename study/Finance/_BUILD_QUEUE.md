@@ -71,12 +71,32 @@ worked numeric examples, 4 more sector sizing examples, win-loss worked example,
 research part, B2B research part, research-ops/vendor/ethics/DPDP-Act part, +14 Q&A). Still
 ~970pg short of 1,000 for this section alone.
 
-**Honest scope note**: closing the remaining gap (Equity&CM +953, Valuation +949,
-Investments +680, Technical-career +934, Market Research +971 ≈ **3,500+ more pages**) is a
-multi-session undertaking — each pass like the 2026-08-04 one adds roughly 10-15pg per section
-per session. Continue additively: pick the thinnest section, add genuinely new sub-sections
-(worked examples, case studies, deeper frameworks — never restate existing content), rebuild via
-`build_handbook_pdf.py` (for the Market Research single-file handbook) or the numbered-subject
-pattern (for Equity/Valuation/Investments, which are separate multi-file `Finance/0X_*` sources —
-check each subject's own source markdown location before editing), then
-`sources_md/merge_stock_market_master.mjs` to refresh the master.
+**Honest scope note**: closing the remaining gap (Equity&CM, Valuation, Investments,
+Technical-career, Market Research ≈ **3,400+ more pages** as of 2026-08-04) is a multi-session
+undertaking — each deepening pass adds roughly 10-20pg per section. User confirmed pace:
+"keep going every message" — continue additively each turn: pick the thinnest section, add
+genuinely new sub-sections (worked examples, case studies, deeper frameworks — never restate
+existing content), rebuild, refresh the master. Do not restate already-added content across
+passes — check what a chapter/section already covers before adding to it.
+
+**New persistent infra (2026-08-04)**: `sources_md/build_subject_pdf.py` — generic builder for
+the chapter-folder subjects (`Finance/EquityCapitalMarkets/md/*.md`, `Finance/Valuation/md/*.md`,
+`Finance/Investments/md/*.md`, etc., 18-20 chapters each). Replaces the old, now-gone
+`scratchpad/build_subject_pdf.py`. Usage:
+`python build_subject_pdf.py ../<SubjectDir> "<Title>" ../<Output>.pdf`. Switching to this
+builder changed baseline page counts slightly (e.g. Equity & Capital Markets 47->61pg from the
+builder alone, before any new content) since pagination differs marginally from whatever
+produced the original PDFs — not a content change, just a re-render.
+
+**Progress log**:
+- Market Research: 18 -> 29pg (see stage-3 intro above for what was added).
+- Equity & Capital Markets (`Finance/EquityCapitalMarkets/md/`): 47 -> 63pg. Deepened chapter 07
+  (equity-research-process: added Channel Checks & Primary Research in Equity Analysis section
+  incl. the SEBI insider-trading compliance boundary, and a full worked research note — "TechCo
+  India Ltd" — DCF+comps+thesis+catalysts+risks+falsification end to end) and chapter 12
+  (stock-pitch: added the full initiation-of-coverage note structure incl. sensitivity-table
+  convention, two more worked pitches — banking sector P/B-via-ROE framework, tech-sector short
+  disaggregating a blended NRR metric — and a sector-specific valuation frameworks quick
+  reference: banks/NBFCs, insurance EV/VNB, cyclicals through-the-cycle EV/EBITDA, real-estate
+  NAV, pre-profit tech). 18 other chapters in this subject (01-06, 08-11, 13-20) not yet touched
+  — next pass on this subject should deepen those before returning to ch.07/12.
