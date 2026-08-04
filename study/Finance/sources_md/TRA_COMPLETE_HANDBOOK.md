@@ -849,6 +849,27 @@ Because the position is simultaneously long one instrument and short a correlate
 
 ---
 
+# PART 29 — READING BROKER/ANALYST CONSENSUS AS TECHNICAL CONTEXT
+
+## 29.1 Why a TRA needs to read sell-side consensus without duplicating fundamental work
+A Technical Research Analyst isn't a fundamental/equity analyst (that discipline is covered in full in the Equity & Capital Markets material elsewhere in this compilation), but ignoring sell-side consensus data entirely would mean missing a real, market-moving input — target-price revisions, rating changes, and earnings-estimate revisions move prices and create technical setups worth understanding, even though building the fundamental model behind them isn't the TRA's own job. This Part covers reading consensus data *as a technical input*, not replicating the fundamental analysis behind it.
+
+## 29.2 Consensus target price and rating distribution — what the aggregate view tells you
+Financial data platforms aggregate individual sell-side analysts' ratings (Buy/Hold/Sell) and target prices into a **consensus** — the average or median target price, and the distribution of ratings across covering analysts. A stock trading well below its consensus target price isn't automatically a buy signal (the consensus itself can be wrong, or slow to update, exactly the kind of "market inefficiency" the Equity & Capital Markets material's market-efficiency chapter discusses) — but a large and widening gap between price and consensus target, especially alongside supportive technical structure (a basing pattern, a and the price holding above key support), is a data point worth incorporating into a TRA's broader confluence read (Part 3.7), not a standalone signal to act on.
+
+## 29.3 Estimate revisions and rating changes — a genuine event-driven technical catalyst
+A cluster of sell-side analysts raising earnings estimates or upgrading ratings within a short window (an **estimate-revision momentum** signal, distinct from the stock's own price momentum) has historically shown some tendency to precede continued price strength — the logic being that estimate revisions reflect analysts digesting genuinely new information (a results beat, improved guidance) that the market may still be gradually incorporating, similar in spirit to the post-earnings-announcement-drift anomaly discussed in the Equity & Capital Markets market-efficiency material. A TRA tracking a name experiencing a cluster of upgrades alongside a technical breakout has two independent, mutually-reinforcing signals rather than relying on price action alone.
+
+## 29.4 The trap — don't let consensus data substitute for the TRA's own technical discipline
+The single biggest risk in using consensus data is letting it override, rather than supplement, the TRA's own technical framework — a stock with an overwhelmingly bullish consensus (all Buy ratings, high target prices) can still be technically extended and due for a pullback (an important, commonly-tested distinction: consensus sentiment and technical setup quality are different dimensions, and "everyone agrees it's a good company" is not the same question as "is this the right technical entry point right now"). A disciplined TRA treats consensus data as one input alongside — never a replacement for — the price/volume/indicator confluence framework (Part 3.7) that is this handbook's actual core discipline.
+
+## 29.5 Worked example — combining a rating upgrade with technical confirmation
+*Three sell-side analysts upgrade a stock from Hold to Buy within the same week, raising target prices by an average of 12%, following a strong quarterly result. The stock, which had been range-bound for two months, breaks above the top of that range on the day of the results, on volume roughly 3x its 20-day average.*
+
+**Model answer.** This is a strong confluence case combining Part 29.3's estimate-revision-momentum signal with a textbook price/volume breakout (Part 2, Part 3.7) — the fundamental catalyst (the results beat driving the upgrades) and the technical signal (a volume-confirmed range breakout) are independently pointing the same direction, each reinforcing the other's reliability rather than either standing alone. A TRA's call here would cite both explicitly — the technical breakout as the actionable trigger and entry/stop framework (Part 8), and the consensus upgrade cluster as independent, fundamentally-driven confirmation that the breakout has a genuine catalyst behind it rather than being an unexplained technical move — exactly the kind of multi-source synthesis (echoing Part 22.5's FII/DII data-triangulation discipline) that distinguishes a well-supported call from a purely chart-based one.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**

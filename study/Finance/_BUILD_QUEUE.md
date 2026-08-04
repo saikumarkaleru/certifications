@@ -482,4 +482,16 @@ correlation, cointegration, z-score mean-reversion mechanics, why "market-neutra
 pair-relationship-breakdown risk, and a full worked banking-sector pairs trade). Market Research
 70->72pg, TRA 56->58pg. Master: 3,788 -> 3,792 pages.
 
-**Running total: 3,792 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 32 (Sustainability & ESG
+Consumer Research to Market Research — distinct from the equity-ESG investment-risk chapter
+elsewhere in this compilation, this covers consumer sustainability *attitudes*: the well-
+documented attitude-behaviour gap, segmenting sustainability commitment rather than treating
+"the green consumer" as one segment, greenwashing perception research linking back to the BRSR
+equity-ESG material, and a worked willingness-to-pay discounting example) and PART 29 (Reading
+Broker/Analyst Consensus as Technical Context to TRA — consensus target price/rating distribution
+as one confluence input not a standalone signal, estimate-revision momentum as a genuine event-
+driven catalyst, the trap of letting bullish consensus override technical discipline, and a
+worked upgrade-cluster-plus-volume-breakout confluence example). Market Research 72->74pg, TRA
+58->60pg. Master: 3,792 -> 3,796 pages.
+
+**Running total: 3,796 pages.**
