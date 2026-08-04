@@ -204,4 +204,13 @@ and PART 17 (Syndicated Data & Panel-Based Research: retail-audit vs household-p
 key syndicated metrics — distribution/penetration/buying-rate/source-of-growth — and limitations)
 to Market Research. 37 -> 41pg. Master: 3,713 -> 3,717 pages.
 
-**Running total: 3,717 pages.**
+**2026-08-04, autonomous wake-cycle pass 2**: added PART 15 (Intermarket Analysis: bonds-equities,
+commodities-currencies incl. USD/INR-crude relationship, USD-commodities, bonds-commodities, a
+worked multi-signal confluence example, and limits/regime-breakdown caveats) and PART 16 (Building
+a Systematic Trading System: strategy components, a fully-specified worked trend-following
+strategy with ATR-based stops, why explicit specification matters even for discretionary traders)
+to the Technical Research Deepening Handbook. 27 -> 31pg. Also fixed two more stale frontmatter
+row page-counts (TRA deepening handbook, Market Research) that were still showing pre-update
+numbers. Master: 3,717 -> 3,720 pages.
+
+**Running total: 3,720 pages.**

@@ -489,6 +489,56 @@ Markets are driven by **fear and greed**; TA is, at heart, the study of crowd ps
 
 ---
 
+# PART 15 — INTERMARKET ANALYSIS
+
+## 15.1 What intermarket analysis is and why a TRA needs it
+**Intermarket analysis** studies the relationships *between* asset classes (equities, bonds, commodities, currencies) rather than analysing any single market in isolation — the premise being that these markets are economically linked, and a move in one often leads or confirms a move in another. A technical research analyst who only watches the equity index in isolation misses these cross-asset signals that professional macro/multi-asset desks watch constantly.
+
+## 15.2 The four core intermarket relationships
+- **Bonds and equities**: typically inversely related over the medium term — rising bond yields (falling bond prices) raise the discount rate applied to equity cash flows (the same WACC/CAPM logic from the Valuation chapters) and raise the relative appeal of "safe" fixed income versus equities, pressuring equity valuations, especially high-growth/high-multiple names most sensitive to discount-rate changes.
+- **Commodities and currencies**: commodity-exporting economies' currencies (e.g. resource-heavy emerging markets) tend to strengthen when commodity prices rise (higher export revenues) and weaken when they fall — the USD/INR-and-crude-oil relationship is a directly relevant Indian-market example, since India is a large net oil importer: a rising crude price typically pressures the rupee (higher import bill), while a falling crude price tends to support it.
+- **US Dollar and commodities**: most globally-traded commodities are priced in USD, so a broadly strengthening dollar mechanically makes commodities more expensive in other currencies, dampening demand and typically pressuring USD-denominated commodity prices lower — an inverse relationship a technical analyst watching gold or crude should track via the Dollar Index (DXY) as a standard cross-check.
+- **Bonds and commodities**: rising commodity prices (an inflation signal) often precede or coincide with rising bond yields, as markets price in expected central-bank tightening to control inflation — watching commodity trends can offer an early read on the bond-market direction likely to follow.
+
+## 15.3 Worked example — using intermarket signals to add conviction to an equity call
+*A TRA is considering a bullish call on a rate-sensitive Indian real-estate/NBFC stock. Context: US 10-year Treasury yields have been falling for three weeks (bond prices rising), India's 10-year G-Sec yield has followed the same direction, crude oil has fallen 8% over the same period (supportive for the rupee and for India's import-heavy inflation outlook), and the Dollar Index has weakened.*
+
+**Model answer.** All four intermarket signals point the same direction and reinforce the equity thesis: falling global and domestic bond yields directly benefit rate-sensitive sectors (lower discount rates, cheaper financing costs for NBFCs and real-estate developers specifically); falling crude oil supports the rupee and reduces one of the RBI's key inflation-watch inputs, raising the probability of a dovish domestic rate stance that further supports the same rate-sensitive trade; a weaker Dollar Index generally coincides with more supportive conditions for emerging-market risk assets, including Indian equities broadly. **The discipline this example teaches**: a TRA presenting this call to a client or in an interview should explicitly walk through this intermarket confluence, not just point to the stock's own chart — "the equity setup, the falling-yield backdrop, and the currency/commodity picture are all telling the same story" is a materially stronger, more professional case than a chart-pattern observation alone.
+
+## 15.4 Limits of intermarket analysis
+These relationships are historical tendencies, not fixed laws — they can and do break down or reverse for extended periods (a well-known example: the traditional inverse bond-equity relationship has weakened or even reversed during some high-inflation regimes, since both bonds and equities can sell off together when inflation itself is the dominant driver of both markets). A disciplined analyst treats intermarket signals as one input among several (alongside the stock's own technicals and the fundamental backdrop), not a mechanical, always-true rule.
+
+---
+
+# PART 16 — BUILDING A SYSTEMATIC TRADING SYSTEM
+
+## 16.1 From discretionary rules to a systematic strategy
+Everything in Parts 1-14 can be traded **discretionarily** (a human analyst applies judgment to each setup) or **systematically** (a fully coded, rules-based strategy that generates signals without daily human judgment). A systematic approach forces every rule — the trend filter, the entry trigger, the stop, the position size — to be stated with enough precision that a computer can execute it unambiguously, which is itself a valuable discipline even for an analyst who ultimately trades discretionarily, since it exposes vague or inconsistent reasoning that "feels" rigorous in prose but can't actually be coded.
+
+## 16.2 The core components of a systematic strategy
+1. **Universe**: which instruments the strategy trades (e.g. Nifty 50 constituents, or a specific index/commodity).
+2. **Signal generation**: the precise, unambiguous rule that triggers a trade (e.g. "50-day EMA crosses above 200-day EMA AND RSI(14) > 50" — note the explicit, codeable thresholds, unlike a discretionary "the trend looks strong").
+3. **Entry logic**: exactly when and at what price the trade is taken once a signal fires (next bar's open, at the close of the signal bar, etc. — a detail that matters enormously for backtest realism, per Part 10.2's look-ahead-bias warning).
+4. **Exit logic**: both the profit-target and stop-loss rules, and any time-based exit (e.g. close the position if the signal hasn't resolved within N days).
+5. **Position sizing rule**: coded exactly as in Part 8.6's worked example, applied systematically rather than judged trade-by-trade.
+6. **Portfolio-level rules**: maximum concurrent positions, maximum sector/correlation exposure, and any portfolio-level drawdown circuit-breaker (e.g. "stop taking new signals if the strategy's running drawdown exceeds 15%").
+
+## 16.3 Worked example — fully specifying a systematic trend-following strategy
+*Turning the "trend-following / pullback" discretionary setup from Part 14 into codeable rules.*
+
+- **Universe**: Nifty 50 constituents, daily bars.
+- **Signal**: price above its rising 50-day EMA (defining the uptrend, per Part 3.1) AND RSI(14) between 40-55 (a "healthy pullback, not oversold-breakdown" band, avoiding both an already-extended entry and a genuinely broken trend).
+- **Entry**: at the next day's open, following the signal day's close meeting the above condition.
+- **Stop**: 1.5× the 14-day Average True Range (ATR — a volatility-adjusted stop distance, avoiding a fixed % stop that's too tight for a volatile stock and too loose for a calm one) below the entry price.
+- **Target**: exit at 3× the initial ATR-based risk (enforcing a fixed ≥1:3 R:R, per Part 8.2's discipline, systematically rather than judged per-trade).
+- **Time exit**: close the position if neither the stop nor target is hit within 20 trading days (preventing capital from sitting indefinitely in a stagnant, directionless trade).
+- **Position sizing**: fixed 1% account risk per trade (Part 8.3's formula), capped at a maximum of 8 concurrent open positions to bound total portfolio risk even if many signals fire simultaneously (a realistic risk during a broad market-wide trend, when many stocks can trigger the same signal at once — an important portfolio-level check a purely per-trade risk rule alone doesn't catch).
+
+## 16.4 Why explicit specification matters even for a discretionary analyst
+Writing out a strategy this precisely (Section 16.3) exposes exactly the kind of vague reasoning that sounds plausible in a research note but wouldn't survive being coded — e.g. "buy on a pullback in an uptrend" leaves the ATR-based stop distance, the exact RSI band, and the position-sizing rule all unstated. A TRA who can move fluidly between the discretionary narrative (Parts 1-9) and the fully-specified systematic version (this Part) demonstrates the quantitative rigor increasingly expected of technical research roles — directly the kind of Python/backtesting differentiator flagged in Part 13's "Tools of the Trade" section.
+
+---
+
 # APPENDIX A — TWO FULLY WORKED TRADE SETUPS, START TO FINISH
 
 ## A.1 A trend-following pullback setup (cash equity)
