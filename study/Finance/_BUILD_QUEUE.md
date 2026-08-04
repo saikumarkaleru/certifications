@@ -312,3 +312,16 @@ chooses preferred shares over debt for covenant/control reasons). Page count unc
 absorbed into existing whitespace) but content verified present (file size grew 2272KB->2282KB).
 Master stays 3,739 pages this pass — chapters with worked-example additions now: 02, 04, 05, 06,
 07, 09, 12, 13, 14, 15, 17, 18, 19, 20 (14 of 20). Remaining: 01, 03, 08, 10, 11, 16.
+
+**2026-08-05, autonomous wake-cycle: 2 more new PARTs**: added PART 20 (Marketing Mix Modeling &
+Media Effectiveness Research: adstock/carryover, diminishing-returns saturation, marginal-ROI
+budget reallocation with a worked TV-vs-digital example) and PART 21 (Customer Retention, Churn &
+Lifetime Value Research: contractual vs non-contractual and voluntary vs involuntary churn,
+predictive churn modelling's research contribution, a worked CLV formula example, and the
+CAC:CLV ratio connecting retention back to acquisition economics) to Market Research. 47 -> 51pg
+— confirms new-PART additions add pages far more reliably than mid-chapter insertions (this
+session's recurring lesson). Also fixed 3 more stale frontmatter row counts (Equity & CM,
+TRA Deepening Handbook, Market Research) that had drifted from actual page counts across recent
+passes. Master: 3,739 -> 3,743 pages.
+
+**Running total: 3,743 pages.**
