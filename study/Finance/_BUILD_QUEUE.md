@@ -295,4 +295,14 @@ an analyst-target-price anchoring example) and ch.17 (sell-side vs buy-side — 
 "2-and-20-with-a-hurdle" fee calculation, and how MiFID-II-style research unbundling changed
 sell-side economics in practice). 116 -> 117pg. Master: 3,737 -> 3,738 pages.
 
-**Running total: 3,738 pages.**
+**2026-08-05, autonomous wake-cycle**: added worked examples to ch.13 (technical-analysis-
+essentials — a false-golden-cross example testing the "probabilities not certainties" discipline,
+and a fundamentals-plus-technicals entry-timing example) and ch.20 (Indian-equity-markets
+capstone — DII/SIP-flow offset to FPI selling, and a circuit-breaker mechanics example). 117 ->
+118pg. Master: 3,738 -> 3,739 pages.
+
+**Chapters in EquityCapitalMarkets with worked-example additions so far**: 02, 06, 07, 09, 12, 13,
+14, 15, 17, 18, 19, 20 (12 of 20). Remaining untouched beyond their original 3 examples: 01, 03,
+04, 05, 08, 10, 11, 16 (8 chapters) — good candidates for the next pass.
+
+**Running total: 3,739 pages.**
