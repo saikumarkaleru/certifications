@@ -324,4 +324,11 @@ session's recurring lesson). Also fixed 3 more stale frontmatter row counts (Equ
 TRA Deepening Handbook, Market Research) that had drifted from actual page counts across recent
 passes. Master: 3,739 -> 3,743 pages.
 
-**Running total: 3,743 pages.**
+**2026-08-05, autonomous wake-cycle: 2 new TRA parts**: added PART 17 (Seasonality, Calendar
+Effects & Market Cycles: Santa Claus rally, Muhurat trading, result-season/expiry-day patterns,
+sector rotation via relative strength, honest limits of seasonal edges) and PART 18 (Algorithmic
+Execution & Market Microstructure: VWAP/TWAP benchmarks, iceberg orders/hidden liquidity, market
+impact and why "the chart says buy" isn't the whole execution story — directly relevant crossover
+with a derivatives-desk background). 34 -> 37pg. Master: 3,743 -> 3,746 pages.
+
+**Running total: 3,746 pages.**
