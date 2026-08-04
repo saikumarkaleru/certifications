@@ -804,6 +804,27 @@ The **McClellan Oscillator** applies the same EMA-crossover logic from Part 3.1 
 
 ---
 
+# PART 27 — COMMODITY-SPECIFIC TECHNICAL PATTERNS
+
+## 27.1 Why commodities need their own technical treatment beyond Part 6's fundamental drivers
+Part 6 covered gold, silver, crude, and base metals from a fundamental-driver perspective (what moves each commodity's price). This Part covers how the *technical* toolkit from Parts 1-4 applies distinctively to each — commodities have their own well-documented pattern tendencies and technical quirks a TRA covering this asset class specifically should know, beyond generically applying equity-index technical methods unchanged.
+
+## 27.2 Gold — trending character and the role of round numbers
+Gold has historically shown a strong tendency toward sustained, multi-month trending behaviour once a directional move is established (consistent with its role as a macro-driven, slow-moving store-of-value asset rather than a name reacting to frequent company-specific news) — favouring trend-following technical approaches (Part 3.1's moving-average and Part 14's positional-timeframe playbook) over mean-reversion approaches more often than a typical equity name might. Gold also shows a well-documented tendency for **round-number psychological levels** (e.g. $2,000/oz, $2,500/oz) to act as meaningful support/resistance zones beyond what pure technical structure alone would predict — a genuine market-psychology effect (large round numbers attract disproportionate attention and order clustering) worth factoring into level identification specifically for this asset.
+
+## 27.3 Crude oil — higher volatility, sharper reversals, and geopolitical gap risk
+Crude oil technical patterns tend to feature sharper, faster reversals than gold's more sustained trending character, reflecting crude's higher sensitivity to sudden supply-side news (an OPEC+ decision, a geopolitical supply disruption) that can invalidate a technical setup abruptly and without the kind of technical warning (divergence, a topping pattern) that might precede a more gradual equity reversal. This elevated **event-gap risk** (Part 19.3's gap-type framework applies here with unusually high frequency for a commodity) means position sizing and stop placement for crude oil technical trades should account for a higher likelihood of a stop being skipped entirely by an overnight gap, versus gold's comparatively more gradual, less gap-prone character.
+
+## 27.4 Silver — dual character and higher volatility amplification
+Silver, per Part 6.3's fundamental framing, is part precious-metal and part industrial-metal — technically, this shows up as silver frequently amplifying gold's directional moves (moving further in the same direction, both up and down) rather than tracking a genuinely independent technical path, making the **gold-silver ratio** (Part 6.3) itself a useful technical tool: a ratio at a historical extreme (very high, silver cheap relative to gold, or very low, silver expensive relative to gold) is sometimes used as a mean-reversion signal for a relative (not outright directional) trade between the two metals, distinct from taking an outright directional view on either alone.
+
+## 27.5 Worked example — combining commodity-specific and general technical frameworks
+*Crude oil has been range-bound between $75-85/barrel for two months. Price approaches $85 for the third time, with each prior approach to this level being followed by a sharp reversal on OPEC+-related headlines.*
+
+**Model answer.** This combines Part 2.2's general support/resistance logic (a level tested multiple times without a clean break is a genuine, strengthening resistance) with Part 27.3's crude-specific event-gap-risk awareness — the *reason* prior tests of $85 failed (OPEC+ headlines, not a purely technical rejection) is itself informative: it suggests the level's significance may be partly coincidental with a recurring news catalyst (OPEC+ meeting timing) rather than purely a technical memory effect, meaning a TRA should specifically check the OPEC+ calendar (Part 15's intermarket/fundamental-calendar awareness) around any future approach to $85 rather than assuming the level will hold or break on technical grounds alone — a genuinely commodity-specific analytical step an equity-only technical approach wouldn't include.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**

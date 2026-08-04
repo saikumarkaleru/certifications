@@ -461,4 +461,13 @@ coefficients) embedded in Market Research 29.3. Page counts steady (content veri
 file-size growth: TRA 1243KB->1352KB, Market Research 1548KB->1604KB). Master: 3,784 pages
 (unchanged this round, verified via rebuild).
 
-**Running total: 3,784 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 30 (Research Budgeting & ROI
+Justification to Market Research — budget components, honest ROI-demonstration approaches incl.
+decision-influence tracking and cost-avoidance framing, build-vs-buy for research capability, a
+worked headcount-business-case example) and PART 27 (Commodity-Specific Technical Patterns to
+TRA — gold's trending character and round-number levels, crude's sharper reversals and event-gap
+risk, silver's dual character and the gold-silver ratio as a mean-reversion tool, a worked
+crude-oil resistance-plus-OPEC+-calendar example). Market Research 68->70pg, TRA 54->56pg.
+Master: 3,784 -> 3,788 pages.
+
+**Running total: 3,788 pages.**
