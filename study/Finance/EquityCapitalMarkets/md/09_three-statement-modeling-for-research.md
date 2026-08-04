@@ -52,6 +52,17 @@ graph TD
 
 **Example 3 — the circularity.** Adding a revolver whose interest depends on the average debt balance creates a circular reference (interest ↔ debt ↔ cash). Turning on iterative calculation lets Excel converge; alternatively, compute interest on opening (not average) debt to break the loop. Interviewers love this: "where's the circular reference in a 3-statement model?"
 
+**Example 4 — full working-capital schedule, driven off days.** A company's model needs a working-capital forecast, not a guessed flat number. Given Year-1 revenue ₹800 cr, COGS ₹520 cr, and target days of DSO (Days Sales Outstanding) 45, DIO (Days Inventory Outstanding) 60, DPO (Days Payable Outstanding) 40:
+```
+Receivables = Revenue × DSO/365 = 800 × 45/365 ≈ ₹98.6 cr
+Inventory   = COGS × DIO/365    = 520 × 60/365 ≈ ₹85.5 cr
+Payables    = COGS × DPO/365    = 520 × 40/365 ≈ ₹57.0 cr
+Net Working Capital = Receivables + Inventory − Payables = 98.6 + 85.5 − 57.0 = ₹127.1 cr
+```
+If Year-2 revenue grows to ₹880 cr and COGS to ₹560 cr with the *same* days assumptions, NWC becomes 880×45/365 + 560×60/365 − 560×40/365 ≈ 108.5 + 92.1 − 61.4 = ₹139.2 cr — an increase of ₹12.1 cr, which is the **ΔNWC** that flows as a cash *outflow* in the FCFF build (Valuation chapters). This is the concrete mechanism behind the abstract statement "growth costs cash": every rupee of extra revenue tied up in unpaid receivables and unsold inventory (net of the payables the company itself hasn't paid yet) is cash the business doesn't get to keep, and driving it off days — not a flat guess — is what makes the forecast defensible when a PM asks "why did you assume that number."
+
+**Example 5 — sanity-checking a model's implied ratios before presenting it.** A junior analyst's 5-year forecast shows revenue growing 18% annually while receivable days *fall* from 45 to 30 over the same period, with no stated operational change (no new collections process, no shift in customer mix) driving that improvement. A reviewer should flag this immediately: days ratios don't improve by themselves, and an unexplained, favourable drift in a working-capital assumption is one of the most common ways an overly optimistic forecast quietly inflates projected free cash flow — checking that every year-over-year change in a driver assumption has a stated, defensible reason (not just "the formula extrapolated it") is a core model-review discipline, not a nice-to-have.
+
 ## How it is tested in interviews
 - **"Walk me through a three-statement model."** — Build revenue and costs → schedules (depreciation, working capital, debt) → complete the income statement → cash flow from net income → balance sheet → check it balances. Emphasize the *links*.
 - **"How are the three statements linked?"** — Net income → retained earnings and CF; depreciation → PP&E, IS and CF; capex → PP&E and CF; debt → BS, interest and financing.

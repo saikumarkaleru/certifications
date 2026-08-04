@@ -274,4 +274,19 @@ Research 6.7/6.8; `greeks_across_strikes.png` (Delta/Gamma/Theta curves across s
 Black-Scholes math via scipy.stats.norm) added to TRA Part 5.4. Market Research 46->47pg, TRA
 33->34pg. Master: 3,734 -> 3,736 pages.
 
-**Running total: 3,736 pages.**
+**2026-08-04, checked Investments before touching it**: test-rebuilt Investments/ via
+`build_subject_pdf.py` (301pg vs the original 320pg _components file) — close enough, and a text
+sample confirmed genuinely matching content (same chapter text), unlike the TRA near-miss. But
+the original has a dedicated TOC page and LaTeX-rendered math my builder doesn't produce, so
+**deliberately did not overwrite it** — not worth the risk for a marginal page gain. If Investments
+needs deepening later, follow the TRA pattern (a separate additional file, not an overwrite) unless
+the TOC/LaTeX gap is closed in the builder first.
+
+Added 2 more worked examples to Equity & Capital Markets chapters not yet touched: ch.09
+(three-statement-modeling — full working-capital schedule driven off DSO/DIO/DPO days with a
+2-year ΔNWC calc, and a "sanity-check the model's implied ratios" example) and ch.19 (ESG —
+quantifying a governance discount via a WACC premium in an actual DCF re-run, and using India's
+BRSR disclosure data as a real research input rather than a compliance checkbox). 115 -> 116pg.
+Master: 3,736 -> 3,737 pages.
+
+**Running total: 3,737 pages.**
