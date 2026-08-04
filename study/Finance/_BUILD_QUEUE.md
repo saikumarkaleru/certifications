@@ -494,4 +494,17 @@ driven catalyst, the trap of letting bullish consensus override technical discip
 worked upgrade-cluster-plus-volume-breakout confluence example). Market Research 72->74pg, TRA
 58->60pg. Master: 3,792 -> 3,796 pages.
 
-**Running total: 3,796 pages.**
+**2026-08-05, autonomous wake-cycle: frontmatter re-sync + 2 more new parts — master crosses
+3,800 pages**: resynced frontmatter again, then added PART 33 (Pre-IPO & Investor Perception
+Research to Market Research — a genuine capital-markets-adjacent discipline: structured investor/
+analyst interviews ahead of a roadshow probing awareness, concerns, valuation expectations, and
+messaging effectiveness; why this exists — the cost of discovering a messaging gap during the
+compressed roadshow window itself vs weeks earlier; a worked example surfacing a segment-
+relationship confusion ahead of a follow-on offering) and PART 30 (Multi-Leg Options Adjustments
+& Rolling Strategies to TRA — covered-call rolling mechanics, adjusting a tested iron condor/
+strangle (roll the untested side vs the tested side vs close entirely), delta-neutral systematic
+adjustment, and a fully worked tested-short-strangle roll-down example with the explicit "is the
+thesis still intact" branching decision). Market Research 74->76pg, TRA 60->62pg. Master: 3,796
+-> 3,800 pages.
+
+**Running total: 3,800 pages.**
