@@ -340,4 +340,12 @@ cues baked in, the standard pre-market checklist incl. SGX/GIFT Nifty, gap types
 breakaway/exhaustion — and a full worked pre-market-view synthesis example). Market Research
 51->53pg, TRA 37->39pg. Master: 3,746 -> 3,750 pages.
 
-**Running total: 3,750 pages.**
+**2026-08-05, autonomous wake-cycle**: added worked examples to ch.03 (secondary-markets-trading
+— stock-level vs index-level circuit breaker distinction, a worked institutional market-impact
+cost calculation) and ch.08 (fundamental-analysis — a full worked Porter's Five Forces on Indian
+organised retail, and decomposing a cyclical earnings beat before extrapolating it in a
+valuation). 118 -> 120pg. Master: 3,750 -> 3,752 pages. Chapters with worked-example additions
+now: 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 17, 18, 19, 20 (16 of 20). Remaining: 01, 10,
+11, 16.
+
+**Running total: 3,752 pages.**
