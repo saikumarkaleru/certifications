@@ -642,6 +642,27 @@ A **gap** is the difference between the previous close and the current session's
 
 ---
 
+# PART 20 — SECTOR & THEMATIC INDEX TRADING
+
+## 20.1 Why sector indices deserve their own dedicated technical approach
+Bank Nifty, Nifty IT, Nifty Auto, Nifty Pharma and other sectoral indices each have their own distinct volatility signature, dominant-stock concentration, and macro sensitivity — treating them as smaller versions of the broad Nifty 50 misses tradeable structural differences a specialised TRA should know cold, especially given how heavily traded Bank Nifty derivatives specifically are in the Indian market.
+
+## 20.2 Bank Nifty — concentration, rate-sensitivity, and its own volatility character
+Bank Nifty is dominated by a small number of large private and PSU banks, meaning single-stock news on the top 2-3 constituents can move the entire index disproportionately compared to the broader, more diversified Nifty 50 — a TRA trading Bank Nifty options must track index-heavyweight-specific news (a top private bank's results, an RBI policy surprise affecting the banking sector specifically) with the same diligence as broad-market cues. Bank Nifty also typically carries higher implied volatility than Nifty 50 (reflecting both its higher realised volatility and its concentration), meaning options strategies calibrated for Nifty's typical IV level often need adjustment — a straddle sized using Nifty's usual expected-move assumptions will be miscalibrated if applied unchanged to Bank Nifty.
+
+## 20.3 Nifty IT — a genuinely different macro driver set than the domestic-facing sectors
+Nifty IT's constituents derive the majority of their revenue from US/European clients, making the sector unusually sensitive to **USD/INR** (a weaker rupee is a direct earnings tailwind for dollar-revenue, rupee-cost businesses) and to **US technology-sector demand cycles and corporate IT-spending trends** — arguably more sensitive to US-specific intermarket cues (Part 15, Part 19.2) than to purely domestic Indian macro data, a genuinely distinct driver profile from Bank Nifty's domestic-rate-and-credit-cycle sensitivity. A TRA covering Nifty IT should weight US technology-sector earnings season and Fed policy commentary alongside the standard domestic pre-market checklist.
+
+## 20.4 Thematic and strategy indices — momentum, quality, low-volatility factor indices
+Beyond sector indices, India has increasingly liquid factor/thematic indices (Nifty200 Momentum, Nifty Quality, Nifty Low Volatility, and similar) that are constructed using explicit rules (e.g. selecting and weighting constituents by trailing price momentum) rather than simple market-cap weighting — these give a TRA a direct, tradeable way to express a factor view (e.g. "momentum is working in this market regime") without having to build a custom stock-picking screen, and their own historical performance patterns (which factors have led in which macro regimes) are a legitimate extension of the sector-rotation framework from Part 17.3.
+
+## 20.5 Worked example — a relative-strength-based sector rotation call
+*Nifty Bank has outperformed Nifty IT by 8% over the trailing 3 months, with Nifty Bank making new relative highs against Nifty IT on the ratio chart (Nifty Bank ÷ Nifty IT), while Nifty IT's absolute chart shows a weakening trend below its 50-day MA.*
+
+**Model answer.** Plotting the ratio of two sector indices against each other (a "relative strength" or "ratio" chart) isolates which sector is outperforming independent of the broader market's overall direction — a rising Nifty Bank/Nifty IT ratio making new highs indicates money is rotating toward banking and away from IT specifically, consistent with Part 17.3's cycle-rotation logic if the macro backdrop (e.g. domestic credit growth accelerating, global tech-spending cooling per Part 20.3's driver set) supports that read. The combined signal — relative strength confirming the rotation, plus Nifty IT's own absolute technical weakness (below its 50-day MA) — is a stronger basis for a pairs-style rotation trade (long Bank Nifty, short or underweight Nifty IT) than either signal alone, exactly the cross-index confluence approach a sector-focused TRA is expected to apply.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**

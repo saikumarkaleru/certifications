@@ -365,4 +365,14 @@ on top of the earlier 20/20 qa/ coverage — this subject has had two full enric
 121pg (content absorbed into whitespace this round, verified present via file-size growth
 2305KB->2315KB). Master: 3,753 pages (unchanged this round).
 
-**Running total: 3,753 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 23 (Financial Services &
+Investment Product Research to Market Research — the most direct bridge in this handbook to a
+stock-market-role background: trust/risk-perception dynamics, financial-literacy-aware survey
+design, SEBI/IRDAI disclosure constraints on concept testing, investor segmentation by risk
+tolerance/self-directed-vs-advised/life-stage, a worked options-feature-adoption-barrier
+diagnostic, and investor-confidence tracking) and PART 20 (Sector & Thematic Index Trading to
+TRA — Bank Nifty's concentration/rate-sensitivity/higher-IV character, Nifty IT's USD/INR and
+US-tech-cycle sensitivity, factor/thematic indices, and a worked relative-strength sector-
+rotation example). Market Research 53->55pg, TRA 39->41pg. Master: 3,753 -> 3,757 pages.
+
+**Running total: 3,757 pages.**
