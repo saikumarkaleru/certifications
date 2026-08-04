@@ -222,4 +222,36 @@ trade-promotion-effectiveness research incl. the pull-forward/pantry-loading eff
 calculation, the retailer-relationship angle) to Market Research — genuine, previously-uncovered
 topics (NPD/concept testing especially was a real gap). 41 -> 45pg. Master: 3,720 -> 3,724 pages.
 
-**Running total: 3,724 pages.**
+**2026-08-04, rendering pipeline upgrade (user asked for charts/images, not just text)**:
+investigated why the PDFs were text-heavy and found two real, fixable defects in
+`build_subject_pdf.py`/`build_handbook_pdf.py`, not a content gap:
+1. **Mermaid diagrams were rendering as raw text**, not diagrams — many EquityCapitalMarkets
+   chapters (and others) have ```mermaid fenced blocks, but Chrome's print-to-pdf had no mermaid.js
+   loaded, so they rendered as plain code text. Fixed by downloading `mermaid.min.js` locally
+   (`sources_md/vendor/mermaid.min.js`, no CDN dependency at build time) and injecting an init
+   script that converts `<pre><code class="mermaid">` blocks into real rendered SVG diagrams;
+   bumped Chrome's `--virtual-time-budget` 30000->60000ms to give rendering time to complete.
+2. **Markdown tables were silently broken** — python-markdown's `tables` extension requires a
+   blank line before a table, and most tables in this content immediately follow a bold
+   `**Label:**` line with no blank line, so they rendered as raw pipe-delimited text instead of
+   HTML tables. Fixed with a preprocessing pass (`ensure_blank_line_before_tables()`) in both
+   builders that inserts the missing blank line automatically — fixes every table across the
+   whole library without touching any of the ~400 source markdown files individually.
+Both fixes verified visually (rendered pages to PNG and inspected) before rebuilding for real.
+
+**New: real charts, not just diagrams**. Added `sources_md/generate_charts.py`
+(matplotlib, `python generate_charts.py` to regenerate) producing 5 PNGs in `sources_md/charts/`:
+segmentation scatter plot (Market Research 6.10), price-elasticity curve (16.2), TAM/SAM/SOM
+funnel (7.1), long-straddle payoff diagram (TRA 5.9), backtest equity-curve+drawdown chart
+(TRA 10.5) — embedded via markdown image syntax at each worked example. Added `img { max-width:
+92%; ... border ... }` CSS to both builders for clean, bordered, centered image rendering.
+
+**Rebuilt affected PDFs**: Equity & Capital Markets 109->115pg (diagrams+tables now real),
+Market Research 45->46pg, TRA Deepening Handbook 31->32pg (both +1 chart each net of table fix).
+Master: 3,724 -> 3,733 pages.
+
+**Note for future builds**: any NEW subject/handbook chapter with a mermaid diagram or a table
+immediately after a bold label will now render correctly automatically — no special handling
+needed, both fixes are baked into the two shared builder scripts.
+
+**Running total: 3,733 pages.**

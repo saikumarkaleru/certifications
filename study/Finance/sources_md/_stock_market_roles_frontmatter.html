@@ -47,10 +47,11 @@ own standalone PDF at the path listed.</p>
 
 <table>
 <tr><th>Section</th><th>Source file</th><th>Pages</th><th>Covers</th></tr>
-<tr><td>1. Equity &amp; Capital Markets</td><td>study/Finance/05_Equity_and_Capital_Markets.pdf</td><td>108</td>
+<tr><td>1. Equity &amp; Capital Markets</td><td>study/Finance/05_Equity_and_Capital_Markets.pdf</td><td>115</td>
 <td>Equity research fundamentals, capital markets structure, IPO/secondary markets, valuation,
 modeling, ESG, portfolio construction &mdash; full concept chapters plus a complete Q&amp;A set
-across all 20 chapters.</td></tr>
+across all 20 chapters. Diagrams render as real flowcharts and all tables as formatted tables
+(rebuilt with a mermaid-rendering + table-formatting fix, 2026-08-04).</td></tr>
 <tr><td>2. Valuation</td><td>study/Finance/_components/Valuation_FULL.pdf</td><td>405</td>
 <td>DCF (full 7-step build, 3 fully worked examples), comparable companies, precedent transactions,
 multiples, DDM, SOTP/APV, bank/financials valuation, distressed/cyclical/high-growth valuation,
@@ -64,12 +65,12 @@ deepest single volume in this compilation.</td></tr>
 <td>Chart reading, indicators, Dow theory, technical vs fundamental vs quant, interview Q&amp;A for
 the Technical Research Analyst role specifically.</td></tr>
 <tr><td>4b. Technical Research &mdash; Deepening Handbook <b>(new)</b></td>
-<td>study/Finance/Technical_Research_Deepening_Handbook.pdf</td><td>31</td>
-<td>Worked Greeks/straddle numericals, position-sizing &amp; R-multiple worked trade, a full
-backtested-strategy metrics worked example (Sharpe/Calmar/profit-factor), two fully worked trade
-setups start-to-finish, intermarket analysis (bonds/equities/commodities/currencies), building a
-systematic trading system (fully specified worked strategy), and a 12-question interview Q&amp;A
-appendix &mdash; distinct content from Section 4, not a restatement.</td></tr>
+<td>study/Finance/Technical_Research_Deepening_Handbook.pdf</td><td>32</td>
+<td>Worked Greeks/straddle numericals with a real payoff-diagram chart, position-sizing &amp;
+R-multiple worked trade, a full backtested-strategy metrics worked example with an equity-curve/
+drawdown chart, two fully worked trade setups start-to-finish, intermarket analysis, building a
+systematic trading system, and a 12-question interview Q&amp;A appendix &mdash; distinct content
+from Section 4, not a restatement.</td></tr>
 <tr><td>5. Technical Analysis &mdash; Complete</td>
 <td>study/trading_learning/Technical-Analysis-Complete_FULL.pdf</td><td>1,747</td>
 <td>The full depth reference: chart patterns, every major indicator, volume analysis, multi-timeframe
@@ -80,15 +81,23 @@ short career/interview guide, this is the deep textbook.</td></tr>
 <td>NSE F&amp;O options: mechanics, payoffs, Black-Scholes, the Greeks, volatility, and strategy &mdash;
 directly on the stock market (index/stock options), zero overlap with the charting content in
 Section 5.</td></tr>
-<tr><td>7. Market Research <b>(new)</b></td><td>study/Finance/Market_Research_Study_Guide.pdf</td><td>45</td>
-<td>Research design, primary/secondary methods, survey design, market sizing, competitive
-intelligence, brand/advertising research, B2B research, digital/social research methods,
-retail/shopper research, international/cross-cultural research, advanced pricing research,
-syndicated/panel data, new-product-development/concept testing, category management/trade
-marketing research &mdash; the one subject this library did not previously cover.</td></tr>
+<tr><td>7. Market Research <b>(new)</b></td><td>study/Finance/Market_Research_Study_Guide.pdf</td><td>46</td>
+<td>Research design, primary/secondary methods, survey design, market sizing (with a TAM/SAM/SOM
+funnel chart), competitive intelligence, brand/advertising research, B2B research, digital/social
+research methods, retail/shopper research, international/cross-cultural research, advanced
+pricing research (with a price-elasticity chart), syndicated/panel data, new-product-development/
+concept testing, category management/trade marketing research, and a segmentation scatter-plot
+chart &mdash; the one subject this library did not previously cover.</td></tr>
 </table>
 
-<p><b>Total: ~3,724 pages.</b></p>
+<p><b>Total: ~3,732 pages.</b></p>
+
+<p><b>2026-08-04 rendering upgrade</b>: existing flowchart diagrams throughout Section 1 (previously
+rendering as raw text) now render as real vector diagrams, all markdown tables across every source
+now render as properly formatted tables (both were pipeline bugs, not content gaps), and five
+matplotlib-generated charts (a segmentation scatter plot, a price-elasticity curve, a TAM/SAM/SOM
+funnel, an options payoff diagram, and a backtest equity/drawdown curve) were added at their
+relevant worked examples in Sections 4b and 7.</p>
 
 <p><b>Not included here</b> (deliberately &mdash; kept strictly to stock-market content, not general
 finance): the generic multi-role finance-interview subjects (Accounting &amp; FSA, Corporate Finance,

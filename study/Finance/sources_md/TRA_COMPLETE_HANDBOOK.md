@@ -256,6 +256,8 @@ An **option** is the **right, not the obligation**, to buy/sell the underlying a
 
 **Model answer.** The position profits if the stock moves *outside* the ₹466-₹534 range by expiry (or sooner, from an IV spike), regardless of direction — this is the textbook "big move either way" trade for a binary event like earnings. If the stock closes at ₹560 post-results: the call is worth 560 − 500 = ₹60, the put expires worthless, net P&L = 60 − 34 = **+₹26 per share**. If the stock closes at ₹495 (a modest, unremarkable move): the call expires worthless, the put is worth 500 − 495 = ₹5, net P&L = 5 − 34 = **−₹29 per share** — a straddle loses money on a move that's "real" in direction but not big enough to clear the combined premium cost, which is precisely why sizing the expected move (often estimated from the option chain's implied volatility itself) against the premium paid is the core skill in event-driven options trading, not just having a directional view.
 
+![Long straddle payoff diagram showing profit and loss across a range of stock prices at expiry, with two breakeven points](charts/long_straddle_payoff.png)
+
 ---
 
 # PART 6 — COMMODITIES
@@ -398,6 +400,8 @@ Applying a **rules-based strategy to historical data** to estimate how it would 
 
 ## 10.5 Worked example — evaluating a backtested strategy's full metric set
 *A backtested strategy over 3 years: 240 trades, 96 winners (avg win ₹4,200), 144 losers (avg loss ₹1,800). Starting capital ₹5,00,000, ending capital ₹8,90,000. Worst peak-to-trough equity decline during the period: ₹1,10,000 from a peak of ₹7,20,000. Strategy's daily returns have a standard deviation implying an annualised volatility of 18%; risk-free rate assumed 6%.*
+
+![Backtested strategy equity curve over three years with a drawdown chart below showing peak-to-trough declines](charts/backtest_equity_drawdown.png)
 
 **Win rate and expectancy:**
 ```

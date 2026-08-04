@@ -86,10 +86,57 @@ tr:nth-child(even) td { background: #f5f8fc; }
 blockquote { border-left: 4px solid #1f6098; background: #f3f7fb; margin: 12px 0;
   padding: 8px 14px; color: #33445a; font-size: 10.4pt; }
 strong { color: #14365c; }
+.mermaid { text-align: center; margin: 14px 0; page-break-inside: avoid; }
+.mermaid svg { max-width: 100%; height: auto !important; }
+img { max-width: 92%; display: block; margin: 14px auto; page-break-inside: avoid;
+  border: 1px solid #e2e8f0; border-radius: 6px; }
+"""
+
+MERMAID_JS_PATH = os.path.join(ROOT, "vendor", "mermaid.min.js")
+
+MERMAID_INIT_SCRIPT = """
+<script>
+document.querySelectorAll('pre > code.mermaid, pre > code.language-mermaid').forEach(function(code) {
+  var pre = code.parentElement;
+  var div = document.createElement('div');
+  div.className = 'mermaid';
+  div.textContent = code.textContent;
+  pre.replaceWith(div);
+});
+mermaid.initialize({ startOnLoad: false, theme: 'default', themeVariables: { fontFamily: 'Segoe UI, Arial, sans-serif' } });
+mermaid.run();
+</script>
 """
 
 
+def mermaid_script_tag():
+    """Inline the local mermaid.min.js (no CDN dependency at render time)."""
+    if not os.path.exists(MERMAID_JS_PATH):
+        return ""
+    with open(MERMAID_JS_PATH, encoding="utf-8") as f:
+        js = f.read()
+    return f"<script>{js}</script>{MERMAID_INIT_SCRIPT}"
+
+
+def ensure_blank_line_before_tables(md_text):
+    """python-markdown's `tables` extension only recognises a table if it's
+    preceded by a blank line -- a huge fraction of this library's tables
+    immediately follow a bold '**Label:**' line with no blank line, so they
+    silently render as raw pipe-delimited text instead of an HTML table.
+    Insert the missing blank line before any '|'-prefixed row whose
+    preceding line is non-blank and isn't itself a table row."""
+    lines = md_text.split("\n")
+    out = []
+    for i, line in enumerate(lines):
+        if (line.lstrip().startswith("|") and out and out[-1].strip() != ""
+                and not out[-1].lstrip().startswith("|")):
+            out.append("")
+        out.append(line)
+    return "\n".join(out)
+
+
 def md_to_html(md_text):
+    md_text = ensure_blank_line_before_tables(md_text)
     return markdown.markdown(
         md_text,
         extensions=["tables", "fenced_code", "sane_lists", "attr_list"],
@@ -135,7 +182,7 @@ def build_html(subject_dir, title, tmp_html):
 <div class="cover-foot">certifications / study / Finance &bull; 2026</div>
 </div><div class="pagebreak"></div>"""
     doc = (f"<!doctype html><html><head><meta charset='utf-8'>"
-           f"<style>{CSS}</style></head><body>{cover}{body}</body></html>")
+           f"<style>{CSS}</style></head><body>{cover}{body}{mermaid_script_tag()}</body></html>")
     with open(tmp_html, "w", encoding="utf-8") as f:
         f.write(doc)
     return tmp_html, outline_files
@@ -149,7 +196,7 @@ def chrome_pdf(html_path, pdf_path):
     url = "file:///" + os.path.abspath(html_path).replace("\\", "/")
     subprocess.run([CHROME, "--headless", "--disable-gpu", "--no-first-run",
                     f"--user-data-dir={profile}", "--no-pdf-header-footer",
-                    "--virtual-time-budget=30000",
+                    "--virtual-time-budget=60000",
                     f"--print-to-pdf={pdf_path}", url],
                    check=False, stderr=subprocess.DEVNULL)
     for _ in range(90):

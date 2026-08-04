@@ -335,6 +335,8 @@ Continuing the Part 5.7 UPI lending conjoint: after n=600 respondents each compl
 | C: "Cautious traditionalists" | 22% | 3.6 (mid-high) | 1.8 (low) | ₹58,000 | Rare, only when unavoidable |
 | D: "Affluent optimisers" | 16% | 1.5 (low) | 4.8 (high) | ₹1,80,000 | Investment/opportunity |
 
+![K-means segmentation scatter plot showing four distinct clusters by price sensitivity and digital comfort](charts/segmentation_scatter.png)
+
 **Reading the output (the part that gets tested in interviews)**: the four clusters are checked against the segmentation-quality criteria from Part 6.3 — **substantial** (all four segments are large enough to target, none is a tiny statistical artifact), **distinct** (the profiles genuinely differ across all four variables, not just one), **actionable** (Segment B, the largest at 34% and clearly price-sensitive with essential loan needs, is an obvious first product-and-messaging target; Segment D, though small, has high income and low price sensitivity — a candidate for a premium, fast-approval product tier rather than a discount play). The critical next step, per Part 6.3's caution about post-hoc clustering, is validating that these clusters actually predict a business-relevant outcome (e.g. repayment behaviour, cross-sell uptake) — a statistically clean cluster solution that doesn't differentiate on outcomes the business cares about is elegant but not useful.
 
 **A common interview follow-up**: "how did you choose k=4 and not k=3 or k=5?" — the honest answer combines a quantitative heuristic (the elbow method: plotting within-cluster variance against k and picking the point where additional clusters stop meaningfully reducing variance) with a business-judgment check (does the resulting number of segments produce genuinely actionable, differentiable strategies, or does splitting further just fragment the target list without a corresponding difference in what the business would actually do for each group) — k-selection is not a purely mechanical decision.
@@ -353,6 +355,8 @@ Continuing the Part 5.7 UPI lending conjoint: after n=600 respondents each compl
 - **TAM (Total Addressable Market)** — total revenue opportunity if you captured 100% of the relevant market, globally or in the defined geography.
 - **SAM (Serviceable Addressable Market)** — the slice of TAM you could realistically serve given your business model/geography/channel constraints.
 - **SOM (Serviceable Obtainable Market)** — the slice of SAM you can realistically capture given competition and go-to-market limits, usually over a defined time horizon (e.g. 3 years).
+
+![TAM SAM SOM funnel diagram narrowing from total addressable market to serviceable obtainable market](charts/tam_sam_som_funnel.png)
 
 ## 7.2 Two ways to size a market
 - **Top-down**: start from a broad, authoritative number (e.g. total Indian retail spend from MOSPI/Census) and apply a chain of narrowing percentages (% online, % in category, % in target city tier) down to the target market. Fast, defensible on data sources, but errors compound multiplicatively across each percentage applied.
@@ -601,6 +605,8 @@ Part 5.7 and Part 6.8 covered the Van Westendorp Price Sensitivity Meter and cho
 
 ## 16.2 Price elasticity of demand — the concept every pricing researcher must connect findings to
 **Price elasticity of demand (PED)** = % change in quantity demanded ÷ % change in price. A category/product with PED > 1 (in absolute value) is **elastic** — demand is highly sensitive to price, and a price cut can increase total revenue if the volume gain outweighs the per-unit price loss. PED < 1 is **inelastic** — demand barely moves with price, and a price increase generally raises revenue since volume loss is proportionally smaller than the price gain. **Worked example**: a 10% price increase leads to a 4% volume decline → PED = -4%/10% = -0.4 (inelastic, in absolute terms 0.4 < 1) → revenue impact ≈ (1.10 × 0.96 − 1) ≈ **+5.6%**, meaning the price increase is revenue-accretive despite losing some volume. Every pricing-research deliverable should ultimately translate a "willingness to pay" finding into this kind of revenue-impact framing, since that is what a pricing committee actually decides on.
+
+![Price elasticity of demand curve showing quantity demanded and total revenue as price rises, illustrating inelastic demand](charts/price_elasticity_curve.png)
 
 ## 16.3 Revenue management and dynamic pricing research
 In categories with perishable inventory or capacity constraints (airlines, hotels, ride-hailing, event ticketing), pricing research extends into **revenue management** — understanding how willingness to pay varies by purchase timing, remaining inventory, and customer segment (business vs leisure traveller, for instance), so price can be dynamically adjusted to maximise total revenue rather than set once and left static. Market research supports this with segment-specific willingness-to-pay studies (e.g. a business traveller's WTP curve is typically far less price-elastic than a leisure traveller's for the same route) that feed the pricing algorithms revenue-management teams build — a genuine crossover point between market research and quantitative/pricing-analytics roles.
