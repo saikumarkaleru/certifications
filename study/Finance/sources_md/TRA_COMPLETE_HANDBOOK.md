@@ -617,6 +617,31 @@ Continuing the market-impact concept from the broader capital-markets literature
 
 ---
 
+# PART 19 — GLOBAL MARKET CUES & GAP TRADING
+
+## 19.1 Why Indian markets open with a built-in overnight information gap
+NSE/BSE cash-market trading hours (9:15am-3:30pm IST) sit in a window where major US markets have already closed for the day (US markets close around 1:30-2:30am IST depending on daylight saving) and European markets are only just opening — meaning every Indian trading session opens carrying a full overnight's worth of global information (US market close levels, overnight commodity/currency moves, any major news) that couldn't be traded on domestically until the next session opens. This structural gap is why "global cues" is a fixed, non-optional line item in every professional pre-market note (Part 9.1).
+
+## 19.2 The standard pre-market global-cues checklist
+- **US market close** (S&P 500, Nasdaq, Dow) — the single most-watched overnight reference, since US market direction has historically shown meaningful correlation with next-day Indian market sentiment, particularly for globally-linked sectors (IT services, given US client exposure).
+- **Asian markets during Indian pre-market hours** (Nikkei, Hang Seng, and other Asian indices trading concurrently with or just before the Indian pre-open) — the most contemporaneous read available, since these markets are live and reacting in real time as the Indian session approaches.
+- **SGX Nifty / GIFT Nifty**: a Nifty-linked contract trading on an international exchange during hours the Indian market itself is closed, historically used as the single best real-time proxy for where the Indian market will likely open — a TRA's pre-market note leans heavily on this specific data point.
+- **Crude oil overnight move**: material for India specifically given its large net-oil-import position (Part 15.2's intermarket discussion) — an overnight crude spike is a standard, direct input to the pre-market view on rate-sensitive and inflation-exposed sectors.
+- **US 10-year Treasury yield and Dollar Index (DXY) overnight moves**: feed directly into the intermarket framework from Part 15 — rising US yields or a strengthening dollar are typically read as headwinds for emerging-market equities including India, all else equal.
+- **Any overnight company-specific news**: US-listed ADRs of Indian companies (where they exist) trading overnight can itself be an early, if imperfect, signal for that specific stock's likely opening move.
+
+## 19.3 Gap trading — reading and trading the opening gap itself
+A **gap** is the difference between the previous close and the current session's open, driven by the overnight information (Part 19.1-19.2) being priced in all at once at the open rather than continuously through the prior session.
+- **Gap types**: a **common gap** (small, within recent average range, often fills quickly and carries little signal) versus a **breakaway gap** (a large gap on a fresh trend-initiating catalyst, often *not* filled quickly and can mark the start of a sustained move) versus an **exhaustion gap** (a large gap late in an extended trend, often marking a climactic, unsustainable final move before a reversal) — distinguishing these three types by context (where the gap occurs relative to the existing trend and recent range) is a core, frequently-tested TRA skill.
+- **"Gap and go" vs "gap fill" as two distinct trading approaches**: a gap-and-go trader treats a strong breakaway gap as a signal to trade in the gap's direction, expecting continuation; a gap-fill trader treats a common or exhaustion gap as likely to partially or fully retrace back toward the prior close before the underlying trend (if any) reasserts — the two approaches are not contradictory, they apply to different gap *types*, and correctly classifying the gap (Part 19.3's three types) is what determines which approach actually applies to a given morning's gap.
+
+## 19.4 Worked example — synthesising a full pre-market view
+*Overnight: S&P 500 closed +0.8%, crude oil fell 2.5%, US 10-year yield fell 8bps, GIFT Nifty is indicating a flat-to-slightly-positive open. A specific IT-services stock under coverage has no company-specific overnight news.*
+
+**Model answer.** Positive US close and falling yields are mildly supportive for Indian equities broadly (Part 15.2/15.3's intermarket logic); falling crude is supportive for the rupee and inflation-sensitive sectors specifically, though less directly relevant to an IT-services name; GIFT Nifty's flat-to-slightly-positive indication suggests the broad market itself isn't expected to gap meaningfully. For the specific IT-services stock with no company-specific news, the reasonable pre-market view is that it should open roughly in line with the broader index's expected flat-to-slightly-positive move, with the stock's own technical levels (Part 1-3) — not the overnight cues, which are broadly neutral-to-mildly-positive here — doing most of the work in determining the actual intraday trade plan. This is the disciplined synthesis a professional pre-market note performs every single morning: named inputs, explicit read on each, and a clear statement of how much (or how little) the overnight picture actually changes the existing technical view.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**

@@ -331,4 +331,13 @@ Execution & Market Microstructure: VWAP/TWAP benchmarks, iceberg orders/hidden l
 impact and why "the chart says buy" isn't the whole execution story — directly relevant crossover
 with a derivatives-desk background). 34 -> 37pg. Master: 3,743 -> 3,746 pages.
 
-**Running total: 3,746 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 22 (Neuromarketing & Implicit
+Measurement Techniques to Market Research: eye-tracking, facial coding, IAT, GSR, where implicit
+methods add genuine value vs are overused, practical/ethical constraints incl. heightened DPDP
+obligations for biometric data) and PART 19 (Global Market Cues & Gap Trading to TRA: the
+structural overnight-information-gap explanation for why Indian markets always open with global
+cues baked in, the standard pre-market checklist incl. SGX/GIFT Nifty, gap types — common/
+breakaway/exhaustion — and a full worked pre-market-view synthesis example). Market Research
+51->53pg, TRA 37->39pg. Master: 3,746 -> 3,750 pages.
+
+**Running total: 3,750 pages.**
