@@ -126,5 +126,11 @@ primary-markets-IPO, 03 secondary-markets-trading, 04 market-participants, 05 eq
 06 market-indices — 9 of 20 chapters now have qa/). 71 -> 81pg. Remaining 11 chapters without
 qa/: 01, 08, 09, 11, 13-19.
 
-**Running total after 2026-08-04 stage-3 work: 3,649 pages** (Market Research 18->29, Equity & CM
-47->81 via content + 9 qa/ files, Valuation 51->405 via the free-win swap).
+**2026-08-04, later pass 2**: added qa/ for 4 more chapters (01 overview, 08 fundamental-analysis,
+09 three-statement-modeling, 11 research-note-thesis — 13 of 20 chapters now have qa/). 81 -> 89pg.
+Remaining 7 chapters without qa/: 13-19 (technical-analysis-essentials, market-efficiency-
+behavioral-finance, corporate-actions, capital-raising-followons, sell-side-vs-buy-side,
+portfolio-construction-risk, esg-in-equity-analysis).
+
+**Running total after 2026-08-04 stage-3 work: 3,657 pages** (Market Research 18->29, Equity & CM
+47->89 via content + 13 qa/ files, Valuation 51->405 via the free-win swap).
