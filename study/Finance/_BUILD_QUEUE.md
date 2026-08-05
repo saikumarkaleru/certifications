@@ -1344,4 +1344,18 @@ surfaced only by targeted adversarial probing). Added one new Q&A each (TRA Q86,
 and matching glossary terms (Market Research). TRA deepening handbook 200->202pg, Market Research
 200->202pg. Master: 4,062 -> 4,066 pages.
 
-**Running total: 4,066 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 95 (Greenshoe Option / Post-Listing
+Price Stabilization Mechanism to TRA — a distinct post-listing support mechanism from every pre-/at-
+listing IPO signal already covered, how the over-allotment/borrowed-share stabilisation mechanism
+actually works, why greenshoe-supported price action shouldn't be over-credited as pure organic
+strength, the more informative post-window read once the mechanism's mandate ends, a worked example
+distinguishing a stock's pre- vs post-stabilisation-window price action) and PART 98 (Recruiting Hard-
+to-Reach and Low-Incidence Respondent Populations to Market Research — a distinct recruitment-
+methodology question from the general small-sample B2B framing already covered, why incidence rate
+drives both cost and screener-design stakes, specialised sourcing routes beyond a standard consumer
+panel, the false-qualifier risk and the verification discipline it requires, a worked example
+diagnosing suspiciously fast, low-quality CFO-panel qualification). Added one new Q&A each (TRA Q87,
+Market Research Q96) and matching glossary terms (Market Research). TRA deepening handbook 202->205pg,
+Market Research 202->205pg. Master: 4,066 -> 4,072 pages.
+
+**Running total: 4,072 pages.**

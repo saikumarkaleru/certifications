@@ -2242,6 +2242,27 @@ A TRA covering both a heavily-optioned individual stock and an index on the same
 
 ---
 
+# PART 95 — GREENSHOE OPTION / POST-LISTING PRICE STABILIZATION MECHANISM
+
+## 95.1 A distinct post-listing support mechanism from every IPO-pricing signal already covered
+The handbook's existing IPO material (grey-market premium, RII/NII/QIB subscription, anchor allocation) addresses signals available *before* or *at* listing. This Part covers a genuinely distinct mechanism that operates specifically **after** listing: the **Greenshoe option** (formally, the price-stabilisation mechanism SEBI permits), a structured, disclosed process where a designated stabilising agent can buy back shares from the open market for a limited post-listing window specifically to support the price if it falls below the issue price.
+
+## 95.2 How the mechanism actually works — an over-allotment funded by a promoter/pre-IPO-shareholder loan
+The stabilising agent is given an over-allotment option to sell up to a disclosed additional percentage of the issue (typically funded via shares borrowed from promoters/pre-IPO shareholders, not newly issued shares), raising slightly more money than the base issue at IPO. If the stock trades below the issue price during the disclosed stabilisation window (typically up to 30 days post-listing), the stabilising agent uses that pool of funds to buy shares in the open market, both supporting the price and covering the borrowed-share short position — a mechanically real, disclosed source of buying support distinct from any organic market demand.
+
+## 95.3 Why greenshoe-supported price action shouldn't be read as pure organic strength
+A TRA analysing a newly-listed stock's price action during its disclosed stabilisation window should explicitly discount some portion of any price resilience near or above the issue price as **potentially mechanism-driven** rather than purely organic buying interest — since the stabilising agent has a specific, disclosed mandate and funded capacity to support the price in exactly this range, a stock holding steady just above its issue price during this window is not as strong an organic-demand signal as the same price action would be absent this mechanism, extending this handbook's general discipline (applied elsewhere to buyback-driven floors, Part 85) of distinguishing mechanism-driven price support from genuine organic demand.
+
+## 95.4 The post-window read — what happens once the stabilisation period actually ends
+Once the disclosed stabilisation window closes, the mechanism-driven support (Part 95.3) is removed, and a TRA should specifically watch how the stock behaves in the days immediately following window expiry — a stock that continues holding its level or extends higher once the stabilising agent's mandate has ended provides much stronger evidence of genuine organic demand than the same price level held only during the active stabilisation window, directly analogous to how Part 84's rights-entitlement-trading discipline treats the end of a structured mechanism's active period as a genuinely informative transition point.
+
+## 95.5 Worked example — reading a newly-listed stock's price action across the stabilisation window boundary
+*A newly-listed stock trades in a tight range just above its issue price for the first three weeks post-listing, coinciding with its disclosed 30-day greenshoe stabilisation window. In the week immediately following the window's expiry, the stock holds its level and shows a modest further gain on reasonable volume, with no specific news catalyst.*
+
+**Model answer.** Per Part 95.3, the tight, issue-price-hugging range during the active stabilisation window should be read cautiously — some portion of that price support may reflect the stabilising agent's disclosed, funded buying mandate rather than purely organic demand, and a TRA shouldn't over-credit this period alone as strong evidence of genuine investor conviction. The subsequent week's continued strength *after* the window's expiry, however, is meaningfully more informative (Part 95.4) — with the mechanism-driven support now removed, a stock that holds and modestly extends higher on its own is providing genuine, mechanism-independent evidence of organic post-listing demand, a materially stronger signal than the pre-expiry price action alone would have supported, and worth explicitly distinguishing as such in any research note assessing the listing's post-IPO performance.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2501,5 +2522,8 @@ A TRA covering both a heavily-optioned individual stock and an index on the same
 
 86. **Q: On a Nifty monthly-expiry day, the index's final closing tick is 24,850, but the officially published final settlement price used to cash-settle expiring options and futures is 24,832. A client asks why these differ and which number actually matters for a position that expired in-the-money.**
     A: Per Part 94.5 — this gap is not an error; it's the expected, structural consequence of the final settlement price being computed as the volume-weighted average across the final 30-minute window (Part 94.2) rather than simply the last traded tick. If the index moved higher specifically in the closing seconds after most of that window had already been captured, the closing tick would naturally sit above the settlement-window average. The settlement price (24,832) — not the closing tick — is what actually determines the cash-settlement payout for any expiring index derivative, a routine point of confusion since index cash settlement (Part 94.1) works structurally differently from the single-closing-price intuition that applies to most other market data.
+
+87. **Q: A newly-listed stock trades in a tight range just above its issue price for the first three weeks post-listing, coinciding with its disclosed 30-day greenshoe stabilisation window. In the week immediately after the window expires, the stock holds its level and shows a modest further gain on reasonable volume, with no specific news catalyst. How should a TRA weigh the pre-expiry versus post-expiry price action?**
+    A: Per Part 95.5 — the tight, issue-price-hugging range during the active stabilisation window should be read cautiously (Part 95.3), since some portion of that support may reflect the stabilising agent's disclosed, funded buying mandate rather than purely organic demand. The subsequent week's continued strength after the window's expiry is meaningfully more informative (Part 95.4) — with the mechanism-driven support now removed, a stock holding and modestly extending higher on its own provides genuine, mechanism-independent evidence of organic post-listing demand, a materially stronger signal than the pre-expiry price action alone would support, and worth distinguishing as such in a research note.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
