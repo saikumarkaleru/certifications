@@ -1022,4 +1022,17 @@ loss-only-vs-independent-comparative diagnostic showing "it's about price" was n
 Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q72, TRA Q63).
 Market Research 165->167pg, TRA 149->151pg. Master: 3,976 -> 3,980 pages.
 
-**Running total: 3,980 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 72 (Non-Disposal Undertakings
+to TRA — a less-visible promoter-encumbrance mechanism distinct from Part 49's formal pledge
+framework, why an NDU creates a real "float isn't what it appears" constraint despite no formal
+invocation mechanism, disclosure-variability caution requiring checking credit-rating-agency reports
+and news flow beyond the standard pledge disclosure, NDU expiry as a datable future overhang event,
+a worked clean-pledge-disclosure-vs-NDU-reference reconciliation example) and PART 75 (Semiotic
+Analysis for Financial Brand Marks to Market Research — a distinct expert-analytical technique from
+consumer-facing testing, category-relevant cultural weight of financial-brand symbolism in the
+Indian market, the conformity-vs-departure-from-category-convention framework, why expert semiotic
+interpretation needs empirical consumer validation, a worked unconventional-rebrand-colour-palette
+diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
+Q73, TRA Q64). Market Research 167->170pg, TRA 151->154pg. Master: 3,980 -> 3,986 pages.
+
+**Running total: 3,986 pages.**

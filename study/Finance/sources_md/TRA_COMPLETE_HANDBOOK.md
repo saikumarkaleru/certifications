@@ -1759,6 +1759,27 @@ Beyond the listing-day pre-open itself, a newly-listed stock's first several ses
 
 ---
 
+# PART 72 — NON-DISPOSAL UNDERTAKINGS: BEYOND FORMAL PLEDGE DISCLOSURE
+
+## 72.1 A distinct, less-visible encumbrance mechanism from Part 49's formal pledge framework
+Part 49 covered promoter share pledging — a formal, disclosed encumbrance mechanism with defined LTV thresholds and invocation risk. **Non-Disposal Undertakings (NDUs)** are a structurally distinct arrangement: a promoter contractually agrees with a lender **not to sell, transfer, or further encumber** a specified block of shares (often used as informal security or as a supplementary commitment alongside other financing), without the shares being formally pledged in the way Part 49.2's LTV/invocation framework describes — a materially less visible form of promoter-level encumbrance a TRA should know to look for specifically, since it doesn't always carry the same prominent, immediately-visible disclosure profile as a formal pledge.
+
+## 72.2 Why NDUs create a real technical constraint despite carrying no formal invocation mechanism
+Because an NDU is a contractual promise rather than a security interest with a defined LTV-triggered invocation process, it doesn't create the same mechanical, price-triggered forced-selling risk Part 49.2 describes for formal pledges — but it still creates a genuine constraint worth a TRA's attention: shares under an NDU are **not freely available for sale** by the promoter for the undertaking's duration, meaning any market narrative assuming a promoter could freely sell down their position (to fund an unrelated need, or in response to a changed view on the company) may not account for shares actually locked up under an undisclosed or under-appreciated NDU — a distinct "float isn't what it appears" consideration from the tradeable-supply themes covered elsewhere (Part 63's QIP-lock-in, Part 53).
+
+## 72.3 Disclosure variability — why NDU visibility is less consistent than formal pledge disclosure
+Formal pledge disclosure (Part 49.3) follows a well-established, consistently-applied regulatory disclosure regime — NDU disclosure, by contrast, has historically been less consistently captured in the same standardised regulatory filings, meaning a TRA specifically researching a name with elevated promoter-financing-related concern should check company announcements, credit-rating-agency reports (which sometimes reference NDU arrangements as part of assessing promoter-level financial commitments), and news flow specifically for NDU mentions, rather than assuming the absence of a disclosed formal pledge means the promoter's shareholding is entirely unencumbered.
+
+## 72.4 Reading an NDU expiry or release as a distinct future event, similar in structure to a lock-in expiry
+Like a QIP or preferential-allotment lock-in (Part 63.4), an NDU has a defined duration, and its **expiry or release** is a datable future event a TRA can track — once released, the previously-restricted shares become freely tradeable by the promoter for the first time, a potential future supply event worth flagging in advance using the same forward-looking, calendar-based tracking discipline this handbook applies to other scheduled overhang events, rather than something to react to only once it's already happened.
+
+## 72.5 Worked example — reconciling a clean pledge disclosure with credit-rating-agency NDU references
+*A stock's formal shareholding-pattern disclosure shows zero promoter pledge, which a research team initially reads as a clean, unencumbered promoter position. A credit rating agency's report on a related group entity references an NDU covering a meaningful block of the promoter's shares in this specific listed company, tied to a group-level financing arrangement.*
+
+**Model answer.** The zero-formal-pledge disclosure (Part 72.3's disclosure-variability caution) doesn't establish the promoter's position is genuinely unencumbered — the credit-rating-agency reference to an NDU reveals a real, contractual restriction on a meaningful share block that simply doesn't appear in the standard shareholding-pattern pledge disclosure a less thorough researcher might rely on exclusively. The correct research response is treating this as a genuine finding worth incorporating into the stock's risk assessment: the NDU-covered shares aren't freely available supply regardless of the promoter's own view on the stock (Part 72.2), and the research note should specifically track the NDU's disclosed or estimated expiry/release date (Part 72.4) as a distinct future event worth monitoring, rather than either dismissing the finding because it doesn't fit the formal-pledge framework this handbook covers most extensively, or conflating it with a formal pledge's different, LTV-triggered invocation risk profile.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1949,5 +1970,8 @@ Beyond the listing-day pre-open itself, a newly-listed stock's first several ses
 
 63. **Q: An IPO's grey-market premium indicated an approximate 25% listing gain, but the actual listing-day pre-open IEP settles at roughly 15% above the issue price. How should a TRA interpret this 10-point gap?**
     A: Per Part 71.5 — the listing-day IEP (Part 71.3) is genuine, exchange-regulated order-book price discovery, a materially more rigorous signal than the informal, thin-participation grey market. The gap is direct, real-money confirmation of GMP's limited reliability as a standalone predictor (Part 45.3), not evidence something is specifically wrong with the stock — and given the expected early-session volatility for a newly-listed name (Part 71.4), the 15% IEP itself shouldn't be treated as a stable valuation reference until sufficient post-listing trading history accumulates.
+
+64. **Q: A stock's formal shareholding-pattern disclosure shows zero promoter pledge, but a credit rating agency's report on a related group entity references a Non-Disposal Undertaking covering a meaningful block of the promoter's shares in this company. Does the clean pledge disclosure mean the promoter's position is genuinely unencumbered?**
+    A: No (Part 72.5) — NDU disclosure is less consistently captured in standard regulatory filings than formal pledge disclosure (Part 72.3), so a zero-pledge reading doesn't establish an unencumbered position. The NDU-covered shares aren't freely available supply regardless of the promoter's own view (Part 72.2), and the research note should track the NDU's expiry/release date (Part 72.4) as a distinct future overhang event, rather than dismissing the finding for not fitting the formal-pledge framework.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
