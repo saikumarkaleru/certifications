@@ -848,4 +848,17 @@ worked engagement-vs-quality-tradeoff algorithm-update diagnostic). Added matchi
 (Market Research) and one new Q&A each (Market Research Q58, TRA Q49). Market Research 134->137pg,
 TRA 118->121pg. Master: 3,914 -> 3,920 pages.
 
-**Running total: 3,920 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 58 (Backtesting Pitfalls,
+Deepened to TRA — deepens Part 10.2's one-line overfitting warning into why parameter count
+mechanically drives overfitting risk, the essential in-sample/out-of-sample split, walk-forward
+analysis as a repeated rolling-window test more rigorous than a single static split, a worked
+7-parameter-strategy-tuned-on-the-same-dataset red-flag example) and PART 61 (Longitudinal Panel
+Design for Tracking Sentiment Across Market Cycles to Market Research — a distinct panel-mechanics
+layer beneath Part 10.4's tracker-consistency discipline and Part 23.5's investor-confidence-index
+application, panel attrition bias correlating with the very outcome being tracked, panel
+conditioning from repeated exposure, refreshment sampling as the standard defence, a worked
+suspiciously-resilient-confidence-tracker-through-a-downturn diagnostic). Added matching glossary
+terms (Market Research) and one new Q&A each (Market Research Q59, TRA Q50). Market Research
+137->139pg, TRA 121->123pg. Master: 3,920 -> 3,924 pages.
+
+**Running total: 3,924 pages.**
