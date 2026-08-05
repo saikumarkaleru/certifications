@@ -442,4 +442,49 @@ ax.text(5, 0.3, "Boxes = constructs (gold = latent, estimated from multiple surv
         ha="center", fontsize=7.5, color=GRAY, style="italic")
 savefig("sem_path_model.png")
 
+# ---------------------------------------------------------------------------
+# 16. TRA 31.2 -- prospect theory value function (loss aversion visualised)
+# ---------------------------------------------------------------------------
+x_gain = np.linspace(0, 10, 100)
+x_loss = np.linspace(-10, 0, 100)
+v_gain = x_gain ** 0.88
+v_loss = -2.25 * (-x_loss) ** 0.88
+fig, ax = plt.subplots(figsize=(6.6, 5))
+ax.plot(x_gain, v_gain, color="#2e8b57", lw=2.4)
+ax.plot(x_loss, v_loss, color="#b23b3b", lw=2.4)
+ax.axhline(0, color="#9aa5b1", lw=0.8)
+ax.axvline(0, color="#9aa5b1", lw=0.8)
+ax.scatter([5], [5**0.88], color="#2e8b57", s=60, zorder=5)
+ax.scatter([-5], [-2.25*5**0.88], color="#b23b3b", s=60, zorder=5)
+ax.annotate(f"Gain of 5\nfeels like +{5**0.88:.1f}", xy=(5, 5**0.88), xytext=(5.5, 1.5),
+            fontsize=8.5, color="#1f6b3d")
+ax.annotate(f"Loss of 5\nfeels like {-2.25*5**0.88:.1f}\n(~2.25x as painful)", xy=(-5, -2.25*5**0.88),
+            xytext=(-9.5, -9), fontsize=8.5, color="#8a2b2b")
+ax.set_xlabel("Objective gain / loss")
+ax.set_ylabel("Subjective value (how it feels)")
+ax.set_title("Prospect theory value function: why losses hurt more than\nequivalent gains feel good (loss aversion)")
+ax.grid(alpha=0.25)
+savefig("prospect_theory_value_function.png")
+
+# ---------------------------------------------------------------------------
+# 17. Market Research 34.5 -- influencer campaign diagnostic funnel
+# ---------------------------------------------------------------------------
+stages = ["Impressions", "Engagement\n(likes/comments)", "Link clicks", "Conversions"]
+values = [100, 38, 6.5, 1.1]
+benchmark = [100, 30, 8.5, 2.8]
+fig, ax = plt.subplots(figsize=(6.6, 4.4))
+x = np.arange(len(stages))
+w = 0.35
+ax.bar(x - w/2, values, width=w, color=BLUE, label="This campaign")
+ax.bar(x + w/2, benchmark, width=w, color=GOLD, label="Typical paid-media benchmark")
+ax.set_xticks(x)
+ax.set_xticklabels(stages, fontsize=9)
+ax.set_ylabel("Indexed (Impressions = 100)")
+ax.set_title("Influencer campaign funnel vs benchmark: the gap opens at link-click stage")
+ax.legend(fontsize=8.5, frameon=False)
+ax.annotate("Gap opens here", xy=(2, 6.5), xytext=(2.15, 20),
+            fontsize=8.5, color=GRAY, arrowprops=dict(arrowstyle="->", color=GRAY, lw=0.8))
+ax.grid(axis="y", alpha=0.25)
+savefig("influencer_funnel_diagnostic.png")
+
 print("\nAll charts generated in", OUT)

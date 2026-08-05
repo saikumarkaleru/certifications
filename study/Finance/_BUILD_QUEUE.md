@@ -520,4 +520,13 @@ overconfidence after a winning streak, and concrete countermeasures incl. pre-co
 criteria, the journal's bias-detection function, and mandatory cooling-off rules). Market Research
 76->78pg, TRA 62->64pg. Master: 3,800 -> 3,804 pages.
 
+**2026-08-05, autonomous wake-cycle: frontmatter re-sync + 2 more charts (17 total)**: resynced
+frontmatter again. Added `prospect_theory_value_function.png` (the real Kahneman-Tversky value
+function, steeper on the loss side, quantifying "losses hurt ~2.25x more than equivalent gains
+feel good") embedded in TRA 31.2 as the actual psychological mechanism behind loss aversion, not
+just an abstract label; and `influencer_funnel_diagnostic.png` (this-campaign-vs-benchmark funnel
+bar chart, visually showing the gap opening at the link-click stage) embedded in Market Research
+34.5. Page counts steady (content verified via file-size growth). Master: 3,804 pages (unchanged
+this round, verified via rebuild).
+
 **Running total: 3,804 pages.**

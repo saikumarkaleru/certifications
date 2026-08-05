@@ -1024,6 +1024,8 @@ Consumer research on sponsored-content disclosure (does the audience recognise a
 ## 34.5 Worked example — diagnosing an underperforming influencer campaign
 *A brand runs a campaign with 8 mid-tier influencers, achieving strong impressions and engagement-rate numbers, but tracked-link conversion is well below the brand's typical paid-media benchmark.*
 
+![Bar chart comparing this campaign's funnel against a typical paid-media benchmark across impressions, engagement, link clicks, and conversions, with the gap opening at the link-click stage](charts/influencer_funnel_diagnostic.png)
+
 **Model answer.** Strong engagement with weak conversion is a specific, diagnosable pattern (echoing Part 2.5's "diagnose before prescribing" discipline) — before concluding influencer marketing simply "doesn't work" for this brand, check: audience-brand fit (Part 34.2 — high engagement can reflect a creator's general audience appeal rather than genuine interest in this specific brand/category, especially in categories with low natural fit to the creator's usual content); whether the call-to-action and tracked link were prominent and frictionless (a common, purely executional failure point distinct from audience-fit); and whether the influencer content itself credibly conveyed the product's actual value proposition, or was engaging content that happened to feature the product without making a clear case for it — three distinct possible root causes requiring three different fixes (better influencer selection, better campaign execution mechanics, or better creative briefing), exactly the kind of specific diagnosis this handbook's research process (Part 1.4) is built to produce rather than a vague "it underperformed" conclusion.
 
 ---
