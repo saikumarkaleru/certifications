@@ -2116,6 +2116,27 @@ When the 30-day or 90-day anchor lock-in expires and some selling follows, a TRA
 
 ---
 
+# PART 89 — SPLIT/DIVERGENT CREDIT RATINGS ACROSS AGENCIES
+
+## 89.1 A distinct diagnostic question from a single-agency rating-change read
+The handbook's existing credit-rating material (the investment-grade-to-sub-investment-grade downgrade worked example) addresses how a TRA reads a **single agency's** rating action. This Part covers a genuinely distinct, easy-to-overlook question: what it means when **two or more rating agencies simultaneously cover the same issuer and assign meaningfully different ratings** — a **split rating** — and how a TRA should read the disagreement itself as a separate, additional signal beyond either individual rating.
+
+## 89.2 Why a split rating is informative beyond either individual agency's view
+Each rating agency applies its own methodology, weighting, and forward-looking judgment, and in the large majority of cases well-covered issuers receive closely aligned ratings across agencies — a meaningful, persistent split (not a one-notch technical difference, but a genuine gap, e.g. one agency rating an issuer investment-grade while another rates the same issuer sub-investment-grade) signals **genuine, unresolved disagreement among sophisticated credit analysts** about how to weigh a specific risk factor (a contingent liability, a related-party exposure, a sector-cyclicality assumption) — information a TRA gets specifically from the *existence and size* of the split, not from either individual rating read in isolation.
+
+## 89.3 Distinguishing a "second opinion" split from a genuinely adversarial split
+A useful diagnostic distinction: a modest split where one agency is simply more conservative across its whole coverage universe (a known, stable house-methodology difference) carries less signal than a split that emerges or widens specifically **around one issuer** relative to that agency's normal pattern — the latter suggests the disagreement is genuinely issuer-specific (a specific new piece of information one agency is weighting differently), while the former is more a stable, low-information artifact of differing house methodologies that a TRA should adjust for structurally, not read as fresh news each time.
+
+## 89.4 The market-pricing question — which rating the market is actually weighting
+Where a genuine, issuer-specific split exists, a TRA should examine which rating the market's own pricing (bond yields/spreads, if available, or the equity's own risk-reflecting metrics like beta or options-implied volatility) appears to be weighting more heavily — the market's revealed pricing behaviour is itself informative evidence about which agency's view market participants find more credible for this specific issuer, distinct from either rating taken as face-value truth.
+
+## 89.5 Worked example — reading a fresh, issuer-specific split rating
+*A mid-cap company has historically received closely-aligned ratings from two major agencies. Following a large, recently-disclosed related-party transaction, one agency downgrades the issuer by two notches to just below investment grade, while the other agency maintains its rating unchanged, explicitly citing the same related-party transaction as adequately mitigated by disclosed collateral. The company's bond yields widen modestly but its equity shows limited price reaction.*
+
+**Model answer.** Per Part 89.3, this is a genuinely issuer-specific split (a fresh divergence from the two agencies' historically-aligned pattern, triggered by one specific new disclosure), not a stable house-methodology artifact — the disagreement itself, per Part 89.2, is meaningful evidence that sophisticated credit analysts genuinely disagree about how adequately the disclosed collateral mitigates the related-party exposure. The modest bond-yield widening alongside limited equity reaction (Part 89.4) suggests the market is currently weighting something closer to the more cautious agency's view, though not fully — a TRA should flag this specific split explicitly in any research note on the name, note which agency's reasoning appears more consistent with the market's own pricing response, and continue monitoring whether the two agencies' views converge (a stabilising signal) or the more cautious agency's downgrade is followed by further deterioration (a confirming signal) as more information emerges.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2357,5 +2378,8 @@ When the 30-day or 90-day anchor lock-in expires and some selling follows, a TRA
 
 80. **Q: A recently-listed stock with a strong anchor book drifts modestly lower on light volume ahead of its 30-day anchor lock-in expiry. On the expiry date, moderate selling appears, and next-day bulk-deal disclosures show several original anchor investors reducing but not fully exiting their positions. How should a TRA read this?**
     A: Per Part 88.5 — the pre-expiry drift on light volume is a normal, anticipatory pattern as the market prices in expected lock-in-related supply (Part 88.3), not itself a negative signal. The bulk-deal disclosures showing anchors reducing but not fully exiting (Part 88.4's distinguishing test) are the more informative evidence — more consistent with routine, partial profit-booking by sophisticated participants than a genuine loss of conviction, since a true negative reassessment would typically show more complete exits. This should be read as the expected, largely mechanical resolution of a known, dated overhang rather than a fresh fundamental warning sign, while still tracking the retained positions for the subsequent 90-day lock-in expiry.
+
+81. **Q: A mid-cap company has historically received closely-aligned ratings from two agencies. Following a large related-party transaction disclosure, one agency downgrades it two notches to just below investment grade, while the other maintains its rating, citing the same transaction as adequately mitigated by disclosed collateral. Bond yields widen modestly; the equity shows limited reaction. How should a TRA read this?**
+    A: Per Part 89.5 — this is a genuinely issuer-specific split (a fresh divergence from the agencies' historically-aligned pattern, triggered by one specific new disclosure, Part 89.3), not a stable house-methodology artifact. The disagreement itself (Part 89.2) is meaningful evidence that sophisticated credit analysts genuinely disagree about how adequately the collateral mitigates the exposure. The modest bond-yield widening alongside limited equity reaction (Part 89.4) suggests the market is currently weighting something closer to the more cautious agency's view, though not fully — a TRA should flag the split explicitly and continue monitoring whether the two agencies converge or the downgrade is confirmed by further deterioration.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

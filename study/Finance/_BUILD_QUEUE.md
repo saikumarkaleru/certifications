@@ -1256,4 +1256,19 @@ borrower-disbursal complaint to a lender-side reconciliation friction). Added on
 Q80, Market Research Q89) and matching glossary terms (Market Research). TRA deepening handbook
 187->189pg, Market Research 187->189pg. Master: 4,036 -> 4,040 pages.
 
-**Running total: 4,040 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 89 (Split/Divergent Credit Ratings
+Across Agencies to TRA — a distinct diagnostic question from a single-agency rating-change read, why a
+split rating is informative beyond either individual agency's view, distinguishing a stable house-
+methodology "second opinion" split from a genuinely issuer-specific adversarial split, reading which
+rating the market's own pricing is actually weighting, a worked example on a fresh issuer-specific
+split triggered by a related-party-transaction disclosure) and PART 92 (Regulatory-Disclosure-
+Constrained Concept/Ad Testing Deepening to Market Research — a distinct methodological-depth question
+from a one-line regulatory-awareness note, the core tension between mandated disclosures and message-
+clarity optimisation, testing disclosure comprehension as a first-class metric alongside standard
+concept/ad metrics, isolating genuine concept weakness from disclosure-driven comprehension drag via
+mandated-minimum-vs-voluntary-content testing, a worked example diagnosing weak purchase intent in a
+thematic mutual-fund concept test). Added one new Q&A each (TRA Q81, Market Research Q90) and matching
+glossary terms (Market Research). TRA deepening handbook 189->191pg, Market Research 189->191pg.
+Master: 4,040 -> 4,044 pages.
+
+**Running total: 4,044 pages.**
