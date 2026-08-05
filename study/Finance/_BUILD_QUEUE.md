@@ -775,4 +775,16 @@ the hard-to-isolate but real valuation-adjacent consequence, a worked declining-
 diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
 Q52, TRA Q43). Market Research 121->123pg, TRA 105->107pg. Master: 3,888 -> 3,892 pages.
 
-**Running total: 3,892 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 52 (Mutual Fund Portfolio
+Disclosures to TRA — a stock-specific positioning signal distinct from Part 22's aggregate DII
+flow data, reading scheme-level buying/selling, new-entry/complete-exit as the highest-signal
+disclosure category, the reporting-lag caveat distinguishing this from live intraday data, a
+worked new-entry-from-a-well-regarded-fund example) and PART 55 (Finfluencer Marketing Research to
+Market Research — distinct from Part 34's generic influencer-effectiveness material, disclosure-
+compliance research as a higher-stakes version of transparency testing, credibility/expertise-
+perception research beyond engagement metrics, ongoing content-accuracy audits as a distinct
+compliance-adjacent function, a worked strong-metrics-vs-compliance-flag reconciliation example).
+Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q53, TRA
+Q44). Market Research 123->126pg, TRA 107->110pg. Master: 3,892 -> 3,898 pages.
+
+**Running total: 3,898 pages.**

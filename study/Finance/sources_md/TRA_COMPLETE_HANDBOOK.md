@@ -1339,6 +1339,27 @@ A **short squeeze** occurs when a stock with a high short-interest level (a larg
 
 ---
 
+# PART 52 — MUTUAL FUND PORTFOLIO DISCLOSURES AS A STOCK-SPECIFIC POSITIONING SIGNAL
+
+## 52.1 A distinct, stock-specific data granularity beyond Part 22's aggregate FII/DII flows
+Part 22 covered DII flows at the **aggregate cash-market level** — total domestic institutional buying or selling on a given day, with no visibility into which specific stocks were bought or sold. **Monthly mutual fund portfolio disclosures** (AMCs are required to publish each scheme's full portfolio holdings on a regular basis) provide a fundamentally different, more granular data layer: which specific schemes hold which specific stocks, at what weight, and how that weight has changed month-over-month — a stock-specific positioning signal Part 22's aggregate flow data cannot provide.
+
+## 52.2 Reading scheme-level buying and selling as a distinct signal from headline DII flow
+A specific stock can be actively accumulated by mutual fund schemes in a given month even during a period of net DII cash-market selling overall (funds rotating out of some names into others, or selling in aggregate to meet redemptions while still adding to specific high-conviction names) — meaning stock-specific portfolio-disclosure data can tell a materially different, more precise story than the aggregate DII number alone, the same "don't read one aggregate number as if it applies uniformly to every underlying position" caution this handbook has applied elsewhere (Part 22.5's multi-source synthesis).
+
+## 52.3 New entries and complete exits — the highest-signal category of disclosure change
+While gradual weight changes in an existing holding are informative, the highest-signal category of change is a scheme **initiating a brand-new position** in a stock it didn't hold the prior month, or **completely exiting** a position it previously held — both represent a more decisive, threshold-crossing conviction shift than an incremental weight adjustment, and are specifically what many professional trackers of this data scan for first across the full universe of monthly disclosures, since a new entry from a well-regarded, fundamentals-driven fund manager carries a different weight than routine weight-trimming across an existing position.
+
+## 52.4 The reporting-lag caveat — why this data is informative but never real-time
+The critical limitation distinct from live intraday data sources covered elsewhere in this handbook (Part 43's order-book data, Part 22's provisional daily flows): monthly portfolio disclosures reflect a **snapshot as of month-end**, published with a lag of typically several days to a few weeks after that month-end date — meaning by the time a TRA reads a disclosed new entry or exit, the fund's actual position may already have changed further, and the specific transaction price/timing within the month is never disclosed at this granularity. This data is genuinely useful for understanding institutional conviction and positioning trends, but should never be treated as a live, actionable trading signal the way intraday order-flow data can be.
+
+## 52.5 Worked example — reading a new-entry disclosure alongside other evidence
+*A well-regarded, large-AUM mutual fund scheme's latest monthly portfolio disclosure shows a brand-new position initiated in a mid-cap stock, sized at a meaningful 2% of the scheme's total portfolio — a stock that had shown no notable technical strength and limited analyst coverage prior to this disclosure.*
+
+**Model answer.** A new entry at a meaningful 2% weight (Part 52.3) from a well-regarded, large-AUM scheme is a genuine, threshold-crossing conviction signal worth flagging in a research note — more significant than a marginal weight increase in an already-held position — but the reporting-lag caveat (Part 52.4) means this reflects the fund's position as of the prior month-end, not real-time positioning, and the specific accumulation price/timing within that month is unknown. The correct TRA response is treating this as one meaningful input supporting further research into the name (checking for a fundamental catalyst the fund may have identified, watching whether other well-regarded funds show similar new entries in subsequent months' disclosures, and monitoring whether the stock's own technical structure begins reflecting this institutional interest) rather than either dismissing it as stale, lagged data or over-reacting as if it were a live, actionable signal — the same "genuine signal, but not a standalone trade trigger" discipline this handbook applies consistently across its alternative data sources (Part 43's order-flow data, Part 37's OI-derived data).
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1469,5 +1490,8 @@ A **short squeeze** occurs when a stock with a high short-interest level (a larg
 
 43. **Q: A mid-cap stock has short interest at 12% of free float (rising over the past month) and days-to-cover at 8, well above its historical average of 2-3, ahead of an anticipated positive results announcement. What does days-to-cover add beyond the short-interest level alone?**
     A: Per Part 51.5 — days-to-cover (Part 51.4) indicates how long forced covering would take relative to normal trading volume, so a figure well above the stock's own historical norm means any forced buying is likely to have an outsized, difficult-to-absorb price impact on this specific stock's typical liquidity, beyond what the short-interest percentage alone implies. If results beat expectations, the elevated days-to-cover raises the probability the initial reaction gets amplified by short-covering (Part 51.3) — a real but distinct, catalyst-dependent, and ultimately exhaustible driver that should be separated from the fundamental surprise itself in any research note.
+
+44. **Q: A well-regarded, large-AUM mutual fund scheme's latest monthly portfolio disclosure shows a brand-new 2%-weight position in a mid-cap stock with no notable prior technical strength or analyst coverage. How should a TRA treat this, given the disclosure's reporting lag?**
+    A: Per Part 52.5 — a new entry at a meaningful weight (Part 52.3) is a genuine, threshold-crossing conviction signal worth flagging, more significant than an incremental weight change in an existing holding. But the reporting-lag caveat (Part 52.4) means this reflects a month-end snapshot, not real-time positioning, with accumulation price/timing unknown — the correct response is treating it as one meaningful input for further research (checking for a fundamental catalyst, watching subsequent months' disclosures for corroborating entries), not as a live, standalone trading signal.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
