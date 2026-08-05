@@ -1570,6 +1570,27 @@ Exchanges frequently impose extended trading restrictions or suspend trading ent
 
 ---
 
+# PART 63 — QIP & PREFERENTIAL ALLOTMENT AS DILUTION-ADJACENT TECHNICAL EVENTS
+
+## 63.1 A distinct capital-raise mechanism from IPOs and buybacks already covered
+Part 45 covered IPO subscription/grey-market research; Part 34.2 covered buybacks as a floor-supporting mechanism. **Qualified Institutional Placement (QIP)** and **preferential allotment** are distinct capital-raise mechanisms for an already-listed company — QIP being a fast-track institutional share sale requiring no prior regulatory approval process comparable to a public offering, and preferential allotment being a targeted share issuance to specific identified investors (often promoters, strategic investors, or a specific institutional buyer) — both creating new shares and, unlike a buyback (Part 34.2), a **dilutive** event a TRA must read with the opposite directional bias from a buyback's typically-supportive framing.
+
+## 63.2 The QIP floor price formula — a distinct, regulator-defined reference level
+SEBI regulations require a QIP to be priced at or above a formula-derived **floor price** (based on a volume-weighted average of the stock's recent trading price over a defined lookback window) — meaning the QIP floor price itself becomes a specific, regulator-anchored reference level a TRA can calculate independently ahead of the actual announcement, distinct from an ordinary chart-based support level since it's derived from a formal pricing formula rather than trading-pattern-based technical analysis, giving a TRA a genuinely calculable expectation for where a QIP is likely to be priced once one is announced.
+
+## 63.3 Reading the discount-to-floor and the resulting overhang
+The actual QIP pricing, once announced, is commonly set at some discount to the calculated floor price (within regulatory limits) — a **steeper discount to floor** signals either weaker institutional demand requiring a larger sweetener to clear the placement, or management prioritising a quick, certain raise over price optimisation, while pricing closer to the floor signals stronger demand — and following the placement, the newly-issued shares create a **supply overhang** technical dynamic (extending this handbook's supply/demand framework, Part 47's auction-market balance/imbalance lens) as the QIP's institutional buyers, having bought at a specific price with no guaranteed lock-in in many QIP structures, represent a cohort of holders with a known cost basis who may sell into any rally back to or above their entry price, a distinct overhang dynamic from ordinary chart-based resistance.
+
+## 63.4 Preferential allotment lock-in — a distinct, more predictable overhang timeline
+Preferential allotment to promoters or specific investors typically carries a **mandatory lock-in period** (commonly a defined number of years, longer for allotments to promoters specifically) — unlike a QIP's more immediately-tradeable shares, this creates a more predictable, calendar-datable future overhang: a TRA can identify the specific date the lock-in expires and anticipate a potential supply-side technical event around that date, similar in spirit to Part 53's scheduled, mechanically-predictable index-reconstitution framework, here applied to a company-specific share-lock-in-expiry calendar rather than an index-level event.
+
+## 63.5 Worked example — reading a stock's technical setup following a QIP announcement at a steep discount
+*A company announces a QIP priced at a notably steeper discount to its calculated floor price than is typical for comparable recent QIPs in the sector, raising a meaningful amount relative to its market cap. The stock falls sharply on the announcement and then stabilises in a new, lower range.*
+
+**Model answer.** The steeper-than-typical discount to floor (Part 63.3) is itself a signal worth flagging — plausibly indicating the company needed to offer a larger sweetener to secure sufficient institutional demand, a modestly less favourable read on near-term demand than a QIP pricing close to its floor would suggest. The sharp initial fall reflects both the mechanical dilution (more shares outstanding against the same underlying business) and the market digesting the discount signal, while the subsequent stabilisation into a new range should be read with the QIP-buyer overhang dynamic in mind (Part 63.3) — the institutional buyers' known cost basis near the placement price creates a plausible zone of prospective selling pressure on any rally back toward that level, meaning a TRA should treat a technical rally approaching the QIP price with more caution than an equivalent rally toward an ordinary chart-based resistance level, given the specific, identifiable cohort of recent buyers with a real incentive to exit near their entry point.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1733,5 +1754,8 @@ Exchanges frequently impose extended trading restrictions or suspend trading ent
 
 54. **Q: A stock with a heavily-pledged promoter shareholding and widening credit spreads is formally admitted into IBC proceedings with a moratorium declared, and continues trading at a small fraction of its pre-admission price. Should a TRA continue applying the same technical framework that flagged the earlier warning signs?**
     A: No (Part 62.5) — the prior signals (pledge trend, credit spreads) were earlier-stage warnings, but formal IBC admission (Part 62.2) is a categorically different situation where equity value is now overwhelmingly determined by the legal resolution process, not trading-driven price discovery. A TRA should communicate that standard technical analysis is no longer the primary relevant framework, and that tracking actual NCLT/Committee of Creditors developments (Part 62.3) and any trading-suspension announcements (Part 62.4) is now the substantively relevant activity.
+
+55. **Q: A company announces a QIP priced at a notably steeper discount to its calculated floor price than typical for comparable recent sector QIPs. The stock falls sharply, then stabilises in a new, lower range. How should a TRA read a subsequent rally approaching the QIP price?**
+    A: With added caution (Part 63.5) — the steep discount (Part 63.3) plausibly signals the company needed a larger sweetener to secure sufficient institutional demand. The QIP buyers represent a specific, identifiable cohort with a known cost basis near the placement price and a real incentive to sell on any rally back toward it — this overhang dynamic makes a rally toward the QIP price a weaker basis for a bullish continuation call than an equivalent approach to an ordinary chart-based resistance level.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

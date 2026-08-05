@@ -911,4 +911,16 @@ severity as the essential financial-category addition, a worked options-order-sc
 example). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
 Q63, TRA Q54). Market Research 145->148pg, TRA 129->132pg. Master: 3,936 -> 3,942 pages.
 
-**Running total: 3,942 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 63 (QIP & Preferential
+Allotment to TRA — a dilutive capital-raise mechanism distinct from IPOs (Part 45) and buybacks
+(Part 34.2), the regulator-defined QIP floor-price formula as a calculable reference level,
+discount-to-floor reading and post-placement supply overhang, preferential-allotment lock-in as a
+calendar-datable future overhang, a worked steep-discount-QIP overhang example) and PART 66
+(Research Vendor Evaluation & Panel-Provider Selection to Market Research — deepens Part 12.1's RFP
+basics into full evaluation methodology, panel-quality criteria beyond raw size, pilot-study
+evaluation before full commitment, category-specific reference checks, a worked two-vendor-
+comparison example). Added matching glossary terms (Market Research) and one new Q&A each (Market
+Research Q64, TRA Q55). Market Research 148->150pg (milestone: crossed 150pg), TRA 132->134pg.
+Master: 3,942 -> 3,946 pages.
+
+**Running total: 3,946 pages.**
