@@ -1276,6 +1276,27 @@ While a deep US high-yield-spread dataset (e.g. tracked indices) is the classic 
 
 ---
 
+# PART 49 — PROMOTER SHARE PLEDGING AS A TECHNICAL RED-FLAG SIGNAL
+
+## 49.1 A distinct, India-specific structural risk signal beyond ordinary promoter-sale disclosures
+Part 33.3 covered how to read an ordinary promoter share sale via a block deal — generally not an automatic bearish signal without further context. **Promoter share pledging** is a structurally different and, in several ways, a more serious signal: promoters pledging (using as loan collateral) a portion of their shareholding to raise financing, creating a specific, mechanical vulnerability that an ordinary unpledged promoter sale does not — a distinct disclosure a TRA should track and interpret differently from routine promoter transactions.
+
+## 49.2 The mechanics — why a high pledge percentage creates forced-selling risk
+When promoters pledge shares as loan collateral, the lender typically sets a **loan-to-value (LTV) threshold** — if the stock price falls enough that the pledged shares' value breaches this threshold, the lender can issue an **invocation** (force-selling the pledged shares in the open market to recover the loan) regardless of the promoter's own wishes or the company's underlying fundamentals — meaning a high promoter-pledge percentage creates a genuine, price-triggered, mechanical selling-pressure risk distinct from any fundamental or technical driver, a structural vulnerability specific to how the promoter has financed their own personal or group-entity obligations against company shares.
+
+## 49.3 Reading pledge percentage and trend — not just the absolute level
+Exchanges require disclosure of **pledge percentage** (the share of promoter holding that is pledged) on a regular basis, and a TRA should track both the **absolute level** (a pledge percentage above roughly 50% of promoter holding is generally considered a meaningful red flag, though the specific threshold that matters varies by situation) and the **trend** (a rising pledge percentage over successive disclosure periods signals worsening promoter-level financial stress, even if the absolute level hasn't yet crossed an alarming threshold) — the trend direction is often the more actionable early-warning signal, catching deteriorating promoter financial health before the absolute pledge level itself becomes critical.
+
+## 49.4 Why a stock with high promoter pledge trades with a structural technical "ceiling" risk
+A stock with a high, actively-monitored promoter pledge percentage tends to see technical rallies capped or reversed more readily around levels where market participants perceive renewed invocation risk approaching — since sophisticated market participants price in the elevated probability of forced supply hitting the market if the price weakens toward the pledge-threshold zone, this can create a self-reinforcing dynamic distinct from ordinary chart-based resistance: the pledge overhang itself becomes a structural reason for capped upside and amplified downside, a genuinely different technical character than an equivalent stock with clean, unpledged promoter holding.
+
+## 49.5 Worked example — reading a rising promoter pledge trend alongside a weakening chart
+*A mid-cap company's disclosed promoter pledge percentage has risen from 22% to 41% over three consecutive quarterly disclosures, while the stock's chart shows a weakening trend (lower highs, price below its 200-day MA) over the same period, though no other negative company-specific news is apparent.*
+
+**Model answer.** The rising pledge trend (Part 49.3) — nearly doubling over three quarters — is itself a meaningful red flag independent of the absolute 41% level, since a sharply rising trend signals worsening promoter-level financial stress that a TRA should flag explicitly in a research note, distinct from and in addition to any read on the company's own operating fundamentals. Combined with the weakening technical structure (lower highs, below the 200-day MA), the pledge trend adds a specific, structural explanation worth investigating for *why* the stock may be technically weak — a stock under pledge-related overhang risk (Part 49.4) can see technical weakness reinforced by the market's own awareness of potential forced-selling risk, a self-reinforcing dynamic distinct from ordinary fundamentals-driven weakness. The correct TRA response is flagging the rising pledge trend explicitly as a structural risk factor in any research note on this name, and treating any technical rally attempt with added caution given the elevated, price-sensitive forced-selling risk this specific promoter-level vulnerability creates — a risk factor a chart alone, without checking the shareholding-pattern disclosures, would completely miss.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1397,5 +1418,8 @@ While a deep US high-yield-spread dataset (e.g. tracked indices) is the classic 
 
 40. **Q: The Nifty 50 is roughly flat over two weeks, but NBFC and real-estate stocks have underperformed the index by 6-8% alongside a modest widening in NBFC bond spreads over G-Secs. How should a TRA read this, and what should they watch for next?**
     A: Per Part 48.5 — this is a plausible early credit-stress signal (Part 48.2's "credit leads equity" logic) showing up first in the most credit-sensitive names and spreads (Part 48.3-48.4) before it's visible in the flat headline index. Rather than assuming the broad index will necessarily follow lower, the disciplined response is flagging the divergence as a risk-off lead indicator and monitoring whether the underperformance and spread-widening broadens to other credit-sensitive sectors or begins appearing in the index's own technical structure.
+
+41. **Q: A mid-cap company's disclosed promoter pledge percentage has risen from 22% to 41% over three quarters, alongside a weakening chart (lower highs, below the 200-day MA), with no other negative news apparent. What should a TRA flag, and why?**
+    A: Per Part 49.5 — the rising pledge trend (Part 49.3), nearly doubling in three quarters, is itself a red flag independent of the absolute level, signalling worsening promoter-level financial stress distinct from company fundamentals. Combined with the weakening chart, it points to a structural pledge-overhang risk (Part 49.4) that can reinforce technical weakness through the market's awareness of potential forced-selling risk — this should be flagged explicitly in any research note, with added caution on any technical rally attempt given the elevated, price-sensitive invocation risk a chart alone wouldn't reveal.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

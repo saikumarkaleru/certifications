@@ -738,4 +738,16 @@ worked high-NPS-but-weak-referral-quality diagnostic). Added matching glossary t
 Research) and one new Q&A each (Market Research Q49, TRA Q40). Market Research 115->117pg, TRA
 99->101pg. Master: 3,876 -> 3,880 pages.
 
-**Running total: 3,880 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 49 (Promoter Share Pledging as
+a Technical Red-Flag Signal to TRA — distinct from Part 33.3's ordinary promoter-sale reading, LTV-
+threshold invocation mechanics creating price-triggered forced-selling risk, absolute-level vs
+trend reading of pledge percentage, why high pledge creates a structural technical "ceiling," a
+worked rising-pledge-trend-plus-weakening-chart example) and PART 52 (Experimentation Methodology
+to Market Research — beyond simple A/B testing: peeking and sequential testing, multi-armed
+bandits as a distinct optimise-during-test paradigm vs fixed-allocation testing, guardrail metrics
+protecting against a "winning" test that damages something else, a worked bandit-based onboarding-
+experiment guardrail-timing example). Added matching glossary terms (Market Research) and one new
+Q&A each (Market Research Q50, TRA Q41). Market Research 117->119pg, TRA 101->103pg. Master:
+3,880 -> 3,884 pages.
+
+**Running total: 3,884 pages.**
