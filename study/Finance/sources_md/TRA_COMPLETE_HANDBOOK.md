@@ -1843,6 +1843,27 @@ FPI debt flows specifically are also sensitive to the **interest-rate differenti
 
 ---
 
+# PART 76 — COMPOSITE MULTI-FACTOR TECHNICAL SCORING MODELS
+
+## 76.1 A distinct methodological layer — combining, not adding another, signal
+This handbook has covered many individual technical signals (RS rank, Part 38; volume-profile structure, Part 39; moving-average trend, Part 3) largely one at a time, with confluence discussed qualitatively ("weigh this alongside that"). This Part covers the methodology for **formalising** confluence into an actual **composite score** — a single, systematically-calculated number blending multiple individual signals with defined weights, rather than a purely qualitative, ad-hoc "does this feel like a strong setup" judgment — a distinct screening and ranking methodology, not a new individual signal.
+
+## 76.2 Factor selection — choosing genuinely independent, non-redundant inputs
+The first, most consequential design decision in building a composite score is **factor selection**: choosing inputs that capture genuinely distinct dimensions of a stock's technical picture rather than multiple, highly-correlated variants of the same underlying signal (combining RS rank, Part 38, with a raw trailing-return figure would be substantially redundant, since both largely measure the same thing) — a well-designed composite typically blends factors from genuinely distinct categories (trend/momentum, e.g. RS rank; volume/participation, e.g. volume-profile acceptance, Part 39; volatility context, e.g. IV rank or realised-volatility regime) specifically because redundant factors don't add real diagnostic information, they simply over-weight whatever dimension the redundant factors happen to share.
+
+## 76.3 Weighting methodology — equal-weighting as a credible, honest default
+Once factors are selected, they must be combined with **weights** reflecting their relative importance — a genuinely difficult, often-overfitted decision (this handbook's overfitting caution, Part 58.2, applies directly: hand-tuning weights to maximise historical backtest performance risks fitting noise rather than a genuine, durable pattern) — a credible, honest starting point many practitioners default to is **equal-weighting** each selected factor (converting each to a comparable percentile-rank scale first, then simply averaging) specifically because it avoids the overfitting risk of elaborately hand-tuned weights while still capturing genuine confluence benefit, reserving weight customisation for cases with a clear, independently-justified rationale (not just "this weighting produced the best backtest").
+
+## 76.4 Validation — the same walk-forward discipline this handbook applies to any systematic model
+A composite scoring model requires the same walk-forward validation discipline this handbook's backtesting material establishes (Part 58.4) — testing whether stocks ranking highly on the composite score in an out-of-sample period actually showed better subsequent performance than lower-ranked stocks, across multiple rolling windows, not just checking that the score's construction feels theoretically sound — a composite score is, after all, a systematic trading model like any other, and deserves the identical evidentiary standard this handbook applies to any single-signal or multi-indicator strategy before being trusted for live screening decisions.
+
+## 76.5 Worked example — building and validating a simple three-factor composite screen
+*A TRA builds a composite score combining three percentile-ranked factors — 6-month RS rank (Part 38), volume-profile acceptance strength above a recent breakout level (Part 39), and IV rank (a measure of whether the stock's options are cheap or expensive relative to its own history) — equally weighted, and wants to validate the resulting screen before using it for live idea generation.*
+
+**Model answer.** The factor selection (Part 76.2) is reasonably well-diversified across genuinely distinct dimensions — trend/momentum (RS rank), volume/participation (volume-profile acceptance), and volatility context (IV rank) — rather than three variants of the same underlying signal, a good starting foundation. The equal-weighting choice (Part 76.3) is a defensible, honest default absent a specific, independently-justified reason to weight one factor more heavily. Before using this screen for live idea generation, the TRA must apply the same walk-forward validation (Part 76.4, Part 58.4) this handbook requires of any systematic model — checking across multiple historical rolling windows whether stocks the composite score would have ranked highly actually showed better subsequent returns than lower-ranked stocks, not simply trusting that combining three sensible-sounding factors must produce a sensible-performing screen; a composite score's individual factors each being independently reasonable doesn't guarantee the combination itself has genuine, validated predictive power until it's actually tested with the same rigor this handbook applies throughout.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2045,5 +2066,8 @@ FPI debt flows specifically are also sensitive to the **interest-rate differenti
 
 67. **Q: Over two weeks, FPI data shows sustained net equity selling alongside roughly-offsetting net debt buying, coinciding with a broad global risk-aversion episode but no change in the India-US rate differential. How should a TRA read this, and why is the offsetting debt-buying important?**
     A: Per Part 75.5 — the roughly-offsetting pattern is consistent with an intra-India risk-off rotation (Part 75.2-75.3) — FPIs reducing equity-risk exposure while maintaining overall India allocation via debt — rather than a broad exit from India. With the rate-differential explanation ruled out (Part 75.4), the debt-side buying is more confidently attributable to the risk-rotation narrative, meaning the headline equity-outflow figure alone would overstate the severity of FPI sentiment toward India specifically.
+
+68. **Q: A TRA builds a composite technical score from three equally-weighted, percentile-ranked factors — RS rank, volume-profile acceptance strength, and IV rank. Is validating that each factor is individually sensible enough to trust the composite score for live screening?**
+    A: No (Part 76.5) — the factor selection is well-diversified (Part 76.2) and equal-weighting is a defensible default avoiding overfitting risk (Part 76.3), but a composite score is itself a systematic model requiring the same walk-forward validation this handbook applies to any backtested strategy (Part 76.4, Part 58.4). Each factor being individually reasonable doesn't guarantee the combination has genuine, validated predictive power until tested across multiple out-of-sample rolling windows.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
