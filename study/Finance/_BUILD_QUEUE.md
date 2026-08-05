@@ -1123,4 +1123,16 @@ post-launch stages, a worked category-specific concept-test-calibration-gap disc
 Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q80, TRA
 Q71). Market Research 183->185pg, TRA 167->169pg. Master: 4,012 -> 4,016 pages.
 
-**Running total: 4,016 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 80 (ETF Premium/Discount to
+iNAV to TRA — a third distinct arbitrage relationship beyond Part 57's futures basis and Part 79's
+NSE-BSE divergence, the creation/redemption arbitrage mechanism (Part 35.2) and what impairs it,
+international/thematic ETFs' structural trading-hours-mismatch baseline, widening-beyond-typical-
+range as the actual signal, a worked persistent-international-ETF-premium example) and PART 83 (App
+Store Optimization Creative Testing to Market Research — distinct from Part 43's review mining,
+screenshot-order as its own variable, icon testing as a disproportionately high-leverage overlooked
+element, localised-vs-generic creative testing extending Part 15's cultural-adaptation discipline,
+a worked bundled-icon-and-screenshot-refresh-masking-opposing-effects diagnostic). Added matching
+glossary terms (Market Research) and one new Q&A each (Market Research Q81, TRA Q72). Market
+Research 185->187pg, TRA 169->171pg. Master: 4,016 -> 4,020 pages.
+
+**Running total: 4,020 pages.**
