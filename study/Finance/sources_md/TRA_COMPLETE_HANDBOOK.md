@@ -1083,6 +1083,27 @@ Beyond the POC, a full volume profile reveals **high-volume nodes (HVNs)** — p
 
 ---
 
+# PART 40 — ELLIOTT WAVE THEORY, DEEPENED: RULES, GUIDELINES & FIBONACCI CONFLUENCE
+
+## 40.1 From the four-bullet summary to a workable counting discipline
+Part 4.2 introduced Elliott Wave at a summary level: five-wave impulses, three-wave corrections, fractal repetition. That summary is not enough to actually apply the framework — Elliott Wave is only useful in practice once a TRA knows the specific **rules** (conditions that must never be violated for a wave count to be valid) versus the **guidelines** (tendencies that are common but not mandatory), a distinction most casual users of the theory skip past, which is exactly why Elliott Wave gets a reputation for being infinitely reinterpretable and unfalsifiable when applied loosely.
+
+## 40.2 The three inviolable rules of a valid impulse wave count
+A five-wave impulse count is only valid if all three of these hold: **(1)** Wave 2 never retraces more than 100% of Wave 1 (it cannot go below the start of Wave 1 in an uptrend); **(2)** Wave 3 is never the shortest of waves 1, 3, and 5 (it is very often the longest, but the rule is only that it's never the shortest); **(3)** Wave 4 never overlaps Wave 1's price territory (in a standard, non-diagonal impulse). If a proposed count violates any of these three, it is not a valid Elliott impulse count and must be relabelled — this is the discipline that separates a rigorous count from an after-the-fact story fitted to whatever the chart already did.
+
+## 40.3 Guidelines — common tendencies that inform, but don't invalidate, a count
+Beyond the three hard rules, several **guidelines** commonly hold and are useful for setting expectations, without being mandatory: **alternation** (Wave 2 and Wave 4 tend to look different in structure — a sharp Wave 2 often pairs with a sideways, time-consuming Wave 4, or vice versa); Wave 3 commonly extending to roughly 1.618× Wave 1 (a Fibonacci-extension confluence, Part 3.5); Wave 4 commonly retracing into the price territory of the prior Wave 1's fourth sub-wave (the "Wave 4 of a lesser degree" guideline). Treating these as probabilistic tendencies rather than rules is what keeps a count honest — a count that only holds together by treating a guideline as a rule is a sign the underlying wave labelling is being forced.
+
+## 40.4 Why Fibonacci confluence, not a count alone, is the actionable output
+The practical, tradeable output of an Elliott Wave count is rarely the count itself — it's the **Fibonacci confluence** it generates: if a count suggests a corrective Wave 4 is underway, the 38.2%-50% retracement zone of the preceding Wave 3 (Part 3.5's retracement levels) becomes a specific, testable price zone to watch for the correction to complete, especially if that zone also coincides with a separate technical reference (a prior swing low, a moving average, a volume-profile Value Area from Part 39) — this convergence of an Elliott-derived expectation with an independent technical level is what turns a subjective wave count into an actionable, risk-defined zone, rather than a story told after the fact.
+
+## 40.5 Worked example — validating a proposed 5-wave count and locating the Wave 4 target zone
+*A stock's recent uptrend is being labelled as a 5-wave impulse: Wave 1 rallied from ₹100 to ₹130, Wave 2 pulled back to ₹112 (a 60% retracement of Wave 1), Wave 3 rallied to ₹185 (well beyond Wave 1's length), and the stock is now pulling back in what's being labelled Wave 4.*
+
+**Model answer.** Checking the count against Part 40.2's three rules: Wave 2's retracement to ₹112 is a 60% retracement of the ₹100-130 move — under the 100% ceiling, so Rule 1 holds. Wave 3 (₹130 to ₹185, a ₹55 move) is longer than Wave 1 (₹30) — consistent with Rule 2 (Wave 3 is not the shortest; it doesn't need to be checked against Wave 5 yet since Wave 5 hasn't formed). For Wave 4 to remain valid under Rule 3, it must not overlap Wave 1's territory — meaning it must hold above ₹130 (Wave 1's high); a pullback below ₹130 would invalidate this specific impulse count and require relabelling. Combining this hard constraint with Part 40.4's confluence approach: the 38.2%-50% retracement zone of Wave 3 (the ₹185 to ₹130 move) falls at roughly ₹164-149 — a specific, Fibonacci-derived target zone for Wave 4 to complete in, which becomes materially more actionable if it coincides with an independent reference like a prior swing level or a volume-profile Value Area (Part 39.2) in that same price range, giving the TRA both a defined invalidation level (below ₹130) and a defined target zone (₹149-164) rather than an open-ended "it's correcting" read.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1177,5 +1198,8 @@ Beyond the POC, a full volume profile reveals **high-volume nodes (HVNs)** — p
 
 31. **Q: A stock opens above the prior session's Value Area High on above-average volume. What two outcomes should a TRA watch for, and what distinguishes them?**
     A: Per Part 39.5 — an open outside the prior session's value area can either see sustained, volume-backed acceptance above it (a genuine shift to a higher fair-value range, consistent with a trend-day character) or revert back inside the prior value area once the initial imbalance is absorbed (a gap-and-fade). The distinguishing evidence is whether price holds above the prior VAH as the session develops on continued volume, versus a swift reversion back into the ₹-range value area — the volume-profile framework (Part 39.2-39.3) gives specific price levels to watch for this, beyond what a purely time-based chart would show.
+
+32. **Q: A 5-wave impulse count has Wave 3 as the longest wave and Wave 4 pulling back toward, but not below, Wave 1's high. Is this count still valid, and where's the actionable target zone?**
+    A: Yes — it satisfies all three Elliott rules (Part 40.2): Wave 2 didn't fully retrace Wave 1, Wave 3 isn't the shortest wave, and Wave 4 hasn't overlapped Wave 1's territory. The actionable output isn't the count itself but the Fibonacci confluence it generates (Part 40.4) — the 38.2%-50% retracement zone of Wave 3 is the specific target zone to watch for Wave 4 to complete in, especially where it coincides with an independent reference like a prior swing level or a volume-profile Value Area (Part 39.2), while a break below Wave 1's high would invalidate the count entirely.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

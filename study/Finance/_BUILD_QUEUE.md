@@ -634,4 +634,15 @@ spike diagnostic tying back to the stated-vs-revealed-preference theme). Added m
 terms (Market Research) and one new Q&A each (Market Research Q40, TRA Q31). Market Research
 94->96pg, TRA 79->81pg. Master: 3,835 -> 3,839 pages.
 
-**Running total: 3,839 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 40 (Elliott Wave Theory,
+Deepened to TRA — deepens Part 4.2's 4-bullet summary into the three inviolable rules vs
+guidelines distinction, Fibonacci confluence as the actual actionable output of a wave count, a
+worked 5-wave-count validation + Wave 4 target-zone example) and PART 43 (Alternative Data as a
+Market Research Input to Market Research — satellite/app-download/web-traffic signals as a
+distinct evidence layer, speed/frequency as the core value proposition vs slower primary research,
+ground-truthing discipline before trusting a new alternative-data source, alternative data as a
+trigger for targeted primary follow-up rather than a standalone finding, a worked app-download-
+surge diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market
+Research Q41, TRA Q32). Market Research 96->98pg, TRA 81->83pg. Master: 3,839 -> 3,843 pages.
+
+**Running total: 3,843 pages.**
