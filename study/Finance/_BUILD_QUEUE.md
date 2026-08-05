@@ -1010,4 +1010,16 @@ credible responses, a worked pre-external-metric KYC-friction pulse-survey examp
 glossary terms (Market Research) and one new Q&A each (Market Research Q71, TRA Q62). Market
 Research 163->165pg, TRA 147->149pg. Master: 3,972 -> 3,976 pages.
 
-**Running total: 3,976 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 71 (IPO Listing-Day Price
+Discovery to TRA — a distinct, no-prior-close pre-open mechanism beyond Part 68's standard framework,
+the issue-price-anchored listing-day price band, reading the listing-day IEP as a real-money test of
+Part 45's GMP/subscription signals, distinct early-session volatility character for newly-listed
+names, a worked GMP-vs-actual-listing-day-IEP gap example) and PART 74 (Win-Loss Analysis, Deepened
+to Market Research — deepens a glossary term into a structured B2B interview protocol, independent-
+interviewer as the single most consequential design choice, comparative win/loss sampling versus
+loss-only post-mortems, timing/specificity-probing question design, a worked salesperson-conducted-
+loss-only-vs-independent-comparative diagnostic showing "it's about price" was never differentiating).
+Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q72, TRA Q63).
+Market Research 165->167pg, TRA 149->151pg. Master: 3,976 -> 3,980 pages.
+
+**Running total: 3,980 pages.**

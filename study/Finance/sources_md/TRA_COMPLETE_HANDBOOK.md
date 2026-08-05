@@ -1738,6 +1738,27 @@ T2T designation has two genuinely different typical trigger contexts a TRA shoul
 
 ---
 
+# PART 71 — IPO LISTING-DAY PRICE DISCOVERY: A DISTINCT PRE-OPEN MECHANISM
+
+## 71.1 Why listing day requires its own distinct pre-open framework
+Part 68 covered the standard pre-open session mechanism assuming an existing prior close as the reference point. A stock's **IPO listing day** breaks that assumption entirely — there is no prior trading day's close to anchor against, only the IPO's issue price, meaning the listing-day pre-open session operates under distinct rules specifically designed for this one-time, no-prior-reference scenario a TRA covering a newly-listed name needs to understand as genuinely different from an ordinary day's pre-open.
+
+## 71.2 The listing-day price band — wider and issue-price-anchored, not prior-close-anchored
+For an IPO's listing day specifically, the exchange sets a distinct **price band** (typically a wider percentage range than an established stock's ordinary daily circuit filter) anchored to the **issue price** rather than any prior closing price — reflecting the genuine uncertainty in price discovery for a name with no trading history at all, and the price-discovery-phase IEP computation (Part 68.2) for a listing-day pre-open works within this issue-price-anchored band rather than the prior-close-anchored band an established stock's ordinary pre-open session uses.
+
+## 71.3 Reading the listing-day IEP relative to grey-market/subscription signals already covered
+The listing-day pre-open IEP is the first genuinely exchange-order-book-derived price discovery for the stock, distinct from and a direct real-money test of the pre-listing signals this handbook already covers (Part 45's grey-market premium and category-wise subscription data) — a TRA should read the listing-day IEP as the point where informal, thin-market GMP indications and formal subscription patterns finally meet actual, exchange-regulated order-book price discovery, and should specifically note whether the IEP confirms, exceeds, or falls short of what the GMP had indicated (Part 45.3's caution about GMP's limited reliability being directly, empirically tested at this exact moment).
+
+## 71.4 Post-listing volatility character — why early sessions differ from an established stock's normal pattern
+Beyond the listing-day pre-open itself, a newly-listed stock's first several sessions typically show a distinct volatility character from an established stock: no historical technical levels exist yet (no prior swing highs/lows, no established moving averages with meaningful history, Part 2's chart-pattern toolkit has nothing to work with initially), and the stock is still absorbing the transition from the IPO's institutional/anchor-investor holding structure to a broader, freely-trading base — a TRA should expect wider realised volatility and a more unsettled technical structure in a newly-listed name's first weeks, gradually stabilising as sufficient trading history accumulates for standard technical tools to become meaningfully applicable again.
+
+## 71.5 Worked example — reading a listing-day IEP against pre-listing grey-market signals
+*An IPO's grey-market premium had indicated an approximate 25% listing gain over the issue price in the days before listing. On listing day, the pre-open IEP settles at roughly 15% above the issue price by the end of the price-discovery phase.*
+
+**Model answer.** The listing-day IEP (Part 71.3) coming in meaningfully below the GMP's pre-listing indication is a direct, real-money confirmation of Part 45.3's caution about GMP's limited reliability as a standalone predictor — the actual, exchange-regulated order-book price discovery reflects genuine institutional and broader-market demand at the moment of listing, a materially more rigorous signal than the informal, thin-participation grey market ever was, and the 10-percentage-point gap between the two should be read as evidence the GMP indication was, in this instance, overstated relative to actual demand, not as a signal something is specifically "wrong" with the stock beyond the GMP simply having been an unreliable predictor as this handbook's material on it already flagged. A TRA should note this gap explicitly in any listing-day commentary and, given Part 71.4's expected early-session volatility, should communicate that the 15% IEP reading itself carries real uncertainty and shouldn't be treated as a stable, durable valuation reference until the stock has accumulated sufficient post-listing trading history for its own genuine technical structure to develop.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1925,5 +1946,8 @@ T2T designation has two genuinely different typical trigger contexts a TRA shoul
 
 62. **Q: A small-cap stock is moved into the Trade-for-Trade (T2T) segment as a surveillance measure following unusually sharp appreciation on thin volume. A colleague proposes an intraday strategy based on the recent chart pattern. What's wrong with this proposal, and what else should be considered?**
     A: Per Part 70.5 — the strategy is immediately inapplicable, since T2T's compulsory-delivery mechanism (Part 70.2) mechanically prohibits any intraday round-trip regardless of the chart pattern's quality. Given this is a surveillance-triggered T2T designation rather than routine new-listing protocol (Part 70.4), it should be treated as a genuine, company-specific caution signal — any position consideration must also account for the segment's thinner liquidity and wider spreads (Part 70.3), not just adapted to a longer holding period while ignoring why the designation was applied.
+
+63. **Q: An IPO's grey-market premium indicated an approximate 25% listing gain, but the actual listing-day pre-open IEP settles at roughly 15% above the issue price. How should a TRA interpret this 10-point gap?**
+    A: Per Part 71.5 — the listing-day IEP (Part 71.3) is genuine, exchange-regulated order-book price discovery, a materially more rigorous signal than the informal, thin-participation grey market. The gap is direct, real-money confirmation of GMP's limited reliability as a standalone predictor (Part 45.3), not evidence something is specifically wrong with the stock — and given the expected early-session volatility for a newly-listed name (Part 71.4), the 15% IEP itself shouldn't be treated as a stable valuation reference until sufficient post-listing trading history accumulates.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
