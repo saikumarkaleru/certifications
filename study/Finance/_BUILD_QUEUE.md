@@ -960,4 +960,17 @@ as mitigations, a worked CAB-satisfaction-vs-representative-survey-dissatisfacti
 example). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
 Q67, TRA Q58). Market Research 154->156pg, TRA 138->140pg. Master: 3,954 -> 3,958 pages.
 
-**Running total: 3,958 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 67 (Credit Rating Actions to
+TRA — a discrete-event catalyst distinct from Part 48's continuous credit-spread signal and Part
+29's equity-analyst-consensus material, why an investment-grade-to-sub-investment-grade downgrade
+triggers mandate-driven forced institutional selling, rating-watch/outlook changes as an earlier
+softer signal, multi-agency divergence as its own informative signal, a worked fallen-angel-
+downgrade-after-negative-watch example) and PART 70 (Automated Price/Fee Monitoring via Web
+Scraping to Market Research — a distinct data-collection infrastructure from Part 53's pricing-
+research methodology, what continuous automated monitoring catches that periodic manual checks
+miss, scraping-specific data-quality risks distinct from survey quality checks, legal/ethical
+scraping boundaries, a worked brief-undisclosed-promotional-pricing-change diagnostic). Added
+matching glossary terms (Market Research) and one new Q&A each (Market Research Q68, TRA Q59).
+Market Research 156->159pg, TRA 140->143pg. Master: 3,958 -> 3,964 pages.
+
+**Running total: 3,964 pages.**
