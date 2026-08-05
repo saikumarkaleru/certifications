@@ -595,4 +595,17 @@ global-cues echo, a worked IT-services-ADR-ahead-of-the-open example). Added mat
 terms and one new Q&A each (Market Research Q37, TRA Q28) tied to the new Parts. Market Research
 87->90pg, TRA 72->75pg. Master: 3,821 -> 3,827 pages.
 
-**Running total: 3,827 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 40 (Retail Investor &
+Trading-App Research to Market Research — why retail-broking research is a distinct sub-
+discipline vs generic fintech UX, KYC/activation-funnel research distinguishing UX-caused vs
+regulatory-inherent drop-off, trading-frequency behavioural segmentation, trust-signal and risk-
+perception-calibration research specific to real-money apps, a worked 30-day F&O-churn diagnostic
+separating UX/risk-comprehension/natural-segment hypotheses) and PART 37 (Options Open Interest
+(OI) Data as a Technical Signal to TRA — OI as a third data layer beyond price/volume, the four-
+quadrant long-buildup/short-buildup/short-covering/long-unwinding read, Max Pain and PCR as
+sentiment-adjacent OI derivatives, strike-level OI concentration as dynamic support/resistance, a
+worked Nifty weekly-expiry OI-and-PCR synthesis example). Added matching glossary terms (Market
+Research) and one new Q&A each (Market Research Q38, TRA Q29). Market Research 90->92pg, TRA
+75->77pg. Master: 3,827 -> 3,831 pages.
+
+**Running total: 3,831 pages.**

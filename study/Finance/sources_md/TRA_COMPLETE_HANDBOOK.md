@@ -1020,6 +1020,27 @@ If a stock's ADR moves sharply while the broader US market (S&P 500, and especia
 
 ---
 
+# PART 37 — OPTIONS OPEN INTEREST (OI) DATA AS A TECHNICAL SIGNAL
+
+## 37.1 OI as a distinct data layer beyond price and volume
+**Open interest (OI)** — the total number of outstanding, not-yet-closed options (or futures) contracts at a given strike/expiry — is a genuinely distinct third data layer beyond the price-and-volume framework this handbook has built on since Part 1: a rising price with rising OI means new money is entering positions in the direction of the move (a stronger, better-supported move), while a rising price with falling OI means the move is being driven by short-covering (existing short positions being closed) rather than fresh conviction — the same price move can mean very different things depending on what OI is doing underneath it.
+
+## 37.2 OI buildup patterns — the four-quadrant read
+Combining the direction of price change with the direction of OI change gives a standard four-quadrant read used constantly on NSE F&O desks: **long buildup** (price up, OI up — fresh long positions, bullish), **short buildup** (price down, OI up — fresh short positions, bearish), **short covering** (price up, OI down — shorts closing, a weaker/less durable up-move than a long buildup), and **long unwinding** (price down, OI down — longs closing, a weaker/less durable down-move than a short buildup) — a TRA reading intraday or daily F&O data should classify which quadrant a stock or index is in before treating a price move as equally "strong" regardless of its OI signature.
+
+## 37.3 Max Pain and the Put-Call Ratio (PCR) as sentiment-adjacent OI derivatives
+**Max Pain** is the strike price at which option writers (sellers) as a whole would face the smallest aggregate payout at expiry — the theory being that price has some tendency to gravitate toward this level into expiry as large option writers (who are typically well-capitalised institutional players) have an economic incentive influencing hedging flows, though this is a probabilistic tendency, not a rule, and weakens materially the further out from expiry the read is taken. **Put-Call Ratio (PCR)**, computed from OI (or volume) as puts written divided by calls written, is commonly read as a contrarian sentiment gauge (very high PCR = excessive bearishness, often read as a contrarian bullish signal, and vice versa) — extending this handbook's broader theme (Part 24's consensus-sentiment-as-contrarian-input framework) into the options-OI data specifically, with the same caution that an extreme reading is a caution flag to weigh alongside price/trend evidence, not a standalone trade trigger.
+
+## 37.4 Reading strike-level OI concentration as dynamic support/resistance
+Strikes with unusually large OI buildup (visible on an option chain) are often watched as **dynamic support/resistance levels** distinct from the price-chart-based support/resistance covered in Part 2 — the logic being that large option writers at a strike have a hedging incentive (via delta-hedging their short option positions) that can create real, if temporary, buying or selling pressure around that strike as expiry approaches, particularly for index options where writer positions are large and hedging flows are more mechanical and predictable than for a typical single-stock chart pattern.
+
+## 37.5 Worked example — reading an index's OI signature into a weekly expiry
+*Nifty is up 0.8% intraday. Options-chain data shows call OI has built up heavily at a strike 2% above the current level, and PCR has risen to an unusually high 1.6 (versus a recent range of 0.9-1.2), with two trading days left to weekly expiry.*
+
+**Model answer.** The elevated call OI 2% above spot (Part 37.4) is a plausible resistance zone into expiry, given the hedging-flow logic behind strike-level OI concentration, though it should be weighted as one input, not a hard ceiling. The unusually high PCR of 1.6 (Part 37.3) is more ambiguous close to expiry than it would be weeks out — it could reflect genuine bearish positioning building, or it could partly reflect option-writing strategies unrelated to directional sentiment (e.g. covered strategies), so a TRA should avoid over-reading a single elevated PCR print near expiry as a clean contrarian signal without corroborating price/volume evidence (Part 37.1's "check what's underneath the move" discipline) — the correct synthesis is: treat the OI concentration as a plausible near-term resistance reference level for the remaining expiry days, treat the PCR reading as a mild caution flag warranting closer tracking rather than a standalone signal, and continue relying primarily on price/volume/trend evidence (the core of this handbook, Parts 1-21) for the actual directional call.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1105,5 +1126,8 @@ If a stock's ADR moves sharply while the broader US market (S&P 500, and especia
 
 28. **Q: A large NSE-listed company's US ADR closes up 3.1% overnight while the S&P 500 and Nasdaq are roughly flat. How should a TRA read this ahead of the NSE open, and why does the flat broader market matter?**
     A: Per Part 36.4-36.5 — with the broader US market flat, the ADR's move is unlikely to just be a "global markets were up" echo (Part 22's broad global-cues signal), pointing instead toward a stock-specific driver worth checking newsflow for. Because the ratio-adjusted ADR move is a direct proxy for the likely domestic-share open (Part 36.2) and is kept tight by an active arbitrage mechanism for liquid ADR programs (Part 36.3), the practical read is to expect a meaningful gap up at the NSE open and size any pre-open orders accordingly, rather than treating the prior NSE close as the relevant reference point.
+
+29. **Q: Nifty is up 0.8% intraday with heavy call OI built up 2% above spot and PCR at an unusually high 1.6 near weekly expiry. How should a TRA weigh these two OI-derived signals against each other?**
+    A: Per Part 37.5 — the call OI concentration is a plausible near-term resistance reference given the hedging-flow logic behind strike-level OI (Part 37.4), but the elevated PCR is more ambiguous this close to expiry since it can partly reflect option-writing strategies unrelated to directional sentiment, not just bearish positioning. The correct synthesis treats the OI concentration as a resistance reference and the PCR reading as a mild caution flag, not a standalone signal, while continuing to rely primarily on core price/volume/trend evidence for the actual directional call.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
