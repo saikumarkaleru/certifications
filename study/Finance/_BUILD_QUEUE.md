@@ -861,4 +861,17 @@ suspiciously-resilient-confidence-tracker-through-a-downturn diagnostic). Added 
 terms (Market Research) and one new Q&A each (Market Research Q59, TRA Q50). Market Research
 137->139pg, TRA 121->123pg. Master: 3,920 -> 3,924 pages.
 
-**Running total: 3,924 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 59 (REITs & InvITs: A Distinct
+Yield-Sensitive Technical Profile to TRA — bond-proxy behaviour distinct from ordinary equity,
+interest-rate sensitivity as the dominant technical driver, mechanical ex-distribution price
+adjustment as a non-informational move to distinguish from genuine weakness, lower beta/volatility
+calibration, a worked ex-distribution-vs-rate-surprise two-move-differentiation example) and PART
+62 (Contact-Center Speech Analytics Research to Market Research — distinct from Part 46's survey-
+based CES/NPS, sentiment-trajectory/talk-time/keyword extraction beyond a single score, 100%-call-
+coverage advantage over survey sampling with its own classification-error caution, compliance-risk
+call flagging as a financial-services-specific use case, a worked stable-CSAT-but-escalating-
+margin-call-sentiment diagnostic). Added matching glossary terms (Market Research) and one new Q&A
+each (Market Research Q60, TRA Q51). Market Research 139->141pg, TRA 123->125pg. Master: 3,924 ->
+3,928 pages.
+
+**Running total: 3,928 pages.**

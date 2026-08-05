@@ -1486,6 +1486,27 @@ The foundational discipline: splitting historical data into an **in-sample** per
 
 ---
 
+# PART 59 — REITs & InvITs: A DISTINCT YIELD-SENSITIVE TECHNICAL PROFILE
+
+## 59.1 Exchange-listed, but behaviourally distinct from ordinary equity
+**REITs (Real Estate Investment Trusts)** and **InvITs (Infrastructure Investment Trusts)** trade on the exchange with their own live price charts, technically approachable with this handbook's standard toolkit — but their underlying structure (mandated high payout of rental/toll/tariff income as distributions, holding a portfolio of income-generating real assets rather than an operating business) gives them a technical behaviour profile closer to a **bond-proxy** than to ordinary growth or cyclical equities, a genuinely distinct instrument category a TRA covering the broader market should be able to read correctly rather than applying identical assumptions from a typical operating-company stock.
+
+## 59.2 Interest-rate sensitivity as the dominant technical driver — more so than most equities
+Because REIT/InvIT valuations are substantially anchored to their distribution yield relative to prevailing interest rates (an investor comparing the REIT's yield against a risk-free government-bond yield, similar in logic to a bond's price-yield relationship), these instruments show **unusually high sensitivity to interest-rate expectations** — often reacting more consistently and predictably to a change in the domestic rate outlook (Part 15.2's bond-equity intermarket relationship, but amplified specifically for this instrument category) than most operating-company equities, where earnings growth and company-specific factors typically dominate over the discount-rate channel. A TRA should expect REIT/InvIT charts to correlate more tightly with bond-yield movements than with the broader equity index's own price action.
+
+## 59.3 Distribution dates and the mechanical ex-distribution price adjustment
+Extending this handbook's corporate-actions adjustment discipline (Part 34.4's bonus-adjustment trap, applied here to a different mechanism): REITs/InvITs make regular (commonly quarterly) mandated distributions, and on the **ex-distribution date**, the unit price mechanically adjusts downward by approximately the distribution amount — a predictable, non-informational price move a TRA must distinguish from genuine technical weakness, exactly the same "verify before treating a price move as a real signal" discipline this handbook applies to bonus-issue-driven chart gaps, here applied to a recurring, quarterly-cycle mechanical adjustment rather than a one-off corporate action.
+
+## 59.4 Lower beta and volatility character — and what a genuine breakout means differently here
+Given the income-anchored, bond-proxy character (Part 59.1-59.2), REITs/InvITs typically exhibit meaningfully **lower volatility and beta** relative to the broader equity index than a typical operating-company stock — meaning ordinary technical patterns (breakouts, trend changes) that would be unremarkable in percentage terms on a growth stock can represent a proportionally larger, more significant shift in this instrument's usual behaviour, and conversely, a TRA should calibrate expected move sizes and stop-loss distances differently for this instrument category rather than applying position-sizing assumptions calibrated to higher-volatility equity names.
+
+## 59.5 Worked example — reading a REIT's price action around a distribution date and a rate-decision catalyst
+*A REIT's unit price shows an apparent 2% single-day decline that coincides exactly with its quarterly ex-distribution date, followed the next week by a further, larger decline coinciding with an unexpectedly hawkish domestic rate-policy surprise.*
+
+**Model answer.** The initial 2% decline on the ex-distribution date (Part 59.3) should be recognised immediately as the expected, mechanical price adjustment for the distribution paid out — not a genuine technical breakdown, and not something to read as bearish absent confirming information — the same discipline this handbook applies to any known, scheduled corporate-action price adjustment. The subsequent, larger decline coinciding with the hawkish rate surprise is a materially more informative move, consistent with Part 59.2's interest-rate-sensitivity framework: a hawkish surprise raises the yield REIT distributions are being compared against, mechanically pressuring the instrument's relative attractiveness and valuation — a TRA should read this second move as the genuinely informative one, and should explain both moves through their correct, distinct mechanisms (mechanical distribution adjustment versus rate-sensitivity repricing) rather than treating the combined multi-day decline as a single, undifferentiated technical breakdown signal.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1637,5 +1658,8 @@ The foundational discipline: splitting historical data into an **in-sample** per
 
 50. **Q: A colleague presents a 7-indicator, 7-parameter backtested strategy showing exceptionally strong 3-year returns, tuned and tested on the same 3-year dataset. Is the strong result meaningful evidence of a real edge?**
     A: No (Part 58.5) — the large parameter count (Part 58.2) gives the strategy enormous flexibility to fit historical noise, and tuning/testing on identical data violates the essential in-sample/out-of-sample split (Part 58.3), meaning the reported performance provides no genuine evidence of an out-of-sample edge. The correct next step is a proper walk-forward evaluation (Part 58.4) across multiple rolling windows the strategy was never tuned against, expecting the out-of-sample result to be materially weaker before placing any weight on the strategy.
+
+51. **Q: A REIT's unit price falls 2% exactly on its quarterly ex-distribution date, then falls further the following week alongside an unexpectedly hawkish rate-policy surprise. How should a TRA read these two moves differently?**
+    A: Per Part 59.5 — the ex-distribution decline (Part 59.3) is the expected, mechanical price adjustment for the distribution paid out, not a genuine technical signal, the same discipline applied to any known corporate-action price adjustment. The subsequent, larger decline is the genuinely informative move, consistent with REITs'/InvITs' unusually high interest-rate sensitivity (Part 59.2) — a hawkish surprise raises the yield the instrument's distributions are compared against, mechanically pressuring its relative attractiveness, and should be read through that rate-sensitivity lens rather than combined with the first move into one undifferentiated breakdown signal.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
