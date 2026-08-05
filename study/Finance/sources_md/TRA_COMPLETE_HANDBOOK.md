@@ -1234,6 +1234,27 @@ An AVWAP anchored to a significant swing low represents the average price paid b
 
 ---
 
+# PART 47 — AUCTION MARKET THEORY: BALANCE, IMBALANCE & EXCESS
+
+## 47.1 The theoretical "why" underneath Part 39's volume-profile mechanics
+Part 39 taught the mechanics of reading a volume/market profile — POC, Value Area, HVN/LVN. This Part covers the underlying theoretical framework those mechanics come from: **Auction Market Theory**, which holds that markets are continuously running a two-way auction seeking the price level that facilitates the most trade — and that this auction process naturally alternates between two distinct states, **balance** and **imbalance**, each with a different, recognisable structure and different trading implications.
+
+## 47.2 Balance — the market agreeing on value, building a range
+A market in **balance** is one where buyers and sellers broadly agree on value within a defined range — price oscillates within that range (a defined Value Area, Part 39.2), rejecting excursions beyond it as "too expensive" or "too cheap," and the volume/market profile takes on a recognisable, roughly symmetric bell-like shape around the POC as this back-and-forth agreement builds. Balance is the market's default, more common state — a TRA should expect a stock to spend more time in balance than in a directional, trending imbalance.
+
+## 47.3 Imbalance — the market disagreeing on value, seeking a new range
+**Imbalance** is the opposite state: the market has stopped agreeing that the current range represents fair value, and price moves directionally, seeking a new level of agreement — the profile shape during an imbalanced move looks stretched and elongated (rather than the balanced state's symmetric bell shape) as price spends comparatively little time at any single level while it searches for the next area of balance. Recognising which state a stock is currently in — balance (range-bound, fade-the-extremes tactics more appropriate) versus imbalance (trending, follow-the-move tactics more appropriate) — is arguably the single most practically useful judgment this framework asks a TRA to make, since the correct trading approach is close to opposite between the two states.
+
+## 47.4 Excess — the auction's own rejection signal at a range's edge
+**Excess** is Auction Market Theory's specific term for a clear rejection at the edge of a range — visible in a volume/market-profile chart as a **single-print tail** (a thin, quickly-rejected extension beyond the main profile shape, where price spent very little time and volume before reversing back into the range) — a structural rejection signal distinct from an ordinary chart-based reversal candle (Part 2), since it's derived from the profile's shape itself (how much time/volume was spent at that extreme) rather than from a single candle's open-high-low-close relationship. A pronounced buying tail (excess to the downside, rejected) or selling tail (excess to the upside, rejected) is read as meaningful evidence the auction has, at least for now, rejected that price level as unfair.
+
+## 47.5 Worked example — classifying a session's day type from its evolving profile shape
+*A stock opens within the prior day's Value Area (Part 39.2), builds a narrow, symmetric profile shape for the first two hours, then breaks decisively above the Initial Balance (Part 39.4) on expanding volume, with the profile shape stretching upward and thinning out rather than building a new symmetric bell shape at the higher prices.*
+
+**Model answer.** The first two hours (a narrow, symmetric shape building within the prior Value Area) is a classic balance-state signature (Part 47.2) — the market initially reaffirming the prior day's agreed value. The subsequent breakout above Initial Balance, with the profile stretching and thinning rather than building a new balanced shape (Part 47.3's imbalance signature), signals the auction has shifted into a directional, imbalanced state seeking a new, higher area of agreement — the correct tactical shift, per Part 47.3's balance-vs-imbalance distinction, is from range-fading tactics (appropriate during the first two balanced hours) to trend-following tactics once the imbalanced breakout is confirmed by the profile's shape, not just the price level breaking Initial Balance alone. This kind of live day-typing — recognising the transition from balance to imbalance as it's happening, from the profile's evolving shape rather than waiting for a lagging indicator to confirm it — is precisely the practical skill Auction Market Theory is meant to develop.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1349,5 +1370,8 @@ An AVWAP anchored to a significant swing low represents the average price paid b
 
 38. **Q: A stock rallies 18% over six weeks off a post-results low, then pulls back on light volume toward the AVWAP anchored to that low. Why is this a higher-quality support test than a pullback to an ordinary 50-day moving average?**
     A: Per Part 46.5 — the AVWAP anchored to the post-results low (Part 46.3) represents the actual average cost basis of every buyer who has accumulated during the rally, giving it a genuine behavioural reason to hold on a retest (Part 46.4) — a real cohort of holders with an incentive to defend it — versus an ordinary moving average's more mechanical, trend-following basis with no such "who's actually positioned where" grounding. The light pullback volume is a secondary supportive observation, consistent with consolidation rather than aggressive new selling.
+
+39. **Q: A stock builds a narrow, symmetric profile in the first two hours within the prior day's Value Area, then breaks above Initial Balance on expanding volume, with the profile shape stretching and thinning rather than building a new symmetric bell shape. How should the TRA's tactical approach shift, and why?**
+    A: Per Part 47.5 — the first two hours is a classic balance-state signature (Part 47.2), where range-fading tactics are appropriate. The breakout with a stretching, thinning profile (rather than a new balanced shape) is the imbalance-state signature (Part 47.3), signalling the auction is seeking a new area of agreement — the correct shift is to trend-following tactics, confirmed by the profile's evolving shape itself rather than waiting for a lagging indicator to catch up.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

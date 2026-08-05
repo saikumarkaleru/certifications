@@ -714,4 +714,16 @@ journey, a worked NRI-product research-scoping example). Added matching glossary
 Research) and one new Q&A each (Market Research Q47, TRA Q38). Market Research 110->112pg, TRA
 94->96pg. Master: 3,866 -> 3,870 pages.
 
-**Running total: 3,870 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 47 (Auction Market Theory to
+TRA — the theoretical "why" underneath Part 39's volume-profile mechanics: balance vs imbalance
+states and their distinct profile shapes, excess/single-print tails as a structural rejection
+signal distinct from a candlestick reversal, a worked live day-typing example transitioning from
+balance to imbalance tactics) and PART 50 (Disclosure Comprehension & Readability Testing to
+Market Research — distinct from Part 41's broad financial-literacy research, readability metrics
+as a necessary-not-sufficient screen, genuine comprehension testing vs self-reported understanding,
+plain-language rewriting with iterative re-testing, a worked margin-call-disclosure comprehension-
+failure-and-fix example). Added matching glossary terms (Market Research) and one new Q&A each
+(Market Research Q48, TRA Q39). Market Research 112->115pg, TRA 96->99pg. Master: 3,870 -> 3,876
+pages.
+
+**Running total: 3,876 pages.**
