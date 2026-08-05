@@ -1372,4 +1372,19 @@ snapshot, a worked example diagnosing a stalled recovery plateau six weeks after
 incident). Added one new Q&A each (TRA Q88, Market Research Q97) and matching glossary terms (Market
 Research). TRA deepening handbook 205->207pg, Market Research 205->207pg. Master: 4,072 -> 4,076 pages.
 
-**Running total: 4,076 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 97 (Bond Covenant Breach and
+Technical Default — A Distinct Credit-Event Trigger to TRA — a distinct trigger mechanism from rating-
+agency actions already covered, why "technical default" doesn't mean the company has stopped paying,
+what a covenant breach gives the lender and why the lender's actual response is the more informative
+signal, reading a breach in the context of which specific covenant type was breached, a worked example
+reading a company's covenant breach followed by a lender waiver with only a modest rate increase) and
+PART 100 (Lifecycle/Onboarding Email Sequence Effectiveness Research to Market Research — a distinct
+research object from Part 87's single-message ad-copy testing, why sequence-level functional metrics
+reveal what single-message engagement metrics miss, sequence-position testing to isolate which
+specific message drives the outcome, the fatigue/frequency-cap tension unique to a multi-message
+sequence, a worked example diagnosing declining engagement in an onboarding sequence's later messages
+despite a healthy aggregate KYC-completion outcome). Added one new Q&A each (TRA Q89, Market Research
+Q98) and matching glossary terms (Market Research). TRA deepening handbook 207->209pg, Market Research
+207->209pg. Master: 4,076 -> 4,080 pages.
+
+**Running total: 4,080 pages.**
