@@ -1416,4 +1416,19 @@ revenue gap between segments with stable segment-size shares). Added one new Q&A
 Research Q100) and matching glossary terms (Market Research). TRA deepening handbook 211->214pg,
 Market Research 211->214pg. Master: 4,084 -> 4,090 pages.
 
-**Running total: 4,090 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 100 (Executive Remuneration
+Disclosure — ESOP-Linked Pay as an Incentive-Alignment Signal to TRA — a distinct disclosure category
+from Part 93's ESOP float-overhang material, why the fixed-cash-vs-equity-linked pay mix is itself a
+governance signal, the vesting-horizon caveat on alignment strength, reading disclosed remuneration
+design alongside actual insider-selling behaviour as a consistency check, a worked example where a
+heavily equity-linked CEO pay structure is undermined by systematic maximum-permissible selling at
+every vesting date) and PART 103 (Employee Referral Program Effectiveness Research to Market Research
+— a distinct research object from customer referral research already covered, why referred-hire
+quality requires a longer measurement horizon than referral volume alone, segmenting by referrer
+tenure/performance, the self-selection risk in referred-employee satisfaction research, a worked
+example unpacking a naive referral-vs-non-referral retention comparison that overstates the program's
+causal effect). Added one new Q&A each (TRA Q92, Market Research Q101) and matching glossary terms
+(Market Research). TRA deepening handbook 214->216pg, Market Research 214->216pg. Master: 4,090 ->
+4,094 pages.
+
+**Running total: 4,094 pages.**
