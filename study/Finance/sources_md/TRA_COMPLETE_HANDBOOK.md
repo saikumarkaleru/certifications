@@ -1125,6 +1125,27 @@ A harmonic pattern's PRZ carries meaningfully more weight when it coincides with
 
 ---
 
+# PART 42 — POINT & FIGURE CHARTING, DEEPENED
+
+## 42.1 A third organising principle — pure price movement, filtering out both time and noise
+Part 39 introduced organising a chart around price rather than time (Volume Profile). **Point & Figure (P&F)** charting is a third, older organising principle: it plots **only significant price movement**, discarding time entirely (a P&F chart can have a column represent a single day or several weeks — the x-axis has no fixed time scale) and filtering out moves smaller than a chosen threshold, producing a chart made entirely of stacked **X columns** (rising price) and **O columns** (falling price) with no candles, no volume bars, and no fixed time intervals — a genuinely different visual and analytical object from every other chart type in this handbook.
+
+## 42.2 Box size and reversal amount — the two parameters that define everything else
+A P&F chart is fully defined by two chosen parameters: the **box size** (the minimum price increment that registers as a new X or O — e.g. ₹1 or a percentage-based box for higher-priced stocks) and the **reversal amount** (how many boxes price must move in the opposite direction to start a new column — commonly 3 boxes, giving the widely-used "3-box reversal" chart). A larger box size and reversal amount filters out more minor noise and surfaces only more significant trends (useful for longer-term positioning), while a smaller box size captures more granular moves (useful for shorter-term trading) — the same signal-vs-noise tradeoff this handbook has flagged elsewhere (e.g. Part 3's moving-average-period tradeoff), here controlled by two explicit, chosen parameters rather than embedded in an indicator formula.
+
+## 42.3 Support/resistance and classic P&F patterns — reading the column structure
+Because P&F strips out time and minor noise, support and resistance levels often stand out with unusual clarity as horizontal lines where multiple X or O columns have repeatedly reversed — and P&F has its own named pattern vocabulary distinct from Part 2's candlestick-chart patterns: the **Double Top/Bottom** (an X column exceeding a prior X column's high, or an O column exceeding a prior O column's low), and the **Triple Top/Bottom** (the same pattern confirmed a third time), each read as a breakout signal in the classic P&F tradition once the pattern completes.
+
+## 42.4 The horizontal price-count target-projection technique — P&F's own distinct target method
+P&F has its own long-standing technique for **projecting price targets**, distinct from candlestick-chart methods (measured moves, Fibonacci extensions from Part 3.5/41): the **horizontal count**, which uses the width (number of columns) of a base or top formation, multiplied by the box size and reversal amount, to project how far a subsequent breakout is likely to travel — a mechanical, rules-based projection method that, like every projection technique in this handbook, should be treated as one input to weigh alongside other technical evidence rather than a guaranteed target.
+
+## 42.5 Worked example — reading a P&F breakout with a horizontal count target
+*A stock's P&F chart (₹2 box size, 3-box reversal) shows a base formation five columns wide before a breakout column of X's clears a well-established resistance line that had capped three prior X columns (a Triple Top pattern, Part 42.3).*
+
+**Model answer.** The Triple Top breakout (Part 42.3) is the primary P&F signal here — three prior attempts at the same resistance level followed by a successful break is read as a meaningfully stronger signal than a single-attempt breakout, since it demonstrates the level was genuinely tested and defended multiple times before giving way. The horizontal count (Part 42.4) — five columns wide × the ₹2 box size × the 3-box reversal parameter — gives a specific, mechanically-derived price target for the move, which should be treated as one input to weigh (per this handbook's consistent confluence discipline, Parts 40.4/41.4) against other independent technical evidence such as a prior swing high on the stock's ordinary candlestick chart or a volume-profile high-volume node (Part 39.3) in a similar target range, rather than acted on as a guaranteed outcome purely because the P&F formula produced it.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1225,5 +1246,8 @@ A harmonic pattern's PRZ carries meaningfully more weight when it coincides with
 
 33. **Q: A calculated harmonic-pattern PRZ coincides with a volume-profile Value Area High and a prior swing high in the same tight price band. Why does this matter, and does it remove the need for confirmation?**
     A: Per Part 41.5 — three independent technical methods (Fibonacci-ratio harmonic measurement, volume-based value-area analysis, and swing-high price structure) converging in the same band is a materially stronger basis for anticipating a reaction than any single method alone (Part 41.4's confluence discipline). It does not remove the need for price-action confirmation as price enters the zone (a reversal candle or divergence, Part 4.1) — the confluence raises the quality of the setup being watched, not a substitute for the entry-trigger discipline (Part 8).
+
+34. **Q: A P&F chart shows a Triple Top breakout after a five-column-wide base. What does the pattern itself tell you, and what does the horizontal count add?**
+    A: Per Part 42.5 — the Triple Top breakout (Part 42.3) is the primary signal, meaningfully stronger than a single-attempt breakout since the resistance was genuinely tested and defended three times before giving way. The horizontal count (Part 42.4) converts the base's width into a mechanically-derived price target, which — like every projection technique in this handbook — should be weighed against independent confluence (a candlestick swing high, a volume-profile node, Part 39.3) rather than acted on as a guaranteed outcome on its own.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

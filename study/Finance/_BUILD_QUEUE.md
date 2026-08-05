@@ -656,4 +656,16 @@ worked advisor-positive-vs-end-investor-risk-misunderstanding reconciliation exa
 matching glossary terms (Market Research) and one new Q&A each (Market Research Q42, TRA Q33).
 Market Research 98->100pg (milestone: crossed 100pg), TRA 83->85pg. Master: 3,843 -> 3,847 pages.
 
-**Running total: 3,847 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 42 (Point & Figure Charting,
+Deepened to TRA — deepens Part 3's one-line mention into a third organising principle beyond time
+(Part 1-38) and price-by-volume (Part 39), box size/reversal-amount parameters, Double/Triple
+Top-Bottom patterns, the horizontal-count target-projection method, a worked Triple-Top-breakout
+target example) and PART 45 (IPO Grey-Market & Pre-Listing Investor Sentiment Research to Market
+Research — distinct from Part 23's pre-IPO messaging testing, category-wise RII/NII/QIB
+subscription-data segmentation, grey-market premium's real but limited evidentiary value, the
+listing-day-pop validation/ground-truthing exercise, a worked divergent-subscription-vs-GMP
+reconciliation example). Added matching glossary terms (Market Research) and one new Q&A each
+(Market Research Q43, TRA Q34). Market Research 100->104pg, TRA 85->88pg. Master: 3,847 -> 3,854
+pages.
+
+**Running total: 3,854 pages.**
