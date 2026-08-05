@@ -935,4 +935,17 @@ omnibus modules as a middle path, a worked syndicated-vs-custom-study decision e
 matching glossary terms (Market Research) and one new Q&A each (Market Research Q65, TRA Q56).
 Market Research 150->152pg, TRA 134->136pg. Master: 3,946 -> 3,950 pages.
 
-**Running total: 3,950 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 65 (Corporate Governance Red
+Flags as Technical Catalysts to TRA — distinct from promoter pledging/insider signals/IBC events
+elsewhere, mid-term auditor resignations as among the sharpest single-day catalysts, why the stated
+reason must be read before calibrating severity, related-party-transaction pattern changes as a
+more gradual trend-based signal, a worked RPT-linked-resignation-plus-circuit-lock example) and
+PART 68 (Accessibility Research for Financial Platforms to Market Research — a distinct research
+population/methodology from mainstream usability testing (Part 65), elevated financial-stakes
+profile for accessibility failures, screen-reader compatibility testing surfacing invisible
+failures, assistive-technology participant recruitment considerations, a worked colour-only-gain/
+loss-indicator screen-reader failure example). Added matching glossary terms (Market Research) and
+one new Q&A each (Market Research Q66, TRA Q57). Market Research 152->154pg, TRA 136->138pg.
+Master: 3,950 -> 3,954 pages.
+
+**Running total: 3,954 pages.**
