@@ -1111,4 +1111,16 @@ despite sizeable value" diagnostic isolating the liquidity-confidence gap from a
 comprehension gap). Added matching glossary terms (Market Research) and one new Q&A each (Market
 Research Q79, TRA Q70). Market Research 181->183pg, TRA 164->167pg. Master: 4,007 -> 4,012 pages.
 
-**Running total: 4,012 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 79 (NSE-BSE Price Divergence
+to TRA — a distinct dual-listing arbitrage relationship from Part 57's futures-spot basis, why
+divergence is normally negligible for liquid names, liquidity-concentration reasoning for why
+divergence risk concentrates in thinly-traded small-caps, the practical "trust the primary-liquidity
+exchange" implication, a worked stale-thin-BSE-quote-vs-genuine-NSE-price example) and PART 82
+(Concept-to-Launch Tracking to Market Research — a distinct longitudinal-pipeline question beyond
+any single stage-specific method already covered, why stage-siloed research loses the organisation's
+own predictive-validity calibration, designing a consistent metric bridge across concept/usability/
+post-launch stages, a worked category-specific concept-test-calibration-gap discovery example).
+Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q80, TRA
+Q71). Market Research 183->185pg, TRA 167->169pg. Master: 4,012 -> 4,016 pages.
+
+**Running total: 4,016 pages.**

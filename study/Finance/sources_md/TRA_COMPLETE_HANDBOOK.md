@@ -1906,6 +1906,27 @@ Beyond individual-stock MTF data, the **aggregate, market-wide MTF book size** (
 
 ---
 
+# PART 79 — NSE-BSE PRICE DIVERGENCE: A DISTINCT DUAL-LISTING MICROSTRUCTURE SIGNAL
+
+## 79.1 A distinct arbitrage mechanism from Part 57's futures-spot basis
+Part 57 covered the futures-spot basis as an arbitrage-bound signal within a single exchange's instrument. Most actively-traded Indian stocks are **dual-listed** on both NSE and BSE simultaneously — the same underlying share, tradeable on two separate exchange order books — creating a distinct, genuinely different arbitrage relationship: the two exchanges' prices for the *identical instrument* should track each other extremely tightly, and any meaningful, persistent divergence between them is a structurally different signal from the futures-spot basis, since here there's no cost-of-carry rationale for any divergence at all — the two prices represent literally the same economic claim.
+
+## 79.2 Why NSE-BSE divergence is normally negligible — and what a real divergence would mean
+Because arbitrageurs can, in principle, buy on whichever exchange is cheaper and simultaneously sell on whichever is pricier (a genuinely risk-free arbitrage given both represent identical shares), NSE-BSE price divergence for any reasonably liquid, actively-arbitraged stock is normally negligible — a few paise at most, correcting within seconds. A TRA should treat this as a background assumption so reliable it's rarely worth checking for large, liquid names — but the assumption's reliability is precisely what makes a **meaningful, persistent** divergence noteworthy specifically for less-liquid names where arbitrage capital may not be actively monitoring the spread as tightly.
+
+## 79.3 Liquidity concentration and why divergence risk concentrates in smaller, less-liquid names
+NSE typically carries the substantial majority of trading volume and liquidity for most dual-listed stocks, with BSE liquidity meaningfully thinner for many names outside the largest, most actively-traded stocks — meaning a TRA should expect genuine, persistent (even if still small in absolute terms) NSE-BSE divergence risk to concentrate specifically in thinly-traded, small-cap names where BSE's own order book may be too shallow for arbitrage capital to efficiently close a gap, versus large-cap, heavily-arbitraged names where the assumption of near-perfect price convergence (Part 79.2) holds reliably.
+
+## 79.4 A distinct practical implication — checking the primary-liquidity exchange for the "real" price
+For a TRA analysing a name with genuinely thin BSE liquidity specifically, a stale or divergent BSE quote is more likely to reflect its own shallow order book (an old print not yet updated to reflect where the stock is actually trading on NSE's much deeper liquidity) than a genuine, independent price signal — the practical implication: for any name where liquidity is meaningfully concentrated on one exchange, a TRA should treat that exchange's price as the reliable reference and be appropriately skeptical of an apparently-divergent quote on the thinner exchange, rather than treating both exchanges' prices as equally authoritative, independent data points.
+
+## 79.5 Worked example — reading an apparent NSE-BSE price gap in a thinly-traded small-cap
+*A small-cap stock shows its BSE-quoted price trading roughly 3% below its simultaneously-quoted NSE price during a session, a gap notably larger than this stock's own typical NSE-BSE spread history and far outside what would be expected for a liquid, heavily-arbitraged name.*
+
+**Model answer.** Given this is specifically a thinly-traded small-cap (Part 79.3's liquidity-concentration framework), the 3% gap most plausibly reflects BSE's own shallow order book showing a stale, unrefreshed print rather than a genuine, independently-informative price signal about the stock's actual value — arbitrage capital may simply not be actively working this specific name's BSE order book closely enough to keep the two exchanges tightly converged, unlike what would be expected for a large, heavily-arbitraged name where the same gap size would be a genuine anomaly worth investigating further. The correct TRA response (Part 79.4) is treating NSE's price — where this stock's actual liquidity and price discovery concentrates — as the reliable reference, and specifically avoiding the mistake of citing the BSE price as if it were an equally valid, independent data point simply because it's a real, quotable price on a recognised exchange; a TRA unfamiliar with this liquidity-concentration nuance could otherwise misread a stale, thin-order-book BSE quote as meaningful information it isn't.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2117,5 +2138,8 @@ Beyond individual-stock MTF data, the **aggregate, market-wide MTF book size** (
 
 70. **Q: A mid-cap stock rallies 40% over three months, with disclosed MTF book data showing MTF-funded position size growing roughly in proportion to the rally, now an unusually large share of the stock's typical MTF utilisation. What distinct risk does this add beyond ordinary technical analysis of the rally?**
     A: Per Part 78.5 — the proportional MTF growth (Part 78.3) shows a meaningful share of the rally is leveraged retail buying, a structurally more fragile composition than the same gain built on unleveraged cash accumulation. This adds a distinct downside-acceleration risk (Part 78.2) — a pullback significant enough to trigger MTF margin calls could produce forced-liquidation selling layered on top of ordinary profit-taking, amplifying a decline beyond what fundamentals or technical structure alone would suggest.
+
+71. **Q: A thinly-traded small-cap shows its BSE-quoted price trading roughly 3% below its simultaneous NSE price, a gap far larger than typical for this stock or for a liquid, heavily-arbitraged name. How should a TRA read this, and which exchange's price should be treated as reliable?**
+    A: Per Part 79.5 — given this is a thinly-traded small-cap (Part 79.3), the gap most plausibly reflects BSE's own shallow order book showing a stale print rather than a genuine, independently-informative price signal, since arbitrage capital may not be actively working this specific name's BSE book closely. NSE, where this stock's liquidity and price discovery concentrates, should be treated as the reliable reference (Part 79.4) — the same gap size on a large, heavily-arbitraged name would instead be a genuine anomaly worth investigating.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
