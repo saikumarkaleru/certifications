@@ -999,6 +999,27 @@ Since index-tracking ETFs must hold constituents in index-proportional weights (
 
 ---
 
+# PART 36 — CROSS-MARKET ARBITRAGE & ADR-NSE PRICE LINKAGES
+
+## 36.1 Why an ADR premium/discount is a genuine pre-market signal, not noise
+Several large NSE-listed companies (or their group entities) also trade as American Depositary Receipts (ADRs) on US exchanges — since the ADR represents the same underlying economic claim traded in a different market and currency, in a different time zone, its overnight move relative to the prior NSE close is a real, tradeable piece of information about how global sentiment on that specific name shifted while NSE was closed, distinct from the broader-market global-cues signal covered in Part 22 (global market cues) — this is a *stock-specific* linkage, not an index-level one.
+
+## 36.2 Computing the effective ADR-implied move — adjusting for the ratio and FX
+An ADR typically represents a fixed ratio of underlying domestic shares (e.g. 1 ADR = 2 domestic shares), so the raw ADR percentage move already reflects the per-share economic move correctly — a TRA's actual calculation is: ADR close vs ADR's own prior-session close (in USD) gives the raw percentage move; this raw percentage move (not the absolute price, since the ratio and USD/INR conversion are irrelevant to a *percentage* change) is the direct read-through to the domestic share's likely opening move, subject to the same "not a guarantee" caveat that applies to every other pre-market signal in Part 22.
+
+## 36.3 The arbitrage mechanism that keeps the linkage tight — and when it loosens
+Professional arbitrageurs can, in principle, convert between ADRs and domestic shares (subject to the depositary bank's conversion mechanics and any regulatory conversion limits or costs) — this convertibility is what keeps the ADR price and the ratio-adjusted domestic price from drifting too far apart over time, similar in spirit to the index-arbitrage mechanism (Part 3/22) that keeps futures tracking the cash index. A TRA should know the linkage is *tighter* for stocks with active, liquid, freely-convertible ADR programs, and *looser* (a weaker signal) for names where conversion is restricted, thinly traded, or the ADR itself has low volume — checking the ADR's own average volume before weighting its overnight move heavily.
+
+## 36.4 Distinguishing a stock-specific ADR signal from a market-wide global-cues signal
+If a stock's ADR moves sharply while the broader US market (S&P 500, and especially the specific US sector the company's ADR is most comparable to) is roughly flat, that is a genuinely stock-specific signal (company news, an analyst rating change, sector-specific US news affecting the read-through comparable) — worth weighting more heavily than a case where the ADR simply moved in line with a broad US market-wide rally or selloff (in which case Part 22's general global-cues framework, not a name-specific read, is doing most of the explanatory work), a distinction that keeps a TRA from double-counting the same underlying "US markets were up" information as if it were two independent signals.
+
+## 36.5 Worked example — using an IT-services ADR ahead of the NSE open
+*A large NSE-listed IT-services company's US-listed ADR closed up 3.1% overnight, while the S&P 500 and the Nasdaq were roughly flat, and no broad "IT services" sector news is apparent from the overnight newsflow scan.*
+
+**Model answer.** With the broader US market flat (Part 36.4's filter), a 3.1% ADR move with no obvious sector-wide catalyst points toward a stock-specific driver — checking for company-specific overnight newsflow (a contract win, an analyst upgrade, guidance commentary from a US-listed peer that read through positively) is the next step before the open. Absent a clear stock-specific catalyst, the move should still be weighted as a real pre-market signal (Part 36.1) given IT-services ADRs are typically liquid, actively arbitraged programs (Part 36.3's "tight linkage" case) — the practical takeaway for the open: expect the domestic shares to gap up meaningfully, size any pre-open orders with that gap in mind, and treat the first few minutes of trade as likely to see the gap at least partially arbitraged toward the ADR-implied level rather than starting fresh from the prior NSE close, tying directly back to the Equity & Capital Markets material's ADR-mechanics chapter for the underlying instrument structure this signal depends on.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1081,5 +1102,8 @@ Since index-tracking ETFs must hold constituents in index-proportional weights (
 
 27. **Q: A promoter discloses a share sale via a block deal. Should this automatically be read as a bearish signal?**
     A: No (Part 33.3) — promoter sales can reflect genuinely negative information, but also entirely benign reasons (personal liquidity needs, diversification, funding an unrelated venture) unrelated to company prospects. A TRA should avoid over-reading a single sale without additional context, such as whether it's accompanied by a stated reason or how it compares to the promoter's total remaining holding.
+
+28. **Q: A large NSE-listed company's US ADR closes up 3.1% overnight while the S&P 500 and Nasdaq are roughly flat. How should a TRA read this ahead of the NSE open, and why does the flat broader market matter?**
+    A: Per Part 36.4-36.5 — with the broader US market flat, the ADR's move is unlikely to just be a "global markets were up" echo (Part 22's broad global-cues signal), pointing instead toward a stock-specific driver worth checking newsflow for. Because the ratio-adjusted ADR move is a direct proxy for the likely domestic-share open (Part 36.2) and is kept tight by an active arbitrage mechanism for liquid ADR programs (Part 36.3), the practical read is to expect a meaningful gap up at the NSE open and size any pre-open orders accordingly, rather than treating the prior NSE close as the relevant reference point.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

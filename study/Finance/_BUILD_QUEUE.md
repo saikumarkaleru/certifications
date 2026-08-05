@@ -582,4 +582,17 @@ matter disproportionately for index-heavyweight stocks, a worked 3-source flow-d
 example combining FII/DII/ETF data). Market Research 85->87pg, TRA 71->72pg. Master: 3,818 ->
 3,821 pages.
 
-**Running total: 3,821 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 39 (Geospatial &
+Location-Based Research to Market Research — trade-area analysis and gravity-model catchment
+sizing, site-selection research combining trade-area demand with competitive density and footfall/
+mobility data, cannibalisation analysis as the geospatial version of the incrementality discipline
+already applied to retail media (Part 36) and assortment (Part 19), a worked new-bank-branch
+cannibalisation-vs-standalone-trade-area example) and PART 36 (Cross-Market Arbitrage & ADR-NSE
+Price Linkages to TRA — why an ADR premium/discount is a genuine stock-specific pre-market signal,
+computing the ratio-adjusted ADR-implied move, the arbitrage mechanism that keeps the linkage
+tight vs cases where it loosens, distinguishing a stock-specific ADR signal from a market-wide
+global-cues echo, a worked IT-services-ADR-ahead-of-the-open example). Added matching glossary
+terms and one new Q&A each (Market Research Q37, TRA Q28) tied to the new Parts. Market Research
+87->90pg, TRA 72->75pg. Master: 3,821 -> 3,827 pages.
+
+**Running total: 3,827 pages.**
