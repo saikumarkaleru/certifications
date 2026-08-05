@@ -1179,4 +1179,20 @@ correction from an inflated prior count, confirmed by direct PyMuPDF page check 
 a content reduction). Master: 4,030 -> 4,018 pages (net -12, reflecting the Market Research page-
 count correction).
 
-**Running total: 4,018 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 84 (Rights Entitlement (RE)
+Trading and the Renunciation Decision to TRA — a distinct instrument-mechanics question from Part
+34.4's narrow chart-adjustment trap, the RE as a short-lived separately-listed tradeable instrument,
+the three genuine choices facing an eligible shareholder (subscribe/sell/lapse) and what each implies,
+why RE traded price can diverge from theoretical ex-rights value and what the gap signals, a worked
+example advising on a rights issue where the RE trades below theoretical value) and PART 87 (Ad/Copy
+Pre-Testing Diagnostic Deepening to Market Research — a distinct diagnostic-depth question from Part
+10.3's pre/post basics, message-take-out coding to catch an unintended secondary message dominating
+recall, competitive ad-clutter testing versus isolated-ad testing, emotional-response-curve measurement
+as a complement to stated likeability, a worked example diagnosing a high-likeability ad with weak
+in-market brand-tracker movement). Added one new Q&A each (TRA Q76, Market Research Q85) and matching
+glossary terms (Market Research). TRA deepening handbook 178->180pg, Market Research 178->180pg.
+Master: 4,018 -> 4,022 pages. (Also fixed a build-path bug from the prior cycle: the TRA rebuild had
+briefly landed in sources_md/ instead of Finance/ due to a relative-path mistake, causing the merge to
+pick up a stale copy — this cycle's rebuilds were run with correct paths from Finance/ directly.)
+
+**Running total: 4,022 pages.**

@@ -2011,6 +2011,27 @@ Once a 25%-threshold open-offer obligation is triggered, the **open-offer price*
 
 ---
 
+# PART 84 — RIGHTS ENTITLEMENT (RE) TRADING AND THE RENUNCIATION DECISION
+
+## 84.1 A distinct instrument-mechanics question from Part 34.4's price-adjustment trap
+Part 34.4 covered a single, narrow trap within a rights issue: verifying a chart has been correctly bonus/rights-adjusted so an ex-date price drop isn't mistaken for a genuine breakdown. This Part covers a genuinely distinct question the same corporate action raises: what actually happens to the **Rights Entitlement (RE)** itself as a separately-listed, tradeable instrument for the roughly two-week rights-issue window, and how an existing shareholder's renunciation decision works — mechanics that exist independently of the chart-adjustment issue Part 34.4 addresses.
+
+## 84.2 The RE as a short-lived, separately-listed tradeable instrument
+When a company announces a rights issue, eligible shareholders (as of the record date) are credited with **Rights Entitlements** — a distinct, temporary security that itself gets listed and trades on the exchange (with its own ticker, its own bid/ask, its own price discovery) for a short window, typically overlapping with but not identical to the main rights-issue subscription period. A TRA should treat the RE's market price as a real-time, market-discovered estimate of the rights issue's embedded value — the gap between the RE's price plus the issue price versus the parent stock's current market price — rather than something only calculable via a static formula.
+
+## 84.3 The three genuine choices facing an eligible shareholder, and what each implies technically
+An eligible shareholder holding REs faces three genuinely distinct choices, each with a different technical/portfolio implication: **(a) subscribe** — pay the rights issue price to convert the RE into new shares, diluting nothing for that shareholder specifically since their proportional ownership is preserved; **(b) sell the RE** on the exchange during its trading window, monetising the entitlement's value without paying the subscription price, accepting proportional dilution instead; or **(c) let the RE lapse** unexercised, which is value-destructive relative to option (b) since the entitlement simply expires worthless — a TRA fielding a client question on a rights issue should walk through this three-way decision explicitly, not just describe the corporate action's mechanical price effect.
+
+## 84.4 Why RE price and the theoretical ex-rights value can diverge, and what the gap signals
+A rights issue's theoretical ex-rights price can be calculated from the pre-announcement price, the issue price, and the subscription ratio — but the RE's actual **traded** market price can diverge from this theoretical value, particularly in the first few days of RE trading when liquidity is thin, and particularly if the market's view of the rights issue's terms (attractive discount vs. expensive/dilutive) shifts after the theoretical calculation was made. A TRA should treat a persistent, liquid divergence between the RE's traded price and its theoretical value as a genuine market signal about sentiment toward the specific issue's terms, not simply a pricing anomaly to arbitrage away.
+
+## 84.5 Worked example — advising on a rights issue where the RE trades below theoretical value
+*A company announces a 1:5 rights issue at a meaningful discount to the pre-announcement market price. The Rights Entitlement begins trading, but several days into the RE trading window, it consistently trades noticeably below its calculated theoretical ex-rights value, despite reasonable trading volume in the RE itself.*
+
+**Model answer.** Per Part 84.2's framing, the RE's own traded price is the more informative, real-time read here than the static theoretical calculation alone — a persistent, liquidity-confirmed discount (Part 84.4) suggests the market is pricing in a genuine concern about the rights issue itself (dilution concerns, doubts about the use of proceeds, or broader sector sentiment deteriorating since the issue was announced) rather than a simple mispricing to be arbitraged. For a shareholder deciding among the three choices (Part 84.3), this discount modestly favours selling the RE over subscribing, since the market is signalling the post-issue stock may not be worth materially more than its current level even after accounting for the discounted subscription price — though the shareholder should still weigh their own independent fundamental view of the company, not defer to the RE market's read alone, since a thinly-traded RE can also simply reflect limited participant interest rather than a considered valuation judgment.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2237,5 +2258,8 @@ Once a 25%-threshold open-offer obligation is triggered, the **open-offer price*
 
 75. **Q: A single institutional acquirer discloses crossing the 5%, then 7%, then 9% ownership thresholds in a mid-cap stock over four months, with no individual disclosed transaction standing out as a notable bulk deal on its own. How should a TRA read this, and what should they watch for next?**
     A: Per Part 83.5 — the sequence of threshold-crossing disclosures itself (Part 83.3) reveals a sustained, deliberate stake-accumulation campaign that scattered daily bulk-deal monitoring (Part 82) alone would likely have missed, since these disclosures are triggered purely by aggregate ownership percentage regardless of how gradually the shares were acquired. The TRA should explicitly flag this pattern and monitor whether accumulation continues toward the 25% open-offer trigger (Part 83.2) — if it does, the eventual open-offer price becomes a calculable, regulator-anchored valuation reference (Part 83.4) worth computing in advance, well before any open offer is formally announced.
+
+76. **Q: A company announces a 1:5 rights issue at a meaningful discount. Several days into Rights Entitlement (RE) trading, the RE consistently trades noticeably below its calculated theoretical ex-rights value, on reasonable volume. How should an existing shareholder's decision be informed by this?**
+    A: Per Part 84.5 — the RE's own traded price (Part 84.2) is the more informative, real-time read here than the static theoretical calculation, and a persistent, liquidity-confirmed discount (Part 84.4) suggests the market is pricing in a genuine concern about the issue's terms or the sector's outlook, not a simple mispricing to arbitrage. Among the three choices facing the shareholder — subscribe, sell the RE, or let it lapse (Part 84.3) — this discount modestly favours selling the RE over subscribing, though the shareholder should still weigh their own independent fundamental view rather than deferring entirely to a thinly-traded RE market's read.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
