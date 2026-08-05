@@ -1948,6 +1948,27 @@ Beyond the structural, category-specific baseline (Part 80.3), a **widening** pr
 
 ---
 
+# PART 81 — SECTOR VALUATION RE-RATING/DE-RATING AS TECHNICAL REGIME CONTEXT
+
+## 81.1 A distinct, fundamentals-informed layer beyond pure price-based sector rotation
+Part 20.5 covered sector rotation purely through ratio-chart technicals — one sector's price outperforming another, read as a pure technical signal. This Part covers a distinct, complementary layer: tracking a sector's **aggregate valuation multiple** (typically trailing or forward P/E, aggregated across the sector's constituent stocks) over time, and reading sustained **re-rating** (the multiple expanding — the market willing to pay more per unit of earnings) or **de-rating** (the multiple compressing) as fundamentals-informed context that adds a distinct dimension beyond pure price-momentum-based sector rotation reads.
+
+## 81.2 Why a sector can outperform on price while still de-rating, and why the distinction matters
+A sector's *price* can rise even while its aggregate *valuation multiple* is compressing, if earnings growth is outpacing price appreciation — a materially healthier, more fundamentally-grounded rally than the same price appreciation occurring alongside an expanding multiple (where price is rising faster than earnings, extending the re-rating) — a TRA should recognise these as genuinely different rally characters even when the price chart alone shows the identical percentage gain, since a re-rating-driven rally is more vulnerable to a valuation-multiple reversal (a de-rating, even with unchanged earnings, producing a price decline) than an earnings-driven rally with a stable or compressing multiple.
+
+## 81.3 Historical multiple-range context — reading where a sector sits relative to its own history
+As with every level-based signal this handbook covers, a sector's current aggregate multiple is most informative read against its **own historical range** (extending the IV Rank/Percentile logic from Part 21.2/45 to a valuation-multiple context specifically) — a sector trading at a multiple near the top of its own 5-10 year historical range carries a different risk/reward character (more re-rating-dependent, more vulnerable to de-rating on any earnings disappointment or broader sentiment shift) than the same nominal multiple would represent for a sector whose historical range typically sits much higher, making cross-sector multiple comparisons in isolation (without each sector's own historical context) a common analytical trap worth avoiding.
+
+## 81.4 Combining valuation-regime context with pure technical signals — a distinct confluence layer
+A TRA integrating this valuation-regime layer into technical analysis should treat it the same way this handbook treats every other confluence input (Part 3.7's core discipline) — a technical breakout in a sector already trading near the top of its historical valuation range carries a different risk character than the identical technical breakout occurring in a sector still trading well within, or below, its historical valuation norms, since the former has less "re-rating room" remaining and is more dependent on continued earnings delivery to sustain further price appreciation, while the latter has more room to re-rate further even without accelerating earnings growth.
+
+## 81.5 Worked example — reading a technical breakout against sector valuation-regime context
+*A sector shows a clean technical breakout above a multi-month resistance level, with strong volume confirmation (Part 2's textbook breakout criteria fully met). Separately, the sector's aggregate forward P/E is currently near the top decile of its own 10-year historical range, having already re-rated significantly over the preceding year.*
+
+**Model answer.** The technical breakout itself is genuinely well-formed by this handbook's standard criteria (Part 2, Part 3.7) and shouldn't be dismissed — but the valuation-regime context (Part 81.3-81.4) adds an important risk-calibration layer a purely price-based technical read would miss: with the sector's multiple already near the top of its own historical range following a year of significant re-rating, further price appreciation from here depends more heavily on continued, undisrupted earnings delivery than it would for a sector with more valuation "room" remaining — meaning the breakout, while technically valid, carries a different risk profile (more vulnerable to a valuation-multiple-driven pullback on any earnings disappointment, even absent a genuine earnings miss) than the identical breakout pattern occurring in a sector still trading within its normal historical valuation range. A TRA should communicate both layers explicitly in a research note — the technical signal and its valuation-regime context — rather than treating the clean breakout pattern alone as sufficient basis for an unqualified bullish call.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2165,5 +2186,8 @@ Beyond the structural, category-specific baseline (Part 80.3), a **widening** pr
 
 72. **Q: An India-listed ETF tracking a major US index consistently trades at a 1-2% premium to iNAV, persisting for months. Is this a genuine market inefficiency or an actionable demand signal?**
     A: Neither, most likely (Part 80.5) — given this is an international-index ETF (Part 80.3), a persistent moderate premium is consistent with the structural trading-hours mismatch this category faces (Indian-session trading continuing to discover value while the underlying US market is closed and iNAV can only be estimated). A TRA should check this ETF's own historical premium/discount range before concluding anything further (Part 80.4) — only a reading meaningfully wider than its own established range would warrant treating it as an incremental signal beyond the category's normal structural baseline.
+
+73. **Q: A sector shows a clean, volume-confirmed technical breakout above multi-month resistance, but its aggregate forward P/E is near the top decile of its own 10-year historical range after a year of significant re-rating. Should the breakout be treated as an unqualified bullish signal?**
+    A: No (Part 81.5) — the breakout is technically well-formed and shouldn't be dismissed, but the valuation-regime context (Part 81.3-81.4) adds a distinct risk-calibration layer: with limited re-rating room remaining, further appreciation depends more heavily on continued earnings delivery than for a sector still trading within its normal historical range. Both the technical signal and its valuation-regime context should be communicated together, since the breakout carries a different risk profile than the identical pattern would in a sector with more valuation room left.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

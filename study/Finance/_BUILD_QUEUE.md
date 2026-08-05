@@ -1135,4 +1135,18 @@ a worked bundled-icon-and-screenshot-refresh-masking-opposing-effects diagnostic
 glossary terms (Market Research) and one new Q&A each (Market Research Q81, TRA Q72). Market
 Research 185->187pg, TRA 169->171pg. Master: 4,016 -> 4,020 pages.
 
-**Running total: 4,020 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 81 (Sector Valuation Re-Rating/
+De-Rating to TRA — a fundamentals-informed layer beyond Part 20.5's pure price-based sector rotation,
+why a sector can rally on price while de-rating and vice versa, historical-multiple-range context
+extending Part 21.2/45's IV Rank logic to valuation multiples, combining valuation-regime context
+with pure technical breakout signals, a worked clean-breakout-but-near-top-of-historical-valuation-
+range confluence example) and PART 84 (Structured Mystery-Shop Protocol Design for Financial
+Branches to Market Research — deepens Part 14's generic retail mystery shopping for a higher-stakes,
+compliance-sensitive context, scenario scripting for cross-branch comparability, compliance-
+checkpoint scoring as a distinct dimension from service-quality scoring, shopper training/
+calibration as a prerequisite for trustworthy compliance data, a worked margin-trading-product-
+launch mystery-shop-design example). Added matching glossary terms (Market Research) and one new
+Q&A each (Market Research Q82, TRA Q73). Market Research 187->189pg, TRA 171->173pg. Master:
+4,020 -> 4,024 pages.
+
+**Running total: 4,024 pages.**
