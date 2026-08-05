@@ -1314,4 +1314,19 @@ worked example diagnosing a Plus-tier upgrade shortfall despite strong initial c
 research). Added one new Q&A each (TRA Q84, Market Research Q93) and matching glossary terms (Market
 Research). TRA deepening handbook 196->198pg, Market Research 196->198pg. Master: 4,054 -> 4,058 pages.
 
-**Running total: 4,058 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 93 (ESOP Exercise and Vesting as a
+Distinct Float-Overhang Source to TRA — a distinct, recurring overhang source from the dated, one-time
+events already covered, why ESOP-driven selling reflects personal-diversification motivation rather
+than a view on the company, reading the disclosed ESOP pool/vesting schedule as a forward supply
+estimate, the exception where a large concentrated senior-executive ESOP sale warrants closer
+scrutiny, a worked example distinguishing routine broadly-distributed ESOP selling from a senior-
+executive outlier transaction) and PART 96 (Competitive Claims Substantiation Research to Market
+Research — a distinct pre-publication research question from win-loss and competitive-intelligence
+material, why "we believe" isn't substantiation for a published comparative claim, the comparability-
+trap of matching one's best-case figure against a competitor's non-comparable figure, building a
+re-testable rather than one-time claims-monitoring process, a worked example auditing a "lowest
+brokerage fees" claim and catching a promotional-vs-standard-rate comparability mismatch). Added one
+new Q&A each (TRA Q85, Market Research Q94) and matching glossary terms (Market Research). TRA
+deepening handbook 198->200pg, Market Research 198->200pg. Master: 4,058 -> 4,062 pages.
+
+**Running total: 4,062 pages.**
