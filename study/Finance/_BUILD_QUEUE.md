@@ -1271,4 +1271,18 @@ thematic mutual-fund concept test). Added one new Q&A each (TRA Q81, Market Rese
 glossary terms (Market Research). TRA deepening handbook 189->191pg, Market Research 189->191pg.
 Master: 4,040 -> 4,044 pages.
 
-**Running total: 4,044 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 90 (T+1 Settlement Cycle —
+Technical Implications to TRA — a distinct market-microstructure question from the execution/impact
+mechanics already covered, why T+1 tightens the practical capital-tie-up window for arbitrage/hedge
+strategies, the tighter T+1 corporate-action cutoff timeline versus the older T+2 convention, faster
+settlement's effect on observable float for short-holding-period strategies, a worked example
+recalculating a dividend cum/ex cutoff for a TRA anchored to a T+2 mental model) and PART 93 (Win-Back
+/ Lapsed-Customer Research Deepening to Market Research — a distinct discipline from the exit-survey
+and predictive-churn material already covered, why the original exit reason often goes stale by the
+time of win-back outreach, segmenting the lapsed base by time-since-lapse and lapse reason rather than
+treating it as homogeneous, testing the win-back offer itself as a researchable question, a worked
+example diagnosing why a blanket discount campaign backfired specifically for service-failure-lapsed
+customers). Added one new Q&A each (TRA Q82, Market Research Q91) and matching glossary terms (Market
+Research). TRA deepening handbook 191->193pg, Market Research 191->193pg. Master: 4,044 -> 4,048 pages.
+
+**Running total: 4,048 pages.**

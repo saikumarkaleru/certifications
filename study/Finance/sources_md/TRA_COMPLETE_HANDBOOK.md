@@ -2137,6 +2137,27 @@ Where a genuine, issuer-specific split exists, a TRA should examine which rating
 
 ---
 
+# PART 90 — T+1 SETTLEMENT CYCLE — TECHNICAL IMPLICATIONS
+
+## 90.1 A distinct market-microstructure question from the trading mechanics already covered
+Prior parts on execution, market impact, and cross-market arbitrage (Part 18, Part 36) assumed trading mechanics without addressing the settlement layer underneath them. India's equity market operates on a **T+1 settlement cycle** — a trade executed on day T is settled (shares and funds actually exchanged) on the very next trading day — and this specific settlement speed has concrete, distinct technical implications a TRA should understand independently of the trading/execution mechanics themselves.
+
+## 90.2 Why T+1 tightens the practical window for a specific class of arbitrage and hedge trades
+A faster settlement cycle meaningfully reduces the **capital-tie-up and counterparty-risk window** for any strategy requiring the trader to hold a position only briefly for settlement purposes (cash-and-carry arbitrage between a stock and its futures, or an ADR-NSE arbitrage position per Part 36) — under T+1, capital is freed up and cross-leg risk is resolved a full day faster than under a T+2 cycle, which meaningfully lowers the effective capital cost of running these strategies at scale and can itself contribute to tighter, more efficient basis/arbitrage spreads (Part 71's ETF-premium logic and Part 36's ADR-linkage logic both benefit from faster capital recycling under T+1).
+
+## 90.3 The T+1 corporate-action record-date interaction — a tighter, less forgiving timeline
+Because settlement now happens one day after trade date rather than two, the **effective last-trading-day-to-still-receive-a-corporate-action** (the cutoff by which a buyer must transact to be a shareholder of record and receive a dividend, bonus, or rights entitlement) shifted correspondingly tighter under T+1 versus the prior T+2 regime — a TRA must apply the current T+1-adjusted cutoff logic explicitly, since a mental model still anchored to the older T+2 cutoff convention would misidentify the actual last cum-date and first ex-date by one full trading day, a genuine, avoidable operational error distinct from any purely analytical mistake.
+
+## 90.4 Faster settlement and its effect on the observable float during heavy trading periods
+A faster settlement cycle also modestly affects how quickly newly-purchased shares become available for a subsequent same-day or next-day sale (versus sitting in an unsettled state) — relevant specifically for very short-holding-period strategies and for understanding how quickly genuine buying pressure can convert into available sell-side float during an unusually high-volume period, a microstructure nuance that becomes more consequential the shorter a strategy's intended holding period is.
+
+## 90.5 Worked example — recalculating a corporate-action cutoff after the T+1 transition
+*A TRA new to the Indian market, more familiar with a T+2 settlement convention from prior international experience, is asked when the last day to buy a stock is in order to still receive an upcoming dividend, given a disclosed record date.*
+
+**Model answer.** Per Part 90.3, the TRA must apply India's current T+1-adjusted cutoff logic rather than defaulting to T+2-based intuition carried over from a different market's convention — under T+1, the last cum-dividend trading day and the corresponding ex-date shift one trading day earlier relative to what a T+2 mental model would calculate, meaning a TRA anchored to the older or a foreign convention would identify the wrong cutoff day entirely and could give a client incorrect guidance on when to buy to still qualify for the dividend. The correct practice is explicitly working from the current Indian settlement-cycle convention for every such calculation, rather than assuming settlement-cycle conventions are stable across markets or across time, since exchanges have historically moved settlement cycles progressively faster and a TRA's working assumptions must be kept current with the actual prevailing regime.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2381,5 +2402,8 @@ Where a genuine, issuer-specific split exists, a TRA should examine which rating
 
 81. **Q: A mid-cap company has historically received closely-aligned ratings from two agencies. Following a large related-party transaction disclosure, one agency downgrades it two notches to just below investment grade, while the other maintains its rating, citing the same transaction as adequately mitigated by disclosed collateral. Bond yields widen modestly; the equity shows limited reaction. How should a TRA read this?**
     A: Per Part 89.5 — this is a genuinely issuer-specific split (a fresh divergence from the agencies' historically-aligned pattern, triggered by one specific new disclosure, Part 89.3), not a stable house-methodology artifact. The disagreement itself (Part 89.2) is meaningful evidence that sophisticated credit analysts genuinely disagree about how adequately the collateral mitigates the exposure. The modest bond-yield widening alongside limited equity reaction (Part 89.4) suggests the market is currently weighting something closer to the more cautious agency's view, though not fully — a TRA should flag the split explicitly and continue monitoring whether the two agencies converge or the downgrade is confirmed by further deterioration.
+
+82. **Q: A TRA new to the Indian market, more familiar with a T+2 settlement convention from prior international experience, is asked when the last day to buy a stock is in order to still receive an upcoming dividend, given a disclosed record date. What should they watch out for?**
+    A: Per Part 90.5 — the TRA must apply India's current T+1-adjusted cutoff logic (Part 90.3) rather than defaulting to T+2-based intuition, since under T+1 the last cum-dividend trading day and the corresponding ex-date shift one full trading day earlier relative to what a T+2 mental model would calculate. A TRA anchored to an older or foreign convention would identify the wrong cutoff day entirely and could give incorrect guidance — the correct practice is explicitly working from the current prevailing settlement-cycle convention for every such calculation, since exchanges have historically moved settlement cycles progressively faster over time.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
