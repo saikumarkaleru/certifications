@@ -726,4 +726,16 @@ failure-and-fix example). Added matching glossary terms (Market Research) and on
 (Market Research Q48, TRA Q39). Market Research 112->115pg, TRA 96->99pg. Master: 3,870 -> 3,876
 pages.
 
-**Running total: 3,876 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 48 (Credit Spreads as an
+Equity-Stress Leading Indicator to TRA — distinct from Part 15.2's bond-yield-level material,
+why credit markets often lead equity weakness, high-yield spreads as the most sensitive segment,
+the Indian-market translation via NBFC/credit-sensitive-stock underperformance, a worked flat-
+index-but-underperforming-NBFCs early-warning example) and PART 51 (Referral & Word-of-Mouth
+Growth Research to Market Research — distinct from Part 18's CLV/retention and Part 40's onboarding
+research, NPS as an imperfect proxy for actual referral behaviour, referral-incentive research
+distinguishing expansion from substitution, trigger-moment mapping for referral-ask placement, a
+worked high-NPS-but-weak-referral-quality diagnostic). Added matching glossary terms (Market
+Research) and one new Q&A each (Market Research Q49, TRA Q40). Market Research 115->117pg, TRA
+99->101pg. Master: 3,876 -> 3,880 pages.
+
+**Running total: 3,880 pages.**

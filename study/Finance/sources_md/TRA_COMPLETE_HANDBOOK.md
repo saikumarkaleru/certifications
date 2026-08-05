@@ -1255,6 +1255,27 @@ A market in **balance** is one where buyers and sellers broadly agree on value w
 
 ---
 
+# PART 48 — CREDIT SPREADS AS AN EQUITY-STRESS LEADING INDICATOR
+
+## 48.1 Spreads, not yield levels — a distinct signal from Part 15's bond-yield material
+Part 15.2 covered the bonds-equities relationship in terms of the *level* of government bond yields (rising yields pressuring equity valuations via the discount-rate channel). **Credit spreads** — the extra yield a corporate bond pays over a comparable-maturity government bond, compensating investors for taking on default/credit risk — are a genuinely distinct signal: a widening credit spread specifically reflects the bond market pricing *increased default/business risk*, not just a change in the general level of interest rates, making it a more targeted risk-sentiment gauge than the government-yield level alone.
+
+## 48.2 Why credit spreads often lead equity weakness, not just coincide with it
+Corporate bond investors (credit analysts, fixed-income desks) are, by the nature of their asset class, disproportionately focused on downside/default risk rather than upside participation — meaning credit markets have historically shown a tendency to price in deteriorating business conditions **before** equity markets fully reflect the same concern, since an equity holder can still profit from upside surprises while a bond holder's entire focus is downside protection, creating a structural reason credit markets are sometimes the "canary in the coal mine" for broader market stress a TRA should watch alongside pure equity-technical signals.
+
+## 48.3 High-yield spreads specifically — the most sensitive segment to watch
+Within corporate credit, **high-yield (below-investment-grade) spreads** are the most sensitive and closely-watched segment for equity-market stress signals specifically, since high-yield issuers are, by definition, the companies with the least financial cushion — a sharp widening in high-yield spreads (even while investment-grade spreads remain comparatively stable) signals credit markets are specifically worried about weaker, more marginal borrowers first, often the same cohort of smaller/more leveraged companies that see outsized equity drawdowns when broader risk sentiment deteriorates, making high-yield spread widening a more sensitive early-warning signal than investment-grade spreads or government yield levels alone.
+
+## 48.4 The Indian-market translation — what a TRA actually has practical access to
+While a deep US high-yield-spread dataset (e.g. tracked indices) is the classic textbook version of this signal, the same underlying logic translates to the Indian market through more accessible proxies: **NBFC/corporate bond spread-widening** relative to G-Secs (visible via any credit-research desk's published spread data), and — more practically accessible day-to-day — **credit-sensitive stock underperformance** (NBFCs, real-estate developers, and highly-leveraged companies underperforming the broader index disproportionately) as an equity-market proxy for the same underlying credit-stress signal, extending this handbook's rate-sensitive-sector framework (Part 15.3's worked example) in the opposite, risk-off direction.
+
+## 48.5 Worked example — reading credit-sensitive underperformance as an early equity-stress signal
+*The Nifty 50 is roughly flat over two weeks, but NBFC and real-estate stocks have underperformed the broader index by 6-8% over the same period, alongside reports of a modest widening in NBFC bond spreads over G-Secs.*
+
+**Model answer.** The broad index being flat while credit-sensitive names underperform meaningfully (Part 48.4's practical Indian-market proxy) is a plausible early signal that credit-market risk perception is deteriorating before it's visible in the headline index — consistent with Part 48.2's "credit leads equity" logic, where bond-market-adjacent participants and the equity holders of the most credit-sensitive names are pricing in tightening liquidity/funding conditions before the broader market catches up. A disciplined TRA response is not to assume the broad index will necessarily follow this specific cohort lower (that outcome is not guaranteed — sector-specific credit stress does sometimes stay contained), but to flag this divergence explicitly as a risk-off lead indicator worth monitoring closely, watching specifically whether the underperformance and spread-widening broadens to other credit-sensitive sectors or begins showing up in the broader index's own technical structure, rather than dismissing a flat headline index as evidence nothing meaningful is happening beneath the surface.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1373,5 +1394,8 @@ A market in **balance** is one where buyers and sellers broadly agree on value w
 
 39. **Q: A stock builds a narrow, symmetric profile in the first two hours within the prior day's Value Area, then breaks above Initial Balance on expanding volume, with the profile shape stretching and thinning rather than building a new symmetric bell shape. How should the TRA's tactical approach shift, and why?**
     A: Per Part 47.5 — the first two hours is a classic balance-state signature (Part 47.2), where range-fading tactics are appropriate. The breakout with a stretching, thinning profile (rather than a new balanced shape) is the imbalance-state signature (Part 47.3), signalling the auction is seeking a new area of agreement — the correct shift is to trend-following tactics, confirmed by the profile's evolving shape itself rather than waiting for a lagging indicator to catch up.
+
+40. **Q: The Nifty 50 is roughly flat over two weeks, but NBFC and real-estate stocks have underperformed the index by 6-8% alongside a modest widening in NBFC bond spreads over G-Secs. How should a TRA read this, and what should they watch for next?**
+    A: Per Part 48.5 — this is a plausible early credit-stress signal (Part 48.2's "credit leads equity" logic) showing up first in the most credit-sensitive names and spreads (Part 48.3-48.4) before it's visible in the flat headline index. Rather than assuming the broad index will necessarily follow lower, the disciplined response is flagging the divergence as a risk-off lead indicator and monitoring whether the underperformance and spread-widening broadens to other credit-sensitive sectors or begins appearing in the index's own technical structure.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
