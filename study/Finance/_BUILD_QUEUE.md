@@ -1387,4 +1387,18 @@ despite a healthy aggregate KYC-completion outcome). Added one new Q&A each (TRA
 Q98) and matching glossary terms (Market Research). TRA deepening handbook 207->209pg, Market Research
 207->209pg. Master: 4,076 -> 4,080 pages.
 
-**Running total: 4,080 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 98 (FPI Registration Categories —
+A Regulatory Layer Beneath the "FII/FPI" Label to TRA — a distinct regulatory-structure question
+beneath Part 82's single FII/FPI bulk-deal category label, the risk-based-tiering logic behind the
+category framework, why this matters practically via occasional beneficial-ownership disclosure
+filings distinct from routine shareholding-pattern filings, framing this knowledge as interpretive
+credibility literacy rather than a standalone trading edge, a worked example correctly triaging an
+unfamiliar FPI-related disclosure filing) and PART 101 (Podcast/Audio Advertising Research to Market
+Research — a distinct measurement environment from the video/visual ad testing already covered, host-
+read versus produced-spot as a distinct format choice, attention-context measurement for genuinely
+divided-attention listening, host-credibility-transfer as its own distinct metric, a worked example
+diagnosing uneven purchase-intent lift for identical host-read ad copy across three podcasts). Added
+one new Q&A each (TRA Q90, Market Research Q99) and matching glossary terms (Market Research). TRA
+deepening handbook 209->211pg, Market Research 209->211pg. Master: 4,080 -> 4,084 pages.
+
+**Running total: 4,084 pages.**
