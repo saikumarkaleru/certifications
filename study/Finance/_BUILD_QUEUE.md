@@ -1285,4 +1285,19 @@ example diagnosing why a blanket discount campaign backfired specifically for se
 customers). Added one new Q&A each (TRA Q82, Market Research Q91) and matching glossary terms (Market
 Research). TRA deepening handbook 191->193pg, Market Research 191->193pg. Master: 4,044 -> 4,048 pages.
 
-**Running total: 4,048 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 91 (Sovereign Gold Bonds vs Gold
+ETFs — Distinct Technical Instruments to TRA — a distinct instrument-comparison question not addressed
+by any prior commodity material, structural differences (ETF continuous creation/redemption vs SGB
+fixed-tenor bond) driving different technical/liquidity behaviour, reading a genuine SGB discount-to-
+fair-value versus simple illiquidity noise, the tax-treatment difference as a distinct practically-
+relevant factor, a worked example advising on a persistent SGB discount explained by thin trading
+volume) and PART 94 (Support-Ticket Text Analytics — Emerging-Issue Detection Deepening to Market
+Research — a distinct methodological-depth question from Part 35.2's one-line VoC data-source mention,
+volume-vs-severity weighting against naive raw-volume ranking, baseline-relative anomaly detection as
+the correct "is this new" test, the risk of a coding taxonomy too coarse to catch an emerging sub-
+issue, a worked example where manual re-sampling uncovers a rapidly-growing sub-issue masked within a
+stable-looking broad theme). Added one new Q&A each (TRA Q83, Market Research Q92) and matching
+glossary terms (Market Research). TRA deepening handbook 193->196pg, Market Research 193->196pg.
+Master: 4,048 -> 4,054 pages.
+
+**Running total: 4,054 pages.**

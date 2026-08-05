@@ -2158,6 +2158,27 @@ A faster settlement cycle also modestly affects how quickly newly-purchased shar
 
 ---
 
+# PART 91 — SOVEREIGN GOLD BONDS VS GOLD ETFs — DISTINCT TECHNICAL INSTRUMENTS
+
+## 91.1 A distinct instrument-comparison question not addressed by any prior commodity material
+Earlier commodity-market material in this handbook addressed crude oil and gold as macro drivers generally. This Part covers a genuinely distinct, instrument-level question specific to how Indian investors actually gain gold exposure on-exchange: **Sovereign Gold Bonds (SGBs)** and **Gold ETFs** both track the same underlying (gold price) but are structurally different instruments with different technical behaviour a TRA must be able to distinguish, not treat as interchangeable "gold proxies."
+
+## 91.2 Structural differences that directly drive different technical behaviour
+A Gold ETF is an open-ended fund continuously creating/redeeming units against physical gold holdings, so its market price closely tracks spot gold with only minor, quickly-arbitraged tracking error (directly analogous to Part 72's index-ETF-vs-iNAV discipline, applied here to a commodity ETF instead of an equity index). An SGB, by contrast, is a **fixed-tenor government bond** with a stated maturity (typically 8 years), a small fixed annual interest coupon paid on the initial investment, and — critically — **materially lower secondary-market liquidity** than a Gold ETF, since most SGB holders buy at issuance and hold to maturity rather than actively trading, meaning an SGB's traded market price can show wider bid-ask spreads and can occasionally drift further from the fair gold-tracking price than a liquid Gold ETF's price would.
+
+## 91.3 Reading a genuine SGB discount-to-fair-value versus simple illiquidity noise
+Because of the liquidity difference (Part 91.2), an SGB trading at a discount to its calculated fair value (current gold price adjusted for the bond's specific terms) is not automatically a buying opportunity the way a similar Gold ETF discount to iNAV would more reliably be — a TRA must first check whether the SGB series in question has genuinely thin trading volume (in which case the discount likely reflects illiquidity rather than a real mispricing that will close) versus reasonable trading activity (in which case a persistent discount is more informative and potentially tradeable) — the same liquidity-first diagnostic discipline this handbook applies to thinly-traded small-cap equities (Part 42) applies directly here to a completely different instrument class.
+
+## 91.4 The tax-treatment difference as a distinct, non-technical but practically relevant factor
+Beyond the technical/liquidity distinction, SGBs carry a materially different tax treatment from Gold ETFs specifically on redemption at maturity (a favourable treatment not available to Gold ETF gains) — while tax treatment isn't itself a technical/chart-reading factor, a TRA advising a client on gold exposure should be aware this non-technical factor often outweighs any pure technical/liquidity consideration in an investor's actual instrument choice, and shouldn't recommend purely on technical liquidity/tracking grounds without flagging that the tax dimension exists and should be checked with a tax advisor.
+
+## 91.5 Worked example — advising on a persistent SGB discount to fair value
+*An SGB series maturing in three years is trading at a 4% discount to its calculated fair gold-tracking value. Checking recent trading data shows the series has traded on only a handful of days in the past month, with very small daily volumes each time.*
+
+**Model answer.** Per Part 91.3, the thin, sporadic trading volume is the key diagnostic fact here — this SGB series' 4% discount is far more likely to reflect genuine illiquidity (a small pool of willing sellers/buyers producing a wide, unreliable market price) than a real, tradeable mispricing that will reliably close, unlike a similar discount in a liquid, actively-traded Gold ETF where arbitrage mechanisms (Part 91.2) would typically keep the tracking tight. A TRA should flag this distinction explicitly to a client considering the discount as a buying opportunity — the discount may not be realisable in practice given the difficulty of executing meaningful size at a favourable price in a thinly-traded instrument, and any investor primarily seeking close, liquid gold-price tracking would generally be better served by a Gold ETF, while an investor prioritising the SGB's distinct tax treatment at maturity (Part 91.4) should weigh that factor explicitly rather than being deterred by the illiquidity-driven discount alone.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2405,5 +2426,8 @@ A faster settlement cycle also modestly affects how quickly newly-purchased shar
 
 82. **Q: A TRA new to the Indian market, more familiar with a T+2 settlement convention from prior international experience, is asked when the last day to buy a stock is in order to still receive an upcoming dividend, given a disclosed record date. What should they watch out for?**
     A: Per Part 90.5 — the TRA must apply India's current T+1-adjusted cutoff logic (Part 90.3) rather than defaulting to T+2-based intuition, since under T+1 the last cum-dividend trading day and the corresponding ex-date shift one full trading day earlier relative to what a T+2 mental model would calculate. A TRA anchored to an older or foreign convention would identify the wrong cutoff day entirely and could give incorrect guidance — the correct practice is explicitly working from the current prevailing settlement-cycle convention for every such calculation, since exchanges have historically moved settlement cycles progressively faster over time.
+
+83. **Q: An SGB series maturing in three years trades at a 4% discount to its calculated fair gold-tracking value. Recent trading data shows the series traded on only a handful of days in the past month, with very small daily volumes. Is this a buying opportunity?**
+    A: Per Part 91.5 — the thin, sporadic trading volume is the key diagnostic fact (Part 91.3): this discount is far more likely to reflect genuine illiquidity than a real, tradeable mispricing that will reliably close, unlike a similar discount in a liquid, actively-traded Gold ETF where arbitrage mechanisms (Part 91.2) would typically keep tracking tight. A TRA should flag that the discount may not be realisable in practice given the difficulty of executing meaningful size in a thinly-traded instrument — an investor prioritising close, liquid gold-price tracking is generally better served by a Gold ETF, while one prioritising the SGB's distinct maturity tax treatment (Part 91.4) should weigh that factor explicitly rather than being deterred by the illiquidity-driven discount alone.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
