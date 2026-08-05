@@ -621,4 +621,17 @@ regime-dependency limitation, a worked RS-ranked breakout-candidate validation e
 matching glossary terms (Market Research) and one new Q&A each (Market Research Q39, TRA Q30).
 Market Research 92->94pg, TRA 77->79pg. Master: 3,831 -> 3,835 pages.
 
-**Running total: 3,835 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 39 (Volume Profile & Market
+Profile (TPO) Analysis to TRA — reframes the chart around price rather than time, Point of
+Control/Value Area as a volume-derived S/R framework distinct from chart-based S/R, high-volume
+vs low-volume nodes, Market Profile/TPO and Initial Balance as the older time-weighted cousin, a
+worked open-outside-prior-Value-Area example) and PART 42 (Robo-Advisory & Algorithmic
+Recommendation Research to Market Research — distinct from Part 40's app-trust and Part 41's
+literacy research, covers risk-profiling-questionnaire validation as a measurement-quality
+problem, explainability research as progressive disclosure applied to algorithmic recommendations,
+override/disagreement analysis as a diagnostic data source, a worked drawdown-triggered-override-
+spike diagnostic tying back to the stated-vs-revealed-preference theme). Added matching glossary
+terms (Market Research) and one new Q&A each (Market Research Q40, TRA Q31). Market Research
+94->96pg, TRA 79->81pg. Master: 3,835 -> 3,839 pages.
+
+**Running total: 3,839 pages.**

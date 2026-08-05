@@ -1062,6 +1062,27 @@ Because RS rank is computed purely from trailing price performance, a stock can 
 
 ---
 
+# PART 39 — VOLUME PROFILE & MARKET PROFILE (TPO) ANALYSIS
+
+## 39.1 Reframing the chart around price, not time — why this is a genuinely different lens
+Every technique this handbook has covered so far (candlesticks, indicators, breadth, RS ranking) is organised around **time on the x-axis**. **Volume Profile** flips this: it plots traded volume **by price level**, on the y-axis, over a chosen session or range, showing directly *where* the heaviest trading actually occurred rather than *when* — a genuinely different organising principle from every time-based chart covered in Parts 1-38, not a variant of an existing indicator.
+
+## 39.2 Point of Control (POC) and Value Area — the two core reference levels
+The **Point of Control (POC)** is the single price level with the highest traded volume in the chosen period — the price the market spent the most time and volume agreeing was "fair" — and the **Value Area (VA)** is the price range (commonly containing ~70% of total volume) around the POC, bounded by the **Value Area High (VAH)** and **Value Area Low (VAL)**. These three levels function as a distinct, volume-derived support/resistance framework: price trading back into a prior session's Value Area is often read as a return toward "accepted" fair value, while a clean break and acceptance outside the Value Area (multiple periods trading and holding beyond VAH/VAL, not just a brief poke) is read as a genuine shift in where the market is willing to transact.
+
+## 39.3 High-volume nodes vs low-volume nodes — where price moves fast versus where it stalls
+Beyond the POC, a full volume profile reveals **high-volume nodes (HVNs)** — price levels with heavy historical trading, which tend to act as magnets/support-resistance because many participants have a cost basis there — and **low-volume nodes (LVNs)** — price levels the market moved through quickly with little trading, which tend to see price move through them rapidly again if revisited, since few participants have a vested interest defending that level. A TRA building a trade plan around a volume profile should expect price to stall or consolidate near HVNs and move briskly through LVNs, a distinct expectation-setting tool beyond ordinary chart-based support/resistance (Part 2).
+
+## 39.4 Market Profile (TPO) — the older, time-weighted cousin of volume profile, and Initial Balance
+**Market Profile**, using **Time Price Opportunity (TPO)** letters instead of volume, is an older, related technique (originally developed for markets without reliable per-price-level volume data) that builds a similar price-by-frequency picture using time spent at each price rather than volume traded — conceptually similar in the shapes it produces (a POC-equivalent, value-area-equivalent) but a genuinely distinct calculation basis worth knowing the difference between if a platform or a colleague references "TPO" specifically. Market Profile also introduces the **Initial Balance (IB)** — the price range established in a session's first hour — commonly used as a reference range whose breakout direction (up out of IB vs down out of IB) is read as an early signal of the session's likely broader character (trend day vs range day).
+
+## 39.5 Worked example — using a prior session's Value Area to frame today's open
+*Yesterday's session closed with POC at ₹1,240, VAH at ₹1,255, VAL at ₹1,225. Today's stock opens at ₹1,262 — above yesterday's Value Area entirely — on volume noticeably above the recent average for an opening print.*
+
+**Model answer.** An open above the prior session's VAH (Part 39.2) is an "open outside value" — a distinct market-profile read from an "open inside value" (which would suggest a likely rotation back toward yesterday's POC). The above-average opening volume matters for interpreting which of the two typical outcomes is more likely: sustained, volume-backed acceptance above yesterday's Value Area (a genuine shift to a higher fair-value range, consistent with a trend-day character per Part 39.4's Initial Balance framework) versus a volume-thin excursion that reverts back into yesterday's value area once the initial imbalance is absorbed. The practical read: watch whether price holds above yesterday's VAH (₹1,255) as the session develops — sustained acceptance above that level on continued volume supports treating this as genuine upside continuation, while a swift reversion back inside the ₹1,225-1,255 value area would argue for treating the gap-and-fade as the more likely outcome instead, exactly the kind of volume-profile-informed, level-specific read that adds a dimension beyond a purely time-based chart.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1153,5 +1174,8 @@ Because RS rank is computed purely from trailing price performance, a stock can 
 
 30. **Q: A screen returns a stock with an RS rank of 93 forming a tight consolidation below a prior swing high on declining volume. What does the RS rank add beyond the chart pattern itself, and what's the key caveat?**
     A: Per Part 38.5 — the RS rank confirms the stock has genuinely outperformed 93% of the universe, not merely ridden a strong broad-market tape, adding conviction to the basing pattern the screen is designed to surface (Part 38.3). The key caveat (Part 38.4) is that RS rank is trailing and regime-dependent — the setup's historical edge is meaningfully weaker if the broader market isn't itself in a confirmed uptrend, so position sizing should reflect the broader-market context, not just the individual stock's strong setup.
+
+31. **Q: A stock opens above the prior session's Value Area High on above-average volume. What two outcomes should a TRA watch for, and what distinguishes them?**
+    A: Per Part 39.5 — an open outside the prior session's value area can either see sustained, volume-backed acceptance above it (a genuine shift to a higher fair-value range, consistent with a trend-day character) or revert back inside the prior value area once the initial imbalance is absorbed (a gap-and-fade). The distinguishing evidence is whether price holds above the prior VAH as the session develops on continued volume, versus a swift reversion back into the ₹-range value area — the volume-profile framework (Part 39.2-39.3) gives specific price levels to watch for this, beyond what a purely time-based chart would show.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
