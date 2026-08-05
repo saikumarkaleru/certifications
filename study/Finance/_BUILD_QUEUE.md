@@ -1035,4 +1035,16 @@ interpretation needs empirical consumer validation, a worked unconventional-rebr
 diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
 Q73, TRA Q64). Market Research 167->170pg, TRA 151->154pg. Master: 3,980 -> 3,986 pages.
 
-**Running total: 3,986 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 73 (Promoter Group Inter-Se
+Transfers to TRA — a distinct, often-overlooked disclosure category from Part 33.3/54's open-market
+promoter transactions, why inter-se transfers are frequently misread as genuine buy/sell signals,
+succession-planning/restructuring value when a pattern is genuine, distinguishing routine
+reshuffling from meaningful pattern/scale, a worked promoter-to-family-trust-transfer-misread-as-
+bearish example) and PART 76 (Retail Audit Panel Methodology to Market Research — deepens Part 17's
+syndicated-vendor glossary mention, store-universe stratification by type/geography, sample-to-
+total-market extrapolation, e-commerce/quick-commerce channel-coverage gaps, a worked retail-audit-
+vs-company-reported-sales-discrepancy diagnostic). Added matching glossary terms (Market Research)
+and one new Q&A each (Market Research Q74, TRA Q65). Market Research 170->172pg, TRA 154->156pg.
+Master: 3,986 -> 3,990 pages.
+
+**Running total: 3,990 pages.**

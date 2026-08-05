@@ -1780,6 +1780,27 @@ Like a QIP or preferential-allotment lock-in (Part 63.4), an NDU has a defined d
 
 ---
 
+# PART 73 — PROMOTER GROUP INTER-SE TRANSFERS: A DISTINCT, OFTEN-OVERLOOKED DISCLOSURE
+
+## 73.1 A distinct disclosure category from open-market promoter buying/selling
+Part 33.3 and Part 54 covered promoter buying/selling via block deals and open-market purchases — transactions with parties *outside* the promoter group. **Inter-se transfers** are structurally distinct: a transfer of shares **between entities within the same promoter group** (from one promoter family member or holding entity to another) — no shares leave the promoter group's overall combined holding, and the transaction typically doesn't represent fresh buying or selling conviction about the company at all, making it a genuinely different disclosure category a TRA should learn to recognise and correctly set aside from genuine positioning signals.
+
+## 73.2 Why inter-se transfers are frequently, and incorrectly, over-read as a market signal
+Because inter-se transfers are disclosed through similar-looking regulatory filings as genuine third-party promoter transactions, a less careful reading can mistake an inter-se transfer for a meaningful buy or sell signal — the critical check is confirming whether the counterparty is genuinely external or is itself a promoter-group entity (family trusts, holding companies, or related individuals within the same promoter family) — a TRA should treat this verification as a standard first step before reading any promoter transaction disclosure as a genuine positioning signal, since an inter-se transfer misread as external buying/selling would produce a confidently wrong conclusion about promoter conviction that isn't actually present in the underlying transaction.
+
+## 73.3 When inter-se transfers do carry genuine informational value — succession and restructuring signals
+While inter-se transfers don't reflect fresh buying/selling conviction, they aren't entirely uninformative — a pattern of inter-se transfers can signal **succession planning** (shares moving from an ageing founder to the next generation or a family trust structure) or **corporate/group restructuring** (consolidating promoter holdings under a single holding entity, or the reverse, distributing a concentrated holding across multiple family members or entities for estate-planning or governance reasons) — a genuinely different, longer-horizon signal about the promoter family's own internal structure and succession trajectory, worth noting in a company profile but read through a fundamentally different lens than a trading/positioning signal.
+
+## 73.4 Distinguishing genuine restructuring signal from routine, non-informative internal reshuffling
+Not every inter-se transfer carries meaningful succession/restructuring information — some are routine internal reshuffling with no larger significance a TRA needs to track — the distinguishing consideration is **pattern and scale**: a single small inter-se transfer between existing, already-known promoter entities is likely non-informative routine housekeeping, while a large-scale, systematic pattern of transfers consolidating or redistributing a meaningful share of the promoter group's total holding, especially coinciding with other signals (a founder's advancing age, a previously-announced succession plan, other governance changes), is the kind of pattern worth flagging in a company profile as genuine, longer-horizon context.
+
+## 73.5 Worked example — correctly setting aside an inter-se transfer misread as a bearish signal
+*A regulatory filing shows a promoter entity transferring a meaningful block of shares to another entity, at first glance appearing similar to a promoter reducing their stake. On closer review, the receiving entity is a family trust that is itself part of the same promoter group's disclosed holding structure.*
+
+**Model answer.** This is a textbook inter-se transfer (Part 73.1) that should be explicitly set aside as a genuine buy/sell positioning signal — since the shares moved from one promoter-group entity to another, the promoter family's *combined* holding in the company is entirely unchanged, and reading this as bearish promoter behaviour (the natural but incorrect first impression before checking the counterparty) would be a confidently wrong conclusion (Part 73.2's verification-first discipline). The correct research response is checking whether this specific transfer fits a broader pattern worth noting for other reasons (Part 73.3-73.4) — if it's an isolated transfer with no other context, it likely merits no further mention in a research note; if it coincides with other signals suggesting a broader succession or restructuring exercise underway, it's worth flagging as longer-horizon governance context, but in either case it should never be reported alongside genuine open-market promoter transactions (Part 33.3, Part 54) as if it carried the same trading-conviction signal.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1973,5 +1994,8 @@ Like a QIP or preferential-allotment lock-in (Part 63.4), an NDU has a defined d
 
 64. **Q: A stock's formal shareholding-pattern disclosure shows zero promoter pledge, but a credit rating agency's report on a related group entity references a Non-Disposal Undertaking covering a meaningful block of the promoter's shares in this company. Does the clean pledge disclosure mean the promoter's position is genuinely unencumbered?**
     A: No (Part 72.5) — NDU disclosure is less consistently captured in standard regulatory filings than formal pledge disclosure (Part 72.3), so a zero-pledge reading doesn't establish an unencumbered position. The NDU-covered shares aren't freely available supply regardless of the promoter's own view (Part 72.2), and the research note should track the NDU's expiry/release date (Part 72.4) as a distinct future overhang event, rather than dismissing the finding for not fitting the formal-pledge framework.
+
+65. **Q: A regulatory filing shows a promoter entity transferring a meaningful share block to another entity that turns out to be a family trust within the same promoter group's disclosed holding structure. Should this be read the same way as an open-market promoter sale?**
+    A: No (Part 73.5) — this is an inter-se transfer (Part 73.1); since shares moved between promoter-group entities, the family's combined holding is unchanged, and reading it as bearish promoter behaviour would be a confidently wrong conclusion (Part 73.2). The correct response is checking whether it fits a broader succession/restructuring pattern worth noting as longer-horizon governance context (Part 73.3-73.4), but it should never be reported alongside genuine open-market promoter transactions as carrying the same trading-conviction signal.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
