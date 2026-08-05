@@ -1446,4 +1446,19 @@ margin-trading opt-in flow with a high usability completion rate but genuine dar
 findings). Added one new Q&A each (TRA Q93, Market Research Q102) and matching glossary terms (Market
 Research). TRA deepening handbook 216->218pg, Market Research 216->218pg. Master: 4,094 -> 4,098 pages.
 
-**Running total: 4,098 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 102 (Minimum Public Shareholding
+(MPS) Compliance — A Distinct Deadline-Driven Event to TRA — a distinct compliance-driven event from
+every voluntary corporate action already covered, the mechanisms companies use to restore compliance
+and their distinct technical signatures, why a compliance-driven event carries a different signal than
+the same mechanism used opportunistically, the deadline itself as a schedulable dated event, a worked
+example reading a promoter OFS sized exactly to a compliance threshold ahead of a disclosed deadline)
+and PART 105 (Onboarding UX Research for Digitally-Underserved First-Time Investors to Market Research
+— a distinct research object from Part 41's literacy-assessment material, why standard usability-
+testing norms understate real-world difficulty for this population, icon/visual-language comprehension
+as a distinct testable layer beneath text simplification, assisted-mode onboarding as a genuine
+real-world pattern worth explicitly researching, a worked example uncovering weak account-security
+comprehension masked by a strong onboarding completion rate). Added one new Q&A each (TRA Q94, Market
+Research Q103) and matching glossary terms (Market Research). TRA deepening handbook 218->220pg,
+Market Research 218->220pg. Master: 4,098 -> 4,102 pages.
+
+**Running total: 4,102 pages.**
