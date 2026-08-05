@@ -1209,4 +1209,20 @@ declining research-function segment alongside a hiring-signal corroboration). Ad
 (TRA Q77, Market Research Q86) and matching glossary terms (Market Research). TRA deepening handbook
 180->182pg, Market Research 180->182pg. Master: 4,022 -> 4,026 pages.
 
-**Running total: 4,026 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 86 (Demerger Mechanics — Record-
+Date Handling and When-Issued Trading to TRA — a distinct corporate-action structure from bonus/
+rights/buyback mechanics already covered, since a demerger creates a genuinely new, separately-valued
+listed entity rather than adjusting an existing stock, the when-issued market as real-time price
+discovery ahead of formal listing, why no clean value-attribution formula exists unlike a bonus/rights
+adjustment, the post-listing technical reset treating each entity as a fresh chart, a worked example
+reading a 65/35 WI-market split ahead of a digital-services/manufacturing demerger's formal listing)
+and PART 89 (Customer Journey Mapping — Full Methodology Deepening to Market Research — a distinct
+methodological-depth question from Part 8.2's stage/touchpoint sketch, evidence-grounding a map from
+real behavioural/qualitative data rather than an internal workshop alone, identifying "moments of
+truth" deserving disproportionate research investment, cross-functional ownership assignment as the
+map's actionability test, a worked example where funnel analytics contradict a workshop's friction
+assumptions on a document-upload step). Added one new Q&A each (TRA Q78, Market Research Q87) and
+matching glossary terms (Market Research). TRA deepening handbook 182->184pg, Market Research
+182->184pg. Master: 4,026 -> 4,030 pages.
+
+**Running total: 4,030 pages.**

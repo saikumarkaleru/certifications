@@ -2053,6 +2053,27 @@ The company's choice between the two mechanisms is itself informative: a tender 
 
 ---
 
+# PART 86 — DEMERGER MECHANICS — RECORD-DATE HANDLING AND WHEN-ISSUED TRADING
+
+## 86.1 A distinct corporate-action structure from bonus/rights/buyback mechanics already covered
+Parts 34.4 (bonus/rights adjustment), 84 (rights entitlement trading), and 85 (buybacks) each covered a corporate action that changes an existing stock's own share count or price without creating a genuinely new, separately-valued listed entity. A **demerger** (spinoff) is structurally distinct: one or more business divisions of the parent company are carved out into a separate legal entity, whose shares are issued to existing parent shareholders in a fixed ratio — creating a **second, newly-listed stock** a TRA must value and trade independently, not merely an adjustment to the parent's existing chart.
+
+## 86.2 The when-issued (WI) trading window — price discovery before formal listing
+Between a demerger's record date and the demerged entity's formal listing date (often several weeks to months, given the regulatory/listing-approval process), Indian exchanges typically operate a **when-issued (WI) market** for both the residual parent entity and the yet-to-be-listed demerged entity, letting eligible shareholders trade each leg *before* the demerged shares are formally credited and listed. A TRA should treat WI prices as genuine, real-time price discovery on the *market's* implied split of value between the two resulting entities — often the single best available read on how the market is valuing the demerger's economics before the two stocks trade independently on the regular market.
+
+## 86.3 The value-attribution problem — no clean formula exists, unlike a bonus/rights adjustment
+Unlike a bonus issue (Part 34.4) or a rights issue (Part 84.4), where a defensible theoretical adjustment can be calculated from a fixed formula, a demerger has **no equivalent clean formula** for how much of the pre-demerger combined value "belongs" to each resulting entity — this depends entirely on the market's independent fundamental view of each business's standalone prospects, margins, and growth profile once separated. This is precisely why the WI market (Part 86.2) carries more analytical weight for a demerger than a purely calculated theoretical price does for a bonus/rights adjustment — there simply isn't a mechanical substitute for genuine price discovery here.
+
+## 86.4 The post-listing technical reset — treating each entity as a fresh chart, not a continuation
+Once both resulting entities list and trade independently on the regular market, a TRA should treat each as requiring a **fresh technical setup** — prior support/resistance levels, moving averages, and volume-profile history from the combined pre-demerger entity do not carry over meaningfully to either resulting stock individually, since the combined entity's historical trading reflected a fundamentally different, blended business mix that no longer exists in either standalone entity. Continuing to reference the old combined-entity chart's technical levels on either new entity is a common, avoidable analytical error.
+
+## 86.5 Worked example — reading WI prices ahead of a demerger's formal listing
+*A diversified conglomerate announces a demerger separating its fast-growing digital-services division from its slower-growth legacy manufacturing business, at a 1:1 share ratio. During the when-issued trading window, the WI market prices the digital-services leg at roughly 65% of the combined pre-demerger market value, with the legacy manufacturing leg implied at the remaining 35%.*
+
+**Model answer.** Per Part 86.2-86.3, the WI market's 65/35 split is the most credible available read on how the market is valuing the two resulting businesses' standalone prospects — since no clean formula (unlike Part 34.4's bonus-adjustment math) exists to calculate this split independently, a TRA should treat the WI price ratio as the primary evidence, updating as WI trading develops more volume and conviction over the window rather than substituting a personal guess for the market's own price discovery. Once both entities formally list, per Part 86.4, each should be analysed with an entirely fresh technical setup — the combined entity's pre-demerger chart history (including any of its own old support/resistance levels) should not be projected onto either the fast-growing digital-services stock or the slower-growth manufacturing stock individually, since each now trades as its own distinct entity with its own future price-discovery process to build from scratch.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2285,5 +2306,8 @@ The company's choice between the two mechanisms is itself informative: a tender 
 
 77. **Q: A company announces a buyback. Should a tender offer at a 20% premium with a two-week window and an open-market buyback capped at a 5% premium executed over six months be given the same technical treatment?**
     A: No, per Part 85.5 — these require genuinely different treatment. A tender offer (Part 85.2) should be expected to see the stock trade up toward, but typically below, the tender price during the window, the gap reflecting the market's estimate of the acceptance ratio — a calculable, dated, event-driven relationship. An open-market buyback (Part 85.3) instead produces a much more gradual, extended, lower-conviction floor near its price cap, fading in reliability as the disclosed maximum spend is approached over its longer window. The larger premium and shorter, dated structure of a tender offer also signals higher management conviction (Part 85.4) than a more conservative open-market structure — treating both as identical "buyback support" misses both the different price dynamics and the different conviction signal each conveys.
+
+78. **Q: A conglomerate demerges its fast-growing digital-services division from its legacy manufacturing business at a 1:1 ratio. During when-issued trading, the digital-services leg prices at roughly 65% of the combined pre-demerger value and manufacturing at 35%. How should a TRA use this, and how should each entity be analysed once formally listed?**
+    A: Per Part 86.5 — since no clean formula exists to split the combined value between the two resulting entities (unlike a bonus/rights adjustment, Part 34.4), the when-issued market's 65/35 split (Part 86.2-86.3) is the most credible available evidence of how the market is valuing each business's standalone prospects, and should be treated as the primary read, updating as WI volume and conviction build over the window. Once both entities formally list, each requires an entirely fresh technical setup (Part 86.4) — the combined entity's pre-demerger chart history and support/resistance levels do not carry over to either resulting stock, since each is now a distinct entity building its own price-discovery process from scratch.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
