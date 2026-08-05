@@ -1195,4 +1195,18 @@ Master: 4,018 -> 4,022 pages. (Also fixed a build-path bug from the prior cycle:
 briefly landed in sources_md/ instead of Finance/ due to a relative-path mistake, causing the merge to
 pick up a stale copy — this cycle's rebuilds were run with correct paths from Finance/ directly.)
 
-**Running total: 4,022 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 85 (Tender-Offer vs Open-Market
+Buybacks — Distinct Technical Signatures to TRA — a distinct structural question from Part 34.2's
+general floor-support framing, tender-offer mechanics and the calculable acceptance-ratio price
+convergence, open-market buyback mechanics as a soft extended price-capped floor, why the choice of
+mechanism itself signals management conviction, a worked example distinguishing the technical read of
+both structures for the same company) and PART 88 (Employee Net Promoter Score (eNPS) as a Formal
+Tracked Metric to Market Research — a distinct measurement object from Part 47's review mining and
+Part 73's pulse surveys, why eNPS trades diagnostic depth for tracker-style comparability, eNPS as a
+leading indicator of talent-retention risk in research-function continuity, the segmentation
+discipline against a masking blended score, a worked example of a stable blended eNPS masking a
+declining research-function segment alongside a hiring-signal corroboration). Added one new Q&A each
+(TRA Q77, Market Research Q86) and matching glossary terms (Market Research). TRA deepening handbook
+180->182pg, Market Research 180->182pg. Master: 4,022 -> 4,026 pages.
+
+**Running total: 4,026 pages.**
