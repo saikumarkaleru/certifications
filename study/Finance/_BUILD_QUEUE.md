@@ -1431,4 +1431,19 @@ causal effect). Added one new Q&A each (TRA Q92, Market Research Q101) and match
 (Market Research). TRA deepening handbook 214->216pg, Market Research 214->216pg. Master: 4,090 ->
 4,094 pages.
 
-**Running total: 4,094 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 101 (Bulk/Block Deal Disclosure Lag
+— Reading Positioning Data with a Built-In Delay to TRA — a distinct data-latency question beneath the
+bulk-deal category/pattern material already covered, why the built-in reporting lag matters more for
+fast-moving situations than slow accumulation patterns, why live price/volume action often front-runs
+the formal disclosure and how to read the two together, the confirmation value the lag still provides
+despite being backward-looking, a worked example sequencing a Tuesday volume-spike read against
+Wednesday's bulk-deal confirmation) and PART 104 (Dark-Pattern Detection Research to Market Research —
+a distinct research object from Part 56's engagement-design/trading-risk material, why dark-pattern
+research requires a taxonomy-based audit methodology rather than a standard usability test,
+comprehension-under-realistic-conditions testing beyond a presence/absence audit, the elevated
+regulatory/reputational stakes specific to financial-services contexts, a worked example auditing a
+margin-trading opt-in flow with a high usability completion rate but genuine dark-pattern structural
+findings). Added one new Q&A each (TRA Q93, Market Research Q102) and matching glossary terms (Market
+Research). TRA deepening handbook 216->218pg, Market Research 216->218pg. Master: 4,094 -> 4,098 pages.
+
+**Running total: 4,098 pages.**
