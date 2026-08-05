@@ -2095,6 +2095,27 @@ During the reverse-book-build bidding window, the stock's own regular-market tra
 
 ---
 
+# PART 88 — ANCHOR INVESTOR ALLOCATION AND LOCK-IN AS A LISTING-DAY TECHNICAL FACTOR
+
+## 88.1 A distinct pre-listing signal from the RII/NII/QIB subscription data already covered
+Part 63's material on RII/NII/QIB subscription categories covers the *aggregate* institutional/retail demand breakdown across the full IPO bidding period. This Part covers a genuinely distinct, earlier signal: the **anchor investor** allocation — a portion of the QIB book reserved and allotted a full day *before* the public issue opens, to a curated set of large institutional investors at the eventual issue price, disclosed publicly via exchange filing before regular bidding even begins.
+
+## 88.2 Why anchor composition and sizing is read as an early credibility signal
+Because anchor allotment happens before the broader public can bid, the disclosed list of anchor investors (marquee domestic mutual funds, well-regarded FPIs, insurance companies) and the total anchor book size relative to the overall issue size function as an early, credibility-conferring signal the market reads *before* forming its own subscription decision — a TRA should treat a strong, well-regarded anchor book as a meaningfully positive pre-listing signal distinct from and prior to the RII/NII/QIB subscription multiples (Part 63) that follow once public bidding opens, since anchor investors had access to full pre-IPO due diligence unavailable to the retail public at that stage.
+
+## 88.3 The anchor lock-in schedule — a distinct, dated overhang calendar
+Anchor investors are subject to a mandatory **lock-in period** distinct from the standard promoter lock-in — typically a portion of anchor shares locking in for 30 days post-listing and the remainder for 90 days, both hard, disclosed, calendar-dated events. A TRA should maintain the anchor lock-in expiry dates for a recently-listed stock the same way Part 15's promoter-lock-in-expiry tracking discipline is applied, since anchor lock-in expiry represents a specific, dated point where a distinct pool of large, sophisticated holders becomes free to sell — a genuine, schedulable overhang risk independent of the promoter lock-in calendar.
+
+## 88.4 Distinguishing anchor-driven selling from a broader negative signal at lock-in expiry
+When the 30-day or 90-day anchor lock-in expires and some selling follows, a TRA's diagnostic task is distinguishing **routine, expected profit-booking by short-horizon anchor participants** (a normal, largely mechanical outcome of the lock-in structure itself) from a genuine negative reassessment of the company's prospects by the same sophisticated investor base that priced the anchor round — the key distinguishing evidence is whether the *specific* anchor investors selling are exiting their full anchor position (more consistent with routine profit-booking or portfolio-rebalancing) versus retaining a meaningful residual holding while trimming only part of the position (more consistent with continued conviction, with only a portion being routinely monetised at lock-in expiry).
+
+## 88.5 Worked example — reading a stock's price action around the 30-day anchor lock-in expiry
+*A recently-listed stock had a strong, well-regarded anchor book at listing. As the 30-day anchor lock-in expiry approaches, the stock drifts modestly lower on light volume. On the actual expiry date, moderate selling volume appears, and bulk-deal disclosures the following day show several of the original anchor investors reducing but not fully exiting their positions.*
+
+**Model answer.** The pre-expiry drift on light volume (Part 88.3's dated-overhang awareness) is a normal, anticipatory pattern as the market prices in expected lock-in-related supply, not itself a negative signal. The bulk-deal disclosures showing anchor investors *reducing but not fully exiting* (Part 88.4's distinguishing test) is the more informative evidence here — this pattern is more consistent with routine, partial profit-booking by sophisticated anchor participants than with a genuine loss of conviction in the company, since a full negative reassessment would typically show more complete exits rather than partial trims retaining meaningful residual exposure. A TRA should read this as the expected, largely mechanical resolution of a known, dated overhang (Part 88.3) rather than a fresh fundamental warning sign, while still noting the specific retained-position sizes for continued monitoring at the subsequent 90-day lock-in expiry.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2333,5 +2354,8 @@ During the reverse-book-build bidding window, the stock's own regular-market tra
 
 79. **Q: A promoter announces a voluntary delisting with a floor price of ₹450. During the reverse-book-build bidding window, the stock consistently trades in a range of ₹410-₹430 on the regular market — below the floor price itself. How should a TRA read this?**
     A: Per Part 87.5 — a stock trading persistently below the regulator-prescribed floor price during an active reverse-book-build is a meaningful signal the market assigns real probability to the delisting failing, either because public shareholders are expected to bid above a level the promoter will accept (Part 87.3's rejection risk) or because insufficient quantity is expected to be tendered to cross the required threshold (Part 87.2). This is distinct from a stock trading confidently at or above the floor price, which would instead suggest the market expects a straightforward, successful delisting — the below-floor pattern should be explicitly flagged as evidence of genuine market skepticism about completion, not treated as a temporary anomaly relative to a floor price that will reliably converge.
+
+80. **Q: A recently-listed stock with a strong anchor book drifts modestly lower on light volume ahead of its 30-day anchor lock-in expiry. On the expiry date, moderate selling appears, and next-day bulk-deal disclosures show several original anchor investors reducing but not fully exiting their positions. How should a TRA read this?**
+    A: Per Part 88.5 — the pre-expiry drift on light volume is a normal, anticipatory pattern as the market prices in expected lock-in-related supply (Part 88.3), not itself a negative signal. The bulk-deal disclosures showing anchors reducing but not fully exiting (Part 88.4's distinguishing test) are the more informative evidence — more consistent with routine, partial profit-booking by sophisticated participants than a genuine loss of conviction, since a true negative reassessment would typically show more complete exits. This should be read as the expected, largely mechanical resolution of a known, dated overhang rather than a fresh fundamental warning sign, while still tracking the retained positions for the subsequent 90-day lock-in expiry.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

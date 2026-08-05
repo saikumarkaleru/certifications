@@ -1241,4 +1241,19 @@ concept test with a synthetic panel for a launch decision). Added one new Q&A ea
 Research Q88) and matching glossary terms (Market Research). TRA deepening handbook 184->187pg,
 Market Research 184->187pg. Master: 4,030 -> 4,036 pages.
 
-**Running total: 4,036 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 88 (Anchor Investor Allocation and
+Lock-In as a Listing-Day Technical Factor to TRA — a distinct pre-listing signal from Part 63's RII/
+NII/QIB subscription data, why anchor composition/sizing reads as an early credibility signal before
+public bidding opens, the anchor lock-in schedule as a distinct dated overhang calendar from promoter
+lock-in, distinguishing routine anchor profit-booking from a genuine negative reassessment at lock-in
+expiry, a worked example reading partial-exit bulk deals around a 30-day anchor lock-in expiry) and
+PART 91 (Multi-Sided Platform Research — Supply-Side and Demand-Side Balance to Market Research — a
+distinct research-object question from every single-audience method covered so far, why the more
+visible demand side is systematically over-researched relative to supply, designing genuinely separate
+instruments per side rather than one stretched instrument, reading cross-side dependencies where a
+demand-side symptom has a supply-side root cause, a worked example tracing a lending marketplace's
+borrower-disbursal complaint to a lender-side reconciliation friction). Added one new Q&A each (TRA
+Q80, Market Research Q89) and matching glossary terms (Market Research). TRA deepening handbook
+187->189pg, Market Research 187->189pg. Master: 4,036 -> 4,040 pages.
+
+**Running total: 4,040 pages.**
