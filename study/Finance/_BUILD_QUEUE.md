@@ -836,4 +836,16 @@ window analysis as the most actionable application, a worked early-30-day exit-r
 diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
 Q57, TRA Q48). Market Research 132->134pg, TRA 116->118pg. Master: 3,910 -> 3,914 pages.
 
-**Running total: 3,914 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 57 (Reading the Futures Basis
+to TRA — a continuously-live signal beyond Part 22.3's end-of-day FII positioning data, the
+arbitrage-enforced fair-value range explaining why the basis self-corrects, basis expansion/
+contraction as a sentiment gauge within that range, rollover-period distortion and rollover cost as
+a related signal, a worked wide-premium-ahead-of-a-catalyst example) and PART 60 (Recommendation
+Engine & Content-Personalization Testing to Market Research — distinct from Part 42's portfolio-
+allocation robo-advisory research, click-through as an incomplete relevance metric, filter-bubble/
+diversity research specific to financial-content stakes, cold-start research for new users, a
+worked engagement-vs-quality-tradeoff algorithm-update diagnostic). Added matching glossary terms
+(Market Research) and one new Q&A each (Market Research Q58, TRA Q49). Market Research 134->137pg,
+TRA 118->121pg. Master: 3,914 -> 3,920 pages.
+
+**Running total: 3,920 pages.**

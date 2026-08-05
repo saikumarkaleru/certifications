@@ -1444,6 +1444,27 @@ Because the restrictions materially affect a stock's tradeability (higher margin
 
 ---
 
+# PART 57 — READING THE FUTURES BASIS AS A SENTIMENT & ARBITRAGE SIGNAL
+
+## 57.1 The basis — a distinct, continuously-available signal beyond the OI/PCR data covered elsewhere
+Part 22.3 covered FII derivatives positioning as an end-of-day statistic. The **futures basis** — the difference between a stock or index's futures price and its spot (cash-market) price — is a distinct, continuously-observable-throughout-the-session signal that requires no waiting for an end-of-day data publication: it can be read live, any time markets are open, directly from the futures and spot quotes themselves.
+
+## 57.2 The arbitrage-bound "fair value" range — why the basis can't drift arbitrarily far
+In normal conditions, the futures price trades at a **premium** to spot (a "positive basis" or "contango," Part 5.2's terminology applied here specifically to the cash-futures relationship) reflecting the cost of carry — largely the interest cost of holding the underlying until the futures contract's expiry, partially offset by any expected dividends. This premium is not arbitrary: it's bound within an **arbitrage-enforced range**, since if the futures premium rises meaningfully above the theoretical cost-of-carry level, arbitrageurs can lock in a risk-free profit (buying spot, selling futures, delivering at expiry) — and the reverse trade constrains the basis from falling too far below fair value — meaning the basis mechanically self-corrects toward its theoretical fair value far more tightly than most other technical signals in this handbook, which lack this kind of hard arbitrage constraint.
+
+## 57.3 Reading basis expansion and contraction as a sentiment gauge within the arbitrage-bound range
+Within that arbitrage-bound range, genuine sentiment information still shows up: a basis trading toward the **higher** end of its normal range (an unusually large premium) reflects strong bullish demand for leveraged long exposure via futures specifically (traders willing to pay up for that leverage), while a basis compressing toward zero or turning negative (backwardation) — unusual for index futures outside of extreme stress — signals unusually weak futures demand or active hedging-driven selling pressure in the futures leg specifically, distinct from ordinary spot-market selling. A TRA tracking the basis's position within its normal historical range, not just its absolute value, gets a live, continuously-updating sentiment read most other data sources in this handbook can only offer with a lag.
+
+## 57.4 The rollover period — why basis behaviour distorts predictably around monthly expiry
+In the days immediately before monthly futures expiry, as open interest migrates from the expiring contract to the next month's contract (the "rollover"), basis readings on the expiring contract can behave erratically and become less reliable as a clean sentiment signal — a TRA should discount basis readings taken very close to expiry accordingly, and instead track the **rollover cost** itself (the price difference between the expiring and next-month contract, expressed as a percentage) as a related but distinct signal: an unusually expensive rollover (next-month contract trading at a wide premium to the expiring one) can itself indicate strong ongoing bullish positioning being carried forward rather than closed out.
+
+## 57.5 Worked example — reading an unusually wide basis ahead of an anticipated positive catalyst
+*Nifty futures are trading at a premium to spot notably wider than the contract's typical range over the past month, two weeks ahead of a widely-anticipated RBI policy decision expected to be market-friendly.*
+
+**Model answer.** The unusually wide premium, sitting toward the high end of its normal range (Part 57.3), is consistent with elevated demand for leveraged long exposure specifically via the futures market ahead of the anticipated positive catalyst — traders positioning for the expected outcome preferring the capital efficiency of futures over outright cash-market buying, a distinct and corroborating data point alongside any bullish equity-technical setup (Part 32's pre-event positioning theme, here read through the basis specifically rather than price action alone). Since the widening remains within the arbitrage-enforced bound (Part 57.2) rather than reflecting a genuine dislocation, this should be read as a sentiment signal, not a standalone arbitrage opportunity — the correct synthesis for a TRA is treating the elevated basis as one additional, corroborating data point supporting a bullish near-term reading, while remaining mindful that basis readings this close to any subsequent monthly rollover (Part 57.4) will need to be reassessed once the contract shifts.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1589,5 +1610,8 @@ Because the restrictions materially affect a stock's tradeability (higher margin
 
 48. **Q: A small-cap stock is placed under GSM Stage 2 (high upfront margin, call-auction-only trading) after a sharp, low-volume rally. The stock falls sharply on the announcement, then settles into an unusually quiet range. Should a TRA continue applying standard intraday technical tools to this stock?**
     A: No (Part 56.5) — the sharp fall is plausibly the market reacting to the classification's reduced-leverage/reduced-liquidity implications (Part 56.4), independent of any fresh company-specific information. The subsequent quiet range reflects a fundamentally altered price-discovery mechanism under call-auction-only trading (Part 56.2), making standard continuous-trading tools largely inapplicable until the stock de-escalates or exits surveillance (Part 56.3's stage-trajectory tracking) — the stock should be treated as effectively outside the scope of normal technical analysis while in this stage.
+
+49. **Q: Nifty futures are trading at a premium to spot notably wider than the contract's typical range, two weeks ahead of a widely-anticipated market-friendly RBI decision. Is this a standalone arbitrage opportunity, and how should a TRA read it?**
+    A: Not a standalone arbitrage opportunity (Part 57.2) as long as the premium stays within its arbitrage-enforced bound — it should instead be read as a sentiment signal (Part 57.3): elevated demand for leveraged long exposure via futures ahead of the anticipated catalyst, a corroborating data point alongside any bullish equity-technical setup. This reading should be reassessed once the contract approaches the next monthly rollover (Part 57.4), when basis behaviour becomes less reliable as a clean signal.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
