@@ -939,6 +939,27 @@ A results-day gap on exceptionally heavy volume, and especially on volume that r
 
 ---
 
+# PART 33 — READING BULK/BLOCK DEAL DISCLOSURES FOR TECHNICAL CONTEXT
+
+## 33.1 A daily data source connecting back to the capital-markets material
+The Equity & Capital Markets material elsewhere in this compilation covers block deals and bulk deals as capital-market mechanisms (Part 16's ECM chapter). This Part covers the practical TRA skill of actually reading the *daily disclosed* bulk/block deal data — exchanges publish same-day or next-day disclosure of large trades above defined size thresholds, a genuine daily data source alongside the FII/DII and Bhavcopy data covered in Part 22.
+
+## 33.2 What a bulk/block deal disclosure actually tells a TRA, and its real limits
+A disclosure typically shows the stock, buyer/seller category (where identifiable — often institutional names are disclosed, promoter entities are usually identifiable by name), quantity, and price. The genuine, checkable signal: a large, disclosed institutional purchase at or above the prevailing market price, especially from a well-regarded fund, is a data point worth noting alongside a technical setup (similar in spirit to Part 29's consensus-data confluence logic) — but the real limit, worth stating explicitly, is that a single block deal reveals only that specific transaction, not the buyer's ongoing intent (they may be done buying, or this may be the first of several tranches) — exactly the same "one data point, not the whole picture" caution applied throughout Part 22's FII/DII discussion.
+
+## 33.3 Promoter buying/selling via block deals — a distinct, closely-watched sub-signal
+Disclosed promoter-entity buying via a block deal (a promoter or promoter-group entity increasing their stake) is particularly closely watched, since promoters plausibly have the deepest information about their own company's prospects — a documented (though not perfectly reliable) tendency for promoter buying to precede or coincide with positive fundamental developments. The inverse — promoter selling — requires more nuanced reading: promoter share sales can reflect a genuinely negative signal, or entirely benign reasons (personal liquidity needs, portfolio diversification, funding an unrelated venture) unrelated to the company's prospects — a TRA should avoid over-reading a single promoter sale without additional context (has the promoter's stake sale been accompanied by any stated reason in the disclosure or subsequent company communication, and how does the size compare to their total remaining holding).
+
+## 33.4 Combining block-deal data with technical structure
+A large block purchase occurring right at a well-established technical support level (Part 2.2) is a specific, checkable confluence worth noting — it suggests informed institutional money agrees the level is a reasonable entry point, reinforcing (though not guaranteeing) the level's technical significance, similar in structure to Part 29.5's consensus-upgrade-plus-breakout confluence example, just using a different fundamental-adjacent data source (disclosed institutional buying) alongside the technical level.
+
+## 33.5 Worked example — reading a block deal against a technical setup
+*A stock has been finding support at ₹450 on three prior tests over two months. A large domestic mutual fund discloses a block purchase at ₹452, two days after the most recent bounce off this level.*
+
+**Model answer.** This combines Part 2.2's repeated-test support logic (a level tested multiple times and holding is a genuine, strengthening support) with Part 33.4's institutional-confluence framework — a well-regarded domestic fund choosing to build a position specifically near this technical level, rather than at an arbitrary price, is a data point consistent with (though not proof of) the level's fundamental as well as technical significance. A TRA's appropriately calibrated read: this strengthens conviction in the ₹450 support holding on any subsequent test, worth citing explicitly in a research note alongside the pure technical picture (Part 33.2's caution: it's one data point, from one transaction, not a guarantee the fund won't sell later) — exactly the kind of measured, multi-source confluence-building this Part and Part 29 both model, rather than either dismissing the block deal as noise or treating it as a standalone buy signal.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**

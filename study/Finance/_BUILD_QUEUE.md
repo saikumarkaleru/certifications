@@ -539,4 +539,14 @@ two distinct phases connecting to PEAD, volume as the genuine-repricing-vs-overr
 a fully worked multi-signal results-gap trade decision). Market Research 78->80pg, TRA 64->66pg.
 Master: 3,804 -> 3,808 pages.
 
-**Running total: 3,808 pages.**
+**2026-08-05, autonomous wake-cycle: frontmatter re-sync + 2 more new parts**: resynced
+frontmatter again, then added PART 36 (Retail Media Networks & E-commerce Advertising Research to
+Market Research — closed-loop measurement's directness and its organic/incremental-confusion
+trap, share of search as the ongoing tracking metric, a worked holdout-test example reconciling
+platform-reported 8:1 ROAS against a true 3:1 incremental lift) and PART 33 (Reading Bulk/Block
+Deal Disclosures for Technical Context to TRA — what a disclosure does and doesn't tell you,
+promoter buying/selling as a distinct closely-watched sub-signal, combining block-deal data with
+technical support levels, a worked institutional-block-at-support confluence example). Market
+Research 80->82pg, TRA 66->68pg. Master: 3,808 -> 3,812 pages.
+
+**Running total: 3,812 pages.**
