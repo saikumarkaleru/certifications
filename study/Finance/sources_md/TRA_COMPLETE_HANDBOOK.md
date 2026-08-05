@@ -1549,6 +1549,27 @@ The dealer-gamma effect is strongest and most tradeable around specific price le
 
 ---
 
+# PART 62 — IBC/INSOLVENCY EVENTS AS A DISTINCT TECHNICAL OVERLAY
+
+## 62.1 A distinct event category from ordinary financial distress signals
+This handbook has covered credit spreads (Part 48) and promoter pledging (Part 49) as market-derived signals of building financial stress. **IBC (Insolvency and Bankruptcy Code) proceedings** represent a distinct, later-stage, and formally regulated event category entirely — a company's admission into a formal insolvency resolution process before the National Company Law Tribunal (NCLT), a legal and procedural event with its own defined stages and technical implications a TRA covering a stressed name needs to recognise as categorically different from ordinary technical weakness.
+
+## 62.2 Admission and moratorium — the immediate technical consequence
+Once a company is admitted into the IBC process and a **moratorium** is declared (a legal freeze on most creditor actions and asset transfers while resolution proceedings are underway), the equity itself typically becomes subject to extreme, often near-total value uncertainty — under the IBC's resolution waterfall, secured creditors and financial creditors are paid ahead of equity shareholders, meaning existing equity holders frequently face severe, sometimes complete, value erosion depending on the resolution outcome. A TRA should recognise that once formal admission occurs, ordinary technical analysis (chart patterns, support/resistance, indicators) becomes largely meaningless for the equity specifically, since the stock's value is now overwhelmingly determined by the legal resolution process's outcome, not by trading-driven price discovery.
+
+## 62.3 Resolution plan approval versus liquidation — the two starkly different technical endpoints
+An IBC process resolves in one of two starkly different ways: a **resolution plan** approved by the Committee of Creditors and the NCLT (a new investor or existing promoter takes over the company under a court-approved plan, sometimes preserving some residual equity value, though frequently at a steep haircut or with equity entirely wiped out and reissued to new owners) or **liquidation** (the company's assets are sold off entirely, with equity holders typically receiving nothing given their position at the bottom of the payment waterfall) — a TRA tracking a stock through this process should track which outcome is unfolding via the actual NCLT/Committee of Creditors news flow, since the technical implications for any residual equity value are fundamentally different between the two paths.
+
+## 62.4 Trading suspension and re-listing considerations — a distinct market-access dimension
+Exchanges frequently impose extended trading restrictions or suspend trading entirely on a stock during active IBC proceedings, particularly once a resolution plan involving equity restructuring is being finalised — meaning a TRA covering such a name must track not just the legal proceedings' substance but also the practical, exchange-specific question of whether and when trading access itself will resume, and under what post-resolution capital structure (a materially different share count/ownership structure is common post-resolution) — a genuinely distinct market-access dimension beyond the ASM/GSM surveillance restrictions covered in Part 56, since this reflects the company's fundamental corporate-existence status rather than a trading-pattern-triggered surveillance classification.
+
+## 62.5 Worked example — assessing residual equity risk for a stock entering IBC admission
+*A mid-cap company with a heavily-pledged promoter shareholding (Part 49) and widening credit spreads (Part 48) over preceding months is formally admitted into IBC proceedings, with a moratorium declared. The stock continues trading at a small fraction of its pre-admission price.*
+
+**Model answer.** The prior deteriorating signals (rising promoter pledge, widening credit spreads) were consistent, earlier-stage warning indicators exactly as this handbook's material on those topics describes — but formal IBC admission (Part 62.2) represents a categorically different situation requiring an entirely different analytical framework, not a continuation of the same technical-analysis approach that flagged the earlier warning signs. The stock continuing to trade at a small fraction of its prior price reflects the market's own probabilistic pricing of the resolution-versus-liquidation outcome (Part 62.3) and the severe equity-value uncertainty inherent to the IBC waterfall — a TRA should explicitly communicate to any reader that standard technical analysis is no longer the primary relevant framework for this equity, and that tracking the actual NCLT proceedings, Committee of Creditors decisions, and resolution-plan developments (not chart patterns) is now the substantively relevant research activity, alongside monitoring for any trading-suspension announcements (Part 62.4) that would affect market access entirely regardless of the legal outcome's eventual direction.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1709,5 +1730,8 @@ The dealer-gamma effect is strongest and most tradeable around specific price le
 
 53. **Q: A large-cap stock trades in an unusually tight range for two weeks into monthly expiry, with the range boundaries coinciding with the heaviest-OI strikes, and gamma-exposure data indicates a strongly net-short-gamma regime. Should this compressed range be read as a durable low-volatility characteristic of the stock?**
     A: No (Part 61.5) — the tight, "pinned" range is a mechanical consequence of dealer delta-hedging flows dampening volatility around the heaviest gamma concentration (Part 61.2-61.4), specific to this expiry's OI structure, not a durable feature of the stock. A TRA should anticipate potential volatility expansion once this expiry passes and the current gamma concentration rolls off, an expectation standard chart-pattern analysis of the tight range alone would not surface.
+
+54. **Q: A stock with a heavily-pledged promoter shareholding and widening credit spreads is formally admitted into IBC proceedings with a moratorium declared, and continues trading at a small fraction of its pre-admission price. Should a TRA continue applying the same technical framework that flagged the earlier warning signs?**
+    A: No (Part 62.5) — the prior signals (pledge trend, credit spreads) were earlier-stage warnings, but formal IBC admission (Part 62.2) is a categorically different situation where equity value is now overwhelmingly determined by the legal resolution process, not trading-driven price discovery. A TRA should communicate that standard technical analysis is no longer the primary relevant framework, and that tracking actual NCLT/Committee of Creditors developments (Part 62.3) and any trading-suspension announcements (Part 62.4) is now the substantively relevant activity.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

@@ -899,4 +899,16 @@ important" rating-scale failure). Added matching glossary terms (Market Research
 each (Market Research Q62, TRA Q53). Market Research 143->145pg, TRA 127->129pg. Master: 3,932 ->
 3,936 pages.
 
-**Running total: 3,936 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 62 (IBC/Insolvency Events to
+TRA — a distinct, later-stage legal event category beyond credit spreads/promoter pledging, the
+moratorium's implication that ordinary technical analysis becomes largely meaningless, resolution-
+plan-vs-liquidation as starkly different technical endpoints, trading-suspension/re-listing
+considerations distinct from ASM/GSM, a worked pledge-and-spreads-history-into-IBC-admission
+example) and PART 65 (Usability Testing Methodology for Complex Financial Workflows to Market
+Research — the think-aloud protocol's diagnostic value beyond click observation, moderated-vs-
+unmoderated tradeoffs for high-stakes flows, precise task-success metrics, error-consequence-
+severity as the essential financial-category addition, a worked options-order-screen near-miss
+example). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
+Q63, TRA Q54). Market Research 145->148pg, TRA 129->132pg. Master: 3,936 -> 3,942 pages.
+
+**Running total: 3,942 pages.**
