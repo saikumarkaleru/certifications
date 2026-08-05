@@ -1822,6 +1822,27 @@ Examining actual historical Muhurat-session and immediate-post-Muhurat performan
 
 ---
 
+# PART 75 — FII EQUITY-VS-DEBT FLOW DIVERGENCE AS A RISK-ON/RISK-OFF SIGNAL
+
+## 75.1 A distinct cross-asset-class signal from Part 22's equity-only FII/DII data
+Part 22's FII/DII flow material focuses exclusively on cash-equity flows. **Foreign Portfolio Investors (FPIs)** — the same broad institutional category — also invest substantially in **Indian debt** (government securities and corporate bonds), and comparing the *direction and relative magnitude* of FPI equity flows against FPI debt flows over the same period is a genuinely distinct, cross-asset-class signal a TRA focused only on equity-flow data would miss entirely.
+
+## 75.2 Why equity and debt flows can diverge — and what that divergence typically signals
+FPI equity and debt flows don't always move together, and when they diverge meaningfully, the pattern carries real interpretive content: **simultaneous FPI equity selling alongside FPI debt buying** often reflects a genuine risk-off rotation *within* an investor's continued India allocation (reducing risk-asset exposure while maintaining or increasing exposure to India's relatively higher-yielding, lower-volatility debt instruments) rather than a broad exit from India entirely — a materially different, more nuanced read than equity-flow data alone would suggest, since pure equity outflow data in isolation could be misread as broad India-wide FPI disengagement when it may actually be a within-India risk-asset reallocation.
+
+## 75.3 Distinguishing genuine risk-off rotation from a broad, category-wide exit
+The critical distinguishing check: does the debt-side buying **offset** the equity-side selling in rough proportion (consistent with an intra-India reallocation, Part 75.2's rotation read), or is debt also seeing net outflows alongside equity (consistent with a genuine, broader FPI retreat from India across both asset classes, a more clearly bearish, macro-driven signal for both markets) — a TRA should always check both flow directions together before characterising an equity-outflow period's severity, since the same headline equity-outflow number carries meaningfully different implications depending on what's simultaneously happening in the debt-flow data.
+
+## 75.4 Interest-rate differential and currency considerations layered onto the divergence read
+FPI debt flows specifically are also sensitive to the **interest-rate differential** between India and global rates (US Treasury yields being the most closely-watched comparison) and currency expectations (Part 55's USD/INR material) — a widening India-US rate differential favouring India can independently drive FPI debt inflows regardless of the equity-market risk-on/risk-off picture, meaning a TRA reading equity-debt flow divergence should also factor in whether a rate-differential-driven explanation for the debt-side flow exists, rather than automatically attributing all debt-flow movement to the equity-risk-rotation narrative alone.
+
+## 75.5 Worked example — reading a period of equity outflows alongside debt inflows
+*Over a two-week period, FPI data shows sustained net equity selling alongside simultaneous, roughly-offsetting net debt buying, coinciding with a period of rising global risk aversion (a broader emerging-market equity selloff) but no significant change in the India-US interest-rate differential.*
+
+**Model answer.** The roughly-offsetting equity-outflow/debt-inflow pattern (Part 75.3) is consistent with an intra-India risk-off rotation rather than a broad FPI exit from India — FPIs reducing equity-risk exposure specifically while maintaining their overall India allocation via debt, plausibly a rational response to the broader global risk-aversion backdrop rather than a India-specific negative view. With no significant change in the rate differential (Part 75.4's alternative explanation ruled out), the debt-side buying is more confidently attributable to the risk-rotation narrative rather than a separate, rate-driven flow dynamic. A TRA should communicate this nuanced read explicitly in any research note — the headline equity-outflow number alone would overstate the severity of FPI sentiment toward India specifically, when the fuller, cross-asset-class picture suggests a more measured, risk-off *reallocation* rather than the more genuinely bearish, both-asset-class *retreat* pattern Part 75.3 distinguishes it from.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2021,5 +2042,8 @@ Examining actual historical Muhurat-session and immediate-post-Muhurat performan
 
 66. **Q: A client asks whether a positive Muhurat-trading session close reliably predicts how the market will perform over the coming Samvat year. What's the honestly-calibrated response?**
     A: Per Part 74.5 — there's some historical tendency toward a positive Muhurat-session close itself, plausibly reflecting the specific, sentiment-skewed participant base trading that hour (Part 74.2), but the single-annual-event sample size offers meaningfully weaker statistical evidence than a higher-frequency pattern, and the claim that it reliably predicts the coming year's performance is considerably weaker and less consistent than popular commentary suggests (Part 74.4). The right answer acknowledges the session's genuine cultural/sentiment significance without overstating its predictive reliability.
+
+67. **Q: Over two weeks, FPI data shows sustained net equity selling alongside roughly-offsetting net debt buying, coinciding with a broad global risk-aversion episode but no change in the India-US rate differential. How should a TRA read this, and why is the offsetting debt-buying important?**
+    A: Per Part 75.5 — the roughly-offsetting pattern is consistent with an intra-India risk-off rotation (Part 75.2-75.3) — FPIs reducing equity-risk exposure while maintaining overall India allocation via debt — rather than a broad exit from India. With the rate-differential explanation ruled out (Part 75.4), the debt-side buying is more confidently attributable to the risk-rotation narrative, meaning the headline equity-outflow figure alone would overstate the severity of FPI sentiment toward India specifically.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

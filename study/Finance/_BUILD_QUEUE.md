@@ -1059,4 +1059,17 @@ caching bugs), a worked significant-lift-invalidated-by-SRM example). Added matc
 (Market Research) and one new Q&A each (Market Research Q75, TRA Q66). Market Research 172->174pg,
 TRA 156->158pg. Master: 3,990 -> 3,994 pages.
 
-**Running total: 3,994 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 75 (FII Equity-vs-Debt Flow
+Divergence to TRA — a distinct cross-asset-class signal beyond Part 22's equity-only FII/DII data,
+distinguishing an intra-India risk-off rotation (offsetting equity-out/debt-in) from a genuine
+broad exit (both asset classes outflowing), the interest-rate-differential alternative explanation
+for debt flows, a worked offsetting-flows-during-global-risk-aversion example) and PART 78 (Price
+Elasticity via Natural Experiments to Market Research — distinct from Part 16's stated-preference
+methods, using a competitor's price change as a quasi-experiment for genuine cross-price elasticity,
+the confounding-factors isolation discipline, natural experiments as opportunistic calibration for
+stated-preference research rather than a replacement, a worked competitor-discount-launch sign-up-
+decline example). Added matching glossary terms (Market Research) and one new Q&A each (Market
+Research Q76, TRA Q67). Market Research 174->176pg, TRA 158->160pg. Master: 3,994 -> 3,998 pages —
+just 2 pages from the 4,000-page milestone.
+
+**Running total: 3,998 pages.**
