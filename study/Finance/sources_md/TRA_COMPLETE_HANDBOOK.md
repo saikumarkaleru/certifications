@@ -1019,4 +1019,28 @@ A large block purchase occurring right at a well-established technical support l
 19. **Q: An intraday trader and a positional trader both act on the same breakout. Why does the positional trader use a much wider stop for the "same" trade?**
     A: The two aren't actually taking the "same" trade in any meaningful risk sense (Part 24.5) — the positional trader's holding period spans months, during which normal multi-week corrections within an intact trend are expected and must be tolerated without being stopped out, requiring a stop set on a weekly-chart basis; the intraday trader's stop only needs to survive minutes to hours of price action. Using an intraday-appropriate tight stop on a positional-timeframe thesis would result in being stopped out repeatedly by completely normal noise relative to that longer holding period.
 
+20. **Q: Why does the handbook insist a pruning process (removing names) is as important as building a watchlist in the first place?**
+    A: A watchlist that only grows becomes unmanageable, diluting attention below the level needed for genuine conviction on any single name (Part 25.5) — a setup that fails to trigger within its expected window, or a core-coverage name whose story has genuinely changed, should be rotated out deliberately rather than tracked indefinitely out of habit, keeping the tiered structure (Part 25.2) meaningful rather than degrading into one large, undifferentiated list.
+
+21. **Q: A stock's advance-decline line and new-highs count both fail to confirm a fresh index high. Is this proof the rally will reverse?**
+    A: No — breadth divergence (Part 26.2-26.3) is a caution signal about narrowing participation, not a guaranteed reversal predictor; a disciplined TRA would flag it explicitly and watch whether breadth starts confirming (turning back up alongside the index) or continues diverging over subsequent sessions, treating it as one input requiring follow-through confirmation rather than a standalone sell signal.
+
+22. **Q: Why does crude oil carry meaningfully higher event-gap risk than gold, even though both are commodities covered by the same fundamental drivers in Part 6?**
+    A: Crude's price is unusually sensitive to sudden supply-side news (OPEC+ decisions, geopolitical supply disruptions) that can arrive with no prior technical warning, unlike gold's more gradual, sustained trending character (Part 27.2-27.3) — this means position sizing and stop placement for crude technical trades should account for a higher probability of a stop being skipped entirely by an overnight gap.
+
+23. **Q: In a pairs trade, why is "market-neutral" not the same as "risk-free"?**
+    A: Market-neutrality (Part 28.4) cancels out broad market-wide moves across the long and short legs, isolating the trade's P&L to the *relative* performance between the two instruments — but company-specific news affecting only one leg can permanently break the pair's historical relationship rather than the spread mean-reverting as expected, the single biggest residual risk in pairs trading despite the "market-neutral" framing.
+
+24. **Q: A stock has an overwhelmingly bullish sell-side consensus (all Buy ratings). Does this mean it's a good technical entry right now?**
+    A: Not necessarily (Part 29.4) — consensus sentiment and technical setup quality are different dimensions; a universally-liked stock can still be technically extended and due for a pullback. Consensus data is one confluence input to combine with the TRA's own price/volume/indicator framework, never a replacement for it.
+
+25. **Q: Why should a trader who just closed a losing trade avoid immediately entering a new position, even if a new setup appears to have formed?**
+    A: This is precisely the revenge-trading pattern Part 31.2-31.3 warns against — an urge to "win back" a loss quickly, rather than a genuinely independently-evaluated setup, tends to produce oversized, poorly-planned positions that compound the original loss. A mandatory cooling-off pause, or requiring the next trade to independently clear the full setup checklist, is the standard countermeasure.
+
+26. **Q: A results-day gap is large, but volume is only modestly above average and fades quickly to normal the next day. How should this change your read versus a gap on exceptionally heavy, sustained volume?**
+    A: Per Part 32.4, a large gap on ordinary, quickly-fading volume is more consistent with a smaller subset of fast-moving participants driving the initial reaction, with a higher chance of at least partial reversion once broader participation catches up — a materially weaker basis for treating the gap as a genuine, durable repricing than the same-sized gap on exceptionally heavy, sustained volume would be.
+
+27. **Q: A promoter discloses a share sale via a block deal. Should this automatically be read as a bearish signal?**
+    A: No (Part 33.3) — promoter sales can reflect genuinely negative information, but also entirely benign reasons (personal liquidity needs, diversification, funding an unrelated venture) unrelated to company prospects. A TRA should avoid over-reading a single sale without additional context, such as whether it's accompanied by a stated reason or how it compares to the promoter's total remaining holding.
+
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

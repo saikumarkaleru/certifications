@@ -549,4 +549,16 @@ promoter buying/selling as a distinct closely-watched sub-signal, combining bloc
 technical support levels, a worked institutional-block-at-support confluence example). Market
 Research 80->82pg, TRA 66->68pg. Master: 3,808 -> 3,812 pages.
 
-**Running total: 3,812 pages.**
+**2026-08-05, autonomous wake-cycle: filled Q&A appendix gaps again**: both appendices had again
+fallen behind (TRA 19 questions covering through Part 24 of 33; Market Research 28 questions
+covering through Part 27 of 36). Added 8 more Q&A to TRA (watchlist pruning, breadth divergence
+as caution not proof, crude's event-gap risk vs gold, market-neutral vs risk-free in pairs
+trading, consensus sentiment vs technical entry timing, revenge-trading avoidance, volume-based
+gap-quality read, promoter-sale over-reading caution) and 8 more to Market Research (Tier-2/3
+entry-research mistake, SEM overkill judgment, decision-influence vs hard ROI, CDD reference-call
+vs historical-metric conflict, sustainability willingness-to-pay unreliability, investor-
+perception finding-to-fix translation, influencer campaign root-cause diagnosis, VoC detection-
+vs-diagnosis limits) — both appendices now cover every Part again. Market Research 82->83pg, TRA
+68->69pg. Master: 3,812 -> 3,814 pages.
+
+**Running total: 3,814 pages.**
