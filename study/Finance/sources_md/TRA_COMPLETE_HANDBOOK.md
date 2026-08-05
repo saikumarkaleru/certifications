@@ -918,6 +918,27 @@ A TRA's job includes not just generating calls but maintaining the credibility a
 
 ---
 
+# PART 32 — READING QUARTERLY-RESULTS-DAY PRICE ACTION
+
+## 32.1 Why results day deserves its own dedicated technical treatment
+Part 19's gap-trading framework applies generally to any overnight gap; results day specifically combines an unusually large, scheduled information event with predictable technical patterns worth knowing in their own right — quarterly earnings are the single most common source of large single-day gaps in individual stocks, and a TRA covering individual names needs a specific playbook for this recurring event, not just the general gap-classification tools from Part 19.3.
+
+## 32.2 Pre-results positioning — what the options market often reveals before the number
+Ahead of a scheduled results date, elevated implied volatility (Part 5.5, Part 21) in the stock's near-term options relative to its own historical IV range is a standard, observable signal that the market is pricing a larger-than-usual move — the options market's own **implied expected move** (roughly, the at-the-money straddle price as a % of spot, per Part 5.9's straddle-pricing logic) gives a TRA a quantified, market-derived estimate of how large a move is already priced in, a genuinely useful benchmark for judging whether an actual post-results move is "big" in absolute terms or merely in line with (or even smaller than) what was already expected.
+
+## 32.3 The initial reaction vs the multi-day drift — two distinct phases
+Results-day price action typically has two analytically distinct phases: the **initial reaction** (the gap itself, largely reflecting the market's fast digestion of the headline numbers against expectations) and a **subsequent multi-day drift** in the same direction as the initial reaction, a well-documented pattern connected to the post-earnings-announcement-drift anomaly discussed in the Equity & Capital Markets market-efficiency material — the market's full digestion of a results surprise, including its second-order implications (margin trajectory, guidance revisions), often continues playing out over subsequent sessions rather than being fully complete in the first day's gap alone, a pattern with real, if modest and cost-sensitive-to-capture, historical tendency.
+
+## 32.4 Volume and the "real" move — distinguishing genuine repricing from a one-day overreaction
+A results-day gap on exceptionally heavy volume, and especially on volume that remains elevated for several sessions after (rather than reverting immediately to normal), tends to reflect genuine, broad-based repricing by many participants digesting new information — consistent with the delivery-percentage signal from Part 22.4 applied specifically to a results-driven move. A large gap on comparatively ordinary volume is more consistent with a smaller subset of fast-moving participants driving the initial reaction, with a higher chance of at least partial reversion once broader participation catches up — a genuine, checkable distinction between "the market has spoken" and "an early, possibly overdone reaction."
+
+## 32.5 Worked example — trading (or not trading) a results gap
+*A stock gaps up 8% on results, well above its options-implied expected move of 5% (Part 32.2), on volume 4x its 20-day average, with volume remaining roughly 2x average for the following two sessions as the stock continues drifting higher.*
+
+**Model answer.** Multiple confirming signals here: the actual move (8%) exceeding the options-implied expected move (5%) suggests a genuine surprise beyond what was already priced in, not just an in-line result; the exceptionally heavy volume on the gap day itself, sustained at elevated levels for two further sessions, is consistent with Part 32.4's "genuine repricing" pattern rather than a thin, fast-reversing overreaction; and the continued multi-day drift in the same direction is consistent with the Part 32.3 post-results-drift tendency. A TRA's read: this combination favours treating the gap as a **breakaway** move (Part 19.3's gap-type framework) worth respecting rather than fading, with a standard swing-timeframe entry on a pullback toward the gap level (Part 24.3's playbook) rather than chasing the initial spike, and a stop below the gap-day's low (a level that, if broken, would specifically invalidate the "genuine repricing" read this whole analysis rests on).
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**

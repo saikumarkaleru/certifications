@@ -529,4 +529,14 @@ bar chart, visually showing the gap opening at the link-click stage) embedded in
 34.5. Page counts steady (content verified via file-size growth). Master: 3,804 pages (unchanged
 this round, verified via rebuild).
 
-**Running total: 3,804 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 35 (Voice of Customer (VoC)
+Programs to Market Research — continuous listening distinct from project-based studies,
+transactional surveys/support-ticket mining/review mining as the three core VoC sources, closing
+the loop as the defining operational requirement, a worked VoC-detects-usability-study-diagnoses
+triangulation example) and PART 32 (Reading Quarterly-Results-Day Price Action to TRA —
+options-implied expected move as a quantified benchmark, initial reaction vs multi-day drift as
+two distinct phases connecting to PEAD, volume as the genuine-repricing-vs-overreaction signal,
+a fully worked multi-signal results-gap trade decision). Market Research 78->80pg, TRA 64->66pg.
+Master: 3,804 -> 3,808 pages.
+
+**Running total: 3,808 pages.**
