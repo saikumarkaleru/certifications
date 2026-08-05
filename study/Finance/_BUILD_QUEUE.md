@@ -800,4 +800,16 @@ pilot segmented-harm diagnostic). Added matching glossary terms (Market Research
 each (Market Research Q54, TRA Q45). Market Research 126->128pg, TRA 110->112pg. Master: 3,898 ->
 3,902 pages.
 
-**Running total: 3,902 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 54 (Promoter/Insider Buying,
+Deepened to TRA — deepens Part 33.3's brief mention into the SAST regulatory framework: trading
+window closures explaining transaction timing, structured trading plans vs discretionary open-
+market purchases as a signal-strength distinction, disclosure thresholds and cumulative-tracking
+discipline, a worked post-results discretionary-purchase timing-vs-structure example) and PART 57
+(Hiring-Signal & Job-Posting Analysis, Deepened to Market Research — deepens Part 3's one-line CI
+checklist item into a systematic methodology: volume-trend limitations distinguishing expansion
+from replacement hiring, functional/seniority posting mix as the more diagnostic layer, LinkedIn
+headcount-by-function as a confirming lagging signal, a worked market-entry hiring-pattern
+diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
+Q55, TRA Q46). Market Research 128->130pg, TRA 112->114pg. Master: 3,902 -> 3,906 pages.
+
+**Running total: 3,906 pages.**

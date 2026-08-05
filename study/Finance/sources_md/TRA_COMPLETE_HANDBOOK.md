@@ -1381,6 +1381,27 @@ On the actual **effective date** of a reconstitution (when index funds must comp
 
 ---
 
+# PART 54 — PROMOTER/INSIDER BUYING, DEEPENED: THE SAST FRAMEWORK & TRADING WINDOWS
+
+## 54.1 From a brief mention to the actual regulatory mechanics behind the signal
+Part 33.3 flagged promoter buying via block deals as a closely-watched bullish sub-signal in a couple of sentences. This Part deepens that into the actual regulatory framework governing how, and specifically when, insiders (promoters, designated persons, and their immediate relatives) are legally permitted to trade in their own company's shares — mechanics a TRA should understand to correctly interpret the *timing* of a disclosed insider transaction, not just its direction.
+
+## 54.2 Trading window closures — why insider trades cluster around specific calendar periods
+Listed companies mandate a **trading window closure** for designated persons and insiders ahead of the disclosure of unpublished price-sensitive information (UPSI) — most commonly, a defined period before quarterly results are announced, during which insiders are prohibited from trading in the company's securities at all. This means legitimate insider transactions mechanically cluster in the **open window periods** between a results announcement and the next window closure — a TRA seeing a disclosed insider transaction should recognise this as a partial explanation for *why now*, distinct from reading timing alone as a signal about the insider's information advantage, since the window mechanics constrain *when* a trade can legally happen regardless of the insider's underlying view.
+
+## 54.3 Structured trading plans versus opportunistic open-market purchases — a signal-strength distinction
+SEBI's insider-trading regulations allow designated persons to pre-commit to a **structured trading plan** (a pre-disclosed schedule of trades set in advance, insulating the insider from later allegations of trading on subsequently-arising UPSI) as an alternative to an ad-hoc open-market purchase within an open trading window — a TRA should recognise these as carrying meaningfully different signal strength: a pre-committed structured plan executed on schedule reveals comparatively little about the insider's *current* view (it was decided in advance, potentially before recent developments), while a discretionary, opportunistic open-market purchase made freshly within an open window is a stronger real-time signal of the insider's present conviction, since it reflects an active decision made with current information in hand.
+
+## 54.4 Disclosure thresholds and cumulative tracking — why a single small purchase can understate the real signal
+SEBI's disclosure regulations set specific **thresholds** (a minimum transaction value or a minimum change in shareholding percentage) below which individual insider trades don't require immediate public disclosure, though cumulative transactions crossing the threshold over a rolling period do trigger disclosure — meaning a TRA should track **cumulative insider buying over successive open windows**, not just isolated individual disclosed transactions, since a pattern of smaller, below-immediate-disclosure-threshold purchases building into a disclosed cumulative position can represent a more sustained, higher-conviction accumulation than any single disclosed transaction would suggest on its own — the same trend-over-single-data-point discipline this handbook applies to promoter pledge data (Part 49.3) and securities-lending data (Part 51.2).
+
+## 54.5 Worked example — reading an insider purchase's timing and structure together
+*Shortly after a company's quarterly results are announced (the trading window has just reopened), a designated senior executive discloses an open-market purchase of company shares — not part of any previously-disclosed structured trading plan — sized meaningfully relative to their existing holding, following results that beat market expectations.*
+
+**Model answer.** The purchase timing (immediately following the window's reopening after results, Part 54.2) is expected and mechanically explainable rather than itself unusual — insiders are legally barred from trading during the preceding closed window regardless of intent, so the clustering around this period doesn't by itself indicate anything beyond normal window mechanics. What is more informative is the **structure**: this is a discretionary open-market purchase rather than a pre-committed structured trading plan (Part 54.3's stronger-signal distinction), meaning it reflects an active, current decision made with the just-announced results already in hand — combined with the purchase following results that beat expectations, this is a reasonably strong, real-time confirming signal of insider conviction in the company's near-term trajectory, meaningfully stronger than the same-sized purchase would be if it were revealed to be executing a structured plan set months earlier. A TRA should note this distinction explicitly in a research note rather than treating "insider bought shares" as a single undifferentiated signal regardless of how the purchase was structured.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1517,5 +1538,8 @@ On the actual **effective date** of a reconstitution (when index funds must comp
 
 45. **Q: A stock widely expected to be added to a benchmark index at the next reconstitution has already rallied 15% over six weeks ahead of the official announcement. Should a TRA expect further meaningful upside once the addition is confirmed?**
     A: Not automatically (Part 53.5) — the pre-announcement rally is consistent with anticipatory positioning ahead of the expected mechanical index-fund buying (Part 53.3), meaning a meaningful portion of the eventual inclusion-driven demand may already be priced in. A late entrant should weigh the "sell the news" fade risk explicitly, since the effective-date mechanical buying (Part 53.4) may already be substantially anticipated — the more attractive risk/reward for this kind of trade is typically earlier, before the anticipatory rally has already run.
+
+46. **Q: A senior executive discloses an open-market share purchase immediately after the trading window reopens following strong quarterly results, and the purchase is not part of any previously-disclosed structured trading plan. What makes the structure of this purchase more informative than its timing alone?**
+    A: Per Part 54.5 — the timing is mechanically expected (Part 54.2), since insiders are barred from trading during the preceding closed window regardless of intent, so clustering right after reopening isn't itself unusual. The discretionary, non-structured-plan nature of the purchase (Part 54.3) is what makes it informative — it reflects an active decision made with the just-announced results already in hand, a meaningfully stronger real-time conviction signal than the same purchase would be if executing a pre-committed plan set months earlier.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
