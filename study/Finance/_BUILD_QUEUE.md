@@ -691,4 +691,15 @@ case, text-mining themes beyond the star rating, a worked pre-launch employee-se
 diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
 Q45, TRA Q36). Market Research 106->108pg, TRA 90->92pg. Master: 3,858 -> 3,862 pages.
 
-**Running total: 3,862 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 45 (Volatility Skew to TRA —
+distinct from Part 21.5's term structure, the negative-skew baseline shape for equity indices,
+skew steepness as a direction-specific fear gauge distinct from VIX's level, skew behaviour around
+events and post-event normalisation, a worked RBI-decision put-skew-widening example) and PART 48
+(Regulatory & Policy-Change Impact Perception Research to Market Research — a rule change rather
+than a product/market event as the research trigger, stakeholder-impact mapping across differently-
+affected groups, formal consultation/comment-period research feeding regulatory submissions, post-
+implementation impact tracking, a worked SEBI margin-requirement-increase impact-research example).
+Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q46, TRA
+Q37). Market Research 108->110pg, TRA 92->94pg. Master: 3,862 -> 3,866 pages.
+
+**Running total: 3,866 pages.**

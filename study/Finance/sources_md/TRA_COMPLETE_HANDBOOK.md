@@ -1192,6 +1192,27 @@ A **Tenkan-sen crossing above the Kijun-sen** ("golden cross" in Ichimoku terms,
 
 ---
 
+# PART 45 — VOLATILITY SKEW: READING STRIKE-LEVEL IV DIVERGENCE
+
+## 45.1 Distinguishing skew from term structure — two different "shapes" of implied volatility
+Part 21.5 covered the **term structure** of volatility (how implied volatility differs across *expiries* for the same strike). **Skew** (or the "smile") is the other dimension entirely: how implied volatility differs across *strikes* for the same expiry — a genuinely separate axis of information from term structure, and one this handbook has only flagged in passing (Part 5.5's one-line mention) rather than shown how to actually read for a directional or sentiment signal.
+
+## 45.2 Why equity index skew is normally "negative" — and what that default shape means
+For equity indices like Nifty, implied volatility is normally **higher for out-of-the-money puts than for out-of-the-money calls** at the same expiry — a pattern called **negative skew** (or a "volatility smirk" rather than a symmetric smile), reflecting structurally persistent demand for downside crash protection (institutional hedgers systematically buying puts) relative to comparatively muted demand for pure upside call speculation. This negative-skew shape is the *normal*, baseline condition for equity indices specifically — a TRA should know this default shape well enough to recognise when skew is behaving abnormally, which is where the actual tradeable signal lives.
+
+## 45.3 Skew steepness as a fear/complacency gauge, distinct from VIX's level
+While India VIX (Part 21.2) measures the *overall level* of expected volatility, **skew steepness** — how much more expensive OTM puts are relative to OTM calls, or relative to at-the-money options — measures something distinct: the market's relative willingness to pay specifically for *downside* protection versus its overall volatility expectation. A steepening skew (puts getting disproportionately more expensive even while overall VIX is flat or only modestly higher) signals rising crash-hedging demand specifically, a more targeted fear signal than a rising VIX level alone, which doesn't distinguish whether the elevated volatility expectation is symmetric or skewed toward one direction.
+
+## 45.4 Skew changes around events — and the post-event skew-crush trade concept
+Skew steepens further ahead of known event risk (Part 32's results-day framework, Part 34.3's board-meeting-intimation windows) as hedgers pre-position for a potential adverse surprise, and — similar to the broader IV-crush concept from Part 5.9 — typically **normalises (flattens back toward its baseline shape) once the event passes** without the feared adverse outcome, giving sophisticated options traders a distinct skew-specific trade concept (positioning to profit from skew normalisation, e.g. via risk-reversal structures) separate from the simpler at-the-money IV-crush trade Part 5.9 already covers.
+
+## 45.5 Worked example — reading an unusually steep put skew ahead of a known event
+*Ahead of a closely-watched RBI policy decision, Nifty's put skew (OTM put IV minus OTM call IV, same expiry) has widened notably more than its typical pre-event pattern for RBI decisions historically, while overall India VIX has only risen modestly.*
+
+**Model answer.** The disproportionate widening in put skew relative to only a modest overall VIX increase (Part 45.3's distinction) indicates the market is specifically pricing elevated *downside* risk around this RBI decision — more targeted hedging demand than a generic "volatility is up" read would suggest — worth investigating what specific dovish/hawkish surprise scenario is driving the asymmetric positioning (a rate-hike surprise being the more commonly hedged tail risk in this context). Given skew's historical tendency to normalise post-event once the specific risk resolves (Part 45.4), a TRA should flag this as both a sentiment signal (elevated, direction-specific institutional caution) worth incorporating into the broader event-risk research note, and a distinct, separate trading consideration from the underlying's own directional chart-based signal, since skew and price direction can and do move somewhat independently around event risk.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1301,5 +1322,8 @@ A **Tenkan-sen crossing above the Kijun-sen** ("golden cross" in Ichimoku terms,
 
 36. **Q: Price trades above a thick, bullish-coloured Ichimoku cloud, with a Tenkan/Kijun bullish cross occurring above the cloud, and the Chikou Span confirming above historical price. Why is this read as higher-conviction than any single component alone?**
     A: Per Part 44.5 — this is a full alignment across all five independently-calculated Ichimoku components (Part 44.2): cloud position and thickness (Part 44.3), a Tenkan/Kijun cross occurring above the cloud rather than inside or below it (Part 44.4's higher-quality-cross condition), and Chikou Span confirmation. Requiring multiple independent components to agree simultaneously is a materially stronger basis for a bullish call than any single line flipping on one data point, and a TRA citing "Ichimoku bullish" should be able to name which specific components support that call.
+
+37. **Q: Ahead of an RBI policy decision, Nifty's put skew widens notably more than its typical pre-event pattern, while overall India VIX rises only modestly. What does this tell you beyond what VIX alone shows?**
+    A: Per Part 45.5 — VIX measures the overall level of expected volatility, while skew steepness (Part 45.3) measures the market's relative willingness to pay specifically for downside protection. The disproportionate put-skew widening with only a modest VIX rise indicates targeted, direction-specific hedging demand around this event — a more granular fear signal than VIX's level alone, worth flagging as both a sentiment input and a distinct trading consideration separate from the underlying's own chart-based signal, given skew's tendency to normalise post-event (Part 45.4).
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
