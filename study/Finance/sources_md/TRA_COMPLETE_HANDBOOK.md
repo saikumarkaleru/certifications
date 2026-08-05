@@ -1591,6 +1591,27 @@ Preferential allotment to promoters or specific investors typically carries a **
 
 ---
 
+# PART 64 — THE ZERO-DAYS-TO-EXPIRY (0DTE) TRADING PHENOMENON
+
+## 64.1 A distinct microstructure regime from ordinary options trading covered elsewhere
+This handbook's options-trading material (Part 5, Part 30, Part 60) largely assumes options with meaningful remaining time value. **Zero-Days-to-Expiry (0DTE)** trading — index options specifically on their expiry day itself — is a distinct, extreme case: with weekly index expiries (Nifty and Bank Nifty both have weekly expiry cycles), a huge and growing share of trading volume concentrates specifically in options with hours, not days, of remaining life, creating a genuinely different risk/behaviour regime a TRA covering derivatives-heavy retail flow should recognise as distinct from ordinary options analysis.
+
+## 64.2 Extreme theta decay and gamma explosion — why 0DTE options behave so differently
+An option's **theta** (time-value decay, Part 5.6) accelerates dramatically in an option's final hours, and its **gamma** (Part 5.4, the rate of change of delta) similarly explodes as expiry approaches for at-the-money strikes — meaning a 0DTE option can swing from having a delta near zero to a delta near 1 (or -1) within a very short price move and time window, an extraordinarily leveraged, fast-moving instrument compared to an option with weeks of remaining life. This combination (rapidly decaying value if the underlying doesn't move, combined with explosive sensitivity if it does) is precisely what makes 0DTE options simultaneously extremely risky and extremely popular with retail traders seeking maximum leverage for minimum capital outlay.
+
+## 64.3 The dealer-gamma amplification effect, concentrated into hours rather than days
+Extending Part 61's dealer-gamma-positioning framework specifically to the 0DTE context: because 0DTE options carry such extreme gamma, the dealer-hedging flows this handbook covered as a multi-day or expiry-week phenomenon (Part 60's physical-settlement unwind, Part 61's gamma-concentration dynamics) become compressed into the **final hours of a single trading session** — meaning 0DTE-heavy expiry days can show unusually sharp, fast intraday reversals or accelerations specifically in the last hour or two of trading, as dealer hedging flows responding to rapidly-changing gamma exposure concentrate into a much shorter window than the multi-day dynamics this handbook covered elsewhere.
+
+## 64.4 Why 0DTE volume has changed the character of expiry-day index price action generally
+The sheer growth in 0DTE volume specifically (a large and often majority share of a weekly expiry day's total options volume) means expiry-day index price action increasingly reflects this specific microstructure regime — a TRA should recognise that late-session volatility on a weekly expiry day is, at least in part, a structural feature of the current market's 0DTE-heavy volume composition, rather than assuming every expiry-day swing reflects a genuine shift in fundamental or broader technical sentiment, extending the same "distinguish mechanical/structural price action from genuinely informative moves" discipline this handbook applies throughout (Part 59.3's ex-distribution caution, Part 60.5's expiry-week caution) to this specific, high-volume modern market feature.
+
+## 64.5 Worked example — reading a sharp late-session reversal on a weekly expiry day
+*Nifty trades in a modest, orderly range for most of a weekly-expiry Thursday session, then experiences a sharp, fast move in the final 45 minutes of trading with no identifiable news catalyst, followed by the move partially reversing into the close.*
+
+**Model answer.** The concentration of the sharp move specifically in the final 45 minutes of a weekly expiry session, with no identifiable news catalyst, is consistent with the 0DTE-driven, compressed dealer-hedging dynamic (Part 64.3) rather than a genuine, fundamentals-or-broader-technically-driven directional shift — the explosive gamma sensitivity of the day's expiring at-the-money options (Part 64.2) can produce exactly this kind of fast, catalyst-free late-session move as hedging flows respond to rapidly-changing exposure in the day's final trading window. The partial reversal into the close further supports this mechanical reading, consistent with a hedging-driven overshoot rather than a durable directional repricing. A TRA should flag this specific pattern as a structural feature of modern 0DTE-heavy expiry-day trading (Part 64.4) in any research commentary, and should specifically avoid extrapolating a late-session expiry-day move into a directional call for the following session without independent confirming evidence, given how mechanically-driven this specific pattern is understood to often be.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1757,5 +1778,8 @@ Preferential allotment to promoters or specific investors typically carries a **
 
 55. **Q: A company announces a QIP priced at a notably steeper discount to its calculated floor price than typical for comparable recent sector QIPs. The stock falls sharply, then stabilises in a new, lower range. How should a TRA read a subsequent rally approaching the QIP price?**
     A: With added caution (Part 63.5) — the steep discount (Part 63.3) plausibly signals the company needed a larger sweetener to secure sufficient institutional demand. The QIP buyers represent a specific, identifiable cohort with a known cost basis near the placement price and a real incentive to sell on any rally back toward it — this overhang dynamic makes a rally toward the QIP price a weaker basis for a bullish continuation call than an equivalent approach to an ordinary chart-based resistance level.
+
+56. **Q: Nifty trades in an orderly range for most of a weekly-expiry Thursday, then sees a sharp, fast move with no identifiable news catalyst in the final 45 minutes, partially reversing into the close. How should a TRA read this?**
+    A: Per Part 64.5 — this pattern is consistent with the 0DTE-driven, compressed dealer-hedging dynamic (Part 64.2-64.3) rather than a genuine directional shift, given the explosive gamma sensitivity of the day's expiring at-the-money options concentrating hedging flows into the session's final window. The partial reversal into the close further supports a mechanical, hedging-driven-overshoot reading, and a TRA should avoid extrapolating this move into a directional call for the following session without independent confirming evidence.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

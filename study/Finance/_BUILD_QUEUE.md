@@ -923,4 +923,16 @@ comparison example). Added matching glossary terms (Market Research) and one new
 Research Q64, TRA Q55). Market Research 148->150pg (milestone: crossed 150pg), TRA 132->134pg.
 Master: 3,942 -> 3,946 pages.
 
-**Running total: 3,946 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 64 (The Zero-Days-to-Expiry
+(0DTE) Trading Phenomenon to TRA — a distinct microstructure regime from ordinary options analysis
+elsewhere in this handbook, extreme theta decay/gamma explosion in an option's final hours, dealer-
+gamma hedging flows (Part 61) compressed into hours rather than days, why 0DTE volume has changed
+the character of expiry-day index price action generally, a worked catalyst-free late-session
+reversal-and-partial-reversal example) and PART 67 (Syndicated Research Licensing & Multi-Client
+Study Economics to Market Research — the distinct commissioning model from custom research covered
+throughout this handbook, cost-sharing economics, the no-questionnaire-control limitation, add-on/
+omnibus modules as a middle path, a worked syndicated-vs-custom-study decision example). Added
+matching glossary terms (Market Research) and one new Q&A each (Market Research Q65, TRA Q56).
+Market Research 150->152pg, TRA 134->136pg. Master: 3,946 -> 3,950 pages.
+
+**Running total: 3,950 pages.**
