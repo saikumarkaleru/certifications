@@ -2074,6 +2074,27 @@ Once both resulting entities list and trade independently on the regular market,
 
 ---
 
+# PART 87 — DELISTING MECHANICS — REVERSE BOOK-BUILDING AND THE EXIT-PRICE READ
+
+## 87.1 A distinct exit event from every corporate action covered so far
+Parts 84-86 covered corporate actions (rights, buybacks, demergers) that a shareholder can choose to participate in or not, while the stock continues trading normally on the exchange afterward. A **voluntary delisting** is structurally different: the promoter/acquirer is seeking to take the company **off the exchange entirely**, and the mechanism India uses to discover the delisting exit price — **reverse book-building** — is itself a distinct price-discovery process a TRA should understand independently of ordinary market trading.
+
+## 87.2 How reverse book-building actually discovers the exit price
+Unlike a normal IPO/FPO book-build (where the issuer sets a price band and investors bid within it to buy), a delisting reverse book-build runs the process in the opposite direction: the **promoter/acquirer** is the buyer, and public shareholders submit sell bids at prices of their own choosing (at or above a regulator-prescribed floor price) — the discovered exit price is the price at which the acquirer's total tendered quantity would cross the minimum required public shareholding reduction (i.e., the price at which enough shares are tendered to make the delisting successful), not simply the floor price or a fixed premium.
+
+## 87.3 Why the promoter's acceptance decision is a genuine, non-mechanical choice
+Critically, the promoter/acquirer is not obligated to accept the reverse-book-build's discovered price — if the price discovered through the bidding process is higher than the promoter is willing to pay, the promoter can **reject the discovered price and the delisting attempt fails**, leaving the stock listed and trading normally. This makes the promoter's acceptance decision itself a genuine, non-mechanical event a TRA must watch for separately from the bidding process itself — the discovered price alone doesn't tell a TRA whether the delisting will actually proceed.
+
+## 87.4 Reading the stock's trading price during the bidding window as a market-implied probability
+During the reverse-book-build bidding window, the stock's own regular-market trading price (distinct from the bids being submitted in the delisting process itself) reflects the broader market's aggregate view of the probability-weighted outcome — trading meaningfully below the likely discovered exit price suggests the market assigns real probability to the delisting failing (the promoter rejecting the price, or an insufficient quantity being tendered), while trading close to or above the likely exit price suggests the market has high confidence the delisting will succeed at a favourable price. A TRA should read this trading-price gap as a genuine, continuously-updating market-implied probability, not assume delisting success is a foregone conclusion once the process has been formally announced.
+
+## 87.5 Worked example — reading a stock's price action during an active reverse book-build
+*A promoter announces a voluntary delisting with a floor price of ₹450. During the reverse-book-build bidding window, the stock trades in a range of ₹410-₹430 on the regular market — consistently below the floor price itself.*
+
+**Model answer.** Per Part 87.4, a stock trading persistently *below* the regulator-prescribed floor price during an active reverse-book-build window is a meaningful signal the market assigns real probability to the delisting failing entirely — either because public shareholders are expected to bid well above a level the promoter will accept (Part 87.3's rejection risk), or because insufficient quantity is expected to be tendered to cross the required threshold (Part 87.2). This is a distinct, less mechanical situation than a stock trading confidently at or above the floor price, which would instead suggest the market expects a straightforward, successful delisting near the floor. A TRA covering this name should explicitly flag the below-floor trading pattern as evidence of genuine market skepticism about the delisting's completion, rather than treating the floor price as a reliable proxy for where the stock is likely headed.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2309,5 +2330,8 @@ Once both resulting entities list and trade independently on the regular market,
 
 78. **Q: A conglomerate demerges its fast-growing digital-services division from its legacy manufacturing business at a 1:1 ratio. During when-issued trading, the digital-services leg prices at roughly 65% of the combined pre-demerger value and manufacturing at 35%. How should a TRA use this, and how should each entity be analysed once formally listed?**
     A: Per Part 86.5 — since no clean formula exists to split the combined value between the two resulting entities (unlike a bonus/rights adjustment, Part 34.4), the when-issued market's 65/35 split (Part 86.2-86.3) is the most credible available evidence of how the market is valuing each business's standalone prospects, and should be treated as the primary read, updating as WI volume and conviction build over the window. Once both entities formally list, each requires an entirely fresh technical setup (Part 86.4) — the combined entity's pre-demerger chart history and support/resistance levels do not carry over to either resulting stock, since each is now a distinct entity building its own price-discovery process from scratch.
+
+79. **Q: A promoter announces a voluntary delisting with a floor price of ₹450. During the reverse-book-build bidding window, the stock consistently trades in a range of ₹410-₹430 on the regular market — below the floor price itself. How should a TRA read this?**
+    A: Per Part 87.5 — a stock trading persistently below the regulator-prescribed floor price during an active reverse-book-build is a meaningful signal the market assigns real probability to the delisting failing, either because public shareholders are expected to bid above a level the promoter will accept (Part 87.3's rejection risk) or because insufficient quantity is expected to be tendered to cross the required threshold (Part 87.2). This is distinct from a stock trading confidently at or above the floor price, which would instead suggest the market expects a straightforward, successful delisting — the below-floor pattern should be explicitly flagged as evidence of genuine market skepticism about completion, not treated as a temporary anomaly relative to a floor price that will reliably converge.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

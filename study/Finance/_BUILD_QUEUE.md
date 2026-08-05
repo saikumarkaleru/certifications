@@ -1225,4 +1225,20 @@ assumptions on a document-upload step). Added one new Q&A each (TRA Q78, Market 
 matching glossary terms (Market Research). TRA deepening handbook 182->184pg, Market Research
 182->184pg. Master: 4,026 -> 4,030 pages.
 
-**Running total: 4,030 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 87 (Delisting Mechanics — Reverse
+Book-Building and the Exit-Price Read to TRA — a distinct exit event from every corporate action
+covered so far, how reverse book-building discovers the exit price in the opposite direction from a
+normal IPO/FPO book-build, why the promoter's acceptance decision is a genuine non-mechanical choice
+that can fail the delisting entirely, reading the stock's regular-market trading price during the
+bidding window as a market-implied success probability, a worked example reading a stock trading
+persistently below the floor price during an active reverse book-build) and PART 90 (AI/Synthetic
+Respondents — Validity Risks and Appropriate Use to Market Research — a distinct methodological
+question from every human-sample technique covered so far, what synthetic respondents can plausibly
+approximate versus what they structurally cannot surface, the training-data-circularity risk for
+fast-moving categories, appropriate use narrowed to pre-fielding screening never as a substitute for
+real fieldwork on a real decision, a worked example evaluating a vendor's proposal to replace a real
+concept test with a synthetic panel for a launch decision). Added one new Q&A each (TRA Q79, Market
+Research Q88) and matching glossary terms (Market Research). TRA deepening handbook 184->187pg,
+Market Research 184->187pg. Master: 4,030 -> 4,036 pages.
+
+**Running total: 4,036 pages.**
