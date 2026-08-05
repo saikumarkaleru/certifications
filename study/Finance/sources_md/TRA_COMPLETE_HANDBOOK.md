@@ -1969,6 +1969,27 @@ A TRA integrating this valuation-regime layer into technical analysis should tre
 
 ---
 
+# PART 82 — BULK-DEAL CATEGORY-CODE CLASSIFICATION FOR SHARPER POSITIONING READS
+
+## 82.1 A distinct granularity layer beneath Part 33's bulk/block deal framework
+Part 33 covered bulk/block deal disclosures generally — quantity, price, and buyer/seller name where identifiable. This Part deepens a specific, often-underused granularity layer within the same disclosure: exchanges frequently classify or make identifiable the **category** of the buying and selling counterparties (FII/FPI, DII/mutual fund, HNI/individual, retail) within a bulk-deal disclosure, not just the specific named entity — giving a TRA a sharper positioning read than treating every bulk deal as an undifferentiated single data point regardless of who's actually on each side.
+
+## 82.2 Why category composition changes the interpretation of an identical-looking bulk deal
+Two bulk deals of identical size and price can carry meaningfully different interpretive weight depending on category composition: an **FII-to-DII** bulk deal (one institutional category selling to another) suggests a rotation in institutional ownership composition without necessarily reflecting a broader change in aggregate institutional conviction about the stock, while an **FII-to-retail/HNI** bulk deal (an institution distributing a large block into individual-investor hands) can carry a different signal — institutions reducing exposure into individual-investor demand, worth reading alongside this handbook's broader institutional-positioning material (Part 22, Part 51) as a potentially more informative distribution pattern than an intra-institutional rotation would represent.
+
+## 82.3 Tracking category-composition trend across successive bulk deals — not just a single transaction
+As with every positioning signal this handbook covers, a **single** bulk deal's category composition is less informative than the **trend** across successive bulk-deal disclosures for the same stock over a period — a stock showing a consistent pattern of institutional categories selling into retail/HNI categories across multiple successive bulk deals represents a more confidently-read distribution pattern than any single transaction alone, extending the same trend-over-snapshot discipline this handbook applies to promoter pledge data (Part 49.3) and shareholding-pattern data (Part 66.2) to this specific disclosure type.
+
+## 82.4 The limitation — category classification isn't always cleanly disclosed or complete
+A genuine practical limitation worth flagging: category-level classification within bulk-deal data isn't universally or consistently disclosed with the same rigor as the underlying quantity/price data itself, and a meaningful share of bulk-deal counterparties may not be cleanly classifiable into a single category from public disclosure alone (a named individual investor might be a proprietary trading entity, a family office, or a genuine retail investor, not always distinguishable from the disclosure alone) — a TRA should treat category-composition reads as directionally informative where classification is reasonably clear, while remaining appropriately cautious about over-interpreting ambiguous or incompletely-classified counterparty data.
+
+## 82.5 Worked example — reading a pattern of FII-to-retail bulk deals over successive weeks
+*Over three consecutive weeks, a mid-cap stock shows a series of bulk deals where the identifiable seller category is consistently FII/FPI and the buyer category is consistently classified as HNI/individual investors, with no single transaction being unusually large in isolation but the pattern being consistent across all three weeks.*
+
+**Model answer.** The consistent, repeated FII-selling/HNI-buying pattern across three successive weeks (Part 82.3's trend discipline) is a more confidently-read distribution signal than any single week's transaction would represent in isolation — foreign institutional investors appear to be distributing a position into individual-investor demand over a sustained period, a genuine, if gradual, ownership-composition shift worth flagging explicitly in a research note. Given the category-classification limitation (Part 82.4), a TRA should note this reasonably clear FII-vs-HNI classification specifically (rather than a more ambiguous, harder-to-classify counterparty scenario) as lending this particular read more confidence than a comparable pattern involving less clearly classifiable counterparties would warrant — the correct synthesis treats this as a genuine, moderately-confident institutional-distribution signal worth monitoring for continuation or reversal in subsequent weeks' bulk-deal disclosures, rather than either dismissing the pattern as noise or over-stating its certainty beyond what the category-classification data actually supports.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2189,5 +2210,8 @@ A TRA integrating this valuation-regime layer into technical analysis should tre
 
 73. **Q: A sector shows a clean, volume-confirmed technical breakout above multi-month resistance, but its aggregate forward P/E is near the top decile of its own 10-year historical range after a year of significant re-rating. Should the breakout be treated as an unqualified bullish signal?**
     A: No (Part 81.5) — the breakout is technically well-formed and shouldn't be dismissed, but the valuation-regime context (Part 81.3-81.4) adds a distinct risk-calibration layer: with limited re-rating room remaining, further appreciation depends more heavily on continued earnings delivery than for a sector still trading within its normal historical range. Both the technical signal and its valuation-regime context should be communicated together, since the breakout carries a different risk profile than the identical pattern would in a sector with more valuation room left.
+
+74. **Q: A mid-cap stock shows a series of bulk deals over three consecutive weeks where the identifiable seller category is consistently FII/FPI and the buyer category is consistently HNI/individual, with no single transaction unusually large in isolation. How should a TRA read this pattern?**
+    A: Per Part 82.5 — the consistent, repeated pattern across three weeks (Part 82.3) is a more confidently-read distribution signal than any single transaction alone, indicating foreign institutional investors distributing a position into individual-investor demand over a sustained period. Given the reasonably clear FII-vs-HNI classification here (Part 82.4's caution about ambiguous counterparty data), this should be flagged as a genuine, moderately-confident institutional-distribution signal worth monitoring for continuation, not dismissed as noise or over-stated beyond what the classification actually supports.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

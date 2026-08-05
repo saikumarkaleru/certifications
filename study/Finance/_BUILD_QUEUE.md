@@ -1149,4 +1149,17 @@ launch mystery-shop-design example). Added matching glossary terms (Market Resea
 Q&A each (Market Research Q82, TRA Q73). Market Research 187->189pg, TRA 171->173pg. Master:
 4,020 -> 4,024 pages.
 
-**Running total: 4,024 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 82 (Bulk-Deal Category-Code
+Classification to TRA — a granularity layer beneath Part 33's general bulk/block deal framework,
+why FII-to-DII vs FII-to-retail/HNI composition changes interpretation of an identical-looking
+transaction, tracking category-composition trend across successive deals rather than a single
+transaction, the classification-completeness limitation, a worked three-consecutive-weeks FII-
+selling/HNI-buying pattern example) and PART 85 (Patent & R&D Investment Tracking to Market
+Research — deepens Part 7's one-line CI checklist item, technology-area classification over raw
+filing count, the 18-month patent-publication-lag caveat, combining patent/hiring-signal/product-
+announcement data across their different lag characteristics for a fuller pipeline view, a worked
+three-source innovation-pipeline reconstruction example). Added matching glossary terms (Market
+Research) and one new Q&A each (Market Research Q83, TRA Q74). Market Research 189->193pg, TRA
+173->175pg. Master: 4,024 -> 4,030 pages.
+
+**Running total: 4,030 pages.**
