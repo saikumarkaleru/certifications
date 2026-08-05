@@ -608,4 +608,17 @@ worked Nifty weekly-expiry OI-and-PCR synthesis example). Added matching glossar
 Research) and one new Q&A each (Market Research Q38, TRA Q29). Market Research 90->92pg, TRA
 75->77pg. Master: 3,827 -> 3,831 pages.
 
-**Running total: 3,831 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 41 (Financial Literacy &
+Investor Education Research to Market Research — distinct from Part 40's in-product risk-
+perception work, covers standardised financial-literacy assessment instruments, pre/post
+comprehension-gain evaluation design for education content vs satisfaction-only measurement, and
+the harder behavioural-follow-through question of whether education actually changes downstream
+trading behaviour, a worked mandatory-pre-F&O-module evaluation example) and PART 38 (Relative
+Strength Ranking Across the Stock Universe to TRA — distinct from Part 20.5's two-index ratio
+chart, covers universe-wide percentile RS ranking, why percentile rank strips out market-regime
+confounds that raw trailing return doesn't, the RS-rank-plus-base-pattern screening use case, the
+regime-dependency limitation, a worked RS-ranked breakout-candidate validation example). Added
+matching glossary terms (Market Research) and one new Q&A each (Market Research Q39, TRA Q30).
+Market Research 92->94pg, TRA 77->79pg. Master: 3,831 -> 3,835 pages.
+
+**Running total: 3,835 pages.**

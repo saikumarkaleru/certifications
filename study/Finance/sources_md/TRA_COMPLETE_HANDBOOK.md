@@ -1041,6 +1041,27 @@ Strikes with unusually large OI buildup (visible on an option chain) are often w
 
 ---
 
+# PART 38 — RELATIVE STRENGTH RANKING ACROSS THE STOCK UNIVERSE
+
+## 38.1 From two-index ratio charts to universe-wide RS ranking — a distinct screening technique
+Part 20.5 covered the ratio chart — plotting one sector index against another to isolate relative outperformance. **Relative Strength (RS) ranking** applies the same underlying idea across the *entire* stock universe at once: every stock is scored on its trailing price performance versus every other stock (or versus the benchmark index) and converted into a **percentile rank** (e.g. an RS Rating of 90 means the stock has outperformed 90% of the universe over the lookback period) — a distinct, screening-oriented use of relative strength, not a two-instrument comparison.
+
+## 38.2 Why percentile rank, not raw return, is the useful output
+Converting raw trailing return into a percentile rank against the universe automatically adjusts for the overall market regime — a stock up 15% over three months might rank in the 95th percentile in a flat, range-bound market (genuinely exceptional relative performance) or only the 40th percentile in a strong bull market where most stocks are up 20%+ (unremarkable, in fact lagging) — the raw return number alone conflates the stock's own behaviour with the market's overall direction, exactly the kind of confound percentile ranking is designed to strip out.
+
+## 38.3 The core screening use case — combining RS rank with a base/breakout pattern
+The dominant practical application (in the CANSLIM/Minervini-style growth-momentum tradition) is screening for stocks with a high RS rank (commonly a threshold like 80+ or 90+) that are *also* forming a recognisable basing/consolidation pattern (Part 2's chart-pattern vocabulary) near a breakout point — the logic being that a stock already demonstrating superior relative strength is more likely to continue leading if and when the broader market resumes an uptrend, versus a laggard stock breaking out from the same pattern with no relative-strength backing.
+
+## 38.4 A known limitation — RS rank is trailing and regime-dependent, not predictive on its own
+Because RS rank is computed purely from trailing price performance, a stock can carry a very high RS rank right before its outperformance stalls or reverses (the rank describes the past, not the future) — and RS-ranking-based screens as a family tend to work better in genuine bull-market regimes with clear sector leadership than in choppy, range-bound, or bear-market conditions, where yesterday's relative leaders frequently do not persist. A TRA should treat a high RS rank as one input supporting a setup already identified through Part 2's price-action framework, not as a standalone buy signal.
+
+## 38.5 Worked example — screening and validating an RS-ranked breakout candidate
+*A screen for stocks with RS rank ≥ 90 and a tight multi-week consolidation pattern returns a mid-cap stock that has outperformed 93% of the NSE universe over the trailing 6 months and is now consolidating in a tight range just below a prior swing high, on declining volume.*
+
+**Model answer.** The RS rank of 93 (Part 38.1-38.2) confirms the stock has been a genuine relative leader, not merely a beneficiary of a strong broad-market tape — a meaningful filter before even looking at the chart pattern. The tight consolidation on declining volume below a prior swing high (Part 2's basing-pattern and volume-contraction vocabulary) is the specific technical setup the RS screen is meant to surface (Part 38.3) — a breakout above the swing high on expanding volume would be the actionable trigger, with the pre-confirmed RS leadership providing additional conviction versus the same pattern on a stock with no relative-strength backing. The one caveat worth flagging (Part 38.4): this setup's edge is regime-dependent — if the broader market itself is not in a confirmed uptrend, the historical base rate for this kind of RS-leader breakout continuing is meaningfully weaker, and position sizing should reflect that broader-market context, not just the individual stock's own strong setup.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1129,5 +1150,8 @@ Strikes with unusually large OI buildup (visible on an option chain) are often w
 
 29. **Q: Nifty is up 0.8% intraday with heavy call OI built up 2% above spot and PCR at an unusually high 1.6 near weekly expiry. How should a TRA weigh these two OI-derived signals against each other?**
     A: Per Part 37.5 — the call OI concentration is a plausible near-term resistance reference given the hedging-flow logic behind strike-level OI (Part 37.4), but the elevated PCR is more ambiguous this close to expiry since it can partly reflect option-writing strategies unrelated to directional sentiment, not just bearish positioning. The correct synthesis treats the OI concentration as a resistance reference and the PCR reading as a mild caution flag, not a standalone signal, while continuing to rely primarily on core price/volume/trend evidence for the actual directional call.
+
+30. **Q: A screen returns a stock with an RS rank of 93 forming a tight consolidation below a prior swing high on declining volume. What does the RS rank add beyond the chart pattern itself, and what's the key caveat?**
+    A: Per Part 38.5 — the RS rank confirms the stock has genuinely outperformed 93% of the universe, not merely ridden a strong broad-market tape, adding conviction to the basing pattern the screen is designed to surface (Part 38.3). The key caveat (Part 38.4) is that RS rank is trailing and regime-dependent — the setup's historical edge is meaningfully weaker if the broader market isn't itself in a confirmed uptrend, so position sizing should reflect the broader-market context, not just the individual stock's strong setup.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
