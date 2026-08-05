@@ -981,6 +981,24 @@ Extending the Part 15 (corporate-actions) mechanics: a bonus or rights announcem
 
 ---
 
+# PART 35 — ETF & INDEX FUND FLOW DATA AS A SENTIMENT INPUT
+
+## 35.1 A distinct domestic flow signal from FII/DII cash-market data
+Part 22 covered FII/DII cash-market flows. **ETF and index-fund creation/redemption flow data** — how much net new money is flowing into or out of domestically-listed equity ETFs and index funds — is a related but genuinely distinct data source, capturing passive-flow-specific sentiment that can behave differently from active institutional cash flows, particularly during periods of retail-driven passive investing growth.
+
+## 35.2 Creation and redemption mechanics — what the flow numbers actually represent
+ETF units are created or redeemed in large blocks by authorised participants in response to investor demand, meaning net ETF creation (more units being created than redeemed) is a reasonably direct proxy for net new money entering passive equity products, while net redemption reflects money leaving — distinct from a pure secondary-market price move, since ETF flow data reflects actual money movement into/out of the underlying structure, not just trading activity in the ETF's own shares on the exchange.
+
+## 35.3 Why ETF flows matter disproportionately for index-heavyweight stocks
+Since index-tracking ETFs must hold constituents in index-proportional weights (the same mechanical logic from the Equity & Capital Markets material's index-inclusion-flow discussion), sustained ETF inflows create mechanical, price-insensitive buying pressure concentrated in the largest index constituents specifically — a TRA analysing a Nifty-heavyweight stock should recognise that a portion of its buying/selling pressure during periods of strong or weak ETF flows is structural/mechanical rather than driven by name-specific fundamental or technical factors, a nuance smaller, non-index stocks are largely insulated from.
+
+## 35.4 Worked example — reading ETF flows alongside FII/DII data for a fuller flow picture
+*A week shows FII cash-market net selling of ₹5,000 cr (Part 22.2), DII net buying of ₹3,000 cr, and domestic equity ETF net inflows of ₹2,200 cr — a third, distinct flow data point beyond the standard FII/DII pair.*
+
+**Model answer.** The ETF inflow figure adds a genuinely additional dimension beyond the FII/DII picture (Part 22.5's multi-source synthesis discipline, extended to a third data source): it suggests part of the domestic buying absorbing FII selling is coming specifically through passive/retail channels (SIP-driven ETF and index-fund flows, Part 20's earlier DII/SIP-offset discussion) rather than only active DII fund-manager decisions — a meaningfully different composition of domestic demand than the DII figure alone would suggest, with different implications for which stocks benefit most (index-heavyweight names benefit disproportionately from ETF-driven buying specifically, per Part 35.3, versus an active DII fund manager's buying which could concentrate anywhere in their portfolio) — exactly the kind of additional-data-source enrichment that turns a two-source FII/DII read into a fuller, more nuanced domestic-flow picture.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**

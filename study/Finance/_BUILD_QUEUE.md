@@ -572,4 +572,14 @@ board-meeting intimations as known-dated-catalyst windows, the bonus/rights unad
 trap, a worked example distinguishing a genuine breakdown from an unadjusted-bonus-issue
 artifact). Market Research 83->85pg, TRA 69->71pg. Master: 3,814 -> 3,818 pages.
 
-**Running total: 3,818 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 38 (Survey Programming & Data
+Quality in Practice to Market Research — skip-logic/routing implementation risk and full-path
+testing, soft-launch as the last quality gate before full field, in-line data-quality checks built
+into the programming itself, a worked tracking-study Wave-4 programming-error-vs-genuine-shift
+diagnostic) and PART 35 (ETF & Index Fund Flow Data as a Sentiment Input to TRA — creation/
+redemption mechanics as a passive-flow proxy distinct from FII/DII cash flows, why ETF flows
+matter disproportionately for index-heavyweight stocks, a worked 3-source flow-data synthesis
+example combining FII/DII/ETF data). Market Research 85->87pg, TRA 71->72pg. Master: 3,818 ->
+3,821 pages.
+
+**Running total: 3,821 pages.**
