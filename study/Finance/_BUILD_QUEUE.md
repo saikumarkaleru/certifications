@@ -973,4 +973,16 @@ scraping boundaries, a worked brief-undisclosed-promotional-pricing-change diagn
 matching glossary terms (Market Research) and one new Q&A each (Market Research Q68, TRA Q59).
 Market Research 156->159pg, TRA 140->143pg. Master: 3,958 -> 3,964 pages.
 
-**Running total: 3,964 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 68 (The Pre-Open Session:
+Order Collection & the IEP Mechanism to TRA — a distinct micro-session with its own three-sub-phase
+price-discovery mechanism, watching the Indicative Equilibrium Price's own trajectory as a first
+genuinely NSE-order-book-derived daily signal distinct from overnight GIFT Nifty cues (Part 19), why
+the actual opening print can diverge from the final IEP, a worked rising-IEP-ahead-of-anticipated-
+results example) and PART 71 (Diary Studies & Experience Sampling Method to Market Research —
+deepens Part 4.4's brief mention, the diary-study-vs-ESM trigger-control design choice, compliance/
+fatigue management as the central practical challenge, the specific fit for capturing financial
+decisions before post-hoc rationalisation sets in, a worked impulsive-trading-behaviour ESM-design
+example). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
+Q69, TRA Q60). Market Research 159->161pg, TRA 143->145pg. Master: 3,964 -> 3,968 pages.
+
+**Running total: 3,968 pages.**

@@ -1675,6 +1675,27 @@ When multiple rating agencies cover the same company's debt and reach **material
 
 ---
 
+# PART 68 — THE PRE-OPEN SESSION: ORDER COLLECTION & THE IEP MECHANISM
+
+## 68.1 A distinct micro-session with its own price-discovery mechanism
+NSE/BSE run a distinct **pre-open session** (roughly 9:00-9:15 AM, before continuous trading begins) that operates on a genuinely different mechanism from the continuous, order-matching trading this handbook otherwise assumes throughout — a TRA who only thinks of "the open" as the first continuous-trading print misses a structurally distinct 15-minute window with its own order-collection and price-discovery logic worth understanding on its own terms.
+
+## 68.2 The three sub-phases — order collection, price discovery, and the buffer
+The pre-open session runs through three sequential sub-phases: an **order-collection phase** (roughly the first 8 minutes) during which orders are accepted but not matched or displayed, deliberately preventing participants from reacting to others' orders in real time and reducing manipulative last-second order-placement gaming; a **price-discovery phase** (roughly the next 4 minutes) during which the exchange computes and displays the **Indicative Equilibrium Price (IEP)** — updated periodically as new orders arrive — the price that would maximise the matched quantity given all currently-collected orders; and a final, brief **buffer period** before continuous trading begins, used for order-matching and transition. This structured sequencing is deliberately designed to produce a more orderly, considered opening print than an open continuous-matching free-for-all would.
+
+## 68.3 Reading the IEP's movement during the price-discovery phase as a distinct pre-market signal
+Because the IEP updates and is publicly displayed throughout the price-discovery phase, a TRA can watch the IEP's own trajectory during those few minutes as a distinct, very-short-horizon signal — an IEP that starts near the prior close and then moves meaningfully during the discovery window (rather than staying stable) reflects real order-flow-driven price discovery happening in real time, complementary to but genuinely distinct from the overnight GIFT Nifty/global-cues read (Part 19) that informs expectations *before* the pre-open session even begins — the IEP is the first genuinely NSE-order-book-derived price signal of the day, as opposed to an external proxy.
+
+## 68.4 Why the actual opening print can differ from the pre-open IEP — and what that gap signals
+The IEP computed at the end of the price-discovery phase is not guaranteed to be the exact price at which continuous trading opens, since further orders can still arrive in the brief transition and the very first moments of continuous trading itself — a notable gap between the final displayed IEP and the actual continuous-trading opening print can reflect either a late surge of fresh orders just as continuous trading begins, or algorithmic/institutional participants deliberately timing their entry to just after the pre-open window closes (avoiding the more transparent, telegraphed pre-open order-collection phase) — a TRA noticing a meaningful IEP-to-actual-open gap should treat it as worth investigating rather than assuming the two should always match closely.
+
+## 68.5 Worked example — reading a stock's pre-open IEP trajectory ahead of an anticipated announcement
+*A stock widely expected to report strong preliminary results before market open shows its pre-open IEP starting close to the prior close during the first minute of the price-discovery phase, then rising steadily through the remaining minutes of that phase, settling at an IEP roughly 4% above the prior close by the end of the pre-open session.*
+
+**Model answer.** The steadily rising IEP trajectory through the price-discovery phase (Part 68.3) reflects genuine, real-time order-flow-driven price discovery specifically on the NSE order book — distinct from and a useful confirmation beyond any overnight GIFT Nifty read (Part 19) — as more buy-side orders arrive relative to sell-side orders during the collection and discovery phases, consistent with positive positioning around the anticipated results. A TRA should note the final IEP (roughly +4%) as the pre-open session's best estimate of opening demand, while remaining aware (Part 68.4) that the actual continuous-trading open could still diverge from this IEP if further orders arrive in the final transition moments — the correct practical takeaway is treating the rising IEP trajectory itself, not just its final level, as informative (a steadily building IEP reflects broader, more sustained buying interest than one that jumps sharply on a single late order and could reverse), while still confirming the actual opening print once continuous trading begins rather than assuming the final pre-open IEP is a guaranteed opening price.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1853,5 +1874,8 @@ When multiple rating agencies cover the same company's debt and reach **material
 
 59. **Q: A company's debt is downgraded from the lowest investment-grade rating to the highest sub-investment-grade rating, after two prior quarters on negative watch. Why is the threshold-crossing nature of this downgrade more consequential than the downgrade announcement itself, and why shouldn't the prior negative watch be treated as irrelevant?**
     A: Per Part 67.5 — the prior negative-watch period (Part 67.3) means this shouldn't be read as a surprise; a TRA tracking rating watches would have already flagged elevated downgrade probability. The threshold-crossing (Part 67.2) matters most because it can trigger genuine, mechanical forced selling from institutional holders whose mandates prohibit sub-investment-grade debt — a price-insensitive supply source that can persist across sessions as affected holders work through mandate-driven exits, layered on top of the market's ordinary discretionary reaction to the news.
+
+60. **Q: A stock's pre-open IEP starts near the prior close and rises steadily through the price-discovery phase, settling roughly 4% above the prior close by the pre-open session's end, ahead of anticipated strong preliminary results. Should a TRA treat this final IEP as the guaranteed opening price?**
+    A: No (Part 68.5) — the steadily rising IEP trajectory (Part 68.3) is a genuine, NSE-order-book-derived confirmation of building buy-side interest, more informative than its final level alone since a steadily-building IEP reflects broader sustained interest than one jumping on a single late order. But the actual continuous-trading open can still diverge from the final displayed IEP (Part 68.4) if further orders arrive in the transition or opening moments, so a TRA should confirm the actual opening print once continuous trading begins rather than treating the pre-open IEP as guaranteed.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
