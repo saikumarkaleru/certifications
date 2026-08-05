@@ -886,4 +886,17 @@ linguistic shift as predictive, a worked rising-hedging-trend-vs-historical-outc
 example). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
 Q61, TRA Q52). Market Research 141->143pg, TRA 125->127pg. Master: 3,928 -> 3,932 pages.
 
-**Running total: 3,932 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 61 (Dealer Gamma Positioning
+to TRA — a market-structure-level volatility driver distinct from Part 30.4's single-position
+delta-neutral management, why net-short vs net-long dealer gamma dampens vs amplifies moves,
+estimating the regime from aggregate OI/GEX proxies, why this matters most at major gamma-
+concentration levels tying to Part 37.4/Part 60, a worked pinned-range-into-expiry example) and
+PART 64 (MaxDiff Methodology, Deepened to Market Research — from a glossary term to an actual
+best-worst-choice methodology, why simple rating scales cluster and fail to discriminate,
+interval-level utility scores as a more actionable output than ordinal ranking, sample-size/item-
+count design practicalities, a worked 15-feature-prioritization example fixing an "everything is
+important" rating-scale failure). Added matching glossary terms (Market Research) and one new Q&A
+each (Market Research Q62, TRA Q53). Market Research 143->145pg, TRA 127->129pg. Master: 3,932 ->
+3,936 pages.
+
+**Running total: 3,936 pages.**

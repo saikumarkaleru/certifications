@@ -1528,6 +1528,27 @@ Part 37.3 introduced Max Pain as a probabilistic tendency for price to gravitate
 
 ---
 
+# PART 61 — DEALER GAMMA POSITIONING & ITS EFFECT ON REALISED VOLATILITY
+
+## 61.1 A distinct, structural volatility driver beyond any individual trader's Greeks
+Part 30.4 covered net delta as something an individual position-holder actively manages. **Dealer gamma positioning** studies a different, market-structure-level question: how the *aggregate* gamma exposure of options market-makers (dealers) as a group, across the full option chain, mechanically influences the underlying's realised volatility — a systemic effect that exists independent of, and often more powerful than, any single trader's individual position management.
+
+## 61.2 The mechanics — why dealer hedging flows create either dampening or amplifying pressure
+Options market-makers, having sold options to the market, are typically net **short gamma** as a matter of standard market-making practice — meaning as the underlying price moves, their own portfolio's delta drifts away from neutral, and standard practice is to **delta-hedge** by trading the underlying itself to bring their book back to neutral. When dealers are net short gamma (the more common state), their hedging requires buying the underlying as it falls and selling as it rises — mechanically **dampening** volatility, smoothing out moves. When dealers are net **long** gamma (less common, but occurs when a large volume of options has been bought rather than sold from the dealer's perspective), the hedging flow reverses direction — dealers sell into strength and buy into weakness — mechanically **amplifying** whatever move is already underway, since their hedging now pushes in the same direction as the move rather than against it.
+
+## 61.3 Estimating the dealer gamma regime from observable option-chain structure
+While a TRA doesn't have direct visibility into dealer books, the **aggregate open interest and volume distribution across strikes** (Part 37's OI data, aggregated across the full chain rather than read strike-by-strike) gives an estimable proxy: heavy call-writing activity (retail/institutional participants selling calls, dealers on the buy side) tends to push dealers toward net long gamma in that zone, while heavy put-writing tends to push dealers toward net short gamma — several third-party analytics services publish estimated "gamma exposure" (GEX) profiles specifically for this purpose, giving a TRA an approximate read on which regime the market is likely in without needing direct dealer-book visibility.
+
+## 61.4 Why this matters most around large, well-defined gamma concentration levels
+The dealer-gamma effect is strongest and most tradeable around specific price levels where a large concentration of gamma exists (often coinciding with heavily-open-interest strikes, connecting directly to Part 60's expiry-week physical-settlement dynamics and Part 37.4's strike-level OI-as-support/resistance framework) — price approaching a major gamma concentration level in a net-short-gamma regime tends to see dampened, "pinned" behaviour (dealer buying/selling smoothing the approach), while the same approach in a net-long-gamma regime can see an accelerating, "breakout-prone" character as dealer hedging reinforces rather than resists the move — meaning the *same* chart pattern near the *same* level can behave meaningfully differently depending on the prevailing gamma regime, a nuance invisible to price action alone.
+
+## 61.5 Worked example — reading unusually calm price action into a major options-heavy expiry
+*A large-cap stock has traded in an unusually tight, low-volatility range for the two weeks leading into monthly expiry, with the range's boundaries closely coinciding with strikes showing the heaviest open interest in the chain — third-party gamma-exposure data indicates the market is in a strongly net-short-gamma regime around this stock's current price zone.*
+
+**Model answer.** The unusually tight, "pinned" range coinciding precisely with the heaviest-OI strikes (Part 61.4) is consistent with the estimated net-short-gamma regime (Part 61.3) — dealer delta-hedging flows mechanically dampening volatility and smoothing price toward the level where the largest concentration of gamma exists, exactly the volatility-suppressing mechanism Part 61.2 describes. A TRA should recognise this compressed range as a structurally-driven, mechanical phenomenon tied to this specific expiry's gamma concentration — not evidence of a genuine, sustainable low-volatility regime for the stock — and should explicitly anticipate the possibility of **volatility expansion once this expiry passes and the current gamma concentration rolls off** (the dampening mechanism is specific to this expiry's OI structure, not a durable feature of the stock), a distinct, mechanically-grounded expectation-setting insight standard chart-pattern analysis of the tight range alone would not surface.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1685,5 +1706,8 @@ Part 37.3 introduced Max Pain as a probabilistic tendency for price to gravitate
 
 52. **Q: A heavily-optioned stock shows unusually sharp, choppy price action specifically in the final session before monthly expiry, oscillating around a level leaving many option positions near the money. Should a TRA read this as a genuine directional signal?**
     A: No (Part 60.5) — this pattern is consistent with expiry-week physical-settlement dynamics (Part 60.2-60.3): option writers actively managing exposure to avoid unwanted delivery obligations, not fundamentals-or-technically-driven conviction, plausibly drives the choppy, level-oscillating action. A TRA should treat expiry-day price action in a heavily-optioned name with added caution and wait for the first full post-expiry session, once this mechanical pressure has cleared, before drawing directional conclusions.
+
+53. **Q: A large-cap stock trades in an unusually tight range for two weeks into monthly expiry, with the range boundaries coinciding with the heaviest-OI strikes, and gamma-exposure data indicates a strongly net-short-gamma regime. Should this compressed range be read as a durable low-volatility characteristic of the stock?**
+    A: No (Part 61.5) — the tight, "pinned" range is a mechanical consequence of dealer delta-hedging flows dampening volatility around the heaviest gamma concentration (Part 61.2-61.4), specific to this expiry's OI structure, not a durable feature of the stock. A TRA should anticipate potential volatility expansion once this expiry passes and the current gamma concentration rolls off, an expectation standard chart-pattern analysis of the tight range alone would not surface.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
