@@ -1801,6 +1801,27 @@ Not every inter-se transfer carries meaningful succession/restructuring informat
 
 ---
 
+# PART 74 — MUHURAT TRADING & SAMVAT-YEAR PERFORMANCE, DEEPENED
+
+## 74.1 From a one-line cultural note to an actual analytical framework
+Part 17 flagged Muhurat trading in a single line — a symbolic Diwali-evening session, more cultural phenomenon than statistical edge. This Part deepens the actual mechanics and the broader **Samvat-year** framing Indian market commentary uses around it, since a TRA is expected to discuss this specific, recurring annual event with genuine substance, not just name-recognition.
+
+## 74.2 The session's distinct mechanics — symbolic order placement within a real trading window
+Muhurat trading is a genuine, real trading session (not merely symbolic in the sense of having no actual executable trades) — held for roughly one hour on Diwali evening, astrologically timed, during which real orders are placed and matched, but with a distinctly different participant character than an ordinary session: many participants place small, symbolic "opening" trades specifically for auspicious-beginning reasons (a cultural practice of initiating a new position as a good omen for the new Samvat year) alongside genuine institutional and retail trading activity that continues regardless of the symbolic framing — meaning session volume and its composition (a higher share of small, symbolic trades relative to an ordinary session) is itself worth a TRA recognising as structurally different from a typical hour of trading.
+
+## 74.3 The Samvat-year framing — why Indian market commentary reports performance on this specific calendar
+The **Samvat year** (the traditional Hindu calendar year, beginning around Diwali) provides Indian market commentary with an alternative annual performance-reporting framework distinct from the calendar or fiscal year — financial media and research commentary widely report "Samvat [year] performance" as a recurring, culturally-resonant annual retrospective, meaning a TRA should recognise this reporting convention and be able to discuss the just-completed Samvat year's index performance and sector leadership when it comes up in year-end commentary, the same way a TRA would be expected to know standard calendar-year or fiscal-year performance framing.
+
+## 74.4 The actual, honest statistical read — a real but modest and inconsistent seasonal tendency
+Examining actual historical Muhurat-session and immediate-post-Muhurat performance data honestly (rather than repeating the folklore uncritically): there is some historically-observed tendency toward a positive close on the Muhurat session itself, plausibly reflecting the genuinely positive-sentiment-skewed participant base choosing to trade that specific session — but this handbook's backtesting-rigor discipline (Part 58) requires being honest that a single, low-sample-size annual event doesn't offer the same statistical power as a higher-frequency pattern, and the read-through to broader subsequent-year performance is considerably weaker and less consistent than popular commentary sometimes implies — a TRA should discuss this with appropriately calibrated confidence, distinguishing the observed session-level tendency from any claimed predictive power for the year ahead.
+
+## 74.5 Worked example — responding to a client question about Muhurat-session significance
+*A client asks a TRA whether a positive Muhurat-trading session close is a reliable signal for how the market will perform over the coming Samvat year.*
+
+**Model answer.** The honest, calibrated response (Part 74.4) distinguishes what's actually supported from what's popular folklore: there's some historical tendency toward a positive Muhurat-session close itself, plausibly reflecting the specific, sentiment-skewed participant base who chooses to trade that particular hour (Part 74.2), but the single-annual-event sample size (Part 58.2's parameter/sample-size caution applied here to a seasonal-event context) means this offers meaningfully weaker statistical evidence than a higher-frequency technical pattern this handbook covers elsewhere, and the specific claim that a positive Muhurat close reliably predicts the *coming year's* performance is considerably weaker and less consistent than commonly repeated commentary suggests. The appropriate answer acknowledges the session's genuine cultural and sentiment significance (worth discussing in year-end commentary, Part 74.3's Samvat-year framing) while being explicit that it shouldn't be treated as a statistically robust forecasting tool for the year ahead — a nuanced, honestly-calibrated answer rather than either dismissing the tradition entirely or overstating its predictive reliability.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1997,5 +2018,8 @@ Not every inter-se transfer carries meaningful succession/restructuring informat
 
 65. **Q: A regulatory filing shows a promoter entity transferring a meaningful share block to another entity that turns out to be a family trust within the same promoter group's disclosed holding structure. Should this be read the same way as an open-market promoter sale?**
     A: No (Part 73.5) — this is an inter-se transfer (Part 73.1); since shares moved between promoter-group entities, the family's combined holding is unchanged, and reading it as bearish promoter behaviour would be a confidently wrong conclusion (Part 73.2). The correct response is checking whether it fits a broader succession/restructuring pattern worth noting as longer-horizon governance context (Part 73.3-73.4), but it should never be reported alongside genuine open-market promoter transactions as carrying the same trading-conviction signal.
+
+66. **Q: A client asks whether a positive Muhurat-trading session close reliably predicts how the market will perform over the coming Samvat year. What's the honestly-calibrated response?**
+    A: Per Part 74.5 — there's some historical tendency toward a positive Muhurat-session close itself, plausibly reflecting the specific, sentiment-skewed participant base trading that hour (Part 74.2), but the single-annual-event sample size offers meaningfully weaker statistical evidence than a higher-frequency pattern, and the claim that it reliably predicts the coming year's performance is considerably weaker and less consistent than popular commentary suggests (Part 74.4). The right answer acknowledges the session's genuine cultural/sentiment significance without overstating its predictive reliability.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

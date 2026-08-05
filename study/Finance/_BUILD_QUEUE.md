@@ -1047,4 +1047,16 @@ vs-company-reported-sales-discrepancy diagnostic). Added matching glossary terms
 and one new Q&A each (Market Research Q74, TRA Q65). Market Research 170->172pg, TRA 154->156pg.
 Master: 3,986 -> 3,990 pages.
 
-**Running total: 3,990 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 74 (Muhurat Trading &
+Samvat-Year Performance, Deepened to TRA — deepens Part 17's one-line cultural note into actual
+session mechanics and the honest, calibrated statistical read distinguishing a real-but-modest
+session-level tendency from the weaker year-ahead predictive claim popular commentary sometimes
+implies, a worked client-question-response example) and PART 77 (Sample Ratio Mismatch to Market
+Research — a foundational data-quality gate beneath Part 52's experimentation methodology, why SRM
+invalidates any metric difference regardless of statistical significance, the chi-square check as a
+near-automatic first-line gate, common root causes (bot traffic, loading-time assignment failures,
+caching bugs), a worked significant-lift-invalidated-by-SRM example). Added matching glossary terms
+(Market Research) and one new Q&A each (Market Research Q75, TRA Q66). Market Research 172->174pg,
+TRA 156->158pg. Master: 3,990 -> 3,994 pages.
+
+**Running total: 3,994 pages.**
