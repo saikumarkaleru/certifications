@@ -1098,4 +1098,17 @@ aggregate-not-per-notification concern, a worked strong-individual-metrics-but-r
 diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
 Q78, TRA Q69). Market Research 178->181pg, TRA 162->164pg. Master: 4,002 -> 4,007 pages.
 
-**Running total: 4,007 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 78 (Margin Trading Facility
+(MTF) Book Data to TRA — a distinct cash-market retail-leverage data source beyond securities-
+lending (Part 51) and F&O OI (Part 37), MTF-collateral margin-call/forced-liquidation risk
+structurally similar to but distinct from promoter-pledge invocation (Part 49), individual-stock
+and market-wide MTF-trend reading, a worked rally-proportionally-funded-by-rising-MTF downside-
+vulnerability example) and PART 81 (ESOP Sentiment Research to Market Research — distinct from Part
+73's general pulse surveys and Part 47's external review mining, the intended-vs-actual-retention-
+effect gap, ESOP-mechanics comprehension testing extending Part 50's discipline, liquidity-event
+perception research specific to pre-IPO companies, a worked "grants don't factor into departures
+despite sizeable value" diagnostic isolating the liquidity-confidence gap from a mechanics-
+comprehension gap). Added matching glossary terms (Market Research) and one new Q&A each (Market
+Research Q79, TRA Q70). Market Research 181->183pg, TRA 164->167pg. Master: 4,007 -> 4,012 pages.
+
+**Running total: 4,012 pages.**

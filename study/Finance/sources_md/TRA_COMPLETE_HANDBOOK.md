@@ -1885,6 +1885,27 @@ Just as Part 49.3 established tracking pledge trend (not just level) and Part 72
 
 ---
 
+# PART 78 — MARGIN TRADING FACILITY (MTF) BOOK DATA AS A LEVERAGE SIGNAL
+
+## 78.1 A distinct retail-leverage data source from securities-lending and F&O positioning
+Part 51 covered securities-lending data specifically for short-positioning signals, and Part 37 covered options OI for derivatives positioning. **Margin Trading Facility (MTF)** — the regulated mechanism allowing retail investors to buy equity delivery shares using broker-provided leverage, distinct from F&O leverage entirely — generates its own distinct data source: broker/exchange-disclosed aggregate MTF book size, both market-wide and, where available, at the individual-stock level, giving a TRA a genuine read on **cash-market retail leverage** specifically, a dimension neither derivatives OI data nor securities-lending data captures.
+
+## 78.2 Why MTF-funded positions create a distinct, price-sensitive supply overhang
+Shares purchased via MTF are pledged with the broker as collateral for the funding provided, meaning a sustained price decline in a heavily-MTF-funded stock can trigger broker-initiated margin calls and forced liquidation of MTF positions — structurally similar in mechanism to Part 49's promoter-pledge invocation risk, but applied to the **aggregate retail investor base** using MTF for a specific stock rather than to promoter holdings specifically — a distinct, price-triggered forced-selling risk source a TRA should factor in separately from promoter-level pledge risk when assessing a stock's overall downside-acceleration vulnerability.
+
+## 78.3 Reading MTF book concentration and trend — the same discipline applied to a new data source
+As with every positioning data source this handbook covers, the **level and trend** of a stock's MTF book size matters more than a single snapshot — a rapidly growing MTF book on a specific stock (retail leverage building aggressively) signals rising speculative retail conviction and, correspondingly, rising downside-acceleration vulnerability if that conviction proves wrong, while a stock with historically low or declining MTF utilisation carries comparatively less of this specific structural risk — a TRA covering a stock experiencing a strong retail-driven rally should specifically check whether that rally is being meaningfully funded through rising MTF utilisation, since a rally substantially built on leveraged retail buying carries different downside characteristics than the same rally driven by unleveraged cash buying.
+
+## 78.4 Market-wide MTF book size as a broader retail-leverage sentiment gauge
+Beyond individual-stock MTF data, the **aggregate, market-wide MTF book size** (periodically disclosed/estimated across the broking industry) functions as a broader gauge of overall retail risk appetite and leverage — a rapidly rising market-wide MTF book alongside a rising broader market is a sentiment signal worth noting (extending this handbook's broader retail-behaviour research themes) as indicating retail investors are increasingly willing to lever into the rally, a dynamic that has historically preceded periods of amplified downside once broader market sentiment turns, similar in spirit to the dealer-gamma-amplification dynamic (Part 61) but driven by retail cash-market leverage specifically rather than options-market dealer hedging flows.
+
+## 78.5 Worked example — reading a heavily-MTF-funded stock's rally for downside vulnerability
+*A mid-cap stock has rallied 40% over three months, with disclosed MTF book data showing the stock's MTF-funded position size has grown roughly in proportion to the rally, now representing an unusually large share of the stock's typical MTF utilisation history.*
+
+**Model answer.** The MTF book growing roughly in proportion to the rally (Part 78.3) indicates a meaningful share of the buying driving this specific rally has been leveraged retail buying, not purely unleveraged cash accumulation — a structurally different, more fragile rally composition than the same 40% gain built on unleveraged buying would represent. A TRA should flag this explicitly as a distinct downside-acceleration risk (Part 78.2): a price pullback significant enough to trigger MTF margin calls could produce forced-liquidation selling pressure layered on top of any ordinary profit-taking, potentially amplifying a pullback beyond what the stock's underlying fundamentals or ordinary technical structure alone would suggest — the same "check what's funding the move, not just the move itself" discipline this handbook applies to credit-sensitive equity weakness (Part 48) and dealer-gamma-driven volatility (Part 61), here applied specifically to cash-market retail leverage via MTF.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2093,5 +2114,8 @@ Just as Part 49.3 established tracking pledge trend (not just level) and Part 72
 
 69. **Q: A promoter holds 45% of a company; 18% is formally pledged (up from 12% two quarters ago) and a further 10% is under a newly-disclosed NDU tied to a group-financing arrangement. What's the genuinely unencumbered, freely-tradeable promoter float, and why do the two encumbrance types need to be reported separately rather than just summed into one risk figure?**
     A: Per Part 77.5 — genuinely unencumbered float is roughly 45% minus 18% minus 10% = 17 percentage points (Part 77.3). The two components must be reported separately because they carry different risk characters (Part 77.2): the pledged 18% carries price-contingent invocation risk, while the NDU-covered 10% is a fixed-duration restriction with no price-sensitivity at all — a rising pledge trend plus a newly-appeared NDU together point to broader promoter-level financial-restructuring activity worth flagging as a combined trend (Part 77.4).
+
+70. **Q: A mid-cap stock rallies 40% over three months, with disclosed MTF book data showing MTF-funded position size growing roughly in proportion to the rally, now an unusually large share of the stock's typical MTF utilisation. What distinct risk does this add beyond ordinary technical analysis of the rally?**
+    A: Per Part 78.5 — the proportional MTF growth (Part 78.3) shows a meaningful share of the rally is leveraged retail buying, a structurally more fragile composition than the same gain built on unleveraged cash accumulation. This adds a distinct downside-acceleration risk (Part 78.2) — a pullback significant enough to trigger MTF margin calls could produce forced-liquidation selling layered on top of ordinary profit-taking, amplifying a decline beyond what fundamentals or technical structure alone would suggest.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
