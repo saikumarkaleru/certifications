@@ -985,4 +985,17 @@ decisions before post-hoc rationalisation sets in, a worked impulsive-trading-be
 example). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
 Q69, TRA Q60). Market Research 159->161pg, TRA 143->145pg. Master: 3,964 -> 3,968 pages.
 
-**Running total: 3,968 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 69 (EPFO/NPS Structural Equity
+Flows to TRA — a rules-driven, policy-mandated flow category distinct from Part 22's discretionary
+DII buying, slow-moving and largely price-insensitive by construction, concentrated in index-
+heavyweight names alongside ETF/reconstitution flows (Part 35.3/53), explicitly framed as
+background structural context rather than a timing tool, a worked index-heavyweight relative-
+resilience-during-a-correction example) and PART 72 (Video/Audio Disclaimer Effectiveness Research
+to Market Research — distinct from Part 50's static-text comprehension research, speech-rate and
+audio-visual-competition as format-specific comprehension risks, single-exposure comprehension
+testing methodology, on-screen text supplementation requiring its own empirical validation, a
+worked fast-disclaimer-plus-ineffective-on-screen-text diagnostic). Added matching glossary terms
+(Market Research) and one new Q&A each (Market Research Q70, TRA Q61). Market Research 161->163pg,
+TRA 145->147pg. Master: 3,968 -> 3,972 pages.
+
+**Running total: 3,972 pages.**
