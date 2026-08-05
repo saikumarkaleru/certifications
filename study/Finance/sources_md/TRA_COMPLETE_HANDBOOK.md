@@ -2263,6 +2263,27 @@ Once the disclosed stabilisation window closes, the mechanism-driven support (Pa
 
 ---
 
+# PART 96 — LARGE-CAP VS MID-CAP VS SMALL-CAP ROTATION — A DISTINCT MARKET-CAP-TIER SIGNAL
+
+## 96.1 A distinct rotation axis from sector rotation and breadth already covered
+This handbook's sector-rotation material addresses relative performance across *industries* (IT vs Pharma vs Auto), and Part 26's breadth material addresses the *count* of individual stocks advancing versus declining. This Part addresses a genuinely distinct rotation axis: relative performance across **market-capitalisation tiers** (large-cap vs mid-cap vs small-cap indices) — a cross-cutting dimension independent of sector, since a rotation into or out of small-caps can happen broadly across many sectors simultaneously, and reveals a different kind of market information than either sector rotation or breadth alone.
+
+## 96.2 Why cap-tier rotation is read as a distinct risk-appetite signal
+Small- and mid-cap stocks, as a group, generally carry higher liquidity risk, wider bid-ask spreads, and greater earnings-estimate uncertainty than large-caps — meaning a market-wide **rotation toward small/mid-caps outperforming large-caps** is typically read as a broad risk-appetite/risk-on signal (investors willing to accept less liquidity and more uncertainty for potentially higher returns), while the reverse — large-caps outperforming small/mid-caps, especially during a broader market decline — is typically read as a flight-to-quality/risk-off signal, a genuinely distinct interpretive lens from what sector rotation (which industry is in favour) or breadth (how many individual stocks are participating) each tell a TRA on their own.
+
+## 96.3 Combining cap-tier rotation with breadth for a fuller read
+Cap-tier rotation and breadth (Part 26), while distinct, are usefully read together: a large-cap-led index rally happening *alongside* deteriorating breadth (Part 26.3's divergence framework) is a doubly cautious combination — both signals independently suggesting narrow, less broadly-supported participation — while a small/mid-cap-led rally with improving, broadening breadth is a doubly confirming combination, each signal reinforcing the other's read rather than either being sufficient alone, extending this handbook's general multi-signal-confluence discipline (Part 11) to this specific pairing.
+
+## 96.4 The liquidity-risk caveat specific to acting on a small/mid-cap rotation signal
+A practical caveat distinct from the interpretive signal itself: even when small/mid-cap rotation is correctly read as a genuine risk-on signal, the practical challenge of *acting* on it at meaningful size is constrained by the same liquidity limitations (Part 42's thinly-traded-stock discipline) that make small/mid-caps riskier in the first place — a TRA should distinguish clearly between the interpretive read (what the rotation signal says about broad market risk appetite) and the separate, practical execution question (how much size can actually be deployed into specific small/mid-cap names without meaningful market impact), since conflating the two can lead to overstating how actionable a correctly-read rotation signal actually is at scale.
+
+## 96.5 Worked example — reading a large-cap-led rally against deteriorating breadth
+*Nifty 50 (large-cap) rises 3% over two weeks and makes a fresh high, while the Nifty Midcap and Smallcap indices are roughly flat over the same period, and the market's advance-decline line (Part 26.2) shows deteriorating breadth alongside the large-cap index's fresh high.*
+
+**Model answer.** Per Part 96.3, this is a doubly cautious combination worth flagging explicitly, not treating the large-cap index's fresh high alone as an unqualified bullish signal. The cap-tier rotation itself (large-caps meaningfully outperforming mid/small-caps, Part 96.2) suggests a flight-to-quality, somewhat risk-off undertone even as the headline index rises, and this is reinforced rather than contradicted by the simultaneously deteriorating breadth — both signals independently point toward a narrower, less broadly-supported rally than the large-cap index's fresh-high headline alone would suggest. A TRA should read these as mutually confirming evidence of a genuinely narrow rally, note the risk-off undertone explicitly in any market commentary, and treat the fresh large-cap high with more caution than an equivalent-sized rally showing broad-based cap-tier participation and improving breadth simultaneously would warrant.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2525,5 +2546,8 @@ Once the disclosed stabilisation window closes, the mechanism-driven support (Pa
 
 87. **Q: A newly-listed stock trades in a tight range just above its issue price for the first three weeks post-listing, coinciding with its disclosed 30-day greenshoe stabilisation window. In the week immediately after the window expires, the stock holds its level and shows a modest further gain on reasonable volume, with no specific news catalyst. How should a TRA weigh the pre-expiry versus post-expiry price action?**
     A: Per Part 95.5 — the tight, issue-price-hugging range during the active stabilisation window should be read cautiously (Part 95.3), since some portion of that support may reflect the stabilising agent's disclosed, funded buying mandate rather than purely organic demand. The subsequent week's continued strength after the window's expiry is meaningfully more informative (Part 95.4) — with the mechanism-driven support now removed, a stock holding and modestly extending higher on its own provides genuine, mechanism-independent evidence of organic post-listing demand, a materially stronger signal than the pre-expiry price action alone would support, and worth distinguishing as such in a research note.
+
+88. **Q: Nifty 50 rises 3% over two weeks and makes a fresh high, while the Nifty Midcap and Smallcap indices are roughly flat over the same period, and the market's advance-decline line shows deteriorating breadth alongside the large-cap index's fresh high. How should a TRA read this combination?**
+    A: Per Part 96.5 — this is a doubly cautious combination, not an unqualified bullish signal. The cap-tier rotation itself (large-caps meaningfully outperforming mid/small-caps, Part 96.2) suggests a flight-to-quality, somewhat risk-off undertone even as the headline index rises, and this is reinforced rather than contradicted by the simultaneously deteriorating breadth (Part 96.3) — both signals independently point toward a narrower, less broadly-supported rally than the fresh-high headline alone suggests. A TRA should read these as mutually confirming evidence of a genuinely narrow rally and treat the fresh high with more caution than an equivalent rally showing broad-based cap-tier participation and improving breadth simultaneously would warrant.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

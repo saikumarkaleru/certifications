@@ -1358,4 +1358,18 @@ diagnosing suspiciously fast, low-quality CFO-panel qualification). Added one ne
 Market Research Q96) and matching glossary terms (Market Research). TRA deepening handbook 202->205pg,
 Market Research 202->205pg. Master: 4,066 -> 4,072 pages.
 
-**Running total: 4,072 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 96 (Large-Cap vs Mid-Cap vs Small-
+Cap Rotation — A Distinct Market-Cap-Tier Signal to TRA — a distinct rotation axis from sector rotation
+and breadth already covered, why cap-tier rotation reads as a distinct risk-appetite signal, combining
+cap-tier rotation with breadth for a doubly-confirming or doubly-cautious read, the liquidity-risk
+caveat separating the interpretive signal from actual executability at size, a worked example reading
+a large-cap-led fresh-high against deteriorating breadth and flat mid/small-caps) and PART 99 (Crisis/
+Reputation Research — Measuring Recovery After a Negative Event to Market Research — a distinct
+research object from routine brand tracking, the pre-event-baseline problem and why routine tracking
+doubles as crisis-preparedness, trust-specific metrics distinct from general brand-health measures
+during an active crisis window, tracking the recovery trajectory rather than a single post-crisis
+snapshot, a worked example diagnosing a stalled recovery plateau six weeks after a data-security
+incident). Added one new Q&A each (TRA Q88, Market Research Q97) and matching glossary terms (Market
+Research). TRA deepening handbook 205->207pg, Market Research 205->207pg. Master: 4,072 -> 4,076 pages.
+
+**Running total: 4,076 pages.**
