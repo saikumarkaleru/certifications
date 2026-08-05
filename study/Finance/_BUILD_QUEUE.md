@@ -680,4 +680,15 @@ financial-services regulatory scrutiny, a worked NPS/CES-divergence trade-disput
 Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q44, TRA
 Q35). Market Research 104->106pg, TRA 88->90pg. Master: 3,854 -> 3,858 pages.
 
-**Running total: 3,858 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 44 (Ichimoku Kinko Hyo,
+Deepened to TRA — deepens Part 3.1's one-line mention into the full five-line system: Tenkan-sen,
+Kijun-sen, both Senkou Spans forming the cloud, Chikou Span; cloud thickness/colour reads, the
+Tenkan/Kijun cross weighted by cloud position, a worked full-alignment synthesis example) and PART
+47 (Employee-Review Mining to Market Research — Glassdoor-style review data as an equity-research-
+adjacent signal distinct from Part 43's satellite/app-download alt-data, the review-platform self-
+selection-bias limitation, trend-over-snapshot and sector-relative comparison as the defensible use
+case, text-mining themes beyond the star rating, a worked pre-launch employee-sentiment-decline
+diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
+Q45, TRA Q36). Market Research 106->108pg, TRA 90->92pg. Master: 3,858 -> 3,862 pages.
+
+**Running total: 3,862 pages.**

@@ -1167,6 +1167,31 @@ The single most important caveat to bid-ask imbalance reading, extending Part 18
 
 ---
 
+# PART 44 — ICHIMOKU KINKO HYO, DEEPENED: THE FULL FIVE-LINE SYSTEM
+
+## 44.1 From a one-line summary to an actual multi-component system
+Part 3.1 summarised Ichimoku in one line: price above the cloud is bullish. That's the system's headline output, not its mechanism — Ichimoku is actually a **five-line system** (trend, momentum, and support/resistance combined into one integrated view, distinct from combining separate single-purpose indicators like an MA plus RSI plus a manually-drawn S/R line), and understanding what each of the five lines represents is necessary before the cloud's signal can be read with any real confidence rather than as a single bullish/bearish colour cue.
+
+## 44.2 The five lines and their calculation logic
+- **Tenkan-sen (Conversion Line):** (9-period high + 9-period low) / 2 — the fastest line, roughly analogous in responsiveness to a short-period moving average.
+- **Kijun-sen (Base Line):** (26-period high + 26-period low) / 2 — a slower line functioning similarly to a medium-period moving average and a standalone support/resistance reference in its own right.
+- **Senkou Span A (Leading Span A):** (Tenkan-sen + Kijun-sen) / 2, plotted **26 periods ahead** — one of the two cloud boundaries.
+- **Senkou Span B (Leading Span B):** (52-period high + 52-period low) / 2, plotted **26 periods ahead** — the other cloud boundary; the area between Span A and Span B forms the **Kumo (cloud)**.
+- **Chikou Span (Lagging Span):** the current closing price, plotted **26 periods back** — used to check whether current price is above or below price from 26 periods ago, a distinct historical-momentum check unlike anything else in this handbook's indicator set.
+
+## 44.3 Reading the cloud's thickness and colour, not just price's position relative to it
+Beyond simply "price above cloud = bullish," two further cloud characteristics add real information: **cloud thickness** (a thick cloud, where Span A and Span B are far apart, represents a more significant support/resistance zone that's harder for price to break through than a thin cloud) and **cloud colour** (a cloud is typically shaded one colour when Span A is above Span B, and another when the reverse — a colour flip signals the cloud itself, not just current price, has shifted trend character, a leading signal since the cloud is plotted 26 periods ahead of the calculation date). A TRA reading Ichimoku should treat a price breakout through a thin cloud as a materially weaker signal than the same breakout through a thick cloud.
+
+## 44.4 The Tenkan/Kijun cross — Ichimoku's own version of a moving-average crossover
+A **Tenkan-sen crossing above the Kijun-sen** ("golden cross" in Ichimoku terms, not to be confused with the classic 50/200-day MA golden cross from Part 3) is read as a bullish momentum signal, and the reverse a bearish one — functionally similar to any moving-average-crossover signal, but the quality of this specific cross is conventionally weighted by *where* it occurs relative to the cloud: a bullish Tenkan/Kijun cross happening **above** the cloud is read as a stronger, more confirmed signal than the same cross happening **inside** or **below** the cloud, since the cloud position provides the broader trend context the crossover signal is being read within — the multi-line system's components are meant to be read together, not any single line in isolation.
+
+## 44.5 Worked example — synthesising all five Ichimoku components into one read
+*A stock's price is trading above a thick, clearly bullish-coloured cloud. The Tenkan-sen recently crossed above the Kijun-sen, with both lines also above the cloud. The Chikou Span (current price plotted back 26 periods) is above the price from 26 periods ago, with clear separation and no nearby historical price action to obstruct it.*
+
+**Model answer.** All five components are aligned in the same bullish direction (Part 44.2's full system, not a single-line read): price above a thick cloud (Part 44.3's stronger-signal reading, given the cloud's thickness), a Tenkan/Kijun bullish cross occurring above the cloud (Part 44.4's higher-quality cross condition), and a Chikou Span confirming with clear separation above historical price (Part 44.2's distinct lagging-span check) — this is the textbook "full Ichimoku alignment" setup, considered a high-conviction signal precisely because it requires multiple independently-calculated components to agree simultaneously, unlike a single-indicator signal that can flip on a single data point. The practical takeaway for a TRA: this alignment is a genuinely stronger basis for a bullish call than any one of its five components in isolation would provide, and a TRA citing "Ichimoku bullish" in a research note should be prepared to name which specific components support that call, not just the cloud colour, since interviewers and desk colleagues familiar with the system will expect that level of specificity.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1273,5 +1298,8 @@ The single most important caveat to bid-ask imbalance reading, extending Part 18
 
 35. **Q: A breakout candle above resistance shows strong total volume. A footprint chart reveals most of that volume traded at the ask in the upper half of the candle, with somewhat more bid-side volume in the lower half. How should a TRA read this, and what caveat applies to any order-book-based read?**
     A: Per Part 43.5 — the strong ask-side volume concentrated in the upper half is consistent with genuine, aggressive buying conviction driving the breakout, a stronger read than the same total volume split evenly between bid and ask throughout; the lower-half bid volume isn't necessarily a red flag since price still closed strongly despite it. The key caveat (Part 43.3) is that order-book/footprint reads are fast-decaying and should be combined with a subsequent volume-profile acceptance check (Part 39) over following sessions, not treated as a standalone one-candle confirmation.
+
+36. **Q: Price trades above a thick, bullish-coloured Ichimoku cloud, with a Tenkan/Kijun bullish cross occurring above the cloud, and the Chikou Span confirming above historical price. Why is this read as higher-conviction than any single component alone?**
+    A: Per Part 44.5 — this is a full alignment across all five independently-calculated Ichimoku components (Part 44.2): cloud position and thickness (Part 44.3), a Tenkan/Kijun cross occurring above the cloud rather than inside or below it (Part 44.4's higher-quality-cross condition), and Chikou Span confirmation. Requiring multiple independent components to agree simultaneously is a materially stronger basis for a bullish call than any single line flipping on one data point, and a TRA citing "Ichimoku bullish" should be able to name which specific components support that call.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
