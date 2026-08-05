@@ -2179,6 +2179,27 @@ Beyond the technical/liquidity distinction, SGBs carry a materially different ta
 
 ---
 
+# PART 92 — CONVERTIBLE WARRANT MECHANICS — A DISTINCT OVERHANG PROFILE
+
+## 92.1 A distinct instrument from the preferential-allotment shares already covered
+Part 63 covered preferential allotment of *shares* to specific investors as a dilution-adjacent technical event. This Part covers a genuinely distinct instrument sometimes used in the same regulatory route: **convertible warrants**, where the allottee pays only a partial upfront amount (typically 25% of the warrant price, per SEBI's preferential-issue framework) at allotment, with the right — but not an automatic conversion — to pay the remaining amount and convert into equity shares within a fixed window (typically 18 months), or to **forfeit the initial 25% and let the warrant lapse** if conversion is no longer attractive.
+
+## 92.2 Why a warrant's optionality creates a fundamentally different overhang than a straight share allotment
+Because a preferential-allotment *share* is issued outright and immediately becomes part of the free float, its dilutive impact is certain and immediate. A convertible warrant's dilutive impact, by contrast, is **conditional and deferred** — the holder will only pay the remaining 75% and convert if doing so is economically attractive at conversion time, meaning the warrant behaves technically more like a long-dated call option on the stock (directly analogous to Part 5's options-mechanics framework, applied here to a corporate-issued instrument rather than an exchange-traded derivative) than like a certain, near-term supply overhang.
+
+## 92.3 Reading the warrant-holder's conversion decision as a real-time signal
+Because conversion is the holder's discretionary choice, **whether and when** a warrant-holder actually converts (rather than letting it lapse) is itself informative — a promoter or strategic investor converting warrants well before the mandatory deadline, particularly when the stock trades meaningfully above the warrant's exercise price, signals continued conviction (they're voluntarily paying in additional capital rather than waiting to be forced to decide), while a warrant lapsing unconverted as the deadline approaches, especially if the stock is trading near or below the exercise price, signals the holder found conversion economically unattractive — a TRA should track a company's disclosed outstanding warrant conversion windows the same way Part 15's lock-in-expiry discipline tracks other dated overhangs, but with this added conditional-optionality layer specific to warrants.
+
+## 92.4 The forfeiture-driven signal — what a lapsed warrant actually reveals
+A specific, sometimes underappreciated signal: when a warrant-holder **forfeits** their initial 25% payment by choosing not to convert, this represents the holder voluntarily accepting a real, sunk financial loss rather than exercising an option that would dilute their effective cost basis further — a meaningfully negative signal about that specific holder's currently reassessed view of the stock's value, distinct from and generally more informative than an ordinary open-market sale (Part 33), since a sale at least realises some value while a forfeiture realises none, making it a comparatively rare, high-conviction negative signal when it occurs.
+
+## 92.5 Worked example — reading a warrant-conversion decision near the exercise deadline
+*A promoter group was allotted convertible warrants 15 months ago at an exercise price of ₹250, having paid the initial 25% at allotment. As the 18-month conversion deadline approaches, the stock trades at ₹310 — comfortably above the exercise price — and the promoter group converts the full warrant allotment two months ahead of the deadline, paying in the remaining 75%.*
+
+**Model answer.** Per Part 92.3, converting voluntarily and well ahead of the mandatory deadline, while the stock trades meaningfully above the exercise price, is a genuine positive conviction signal — the promoter group is choosing to pay in substantial additional capital at a price (₹250) below the current market price (₹310), a decision they could have deferred to the last possible moment or avoided part of by forfeiting, had their conviction been weaker. This should be read as economically rational *and* signal-bearing simultaneously (Part 92.2's optionality framing) — a TRA should note the early, voluntary conversion explicitly as a positive data point in a research note, while recognising the outright dilutive effect of the newly-converted shares (now entering the free float per Part 92.2) as the separate, mechanical consequence to factor into any near-term supply/float analysis.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2429,5 +2450,8 @@ Beyond the technical/liquidity distinction, SGBs carry a materially different ta
 
 83. **Q: An SGB series maturing in three years trades at a 4% discount to its calculated fair gold-tracking value. Recent trading data shows the series traded on only a handful of days in the past month, with very small daily volumes. Is this a buying opportunity?**
     A: Per Part 91.5 — the thin, sporadic trading volume is the key diagnostic fact (Part 91.3): this discount is far more likely to reflect genuine illiquidity than a real, tradeable mispricing that will reliably close, unlike a similar discount in a liquid, actively-traded Gold ETF where arbitrage mechanisms (Part 91.2) would typically keep tracking tight. A TRA should flag that the discount may not be realisable in practice given the difficulty of executing meaningful size in a thinly-traded instrument — an investor prioritising close, liquid gold-price tracking is generally better served by a Gold ETF, while one prioritising the SGB's distinct maturity tax treatment (Part 91.4) should weigh that factor explicitly rather than being deterred by the illiquidity-driven discount alone.
+
+84. **Q: A promoter group was allotted convertible warrants 15 months ago at an exercise price of ₹250, paying the initial 25% at allotment. Ahead of the 18-month deadline, the stock trades at ₹310, and the promoter group voluntarily converts the full allotment two months early, paying in the remaining 75%. How should a TRA read this?**
+    A: Per Part 92.5 — converting voluntarily, well ahead of the mandatory deadline, while the stock trades meaningfully above the exercise price, is a genuine positive conviction signal (Part 92.3): the promoter group chose to pay in substantial additional capital below the current market price rather than deferring the decision or forfeiting part of it, an option they had. This should be read as economically rational and signal-bearing simultaneously — a TRA should note the early, voluntary conversion explicitly as a positive data point, while separately factoring the newly-converted shares' outright dilutive effect (Part 92.2) into near-term free-float supply analysis, since the positive signal and the mechanical dilution are two distinct effects that both apply here.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

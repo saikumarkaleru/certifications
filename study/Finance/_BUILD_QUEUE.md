@@ -1300,4 +1300,18 @@ stable-looking broad theme). Added one new Q&A each (TRA Q83, Market Research Q9
 glossary terms (Market Research). TRA deepening handbook 193->196pg, Market Research 193->196pg.
 Master: 4,048 -> 4,054 pages.
 
-**Running total: 4,054 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 92 (Convertible Warrant Mechanics
+— A Distinct Overhang Profile to TRA — a distinct instrument from Part 63's preferential-allotment
+shares, why a warrant's conditional/deferred optionality creates a fundamentally different overhang
+than a straight share allotment, reading the holder's voluntary-conversion timing as a real-time
+conviction signal, the forfeiture-driven signal as a rare high-conviction negative read, a worked
+example reading a promoter group's early voluntary conversion two months ahead of deadline) and PART
+95 (Bundle and Tiered-Pricing Research to Market Research — a distinct pricing-research question from
+the single-product Van Westendorp/Gabor-Granger/BPTO methods already covered, feature-to-tier
+allocation as a conjoint-style research question, cannibalisation testing unique to multi-tier
+pricing, tier-migration research examining the upgrade path rather than a one-time choice snapshot, a
+worked example diagnosing a Plus-tier upgrade shortfall despite strong initial choice-based-conjoint
+research). Added one new Q&A each (TRA Q84, Market Research Q93) and matching glossary terms (Market
+Research). TRA deepening handbook 196->198pg, Market Research 196->198pg. Master: 4,054 -> 4,058 pages.
+
+**Running total: 4,058 pages.**
