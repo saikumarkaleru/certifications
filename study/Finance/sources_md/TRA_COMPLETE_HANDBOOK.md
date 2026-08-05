@@ -1318,6 +1318,27 @@ As a stock or the broader index approaches a circuit filter threshold, market pa
 
 ---
 
+# PART 51 — SECURITIES LENDING DATA & SHORT-SQUEEZE SETUPS
+
+## 51.1 A distinct positioning data source from OI, and what it specifically reveals
+Part 37 covered options open interest as a positioning signal. **Securities lending and borrowing data** — published under India's SLBM (Securities Lending and Borrowing Mechanism) framework — is a genuinely distinct positioning data source: it directly reveals how many shares of a stock are currently borrowed for the specific purpose of a **short sale in the cash/delivery market**, a different mechanism entirely from an options-based bearish position (buying puts or selling calls), and often a signal available for stocks and situations where liquid options aren't the primary way a bearish view gets expressed.
+
+## 51.2 Reading short-interest levels and trend — the same discipline as Part 49's pledge trend
+Reading securities-lending/short-interest data follows the same absolute-level-plus-trend discipline this handbook applied to promoter pledge data (Part 49.3): the **absolute level** of shares on loan relative to a stock's total float indicates how crowded the short trade currently is, while the **trend** (rising or falling borrowed-share volume over successive disclosure periods) indicates whether bearish positioning is actively building or unwinding — a rapidly rising short-interest trend on a stock with a specific bearish catalyst (weak results, a negative disclosure) confirms the market is actively expressing that view through short-selling, not just chart-based selling pressure.
+
+## 51.3 The short-squeeze mechanism — why a heavily-shorted stock can move violently on a catalyst
+A **short squeeze** occurs when a stock with a high short-interest level (a large share of its float borrowed and sold short) begins moving up sharply — as the price rises, short sellers face mounting losses and, at some point, are forced to buy back (cover) their borrowed shares to close their positions and limit further loss, and this forced covering itself becomes additional buying pressure that pushes the price up further, triggering more covering in a self-reinforcing cycle. This is a structurally different upside dynamic from ordinary demand-driven buying (Part 47's balance-to-imbalance transition) — the fuel for the move is specifically the unwinding of existing bearish positions under duress, not fresh bullish conviction, which has real implications for how durable the resulting move is likely to be once the forced-covering pressure is exhausted.
+
+## 51.4 Days-to-cover — a specific metric quantifying squeeze potential
+**Days-to-cover** (total shares on loan/short divided by the stock's average daily trading volume) quantifies roughly how many trading days it would take for all short sellers to cover their positions if they all tried simultaneously — a high days-to-cover figure (short interest large relative to typical daily volume) indicates a stock where forced covering, once triggered, could take an extended period and produce an outsized, difficult-to-absorb price impact, versus a stock with the same absolute short-interest level but much higher daily volume, where the same covering could be absorbed far more smoothly — a TRA should treat days-to-cover, not short-interest level alone, as the more complete gauge of genuine squeeze potential.
+
+## 51.5 Worked example — assessing squeeze potential ahead of a positive catalyst
+*A mid-cap stock shows short interest at 12% of free float (a high level for this stock's typical range, and rising over the past month), with days-to-cover at 8 (well above the stock's historical average of 2-3), ahead of an anticipated positive quarterly-results announcement.*
+
+**Model answer.** The combination of an elevated and rising short-interest level (Part 51.2) with a days-to-cover figure well above the stock's own historical norm (Part 51.4) indicates genuine squeeze potential specifically because covering, if triggered, would take unusually long relative to normal trading activity — meaning any forced buying is likely to have an outsized, difficult-to-absorb price impact on this specific stock's typical liquidity, more so than the same short-interest percentage would imply on a more liquid name. If the anticipated results beat expectations (Part 32's results-day framework) and triggers even a modest initial positive reaction, the elevated days-to-cover raises the probability that reaction gets amplified by forced short-covering (Part 51.3's self-reinforcing mechanism) into a larger, faster move than the fundamental surprise alone would typically produce — a TRA flagging this setup ahead of the results should explicitly separate the "fundamental surprise" driver from the "mechanical short-covering amplification" driver in any research note, since the latter is a real but distinct, catalyst-dependent, and ultimately exhaustible source of additional upside momentum, not a standalone reason to expect a durable re-rating on its own.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1445,5 +1466,8 @@ As a stock or the broader index approaches a circuit filter threshold, market pa
 
 42. **Q: A thinly-traded small-cap with a 5% circuit filter is down 4.6% intraday on negative news, with heavy sell-side order imbalance and little matching buy interest. What specific risk does an existing holder face beyond the price decline itself?**
     A: Per Part 50.5 — an existing holder faces a distinct illiquidity/exit risk (Part 50.2): if the stock locks at its lower circuit, they may be unable to exit at all until the circuit potentially reopens, which for illiquid small-caps can extend across consecutive sessions. This risk should be flagged and acted on with urgency before the lock, since it's categorically different from an ordinary technical stop-loss scenario where the position remains executable.
+
+43. **Q: A mid-cap stock has short interest at 12% of free float (rising over the past month) and days-to-cover at 8, well above its historical average of 2-3, ahead of an anticipated positive results announcement. What does days-to-cover add beyond the short-interest level alone?**
+    A: Per Part 51.5 — days-to-cover (Part 51.4) indicates how long forced covering would take relative to normal trading volume, so a figure well above the stock's own historical norm means any forced buying is likely to have an outsized, difficult-to-absorb price impact on this specific stock's typical liquidity, beyond what the short-interest percentage alone implies. If results beat expectations, the elevated days-to-cover raises the probability the initial reaction gets amplified by short-covering (Part 51.3) — a real but distinct, catalyst-dependent, and ultimately exhaustible driver that should be separated from the fundamental surprise itself in any research note.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

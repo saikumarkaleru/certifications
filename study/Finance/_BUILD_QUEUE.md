@@ -762,4 +762,17 @@ distinct from fee level, a worked rising-F&O-support-contacts-despite-full-discl
 Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q51, TRA
 Q42). Market Research 119->121pg, TRA 103->105pg. Master: 3,884 -> 3,888 pages.
 
-**Running total: 3,888 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 51 (Securities Lending Data &
+Short-Squeeze Setups to TRA — SLBM short-interest data as a distinct positioning source from
+options OI, absolute-level-plus-trend reading mirroring Part 49's pledge-data discipline, the
+short-squeeze forced-covering mechanism, days-to-cover as the more complete squeeze-potential gauge
+than short-interest level alone, a worked pre-results elevated-days-to-cover example) and PART 54
+(Investor Relations Effectiveness Perception Research to Market Research — the IR function itself
+as a distinct research object from Part 32/45's investor-perception-of-the-story material, analyst/
+institutional respondent population and access considerations, benchmarkable IR dimensions
+(earnings-call quality, disclosure timeliness, management accessibility, messaging consistency),
+the hard-to-isolate but real valuation-adjacent consequence, a worked declining-analyst-coverage
+diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
+Q52, TRA Q43). Market Research 121->123pg, TRA 105->107pg. Master: 3,888 -> 3,892 pages.
+
+**Running total: 3,892 pages.**
