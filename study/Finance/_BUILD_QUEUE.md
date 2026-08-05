@@ -1162,4 +1162,21 @@ three-source innovation-pipeline reconstruction example). Added matching glossar
 Research) and one new Q&A each (Market Research Q83, TRA Q74). Market Research 189->193pg, TRA
 173->175pg. Master: 4,024 -> 4,030 pages.
 
-**Running total: 4,030 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 83 (Substantial-Acquisition
+Ownership-Threshold Disclosures to TRA — a distinct SEBI regulatory regime from Part 54's PIT/
+insider-trading-window mechanics, applying to any acquirer not just insiders, the 5%/incremental-2%/
+25%-open-offer thresholds and their distinct disclosure/action implications, threshold-crossing
+sequences as a distinct accumulation-tracking signal beneath scattered bulk-deal monitoring, the
+open-offer price as a distinct regulator-anchored valuation reference, a worked gradual 5%->7%->9%
+stake-building-campaign example) and PART 86 (Cross-Functional Research Socialization to Market
+Research — a distinct organisational-influence question from Part 27's presentation-design material,
+embedding findings in recurring decision-making rituals rather than one-off readouts, building
+stakeholder relationships continuously rather than reactively, translating findings into stakeholder-
+specific language/stakes, a worked example diagnosing why a well-presented finding failed to move a
+product roadmap). Added one new Q&A each (TRA Q75, Market Research Q84) and matching glossary terms
+(Market Research). TRA deepening handbook 175->178pg, Market Research 193->178pg (page-count
+correction from an inflated prior count, confirmed by direct PyMuPDF page check after rebuild — not
+a content reduction). Master: 4,030 -> 4,018 pages (net -12, reflecting the Market Research page-
+count correction).
+
+**Running total: 4,018 pages.**

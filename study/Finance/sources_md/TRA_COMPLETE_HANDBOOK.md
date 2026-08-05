@@ -1990,6 +1990,27 @@ A genuine practical limitation worth flagging: category-level classification wit
 
 ---
 
+# PART 83 — SUBSTANTIAL-ACQUISITION OWNERSHIP-THRESHOLD DISCLOSURES
+
+## 83.1 A distinct regulatory regime from insider-trading-window mechanics
+Part 54's material on trading windows and disclosure thresholds covered the PIT (Prohibition of Insider Trading) regulatory framework governing *when* and *how* insiders can trade. This Part covers a genuinely distinct regime: SEBI's substantial-acquisition regulations require **any acquirer** (not limited to promoters/insiders — any investor, including institutional or even another company) to publicly disclose their holding once it crosses specific **ownership-percentage thresholds** — a different regulatory trigger entirely, based purely on aggregate stake size rather than the insider-status-based PIT framework, and one that applies to a much broader set of potential acquirers a TRA should track separately.
+
+## 83.2 The key thresholds and their distinct disclosure/action implications
+The framework's key thresholds each carry distinct implications: an initial disclosure requirement at **5%** aggregate holding, further disclosure required for each subsequent **2% incremental change** beyond that initial threshold, and — the most consequential threshold — crossing **25%** aggregate ownership (or a smaller but still substantial threshold combined with acquiring control) triggers a **mandatory open offer** requirement, obligating the acquirer to offer to buy additional shares from public shareholders at a regulator-prescribed minimum price — a fundamentally different, much higher-stakes event than the routine 5%/incremental-2% disclosures, since an open-offer trigger creates a specific, calculable price floor and a genuine, dated corporate-control event.
+
+## 83.3 Why threshold-crossing disclosures function as a distinct accumulation-tracking signal
+Because these disclosures are triggered purely by aggregate ownership percentage regardless of *how* the shares were acquired (open-market purchases accumulated gradually, a single large block deal, or some combination), a sequence of threshold-crossing disclosures from the same acquiring entity (5%, then 7%, then 9%...) reveals a **sustained, gradual accumulation pattern** a TRA might otherwise only see as scattered, seemingly-unconnected bulk/block deals (Part 33, Part 82) without recognising them as part of one coordinated, ongoing stake-building campaign by a single acquirer — the threshold-disclosure framework effectively forces visibility onto exactly this kind of gradual accumulation that might otherwise stay below the radar of routine daily bulk-deal monitoring.
+
+## 83.4 Reading the open-offer price as a distinct, regulator-anchored valuation reference
+Once a 25%-threshold open-offer obligation is triggered, the **open-offer price** itself (calculated via a regulator-prescribed formula considering recent trading prices and the price paid by the acquirer in triggering transactions) becomes a distinct, calculable reference level a TRA can compute independently — directly analogous in spirit to Part 63.2's QIP floor-price formula, here applied to a takeover-related pricing mechanism instead — giving a TRA a specific, formula-derived price floor the stock is unlikely to trade meaningfully below for the duration of the open offer, since the open offer itself provides a real, executable exit at that price for shareholders who choose to tender.
+
+## 83.5 Worked example — recognising a gradual stake-building campaign across successive threshold disclosures
+*Over four months, a single institutional acquirer discloses crossing the 5%, then 7%, then 9% ownership thresholds in a mid-cap stock, with no single disclosed transaction being unusually large, and no bulk/block deal disclosure drawing particular attention on its own during this period.*
+
+**Model answer.** Read individually, none of the underlying transactions building toward each threshold crossing may have stood out as a notable single bulk deal (Part 82's category-composition framework) — but the sequence of threshold-crossing disclosures itself (Part 83.3) reveals what scattered daily transaction monitoring alone would likely have missed: a single acquirer running a sustained, deliberate stake-accumulation campaign over several months. A TRA should flag this pattern explicitly and specifically monitor whether the accumulation continues toward the 25% open-offer trigger (Part 83.2) — if it does, the eventual open-offer price (Part 83.4) becomes a calculable, regulator-anchored valuation reference worth computing in advance, giving the TRA a specific, actionable price level to reference in any subsequent research note on the name, well before the open offer itself is formally announced.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2213,5 +2234,8 @@ A genuine practical limitation worth flagging: category-level classification wit
 
 74. **Q: A mid-cap stock shows a series of bulk deals over three consecutive weeks where the identifiable seller category is consistently FII/FPI and the buyer category is consistently HNI/individual, with no single transaction unusually large in isolation. How should a TRA read this pattern?**
     A: Per Part 82.5 — the consistent, repeated pattern across three weeks (Part 82.3) is a more confidently-read distribution signal than any single transaction alone, indicating foreign institutional investors distributing a position into individual-investor demand over a sustained period. Given the reasonably clear FII-vs-HNI classification here (Part 82.4's caution about ambiguous counterparty data), this should be flagged as a genuine, moderately-confident institutional-distribution signal worth monitoring for continuation, not dismissed as noise or over-stated beyond what the classification actually supports.
+
+75. **Q: A single institutional acquirer discloses crossing the 5%, then 7%, then 9% ownership thresholds in a mid-cap stock over four months, with no individual disclosed transaction standing out as a notable bulk deal on its own. How should a TRA read this, and what should they watch for next?**
+    A: Per Part 83.5 — the sequence of threshold-crossing disclosures itself (Part 83.3) reveals a sustained, deliberate stake-accumulation campaign that scattered daily bulk-deal monitoring (Part 82) alone would likely have missed, since these disclosures are triggered purely by aggregate ownership percentage regardless of how gradually the shares were acquired. The TRA should explicitly flag this pattern and monitor whether accumulation continues toward the 25% open-offer trigger (Part 83.2) — if it does, the eventual open-offer price becomes a calculable, regulator-anchored valuation reference (Part 83.4) worth computing in advance, well before any open offer is formally announced.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
