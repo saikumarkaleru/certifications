@@ -1401,4 +1401,19 @@ diagnosing uneven purchase-intent lift for identical host-read ad copy across th
 one new Q&A each (TRA Q90, Market Research Q99) and matching glossary terms (Market Research). TRA
 deepening handbook 209->211pg, Market Research 209->211pg. Master: 4,080 -> 4,084 pages.
 
-**Running total: 4,084 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 99 (Offer for Sale (OFS) vs Fresh
+Issue — A Distinct Read on IPO Capital-Raise Intent to TRA — a distinct structural question beneath
+the single "IPO" label, why the fresh-issue/OFS split changes what the listing actually signals, why a
+heavy OFS component isn't automatically negative but warrants a specific "why now, by whom" question,
+the use-of-proceeds disclosure as the fresh-issue component's real diagnostic value, a worked example
+reading an 80%-OFS listing where sellers are long-held financial investors with no promoter
+participation) and PART 102 (Recognising Segmentation Staleness and Drift to Market Research — a
+distinct maintenance question from the original segmentation-methodology material, the two distinct
+staleness mechanisms of population drift versus boundary drift, monitoring metrics that surface
+staleness before it becomes acute, why re-segmenting too frequently carries its own real
+organisational cost, a worked example diagnosing boundary drift from a sustained six-wave narrowing
+revenue gap between segments with stable segment-size shares). Added one new Q&A each (TRA Q91, Market
+Research Q100) and matching glossary terms (Market Research). TRA deepening handbook 211->214pg,
+Market Research 211->214pg. Master: 4,084 -> 4,090 pages.
+
+**Running total: 4,090 pages.**
