@@ -998,4 +998,16 @@ worked fast-disclaimer-plus-ineffective-on-screen-text diagnostic). Added matchi
 (Market Research) and one new Q&A each (Market Research Q70, TRA Q61). Market Research 161->163pg,
 TRA 145->147pg. Master: 3,968 -> 3,972 pages.
 
-**Running total: 3,972 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 70 (Trade-for-Trade (T2T)
+Segment to TRA — a distinct compulsory-delivery mechanism from Part 56's ASM/GSM margin-based
+surveillance, mechanical elimination of the entire intraday technical character, thinner-liquidity
+implications, distinguishing surveillance-triggered vs routine-new-listing T2T contexts, a worked
+surveillance-flagged-T2T-stock intraday-strategy-inapplicability example) and PART 73 (Internal
+Employee Pulse Surveys to Market Research — distinct from Part 47's external Glassdoor-style review
+mining, frontline customer-facing sentiment as a genuine CX leading indicator, role/function
+segmentation beneath an aggregate engagement score, the psychological-safety trust precondition for
+credible responses, a worked pre-external-metric KYC-friction pulse-survey example). Added matching
+glossary terms (Market Research) and one new Q&A each (Market Research Q71, TRA Q62). Market
+Research 163->165pg, TRA 147->149pg. Master: 3,972 -> 3,976 pages.
+
+**Running total: 3,976 pages.**
