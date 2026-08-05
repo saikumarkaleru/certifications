@@ -948,4 +948,16 @@ loss-indicator screen-reader failure example). Added matching glossary terms (Ma
 one new Q&A each (Market Research Q66, TRA Q57). Market Research 152->154pg, TRA 136->138pg.
 Master: 3,950 -> 3,954 pages.
 
-**Running total: 3,954 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 66 (Quarterly Shareholding
+Pattern Disclosures to TRA — a distinct company-level aggregate disclosure from Part 52's scheme-
+level MF data, quarter-over-quarter category-shift reading, distinguishing genuine net buying from
+mechanical dilution/buyback base effects, number-of-shareholders data as a complementary
+granularity layer, a worked FII-up/public-down-checked-against-corporate-actions example) and PART
+69 (Customer Advisory Boards, Deepened to Market Research — deepens a one-line glossary mention
+into full operating structure, CAB members' inherent non-representativeness, the relationship-
+management-vs-research-objectivity tension, rotation/triangulation/explicit-critical-solicitation
+as mitigations, a worked CAB-satisfaction-vs-representative-survey-dissatisfaction reconciliation
+example). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
+Q67, TRA Q58). Market Research 154->156pg, TRA 138->140pg. Master: 3,954 -> 3,958 pages.
+
+**Running total: 3,958 pages.**

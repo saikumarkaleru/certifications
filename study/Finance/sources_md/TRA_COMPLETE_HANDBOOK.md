@@ -1633,6 +1633,27 @@ The auditor's disclosed reason for resignation (required to be stated) matters e
 
 ---
 
+# PART 66 — QUARTERLY SHAREHOLDING PATTERN DISCLOSURES AS A POSITIONING SIGNAL
+
+## 66.1 A distinct, company-level aggregate disclosure from the scheme-level MF data covered elsewhere
+Part 52 covered monthly mutual fund *scheme-level* portfolio disclosures — which specific funds hold a stock and at what weight. The **quarterly shareholding pattern** disclosure is a distinct, company-level filing every listed company makes: the full breakdown of who owns the company's shares by category — promoters, FIIs, DIIs (mutual funds, insurance companies, banks), and public/retail — as of each quarter-end, giving a TRA a category-level aggregate view distinct from Part 52's fund-specific granularity.
+
+## 66.2 Reading the quarter-over-quarter category shift — the primary signal
+The core, actionable signal is the **quarter-over-quarter change** in each category's holding percentage — a rising FII holding percentage alongside a falling public/retail percentage over successive quarters indicates institutional accumulation happening gradually across the quarter as retail sells into it (or vice versa, a classic "smart money exiting into retail strength" pattern when the direction reverses) — extending this handbook's trend-over-snapshot discipline (Part 49.3, Part 51.2) to this specific, company-level, category-based disclosure, read as a slow-moving quarterly cadence signal rather than the daily/monthly cadence of the other positioning data sources this handbook covers.
+
+## 66.3 Distinguishing genuine net buying from mechanical dilution/base effects
+A category's holding *percentage* can change even without genuine net buying or selling by that category, if the company's total outstanding share count itself changed during the quarter (a QIP, Part 63, or a preferential allotment diluting all existing percentages proportionally, or a buyback, Part 34.2, mechanically raising remaining holders' percentages as the share count shrinks) — a TRA must check whether a category's percentage shift coincides with a corporate action that would mechanically move the percentage regardless of any actual buying/selling by that category, the same "verify before treating a move as a real signal" discipline this handbook applies to bonus-adjustment chart artifacts (Part 34.4) and ex-distribution price moves (Part 59.3), here applied to shareholding-percentage interpretation specifically.
+
+## 66.4 Number-of-shareholders data — a complementary granularity beyond aggregate percentage
+Beyond the category percentages, the same disclosure typically includes the **total number of public shareholders** — a rising shareholder count alongside a falling average holding size (public holding percentage roughly flat or declining while shareholder count rises) suggests broadening retail participation with smaller average positions, a genuinely different pattern from a flat shareholder count with a rising public percentage (concentrated retail accumulation by fewer, larger holders) — a level of granularity beyond the simple category percentages that can meaningfully sharpen a TRA's read of exactly what kind of ownership-base change is underway.
+
+## 66.5 Worked example — reading a rising FII stake alongside a falling public stake, checked against corporate actions
+*A mid-cap stock's quarterly shareholding pattern shows FII holding rising from 12% to 16% over the quarter, while public/retail holding falls from 35% to 31%, with promoter and DII holding roughly stable. No QIP, preferential allotment, or buyback occurred during the quarter.*
+
+**Model answer.** With the corporate-action check ruled out (Part 66.3 — no QIP, preferential allotment, or buyback occurred that could mechanically explain the percentage shifts), the FII-up/public-down pattern reflects genuine net institutional buying largely absorbed from retail sellers during the quarter (Part 66.2) — a meaningful, gradually-building positioning signal a TRA should flag explicitly, distinct from and complementary to any scheme-level MF new-entry signals (Part 52) that might separately corroborate the same underlying institutional interest. Checking the number-of-shareholders data (Part 66.4) as a further layer — if the shareholder count declined alongside the falling public percentage, this suggests concentrated retail selling by fewer, larger holders rather than broad-based small-holder distribution, a nuance worth noting in a full research write-up on the name, since it points toward a different underlying retail-selling dynamic than a broadening, smaller-ticket distribution pattern would represent.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1805,5 +1826,8 @@ The auditor's disclosed reason for resignation (required to be stated) matters e
 
 57. **Q: A mid-cap company's auditor resigns mid-term, with the stated reason explicitly citing inability to obtain satisfactory explanations on certain related-party transactions. The stock immediately hits its lower circuit filter. How should a TRA weigh the stated reason, and what liquidity risk applies?**
     A: Per Part 65.5 — the RPT-linked stated reason places this at the severe end of the auditor-resignation spectrum (Part 65.2-65.3), directly undermining confidence in the reliability of the company's broader financial-statement integrity, not just one data point. The immediate lower-circuit lock carries the same exit-risk dynamic covered under circuit filters (Part 50.5) — existing holders may be unable to exit for multiple sessions — and given the specific governance-integrity concern, this should be treated as a serious fundamental catalyst warranting close tracking of further disclosures, not a technically-tradeable dip-buying opportunity.
+
+58. **Q: A mid-cap stock's quarterly shareholding pattern shows FII holding rising from 12% to 16% while public holding falls from 35% to 31%, with promoter/DII holding stable and no QIP, preferential allotment, or buyback during the quarter. How should a TRA read this?**
+    A: Per Part 66.5 — with corporate actions ruled out (Part 66.3), this reflects genuine net institutional buying largely absorbed from retail sellers during the quarter (Part 66.2), a meaningful gradually-building positioning signal worth flagging explicitly, complementary to any corroborating scheme-level MF signals (Part 52). Checking the number-of-shareholders data (Part 66.4) adds a further layer — a declining shareholder count would suggest concentrated retail selling by fewer, larger holders rather than broad-based distribution.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
