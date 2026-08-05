@@ -1297,6 +1297,27 @@ A stock with a high, actively-monitored promoter pledge percentage tends to see 
 
 ---
 
+# PART 50 — CIRCUIT FILTERS, TRADING HALTS & MARKET-WIDE CIRCUIT BREAKERS
+
+## 50.1 A structural, exchange-imposed constraint distinct from any chart-based level
+Every support/resistance level covered so far in this handbook (Part 2's chart-based levels, Part 39's Value Area, Part 42's P&F counts) emerges organically from trading activity. **Circuit filters** are categorically different — a hard, exchange-imposed, mechanically-enforced price limit beyond which a stock simply cannot trade on a given day, regardless of how much genuine buying or selling interest exists — a structural constraint a TRA must factor into any trade plan involving a stock that's approaching its filter, since it behaves nothing like an ordinary technical level that can simply be broken with enough conviction.
+
+## 50.2 Individual stock circuit filters — the percentage bands and their real trading implications
+Individual stocks are assigned a **circuit filter band** (commonly 2%, 5%, 10%, or 20% depending on the stock's category, liquidity, and recent volatility, as classified by the exchange) — once a stock moves the full percentage from its previous close, it is **locked** at that price with trading only possible at the exact limit price (or halted entirely, depending on the specific filter type), meaning genuine buyers or sellers on the wrong side of a locked circuit may be unable to execute at all. A TRA analysing a stock approaching its circuit filter, especially a tighter-banded, less-liquid small-cap, should recognise that a locked circuit is a distinct risk (an inability to exit a position, not just an unusually large move) beyond the ordinary volatility/liquidity risk already covered in Part 8.
+
+## 50.3 Market-wide circuit breakers — a distinct, index-level halt mechanism
+Separate from individual-stock filters, exchanges implement **market-wide circuit breakers**, triggered by a large enough move (a specific percentage threshold) in a broad benchmark index (Nifty/Sensex) within a session, halting trading across the **entire market** for a defined cooldown period (or for the rest of the session, depending on the severity and timing of the trigger) — a mechanism designed to give the whole market a pause to absorb information and prevent a panic-driven cascading move, distinct in scope and purpose from an individual stock's circuit filter, which only affects that one name.
+
+## 50.4 Why filter-approach dynamics can create their own distinct, self-reinforcing technical pattern
+As a stock or the broader index approaches a circuit filter threshold, market participants aware of the mechanism can behave in ways that accelerate the move toward the filter itself (a rush to execute before the circuit locks and liquidity effectively disappears) — a self-reinforcing dynamic somewhat analogous to the pledge-overhang self-reinforcement covered in Part 49.4, but driven by execution-access urgency rather than forced-selling risk specifically. A TRA should recognise that price action in the final stretch approaching a known circuit threshold can behave differently (more urgent, less orderly) than the same percentage move earlier in the session, well away from the filter.
+
+## 50.5 Worked example — assessing exit risk for a small-cap stock nearing its circuit filter
+*A thinly-traded small-cap stock with a 5% circuit filter has fallen 4.6% intraday on negative company-specific news, with sell orders visibly building and very little matching buy-side interest showing in the order book.*
+
+**Model answer.** With the stock 0.4 percentage points from a 5% lock (Part 50.2) and a visible sell-side order imbalance (Part 43.2's bid-ask imbalance framework, here applied to a filter-approach context specifically), the practical risk facing an existing holder is materially different from an ordinary technical stop-loss scenario — if the stock locks at its lower circuit, an existing holder may be **unable to exit at all** until the circuit potentially reopens (which, for consecutive-day circuit locks in illiquid small-caps, is a well-documented real risk, not a theoretical one), a liquidity risk beyond the price risk alone. The correct risk-management response for a TRA advising on this position is flagging the elevated illiquidity/exit risk explicitly and distinctly from the price-decline risk itself — recommending any exit decision be made with urgency before the lock, rather than assuming a standard stop-loss level remains executable as the stock approaches a known circuit-filter threshold in a thin order book.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1421,5 +1442,8 @@ A stock with a high, actively-monitored promoter pledge percentage tends to see 
 
 41. **Q: A mid-cap company's disclosed promoter pledge percentage has risen from 22% to 41% over three quarters, alongside a weakening chart (lower highs, below the 200-day MA), with no other negative news apparent. What should a TRA flag, and why?**
     A: Per Part 49.5 — the rising pledge trend (Part 49.3), nearly doubling in three quarters, is itself a red flag independent of the absolute level, signalling worsening promoter-level financial stress distinct from company fundamentals. Combined with the weakening chart, it points to a structural pledge-overhang risk (Part 49.4) that can reinforce technical weakness through the market's awareness of potential forced-selling risk — this should be flagged explicitly in any research note, with added caution on any technical rally attempt given the elevated, price-sensitive invocation risk a chart alone wouldn't reveal.
+
+42. **Q: A thinly-traded small-cap with a 5% circuit filter is down 4.6% intraday on negative news, with heavy sell-side order imbalance and little matching buy interest. What specific risk does an existing holder face beyond the price decline itself?**
+    A: Per Part 50.5 — an existing holder faces a distinct illiquidity/exit risk (Part 50.2): if the stock locks at its lower circuit, they may be unable to exit at all until the circuit potentially reopens, which for illiquid small-caps can extend across consecutive sessions. This risk should be flagged and acted on with urgency before the lock, since it's categorically different from an ordinary technical stop-loss scenario where the position remains executable.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

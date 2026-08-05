@@ -750,4 +750,16 @@ experiment guardrail-timing example). Added matching glossary terms (Market Rese
 Q&A each (Market Research Q50, TRA Q41). Market Research 117->119pg, TRA 101->103pg. Master:
 3,880 -> 3,884 pages.
 
-**Running total: 3,884 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 50 (Circuit Filters, Trading
+Halts & Market-Wide Circuit Breakers to TRA — a hard, exchange-imposed price constraint distinct
+from any chart-based level, individual-stock filter bands and locked-circuit exit risk, market-
+wide circuit breakers as a distinct index-level halt mechanism, self-reinforcing filter-approach
+urgency dynamics, a worked small-cap-nearing-circuit exit-risk example) and PART 53 (Brokerage-Fee
+& Pricing-Model Perception Research to Market Research — the zero-brokerage category norm reshaping
+what pricing research even means here, fee-structure comprehension research distinct from Part 50's
+disclosure comprehension testing, cross-platform fee comparison research, perceived fee fairness as
+distinct from fee level, a worked rising-F&O-support-contacts-despite-full-disclosure diagnostic).
+Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q51, TRA
+Q42). Market Research 119->121pg, TRA 103->105pg. Master: 3,884 -> 3,888 pages.
+
+**Running total: 3,888 pages.**
