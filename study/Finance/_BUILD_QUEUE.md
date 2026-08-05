@@ -874,4 +874,16 @@ margin-call-sentiment diagnostic). Added matching glossary terms (Market Researc
 each (Market Research Q60, TRA Q51). Market Research 139->141pg, TRA 123->125pg. Master: 3,924 ->
 3,928 pages.
 
-**Running total: 3,928 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 60 (Physical Settlement &
+Expiry-Week Options Mechanics to TRA — the structural shift from cash to physical settlement for
+Indian stock options, why writers actively unwind near-the-money ITM positions into expiry, elevated
+volume/volatility concentrated at near-the-money strikes, Max Pain's stakes revisited under physical
+settlement, a worked choppy-expiry-day-price-action example) and PART 63 (Management-Tone Textual
+Analysis Research to Market Research — distinct from Part 54's IR-perception surveys, hedging-
+language/uncertainty-marker coding as a systematic linguistic signal, comparative/longitudinal
+tracking over single-snapshot reads, the critical ground-truthing limitation before trusting a
+linguistic shift as predictive, a worked rising-hedging-trend-vs-historical-outcomes validation
+example). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
+Q61, TRA Q52). Market Research 141->143pg, TRA 125->127pg. Master: 3,928 -> 3,932 pages.
+
+**Running total: 3,932 pages.**

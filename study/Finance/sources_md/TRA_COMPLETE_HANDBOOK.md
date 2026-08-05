@@ -1507,6 +1507,27 @@ Given the income-anchored, bond-proxy character (Part 59.1-59.2), REITs/InvITs t
 
 ---
 
+# PART 60 — PHYSICAL SETTLEMENT & EXPIRY-WEEK OPTIONS MECHANICS
+
+## 60.1 A structural shift from cash settlement — why it changes expiry-week behaviour
+Indian stock options moved from cash settlement to **physical settlement** — meaning an option that expires in-the-money results in actual delivery of the underlying shares (the option writer must deliver, or the buyer must take delivery and pay/receive the full contract value) rather than simply exchanging the cash difference between strike and expiry price, the mechanism this handbook's earlier options material (Part 5) implicitly assumed. This structural difference creates genuine, distinct expiry-week technical dynamics a TRA should recognise, beyond the general expiry-week volatility this handbook has touched on elsewhere.
+
+## 60.2 Why option writers actively avoid unwanted physical delivery — the expiry-week unwind dynamic
+Many option writers (particularly those who wrote options as part of a hedging or income strategy, not to actually take or make delivery of shares) have a strong practical incentive to **close out** in-the-money short positions before expiry rather than let them settle physically — physical settlement requires margin for the full delivery obligation (a materially larger capital commitment than the option premium alone) and creates operational complexity most non-delivery-focused participants prefer to avoid. This produces a predictable pattern of **unwinding activity concentrated in the final expiry sessions** specifically in options trading meaningfully in-the-money, distinct from ordinary option-chain OI unwinding (Part 37) driven purely by directional view changes.
+
+## 60.3 Elevated volume and volatility in near-the-money strikes into expiry
+As expiry approaches, options trading close to the current underlying price (near-the-money) see disproportionately concentrated volume and can show unusually sharp, fast moves — since a stock's final settlement price relative to nearby strikes determines a large number of option positions' physical-delivery obligations simultaneously, creating concentrated hedging/unwinding flows around those specific price levels in the underlying itself during the expiry session, a distinct microstructure effect layered on top of the ordinary technical picture (extending Part 43's order-flow-around-known-events theme to the specific, physical-settlement-driven expiry context).
+
+## 60.4 The "max pain" concept revisited with physical-settlement stakes
+Part 37.3 introduced Max Pain as a probabilistic tendency for price to gravitate toward the strike minimizing aggregate option-writer payout by expiry. Under physical settlement, the stakes behind this tendency are arguably higher than under cash settlement, since option writers face not just a cash payout but a full delivery/margin obligation if a large number of options expire meaningfully in-the-money — meaning the economic incentive for large, well-capitalised writers to influence price toward a more favourable settlement level (through their own hedging-related trading, not manipulation) may be somewhat stronger under physical settlement, though a TRA should still treat Max Pain as one probabilistic input, not a rule, consistent with Part 37.3's original caution.
+
+## 60.5 Worked example — reading unusual expiry-day price action in a heavily-optioned stock
+*A stock with substantial open interest in options a few percentage points out-of-the-money shows unusually sharp, choppy intraday price action specifically in the final trading session before monthly expiry, with price oscillating around a level that would leave a large share of open option positions near the money rather than clearly in- or out-of-the-money.*
+
+**Model answer.** This pattern is consistent with the expiry-week dynamics specific to physical settlement (Part 60.2-60.3): a large volume of option writers with positions near the current price have real incentive to actively manage their exposure into the close, given the meaningfully larger capital and operational implications of physical delivery versus simply letting a cash-settled option expire — this concentrated hedging and unwinding activity, not purely directional conviction about the stock's fundamentals, is a plausible driver of the choppy, level-oscillating price action. A TRA should recognise this specific expiry-session price action as a distinct, mechanically-driven microstructure phenomenon (Part 60.4's Max-Pain-adjacent dynamic) rather than reading it as a genuine, fundamentals-or-technically-driven signal about the stock's likely direction after expiry passes — the appropriate response is treating expiry-day price action in a heavily-optioned name with added caution, and waiting for the first full session after expiry (once this mechanical pressure has cleared) before drawing directional conclusions from the stock's chart.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1661,5 +1682,8 @@ Given the income-anchored, bond-proxy character (Part 59.1-59.2), REITs/InvITs t
 
 51. **Q: A REIT's unit price falls 2% exactly on its quarterly ex-distribution date, then falls further the following week alongside an unexpectedly hawkish rate-policy surprise. How should a TRA read these two moves differently?**
     A: Per Part 59.5 — the ex-distribution decline (Part 59.3) is the expected, mechanical price adjustment for the distribution paid out, not a genuine technical signal, the same discipline applied to any known corporate-action price adjustment. The subsequent, larger decline is the genuinely informative move, consistent with REITs'/InvITs' unusually high interest-rate sensitivity (Part 59.2) — a hawkish surprise raises the yield the instrument's distributions are compared against, mechanically pressuring its relative attractiveness, and should be read through that rate-sensitivity lens rather than combined with the first move into one undifferentiated breakdown signal.
+
+52. **Q: A heavily-optioned stock shows unusually sharp, choppy price action specifically in the final session before monthly expiry, oscillating around a level leaving many option positions near the money. Should a TRA read this as a genuine directional signal?**
+    A: No (Part 60.5) — this pattern is consistent with expiry-week physical-settlement dynamics (Part 60.2-60.3): option writers actively managing exposure to avoid unwanted delivery obligations, not fundamentals-or-technically-driven conviction, plausibly drives the choppy, level-oscillating action. A TRA should treat expiry-day price action in a heavily-optioned name with added caution and wait for the first full post-expiry session, once this mechanical pressure has cleared, before drawing directional conclusions.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
