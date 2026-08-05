@@ -645,4 +645,15 @@ trigger for targeted primary follow-up rather than a standalone finding, a worke
 surge diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market
 Research Q41, TRA Q32). Market Research 96->98pg, TRA 81->83pg. Master: 3,839 -> 3,843 pages.
 
-**Running total: 3,843 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 41 (Harmonic Patterns to TRA
+— precise Fibonacci-ratio X-A-B-C-D structures distinct from Part 2's visual-shape chart patterns,
+the four classic Gartley/Bat/Butterfly/Crab templates, the Potential Reversal Zone, confluence
+with volume-profile/swing-level evidence, a worked Bat-pattern-plus-VAH-confluence example) and
+PART 44 (Advisor/Distribution-Channel Research to Market Research — researching the IFA/MFD/RM
+intermediary as a distinct subject from the end investor, advisor satisfaction/needs research, RM
+productivity research, the double-blind-spot risk of researching only one side of the channel, a
+worked advisor-positive-vs-end-investor-risk-misunderstanding reconciliation example). Added
+matching glossary terms (Market Research) and one new Q&A each (Market Research Q42, TRA Q33).
+Market Research 98->100pg (milestone: crossed 100pg), TRA 83->85pg. Master: 3,843 -> 3,847 pages.
+
+**Running total: 3,847 pages.**
