@@ -812,4 +812,16 @@ headcount-by-function as a confirming lagging signal, a worked market-entry hiri
 diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
 Q55, TRA Q46). Market Research 128->130pg, TRA 112->114pg. Master: 3,902 -> 3,906 pages.
 
-**Running total: 3,906 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 55 (USD/INR as a Standalone
+Technical Market to TRA — from a macro-input role (Part 15.2) to a directly tradeable currency-
+derivatives chart, round-number psychology, RBI intervention zones creating a distinct policy-
+driven ceiling/floor dynamic, offshore NDF market cues as an ADR-style overnight signal, a worked
+contained-depreciation-pace-near-a-round-number example) and PART 58 (Cohort Analysis & Retention-
+Curve Methodology to Market Research — distinct from Part 21's single-number CLV output, the cohort
+table's row/column/diagonal reading, retention-curve flattening as more diagnostic than any single
+month's number, cohort-vs-cohort comparison as a rigorous non-experimental evaluation method, a
+worked onboarding-redesign Month-1-vs-Month-4 divergence example). Added matching glossary terms
+(Market Research) and one new Q&A each (Market Research Q56, TRA Q47). Market Research 130->132pg,
+TRA 114->116pg. Master: 3,906 -> 3,910 pages.
+
+**Running total: 3,910 pages.**

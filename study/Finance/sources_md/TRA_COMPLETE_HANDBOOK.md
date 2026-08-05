@@ -1402,6 +1402,27 @@ SEBI's disclosure regulations set specific **thresholds** (a minimum transaction
 
 ---
 
+# PART 55 — USD/INR AS A STANDALONE TECHNICAL MARKET
+
+## 55.1 From a macro input to a directly tradeable technical chart
+Part 15.2 covered USD/INR purely as one leg of an intermarket relationship — a macro input explaining pressure on equity valuations or import-cost inflation. This Part covers USD/INR differently: as a **directly tradeable instrument in its own right** via NSE/BSE currency derivatives, with its own price chart, its own technical structure, and its own distinct set of participants and drivers — a genuinely different analytical lens from treating the rupee purely as a background macro variable feeding into an equity thesis.
+
+## 55.2 Applying the standard technical toolkit — and what's genuinely different about it
+USD/INR charts respond to the same core technical toolkit this handbook has built throughout (trend, support/resistance, moving averages, RSI/MACD — Parts 1-3), but with meaningfully different behavioural characteristics than an equity index: currency pairs typically show **lower day-to-day volatility** than individual equities but can move sharply and persistently on macro catalysts (RBI policy, US Fed decisions, crude oil shocks per Part 15.2), and technical levels in USD/INR often carry genuine psychological weight at round numbers (a "83" or "84" handle) given how widely referenced these levels are in financial media and corporate hedging conversations, a round-number effect similar to but often more pronounced than the equivalent Nifty round-number psychology (Part 2).
+
+## 55.3 RBI intervention zones — a distinct, policy-driven technical ceiling/floor dynamic
+A defining feature specific to USD/INR (distinct from most freely-floating currency pairs) is the **Reserve Bank of India's active management** of excessive volatility — the RBI is understood by market participants to intervene (buying or selling dollars in the market) to smooth excessive rupee moves, particularly to defend against rapid depreciation past levels perceived as destabilising, without operating a fixed peg. This creates a distinct technical dynamic: USD/INR can show **unusually contained, gradual price action** relative to what pure market forces alone might produce, and sharp, sudden moves are more likely to draw active RBI counter-pressure than an equivalent-sized move in a currency without this kind of managed-float dynamic — a TRA analysing USD/INR technicals should factor this policy-driven dampening explicitly into expectations, distinct from how they'd read a comparable chart pattern on an unmanaged instrument.
+
+## 55.4 NDF (Non-Deliverable Forward) market cues — an offshore signal worth cross-checking
+The **offshore NDF (Non-Deliverable Forward) market** for the rupee (traded outside India, in centres like Singapore and London, settled in USD without requiring actual rupee delivery) often trades and reacts to news slightly ahead of or alongside the onshore market, particularly around global risk-off events occurring outside Indian market hours — a TRA checking overnight NDF levels ahead of the domestic USD/INR open provides a genuinely useful pre-market cross-check, directly analogous in function to Part 36's ADR-NSE overnight-signal logic, here applied to the currency market specifically rather than individual equities.
+
+## 55.5 Worked example — reading USD/INR technicals through a policy-management lens
+*USD/INR has been grinding steadily higher (rupee depreciating) over several weeks, approaching a psychologically significant round-number level, with the pace of the move notably slower and more contained than a comparable-sized move seen in other emerging-market currencies over the same period, amid similar global dollar-strength conditions.*
+
+**Model answer.** The notably slower, more contained pace relative to peer emerging-market currencies facing similar global dollar-strength pressure (Part 55.3) is consistent with active RBI smoothing operations dampening the pace of depreciation, rather than the rupee being structurally more resilient to the same macro pressure — a TRA should read this contained pace as evidence of policy management at work, not necessarily as a signal the underlying pressure has weakened. As USD/INR approaches the psychologically significant round-number level (Part 55.2), the combination of proximity to a widely-watched level and the known tendency for RBI activity to intensify around levels perceived as destabilising (Part 55.3) suggests a TRA should expect potential resistance to further, faster depreciation specifically around this zone — not because of ordinary chart-based technical resistance alone, but because of the added, policy-driven dynamic layered on top of it, a genuinely distinct interpretive lens from reading an equivalent round-number approach on an unmanaged instrument.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1541,5 +1562,8 @@ SEBI's disclosure regulations set specific **thresholds** (a minimum transaction
 
 46. **Q: A senior executive discloses an open-market share purchase immediately after the trading window reopens following strong quarterly results, and the purchase is not part of any previously-disclosed structured trading plan. What makes the structure of this purchase more informative than its timing alone?**
     A: Per Part 54.5 — the timing is mechanically expected (Part 54.2), since insiders are barred from trading during the preceding closed window regardless of intent, so clustering right after reopening isn't itself unusual. The discretionary, non-structured-plan nature of the purchase (Part 54.3) is what makes it informative — it reflects an active decision made with the just-announced results already in hand, a meaningfully stronger real-time conviction signal than the same purchase would be if executing a pre-committed plan set months earlier.
+
+47. **Q: USD/INR has been depreciating steadily but noticeably more slowly than peer emerging-market currencies under similar global dollar-strength conditions, now approaching a psychologically significant round-number level. How should a TRA interpret the slower pace, and what should they expect as it nears that level?**
+    A: Per Part 55.5 — the contained pace relative to peers is more plausibly explained by active RBI smoothing operations (Part 55.3) than by the rupee being structurally more resilient to the same macro pressure. As the level is approached, a TRA should expect potential resistance to further, faster depreciation specifically around this zone — not from ordinary chart-based technical resistance alone, but from the added, policy-driven dampening layered on top of it, a genuinely distinct interpretive lens from reading the same round-number approach on an unmanaged currency.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
