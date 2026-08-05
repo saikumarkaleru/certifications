@@ -960,6 +960,27 @@ A large block purchase occurring right at a well-established technical support l
 
 ---
 
+# PART 34 — READING CORPORATE ANNOUNCEMENTS FOR TECHNICAL SETUPS
+
+## 34.1 Beyond results day — the broader corporate-announcements calendar
+Part 32 covered quarterly results specifically as the single largest, most predictable source of gaps. This Part covers the broader stream of corporate announcements (buybacks, bonus/rights issues, board-meeting intimations, dividend declarations) that exchanges require listed companies to disclose, each creating its own distinct, recognisable technical pattern worth knowing beyond the results-day playbook.
+
+## 34.2 Buyback announcements — the technical signature of a floor-supporting event
+A buyback announcement (Equity & Capital Markets material's corporate-actions chapter covers the mechanics) typically creates a specific technical pattern: the announcement itself often produces an immediate positive gap (a signal of management confidence, per the equity-research material's buyback-signalling discussion), followed by a period where the ongoing buyback execution can act as a soft, mechanical floor under the stock (the company itself is a active, price-sensitive buyer in the market during the buyback window) — a TRA should track the buyback's disclosed price range and remaining authorised quantity as a genuinely distinct, company-specific support mechanism, different in kind from an organic technical support level formed purely by prior trading activity.
+
+## 34.3 Board-meeting intimations — anticipating, not predicting, a catalyst
+Exchanges require companies to announce upcoming board meetings in advance when a price-sensitive matter (results, a fundraise, an M&A decision) will be discussed — this creates a **known, dated catalyst window** a TRA can anticipate (implied volatility in the stock's options, Part 5.5/21, often rises into a board-meeting date for exactly this reason, mirroring the pre-results IV pattern from Part 32.2) without knowing the outcome. The technical discipline: treating an upcoming board-meeting date the same way Part 32's results-day framework treats an earnings date — as a scheduled event to manage position sizing and risk around, not to trade on a directional guess of the undisclosed outcome.
+
+## 34.4 Bonus and rights issue announcements — the mechanical price-adjustment trap
+Extending the Part 15 (corporate-actions) mechanics: a bonus or rights announcement, once the ex-date arrives, produces a purely mechanical price adjustment (Part 15's "cosmetic, no value change" framing) — a critical, easily-missed technical trap is failing to adjust a chart's historical price series for this mechanical change, which can make a stock appear to have "broken support" or "gapped down" on the ex-date when in fact nothing real happened to its underlying value or trend — a TRA must always verify whether an apparent technical break coincides with an unadjusted corporate action before treating it as a genuine signal.
+
+## 34.5 Worked example — distinguishing a genuine breakdown from an unadjusted corporate-action artifact
+*A stock's chart shows an apparent 15% single-day "gap down" that breaks a well-established support level. Checking the company's disclosures reveals a 1:6 bonus issue with that exact date as the ex-date.*
+
+**Model answer.** This is a textbook Part 34.4 trap, not a genuine technical breakdown — a 1:6 bonus issue mechanically increases the share count sevenfold and reduces the price to roughly 1/7th, an adjustment that, if the charting data hasn't been properly bonus-adjusted, would show up as an enormous, entirely artificial "gap down" that has nothing to do with any change in the company's value, trend, or genuine support/resistance structure. The correct response is confirming the charting platform/data source has applied the bonus adjustment retroactively across the historical series (Part 15's adjustment discipline) — if it hasn't, the apparent support break should be disregarded entirely as a data artifact, not analysed as a genuine technical event; this is precisely the kind of verification step (checking for an unadjusted corporate action before trusting an unusual chart pattern) that separates a careful TRA from one who would otherwise publish a confidently wrong "support broken" call based on nothing more than a charting-data error.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**

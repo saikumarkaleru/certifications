@@ -561,4 +561,15 @@ perception finding-to-fix translation, influencer campaign root-cause diagnosis,
 vs-diagnosis limits) — both appendices now cover every Part again. Market Research 82->83pg, TRA
 68->69pg. Master: 3,812 -> 3,814 pages.
 
-**Running total: 3,814 pages.**
+**2026-08-05, autonomous wake-cycle: frontmatter re-sync + 2 more new parts**: resynced
+frontmatter, then added PART 37 (Mobile App UX Research & In-App Analytics to Market Research —
+directly relevant given broking/trading apps are a huge category for this compilation's target
+roles: in-app micro-surveys, app-store review mining for competitive benchmarking and version-
+regression detection, mobile-specific usability considerations incl. own-device testing, a worked
+Android-vs-iOS KYC-upload activation-drop diagnostic) and PART 34 (Reading Corporate Announcements
+for Technical Setups to TRA — buyback announcements as a mechanical floor-support mechanism,
+board-meeting intimations as known-dated-catalyst windows, the bonus/rights unadjusted-chart-data
+trap, a worked example distinguishing a genuine breakdown from an unadjusted-bonus-issue
+artifact). Market Research 83->85pg, TRA 69->71pg. Master: 3,814 -> 3,818 pages.
+
+**Running total: 3,818 pages.**
