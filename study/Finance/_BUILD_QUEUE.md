@@ -824,4 +824,16 @@ worked onboarding-redesign Month-1-vs-Month-4 divergence example). Added matchin
 (Market Research) and one new Q&A each (Market Research Q56, TRA Q47). Market Research 130->132pg,
 TRA 114->116pg. Master: 3,906 -> 3,910 pages.
 
-**Running total: 3,910 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 56 (ASM/GSM Surveillance
+Framework to TRA — a preventive, pattern-triggered restriction distinct from Part 50's reactive
+circuit filters, margin/call-auction restrictions structurally altering a stock's tradeable
+character, stage-trajectory tracking as a regulator-validated risk-trend signal, the classification
+announcement itself as a distinct market-moving event, a worked GSM-Stage-2 technical-inapplicability
+example) and PART 59 (Post-Purchase Dissonance & Investment-Regret Research to Market Research —
+distinct from pre-decision behavioural/comprehension research, why financial decisions are a high-
+dissonance-risk category, dissonance-reduction behaviours as an observable proxy, regret-timing
+window analysis as the most actionable application, a worked early-30-day exit-request-spike
+diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
+Q57, TRA Q48). Market Research 132->134pg, TRA 116->118pg. Master: 3,910 -> 3,914 pages.
+
+**Running total: 3,914 pages.**
