@@ -702,4 +702,16 @@ implementation impact tracking, a worked SEBI margin-requirement-increase impact
 Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q46, TRA
 Q37). Market Research 108->110pg, TRA 92->94pg. Master: 3,862 -> 3,866 pages.
 
-**Running total: 3,866 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 46 (Anchored VWAP to TRA —
+distinct from Part 18.2's execution-benchmark framing of VWAP, session VWAP as an intraday
+directional-bias reference, AVWAP generalising the calculation to any significant anchor date, why
+AVWAP from a major low carries genuine behavioural support weight from actual holders' cost basis,
+a worked post-results-low AVWAP retest example) and PART 49 (GIFT City, Cross-Border & NRI Investor
+Research to Market Research — a regulation/geography-defined segment distinct from wealth-tier
+segmentation, geography-specific NRI sub-segmentation across Gulf/US-UK-Canada/other, GIFT City's
+dollar-denominated product context, the relationship-triggered rather than self-directed customer
+journey, a worked NRI-product research-scoping example). Added matching glossary terms (Market
+Research) and one new Q&A each (Market Research Q47, TRA Q38). Market Research 110->112pg, TRA
+94->96pg. Master: 3,866 -> 3,870 pages.
+
+**Running total: 3,870 pages.**

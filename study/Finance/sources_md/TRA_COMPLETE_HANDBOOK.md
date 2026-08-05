@@ -1213,6 +1213,27 @@ Skew steepens further ahead of known event risk (Part 32's results-day framework
 
 ---
 
+# PART 46 — ANCHORED VWAP AS AN INTRADAY & POSITIONAL REFERENCE LEVEL
+
+## 46.1 From execution benchmark to technical reference level — a distinct use case for the same calculation
+Part 18.2 introduced VWAP purely as an **execution benchmark** — the standard a desk measures its own fill quality against. This Part covers a genuinely different use of the same underlying calculation: VWAP as a **technical reference level in its own right**, used by discretionary and systematic traders alike to gauge intraday and positional bias, independent of whether anyone is actually trying to match VWAP for execution purposes.
+
+## 46.2 Standard session VWAP — reading price's position relative to the running average
+The standard, most common VWAP calculation resets each session and runs cumulatively from the day's open — price trading **above** session VWAP through the day is read as the day's buyers being, on average, in control (the average participant who has traded today has done so at a lower price than the current one), while price **below** VWAP indicates the reverse; many institutional and algorithmic intraday strategies use a simple "buy dips toward VWAP in an uptrend, sell rallies toward VWAP in a downtrend" framework, treating VWAP itself as a dynamic intraday support/resistance-like reference distinct from a moving average (Part 3.1) since it's volume-weighted and session-anchored rather than time-period-based.
+
+## 46.3 Anchored VWAP — extending the calculation from any significant starting point, not just the session open
+**Anchored VWAP (AVWAP)** generalises the same volume-weighted-average calculation to start from any chosen significant date or event, rather than resetting at each session's open — anchoring to a major swing low, an earnings-results date, or a significant corporate-announcement date, for instance, gives the volume-weighted average price of everyone who has traded *since that specific event*, a genuinely different and often more analytically meaningful reference than a fixed-lookback moving average (Part 3.1), since the anchor point is chosen for its actual significance to the stock's story rather than an arbitrary period length like 50 or 200 days.
+
+## 46.4 Why AVWAP from a major low often acts as strong support on a retest
+An AVWAP anchored to a significant swing low represents the average price paid by every buyer who has entered the position since that low was made — meaning a large share of the position's holders are sitting at an average cost at or near that AVWAP line, giving it a genuine behavioural reason to act as support on a retest (a meaningful cohort of holders with a real, unrealised-gain-protecting incentive to defend that level) distinct from an ordinary moving average's more mechanical, trend-following basis — a TRA using AVWAP from a documented significant low as a support reference is grounding the level in an economically meaningful "who's actually positioned where" argument, not just a chart-pattern observation.
+
+## 46.5 Worked example — using AVWAP from a post-results low to frame a subsequent pullback
+*A stock gapped down sharply on weak quarterly results, found a low, and has since rallied 18% over six weeks. AVWAP anchored to that post-results low sits at ₹342, and the stock is now pulling back toward that level for the first time since the rally began, on light volume.*
+
+**Model answer.** The AVWAP anchored to the post-results low (Part 46.3) at ₹342 represents the average cost basis of every buyer who has accumulated the stock during this entire 18% rally — a meaningful cohort of relatively recent buyers with a real incentive to defend that level on a first retest (Part 46.4), materially different in character from an arbitrary round-number or a generic moving-average level. The light volume on the pullback itself is a secondary but supportive observation (consistent with profit-taking/consolidation rather than aggressive new selling pressure) — the combined read is that this AVWAP retest is a higher-quality support test to watch than a similar pullback to an ordinary 50-day moving average would represent, precisely because the AVWAP line is anchored to an event (the post-results low) with real, identifiable significance to the stock's recent story, giving the "why would this level hold" question a more specific, evidence-based answer than a standard indicator-based level typically provides.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1325,5 +1346,8 @@ Skew steepens further ahead of known event risk (Part 32's results-day framework
 
 37. **Q: Ahead of an RBI policy decision, Nifty's put skew widens notably more than its typical pre-event pattern, while overall India VIX rises only modestly. What does this tell you beyond what VIX alone shows?**
     A: Per Part 45.5 — VIX measures the overall level of expected volatility, while skew steepness (Part 45.3) measures the market's relative willingness to pay specifically for downside protection. The disproportionate put-skew widening with only a modest VIX rise indicates targeted, direction-specific hedging demand around this event — a more granular fear signal than VIX's level alone, worth flagging as both a sentiment input and a distinct trading consideration separate from the underlying's own chart-based signal, given skew's tendency to normalise post-event (Part 45.4).
+
+38. **Q: A stock rallies 18% over six weeks off a post-results low, then pulls back on light volume toward the AVWAP anchored to that low. Why is this a higher-quality support test than a pullback to an ordinary 50-day moving average?**
+    A: Per Part 46.5 — the AVWAP anchored to the post-results low (Part 46.3) represents the actual average cost basis of every buyer who has accumulated during the rally, giving it a genuine behavioural reason to hold on a retest (Part 46.4) — a real cohort of holders with an incentive to defend it — versus an ordinary moving average's more mechanical, trend-following basis with no such "who's actually positioned where" grounding. The light pullback volume is a secondary supportive observation, consistent with consolidation rather than aggressive new selling.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
