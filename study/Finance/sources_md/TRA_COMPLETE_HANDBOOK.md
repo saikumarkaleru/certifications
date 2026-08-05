@@ -1360,6 +1360,27 @@ The critical limitation distinct from live intraday data sources covered elsewhe
 
 ---
 
+# PART 53 — INDEX RECONSTITUTION & REBALANCING FLOW EFFECTS
+
+## 53.1 A distinct, scheduled, mechanically-predictable flow event
+This handbook has covered ETF creation/redemption flows generally (Part 35) and index-heavyweight sensitivity to those flows (Part 35.3). **Index reconstitution** is a distinct, more specific event: the periodic (semi-annual for Nifty/Sensex, with other indices on their own schedules) review and update of which stocks belong in a benchmark index, and at what weight — a scheduled, publicly-announced, and mechanically-predictable event, distinct from the ongoing, continuous ETF flow dynamics Part 35 covers.
+
+## 53.2 The mechanical buying/selling that inclusion and exclusion force
+When a stock is **added** to a major index (Nifty 50, Sensex, or a sector index), every fund that tracks that index (passively, via an index fund/ETF) is mechanically required to buy the stock in index-proportional weight, regardless of the fund manager's own view on the stock's valuation or prospects — pure, price-insensitive, mandated buying. The reverse is true for a stock being **excluded**: every index-tracking fund must mechanically sell, regardless of view. This mechanical flow is fundamentally different in character from Part 20.5's fundamentals-informed sector-rotation flow — it is forced, not discretionary, and its size is roughly calculable in advance from the known scale of assets tracking that index.
+
+## 53.3 The "buy the rumour, sell the news" pattern around reconstitution announcements
+A well-documented empirical pattern around index reconstitution announcements: a stock widely *expected* to be added (based on public float-adjusted market-cap screening criteria most market participants can approximate) often begins rallying **ahead of** the official announcement, as active traders and arbitrageurs anticipate the coming mechanical index-fund buying and position ahead of it — followed, once the addition is officially confirmed and the actual mechanical buying occurs on the effective date, by a **"sell the news"** fade as the anticipatory positioning gets unwound, a pattern directly analogous to the pre-event-anticipation-then-fade dynamic this handbook covers in the results-day (Part 32) and skew-normalisation (Part 45.4) contexts, here specifically applied to index-reconstitution events.
+
+## 53.4 Why the effective date itself often sees outsized volume, not necessarily outsized price movement
+On the actual **effective date** of a reconstitution (when index funds must complete their mechanical rebalancing trades), a TRA should expect unusually heavy volume specifically in the closing auction/session (many index funds specifically target executing their rebalancing trades at the official closing price to minimise tracking error against the index, which is itself calculated using closing prices) — but not necessarily a large price move, since much of the anticipated flow may have already been priced in via the Part 53.3 pre-announcement dynamic; a TRA should distinguish the mechanical, closing-auction-concentrated volume spike (expected and largely uninformative about future direction) from any residual price move that occurs alongside it (potentially more informative, if it exceeds what the known mechanical flow alone would explain).
+
+## 53.5 Worked example — trading around an anticipated index-addition event
+*A mid-cap stock is widely expected by market participants to be added to a benchmark index at the next semi-annual reconstitution, based on its float-adjusted market cap now exceeding the known inclusion threshold. The stock has already rallied 15% over the six weeks since this became apparent, ahead of the official announcement.*
+
+**Model answer.** The 15% pre-announcement rally is consistent with the well-documented anticipatory-positioning pattern (Part 53.3) — traders front-running the expected mechanical index-fund buying — meaning a meaningful portion of the stock's eventual index-inclusion-driven demand may already be reflected in the current price before the mechanical buying itself even occurs. A TRA evaluating a fresh long position at this point should weigh the "sell the news" fade risk (Part 53.3) explicitly: the actual effective-date mechanical buying (Part 53.4) may already be substantially anticipated, and the historical pattern of anticipatory rallies partially reversing once the confirmed event's mechanical flow is absorbed is a real risk a late entrant should price in, rather than assuming the stock has unlimited further upside purely because the index-inclusion is confirmed — the more attractive risk/reward for this kind of trade is typically earlier, before the anticipatory rally has already run, not after most of the market has already positioned for the same well-telegraphed mechanical event.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1493,5 +1514,8 @@ The critical limitation distinct from live intraday data sources covered elsewhe
 
 44. **Q: A well-regarded, large-AUM mutual fund scheme's latest monthly portfolio disclosure shows a brand-new 2%-weight position in a mid-cap stock with no notable prior technical strength or analyst coverage. How should a TRA treat this, given the disclosure's reporting lag?**
     A: Per Part 52.5 — a new entry at a meaningful weight (Part 52.3) is a genuine, threshold-crossing conviction signal worth flagging, more significant than an incremental weight change in an existing holding. But the reporting-lag caveat (Part 52.4) means this reflects a month-end snapshot, not real-time positioning, with accumulation price/timing unknown — the correct response is treating it as one meaningful input for further research (checking for a fundamental catalyst, watching subsequent months' disclosures for corroborating entries), not as a live, standalone trading signal.
+
+45. **Q: A stock widely expected to be added to a benchmark index at the next reconstitution has already rallied 15% over six weeks ahead of the official announcement. Should a TRA expect further meaningful upside once the addition is confirmed?**
+    A: Not automatically (Part 53.5) — the pre-announcement rally is consistent with anticipatory positioning ahead of the expected mechanical index-fund buying (Part 53.3), meaning a meaningful portion of the eventual inclusion-driven demand may already be priced in. A late entrant should weigh the "sell the news" fade risk explicitly, since the effective-date mechanical buying (Part 53.4) may already be substantially anticipated — the more attractive risk/reward for this kind of trade is typically earlier, before the anticipatory rally has already run.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

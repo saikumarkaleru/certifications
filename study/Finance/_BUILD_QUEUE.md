@@ -787,4 +787,17 @@ compliance-adjacent function, a worked strong-metrics-vs-compliance-flag reconci
 Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q53, TRA
 Q44). Market Research 123->126pg, TRA 107->110pg. Master: 3,892 -> 3,898 pages.
 
-**Running total: 3,898 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 53 (Index Reconstitution &
+Rebalancing Flow Effects to TRA — a scheduled, mechanically-predictable event distinct from Part
+35's ongoing ETF-flow dynamics, forced price-insensitive index-fund buying/selling on inclusion/
+exclusion, the "buy the rumour, sell the news" anticipatory-rally-then-fade pattern, effective-date
+closing-auction volume vs price-move distinction, a worked pre-announcement-rally entry-risk
+example) and PART 56 (Gamification Research to Market Research — the dual-use-design tension unique
+to trading apps, engagement-metric research vs a distinct behaviour-quality measurement layer,
+regulatory attention as a research-scoping input rather than a compliance afterthought, segment-
+specific vulnerability research prioritising new/inexperienced traders, a worked trading-streak-
+pilot segmented-harm diagnostic). Added matching glossary terms (Market Research) and one new Q&A
+each (Market Research Q54, TRA Q45). Market Research 126->128pg, TRA 110->112pg. Master: 3,898 ->
+3,902 pages.
+
+**Running total: 3,902 pages.**
