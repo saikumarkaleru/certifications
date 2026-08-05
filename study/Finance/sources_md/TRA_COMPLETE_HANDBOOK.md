@@ -1146,6 +1146,27 @@ P&F has its own long-standing technique for **projecting price targets**, distin
 
 ---
 
+# PART 43 — READING THE ORDER BOOK: BID-ASK IMBALANCE & ORDER FLOW FOOTPRINT CHARTS
+
+## 43.1 A fourth data layer — what's *about to* trade, not what already has
+Every technique so far in this handbook (candlesticks, volume profile Part 39, P&F Part 42) analyses trades that have **already happened**. **Order book (Depth of Market / DOM) reading** is a genuinely different layer: it studies the live, resting buy and sell orders **waiting to trade** at each price level above and below the current price — a forward-looking view of immediate supply and demand, distinct from every historical-trade-based technique covered so far, and useful on a much shorter timeframe (seconds to minutes) than most of this handbook's other tools.
+
+## 43.2 Bid-ask imbalance — reading the live tilt between buyers and sellers
+**Bid-ask imbalance** compares the total resting order size on the bid (buy) side versus the ask (sell) side within a chosen number of price levels near the current price — a heavy imbalance toward the bid side (more resting buy interest than sell interest close to the current price) is read as short-term directional pressure favouring an up-move as those buy orders get filled and price is pulled toward the ask, and vice versa for ask-side imbalance. This is a genuinely live, moment-to-moment signal that updates continuously as orders are placed, cancelled, and filled — a fundamentally different cadence from any chart-based indicator in this handbook, which only updates once a candle/bar closes or a trade prints.
+
+## 43.3 The critical caveat — resting orders are not commitments, and can vanish instantly
+The single most important caveat to bid-ask imbalance reading, extending Part 18.3's iceberg-order discussion: resting orders visible in the order book can be **cancelled instantly**, meaning a heavy bid-side imbalance can evaporate the moment price approaches it if those orders were placed with no intention of actually being filled (a practice sometimes called "spoofing" where visible size is used to influence perception rather than to genuinely trade — illegal in regulated markets but a real reason to treat visible depth cautiously) — a TRA using order-book imbalance should treat it as a fast-decaying, unreliable-in-isolation signal, materially weaker evidence than a completed trade shown in volume-profile data (Part 39), which by definition already happened and cannot be withdrawn.
+
+## 43.4 Order flow / footprint charts — visualising buy versus sell volume within each candle
+**Footprint charts** (also called order-flow charts) extend the volume-profile idea (Part 39) down to the level of a single candle: instead of one aggregate volume bar per candle, a footprint chart shows the volume that traded at the **bid** versus the **ask** at every individual price level within that candle — revealing whether the volume inside an up-candle, for instance, was genuinely driven by aggressive buying (large ask-side volume, buyers lifting offers) or was more mixed/passive than the candle's simple green colour alone would suggest. This is a materially more granular view than any technique introduced earlier in this handbook, and is primarily used by very short-timeframe, execution-focused traders rather than for longer-horizon technical calls.
+
+## 43.5 Worked example — reading a footprint chart to validate a breakout candle's true conviction
+*A stock breaks above a well-established resistance level (Part 2) on an up-candle with strong total volume. The footprint chart for that candle shows the bulk of the volume traded at the ask (aggressive buying) in the upper half of the candle's range, but noticeably more volume traded at the bid (aggressive selling, absorbed by buyers) in the lower half.*
+
+**Model answer.** The strong ask-side volume concentrated in the upper half of the breakout candle (Part 43.4) is consistent with genuine, aggressive buying conviction driving the move through resistance — a materially stronger read than a candle showing the same total volume but with volume split more evenly between bid and ask throughout, which would suggest a less decisive, more contested move. The bid-side volume in the lower half is not necessarily a red flag on its own — it can reflect normal two-sided participation as the level was being tested, and the fact that price still closed strongly in the upper range despite that selling suggests the buying pressure absorbed and overcame it. As with every signal in this handbook, this footprint read should be combined with the order-book-imbalance caveat (Part 43.3, since imbalance readings decay fast) and, where possible, a subsequent volume-profile check (Part 39) on whether price holds above the breakout level with continued acceptance in the following sessions, rather than treated as a standalone, one-candle confirmation of the breakout's durability.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -1249,5 +1270,8 @@ P&F has its own long-standing technique for **projecting price targets**, distin
 
 34. **Q: A P&F chart shows a Triple Top breakout after a five-column-wide base. What does the pattern itself tell you, and what does the horizontal count add?**
     A: Per Part 42.5 — the Triple Top breakout (Part 42.3) is the primary signal, meaningfully stronger than a single-attempt breakout since the resistance was genuinely tested and defended three times before giving way. The horizontal count (Part 42.4) converts the base's width into a mechanically-derived price target, which — like every projection technique in this handbook — should be weighed against independent confluence (a candlestick swing high, a volume-profile node, Part 39.3) rather than acted on as a guaranteed outcome on its own.
+
+35. **Q: A breakout candle above resistance shows strong total volume. A footprint chart reveals most of that volume traded at the ask in the upper half of the candle, with somewhat more bid-side volume in the lower half. How should a TRA read this, and what caveat applies to any order-book-based read?**
+    A: Per Part 43.5 — the strong ask-side volume concentrated in the upper half is consistent with genuine, aggressive buying conviction driving the breakout, a stronger read than the same total volume split evenly between bid and ask throughout; the lower-half bid volume isn't necessarily a red flag since price still closed strongly despite it. The key caveat (Part 43.3) is that order-book/footprint reads are fast-decaying and should be combined with a subsequent volume-profile acceptance check (Part 39) over following sessions, not treated as a standalone one-candle confirmation.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

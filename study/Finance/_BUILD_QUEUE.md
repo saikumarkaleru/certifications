@@ -668,4 +668,16 @@ reconciliation example). Added matching glossary terms (Market Research) and one
 (Market Research Q43, TRA Q34). Market Research 100->104pg, TRA 85->88pg. Master: 3,847 -> 3,854
 pages.
 
-**Running total: 3,854 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 43 (Reading the Order Book:
+Bid-Ask Imbalance & Order Flow Footprint Charts to TRA — a fourth, forward-looking data layer
+beyond historical-trade-based techniques, bid-ask imbalance and its fast-decaying/spoofing caveat
+extending Part 18.3's iceberg-order discussion, footprint charts extending Part 39's volume
+profile down to single-candle granularity, a worked breakout-candle footprint-validation example)
+and PART 46 (Support & Service Experience Research for Broking & Wealth Platforms to Market
+Research — distinct from Part 40's onboarding/trust research, Customer Effort Score vs NPS, First
+Contact Resolution as the diagnostic layer beneath CES, complaint-handling research under
+financial-services regulatory scrutiny, a worked NPS/CES-divergence trade-dispute diagnostic).
+Added matching glossary terms (Market Research) and one new Q&A each (Market Research Q44, TRA
+Q35). Market Research 104->106pg, TRA 88->90pg. Master: 3,854 -> 3,858 pages.
+
+**Running total: 3,858 pages.**
