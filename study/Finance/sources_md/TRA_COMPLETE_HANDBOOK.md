@@ -1864,6 +1864,27 @@ A composite scoring model requires the same walk-forward validation discipline t
 
 ---
 
+# PART 77 — TOTAL PROMOTER ENCUMBRANCE: SYNTHESISING PLEDGE & NDU INTO ONE RISK VIEW
+
+## 77.1 Why the two encumbrance mechanisms covered separately need a combined read
+Part 49 covered formal promoter share pledging with its LTV/invocation mechanics, and Part 72 covered Non-Disposal Undertakings as a distinct, less-visible encumbrance mechanism. This Part addresses the natural next step neither prior Part fully covers on its own: constructing a **combined, total-encumbrance view** of a promoter's holding — since a promoter's genuine financial-stress and float-availability picture depends on the *sum* of everything restricting their shares, not on formal pledge percentage read in isolation while NDU exposure goes unaccounted for.
+
+## 77.2 Why summing the two mechanisms isn't simply additive — different risk characters
+Combining pledge and NDU exposure into a single "total encumbrance %" figure requires care, since the two mechanisms carry genuinely different risk characters that a naive sum can obscure: pledge (Part 49) carries **price-triggered invocation risk** (a mechanical, LTV-threshold-driven forced-selling risk that activates specifically when price falls), while NDU (Part 72) carries **time-triggered restriction** (a fixed-duration contractual lock with no price-sensitivity at all) — a promoter with 20% pledged and 20% under NDU doesn't face a uniform "40% at risk of forced sale" picture; the pledge portion carries genuine price-contingent invocation risk while the NDU portion simply isn't tradeable until its fixed expiry regardless of price, meaning a TRA should report the two components separately even while acknowledging their combined effect on genuinely available float.
+
+## 77.3 The combined float-availability calculation — what's actually freely tradeable by the promoter
+For purposes of assessing how much of a promoter's nominal holding is genuinely available for the promoter to freely trade at will (a distinct question from invocation risk specifically), the relevant calculation is **total promoter holding minus pledged shares minus NDU-covered shares** — this combined, non-additive-in-risk-character but additive-in-availability figure gives a TRA the clearest single view of genuinely unencumbered promoter float, useful context when assessing (for example) how plausible a rumoured large promoter open-market sale might be, or how much of the promoter's stated holding could realistically back a further pledge or NDU without exceeding their genuinely available shares.
+
+## 77.4 Tracking the combined trend over time — the same discipline applied to a synthesised metric
+Just as Part 49.3 established tracking pledge trend (not just level) and Part 72.4 established tracking NDU expiry as a datable event, the combined total-encumbrance figure should itself be tracked as a **trend over successive disclosure periods** — a rising combined-encumbrance trend, even if driven by growth in one component while the other stays flat, represents the same underlying signal (increasing overall restriction on the promoter's genuinely free holding) this handbook's individual-mechanism material already flags, now visible more completely only when both components are tracked together rather than either read in isolation.
+
+## 77.5 Worked example — building a combined encumbrance view for a stressed mid-cap promoter
+*A mid-cap company's promoter holds 45% of the company. Formal disclosures show 18% of the promoter's holding is pledged (up from 12% two quarters ago), and separate credit-rating-agency references indicate an additional 10% is under an NDU tied to a group-financing arrangement, with no prior NDU disclosed before this quarter.*
+
+**Model answer.** Combining both mechanisms (Part 77.3): of the promoter's 45% total holding, 18 percentage points carry pledge-specific, price-contingent invocation risk (Part 77.2, and rising per Part 49.3's trend discipline), and a further 10 percentage points are NDU-restricted with no price-sensitivity but also no availability until the NDU's expiry (Part 72.4) — leaving genuinely unencumbered, freely-tradeable promoter float at roughly 17 percentage points of the company's total shares, materially less than the headline 45% promoter-holding figure alone would suggest. The combined trend (Part 77.4) — pledge rising, plus a newly-disclosed NDU that didn't previously exist — points to a broader pattern of increasing promoter-level financial-restructuring activity worth flagging explicitly and monitoring closely, a materially more complete risk picture than either the pledge trend or the NDU disclosure would provide read in isolation, and precisely the kind of synthesised view this handbook's per-mechanism material builds toward but doesn't complete without this combined framework.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2069,5 +2090,8 @@ A composite scoring model requires the same walk-forward validation discipline t
 
 68. **Q: A TRA builds a composite technical score from three equally-weighted, percentile-ranked factors — RS rank, volume-profile acceptance strength, and IV rank. Is validating that each factor is individually sensible enough to trust the composite score for live screening?**
     A: No (Part 76.5) — the factor selection is well-diversified (Part 76.2) and equal-weighting is a defensible default avoiding overfitting risk (Part 76.3), but a composite score is itself a systematic model requiring the same walk-forward validation this handbook applies to any backtested strategy (Part 76.4, Part 58.4). Each factor being individually reasonable doesn't guarantee the combination has genuine, validated predictive power until tested across multiple out-of-sample rolling windows.
+
+69. **Q: A promoter holds 45% of a company; 18% is formally pledged (up from 12% two quarters ago) and a further 10% is under a newly-disclosed NDU tied to a group-financing arrangement. What's the genuinely unencumbered, freely-tradeable promoter float, and why do the two encumbrance types need to be reported separately rather than just summed into one risk figure?**
+    A: Per Part 77.5 — genuinely unencumbered float is roughly 45% minus 18% minus 10% = 17 percentage points (Part 77.3). The two components must be reported separately because they carry different risk characters (Part 77.2): the pledged 18% carries price-contingent invocation risk, while the NDU-covered 10% is a fixed-duration restriction with no price-sensitivity at all — a rising pledge trend plus a newly-appeared NDU together point to broader promoter-level financial-restructuring activity worth flagging as a combined trend (Part 77.4).
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

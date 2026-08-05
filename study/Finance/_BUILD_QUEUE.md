@@ -1086,4 +1086,16 @@ each (Market Research Q77, TRA Q68). Market Research 176->178pg, TRA 160->162pg.
 **4,002 pages** — the compilation has officially crossed the 4,000-page milestone the user
 originally requested ("i need 2000 pages notes"), now at roughly 2x that original target.
 
-**Running total: 4,002 pages.**
+**2026-08-05, autonomous wake-cycle: 2 more new parts**: added PART 77 (Total Promoter Encumbrance
+to TRA — synthesising Part 49's pledge and Part 72's NDU material into one combined view, why the
+two mechanisms carry different risk characters and shouldn't be naively summed as uniform risk, the
+combined float-availability calculation, tracking the combined trend over successive disclosures, a
+worked 45%-holding/18%-pledge/10%-NDU float-availability example) and PART 80 (Push Notification
+Copy & Timing Optimization to Market Research — push notifications as the research subject rather
+than Part 71's ESM-delivery-mechanism use, opt-in-rate research as the foundational gate, send-time
+optimization as a distinct variable from copy, notification fatigue/frequency-cap research as an
+aggregate-not-per-notification concern, a worked strong-individual-metrics-but-rising-opt-out-rate
+diagnostic). Added matching glossary terms (Market Research) and one new Q&A each (Market Research
+Q78, TRA Q69). Market Research 178->181pg, TRA 162->164pg. Master: 4,002 -> 4,007 pages.
+
+**Running total: 4,007 pages.**
