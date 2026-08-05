@@ -2221,6 +2221,27 @@ Despite Part 93.2's general "usually not a negative signal" framing, a genuine e
 
 ---
 
+# PART 94 — INDEX OPTIONS FINAL SETTLEMENT PRICE — A DISTINCT CASH-SETTLEMENT MECHANISM
+
+## 94.1 A distinct settlement mechanism from Part 60's stock physical-settlement material
+Part 60 covered physical settlement's distinct expiry-week dynamics for **stock** options. Index options and futures (Nifty, Bank Nifty) work under a genuinely different mechanism a TRA must not conflate with the stock case: since an index itself cannot be physically delivered, index derivatives are **always cash-settled**, and critically, the **final settlement price** used for that cash settlement is not simply the index's closing tick — it's computed via a specific, defined formula distinct from the ordinary closing price.
+
+## 94.2 How the final settlement price is actually computed
+India's index derivatives final settlement price is calculated as the **volume-weighted average price of the index over a defined final window** (the last 30 minutes of trading on expiry day, snapshotted at fixed intervals and averaged), specifically designed to be more resistant to a single, sharp, potentially manipulative move in the index's closing seconds than a simple last-traded-price closing tick would be — a TRA should understand that "where the index closed" and "the actual final settlement price used for cash-settling all index derivatives" are not the same number, and the difference, while normally small, is a structurally real one arising directly from this averaging methodology.
+
+## 94.3 Why this creates a distinct incentive structure around the final settlement window specifically
+Because the settlement price is an average across the final window rather than a single closing print, the trading activity most consequential to derivatives payouts is concentrated across that **entire final-window period**, not just the closing seconds — this somewhat dampens (relative to a single-closing-tick mechanism) the incentive for a large position-holder to attempt influencing price only in the last few seconds, since doing so would move only one component of a broader averaging window rather than the full settlement reference itself, a structurally different incentive profile from Part 60.4's Max Pain discussion of stock-level settlement dynamics.
+
+## 94.4 The stock-vs-index expiry-day comparison a TRA must keep straight
+A TRA covering both a heavily-optioned individual stock and an index on the same expiry day must apply genuinely different frameworks simultaneously: the stock's expiry dynamics are shaped by physical-delivery-avoidance unwinding flows concentrated near actual strikes (Part 60.2-60.3), while the index's expiry dynamics are shaped by the final-settlement-window-averaging mechanism (Part 94.2-94.3) — conflating the two, or assuming the index behaves like a large, liquid "stock" for expiry-day purposes, would lead to a genuinely incorrect read of what's actually driving each instrument's expiry-session price behaviour.
+
+## 94.5 Worked example — explaining an index closing tick that differs from its cash-settled value
+*On a Nifty monthly-expiry day, the index's final closing tick (the last traded print of the day) is 24,850, but the officially published final settlement price used to cash-settle all expiring Nifty options and futures is 24,832 — a client asks why these two numbers differ and which one actually matters for a position that expired in-the-money.*
+
+**Model answer.** Per Part 94.2, this gap is not an error or a data-quality issue — it's the expected, structural consequence of the final settlement price being computed as the volume-weighted average across the final 30-minute window rather than simply the last traded tick of the day; if the index moved somewhat higher specifically in the closing seconds after most of that averaging window had already been captured, the closing tick (24,850) would naturally sit above the settlement-window average (24,832). For any expiring index derivative, the settlement price (24,832) — not the closing tick — is the number that actually determines the cash-settlement payout, and a TRA should proactively clarify this distinction to any client or colleague conflating "where the index closed" with "the price used to settle the contracts," since this is a routine, recurring point of confusion specifically because index cash settlement (Part 94.1) works structurally differently from the single-closing-price intuition that applies to most other market data.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2477,5 +2498,8 @@ Despite Part 93.2's general "usually not a negative signal" framing, a genuine e
 
 85. **Q: A company's disclosed employee stock-transaction filings show a broadly-distributed pattern of modest ESOP-driven sales across dozens of employees monthly, consistent with the disclosed vesting schedule. In one month, a single senior executive's disclosed sale is roughly 15 times the average individual transaction size, timed just before — rather than after — a routine vesting tranche was scheduled to unlock. How should a TRA read this?**
     A: Per Part 93.5 — the broadly-distributed, routine monthly pattern (Part 93.2-93.3) should generally be weighted as a weak or negligible negative signal, consistent with ordinary employee diversification behaviour tracking the disclosed schedule. The senior executive's outlier transaction, however, meets the exception criteria (Part 93.4) on multiple counts — unusually large, concentrated in one individual, and irregularly timed relative to the normal post-vesting pattern — and should be treated with the same scrutiny as any other unusual insider transaction, explicitly distinguished in a research note from the surrounding routine ESOP-driven selling noise rather than averaged into or dismissed alongside it.
+
+86. **Q: On a Nifty monthly-expiry day, the index's final closing tick is 24,850, but the officially published final settlement price used to cash-settle expiring options and futures is 24,832. A client asks why these differ and which number actually matters for a position that expired in-the-money.**
+    A: Per Part 94.5 — this gap is not an error; it's the expected, structural consequence of the final settlement price being computed as the volume-weighted average across the final 30-minute window (Part 94.2) rather than simply the last traded tick. If the index moved higher specifically in the closing seconds after most of that window had already been captured, the closing tick would naturally sit above the settlement-window average. The settlement price (24,832) — not the closing tick — is what actually determines the cash-settlement payout for any expiring index derivative, a routine point of confusion since index cash settlement (Part 94.1) works structurally differently from the single-closing-price intuition that applies to most other market data.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

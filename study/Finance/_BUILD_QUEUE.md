@@ -1329,4 +1329,19 @@ brokerage fees" claim and catching a promotional-vs-standard-rate comparability 
 new Q&A each (TRA Q85, Market Research Q94) and matching glossary terms (Market Research). TRA
 deepening handbook 198->200pg, Market Research 198->200pg. Master: 4,058 -> 4,062 pages.
 
-**Running total: 4,062 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 94 (Index Options Final Settlement
+Price — A Distinct Cash-Settlement Mechanism to TRA — a distinct settlement mechanism from Part 60's
+stock physical-settlement material, how the final settlement price is computed as a 30-minute volume-
+weighted average rather than the closing tick, why this dampens (relative to a single-tick mechanism)
+last-second manipulation incentives, the stock-vs-index expiry-day framework distinction a TRA must
+keep straight, a worked example explaining a Nifty closing-tick-vs-settlement-price gap to a client)
+and PART 97 (Conversational AI/Chatbot Research — Distinct Evaluation Methodology to Market Research —
+a distinct evaluation object from Part 65's screen-based usability testing, ambiguous conversational
+task-completion measurement, the escalation-to-human handoff as a first-class research question for
+regulated financial-services contexts, adversarial/edge-case probing as a required testing dimension,
+a worked example where strong topline chatbot metrics mask a severe account-security escalation gap
+surfaced only by targeted adversarial probing). Added one new Q&A each (TRA Q86, Market Research Q95)
+and matching glossary terms (Market Research). TRA deepening handbook 200->202pg, Market Research
+200->202pg. Master: 4,062 -> 4,066 pages.
+
+**Running total: 4,066 pages.**
