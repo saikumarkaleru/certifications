@@ -1527,4 +1527,20 @@ Both PDFs built strictly sequentially per last cycle's fix, with output re-verif
 text-extraction spot-checks — no recurrence of the race-condition corruption. TRA deepening handbook
 225->227pg, Market Research 242->245pg. Master: 4,129 -> 4,134 pages.
 
-**Running total: 4,134 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts (sequential build confirmed clean)**: added PART
+106 (Deep-OTM Tail-Hedge Positioning as a Distinct Sentiment Signal to TRA — a distinct positioning
+question from near-the-money OI and PCR already covered, why deep-OTM put buying reflects insurance-
+seeking rather than directional conviction, reading a build-up in deep-OTM put OI as a distinct
+sentiment gauge, why elevated tail-hedge demand doesn't itself predict the crash scenario materialising,
+a worked example reading a sustained deep-OTM Nifty put OI build-up during an otherwise calm market) and
+PART 109 (Omnichannel Research: Showrooming, Webrooming & Cross-Channel Attribution to Market Research
+— a distinct research question from single-channel shopper/digital-analytics research already covered,
+why single-channel attribution systematically misreads cross-channel behaviour, why showrooming and
+webrooming require distinct diagnostic responses rather than one generic omnichannel strategy,
+measuring a store's "invisible" digital-assist value that point-of-sale data alone never captures, a
+worked example diagnosing an unexpected online-sales decline following a store closure evaluated on
+point-of-sale revenue alone). Added one new Q&A each (TRA Q98, Market Research Q107) and matching
+glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening handbook
+227->229pg, Market Research 245->247pg. Master: 4,134 -> 4,138 pages.
+
+**Running total: 4,138 pages.**
