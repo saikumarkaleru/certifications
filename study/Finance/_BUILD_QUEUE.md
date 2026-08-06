@@ -1510,4 +1510,21 @@ Master: 4,108 -> 4,129 pages (the jump reflects both the 2 new parts and this co
 forward**: the two `build_handbook_pdf.py` calls will always be run strictly sequentially, never
 concurrently, to prevent recurrence.
 
-**Running total: 4,129 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts (sequential build confirmed clean)**: added PART
+105 (Public NCD Issue Mechanics — A Distinct Fixed-Income Listing Event to TRA — a distinct instrument-
+category listing event from every equity IPO mechanic already covered, why NCD pricing logic is
+fundamentally different from equity IPO pricing, post-listing NCD trading as a lower-liquidity yield-
+driven secondary market, the credit-quality read as the primary technical driver distinct from any
+growth catalyst, a worked example reading a listed NCD's larger price reaction to a rating downgrade
+versus the same company's more muted equity reaction) and PART 108 (Fieldwork Quality Control —
+Training and Monitoring Field Interviewers to Market Research — a distinct upstream discipline from
+the post-hoc data-quality checks already covered, standardisation training for verbatim question
+wording, interviewer effects as a distinct systematic-bias source, back-checking as the field-level
+verification analogue to post-collection screening, a worked example confirming interview fabrication
+via back-check after pattern indicators flagged one interviewer's completed interviews as suspicious).
+Added one new Q&A each (TRA Q97, Market Research Q106) and matching glossary terms (Market Research).
+Both PDFs built strictly sequentially per last cycle's fix, with output re-verified via direct
+text-extraction spot-checks — no recurrence of the race-condition corruption. TRA deepening handbook
+225->227pg, Market Research 242->245pg. Master: 4,129 -> 4,134 pages.
+
+**Running total: 4,134 pages.**

@@ -2452,6 +2452,27 @@ This Part's material functions primarily as a **baseline expectation-setting fra
 
 ---
 
+# PART 105 — PUBLIC NCD ISSUE MECHANICS — A DISTINCT FIXED-INCOME LISTING EVENT
+
+## 105.1 A distinct instrument-category listing event from every equity IPO mechanic already covered
+Every IPO-related mechanism this handbook has covered (RII/NII/QIB subscription, anchor allocation, grey-market premium, greenshoe stabilisation, OFS vs fresh issue) applies specifically to **equity** listings. A public issue of **Non-Convertible Debentures (NCDs)** — a company raising debt capital directly from the public market via a listed bond issue, rather than a bank loan or private placement — is a structurally distinct listing event a TRA covering the broader capital-markets space should be able to read independently of equity-IPO mechanics, since the two instrument categories carry genuinely different investor bases, pricing logic, and post-listing trading characteristics.
+
+## 105.2 Why NCD pricing logic is fundamentally different from equity IPO pricing
+An equity IPO's price reflects the market's collective judgment of the company's future growth and earnings potential — inherently uncertain and forward-looking. An NCD's pricing, by contrast, centres on a **disclosed, fixed coupon rate** set relative to the issuer's credit rating and prevailing interest-rate environment (comparable-tenor, comparable-rating benchmark yields) — a fundamentally different, more mechanically-anchored pricing exercise than equity valuation, meaning a TRA evaluating an NCD issue should benchmark the offered coupon against comparable-rated bonds' yields, not against any growth-oriented valuation framework.
+
+## 105.3 Post-listing NCD trading — a fundamentally lower-liquidity, yield-driven secondary market
+Once listed, an NCD's secondary-market trading behaves in a structurally different way from an equity listing: retail NCD investors overwhelmingly buy-and-hold to maturity for the coupon income rather than actively trade, producing **meaningfully thinner secondary-market liquidity** than an equivalent-sized equity listing — and where trading does occur, price movement is driven primarily by shifts in prevailing interest rates and the issuer's own credit-quality perception (a rating change, Part 89's split-rating material) rather than by the growth/earnings-driven catalysts that move an equity price, requiring a TRA to apply a fundamentally different analytical framework to any NCD-related price movement.
+
+## 105.4 The credit-quality read as the primary technical driver, distinct from any growth catalyst
+Because an NCD's value proposition is fundamentally about receiving a fixed income stream reliably rather than participating in company growth, the single most consequential driver of an NCD's secondary-market price is a **shift in the market's assessment of the issuer's ability to pay** — a rating change (Part 89), a covenant-breach disclosure (Part 97), or a broader credit-quality deterioration signal moves an NCD's price meaningfully more than it would typically move on operationally-oriented news that would matter much more to the same issuer's equity, since NCD holders' primary concern is repayment certainty, not growth participation.
+
+## 105.5 Worked example — reading a listed NCD's price movement following a rating downgrade
+*A company's listed NCD trades at a small, stable premium to its face value for most of its tenor, reflecting normal coupon-accrual behaviour. Following a one-notch credit-rating downgrade (still within investment grade), the NCD's price drops several percentage points on modest but real trading volume, while the same company's equity shows a much smaller, more muted reaction to the same rating action.*
+
+**Model answer.** Per Part 105.4, the NCD's meaningfully larger price reaction relative to the equity is the expected, structurally correct pattern rather than an anomaly — a rating downgrade speaks directly to repayment-certainty, the primary concern of an NCD holder (Part 105.3), while the same downgrade is only one, less central input among many for an equity holder more focused on growth and earnings trajectory. A TRA should read this differential reaction as confirmation that the two instruments are being priced through genuinely different lenses (Part 105.2) rather than concluding one market is over-reacting relative to the other — the correct analytical response for the NCD specifically is checking whether the new, lower price still offers an adequate yield relative to comparable-rated bonds at the issuer's revised credit standing, the NCD-appropriate equivalent of an equity TRA checking whether a post-news price move is proportionate to the news itself.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2741,5 +2762,8 @@ This Part's material functions primarily as a **baseline expectation-setting fra
 
 96. **Q: Nifty shows meaningfully higher realised volatility on a Thursday weekly-expiry session than on the preceding Monday-Wednesday sessions of the same week, with no identifiable Thursday-specific news catalyst. A junior colleague flags this as a notable, standalone signal worth investigating. Is it?**
     A: No, per Part 104.5 — this pattern is more likely explained by the baseline structural rhythm of weekly-expiry-driven hedging/unwinding flows concentrating on the Thursday expiry session (Part 104.2-104.3), not a genuine independent catalyst. The quieter mid-week sessions are consistent with, not contradictory to, this same structural pattern. Per Part 104.4, the correct check is whether Thursday's volatility is unusual relative to this instrument's own typical weekly-expiry-day baseline, not relative to the quieter mid-week days — comparing against the wrong baseline would incorrectly flag this expected structural pattern as a notable anomaly every single week.
+
+97. **Q: A company's listed NCD trades at a small, stable premium to face value for most of its tenor. Following a one-notch credit-rating downgrade (still investment grade), the NCD's price drops several percentage points on modest volume, while the same company's equity shows a much smaller reaction. Is the NCD market over-reacting relative to the equity market?**
+    A: No, per Part 105.5 — this differential reaction is the expected, structurally correct pattern. A rating downgrade speaks directly to repayment-certainty, the primary concern of an NCD holder (Part 105.3-105.4), while the same downgrade is only one, less central input for an equity holder more focused on growth and earnings trajectory. The two instruments are being priced through genuinely different lenses (Part 105.2), not one market over- or under-reacting relative to the other — the correct next step for the NCD specifically is checking whether the new, lower price still offers an adequate yield relative to comparable-rated bonds at the issuer's revised credit standing.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
