@@ -1673,4 +1673,19 @@ historical velocity benchmark). Added one new Q&A each (TRA Q106, Market Researc
 glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening handbook
 245->247pg, Market Research 263->265pg. Master: 4,170 -> 4,174 pages.
 
-**Running total: 4,174 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts (sequential build confirmed clean)**: added PART
+115 (Equity Closing-Price Determination and the Post-Close Session to TRA — a distinct daily, per-stock
+mechanic from Part 94's expiry-day index settlement material, why the closing price is a VWAP of the
+final window rather than the last traded tick, the post-close session as a window trading at an
+already-determined price with no fresh price discovery, why post-close volume should be read
+differently from regular-session volume, a worked example reading an unusually large post-close volume
+print) and PART 118 (Research Repository and Knowledge Management, Deepened to Market Research — a
+distinct knowledge-retention problem from Part 86's current-finding socialization material, why
+findability rather than storage is the actual failure point, tagging by substantive research question
+rather than project metadata, the staleness-flagging requirement so an old retrieved finding isn't
+read as a current standing fact, a worked example of a complete-but-unfindable five-year archive
+causing duplicate commissioning). Added one new Q&A each (TRA Q107, Market Research Q116) and matching
+glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening handbook
+247->250pg, Market Research 265->267pg. Master: 4,174 -> 4,179 pages.
+
+**Running total: 4,179 pages.**

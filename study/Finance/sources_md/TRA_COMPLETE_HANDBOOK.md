@@ -2662,6 +2662,27 @@ The practical relevance for a TRA isn't attempting to compete on latency (an ins
 
 ---
 
+# PART 115 — EQUITY CLOSING-PRICE DETERMINATION AND THE POST-CLOSE SESSION
+
+## 115.1 A distinct daily mechanic from Part 94's expiry-day index settlement material
+Part 94 covered how the **index derivatives** final settlement price is computed on expiry day specifically. This Part covers a structurally parallel but genuinely distinct mechanic that applies to **every individual equity, every single trading day**: how a stock's official daily closing price is determined, and the **post-close session** that operates afterward — a routine, daily mechanism, not an expiry-specific one, and applying to individual stocks rather than an index.
+
+## 115.2 Why the closing price is not simply the last traded tick
+As with the index-settlement case (Part 94.2), a stock's official daily closing price is computed as a **volume-weighted average of trades over the final portion of the session** rather than simply the last traded print — deliberately designed so a single small trade in the closing seconds cannot set the official closing price that will then be used for mutual-fund NAV calculation, margin computation, index calculation, and next-day reference purposes. A TRA should treat "the last price I saw on the screen" and "the official closing price" as two genuinely different numbers, normally close but structurally distinct, exactly as Part 94.5's client-explanation scenario required for the index case.
+
+## 115.3 The post-close session — trading at an already-determined price
+After the regular session ends and the closing price has been computed, exchanges operate a short **post-close session** in which orders can be placed and executed **at the already-determined closing price** — no fresh price discovery occurs, since the price is fixed; only quantity is matched between whoever wants to buy and sell at exactly that level. This is a genuinely distinct trading window a TRA should understand precisely: volume printing in this window reflects participants who specifically wanted execution at the official closing price (index funds tracking a closing-price-based benchmark, per Part 53.4's rebalancing discussion, being a common example) rather than anyone expressing a fresh view on value.
+
+## 115.4 Why post-close volume should be read differently from regular-session volume
+Because no price discovery happens in the post-close window (Part 115.3), volume printing there carries a genuinely different informational character than equivalent regular-session volume — it reflects a deliberate preference for closing-price execution rather than a willingness to compete on price, meaning a TRA analysing a day's volume should mentally separate post-close volume from regular-session volume rather than aggregating them into a single daily figure and reading the total as though it all represented the same kind of price-competitive participation.
+
+## 115.5 Worked example — reading an unusually large post-close volume print
+*A stock shows an unremarkable regular trading session, but an unusually large block of volume prints in the post-close session at exactly the closing price — far above this stock's typical post-close activity, with no accompanying price movement (by construction, since the post-close price is fixed).*
+
+**Model answer.** Per Part 115.3-115.4, this should be read as a participant (or participants) with a specific, deliberate preference for executing at the official closing price rather than as any fresh directional signal — the absence of price movement isn't informative in itself here, since post-close execution happens at a fixed, already-determined price by construction and could not have moved the price regardless of size. The most probable explanations are closing-price-benchmarked institutional execution (an index fund's rebalancing trade, per Part 53.4, or a fund needing to transact at the same price used for its own NAV calculation), and a TRA should check whether this coincides with a known index reconstitution effective date before considering less routine explanations. The key discipline is not reading this large print as equivalent to an equally-large regular-session volume spike (which would genuinely reflect price-competitive conviction, per Part 115.4) — treating the two as interchangeable would meaningfully overstate what this particular volume actually signals.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2981,5 +3002,8 @@ The practical relevance for a TRA isn't attempting to compete on latency (an ins
 
 106. **Q: Immediately following a scheduled macroeconomic data release, a stock/index shows extremely fast, choppy price action lasting a few seconds before settling into a more orderly trend, with the fastest initial moves occurring on a timescale too short for any human trader to have plausibly reacted. How should a TRA read this initial window?**
      A: Per Part 114.5 — the initial few seconds most likely reflect co-located, algorithmic participants' near-instantaneous reaction to the release (Part 114.2, 114.4), operating on a timescale genuinely too fast for human decision-making, rather than considered, informationally-meaningful price discovery. A TRA should treat this ultra-fast window as a distinct microstructure phenomenon largely separate from the more durable, meaningful price discovery that follows, generally avoiding strong technical conclusions from the specific, fleeting price action within that first few-second window and instead focusing analysis on the more orderly trend that emerges once this initial algorithmic-reaction phase has passed.
+
+107. **Q: A stock shows an unremarkable regular session, but an unusually large block of volume prints in the post-close session at exactly the closing price — far above its typical post-close activity, with no accompanying price movement. How should a TRA read this?**
+     A: Per Part 115.5 — this reflects a participant with a deliberate preference for executing at the official closing price, not a fresh directional signal; the absence of price movement isn't informative here, since post-close execution happens at a fixed, already-determined price by construction (Part 115.3) and couldn't have moved the price regardless of size. The most probable explanations are closing-price-benchmarked institutional execution (index-fund rebalancing per Part 53.4, or a fund transacting at the same price used for its own NAV), so check for a coinciding index reconstitution effective date first. The key discipline is not reading this print as equivalent to an equally-large regular-session volume spike (Part 115.4), which would genuinely reflect price-competitive conviction.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
