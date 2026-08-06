@@ -1559,4 +1559,21 @@ move prospective-customer perception). Added one new Q&A each (TRA Q99, Market R
 matching glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening
 handbook 229->232pg, Market Research 247->249pg. Master: 4,138 -> 4,143 pages.
 
-**Running total: 4,143 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts (sequential build confirmed clean)**: added PART
+108 (Trading Plan Pre-Clearance Mechanics — The Framework Behind the Signal-Strength Distinction to
+TRA — a distinct mechanical question beneath Part 54.3's structured-trading-plan-vs-discretionary-
+purchase signal-strength comparison, why a plan must be publicly disclosed and locked in well before
+execution, the formal internal pre-clearance and compliance-officer sign-off layer, why this full
+apparatus is precisely what strips a plan-executed trade of real-time signal value, a worked example
+answering an interview question by walking through the full procedural chain rather than just
+asserting the conclusion) and PART 111 (SKU Rationalisation / Product-Discontinuation Research to
+Market Research — a distinct, opposite-direction research question from concept testing/NPD research
+already covered, why low sales volume alone is an insufficient discontinuation criterion, substitution
+research as the single most decision-relevant question, communication research on how a discontinuation
+is announced affecting the substitution outcome, a worked example diagnosing an unexpectedly costly
+rationalisation round concentrated among a high-value customer segment). Added one new Q&A each (TRA
+Q100, Market Research Q109) and matching glossary terms (Market Research). Both PDFs built strictly
+sequentially. TRA deepening handbook 232->234pg, Market Research 249->252pg. Master: 4,143 -> 4,148
+pages.
+
+**Running total: 4,148 pages.**

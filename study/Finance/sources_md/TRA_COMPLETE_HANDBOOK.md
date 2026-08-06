@@ -2515,6 +2515,27 @@ A related, occasionally-confused distinction: a divisor adjustment on a reconsti
 
 ---
 
+# PART 108 — TRADING PLAN PRE-CLEARANCE MECHANICS — THE FRAMEWORK BEHIND THE SIGNAL-STRENGTH DISTINCTION
+
+## 108.1 A distinct mechanical question beneath Part 54.3's signal-strength comparison
+Part 54.3 established that a pre-committed **structured trading plan** carries a weaker real-time conviction signal than a discretionary open-market purchase, since the plan's trades were decided in advance rather than reflecting a fresh, current view. This Part covers the distinct, underlying mechanical question that comparison assumes: what a structured trading plan actually *is* procedurally — a formal, pre-cleared, publicly-disclosed framework under SEBI's insider-trading regulations letting a designated person set up a schedule of future trades in advance, specifically as a mechanism to trade *despite* being an insider with access to unpublished price-sensitive information, subject to strict advance-disclosure and minimum-gap requirements.
+
+## 108.2 Why the plan must be disclosed and locked in before it can execute
+A trading plan's defining structural feature is that its parameters (the specific trade dates or triggers, quantities, and price limits) must be **formally disclosed publicly and locked in well in advance** of the first trade actually executing, with a mandatory minimum gap between disclosure and the plan's execution start — this advance-lock-in is precisely what makes the plan's later trades presumptively insulated from any insider-information concern, since by the time any trade under the plan executes, the specific parameters were fixed and public long before, eliminating the possibility that a specific trade was opportunistically timed around freshly-acquired unpublished information.
+
+## 108.3 The formal pre-clearance and compliance-officer sign-off layer
+Beyond the public-disclosure requirement, establishing a trading plan requires **formal internal pre-clearance** — the designated person's proposed plan must be reviewed and approved by the company's compliance officer before the plan can be publicly disclosed and locked in, an internal governance checkpoint distinct from and preceding the plan's external, public-disclosure obligation, giving the company itself a chance to flag any timing concern (proximity to an anticipated announcement, for instance) before the plan becomes a binding, disclosed commitment.
+
+## 108.4 Why this formal apparatus is precisely what strips a plan-executed trade of its signal value
+Understanding this full procedural apparatus (advance lock-in, mandatory disclosure gap, compliance pre-clearance) is what makes Part 54.3's signal-strength distinction fully explicable rather than a bare assertion — a trade executing under a structured plan has necessarily passed through this entire advance-disclosure-and-approval process well before execution, meaning by construction it cannot reflect a fresh, current reaction to anything the insider has since learned, which is exactly why a TRA should discount its real-time signal value relative to a genuinely discretionary purchase decided and executed close to the time it's made.
+
+## 108.5 Worked example — explaining why a plan-executed trade carries different weight in an interview setting
+*In an interview, a candidate is asked to explain specifically why a designated person's trade executing under a previously-disclosed structured trading plan carries a weaker signal than an equivalent-sized discretionary open-market purchase, beyond simply restating that "plans are pre-decided."*
+
+**Model answer.** Per Part 108.2-108.3, a complete answer explains the specific procedural mechanics that produce this weaker signal: the plan's trade parameters were formally pre-cleared by the company's compliance officer and then publicly disclosed, with a mandatory minimum gap required before the plan's first trade could execute — meaning by the time any specific trade under the plan actually executes, its parameters were fixed and public well before that moment, structurally ruling out the possibility that the specific trade reflects a fresh, current reaction to anything the insider has since learned. This is precisely what strips the trade of the real-time-conviction signal value a discretionary purchase carries (Part 108.4) — a candidate who can walk through this procedural chain, rather than just asserting the conclusion, demonstrates the kind of regulatory-mechanism literacy this handbook's institutional-market-structure material (Part 98's FPI-category framing, applied here in spirit to a different regulatory apparatus) is meant to build.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2813,5 +2834,8 @@ A related, occasionally-confused distinction: a divisor adjustment on a reconsti
 
 99. **Q: A client, reviewing a major index's 20-year historical chart, asks why the chart is treated as one continuous, meaningful series given that many of the index's original constituents from 20 years ago have since been replaced by entirely different companies. How should a TRA answer?**
     A: Per Part 107.5 — the chart remains a genuinely continuous, meaningful return series because of the index divisor mechanism (Part 107.2-107.3): every reconstitution over those 20 years included a divisor recalculation specifically designed to prevent the index level from jumping or dropping purely because a constituent was swapped, so the published number at any point reflects only the aggregate price performance of whichever stocks were actually in the index at that time, stitched together continuously. The client's intuition that a chart spanning different constituents "shouldn't" be one continuous number is understandable but incorrect once the divisor's purpose is explained — it exists precisely to make this kind of long-run, compositionally-evolving comparison valid.
+
+100. **Q: In an interview, you're asked why a designated person's trade executing under a previously-disclosed structured trading plan carries a weaker signal than an equivalent-sized discretionary open-market purchase — beyond simply saying "plans are pre-decided." How would you answer?**
+     A: Per Part 108.5 — a complete answer walks through the procedural mechanics: the plan's trade parameters were formally pre-cleared by the company's compliance officer (Part 108.3) and then publicly disclosed, with a mandatory minimum gap required before the plan's first trade could execute (Part 108.2) — meaning by the time any specific trade under the plan executes, its parameters were fixed and public well before that moment, structurally ruling out the possibility that the specific trade reflects a fresh, current reaction to anything the insider has since learned. This is precisely what strips the trade of the real-time-conviction signal value a discretionary purchase carries (Part 108.4), and demonstrating this procedural chain rather than just asserting the conclusion is what signals genuine regulatory-mechanism literacy.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
