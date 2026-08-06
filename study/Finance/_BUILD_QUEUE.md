@@ -1543,4 +1543,20 @@ point-of-sale revenue alone). Added one new Q&A each (TRA Q98, Market Research Q
 glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening handbook
 227->229pg, Market Research 245->247pg. Master: 4,134 -> 4,138 pages.
 
-**Running total: 4,138 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts (sequential build confirmed clean)**: added PART
+107 (Index Divisor Mechanics — Keeping an Index Number Continuous to TRA — a distinct mechanical
+question from index rebalancing price effects already covered, what the divisor actually does in
+separating compositional change from genuine market movement, why this matters for correctly
+interpreting long-run historical index-level analysis, the distinction between a divisor adjustment
+and a genuine index-level move, a worked example explaining why a 20-year index chart remains one
+continuous, meaningful series despite near-total constituent turnover) and PART 110 (Public Review-
+Response Research to Market Research — a distinct research question from review mining already
+covered, why a public response's real audience is the broader future-browsing population rather than
+just the original reviewer, response-quality dimensions beyond the binary responded/not-responded
+decision, the response-consistency check as its own researchable pattern, a worked example diagnosing
+why an improved response-rate policy produced generic, templated, delayed responses that failed to
+move prospective-customer perception). Added one new Q&A each (TRA Q99, Market Research Q108) and
+matching glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening
+handbook 229->232pg, Market Research 247->249pg. Master: 4,138 -> 4,143 pages.
+
+**Running total: 4,143 pages.**

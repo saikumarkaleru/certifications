@@ -2494,6 +2494,27 @@ A critical, calibrating caveat: elevated deep-OTM put demand is evidence of **ri
 
 ---
 
+# PART 107 — INDEX DIVISOR MECHANICS — KEEPING AN INDEX NUMBER CONTINUOUS
+
+## 107.1 A distinct mechanical question from index rebalancing effects already covered
+This handbook's rebalancing material addresses the *price effect* on a stock being added to or removed from an index (passive-fund buying/selling flows around the effective date). This Part covers a distinct, underlying mechanical question those effects depend on: how the index level itself stays **numerically continuous** across an addition, deletion, or corporate action affecting a constituent, without an artificial jump or drop in the published index number purely from a compositional change — the **index divisor** mechanism.
+
+## 107.2 What the divisor actually does — separating compositional change from genuine market movement
+An index level is calculated as (aggregate free-float market capitalisation of all constituents) ÷ (the **divisor**) — and whenever a constituent changes (a new stock added, one removed, or a stock's free-float shifts due to a corporate action) in a way that isn't itself reflecting genuine market price movement, the divisor is recalculated and adjusted specifically so the index level doesn't jump or drop purely because of the compositional change itself — the divisor's entire purpose is absorbing pure composition/free-float changes so the published index number continues to reflect only genuine aggregate price movement of whatever stocks are currently in the index at any given moment.
+
+## 107.3 Why this matters for a TRA doing historical index-level analysis specifically
+The practical relevance for a TRA isn't in calculating the divisor directly (index providers publish it; a TRA doesn't need to derive it manually) but in correctly understanding that a **historical index chart** reflects continuous divisor adjustments behind the scenes across every reconstitution over the index's history — meaning a long-run historical index-level comparison genuinely reflects price-return continuity, not an artifact of whichever specific stocks happened to be in the index name at different points in time, a point worth understanding precisely when explaining to a client or in an interview why an index's decades-long chart remains a meaningful, continuous return series despite its constituents having changed substantially over that period.
+
+## 107.4 The distinction between a divisor adjustment and a genuine index-level move — why they shouldn't be conflated
+A related, occasionally-confused distinction: a divisor adjustment on a reconstitution effective date is **not** itself a market-driven index move — the divisor is specifically calibrated so the index level doesn't change purely from the swap itself, meaning any index-level movement observed on a reconstitution effective date reflects genuine, ordinary trading activity (including the passive-fund flow effects this handbook's rebalancing material addresses) layered on top of, not caused by, the divisor mechanism — a TRA should never attribute an index-level move on a reconstitution date to "the divisor changing," since the divisor's entire function is neutralising exactly that kind of mechanical distortion.
+
+## 107.5 Worked example — explaining why an index's historical chart remains meaningful despite constituent turnover
+*A client, reviewing a major index's 20-year historical chart, asks why the chart is treated as a single continuous, meaningful series given that many of the index's original constituents from 20 years ago have since been replaced by entirely different companies.*
+
+**Model answer.** Per Part 107.2-107.3, the chart remains a genuinely continuous, meaningful return series precisely because of the divisor mechanism — every reconstitution over those 20 years included a divisor recalculation specifically designed to prevent the index level from jumping or dropping purely because a constituent was swapped, meaning the published index number at any point reflects only the aggregate price performance of whichever stocks were actually in the index at that time, stitched together continuously rather than reset at each reconstitution. The client's underlying intuition — that a chart spanning entirely different constituent companies "shouldn't" be one continuous number — is understandable but incorrect once the divisor's specific purpose (Part 107.2) is explained: the mechanism exists precisely to make this kind of long-run, compositionally-evolving index comparison valid and continuous, not despite constituent turnover but specifically accounting for it.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2789,5 +2810,8 @@ A critical, calibrating caveat: elevated deep-OTM put demand is evidence of **ri
 
 98. **Q: Over several weeks, open interest in Nifty put options at strikes roughly 15-20% below the current market level shows a sustained, meaningful build-up, even as the index continues trading in a calm, low-volatility range with no obvious catalyst for concern. How should a TRA read this, and what shouldn't they conclude from it?**
     A: Per Part 106.5 — this should be read as rising demand for tail-risk/crash insurance specifically (Part 106.2-106.3), a distinct signal from the calm near-term price action, worth flagging as a notable divergence between surface-level calm and underlying hedging behaviour. It should NOT be read as a prediction that a crash is specifically imminent (Part 106.4) — elevated insurance demand and an actual insured-against event materialising are distinct things. The correct characterisation is that institutional risk-appetite/hedging behaviour is showing rising caution, a genuinely informative sentiment data point, without overstating it as a near-term decline forecast.
+
+99. **Q: A client, reviewing a major index's 20-year historical chart, asks why the chart is treated as one continuous, meaningful series given that many of the index's original constituents from 20 years ago have since been replaced by entirely different companies. How should a TRA answer?**
+    A: Per Part 107.5 — the chart remains a genuinely continuous, meaningful return series because of the index divisor mechanism (Part 107.2-107.3): every reconstitution over those 20 years included a divisor recalculation specifically designed to prevent the index level from jumping or dropping purely because a constituent was swapped, so the published number at any point reflects only the aggregate price performance of whichever stocks were actually in the index at that time, stitched together continuously. The client's intuition that a chart spanning different constituents "shouldn't" be one continuous number is understandable but incorrect once the divisor's purpose is explained — it exists precisely to make this kind of long-run, compositionally-evolving comparison valid.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
