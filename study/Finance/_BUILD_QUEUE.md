@@ -1461,4 +1461,20 @@ comprehension masked by a strong onboarding completion rate). Added one new Q&A 
 Research Q103) and matching glossary terms (Market Research). TRA deepening handbook 218->220pg,
 Market Research 218->220pg. Master: 4,098 -> 4,102 pages.
 
-**Running total: 4,102 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts**: added PART 103 (SME Platform to Main Board
+Migration — A Distinct Listing-Transition Event to TRA — a distinct listing-status change from every
+corporate action already covered, the mechanical trading-characteristic changes migration brings
+(tighter circuit bands, broader investor eligibility, index-inclusion eligibility), why successful
+migration itself functions as a credibility/graduation signal, the liquidity-transition adjustment
+window rather than an instant re-rating, a worked example reading unchanged volume/volatility in the
+first two weeks post-migration as expected rather than disappointing) and PART 106 (Channel Partner/
+Distributor Research to Market Research — a distinct research audience from end-customer and multi-
+sided-platform research, why channel-partner research requires its own purpose-built instrument, the
+channel-conflict research question of incentive alignment between partner and end-customer interest,
+segmenting partners by production volume and quality rather than satisfaction alone, a worked example
+escalating a channel-conflict finding where advisors candidly admit steering clients toward higher-
+commission products). Added one new Q&A each (TRA Q95, Market Research Q104) and matching glossary
+terms (Market Research). TRA deepening handbook 220->223pg, Market Research 220->223pg. Master: 4,102
+-> 4,108 pages.
+
+**Running total: 4,108 pages.**

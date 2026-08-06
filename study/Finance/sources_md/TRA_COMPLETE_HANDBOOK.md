@@ -2410,6 +2410,27 @@ Because MPS non-compliance triggers a specific, disclosed compliance deadline (r
 
 ---
 
+# PART 103 — SME PLATFORM TO MAIN BOARD MIGRATION — A DISTINCT LISTING-TRANSITION EVENT
+
+## 103.1 A distinct listing-status change from every corporate action already covered
+Every event this handbook has covered so far assumes a stock already trades on the regular main-board segment. India's exchanges also operate a distinct **SME platform** for smaller companies, with materially lighter listing/disclosure requirements and correspondingly different trading characteristics — and a company that has grown sufficiently can apply to **migrate from the SME platform to the main board**, a distinct listing-transition event with its own specific mechanics, separate from an IPO, a delisting, or any of the corporate actions covered elsewhere.
+
+## 103.2 The mechanical trading-characteristic changes that come with migration
+Migration to the main board brings several concrete, mechanical changes a TRA should expect: **tighter circuit filter bands** (the SME platform generally applies wider circuit limits than the main board's tiered system), a typically **larger investor base becoming eligible to participate** (some institutional mandates and retail-platform defaults restrict or discourage SME-platform trading specifically), and **eligibility for index inclusion consideration** that doesn't exist on the SME platform at all — each of these mechanically changes the stock's likely liquidity and volatility profile independent of any change in the underlying business itself.
+
+## 103.3 Why migration itself functions as a credibility/graduation signal
+Beyond the mechanical trading changes (Part 103.2), successful main-board migration itself carries informational value: it requires meeting specific listing criteria (a track record of profitability/net worth thresholds, among other requirements) that not every SME-listed company achieves — a TRA should read a company's **successful** migration as a credibility-conferring milestone in its own right (similar in spirit to Part 88.2's anchor-investor-credibility framing, though via a regulatory-criteria-based mechanism rather than an institutional-investor-based one), distinct from and additional to whatever the stock's price action does around the migration itself.
+
+## 103.4 The liquidity-transition period — expect a genuine adjustment window, not an instant re-rating
+Even though migration brings a structurally larger addressable investor base (Part 103.2), a TRA shouldn't expect this larger addressable base to translate into meaningfully higher actual trading liquidity **immediately** upon migration — institutional mandates, index-fund flows, and broader retail-platform awareness typically take a genuine adjustment period to actually materialise into trading activity, meaning the period immediately following migration often still resembles the stock's prior SME-platform liquidity character before gradually transitioning, rather than an instant liquidity re-rating on the migration date itself.
+
+## 103.5 Worked example — reading a stock's price/volume behaviour in the weeks following main-board migration
+*A company successfully migrates from the SME platform to the main board after meeting the required profitability and net-worth criteria. In the first two weeks post-migration, trading volume and volatility remain broadly similar to the stock's pre-migration SME-platform pattern, with no immediate surge in institutional participation.*
+
+**Model answer.** Per Part 103.4, this is the expected, normal pattern rather than a disappointing or concerning one — a larger theoretically-addressable investor base (Part 103.2) doesn't translate into an instant liquidity re-rating, since institutional mandates and index-inclusion-driven flows genuinely take time to materialise. The migration itself should still be read as a positive credibility milestone (Part 103.3), given the specific listing criteria the company had to satisfy to qualify, independent of how quickly trading characteristics actually shift. A TRA should track the stock's liquidity/participation metrics over a longer horizon (months, not the first two weeks) before drawing any conclusion about whether the migration is translating into the expected structural liquidity improvement, rather than expecting an immediate transformation on the migration date itself.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2693,5 +2714,8 @@ Because MPS non-compliance triggers a specific, disclosed compliance deadline (r
 
 94. **Q: A company has been below the 25% minimum public shareholding requirement for several quarters, with a disclosed compliance deadline approaching within two months. The promoter group announces an OFS sized specifically to restore compliance to the minimum threshold, no more. How should a TRA characterise this transaction?**
     A: Per Part 102.5 — this should be read primarily through the compliance lens, not as a discretionary promoter monetisation decision. The transaction's size, calibrated precisely to the minimum required threshold, is itself strong evidence the motivation is regulatory compliance rather than opportunistic profit-taking (Part 102.2-102.3), unlike a discretionary OFS sized independently of any regulatory threshold. A TRA should avoid characterising this as reflecting the promoter's voluntary valuation judgment and should instead note it as the expected, largely mechanical resolution of a known, dated compliance deadline (Part 102.4) the market likely had visibility into ahead of the formal announcement.
+
+95. **Q: A company successfully migrates from the SME platform to the main board after meeting the required profitability and net-worth criteria. In the first two weeks post-migration, trading volume and volatility remain broadly similar to the pre-migration pattern, with no immediate surge in institutional participation. Is this a disappointing outcome?**
+    A: No, per Part 103.5 — this is the expected, normal pattern, not a concerning one. A larger theoretically-addressable investor base (Part 103.2) doesn't translate into an instant liquidity re-rating, since institutional mandates and index-inclusion-driven flows genuinely take time to materialise (Part 103.4). The migration itself should still be read as a positive credibility milestone (Part 103.3) given the specific listing criteria satisfied, independent of how quickly trading characteristics shift. A TRA should track liquidity/participation metrics over months, not the first two weeks, before drawing any conclusion about the migration's structural liquidity effect.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
