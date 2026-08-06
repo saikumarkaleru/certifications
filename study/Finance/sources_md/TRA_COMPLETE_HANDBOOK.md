@@ -2620,6 +2620,27 @@ A freeze is a **procedural, often provisional** enforcement step, not itself a f
 
 ---
 
+# PART 113 — IPO PRICE BAND AND CUT-OFF PRICE — THE BOOK-BUILDING PRICE-DISCOVERY PROCESS
+
+## 113.1 A distinct mechanical layer beneath the subscription-category material already covered
+Part 63/Part 64's material on RII/NII/QIB subscription addressed *how much demand* each investor category submits once bidding is open. This Part covers a distinct, prior mechanical layer: how the **price band** itself is set and how the **cut-off price** is actually determined from the bids received — the book-building price-discovery mechanism those subscription figures are actually bidding within, rather than the subscription-demand read itself.
+
+## 113.2 The price band — a floor and cap the issuer/merchant banker set in advance
+Before bidding opens, the issuer and its merchant bankers set a **price band** — a floor price and a cap price, with the cap typically no more than roughly 20% above the floor — within which all bids must fall. Investors bid at a specific price within this band (or select the "cut-off price" option, Part 113.3), and the band itself represents the issuer's own pre-bidding estimate of a reasonable valuation range, informed by pre-IPO investor feedback and comparable-company benchmarking, rather than itself being market-discovered — the actual price discovery happens through the bidding process that follows, within this pre-set range.
+
+## 113.3 The "cut-off price" bid option — what it means and why retail investors commonly use it
+Retail investors specifically have the option to bid at "cut-off price" rather than a specific number — this means the investor agrees to pay **whatever final price is ultimately determined** through the book-building process (up to the band's cap), rather than committing to a specific bid price and risking their bid falling below the eventual cut-off and being rejected. This option exists specifically to reduce the risk of an otherwise-qualifying retail investor losing out on allotment purely due to selecting a bid price that ends up below the actual determined cut-off — a TRA explaining IPO mechanics to a less experienced audience should be able to explain precisely why this option exists and what practical problem it solves.
+
+## 113.4 How the cut-off price is actually determined from the aggregate bid book
+The final **cut-off price** — the actual issue price ultimately used — is determined by the merchant banker from the aggregate bid book: broadly, the highest price at which the total demand (aggregating bids at or above that price) is sufficient to fully subscribe the offer size, subject to regulatory constraints on how the categories are weighted. This means the cut-off price is a genuine output of the actual bidding process, not a number decided independently by the issuer after the fact — the issuer and merchant banker set the *range* (Part 113.2), but the market's actual bidding within that range determines the *specific* final price.
+
+## 113.5 Worked example — explaining why a retail investor's specific-price bid was rejected despite adequate funds
+*A retail investor bids for an IPO at a specific price near the lower end of the disclosed price band, with adequate funds blocked to cover the bid. The issue is fully subscribed, and the final cut-off price is determined near the upper end of the band. The investor's application is not allotted shares, despite having sufficient funds for their bid amount.*
+
+**Model answer.** Per Part 113.4, the cut-off price was genuinely determined by the aggregate bidding process to sit near the upper end of the band, reflecting strong overall demand. Per Part 113.2-113.3, this investor's bid — placed at a specific price near the lower end of the band rather than at "cut-off price" — falls below the actual determined cut-off price, and a specific-price bid below the cut-off price is not eligible for allotment regardless of the investor having adequate funds for their own bid amount, since the investor's stated maximum willingness-to-pay was below what the issue actually priced at. This is precisely the scenario the cut-off-price bid option (Part 113.3) exists to protect a retail investor against — had this investor selected "cut-off price" instead of a specific lower bid, their application would have been eligible at whatever the final price turned out to be, up to the band's cap.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2933,5 +2954,8 @@ A freeze is a **procedural, often provisional** enforcement step, not itself a f
 
 104. **Q: A regulator orders a freeze on a company's promoter entity's demat account, citing non-compliance with a specific disclosure requirement under investigation. Two months later, a follow-up filing discloses the promoter has since complied and the freeze has been lifted. How should a TRA have treated the initial order, and how should the note be updated?**
      A: Per Part 112.5 — the initial freeze should have been read as categorically serious at the time (Part 112.2), a regulator's affirmative enforcement action rather than a routine disclosure, warranting explicit flagging as materially more severe than an ordinary pledge or inter-se-transfer observation. The subsequent resolution — lifted following compliance, with no escalated finding (Part 112.4) — suggests the underlying issue was a genuine but ultimately resolvable disclosure-compliance lapse. The research note should be updated to reflect this specific resolved outcome explicitly, distinguishing it from a scenario where a freeze escalates into confirmed, more serious regulatory action, since the two carry very different governance-risk implications.
+
+105. **Q: A retail investor bids for an IPO at a specific price near the lower end of the disclosed price band, with adequate funds blocked. The issue is fully subscribed and the final cut-off price is determined near the upper end of the band. The investor's application isn't allotted shares despite having sufficient funds for their bid amount. Why?**
+     A: Per Part 113.5 — the cut-off price was genuinely determined by the aggregate bidding process to sit near the upper end of the band (Part 113.4), reflecting strong demand. The investor's specific-price bid, placed near the lower end rather than at "cut-off price," falls below the actual determined cut-off, and a specific-price bid below the cut-off price isn't eligible for allotment regardless of adequate funds, since their stated maximum willingness-to-pay was below what the issue actually priced at. This is precisely the scenario the cut-off-price bid option (Part 113.3) exists to protect a retail investor against — selecting it instead would have made their application eligible at whatever the final price turned out to be, up to the band's cap.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

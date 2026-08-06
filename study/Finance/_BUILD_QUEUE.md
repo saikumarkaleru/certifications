@@ -1640,4 +1640,20 @@ Both PDFs built strictly sequentially; frontmatter total needed a one-page corre
 -> 4,166 actual), standard two-pass discipline. TRA deepening handbook 241->243pg, Market Research
 258->261pg. Master: 4,161 -> 4,166 pages.
 
-**Running total: 4,166 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts (sequential build confirmed clean)**: added PART
+113 (IPO Price Band and Cut-Off Price — The Book-Building Price-Discovery Process to TRA — a distinct
+mechanical layer beneath the RII/NII/QIB subscription material already covered, how the price band
+floor/cap is set in advance versus how the cut-off price is actually market-discovered through bidding,
+the "cut-off price" bid option's specific purpose for retail investors, how the final cut-off price is
+determined from the aggregate bid book, a worked example explaining why a specific-price bid below the
+eventual cut-off price is rejected despite adequate funds) and PART 116 (Packaging Shelf-Standout
+Testing to Market Research — a distinct research question from Part 14.3's share-of-shelf/planogram
+material, why testing a design in isolation systematically overstates real-world standout, eye-tracking
+and time-to-locate as objective standout measures beyond self-report, the standout/legibility tradeoff
+between capturing attention and brand identification, a worked example diagnosing a bold redesign that
+improves standout but measurably degrades brand identification). Added one new Q&A each (TRA Q105,
+Market Research Q114) and matching glossary terms (Market Research). Both PDFs built strictly
+sequentially. TRA deepening handbook 243->245pg, Market Research 261->263pg. Master: 4,166 -> 4,170
+pages.
+
+**Running total: 4,170 pages.**
