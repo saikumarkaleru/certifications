@@ -2578,6 +2578,27 @@ The corresponding negative-space signal is equally worth tracking: a promoter wi
 
 ---
 
+# PART 111 — PUT-CALL PARITY AND SYNTHETIC POSITIONS — A DISTINCT ARBITRAGE-BASED FRAMEWORK
+
+## 111.1 A distinct foundational relationship from the Greeks-based options material already covered
+This handbook's core options material (Part 5) built understanding around the Greeks — Delta, Gamma, Theta, Vega — as sensitivity measures for an individual option. This Part covers a distinct, foundational relationship that connects calls, puts, and the underlying itself: **put-call parity**, the no-arbitrage relationship stating that a call and put at the same strike and expiry, combined with the underlying, must maintain a specific, calculable price relationship — a different analytical lens than Greeks-based sensitivity, rooted in arbitrage logic rather than sensitivity measurement.
+
+## 111.2 What put-call parity actually says, and why it must hold in a liquid, arbitraged market
+Put-call parity states that a **call price minus put price** (same strike, same expiry) must equal the underlying's current price minus the present value of the strike price (approximately, the underlying minus strike for near-term options where discounting effects are small) — if this relationship is violated in a liquid market, a genuine, low-risk arbitrage exists (buying the cheaper side of the relationship and selling the more expensive side, capturing the mispricing with minimal directional risk), meaning market participants' arbitrage activity keeps this relationship tightly enforced in any reasonably liquid options market, distinct from Greeks (which describe sensitivity, not an enforced equality).
+
+## 111.3 Synthetic positions — constructing an equivalent payoff from different instruments
+Put-call parity's direct practical consequence is that **synthetic positions** can be constructed: a long call plus a short put (same strike/expiry) replicates a long position in the underlying itself (a "synthetic long"), and the reverse combination replicates a synthetic short — meaning a trader wanting underlying-like exposure has multiple, theoretically-equivalent ways to construct it, and understanding this equivalence lets a TRA recognise when an options-market position is functionally replicating a directional underlying bet, even when the trade itself was structured entirely through options rather than the underlying directly.
+
+## 111.4 Why parity violations are a distinct, higher-conviction signal when they do appear
+Because put-call parity is normally tightly arbitraged closed in a liquid market (Part 111.2), a TRA observing a **persistent, meaningful parity violation** in a specific name's options should treat this as a distinct, higher-conviction signal of genuine market friction — most commonly reflecting a stock-specific borrow/lending constraint (making the arbitrage difficult or costly to execute in practice, e.g. difficulty borrowing shares to execute one leg) rather than a simple mispricing free money is sitting on the table, since if it were truly frictionless free arbitrage, sophisticated participants would already have closed the gap — a genuine parity violation is itself informative about a specific, structural friction in that name, not simply noise.
+
+## 111.5 Worked example — reading a persistent put-call parity deviation in a specific stock's options
+*A TRA notices a specific stock's near-month call and put prices, at the same strike, imply a put-call-parity-derived "fair" underlying price meaningfully below the stock's actual current traded price — a persistent deviation over several sessions, not a one-off pricing anomaly.*
+
+**Model answer.** Per Part 111.4, a persistent, multi-session parity deviation (rather than a fleeting, single-observation anomaly) should be read as evidence of a genuine structural friction rather than simple mispricing free money — the most likely explanation is a stock-specific borrow constraint making it difficult or costly to execute the short-selling leg the arbitrage would otherwise require, meaning the parity relationship isn't closing because the arbitrage itself isn't cleanly executable in practice, not because no one has noticed the gap. A TRA should investigate whether this specific stock is known to have securities-lending/borrow difficulty (Part 51's securities-lending material) as the most probable explanation, rather than assuming the persistent deviation represents an easily-capturable, riskless profit opportunity that sophisticated market participants have somehow overlooked.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2885,5 +2906,8 @@ The corresponding negative-space signal is equally worth tracking: a promoter wi
 
 102. **Q: A company's promoter group, holding 42%, has increased its stake by close to the full permitted 5% creeping-acquisition allowance in each of the past three consecutive financial years, entirely through disclosed open-market purchases. How should a TRA weigh this pattern?**
      A: Per Part 110.5 — this sustained, near-maximal, multi-year pattern is a distinctly strong, calibrated conviction signal (Part 110.3). A promoter deliberately maximising the specific regulatory allowance three years running reflects a considered, recurring accumulation decision rather than an isolated opportunistic purchase, and should be read as meaningfully more bullish than a single large open-market purchase of similar aggregate size (Part 110.2). A TRA should flag this specific pattern explicitly, distinguishing it from ordinary promoter buying, and continue monitoring whether it persists or whether the promoter's climbing stake approaches Part 83's substantial-acquisition thresholds.
+
+103. **Q: A TRA notices a specific stock's near-month call and put prices, at the same strike, imply a put-call-parity-derived "fair" underlying price meaningfully below the stock's actual current traded price — a persistent deviation over several sessions, not a one-off anomaly. How should this be read?**
+     A: Per Part 111.5 — a persistent, multi-session parity deviation should be read as evidence of a genuine structural friction rather than simple free-money mispricing (Part 111.4), since put-call parity is normally tightly arbitraged closed in a liquid market (Part 111.2) — if this were a costlessly-capturable gap, sophisticated participants would already have closed it. The most likely explanation is a stock-specific securities-lending/borrow constraint making the arbitrage difficult or costly to execute in practice (Part 51's material), and a TRA should investigate this specifically rather than assuming an easily-capturable riskless opportunity has somehow gone unnoticed.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

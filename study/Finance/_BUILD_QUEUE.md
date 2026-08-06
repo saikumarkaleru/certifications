@@ -1608,4 +1608,19 @@ rather than the underlying product). Added one new Q&A each (TRA Q102, Market Re
 matching glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening
 handbook 236->238pg, Market Research 254->256pg. Master: 4,152 -> 4,156 pages.
 
-**Running total: 4,156 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts (sequential build confirmed clean)**: added PART
+111 (Put-Call Parity and Synthetic Positions — A Distinct Arbitrage-Based Framework to TRA — a distinct
+foundational relationship from the Greeks-based options material already covered, what put-call parity
+actually says and why it must hold via arbitrage in a liquid market, synthetic positions as parity's
+direct practical consequence, why persistent parity violations are a distinct higher-conviction friction
+signal rather than free money, a worked example reading a persistent parity deviation as evidence of a
+stock-specific borrow constraint) and PART 114 (Cancellation-Flow Save-Offer Effectiveness Research to
+Market Research — a distinct in-the-moment research object from Part 93's win-back and Part 104's dark-
+pattern research, why cancellation reason must be captured before a save-offer is selected, distinguishing
+genuine retention lift from mere friction-driven delay, the ethical/dark-pattern boundary specific to
+cancellation-flow research, a worked example diagnosing an inflated same-day save-offer acceptance rate
+masking poor multi-month retention). Added one new Q&A each (TRA Q103, Market Research Q112) and
+matching glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening handbook
+238->241pg, Market Research 256->258pg. Master: 4,156 -> 4,161 pages.
+
+**Running total: 4,161 pages.**
