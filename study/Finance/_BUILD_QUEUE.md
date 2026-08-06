@@ -1477,4 +1477,37 @@ commission products). Added one new Q&A each (TRA Q95, Market Research Q104) and
 terms (Market Research). TRA deepening handbook 220->223pg, Market Research 220->223pg. Master: 4,102
 -> 4,108 pages.
 
-**Running total: 4,108 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts + a real bug fix**: added PART 104 (Weekly Expiry
+Proliferation — The Structural Within-Week Volatility Pattern to TRA — a distinct structural-market
+question from the single-expiry mechanics already covered, why theta-decay-driven activity concentrates
+predictably around each weekly expiry, the realised-volatility-dampening effect on non-expiry days and
+its limits, why this is a baseline expectation-setting framework rather than a standalone trading
+signal, a worked example distinguishing structural Thursday-expiry volatility from a genuine catalyst)
+and PART 107 (Trade Show/Industry Conference Effectiveness Research to Market Research — a distinct
+measurement environment from digital-channel effectiveness research, why raw lead-count is a poor
+standalone metric, the relationship-deepening value lead-generation metrics miss entirely, attributing
+brand-visibility value distinct from any direct lead/relationship effect, a worked example evaluating a
+conference sponsorship across all three value streams rather than lead conversion alone). Added one new
+Q&A each (TRA Q96, Market Research Q105) and matching glossary terms (Market Research).
+
+**Bug found and fixed this cycle**: the two `build_handbook_pdf.py` invocations (TRA and Market
+Research) had been launched as concurrent background processes every cycle this session. The script
+uses hardcoded shared temp-file paths (`_handbook_tmp.html`, `_handbook_raw.pdf` in `sources_md/`) with
+no collision guard — running two instances concurrently is a genuine race condition where one process's
+`stamp_and_outline` step can read the *other* process's temp raw PDF. This cycle it fully manifested:
+the file saved as `Technical_Research_Deepening_Handbook.pdf` was actually a complete copy of the
+Market Research content (242 pages), while the real Market Research build won the race and was correct.
+Because both files have been growing by matching Part-for-Part increments each cycle, a full content
+swap between the two files does not change the summed total page count — meaning this could have been
+silently happening on prior cycles too without the page-count cross-check catching it. **Fix applied**:
+rebuilt both PDFs strictly sequentially (TRA fully completes before Market Research starts), verified
+by direct text-extraction spot-checks at multiple page offsets in each file individually and in the
+re-merged master PDF, confirming no duplication and correct content in both. This also revealed the
+two handbooks' true, previously-masked page counts diverge more than the "always ~equal" figures
+logged in recent cycles suggested (Market Research carries a dedicated Part-by-part glossary section
+TRA doesn't have) — TRA deepening handbook is genuinely 225pg, Market Research is genuinely 242pg.
+Master: 4,108 -> 4,129 pages (the jump reflects both the 2 new parts and this correction). **Going
+forward**: the two `build_handbook_pdf.py` calls will always be run strictly sequentially, never
+concurrently, to prevent recurrence.
+
+**Running total: 4,129 pages.**

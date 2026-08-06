@@ -2431,6 +2431,27 @@ Even though migration brings a structurally larger addressable investor base (Pa
 
 ---
 
+# PART 104 — WEEKLY EXPIRY PROLIFERATION — THE STRUCTURAL WITHIN-WEEK VOLATILITY PATTERN
+
+## 104.1 A distinct structural-market question from the single-expiry mechanics already covered
+Parts 60 and 94 covered what happens *at* a physical-settlement or final-settlement expiry event specifically. This Part covers a distinct, broader structural question: what having **weekly** (rather than only monthly) index-options expiries does to the *shape* of volatility and trading activity across an ordinary week, independent of any single expiry's own settlement mechanics — a market-structure effect from the sheer frequency of expiry events, not from any individual expiry's mechanics.
+
+## 104.2 Why theta-decay-driven activity concentrates predictably around each weekly expiry
+Because a large volume of short-dated weekly options are actively traded specifically for their rapid theta (time) decay, trading activity in these options — and the underlying hedging flows this generates — shows a predictable **within-week pattern**: building through the week as option positions approach their Thursday expiry, then resetting as a fresh weekly series begins trading Friday. This creates a structurally recurring, somewhat predictable weekly rhythm to options-related activity that doesn't exist in a market with only monthly expiries, distinct from the day-specific expiry mechanics Parts 60 and 94 address.
+
+## 104.3 The realised-volatility-dampening effect on non-expiry days, and its limits
+A further structural effect worth understanding: the concentration of large hedging/unwinding flows specifically around each weekly expiry day can correspondingly leave **non-expiry days within the same week** showing comparatively more subdued realised volatility relative to what a market without this weekly-expiry structure might otherwise show, since a portion of the volatility that might have occurred more evenly is instead concentrated into expiry-day sessions — though this dampening effect is a structural tendency, not a rule, and can be readily overridden by any genuine, independent volatility catalyst (results, macro news) occurring on a nominally "quiet" mid-week day.
+
+## 104.4 Why this structural pattern is a market-wide baseline expectation, not a standalone trading signal
+This Part's material functions primarily as a **baseline expectation-setting framework** — understanding that a given week's volatility pattern partly reflects this structural weekly-expiry rhythm — rather than as a standalone, independently tradeable signal in its own right, since the pattern is a well-known, widely-understood structural feature of the market rather than a proprietary or under-appreciated inefficiency; a TRA's value here is correctly distinguishing genuine, catalyst-driven volatility from this baseline structural rhythm, not attempting to trade the structural pattern itself as if it were a fresh discovery.
+
+## 104.5 Worked example — distinguishing structural expiry-day volatility from a genuine catalyst-driven move
+*Nifty shows meaningfully higher realised volatility on a Thursday weekly-expiry session than on the preceding Monday-Wednesday sessions of the same week, with no identifiable news catalyst specific to Thursday. A junior colleague flags this Thursday volatility spike as a notable, standalone signal worth investigating.*
+
+**Model answer.** Per Part 104.2-104.3, this pattern is more likely explained by the baseline structural rhythm of weekly-expiry-driven hedging/unwinding flows concentrating on the Thursday expiry session itself, rather than representing a genuine, independent catalyst-driven signal worth investigating on its own — the preceding Monday-Wednesday sessions' comparatively subdued volatility is consistent with, not contradictory to, this same structural pattern. The correct guidance to the colleague (per Part 104.4's framing) is that this specific pattern is a well-understood, baseline market-structure feature rather than a fresh, standalone finding — the appropriate next step is checking specifically whether Thursday's volatility level is unusual **relative to this stock's/index's own typical weekly-expiry-day volatility baseline**, not relative to the quieter mid-week days, since comparing against the wrong baseline (mid-week days rather than prior expiry days) would systematically and incorrectly flag this expected structural pattern as a notable anomaly every single week.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2717,5 +2738,8 @@ Even though migration brings a structurally larger addressable investor base (Pa
 
 95. **Q: A company successfully migrates from the SME platform to the main board after meeting the required profitability and net-worth criteria. In the first two weeks post-migration, trading volume and volatility remain broadly similar to the pre-migration pattern, with no immediate surge in institutional participation. Is this a disappointing outcome?**
     A: No, per Part 103.5 — this is the expected, normal pattern, not a concerning one. A larger theoretically-addressable investor base (Part 103.2) doesn't translate into an instant liquidity re-rating, since institutional mandates and index-inclusion-driven flows genuinely take time to materialise (Part 103.4). The migration itself should still be read as a positive credibility milestone (Part 103.3) given the specific listing criteria satisfied, independent of how quickly trading characteristics shift. A TRA should track liquidity/participation metrics over months, not the first two weeks, before drawing any conclusion about the migration's structural liquidity effect.
+
+96. **Q: Nifty shows meaningfully higher realised volatility on a Thursday weekly-expiry session than on the preceding Monday-Wednesday sessions of the same week, with no identifiable Thursday-specific news catalyst. A junior colleague flags this as a notable, standalone signal worth investigating. Is it?**
+    A: No, per Part 104.5 — this pattern is more likely explained by the baseline structural rhythm of weekly-expiry-driven hedging/unwinding flows concentrating on the Thursday expiry session (Part 104.2-104.3), not a genuine independent catalyst. The quieter mid-week sessions are consistent with, not contradictory to, this same structural pattern. Per Part 104.4, the correct check is whether Thursday's volatility is unusual relative to this instrument's own typical weekly-expiry-day baseline, not relative to the quieter mid-week days — comparing against the wrong baseline would incorrectly flag this expected structural pattern as a notable anomaly every single week.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
