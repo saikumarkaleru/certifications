@@ -1576,4 +1576,20 @@ Q100, Market Research Q109) and matching glossary terms (Market Research). Both 
 sequentially. TRA deepening handbook 232->234pg, Market Research 249->252pg. Master: 4,143 -> 4,148
 pages.
 
-**Running total: 4,148 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts (sequential build confirmed clean)**: added PART
+109 (Buyback Share Extinguishment — A Structural Feature of the Indian Regime to TRA — a distinct
+post-buyback mechanical question from Part 85's buyback-structure material, why mandatory extinguishment
+makes the EPS/float effect immediate and permanent versus a treasury-share regime, reading the
+extinguishment disclosure as the buyback's genuine completion confirmation, why this is a genuine
+cross-market comparison point for ADR-linked names, a worked example comparing an Indian buyback's
+durable per-share effect against a US comparable that may retain treasury shares) and PART 112
+(Celebrity/Brand-Ambassador Image-Congruence Research to Market Research — a distinct research question
+from Part 101's podcast host-credibility and finfluencer-disclosure material, congruence testing before
+signing an endorsement deal, the attribute-transfer risk of negative/irrelevant associations
+transferring alongside positive ones, category-fit versus company-fit as a distinct layer specific to
+financial services, a worked example diagnosing a well-liked general celebrity's category-credibility
+failure despite strong ad recall). Added one new Q&A each (TRA Q101, Market Research Q110) and matching
+glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening handbook
+234->236pg, Market Research 252->254pg. Master: 4,148 -> 4,152 pages.
+
+**Running total: 4,152 pages.**
