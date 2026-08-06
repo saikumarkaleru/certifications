@@ -2557,6 +2557,27 @@ Understanding this distinction has practical value specifically when comparing a
 
 ---
 
+# PART 110 — CREEPING ACQUISITION — THE DISTINCT ANNUAL PROMOTER STAKE-BUILDING ALLOWANCE
+
+## 110.1 A distinct regulatory allowance from the threshold-crossing framework already covered
+Part 83 covered SEBI's substantial-acquisition threshold framework — 5% initial disclosure, 2% incremental disclosures, and the 25% open-offer trigger, applicable to any acquirer. This Part covers a distinct, specific allowance within that broader framework that applies specifically to **promoters/persons already holding a substantial stake** (generally above 25% and up to the maximum permissible non-public shareholding limit): a **creeping acquisition** allowance letting a promoter increase their holding by up to a specified percentage (5%) **per financial year** through open-market purchases, without triggering the mandatory open-offer obligation Part 83.2 described for a fresh acquirer crossing 25%.
+
+## 110.2 Why this specific allowance exists — distinguishing an existing promoter's gradual accumulation from a fresh acquirer's stake-building
+The regulatory logic behind carving out this specific allowance: a promoter already holding a substantial, publicly-known stake gradually increasing their position over time is treated as a meaningfully different scenario from an external party building toward a change-of-control threshold from a low starting base (Part 83's core scenario) — the creeping-acquisition allowance lets an existing promoter consolidate their position modestly year over year without the same open-offer trigger, since the promoter already effectively controls the company and isn't acquiring fresh control through the incremental purchases.
+
+## 110.3 Reading a promoter's use of the full creeping-acquisition allowance as a distinct conviction signal
+Because the creeping-acquisition allowance is a specific, capped, annually-resetting entitlement, a promoter who consistently uses the **full** permitted annual increase, year after year, sends a distinctly strong, sustained conviction signal — deliberately maximising a specific regulatory allowance repeatedly is a more calibrated, sustained signal than a single opportunistic open-market purchase (Part 33), since it reflects a considered, recurring decision to accumulate right up to the regulatory limit each year rather than an isolated transaction — a TRA tracking a promoter's shareholding-pattern trend (Part 82.3's trend-over-snapshot discipline) should specifically check whether increases are tracking at or near this annual cap as a distinct, higher-conviction pattern worth flagging.
+
+## 110.4 Distinguishing genuine creeping accumulation from a promoter merely holding steady
+The corresponding negative-space signal is equally worth tracking: a promoter with ample room remaining under the creeping-acquisition allowance who **doesn't** use it in a given year — holding their stake flat despite having the regulatory headroom to increase it — is a comparatively neutral-to-mildly-cautious signal worth noting, though this absence-of-action signal should be weighted more lightly than an active reduction would be (Part 33's promoter-selling material), since simply not exercising an optional allowance is a much weaker signal than an active sale.
+
+## 110.5 Worked example — reading a promoter's multi-year creeping-acquisition pattern
+*A company's promoter group, holding 42% of the company, has increased its stake by close to the full permitted 5% creeping-acquisition allowance in each of the past three consecutive financial years, entirely through disclosed open-market purchases.*
+
+**Model answer.** Per Part 110.3, this sustained, near-maximal, multi-year pattern is a distinctly strong, calibrated conviction signal — a promoter deliberately maximising the specific regulatory allowance three years running reflects a considered, recurring accumulation decision rather than an isolated opportunistic purchase, and should be read as meaningfully more bullish than a single large open-market purchase of similar aggregate size would be, precisely because of its sustained, deliberate, allowance-maximising structure (Part 110.2). A TRA should flag this specific pattern explicitly in a research note, distinguishing it from ordinary promoter buying (Part 33) by name, and continue monitoring whether the pattern persists into the following financial year or whether the promoter's stake approaches a level requiring a fresh look at Part 83's substantial-acquisition thresholds as the promoter's holding continues climbing over successive years.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2861,5 +2882,8 @@ Understanding this distinction has practical value specifically when comparing a
 
 101. **Q: You're asked to compare the per-share impact of an Indian company's recently-completed buyback against a similarly-sized buyback announced by its US-listed sector comparable. What structural difference should you check for before treating the two buyback sizes as directly comparable?**
      A: Per Part 109.5 — the Indian company's buyback, once the extinguishment disclosure confirms completion (Part 109.3), delivers a durable, permanent share-count reduction with no possibility of later reissuance (Part 109.2). For the US comparable, check whether that company's regime extinguishes repurchased shares or retains them as treasury stock (Part 109.4) — if the latter, the headline buyback size may overstate the durable per-share benefit relative to the Indian company's structurally-guaranteed permanent reduction, since the US company retains the option to reissue those shares later without a fresh, separately-flagged capital-raising event. This regime difference should be flagged explicitly rather than treating "buyback size as % of shares outstanding" as directly comparable across the two markets.
+
+102. **Q: A company's promoter group, holding 42%, has increased its stake by close to the full permitted 5% creeping-acquisition allowance in each of the past three consecutive financial years, entirely through disclosed open-market purchases. How should a TRA weigh this pattern?**
+     A: Per Part 110.5 — this sustained, near-maximal, multi-year pattern is a distinctly strong, calibrated conviction signal (Part 110.3). A promoter deliberately maximising the specific regulatory allowance three years running reflects a considered, recurring accumulation decision rather than an isolated opportunistic purchase, and should be read as meaningfully more bullish than a single large open-market purchase of similar aggregate size (Part 110.2). A TRA should flag this specific pattern explicitly, distinguishing it from ordinary promoter buying, and continue monitoring whether it persists or whether the promoter's climbing stake approaches Part 83's substantial-acquisition thresholds.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

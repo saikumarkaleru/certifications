@@ -1592,4 +1592,20 @@ failure despite strong ad recall). Added one new Q&A each (TRA Q101, Market Rese
 glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening handbook
 234->236pg, Market Research 252->254pg. Master: 4,148 -> 4,152 pages.
 
-**Running total: 4,152 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts (sequential build confirmed clean)**: added PART
+110 (Creeping Acquisition — The Distinct Annual Promoter Stake-Building Allowance to TRA — a distinct
+regulatory allowance from Part 83's threshold-crossing framework, why this specific carve-out exists
+for an existing promoter's gradual accumulation versus a fresh acquirer's stake-building, reading a
+promoter's consistent use of the full annual allowance as a distinctly strong, sustained conviction
+signal, the corresponding lighter negative-space signal of not using available headroom, a worked
+example reading a promoter's three-consecutive-year near-maximal creeping-acquisition pattern) and
+PART 113 (In-App Review-Prompt Timing Research to Market Research — a distinct upstream research
+question from Part 110's public review-response research, why prompt timing systematically biases
+which users respond, the representativeness tension between optimising for positive volume and
+genuine signal, testing prompt frequency/dismissal-respect as its own question, a worked example
+diagnosing a review-prompt design generating negative reviews specifically about its own intrusiveness
+rather than the underlying product). Added one new Q&A each (TRA Q102, Market Research Q111) and
+matching glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening
+handbook 236->238pg, Market Research 254->256pg. Master: 4,152 -> 4,156 pages.
+
+**Running total: 4,156 pages.**
