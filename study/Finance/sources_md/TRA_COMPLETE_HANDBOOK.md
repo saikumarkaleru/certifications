@@ -2641,6 +2641,27 @@ The final **cut-off price** — the actual issue price ultimately used — is de
 
 ---
 
+# PART 114 — CO-LOCATION AND ALGORITHMIC MARKET STRUCTURE — A DISTINCT INFRASTRUCTURE LAYER
+
+## 114.1 A distinct market-structure layer from the execution/impact mechanics already covered
+Part 18's material on execution, VWAP/TWAP, and market impact addressed *how* an order is worked once placed. This Part addresses a distinct, underlying infrastructure layer that shapes the speed and fairness of that entire execution environment: **co-location** — exchanges offering market participants the ability to house their own trading servers physically within or immediately adjacent to the exchange's own data centre, for a fee, specifically to minimise the physical transmission-latency between a participant's trading system and the exchange's matching engine.
+
+## 114.2 Why physical distance translates directly into a measurable speed advantage
+Because market data and order messages travel at a physically bounded speed (limited ultimately by the speed of light through the transmission medium), a firm with a co-located server sitting meters from the exchange's matching engine receives market data and can submit orders measurably faster than a firm connecting from a distant location — a genuine, physical speed advantage rather than a purely technological/software one, meaning co-location itself, before any algorithmic sophistication is even considered, already confers a structural latency edge to whichever participants pay for and use it.
+
+## 114.3 The regulatory framing — a paid, equally-available infrastructure service, not preferential access
+A critical regulatory distinction a TRA should understand precisely when discussing co-location: exchanges structure co-location as a **paid service available to any participant willing to pay the fee and meet the technical requirements**, not preferential access granted selectively to specific favoured firms — the regulatory logic being that as long as the same co-location service and its associated speed advantage is equally purchasable by any market participant, it doesn't constitute the kind of exclusive, discriminatory access that would itself be improper, even though the fee itself creates a practical cost barrier that not every participant chooses or can afford to pay.
+
+## 114.4 Why this matters for a TRA's own execution-timing expectations, not as a trading edge in itself
+The practical relevance for a TRA isn't attempting to compete on latency (an institutional-infrastructure game far beyond what a research function's own trading, if any, would involve) but understanding that a meaningful share of order flow — particularly around fast-moving events like results announcements or macro data releases — originates from co-located, algorithmically-driven participants operating on timescales of milliseconds, meaning some of the very fast, seemingly-erratic price action immediately following a scheduled data release may reflect this algorithmic infrastructure layer reacting near-instantaneously, rather than representing the kind of considered, informationally-meaningful price discovery a TRA's own analysis operates on a slower timescale to interpret.
+
+## 114.5 Worked example — explaining unusually fast, choppy price action in the seconds after a scheduled data release
+*Immediately following a scheduled macroeconomic data release, a stock/index shows extremely fast, choppy price action lasting only a few seconds before settling into a more orderly trend, with the fastest initial moves occurring on a timescale too short for any human trader to have plausibly reacted to the specific data print.*
+
+**Model answer.** Per Part 114.2 and 114.4, the initial few seconds of extremely fast, choppy price action most likely reflects co-located, algorithmic participants' near-instantaneous reaction to the data release — operating on a timescale genuinely too fast for human decision-making, consistent with the physical latency advantage co-location confers (Part 114.2) — rather than representing considered, informationally-meaningful price discovery in the sense this handbook's other technical-analysis material addresses. A TRA should treat this initial, ultra-fast window as a distinct microstructure phenomenon largely separate from the more meaningful, considered price discovery that follows once the market settles into its more orderly post-release trend, and should generally avoid drawing strong technical conclusions from the specific, fleeting price action within that first few-second window, instead focusing analysis on the more durable trend that emerges once this initial algorithmic-reaction phase has passed.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2957,5 +2978,8 @@ The final **cut-off price** — the actual issue price ultimately used — is de
 
 105. **Q: A retail investor bids for an IPO at a specific price near the lower end of the disclosed price band, with adequate funds blocked. The issue is fully subscribed and the final cut-off price is determined near the upper end of the band. The investor's application isn't allotted shares despite having sufficient funds for their bid amount. Why?**
      A: Per Part 113.5 — the cut-off price was genuinely determined by the aggregate bidding process to sit near the upper end of the band (Part 113.4), reflecting strong demand. The investor's specific-price bid, placed near the lower end rather than at "cut-off price," falls below the actual determined cut-off, and a specific-price bid below the cut-off price isn't eligible for allotment regardless of adequate funds, since their stated maximum willingness-to-pay was below what the issue actually priced at. This is precisely the scenario the cut-off-price bid option (Part 113.3) exists to protect a retail investor against — selecting it instead would have made their application eligible at whatever the final price turned out to be, up to the band's cap.
+
+106. **Q: Immediately following a scheduled macroeconomic data release, a stock/index shows extremely fast, choppy price action lasting a few seconds before settling into a more orderly trend, with the fastest initial moves occurring on a timescale too short for any human trader to have plausibly reacted. How should a TRA read this initial window?**
+     A: Per Part 114.5 — the initial few seconds most likely reflect co-located, algorithmic participants' near-instantaneous reaction to the release (Part 114.2, 114.4), operating on a timescale genuinely too fast for human decision-making, rather than considered, informationally-meaningful price discovery. A TRA should treat this ultra-fast window as a distinct microstructure phenomenon largely separate from the more durable, meaningful price discovery that follows, generally avoiding strong technical conclusions from the specific, fleeting price action within that first few-second window and instead focusing analysis on the more orderly trend that emerges once this initial algorithmic-reaction phase has passed.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*

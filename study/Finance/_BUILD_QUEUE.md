@@ -1656,4 +1656,21 @@ Market Research Q114) and matching glossary terms (Market Research). Both PDFs b
 sequentially. TRA deepening handbook 243->245pg, Market Research 261->263pg. Master: 4,166 -> 4,170
 pages.
 
-**Running total: 4,170 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts (sequential build confirmed clean)**: added PART
+114 (Co-Location and Algorithmic Market Structure — A Distinct Infrastructure Layer to TRA — a distinct
+underlying infrastructure layer from Part 18's execution/impact mechanics, why physical distance to the
+matching engine translates directly into a measurable speed advantage, the regulatory framing of co-
+location as an equally-purchasable paid service rather than preferential access, why this matters for a
+TRA's execution-timing expectations rather than as a trading edge itself, a worked example explaining
+ultra-fast, choppy price action in the seconds after a scheduled data release as algorithmic-
+infrastructure-driven rather than considered price discovery) and PART 117 (Trade Promotion and
+Slotting-Fee Research to Market Research — a distinct, more financially-focused research question from
+Part 19's category-management material, why trade-promotion ROI research must separate incremental
+lift from pantry-loading/pull-forward, slotting-fee breakeven modelling as a forward-looking question
+distinct from promotion ROI measurement, why retailer-specific research doesn't transfer cleanly across
+formats/relationships, a worked example evaluating a requested slotting fee against a retailer-specific
+historical velocity benchmark). Added one new Q&A each (TRA Q106, Market Research Q115) and matching
+glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening handbook
+245->247pg, Market Research 263->265pg. Master: 4,170 -> 4,174 pages.
+
+**Running total: 4,174 pages.**
