@@ -1623,4 +1623,21 @@ masking poor multi-month retention). Added one new Q&A each (TRA Q103, Market Re
 matching glossary terms (Market Research). Both PDFs built strictly sequentially. TRA deepening handbook
 238->241pg, Market Research 256->258pg. Master: 4,156 -> 4,161 pages.
 
-**Running total: 4,161 pages.**
+**2026-08-06, autonomous wake-cycle: 2 more new parts (sequential build confirmed clean)**: added PART
+112 (Promoter Demat-Account Freeze — A Distinct Regulatory-Enforcement Signal to TRA — a distinct
+enforcement mechanism from every disclosure-based promoter signal already covered, why a freeze is
+categorically more severe than any interpretive disclosure-based finding, reading the freeze's specific
+scope (promoter-level vs company-level), why a freeze is procedural/provisional rather than a final
+determination and requires tracking the underlying resolution, a worked example reading an initial
+freeze order and its subsequent resolved-compliance outcome) and PART 115 (Product Label/Claim
+Substantiation Research to Market Research — a distinct research object from Part 96's competitive
+claims substantiation, why a label claim requires ongoing rather than one-time verification, the
+consumer-comprehension layer where a technically-true claim can still broadly mislead, cross-functional
+research ownership spanning legal/R&D/market research, a worked example diagnosing a technically-
+accurate "made with real fruit" claim that comprehension testing reveals creates an inflated impression).
+Added one new Q&A each (TRA Q104, Market Research Q113) and matching glossary terms (Market Research).
+Both PDFs built strictly sequentially; frontmatter total needed a one-page correction pass (4,167 guess
+-> 4,166 actual), standard two-pass discipline. TRA deepening handbook 241->243pg, Market Research
+258->261pg. Master: 4,161 -> 4,166 pages.
+
+**Running total: 4,166 pages.**

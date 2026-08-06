@@ -2599,6 +2599,27 @@ Because put-call parity is normally tightly arbitraged closed in a liquid market
 
 ---
 
+# PART 112 — PROMOTER DEMAT-ACCOUNT FREEZE — A DISTINCT REGULATORY-ENFORCEMENT SIGNAL
+
+## 112.1 A distinct enforcement mechanism from every disclosure-based signal already covered
+Every promoter-related signal this handbook has covered so far (pledge disclosure, threshold-crossing, inter-se transfers, creeping acquisition) is a **disclosure-based** signal — information the market receives about a promoter's own voluntary or structurally-required transaction. A **demat-account freeze** is structurally different: a direct **regulatory enforcement action**, where SEBI or the depository directs a promoter's (or, in more severe cases, the company's own) demat account be frozen — blocking further transactions in the account — typically for non-compliance with a disclosure obligation, an ongoing investigation, or a more serious regulatory violation.
+
+## 112.2 Why a freeze is a categorically more severe signal than any disclosure-based finding
+Because a freeze is an **imposed enforcement action** rather than information voluntarily or routinely disclosed, it should be read as categorically more severe than any of this handbook's other promoter-related signals — a rising pledge percentage (Part 49) or an unusual inter-se transfer pattern (Part 73) each represent a TRA's own interpretive read of disclosed information, while a freeze represents a regulator's own affirmative finding that something serious enough to warrant direct account-level enforcement has occurred, a materially different evidentiary weight class a TRA should never conflate with the softer, interpretive signals this handbook's other promoter-monitoring material addresses.
+
+## 112.3 Reading the freeze's specific scope — promoter-level versus company-level, and what each implies
+A freeze's specific **scope** carries distinct implications worth reading precisely: a freeze applied narrowly to a specific promoter individual/entity's own demat account (their personal holdings) is a more contained signal about that specific individual's compliance issue, while a freeze extending to the company's own corporate demat accounts or affecting a broader set of related entities signals a more serious, systemic concern — a TRA should read the freeze order's actual specified scope carefully rather than assuming any "promoter freeze" headline implies the same severity or breadth regardless of its actual specified extent.
+
+## 112.4 Why a freeze itself doesn't determine outcome — tracking the underlying investigation/resolution
+A freeze is a **procedural, often provisional** enforcement step, not itself a final determination of wrongdoing — the underlying reason for the freeze (an investigation, a specific disclosure failure) can resolve in multiple ways (the freeze lifted once compliance is restored or the investigation concludes without adverse finding, or escalating into more serious, confirmed regulatory action) — a TRA should track the freeze as the start of a situation requiring close, ongoing monitoring of subsequent regulatory disclosures, not treat the freeze order itself as the final word on what actually happened or will happen next.
+
+## 112.5 Worked example — reading an initial freeze order and its subsequent resolution
+*A regulator orders a freeze on a company's promoter entity's demat account, citing non-compliance with a specific disclosure requirement under investigation. Two months later, a follow-up regulatory filing discloses the promoter has since complied with the outstanding disclosure requirement, and the freeze has been lifted.*
+
+**Model answer.** Per Part 112.2, the initial freeze order should have been read as a categorically serious signal at the time — a regulator's affirmative enforcement action, not a routine disclosure — warranting explicit flagging in any research note as materially more severe than an ordinary pledge or inter-se-transfer observation. Per Part 112.4, however, the freeze's resolution (lifted following compliance with the specific disclosure requirement, with no indication of an escalated, more serious finding) suggests the underlying issue was a genuine but ultimately resolvable disclosure-compliance lapse rather than a deeper, more serious violation — a TRA should update the research note to reflect this resolution explicitly, distinguishing this specific outcome (procedural non-compliance, subsequently resolved) from a scenario where a freeze escalates into confirmed, more serious regulatory action, since the two outcomes carry very different implications for the company's ongoing governance risk profile.
+
+---
+
 # APPENDIX B — INTERVIEW Q&A (THEORY + WORKED)
 
 1. **Q: What's the difference between technical, fundamental, and quantitative analysis, in one line each?**
@@ -2909,5 +2930,8 @@ Because put-call parity is normally tightly arbitraged closed in a liquid market
 
 103. **Q: A TRA notices a specific stock's near-month call and put prices, at the same strike, imply a put-call-parity-derived "fair" underlying price meaningfully below the stock's actual current traded price — a persistent deviation over several sessions, not a one-off anomaly. How should this be read?**
      A: Per Part 111.5 — a persistent, multi-session parity deviation should be read as evidence of a genuine structural friction rather than simple free-money mispricing (Part 111.4), since put-call parity is normally tightly arbitraged closed in a liquid market (Part 111.2) — if this were a costlessly-capturable gap, sophisticated participants would already have closed it. The most likely explanation is a stock-specific securities-lending/borrow constraint making the arbitrage difficult or costly to execute in practice (Part 51's material), and a TRA should investigate this specifically rather than assuming an easily-capturable riskless opportunity has somehow gone unnoticed.
+
+104. **Q: A regulator orders a freeze on a company's promoter entity's demat account, citing non-compliance with a specific disclosure requirement under investigation. Two months later, a follow-up filing discloses the promoter has since complied and the freeze has been lifted. How should a TRA have treated the initial order, and how should the note be updated?**
+     A: Per Part 112.5 — the initial freeze should have been read as categorically serious at the time (Part 112.2), a regulator's affirmative enforcement action rather than a routine disclosure, warranting explicit flagging as materially more severe than an ordinary pledge or inter-se-transfer observation. The subsequent resolution — lifted following compliance, with no escalated finding (Part 112.4) — suggests the underlying issue was a genuine but ultimately resolvable disclosure-compliance lapse. The research note should be updated to reflect this specific resolved outcome explicitly, distinguishing it from a scenario where a freeze escalates into confirmed, more serious regulatory action, since the two carry very different governance-risk implications.
 
 *End of handbook. Read it twice; the second pass is where it clicks. Pair this with the one-night crash course (`INTERVIEW_PREP_STUDY_GUIDE.pdf`) for the rapid revision version.*
